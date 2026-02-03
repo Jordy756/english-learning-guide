@@ -1,0 +1,111 @@
+---
+title: Verbo To Be - Sintaxis y Estados
+description: Aprende el verbo To Be como si fuera una función de programación
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Code } from '@astrojs/starlight/components';
+
+# `toBe()` - Declaración de Estados
+
+El verbo `to be` funciona como una **función de estado** que declara propiedades del sujeto.
+
+## Sintaxis Básica
+
+<Tabs>
+  <TabItem label="Presente">
+```typescript
+// Conjugación en presente
+const present = {
+  I: "am",
+  you: "are",
+  he: "is",
+  she: "is",
+  it: "is",
+  we: "are",
+  they: "are"
+};
+
+// Uso
+I.am("happy")      // I am happy
+you.are("tired")   // You are tired
+she.is("ready")    // She is ready
+```
+  </TabItem>
+
+  <TabItem label="Pasado">
+```typescript
+// Conjugación en pasado
+const past = {
+  I: "was",
+  you: "were",
+  he: "was",
+  she: "was",
+  it: "was",
+  we: "were",
+  they: "were"
+};
+
+// Uso
+I.was("happy")      // I was happy
+they.were("tired")  // They were tired
+```
+  </TabItem>
+</Tabs>
+
+:::note[Regla importante]
+Con `toBe()` **NO** se usan auxiliares `do/does/did` para preguntas y negaciones.
+:::
+
+## Operadores
+
+### Negación (`.not()`)
+```typescript
+// Sintaxis
+subject.toBe.not(state)
+
+// Ejemplos
+I.am.not("sad")         // I am not sad
+she.is.not("here")      // She is not here
+they.were.not("ready")  // They were not ready
+```
+
+### Query (Preguntas)
+```typescript
+// Sintaxis: Invierte el orden
+toBe(subject, state)?
+
+// Ejemplos
+is(he, "ready")?        // Is he ready?
+are(you, "sure")?       // Are you sure?
+was(it, "expensive")?   // Was it expensive?
+```
+
+## Debugging común
+
+:::danger[Error común #1]
+```typescript
+// ❌ INCORRECTO: Usar do/does con toBe
+do.you.are("ready")?
+
+// ✅ CORRECTO
+are(you, "ready")?
+```
+:::
+
+:::danger[Error común #2]
+```typescript
+// ❌ INCORRECTO: Conjugación incorrecta
+I.is("happy")      // TypeError
+he.are("tired")    // TypeError
+
+// ✅ CORRECTO: Pattern matching
+I.am("happy")
+he.is("tired")
+```
+:::
+
+## Ver también
+
+- [Simple Present](/basics/simple-present) - Verbos regulares
+- [Question Words](/basics/question-words) - Formular preguntas
