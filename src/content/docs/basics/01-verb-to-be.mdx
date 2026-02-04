@@ -1,16 +1,14 @@
 ---
-title: Verbo To Be - Sintaxis y Estados
-description: Aprende el verbo To Be como si fuera una función de programación
+title: Verbo To Be (Ser o Estar)
+description: Aprende la base del inglés usando lógica de programación.
 ---
 
 import { Tabs, TabItem } from '@astrojs/starlight/components';
 import { Code } from '@astrojs/starlight/components';
 
-# `toBe()` - Declaración de Estados
+El verbo `to be` es el equivalente a definir quién eres ("I am a developer") o cómo estás ("I am tired"). Es la base de todo, como el `Hello World` del inglés.
 
-El verbo `to be` funciona como una **función de estado** que declara propiedades del sujeto.
-
-## Sintaxis Básica
+## Estructura Básica (Afirmativo)
 
 <Tabs>
   <TabItem label="Presente">
@@ -54,13 +52,13 @@ console.log(`We ${VerbToBe.we} students`);   // "We were students"
   </TabItem>
 </Tabs>
 
-:::note[Regla importante]
-Con `toBe()` **NO** se usan auxiliares `do/does/did` para preguntas y negaciones.
+:::note[Nota Importante]
+El verbo **To Be** es especial: se manda solo. **NO** necesita ayuda de auxiliares (como `do`, `does`, o `did`) para hacer preguntas o negaciones.
 :::
 
-## Operadores
+## Formas Negativa e Interrogativa
 
-### Negación (`not`)
+### Negación (Negative Form)
 
 <Tabs>
   <TabItem label="Presente">
@@ -99,7 +97,7 @@ deny("we", "tired");     // "We were not tired"
   </TabItem>
 </Tabs>
 
-### Query (Preguntas)
+### Preguntas (Question Form)
 <Tabs>
   <TabItem label="Presente">
 ```javascript
@@ -138,25 +136,29 @@ ask("they", "on time"); // "Were they on time?"
   </TabItem>
 </Tabs>
 
-## Debugging común
+## Errores Comunes (Debugging)
 
-:::danger[Error común #1]
-```typescript
-// ❌ INCORRECTO: Usar do/does con toBe
-do("you", "ready");
+:::danger[Bug #1: Usar auxiliares innecesarios]
+Un error clásico es intentar usar `do` o `does` con el verbo To Be. Recuerda: `To Be` es independiente.
 
-// ✅ CORRECTO: Usar la función de estado directa
-are("you", "ready");
+```javascript
+// ❌ BUG: ¡Esto no compila en inglés!
+do("you", "ready"); // Error: Auxiliar Innecesario
+
+// ✅ FIX: Usa el verbo To Be directamente
+are("you", "ready"); // Are you ready?
 ```
 :::
 
-:::danger[Error común #2]
-```typescript
-// ❌ INCORRECTO: El objeto "I" no tiene el método .is()
-I.is("happy");     // TypeError: I.is is not a function
+:::danger[Bug #2: Conjugación incorrecta]
+Cada sujeto tiene su propio verbo asignado. No puedes mezclarlos.
 
-// ✅ CORRECTO: Usar el método correspondiente
-I.am("happy");
+```javascript
+// ❌ BUG: "I" no es compatible con "is"
+I.is("happy");     // Error: Conjugación Incorrecta
+
+// ✅ FIX: Usa la conjugación correcta
+I.am("happy"); // I am happy
 ```
 :::
 
