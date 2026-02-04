@@ -1,11 +1,423 @@
 ---
-title: Example Guide
-description: A guide in my new Starlight docs site.
+title: toBe() - State Declaration Function
+description: El verbo To Be explicado como una función de programación
 ---
 
-Guides lead a user through a specific task they want to accomplish, often with a sequence of steps.
-Writing a good guide requires thinking about what your users are trying to do.
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## Further reading
+# `toBe()` - Función de Declaración de Estados
 
-- Read [about how-to guides](https://diataxis.fr/how-to-guides/) in the Diátaxis framework
+El verbo `to be` es la **función más fundamental** del idioma inglés. Funciona como un método que declara el estado, identidad o ubicación de un sujeto.
+
+## 📋 Firma de la Función (Signature)
+
+```typescript
+function toBe(
+  subject: Pronoun,
+  state: Adjective | Noun | Location,
+  tense: 'present' | 'past' = 'present'
+): Statement
+```
+
+### Parámetros
+
+| Parámetro | Tipo | Descripción | Requerido |
+|-----------|------|-------------|-----------|
+| `subject` | `Pronoun` | El sujeto (I, you, he, she, it, we, they) | ✅ |
+| `state` | `Adjective \| Noun \| Location` | Estado, identidad o ubicación | ✅ |
+| `tense` | `'present' \| 'past'` | Tiempo verbal | ❌ (default: `'present'`) |
+
+### Retorna
+
+`Statement` - Una declaración válida en inglés
+
+---
+
+## 🔧 Tabla de Conjugación (Lookup Table)
+
+<Tabs>
+  <TabItem label="Presente">
+
+```typescript
+const conjugationPresent = {
+  I: "am",
+  you: "are",
+  he: "is",
+  she: "is",
+  it: "is",
+  we: "are",
+  they: "are"
+} as const;
+
+// Ejemplos de uso
+console.log(`I ${conjugationPresent.I} happy`);        // "I am happy"
+console.log(`You ${conjugationPresent.you} tired`);    // "You are tired"
+console.log(`She ${conjugationPresent.she} ready`);    // "She is ready"
+console.log(`We ${conjugationPresent.we} students`);   // "We are students"
+```
+
+  </TabItem>
+
+  <TabItem label="Pasado">
+
+```typescript
+const conjugationPast = {
+  I: "was",
+  you: "were",
+  he: "was",
+  she: "was",
+  it: "was",
+  we: "were",
+  they: "were"
+} as const;
+
+// Ejemplos de uso
+console.log(`I ${conjugationPast.I} happy`);           // "I was happy"
+console.log(`You ${conjugationPast.you} tired`);       // "You were tired"
+console.log(`They ${conjugationPast.they} ready`);     // "They were ready"
+```
+
+  </TabItem>
+
+  <TabItem label="TypeScript Types">
+
+```typescript
+type Pronoun = "I" | "you" | "he" | "she" | "it" | "we" | "they";
+type Tense = "present" | "past";
+
+type ConjugationMap = {
+  present: Record<Pronoun, "am" | "are" | "is">;
+  past: Record<Pronoun, "was" | "were">;
+};
+
+const conjugation: ConjugationMap = {
+  present: {
+    I: "am",
+    you: "are",
+    he: "is",
+    she: "is",
+    it: "is",
+    we: "are",
+    they: "are",
+  },
+  past: {
+    I: "was",
+    you: "were",
+    he: "was",
+    she: "was",
+    it: "was",
+    we: "were",
+    they: "were",
+  },
+};
+
+// Helper function
+function getConjugation(pronoun: Pronoun, tense: Tense): string {
+  return conjugation[tense][pronoun];
+}
+```
+
+  </TabItem>
+</Tabs>
+
+---
+
+## 💡 Pattern Matching (Reglas de Conjugación)
+
+```typescript
+function conjugateToBe(pronoun: Pronoun, tense: Tense): string {
+  if (tense === "present") {
+    switch (pronoun) {
+      case "I":
+        return "am";
+      case "you":
+      case "we":
+      case "they":
+        return "are";
+      case "he":
+      case "she":
+      case "it":
+        return "is";
+    }
+  } else if (tense === "past") {
+    switch (pronoun) {
+      case "I":
+      case "he":
+      case "she":
+      case "it":
+        return "was";
+      case "you":
+      case "we":
+      case "they":
+        return "were";
+    }
+  }
+}
+
+// Uso
+conjugateToBe("I", "present");      // "am"
+conjugateToBe("she", "present");    // "is"
+conjugateToBe("they", "past");      // "were"
+```
+
+:::tip[Regla de Oro]
+**Presente:** `was` → singular (`I`, `he`, `she`, `it`) | `were` → plural + `you`
+
+**Pasado:** `am` → solo `I` | `is` → singular | `are` → plural + `you`
+:::
+
+---
+
+## ⚙️ Operadores y Métodos
+
+### 1️⃣ Negación (`.not()`)
+
+La negación **NO requiere auxiliares** como `do/does/did`. Solo se añade `not` después del verbo.
+
+```typescript
+// Sintaxis
+subject.toBe.not(state)
+
+// Implementación
+class ToBe {
+  not(state: string): string {
+    return `${this.verb} not ${state}`;
+  }
+}
+
+// Ejemplos
+I.am.not("sad")              // ✅ I am not sad
+she.is.not("here")           // ✅ She is not here
+they.were.not("ready")       // ✅ They were not ready
+
+// ❌ NUNCA uses do/does/did
+I.do.not.am("sad")           // ❌ SYNTAX ERROR
+she.does.not.is("here")      // ❌ SYNTAX ERROR
+```
+
+<CardGrid>
+  <Card title="✅ Correcto" icon="approve-check">
+    ```typescript
+    I.am.not("happy")
+    You.are.not("tired")
+    He.was.not("there")
+    ```
+  </Card>
+  <Card title="❌ Incorrecto" icon="error">
+    ```typescript
+    I.do.not.am("happy")
+    You.do.not.are("tired")
+    He.did.not.was("there")
+    ```
+  </Card>
+</CardGrid>
+
+---
+
+### 2️⃣ Interrogación (Query Syntax)
+
+Las preguntas **invierten el orden** del sujeto y el verbo. No usan auxiliares.
+
+```typescript
+// Sintaxis
+toBe(subject, state)?
+
+// Equivalente a invertir el orden
+[verb] [subject] [state]?
+
+// Ejemplos
+is(he, "ready")?             // Is he ready?
+are(you, "sure")?            // Are you sure?
+was(it, "expensive")?        // Was it expensive?
+were(they, "happy")?         // Were they happy?
+```
+
+#### Implementación
+
+```typescript
+function createQuestion(pronoun: Pronoun, state: string, tense: Tense): string {
+  const verb = conjugateToBe(pronoun, tense);
+  return `${verb.charAt(0).toUpperCase() + verb.slice(1)} ${pronoun} ${state}?`;
+}
+
+// Uso
+createQuestion("you", "ready", "present");   // "Are you ready?"
+createQuestion("he", "tired", "past");       // "Was he tired?"
+```
+
+<CardGrid>
+  <Card title="✅ Correcto" icon="approve-check">
+    ```typescript
+    Am I late?
+    Is she ready?
+    Are they happy?
+    Was it good?
+    ```
+  </Card>
+  <Card title="❌ Incorrecto" icon="error">
+    ```typescript
+    Do I am late?
+    Does she is ready?
+    Do they are happy?
+    Did it was good?
+    ```
+  </Card>
+</CardGrid>
+
+---
+
+## 🔍 Casos de Uso (Use Cases)
+
+### Uso #1: Declarar Identidad
+
+```typescript
+// Quién eres
+I.am("a developer")          // I am a developer
+she.is("a teacher")          // She is a teacher
+they.are("students")         // They are students
+```
+
+### Uso #2: Declarar Estado/Condición
+
+```typescript
+// Cómo estás
+I.am("happy")                // I am happy
+you.are("tired")             // You are tired
+it.is("broken")              // It is broken
+```
+
+### Uso #3: Declarar Ubicación
+
+```typescript
+// Dónde estás
+I.am("at home")              // I am at home
+she.is("in Spain")           // She is in Spain
+they.are("here")             // They are here
+```
+
+### Uso #4: Expresar Tiempo/Situaciones Pasadas
+
+```typescript
+// Pasado
+I.was("sick yesterday")      // I was sick yesterday
+it.was("cold")               // It was cold
+we.were("late")              // We were late
+```
+
+---
+
+## 🐛 Debugging - Errores Comunes
+
+### Error #1: Usar auxiliares `do/does/did`
+
+:::danger[TypeError: Auxiliares no permitidos]
+```typescript
+// ❌ INCORRECTO
+do.you.are("ready")?
+does.he.is("happy")?
+did.they.were("there")?
+
+// ✅ CORRECTO
+are(you, "ready")?           // Are you ready?
+is(he, "happy")?             // Is he happy?
+were(they, "there")?         // Were they there?
+```
+
+**Regla:** Con `toBe()` las preguntas y negaciones se hacen **moviendo** el verbo, NO usando auxiliares.
+:::
+
+---
+
+### Error #2: Conjugación incorrecta (Type Mismatch)
+
+:::danger[TypeError: Conjugación no coincide]
+```typescript
+// ❌ INCORRECTO
+I.is("happy")                // Expected "am", got "is"
+he.are("tired")              // Expected "is", got "are"
+they.was("ready")            // Expected "were", got "was"
+
+// ✅ CORRECTO
+I.am("happy")
+he.is("tired")
+they.were("ready")
+```
+
+**Solución:** Usa la tabla de conjugación o la función `conjugateToBe()` para evitar errores.
+:::
+
+---
+
+### Error #3: Confundir `toBe()` con otros verbos
+
+:::danger[Scope Error: Verbo incorrecto]
+```typescript
+// Si la oración NO usa toBe() como verbo principal
+// → Entonces SÍ usas do/does para negación/pregunta
+
+// ✅ Con toBe (sin do/does)
+she.is.not("happy")          // She is not happy
+is(she, "happy")?            // Is she happy?
+
+// ✅ Con otro verbo (CON do/does)
+she.does.not.like("coffee")  // She does not like coffee
+does(she, "like coffee")?    // Does she like coffee?
+```
+
+**Regla clave:**
+- Si usas `toBe()` como verbo principal → **NO** uses `do/does/did`
+- Si usas cualquier otro verbo → **SÍ** uses `do/does/did`
+:::
+
+---
+
+## 📊 Comparación: toBe() vs Otros Verbos
+
+| Característica | `toBe()` | Verbos Regulares |
+|----------------|----------|------------------|
+| **Conjugación** | Irregular (`am/is/are/was/were`) | Regular (`work/works/worked`) |
+| **Negación** | Directo: `am not`, `is not` | Con auxiliar: `do not work` |
+| **Pregunta** | Inversión: `Are you...?` | Con auxiliar: `Do you work?` |
+| **Auxiliares** | ❌ NO usa `do/does/did` | ✅ Usa `do/does/did` |
+
+---
+
+## 🎯 Resumen (TL;DR)
+
+```typescript
+// 1. Conjugación (lookup table)
+const conjugation = {
+  present: { I: "am", you: "are", he: "is", she: "is", it: "is", we: "are", they: "are" },
+  past: { I: "was", you: "were", he: "was", she: "was", it: "was", we: "were", they: "were" }
+};
+
+// 2. Negación (sin do/does/did)
+I.am.not("sad")              // ✅
+I.do.not.am("sad")           // ❌
+
+// 3. Pregunta (inversión, sin do/does/did)
+is(he, "ready")?             // ✅
+does(he, "is ready")?        // ❌
+
+// 4. Pattern matching
+switch(pronoun) {
+  case "I": return tense === "present" ? "am" : "was";
+  case "you": case "we": case "they": return tense === "present" ? "are" : "were";
+  case "he": case "she": case "it": return tense === "present" ? "is" : "was";
+}
+```
+
+---
+
+## 🔗 Ver También
+
+- [Simple Present](/basics/02-simple-present) - Verbos regulares en presente
+- [Question Words](/basics/03-question-words) - Cómo formar preguntas
+- [Modal Verbs](/intermediate/01-modal-verbs) - Verbos modales (can, should, would)
+
+---
+
+:::note[Nota importante]
+El verbo `toBe()` es **irregular** y no sigue las reglas de los verbos regulares. Es uno de los verbos más importantes del inglés porque se usa constantemente para declarar estados, identidades y ubicaciones.
+:::

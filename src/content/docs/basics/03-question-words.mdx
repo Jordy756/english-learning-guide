@@ -1,11 +1,160 @@
 ---
-title: Example Guide
-description: A guide in my new Starlight docs site.
+title: Verbo To Be (JS Mode)
+description: Entendiendo el verbo To Be como objetos y funciones de JavaScript
 ---
 
-Guides lead a user through a specific task they want to accomplish, often with a sequence of steps.
-Writing a good guide requires thinking about what your users are trying to do.
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## Further reading
+El verbo **To Be** (ser/estar) funciona como el constructor de estado principal en inglés. A diferencia de otros verbos, este tiene acceso directo a las propiedades del sujeto sin necesidad de intermediarios (auxiliares).
 
-- Read [about how-to guides](https://diataxis.fr/how-to-guides/) in the Diátaxis framework
+## 🟢 Asignación de Estado (Afirmativo)
+
+En JavaScript, podemos ver el verbo *To Be* como métodos nativos (`.am()`, `.is()`, `.are()`) que asignan un valor a una variable.
+
+```javascript
+// Definición de sujetos
+const I = { am: (state) => `I am ${state}` };
+const He = { is: (state) => `He is ${state}` };
+const They = { are: (state) => `They are ${state}` };
+
+// -------------------------------------------------
+//  EJECUCIÓN DE CÓDIGO (console.log)
+// -------------------------------------------------
+
+// 1. Identidad
+console.log(I.am("developer"));      // "I am developer"
+console.log(She.is("doctor"));       // "She is doctor"
+
+// 2. Estado / Emoción
+console.log(He.is("happy"));         // "He is happy"
+console.log(We.are("tired"));        // "We are tired"
+
+// 3. Ubicación
+console.log(They.are("at home"));    // "They are at home"
+```
+
+:::tip[Nota de Sintaxis]
+El método cambia según el objeto que lo invoca:
+* `I` utiliza `.am()`
+* `He / She / It` utilizan `.is()`
+* `You / We / They` utilizan `.are()`
+:::
+
+---
+
+## 🔴 Negación (`.not()`)
+
+Para negar, simplemente encadenamos el método `.not()`. **No es necesario** importar librerías externas como `do` o `does`. La funcionalidad ya viene integrada.
+
+```javascript
+// La negación es directa, solo añade .not() al final
+const logic = {
+  am: { not: (state) => `I am not ${state}` },
+  is: { not: (state) => `is not ${state}` },
+  are: { not: (state) => `are not ${state}` }
+};
+
+// -------------------------------------------------
+//  EJECUCIÓN
+// -------------------------------------------------
+
+console.log(I.am.not("sad"));        // "I am not sad"
+console.log(She.is.not("here"));     // "She is not here"
+console.log(You.are.not("ready"));   // "You are not ready"
+```
+
+<CardGrid>
+  <Card title="✅ Código Correcto" icon="approve-check">
+    La negación va inmediatamente después del verbo *to be*.
+    ```javascript
+    I.am.not("wrong");
+    She.is.not("listening");
+    They.are.not("offline");
+    ```
+  </Card>
+  <Card title="❌ Syntax Error" icon="error">
+    Intentar usar `do` o `does` lanzará un error de sintaxis en el intérprete de inglés.
+    ```javascript
+    I.do.not.am("wrong");      // Uncaught SyntaxError
+    She.does.not.is("listening");
+    They.do.not.are("offline");
+    ```
+  </Card>
+</CardGrid>
+
+---
+
+## ❓ Consultas (Preguntas)
+
+Para hacer preguntas (Quotes), el lenguaje requiere **inversión de dependencias**: El verbo inicializa la oración, pasando el sujeto como primer argumento.
+
+```javascript
+/*
+  Firma de la función:
+  function Verb(subject, state) { ... }
+*/
+
+// -------------------------------------------------
+//  CONSOLE.LOG OUTPUT
+// -------------------------------------------------
+
+// ¿Eres estudiante?
+console.log( Are(you, "student")? );   // "Are you student?"
+
+// ¿Está ella ocupada?
+console.log( Is(she, "busy")? );       // "Is she busy?"
+
+// ¿Estoy yo en la lista?
+console.log( Am(I, "on the list")? );  // "Am I on the list?"
+```
+
+<CardGrid>
+  <Card title="✅ Valid Query" icon="approve-check">
+    ```javascript
+    Is(it, "working")?
+    Are(we, "lost")?
+    ```
+  </Card>
+  <Card title="❌ Invalid Query" icon="error">
+    ```javascript
+    Does(it, "is working")?  // Error: 'Does' is not defined for ToBe
+    Do(we, "are lost")?
+    ```
+  </Card>
+</CardGrid>
+
+---
+
+## ⚠️ Exception Handling (Errores Comunes)
+
+Al programar en inglés, evita estos errores comunes que rompen la compilación de la oración.
+
+### 1. Type Mismatch (Concordancia)
+
+No puedes invocar un método que no pertenece al prototipo del sujeto.
+
+```javascript
+// ❌ Error: .is() no existe en 'I'
+try {
+  console.log( I.is("happy") );
+} catch (e) {
+  // Error: undefined is not a function
+  // Did you mean: I.am("happy")?
+}
+
+// ❌ Error: .are() no existe en 'He'
+try {
+  console.log( He.are("my friend") );
+} catch (e) {
+  // Error: undefined is not a function
+  // Did you mean: He.is("my friend")?
+}
+```
+
+### 2. Dependency Injection innecesaria (`Do/Does`)
+
+El verbo *To Be* es independiente. No intentes inyectar dependencias auxiliares.
+
+> **Regla de Oro:** Si el verbo principal es *To Be*, el operador `Do/Does` es **deprecated** (obsoleto/prohibido).
+

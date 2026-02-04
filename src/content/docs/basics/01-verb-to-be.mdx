@@ -14,9 +14,8 @@ El verbo `to be` funciona como una **función de estado** que declara propiedade
 
 <Tabs>
   <TabItem label="Presente">
-```typescript
-// Conjugación en presente
-const present = {
+```javascript
+const VerbToBe = {
   I: "am",
   you: "are",
   he: "is",
@@ -26,17 +25,17 @@ const present = {
   they: "are"
 };
 
-// Uso
-I.am("happy")      // I am happy
-you.are("tired")   // You are tired
-she.is("ready")    // She is ready
+// Ejemplos de uso
+console.log(`I ${VerbToBe.I} happy`);        // "I am happy"
+console.log(`You ${VerbToBe.you} tired`);    // "You are tired"
+console.log(`She ${VerbToBe.she} ready`);    // "She is ready"
+console.log(`We ${VerbToBe.we} students`);   // "We are students"
 ```
   </TabItem>
 
   <TabItem label="Pasado">
-```typescript
-// Conjugación en pasado
-const past = {
+```javascript
+const VerbToBe = {
   I: "was",
   you: "were",
   he: "was",
@@ -46,9 +45,11 @@ const past = {
   they: "were"
 };
 
-// Uso
-I.was("happy")      // I was happy
-they.were("tired")  // They were tired
+// Ejemplos de uso
+console.log(`I ${VerbToBe.I} happy`);        // "I was happy"
+console.log(`You ${VerbToBe.you} tired`);    // "You were tired"
+console.log(`She ${VerbToBe.she} ready`);    // "She was ready"
+console.log(`We ${VerbToBe.we} students`);   // "We were students"
 ```
   </TabItem>
 </Tabs>
@@ -59,49 +60,103 @@ Con `toBe()` **NO** se usan auxiliares `do/does/did` para preguntas y negaciones
 
 ## Operadores
 
-### Negación (`.not()`)
-```typescript
-// Sintaxis
-subject.toBe.not(state)
+### Negación (`not`)
 
-// Ejemplos
-I.am.not("sad")         // I am not sad
-she.is.not("here")      // She is not here
-they.were.not("ready")  // They were not ready
+<Tabs>
+  <TabItem label="Presente">
+```javascript
+/**
+ * Función Deny (Negar): Agrega el "not" después del verbo.
+ * Reutiliza el objeto 'VerbToBe' definido anteriormente.
+ */
+const deny = (subject, state) => {
+  const verb = VerbToBe[subject]; // 1. Obtenemos "am", "is", "are"
+  console.log(`${subject} ${verb} not ${state}`); // 2. Imprimimos la negación
+};
+
+// Uso
+deny("I", "sad");        // "I am not sad"
+deny("she", "here");     // "She is not here"
+deny("they", "ready");   // "They are not ready"
 ```
+  </TabItem>
+
+  <TabItem label="Pasado">
+```javascript
+/**
+ * Función Deny (Negar): Agrega el "not" después del verbo.
+ * Reutiliza el objeto 'VerbToBe' definido anteriormente.
+ */
+const deny = (subject, state) => {
+  const verb = VerbToBe[subject]; // 1. Obtenemos "was", "were"
+  console.log(`${subject} ${verb} not ${state}`); // 2. Imprimimos la negación
+};
+
+// Uso
+deny("he", "happy");     // "He was not happy"
+deny("we", "tired");     // "We were not tired"
+```
+  </TabItem>
+</Tabs>
 
 ### Query (Preguntas)
-```typescript
-// Sintaxis: Invierte el orden
-toBe(subject, state)?
+<Tabs>
+  <TabItem label="Presente">
+```javascript
+/**
+ * Función Ask: Implementa la inversión de orden (Subject-Verb Swap)
+ * Reutiliza el objeto 'VerbToBe' definido anteriormente.
+ */ 
+const ask = (subject, complement) => {
+  const verb = VerbToBe[subject]; // 1. Obtenemos "am", "is", "are"
+  console.log(`${verb} ${subject} ${complement}?`); // 2. Imprimimos la pregunta
+};
 
-// Ejemplos
-is(he, "ready")?        // Is he ready?
-are(you, "sure")?       // Are you sure?
-was(it, "expensive")?   // Was it expensive?
+// Ejecutamos las consultas
+ask("you", "sure about this"); // "Are you sure about this?"
+ask("she", "coming to the party"); // "Is she coming to the party?"
+ask("I", "late"); // "Am I late?"
 ```
+  </TabItem>
+
+  <TabItem label="Pasado">
+```javascript
+/**
+ * Función Ask: Implementa la inversión de orden (Subject-Verb Swap)
+ * Reutiliza el objeto 'VerbToBe' definido anteriormente.
+ */ 
+const ask = (subject, complement) => {
+  const verb = VerbToBe[subject]; // 1. Obtenemos "was", "were"
+  console.log(`${verb} ${subject} ${complement}?`); // 2. Imprimimos la pregunta
+};
+
+// Ejecutamos las consultas
+ask("you", "sure about that"); // "Were you sure about that?"
+ask("he", "at the meeting"); // "Was he at the meeting?"
+ask("they", "on time"); // "Were they on time?"
+```
+  </TabItem>
+</Tabs>
 
 ## Debugging común
 
 :::danger[Error común #1]
 ```typescript
 // ❌ INCORRECTO: Usar do/does con toBe
-do.you.are("ready")?
+do("you", "ready");
 
-// ✅ CORRECTO
-are(you, "ready")?
+// ✅ CORRECTO: Usar la función de estado directa
+are("you", "ready");
 ```
 :::
 
 :::danger[Error común #2]
 ```typescript
-// ❌ INCORRECTO: Conjugación incorrecta
-I.is("happy")      // TypeError
-he.are("tired")    // TypeError
+// ❌ INCORRECTO: El objeto "I" no tiene el método .is()
+I.is("happy");     // TypeError: I.is is not a function
 
-// ✅ CORRECTO: Pattern matching
-I.am("happy")
-he.is("tired")
+// ✅ CORRECTO: Usar el método correspondiente
+I.am("happy");
 ```
 :::
 
