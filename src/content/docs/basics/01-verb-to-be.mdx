@@ -1,14 +1,15 @@
 ---
-title: Verbo To Be (Ser o Estar)
-description: Aprende la base del inglés usando lógica de programación.
+title: El Verbo To Be (Ser o Estar)
+description: Aprende a usar el verbo más importante del inglés con lógica de código.
 ---
 
-import { Tabs, TabItem } from '@astrojs/starlight/components';
-import { Code } from '@astrojs/starlight/components';
+import { Tabs, TabItem, Aside } from '@astrojs/starlight/components';
 
-El verbo `to be` es el equivalente a definir quién eres ("I am a developer") o cómo estás ("I am tired"). Es la base de todo, como el `Hello World` del inglés.
+El verbo `to be` es la columna vertebral del inglés. Lo usamos para expresar identidad ("I am a developer"), estados ("I am tired"), ubicación ("She is here") y características ("They are tall"). Sin este verbo, no podrías presentarte ni describir el mundo que te rodea. Dominar `to be` es como aprender a caminar antes de correr: es tu primer paso hacia la fluidez en inglés.
 
-## Estructura Básica (Afirmativo)
+## ¿Cómo se conjuga?
+
+El verbo `to be` cambia su forma dependiendo de quién realiza la acción. A diferencia del español donde "estar" y "ser" son diferentes, en inglés ambos conceptos se expresan con `to be`. Aquí está la conjugación completa:
 
 <Tabs>
   <TabItem label="Presente">
@@ -22,12 +23,6 @@ const VerbToBe = {
   we: "are",
   they: "are"
 };
-
-// Ejemplos de uso
-console.log(`I ${VerbToBe.I} happy`);        // "I am happy"
-console.log(`You ${VerbToBe.you} tired`);    // "You are tired"
-console.log(`She ${VerbToBe.she} ready`);    // "She is ready"
-console.log(`We ${VerbToBe.we} students`);   // "We are students"
 ```
   </TabItem>
 
@@ -42,23 +37,59 @@ const VerbToBe = {
   we: "were",
   they: "were"
 };
-
-// Ejemplos de uso
-console.log(`I ${VerbToBe.I} happy`);        // "I was happy"
-console.log(`You ${VerbToBe.you} tired`);    // "You were tired"
-console.log(`She ${VerbToBe.she} ready`);    // "She was ready"
-console.log(`We ${VerbToBe.we} students`);   // "We were students"
 ```
   </TabItem>
 </Tabs>
 
-:::note[Nota Importante]
-El verbo **To Be** es especial: se manda solo. **NO** necesita ayuda de auxiliares (como `do`, `does`, o `did`) para hacer preguntas o negaciones.
-:::
+## Formas de uso
 
-## Formas Negativa e Interrogativa
+El verbo `to be` se comporta de manera diferente a otros verbos en inglés. Tiene sus propias reglas para formar oraciones afirmativas, negativas e interrogativas. A continuación, verás cómo construir cada tipo de oración correctamente.
 
-### Negación (Negative Form)
+### Afirmaciones
+
+Para construir una oración afirmativa, simplemente coloca el verbo después del sujeto. La estructura es: **Sujeto + Verbo + Complemento**.
+
+<Tabs>
+  <TabItem label="Presente">
+```javascript
+/**
+ * Función Affirm (Afirmar): Imprime la oración normalmente.
+ * Reutiliza el objeto 'VerbToBe' definido anteriormente.
+ */
+const affirm = (subject, complement) => {
+  const verb = VerbToBe[subject]; // 1. Obtenemos "am", "is", "are"
+  console.log(`${subject} ${verb} ${complement}`); // 2. Imprimimos la afirmación
+};
+
+// Ejemplos de uso
+affirm("I", "happy");        // "I am happy"
+affirm("you", "tired");      // "You are tired"
+affirm("she", "ready");      // "She is ready"
+```
+  </TabItem>
+
+  <TabItem label="Pasado">
+```javascript
+/**
+ * Función Affirm (Afirmar): Imprime la oración normalmente.
+ * Reutiliza el objeto 'VerbToBe' definido anteriormente.
+ */
+const affirm = (subject, complement) => {
+  const verb = VerbToBe[subject]; // 1. Obtenemos "was", "were"
+  console.log(`${subject} ${verb} ${complement}`); // 2. Imprimimos la afirmación
+};
+
+// Ejemplos de uso
+affirm("I", "happy");        // "I was happy"
+affirm("you", "tired");      // "You were tired"
+affirm("she", "ready");      // "She was ready"
+```
+  </TabItem>
+</Tabs>
+
+### Negaciones
+
+Para negar algo, añade la palabra `not` inmediatamente después del verbo. No necesitas palabras adicionales. La estructura es: **Sujeto + Verbo + not + Complemento**.
 
 <Tabs>
   <TabItem label="Presente">
@@ -67,12 +98,12 @@ El verbo **To Be** es especial: se manda solo. **NO** necesita ayuda de auxiliar
  * Función Deny (Negar): Agrega el "not" después del verbo.
  * Reutiliza el objeto 'VerbToBe' definido anteriormente.
  */
-const deny = (subject, state) => {
+const deny = (subject, complement) => {
   const verb = VerbToBe[subject]; // 1. Obtenemos "am", "is", "are"
-  console.log(`${subject} ${verb} not ${state}`); // 2. Imprimimos la negación
+  console.log(`${subject} ${verb} not ${complement}`); // 2. Imprimimos la negación
 };
 
-// Uso
+// Ejemplos de uso
 deny("I", "sad");        // "I am not sad"
 deny("she", "here");     // "She is not here"
 deny("they", "ready");   // "They are not ready"
@@ -85,19 +116,23 @@ deny("they", "ready");   // "They are not ready"
  * Función Deny (Negar): Agrega el "not" después del verbo.
  * Reutiliza el objeto 'VerbToBe' definido anteriormente.
  */
-const deny = (subject, state) => {
+const deny = (subject, complement) => {
   const verb = VerbToBe[subject]; // 1. Obtenemos "was", "were"
-  console.log(`${subject} ${verb} not ${state}`); // 2. Imprimimos la negación
+  console.log(`${subject} ${verb} not ${complement}`); // 2. Imprimimos la negación
 };
 
-// Uso
+// Ejemplos de uso
+deny("I", "sad");        // "I was not sad"
 deny("he", "happy");     // "He was not happy"
 deny("we", "tired");     // "We were not tired"
 ```
   </TabItem>
 </Tabs>
 
-### Preguntas (Question Form)
+### Preguntas
+
+Para hacer una pregunta con `to be`, invierte el orden del sujeto y el verbo. El verbo va primero, luego el sujeto. La estructura es: **Verbo + Sujeto + Complemento + ?**
+
 <Tabs>
   <TabItem label="Presente">
 ```javascript
@@ -110,7 +145,7 @@ const ask = (subject, complement) => {
   console.log(`${verb} ${subject} ${complement}?`); // 2. Imprimimos la pregunta
 };
 
-// Ejecutamos las consultas
+// Ejemplos de uso
 ask("you", "sure about this"); // "Are you sure about this?"
 ask("she", "coming to the party"); // "Is she coming to the party?"
 ask("I", "late"); // "Am I late?"
@@ -128,7 +163,7 @@ const ask = (subject, complement) => {
   console.log(`${verb} ${subject} ${complement}?`); // 2. Imprimimos la pregunta
 };
 
-// Ejecutamos las consultas
+// Ejemplos de uso
 ask("you", "sure about that"); // "Were you sure about that?"
 ask("he", "at the meeting"); // "Was he at the meeting?"
 ask("they", "on time"); // "Were they on time?"
@@ -136,33 +171,38 @@ ask("they", "on time"); // "Were they on time?"
   </TabItem>
 </Tabs>
 
-## Errores Comunes (Debugging)
+<Aside title='Regla importante'>
+El verbo **to be** no necesita verbos auxiliares como `do`, `does` o `did` para formar preguntas o negaciones. Simplemente inviertes el orden (para preguntas) o agregas `not` (para negaciones).
 
-:::danger[Bug #1: Usar auxiliares innecesarios]
-Un error clásico es intentar usar `do` o `does` con el verbo To Be. Recuerda: `To Be` es independiente.
+**Otros verbos sí necesitan auxiliares:**
+- "Do you **like** pizza?" (necesita `do`)
+- "Does she **play** tennis?" (necesita `does`)
 
+**To be es independiente:**
+- "**Are** you ready?" (sin auxiliar)
+- "**Is** she here?" (sin auxiliar)
+</Aside>
+
+## Errores que debes evitar
+
+<Aside type="danger" title="Bug #1: Conjugación incorrecta">
+  Cada sujeto tiene su propia forma del verbo. No puedes intercambiarlas.
 ```javascript
-// ❌ BUG: ¡Esto no compila en inglés!
-do("you", "ready"); // Error: Auxiliar Innecesario
+  // ❌ BUG: "I" no es compatible con "is"
+  console.log(`I ${VerbToBe.he} happy`);  // Resultado: "I is happy" (Incorrecto)
 
-// ✅ FIX: Usa el verbo To Be directamente
-are("you", "ready"); // Are you ready?
+  // ✅ FIX: Usa la forma correcta del verbo
+  console.log(`I ${VerbToBe.I} happy`);   // Resultado: "I am happy"
 ```
-:::
+</Aside>
 
-:::danger[Bug #2: Conjugación incorrecta]
-Cada sujeto tiene su propio verbo asignado. No puedes mezclarlos.
-
+<Aside type="danger" title="Bug #2: Olvidar la inversión en preguntas">
+  Recuerda que en las preguntas el verbo va primero, no el sujeto.
 ```javascript
-// ❌ BUG: "I" no es compatible con "is"
-I.is("happy");     // Error: Conjugación Incorrecta
+  // ❌ BUG: El orden está invertido
+  console.log(`You ${VerbToBe.you} ready?`); // "You are ready?" (Afirmación, no pregunta)
 
-// ✅ FIX: Usa la conjugación correcta
-I.am("happy"); // I am happy
+  // ✅ FIX: Invierte el orden correctamente
+  console.log(`${VerbToBe.you} you ready?`); // "Are you ready?" (Pregunta correcta)
 ```
-:::
-
-## Ver también
-
-- [Simple Present](/basics/simple-present) - Verbos regulares
-- [Question Words](/basics/question-words) - Formular preguntas
+</Aside>

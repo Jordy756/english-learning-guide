@@ -1,423 +1,326 @@
 ---
-title: Presente Simple
-description: El verbo To Be explicado como una función de programación
+title: Simple Present (Presente Simple)
+description: Aprende a usar el tiempo verbal más común del inglés para hablar de rutinas y verdades universales.
 ---
 
-import { Tabs, TabItem } from '@astrojs/starlight/components';
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Tabs, TabItem, Aside } from '@astrojs/starlight/components';
 
-# `toBe()` - Función de Declaración de Estados
+El presente simple es el tiempo verbal que usas para hablar de rutinas, hábitos, hechos y verdades universales. A diferencia del presente continuo, el presente simple no describe acciones que están ocurriendo ahora mismo, sino acciones que se repiten o son verdades generales.
 
-El verbo `to be` es la **función más fundamental** del idioma inglés. Funciona como un método que declara el estado, identidad o ubicación de un sujeto.
+## Conjugación básica
 
-## 📋 Firma de la Función (Signature)
+La buena noticia es que el presente simple es muy fácil de conjugar. Para la mayoría de personas, simplemente usas el verbo en su forma base (infinitivo sin "to"):
 
-```typescript
-function toBe(
-  subject: Pronoun,
-  state: Adjective | Noun | Location,
-  tense: 'present' | 'past' = 'present'
-): Statement
+```javascript
+// Para I, you, we, they: usa el verbo base
+const subjects = ["I", "You", "We", "They"];
+const verb = "work";
+
+subjects.forEach(subject => {
+  console.log(`${subject} ${verb}`);
+});
+
+// Resultado:
+// "I work"
+// "You work"
+// "We work"
+// "They work"
 ```
 
-### Parámetros
+## La regla de tercera persona
 
-| Parámetro | Tipo | Descripción | Requerido |
-|-----------|------|-------------|-----------|
-| `subject` | `Pronoun` | El sujeto (I, you, he, she, it, we, they) | ✅ |
-| `state` | `Adjective \| Noun \| Location` | Estado, identidad o ubicación | ✅ |
-| `tense` | `'present' \| 'past'` | Tiempo verbal | ❌ (default: `'present'`) |
+Aquí está el único cambio importante: cuando el sujeto es **he**, **she** o **it** (tercera persona singular), el verbo necesita una terminación especial. Dependiendo de cómo termina el verbo, añadimos `-s`, `-es` o `-ies`.
 
-### Retorna
+Estas son las 4 reglas que debes memorizar:
 
-`Statement` - Una declaración válida en inglés
+1. **La mayoría de verbos:** Simplemente añade `-s`.
+2. **Terminaciones especiales (-ch, -sh, -s, -x, -z, -o):** Añade `-es` para facilitar la pronunciación.
+3. **Consonante + y:** Si el verbo termina en una consonante seguida de "y", cambia la "y" por "i" y añade `-es`.
+4. **Vocal + y:** Si antes de la "y" hay una vocal, solo añade `-s` (sigue la regla general).
 
----
+### Conjugación para he/she/it
 
-## 🔧 Tabla de Conjugación (Lookup Table)
 
-<Tabs>
-  <TabItem label="Presente">
+```javascript
+// Primero, los verbos irregulares más comunes.
+const irregularVerbs = {
+  have: "has",
+  be: "is",
+};
 
-```typescript
-const conjugationPresent = {
-  I: "am",
-  you: "are",
-  he: "is",
-  she: "is",
-  it: "is",
-  we: "are",
-  they: "are"
-} as const;
+/**
+ * Función conjugateThirdPerson:
+ * Conjuga cualquier verbo para he/she/it siguiendo las reglas.
+ */
+const conjugateThirdPerson = (verb) => {
+  // 1. Asegurarse de que el verbo esté en minúsculas para evitar problemas de mayúsculas
+  verb = verb.toLowerCase();
+
+  // 2. Verificar si es irregular
+  if (irregularVerbs[verb]) return irregularVerbs[verb];
+
+  // 3. Verificar si termina en -s, -x, -z, -ch, -sh, o -o
+  if (/[sxz]$|[cs]h$|o$/.test(verb)) return verb + "es";
+
+  // 4. Verificar si termina en consonante + y
+  if (/[^aeiou]y$/.test(verb)) return verb.slice(0, -1) + "ies";
+
+  // 5. Si no cumple ninguna regla especial, solo añade -s
+  return verb + "s";
+};
 
 // Ejemplos de uso
-console.log(`I ${conjugationPresent.I} happy`);        // "I am happy"
-console.log(`You ${conjugationPresent.you} tired`);    // "You are tired"
-console.log(`She ${conjugationPresent.she} ready`);    // "She is ready"
-console.log(`We ${conjugationPresent.we} students`);   // "We are students"
+console.log(conjugateThirdPerson("work")); // "works"
+console.log(conjugateThirdPerson("BE"));  // "is" (irregular)
+console.log(conjugateThirdPerson("go")); // "goes"
+console.log(conjugateThirdPerson("watch")); // "watches" (termina en -ch)
+console.log(conjugateThirdPerson("study")); // "studies" (consonante + y)
+console.log(conjugateThirdPerson("play")); // "plays" (vocal + y, regla general)
+console.log(conjugateThirdPerson("have")); // "has" (irregular)
 ```
 
-  </TabItem>
+<Aside title="Nota">
+Existen verbos **regulares** (siguen reglas, como *work*) e **irregulares** (no siguen reglas, como *be* o *have*). En presente simple, esta distinción solo afecta a la tercera persona (he/she/it), ya que el resto usa la forma base del verbo.
+</Aside>
 
-  <TabItem label="Pasado">
+<Aside type="tip" title="Truco para recordar">
+**La mayoría de verbos solo añaden -s.** Las otras reglas (-es, -ies) son para casos especiales que suenan mejor al pronunciarse. Por ejemplo, intenta decir "he watchs" en voz alta — suena raro. Por eso se convierte en "watches".
+</Aside>
 
-```typescript
-const conjugationPast = {
-  I: "was",
-  you: "were",
-  he: "was",
-  she: "was",
-  it: "was",
-  we: "were",
-  they: "were"
-} as const;
+## Formas de uso
+
+El presente simple tiene tres formas principales: afirmativa, negativa e interrogativa. A diferencia del verbo `to be`, el presente simple **sí necesita auxiliares** (`do` o `does`) para formar negaciones y preguntas.
+
+### Afirmaciones
+
+Para construir una oración afirmativa, usa la estructura: **Sujeto + Verbo + Complemento**. Recuerda aplicar las reglas de tercera persona cuando sea necesario.
+
+```javascript
+const thirdPersonSubjects = ["he", "she", "it"];
+
+/**
+ * Función affirm: Construye oraciones afirmativas en presente simple.
+ * Detecta automáticamente si es tercera persona.
+ */
+const affirm = (subject, verb, complement) => {  
+  // Si es tercera persona, conjugar el verbo
+  const conjugatedVerb = thirdPersonSubjects.includes(subject.toLowerCase())
+    ? conjugateThirdPerson(verb)
+    : verb;
+  
+  console.log(`${subject} ${conjugatedVerb} ${complement}`);
+};
 
 // Ejemplos de uso
-console.log(`I ${conjugationPast.I} happy`);           // "I was happy"
-console.log(`You ${conjugationPast.you} tired`);       // "You were tired"
-console.log(`They ${conjugationPast.they} ready`);     // "They were ready"
+affirm("I", "work", "from home");           // "I work from home"
+affirm("She", "work", "at Google");         // "She works at Google"
+affirm("They", "play", "soccer");           // "They play soccer"
+affirm("He", "study", "English");           // "He studies English"
+affirm("We", "have", "a meeting");          // "We have a meeting"
+affirm("It", "work", "perfectly");          // "It works perfectly"
 ```
 
-  </TabItem>
+### Negaciones
 
-  <TabItem label="TypeScript Types">
+Para negar en presente simple, necesitas el auxiliar **do** (para I/you/we/they) o **does** (para he/she/it), seguido de **not** y el verbo en su forma base. La estructura es: **Sujeto + do/does + not + Verbo base + Complemento**.
 
-```typescript
-type Pronoun = "I" | "you" | "he" | "she" | "it" | "we" | "they";
-type Tense = "present" | "past";
+<Aside title="Importante">
+Cuando usas `does` en negaciones o preguntas, el verbo principal **siempre** vuelve a su forma base. No lleva -s, -es o -ies porque el auxiliar `does` ya indica la tercera persona.
+</Aside>
 
-type ConjugationMap = {
-  present: Record<Pronoun, "am" | "are" | "is">;
-  past: Record<Pronoun, "was" | "were">;
+```javascript
+const thirdPersonSubjects = ["he", "she", "it"];
+
+/**
+ * Función deny: Construye oraciones negativas en presente simple.
+ * Usa do/does + not + verbo en forma base.
+ */
+const deny = (subject, verb, complement) => {
+  // Si es tercera persona, usar "does", si no, usar "do"
+  const auxiliary = thirdPersonSubjects.includes(subject.toLowerCase())
+    ? "does"
+    : "do";
+  
+  // El verbo SIEMPRE va en forma base con auxiliares
+  console.log(`${subject} ${auxiliary} not ${verb} ${complement}`);
 };
 
-const conjugation: ConjugationMap = {
-  present: {
-    I: "am",
-    you: "are",
-    he: "is",
-    she: "is",
-    it: "is",
-    we: "are",
-    they: "are",
-  },
-  past: {
-    I: "was",
-    you: "were",
-    he: "was",
-    she: "was",
-    it: "was",
-    we: "were",
-    they: "were",
-  },
+// Ejemplos de uso
+deny("I", "like", "coffee");                // "I do not like coffee"
+deny("She", "work", "on weekends");         // "She does not work on weekends"
+deny("They", "play", "video games");        // "They do not play video games"
+deny("He", "speak", "French");              // "He does not speak French"
+```
+
+### Preguntas
+
+Para hacer preguntas, coloca el auxiliar **do/does** al principio de la oración, seguido del sujeto y el verbo en forma base. La estructura es: **Do/Does + Sujeto + Verbo base + Complemento + ?**
+
+```javascript
+const thirdPersonSubjects = ["he", "she", "it"];
+
+/**
+ * Función ask: Construye preguntas en presente simple.
+ * Invierte el orden: auxiliar primero, luego sujeto.
+ */
+const ask = (subject, verb, complement) => {
+  // Si es tercera persona, usar "does", si no, usar "do"
+  const auxiliary = thirdPersonSubjects.includes(subject.toLowerCase())
+    ? "Does"
+    : "Do";
+  
+  // El verbo SIEMPRE va en forma base
+  console.log(`${auxiliary} ${subject} ${verb} ${complement}?`);
 };
 
-// Helper function
-function getConjugation(pronoun: Pronoun, tense: Tense): string {
-  return conjugation[tense][pronoun];
-}
+// Ejemplos de uso
+ask("you", "like", "pizza");                // "Do you like pizza?"
+ask("she", "work", "here");                 // "Does she work here?"
+ask("they", "speak", "English");            // "Do they speak English?"
+ask("he", "play", "guitar");                // "Does he play guitar?"
 ```
 
-  </TabItem>
-</Tabs>
+<Aside title='Diferencia clave con "to be"'>
+Recuerda que el verbo **to be** es especial y no necesita auxiliares. Compara:
 
----
+**Con to be (sin auxiliar):**
+- "**Is** he happy?" ✓
+- "He **is not** sad" ✓
 
-## 💡 Pattern Matching (Reglas de Conjugación)
+**Con otros verbos (con auxiliar):**
+- "**Does** he work here?" ✓
+- "He **does not** work today" ✓
+- ~~"Works he here?"~~ ✗
+- ~~"He works not today"~~ ✗
+</Aside>
 
-```typescript
-function conjugateToBe(pronoun: Pronoun, tense: Tense): string {
-  if (tense === "present") {
-    switch (pronoun) {
-      case "I":
-        return "am";
-      case "you":
-      case "we":
-      case "they":
-        return "are";
-      case "he":
-      case "she":
-      case "it":
-        return "is";
-    }
-  } else if (tense === "past") {
-    switch (pronoun) {
-      case "I":
-      case "he":
-      case "she":
-      case "it":
-        return "was";
-      case "you":
-      case "we":
-      case "they":
-        return "were";
-    }
-  }
-}
+## Usos del presente simple
 
-// Uso
-conjugateToBe("I", "present");      // "am"
-conjugateToBe("she", "present");    // "is"
-conjugateToBe("they", "past");      // "were"
+El presente simple se usa en cuatro situaciones principales:
+
+### 1. Rutinas y hábitos
+
+Acciones que repites regularmente:
+
+```javascript
+const dailyRoutines = [
+  "I wake up at 7 AM every day",
+  "She drinks coffee in the morning",
+  "They go to the gym three times a week",
+  "He studies English on Mondays"
+];
 ```
 
-:::tip[Regla de Oro]
-**Presente:** `was` → singular (`I`, `he`, `she`, `it`) | `were` → plural + `you`
+### 2. Hechos y verdades universales
 
-**Pasado:** `am` → solo `I` | `is` → singular | `are` → plural + `you`
-:::
+Información que siempre es cierta:
 
----
-
-## ⚙️ Operadores y Métodos
-
-### 1️⃣ Negación (`.not()`)
-
-La negación **NO requiere auxiliares** como `do/does/did`. Solo se añade `not` después del verbo.
-
-```typescript
-// Sintaxis
-subject.toBe.not(state)
-
-// Implementación
-class ToBe {
-  not(state: string): string {
-    return `${this.verb} not ${state}`;
-  }
-}
-
-// Ejemplos
-I.am.not("sad")              // ✅ I am not sad
-she.is.not("here")           // ✅ She is not here
-they.were.not("ready")       // ✅ They were not ready
-
-// ❌ NUNCA uses do/does/did
-I.do.not.am("sad")           // ❌ SYNTAX ERROR
-she.does.not.is("here")      // ❌ SYNTAX ERROR
+```javascript
+const facts = [
+  "The sun rises in the east",
+  "Water boils at 100 degrees Celsius",
+  "Cats have four legs",
+  "The Earth orbits the sun"
+];
 ```
 
-<CardGrid>
-  <Card title="✅ Correcto" icon="approve-check">
-    ```typescript
-    I.am.not("happy")
-    You.are.not("tired")
-    He.was.not("there")
-    ```
-  </Card>
-  <Card title="❌ Incorrecto" icon="error">
-    ```typescript
-    I.do.not.am("happy")
-    You.do.not.are("tired")
-    He.did.not.was("there")
-    ```
-  </Card>
-</CardGrid>
+### 3. Gustos y preferencias permanentes
 
----
+Cosas que te gustan o no te gustan:
 
-### 2️⃣ Interrogación (Query Syntax)
-
-Las preguntas **invierten el orden** del sujeto y el verbo. No usan auxiliares.
-
-```typescript
-// Sintaxis
-toBe(subject, state)?
-
-// Equivalente a invertir el orden
-[verb] [subject] [state]?
-
-// Ejemplos
-is(he, "ready")?             // Is he ready?
-are(you, "sure")?            // Are you sure?
-was(it, "expensive")?        // Was it expensive?
-were(they, "happy")?         // Were they happy?
+```javascript
+const preferences = [
+  "I love pizza",
+  "She hates cold weather",
+  "We prefer tea over coffee",
+  "He likes action movies"
+];
 ```
 
-#### Implementación
+### 4. Horarios y programas fijos
 
-```typescript
-function createQuestion(pronoun: Pronoun, state: string, tense: Tense): string {
-  const verb = conjugateToBe(pronoun, tense);
-  return `${verb.charAt(0).toUpperCase() + verb.slice(1)} ${pronoun} ${state}?`;
-}
+Eventos programados que no cambian:
 
-// Uso
-createQuestion("you", "ready", "present");   // "Are you ready?"
-createQuestion("he", "tired", "past");       // "Was he tired?"
+```javascript
+const schedules = [
+  "The train leaves at 9:00 AM",
+  "The store opens at 10:00",
+  "Class starts at 8:30",
+  "The movie begins at 7 PM"
+];
 ```
 
-<CardGrid>
-  <Card title="✅ Correcto" icon="approve-check">
-    ```typescript
-    Am I late?
-    Is she ready?
-    Are they happy?
-    Was it good?
-    ```
-  </Card>
-  <Card title="❌ Incorrecto" icon="error">
-    ```typescript
-    Do I am late?
-    Does she is ready?
-    Do they are happy?
-    Did it was good?
-    ```
-  </Card>
-</CardGrid>
+## Errores que debes evitar
 
----
+<Aside type="danger" title="Bug #1: Olvidar la -s en tercera persona">
+  Este es el error más común. Recuerda que he/she/it siempre llevan terminación especial.
 
-## 🔍 Casos de Uso (Use Cases)
+  ```javascript
+  // ❌ BUG: Falta la conjugación
+  console.log("She work at home");  // "She work at home" (Incorrecto)
 
-### Uso #1: Declarar Identidad
+  // ✅ FIX: Añade la terminación correcta
+  console.log("She works at home"); // "She works at home"
+  ```
+</Aside>
 
-```typescript
-// Quién eres
-I.am("a developer")          // I am a developer
-she.is("a teacher")          // She is a teacher
-they.are("students")         // They are students
-```
+<Aside type="danger" title="Bug #2: Añadir -s cuando no es tercera persona">
+  Solo he/she/it llevan -s. Los demás sujetos usan el verbo base.
 
-### Uso #2: Declarar Estado/Condición
+  ```javascript
+  // ❌ BUG: "I" no es tercera persona
+  console.log("I works from home");     // Incorrecto
+  console.log("They plays soccer");     // Incorrecto
 
-```typescript
-// Cómo estás
-I.am("happy")                // I am happy
-you.are("tired")             // You are tired
-it.is("broken")              // It is broken
-```
+  // ✅ FIX: Usa el verbo base
+  console.log("I work from home");      // Correcto
+  console.log("They play soccer");      // Correcto
+  ```
+</Aside>
 
-### Uso #3: Declarar Ubicación
+<Aside type="danger" title="Bug #3: No usar auxiliar en negaciones y preguntas">
+  A diferencia de "to be", otros verbos necesitan do/does.
 
-```typescript
-// Dónde estás
-I.am("at home")              // I am at home
-she.is("in Spain")           // She is in Spain
-they.are("here")             // They are here
-```
+  ```javascript
+  // ❌ BUG: Falta el auxiliar
+  console.log("You like pizza?");           // Suena informal/incorrecto
+  console.log("She not works here");        // Totalmente incorrecto
 
-### Uso #4: Expresar Tiempo/Situaciones Pasadas
+  // ✅ FIX: Usa do/does correctamente
+  console.log("Do you like pizza?");        // Correcto
+  console.log("She does not work here");    // Correcto
+  ```
+</Aside>
 
-```typescript
-// Pasado
-I.was("sick yesterday")      // I was sick yesterday
-it.was("cold")               // It was cold
-we.were("late")              // We were late
-```
+<Aside type="danger" title="Bug #4: Mantener -s con auxiliar does">
+  Cuando usas "does", el verbo vuelve a su forma base.
 
----
+  ```javascript
+  // ❌ BUG: No puedes tener "does" y "-s" juntos
+  console.log("Does she works here?");      // Incorrecto
+  console.log("He does not likes coffee");  // Incorrecto
 
-## 🐛 Debugging - Errores Comunes
+  // ✅ FIX: Con "does", el verbo pierde la -s
+  console.log("Does she work here?");       // Correcto
+  console.log("He does not like coffee");   // Correcto
+  ```
+</Aside>
 
-### Error #1: Usar auxiliares `do/does/did`
+<Aside type="danger" title="Bug #5: Confundir consonante + y con vocal + y">
+  Solo cuando la "y" está precedida por consonante se convierte en "ies".
 
-:::danger[TypeError: Auxiliares no permitidos]
-```typescript
-// ❌ INCORRECTO
-do.you.are("ready")?
-does.he.is("happy")?
-did.they.were("there")?
+  ```javascript
+  // ❌ BUG: "play" tiene vocal antes de "y"
+  console.log(conjugateThirdPerson("play")); // Si devuelve "plies" está mal
 
-// ✅ CORRECTO
-are(you, "ready")?           // Are you ready?
-is(he, "happy")?             // Is he happy?
-were(they, "there")?         // Were they there?
-```
+  // ✅ FIX: Vocal + y solo añade -s
+  // play → plays
+  // enjoy → enjoys
+  // buy → buys
 
-**Regla:** Con `toBe()` las preguntas y negaciones se hacen **moviendo** el verbo, NO usando auxiliares.
-:::
-
----
-
-### Error #2: Conjugación incorrecta (Type Mismatch)
-
-:::danger[TypeError: Conjugación no coincide]
-```typescript
-// ❌ INCORRECTO
-I.is("happy")                // Expected "am", got "is"
-he.are("tired")              // Expected "is", got "are"
-they.was("ready")            // Expected "were", got "was"
-
-// ✅ CORRECTO
-I.am("happy")
-he.is("tired")
-they.were("ready")
-```
-
-**Solución:** Usa la tabla de conjugación o la función `conjugateToBe()` para evitar errores.
-:::
-
----
-
-### Error #3: Confundir `toBe()` con otros verbos
-
-:::danger[Scope Error: Verbo incorrecto]
-```typescript
-// Si la oración NO usa toBe() como verbo principal
-// → Entonces SÍ usas do/does para negación/pregunta
-
-// ✅ Con toBe (sin do/does)
-she.is.not("happy")          // She is not happy
-is(she, "happy")?            // Is she happy?
-
-// ✅ Con otro verbo (CON do/does)
-she.does.not.like("coffee")  // She does not like coffee
-does(she, "like coffee")?    // Does she like coffee?
-```
-
-**Regla clave:**
-- Si usas `toBe()` como verbo principal → **NO** uses `do/does/did`
-- Si usas cualquier otro verbo → **SÍ** uses `do/does/did`
-:::
-
----
-
-## 📊 Comparación: toBe() vs Otros Verbos
-
-| Característica | `toBe()` | Verbos Regulares |
-|----------------|----------|------------------|
-| **Conjugación** | Irregular (`am/is/are/was/were`) | Regular (`work/works/worked`) |
-| **Negación** | Directo: `am not`, `is not` | Con auxiliar: `do not work` |
-| **Pregunta** | Inversión: `Are you...?` | Con auxiliar: `Do you work?` |
-| **Auxiliares** | ❌ NO usa `do/does/did` | ✅ Usa `do/does/did` |
-
----
-
-## 🎯 Resumen (TL;DR)
-
-```typescript
-// 1. Conjugación (lookup table)
-const conjugation = {
-  present: { I: "am", you: "are", he: "is", she: "is", it: "is", we: "are", they: "are" },
-  past: { I: "was", you: "were", he: "was", she: "was", it: "was", we: "were", they: "were" }
-};
-
-// 2. Negación (sin do/does/did)
-I.am.not("sad")              // ✅
-I.do.not.am("sad")           // ❌
-
-// 3. Pregunta (inversión, sin do/does/did)
-is(he, "ready")?             // ✅
-does(he, "is ready")?        // ❌
-
-// 4. Pattern matching
-switch(pronoun) {
-  case "I": return tense === "present" ? "am" : "was";
-  case "you": case "we": case "they": return tense === "present" ? "are" : "were";
-  case "he": case "she": case "it": return tense === "present" ? "is" : "was";
-}
-```
-
----
-
-## 🔗 Ver También
-
-- [Simple Present](/basics/02-simple-present) - Verbos regulares en presente
-- [Question Words](/basics/03-question-words) - Cómo formar preguntas
-- [Modal Verbs](/intermediate/01-modal-verbs) - Verbos modales (can, should, would)
-
----
-
-:::note[Nota importante]
-El verbo `toBe()` es **irregular** y no sigue las reglas de los verbos regulares. Es uno de los verbos más importantes del inglés porque se usa constantemente para declarar estados, identidades y ubicaciones.
-:::
+  // Consonante + y cambia a -ies
+  // study → studies
+  // try → tries
+  // cry → cries
+  ```
+</Aside>
