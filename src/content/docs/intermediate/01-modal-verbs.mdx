@@ -1,11 +1,158 @@
 ---
-title: Example Reference
-description: A reference page in my new Starlight docs site.
+title: Verbos Modales (Would, Should, Could)
+description: Aprende los verbos modales que cambian el matiz de lo que dices.
 ---
 
-Reference pages are ideal for outlining how things work in terse and clear terms.
-Less concerned with telling a story or addressing a specific use case, they should give a comprehensive outline of what you're documenting.
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## Further reading
+Estos tres verbos son fundamentales porque cambian el **"matiz"** de lo que decimos. Todos son seguidos por un verbo en su forma base (sin "to").
 
-- Read [about reference](https://diataxis.fr/reference/) in the Diátaxis framework
+## 📋 Tabla de Verbos Modales
+
+```typescript
+const ModalVerbs = {
+  would: {
+    traduccion: "-ía (terminación verbal)",
+    uso: "Situaciones hipotéticas o deseos",
+    ejemplo: "I would travel more"
+  },
+  should: {
+    traduccion: "Debería",
+    uso: "Dar consejos o sugerencias",
+    ejemplo: "You should study today"
+  },
+  could: {
+    traduccion: "Podría / Podía",
+    uso: "Posibilidad o habilidad en el pasado",
+    ejemplo: "She could help us"
+  }
+} as const;
+```
+
+---
+
+## 🔧 Uso de Cada Verbo Modal
+
+<Tabs>
+  <TabItem label="Would">
+
+```javascript
+// WOULD: Situaciones hipotéticas o deseos
+const wouldExamples = {
+  hipotetico: "I would travel more if I had money",
+  deseo: "I would like a coffee",
+  cortesia: "Would you help me?"
+};
+
+console.log(wouldExamples.hipotetico);  // "I would travel more if I had money"
+console.log(wouldExamples.deseo);       // "I would like a coffee"
+console.log(wouldExamples.cortesia);    // "Would you help me?"
+```
+
+  </TabItem>
+
+  <TabItem label="Should">
+
+```javascript
+// SHOULD: Dar consejos o sugerencias
+const shouldExamples = {
+  consejo: "You should study today",
+  sugerencia: "She should see a doctor",
+  recomendacion: "We should leave early"
+};
+
+console.log(shouldExamples.consejo);       // "You should study today"
+console.log(shouldExamples.sugerencia);    // "She should see a doctor"
+console.log(shouldExamples.recomendacion); // "We should leave early"
+```
+
+  </TabItem>
+
+  <TabItem label="Could">
+
+```javascript
+// COULD: Posibilidad o habilidad en el pasado
+const couldExamples = {
+  posibilidad: "She could help us",
+  pasado: "I could swim when I was 5",
+  peticion: "Could you open the window?"
+};
+
+console.log(couldExamples.posibilidad);  // "She could help us"
+console.log(couldExamples.pasado);       // "I could swim when I was 5"
+console.log(couldExamples.peticion);     // "Could you open the window?"
+```
+
+  </TabItem>
+</Tabs>
+
+---
+
+## 📐 Estructura: Afirmativo, Negativo, Pregunta
+
+```typescript
+// Los verbos modales NO cambian con la persona
+// I/you/he/she/it/we/they + modal + verbo base
+
+const buildSentence = (subject: string, modal: string, verb: string) => {
+  return {
+    afirmativo: `${subject} ${modal} ${verb}`,
+    negativo: `${subject} ${modal} not ${verb}`,
+    pregunta: `${modal} ${subject} ${verb}?`
+  };
+};
+
+const example = buildSentence("She", "should", "work today");
+
+console.log(example.afirmativo);  // "She should work today"
+console.log(example.negativo);    // "She should not work today"
+console.log(example.pregunta);    // "Should she work today?"
+```
+
+---
+
+## ⚠️ Reglas Importantes
+
+  <Card title="Forma Base" icon="approve-check">
+    Después de **would**, **should** y **could** el verbo va siempre en **forma base**.
+    ```javascript
+    // ✅ Correcto
+    "should go", "could see", "would like"
+    
+    // ❌ Incorrecto
+    "should goes", "could seeing"
+    ```
+  </Card>
+  <Card title="No Cambian" icon="setting">
+    **No cambian** con la persona: I/you/he/she/it/we/they should (no existe "shoulds").
+    ```javascript
+    // ✅ Todos usan la misma forma
+    "I should", "He should", "They should"
+    ```
+  </Card>
+
+
+
+  <Card title="Sin 'To'" icon="error">
+    Los verbos modales **no aceptan el "to"** después de ellos.
+    ```javascript
+    // ✅ Correcto
+    "I would go"
+    
+    // ❌ Incorrecto
+    "I would to go"
+    ```
+  </Card>
+  <Card title="Verbo Principal" icon="information">
+    En negativo o pregunta, el verbo principal se mantiene en **forma base**.
+    ```javascript
+    "She should not work"  // No "works"
+    "Should she work?"     // No "works"
+    ```
+  </Card>
+
+
+:::note[¿Qué es Forma Base?]
+Es el verbo en su estado puro. **No** se le añade nada al final (ni -s, -es, o -ies), sin importar la persona.
+:::
