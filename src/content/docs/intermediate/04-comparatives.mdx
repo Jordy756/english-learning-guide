@@ -1,0 +1,158 @@
+---
+title: Comparativos y Superlativos
+description: Aprende a comparar cosas y resaltar lo mejor o peor de un grupo.
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+Se usan para comparar dos cosas (**Comparativos**) o para resaltar una cosa sobre todo un grupo (**Superlativos**).
+
+## Reglas de Formación
+
+```javascript
+const AdjectiveRules = {
+  short: {
+    type: "Cortos (1 sílaba)",
+    comparative: "Agrega -er (+ than)",
+    superlative: "Agrega the + -est",
+    examples: ["tall", "small", "fast"]
+  },
+  endingY: {
+    type: "Terminados en -y",
+    comparative: "Cambia -y por -ier",
+    superlative: "Agrega the + -iest",
+    examples: ["happy", "easy", "funny"]
+  },
+  long: {
+    type: "Largos (2+ sílabas)",
+    comparative: "Usa more + adjetivo",
+    superlative: "Usa the most + adjetivo",
+    examples: ["expensive", "beautiful", "intelligent"]
+  },
+  irregular: {
+    type: "Irregulares",
+    comparative: "Cambian por completo",
+    superlative: "Cambian por completo",
+    examples: ["good", "bad", "far"]
+  }
+};
+```
+
+---
+
+## Ejemplos Prácticos
+
+<Tabs>
+  <TabItem label="Cortos">
+
+```javascript
+// Adjetivos Cortos (Ej: Tall, Small, Fast)
+const shortAdjectives = {
+  comparative: "My brother is taller than me",
+  superlative: "My brother is the tallest in the family"
+};
+
+// tall → taller → the tallest
+// small → smaller → the smallest
+// fast → faster → the fastest
+
+console.log(shortAdjectives.comparative);  // "My brother is taller than me"
+console.log(shortAdjectives.superlative);  // "My brother is the tallest in the family"
+```
+
+  </TabItem>
+
+  <TabItem label="Terminados en -Y">
+
+```javascript
+// Adjetivos terminados en "Y" (Ej: Happy, Easy, Funny)
+const yAdjectives = {
+  comparative: "This exam was easier than the last one",
+  superlative: "This was the easiest exam of the year"
+};
+
+// happy → happier → the happiest
+// easy → easier → the easiest
+// funny → funnier → the funniest
+
+console.log(yAdjectives.comparative);  // "This exam was easier than the last one"
+console.log(yAdjectives.superlative);  // "This was the easiest exam of the year"
+```
+
+  </TabItem>
+
+  <TabItem label="Largos">
+
+```javascript
+// Adjetivos Largos (Ej: Expensive, Beautiful, Intelligent)
+const longAdjectives = {
+  comparative: "A Ferrari is more expensive than a Fiat",
+  superlative: "A Ferrari is the most expensive car in the shop"
+};
+
+// expensive → more expensive → the most expensive
+// beautiful → more beautiful → the most beautiful
+// intelligent → more intelligent → the most intelligent
+
+console.log(longAdjectives.comparative);  // "A Ferrari is more expensive than a Fiat"
+console.log(longAdjectives.superlative);  // "A Ferrari is the most expensive car in the shop"
+```
+
+  </TabItem>
+
+  <TabItem label="Irregulares">
+
+```javascript
+// Adjetivos Irregulares (¡Importante memorizar!)
+const irregularAdjectives = {
+  good: { comparative: "better", superlative: "the best" },
+  bad: { comparative: "worse", superlative: "the worst" },
+  far: { comparative: "farther / further", superlative: "the farthest" }
+};
+
+// Estos no siguen ninguna regla, cambian su forma:
+// good (bueno) → better (mejor) → the best (el mejor)
+// bad (malo) → worse (peor) → the worst (el peor)
+// far (lejos) → farther/further (más lejos) → the farthest (el más lejano)
+
+console.log(`This book is ${irregularAdjectives.good.comparative} than that one`);
+// "This book is better than that one"
+```
+
+  </TabItem>
+</Tabs>
+
+---
+
+## Los Irregulares (¡Importante memorizar!)
+
+Estos no siguen ninguna regla, cambian su forma:
+
+| Adjetivo | Comparativo | Superlativo |
+|----------|-------------|-------------|
+| Good (Bueno) | Better (Mejor) | The Best (El mejor) |
+| Bad (Malo) | Worse (Peor) | The Worst (El peor) |
+| Far (Lejos) | Farther / Further (Más lejos) | The Farthest (El más lejano) |
+
+---
+
+## Notas Importantes
+
+<Card title="Comparativos" icon="approve-check">
+  Siempre llevan la palabra **"than"** (que) después del adjetivo para comparar A con B.
+  ```javascript
+  // Estructura: A + is + adjetivo-er / more + adjetivo + than + B
+  "My car is faster than yours"
+  "This laptop is more expensive than that one"
+  ```
+</Card>
+
+<Card title="Superlativos" icon="star">
+  Siempre llevan el artículo **"the"** (el/la) antes del adjetivo porque estás hablando de algo único en su categoría.
+  ```javascript
+  // Estructura: the + adjetivo-est / the most + adjetivo
+  "She is the tallest in her class"
+  "This is the most beautiful place I've ever seen"
+  ```
+</Card>

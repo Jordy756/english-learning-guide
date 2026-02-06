@@ -8,31 +8,31 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 
 Estos tres verbos son fundamentales porque cambian el **"matiz"** de lo que decimos. Todos son seguidos por un verbo en su forma base (sin "to").
 
-## 📋 Tabla de Verbos Modales
+## Tabla de Verbos Modales
 
-```typescript
+```javascript
 const ModalVerbs = {
   would: {
-    traduccion: "-ía (terminación verbal)",
-    uso: "Situaciones hipotéticas o deseos",
-    ejemplo: "I would travel more"
+    translation: "-ía (terminación verbal)",
+    usage: "Situaciones hipotéticas o deseos",
+    example: "I would travel more"
   },
   should: {
-    traduccion: "Debería",
-    uso: "Dar consejos o sugerencias",
-    ejemplo: "You should study today"
+    translation: "Debería",
+    usage: "Dar consejos o sugerencias",
+    example: "You should study today"
   },
   could: {
-    traduccion: "Podría / Podía",
-    uso: "Posibilidad o habilidad en el pasado",
-    ejemplo: "She could help us"
+    translation: "Podría / Podía",
+    usage: "Posibilidad o habilidad en el pasado",
+    example: "She could help us"
   }
-} as const;
+};
 ```
 
 ---
 
-## 🔧 Uso de Cada Verbo Modal
+## Uso de Cada Verbo Modal
 
 <Tabs>
   <TabItem label="Would">
@@ -40,14 +40,14 @@ const ModalVerbs = {
 ```javascript
 // WOULD: Situaciones hipotéticas o deseos
 const wouldExamples = {
-  hipotetico: "I would travel more if I had money",
-  deseo: "I would like a coffee",
-  cortesia: "Would you help me?"
+  hypothetical: "I would travel more if I had money",
+  desire: "I would like a coffee",
+  courtesy: "Would you help me?"
 };
 
-console.log(wouldExamples.hipotetico);  // "I would travel more if I had money"
-console.log(wouldExamples.deseo);       // "I would like a coffee"
-console.log(wouldExamples.cortesia);    // "Would you help me?"
+console.log(wouldExamples.hypothetical);  // "I would travel more if I had money"
+console.log(wouldExamples.desire);        // "I would like a coffee"
+console.log(wouldExamples.courtesy);      // "Would you help me?"
 ```
 
   </TabItem>
@@ -57,14 +57,14 @@ console.log(wouldExamples.cortesia);    // "Would you help me?"
 ```javascript
 // SHOULD: Dar consejos o sugerencias
 const shouldExamples = {
-  consejo: "You should study today",
-  sugerencia: "She should see a doctor",
-  recomendacion: "We should leave early"
+  advice: "You should study today",
+  suggestion: "She should see a doctor",
+  recommendation: "We should leave early"
 };
 
-console.log(shouldExamples.consejo);       // "You should study today"
-console.log(shouldExamples.sugerencia);    // "She should see a doctor"
-console.log(shouldExamples.recomendacion); // "We should leave early"
+console.log(shouldExamples.advice);          // "You should study today"
+console.log(shouldExamples.suggestion);      // "She should see a doctor"
+console.log(shouldExamples.recommendation);  // "We should leave early"
 ```
 
   </TabItem>
@@ -74,14 +74,14 @@ console.log(shouldExamples.recomendacion); // "We should leave early"
 ```javascript
 // COULD: Posibilidad o habilidad en el pasado
 const couldExamples = {
-  posibilidad: "She could help us",
-  pasado: "I could swim when I was 5",
-  peticion: "Could you open the window?"
+  possibility: "She could help us",
+  past: "I could swim when I was 5",
+  request: "Could you open the window?"
 };
 
-console.log(couldExamples.posibilidad);  // "She could help us"
-console.log(couldExamples.pasado);       // "I could swim when I was 5"
-console.log(couldExamples.peticion);     // "Could you open the window?"
+console.log(couldExamples.possibility);  // "She could help us"
+console.log(couldExamples.past);         // "I could swim when I was 5"
+console.log(couldExamples.request);      // "Could you open the window?"
 ```
 
   </TabItem>
@@ -89,30 +89,30 @@ console.log(couldExamples.peticion);     // "Could you open the window?"
 
 ---
 
-## 📐 Estructura: Afirmativo, Negativo, Pregunta
+## Estructura: Afirmativo, Negativo, Pregunta
 
-```typescript
+```javascript
 // Los verbos modales NO cambian con la persona
 // I/you/he/she/it/we/they + modal + verbo base
 
-const buildSentence = (subject: string, modal: string, verb: string) => {
+const buildSentence = (subject, modal, verb) => {
   return {
-    afirmativo: `${subject} ${modal} ${verb}`,
-    negativo: `${subject} ${modal} not ${verb}`,
-    pregunta: `${modal} ${subject} ${verb}?`
+    affirmative: `${subject} ${modal} ${verb}`,
+    negative: `${subject} ${modal} not ${verb}`,
+    question: `${modal} ${subject} ${verb}?`
   };
 };
 
 const example = buildSentence("She", "should", "work today");
 
-console.log(example.afirmativo);  // "She should work today"
-console.log(example.negativo);    // "She should not work today"
-console.log(example.pregunta);    // "Should she work today?"
+console.log(example.affirmative);  // "She should work today"
+console.log(example.negative);     // "She should not work today"
+console.log(example.question);     // "Should she work today?"
 ```
 
 ---
 
-## ⚠️ Reglas Importantes
+## Reglas Importantes
 
   <Card title="Forma Base" icon="approve-check">
     Después de **would**, **should** y **could** el verbo va siempre en **forma base**.
