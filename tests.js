@@ -1,35 +1,24 @@
-/**
- * Primero, los verbos irregulares más comunes.
- * Estos NO siguen las reglas normales, por eso los verificamos primero.
- */
-const irregularVerbs = {
-  have: "has", // "He has a car"
-  be: "is", // "She is happy"
-  can: "can", // "He can swim" (permanece igual)
-};
+// Desconocidos, superiores, situaciones profesionales
+const politePrefixes = ["Would you mind", "Would you mind if", "May"];
 
-/**
- * Función conjugateThirdPerson:
- * Conjuga cualquier verbo para he/she/it siguiendo las reglas.
- */
-const conjugateThirdPerson = (verb) => {
-  // 1. Verificar si es irregular
-  if (irregularVerbs[verb]) return irregularVerbs[verb];
+const makeRequest = (subject, verb, complement, index = 0) => {
+  const chosenPrefix = politePrefixes[index % politePrefixes.length];
+  subject = subject.toLowerCase();
 
-  // 2. Regla: Verbos terminados en -s, -ss, -sh, -ch, -x, -z, -o
-  if (/[sxz]$|[cs]h$|o$/.test(verb)) return verb + "es";
+  if (chosenPrefix === "May" && subject !== "i" && subject !== "we")
+    return console.warn("Warning: 'May' normalmente se usa con 'I' o 'We'.");
 
-  // 3. Regla: Verbos terminados en consonante + y
-  if (/[^aeiou]y$/.test(verb)) return verb.slice(0, -1) + "ies";
-
-  // 4. Regla general: Todos los demás verbos
-  return verb + "s";
+  return chosenPrefix === "Would you mind"
+    ? `${chosenPrefix} ${verb.replace(/e$/, "") + "ing"} ${complement}?`
+    : `${chosenPrefix} ${subject} ${verb} ${complement}?`;
 };
 
 // Ejemplos de uso
-console.log(conjugateThirdPerson("work")); // "works"
-console.log(conjugateThirdPerson("go")); // "goes" (irregular)
-console.log(conjugateThirdPerson("watch")); // "watches" (termina en -ch)
-console.log(conjugateThirdPerson("study")); // "studies" (consonante + y)
-console.log(conjugateThirdPerson("play")); // "plays" (vocal + y, regla general)
-console.log(conjugateThirdPerson("have")); // "has" (irregular)
+console.log(makeRequest("John", "open", "the window", 0));
+// "Would you mind opening the window?"
+
+console.log(makeRequest("we", "leave", "early", 2));
+// "May we leave early?"
+
+console.log(makeRequest("they", "join", "us for dinner", 1));
+// "Would you mind if they join us for dinner?"

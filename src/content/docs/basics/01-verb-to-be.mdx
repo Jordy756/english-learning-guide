@@ -52,10 +52,6 @@ Para construir una oración afirmativa, simplemente coloca el verbo después del
 <Tabs>
   <TabItem label="Presente">
 ```javascript
-/**
- * Función Affirm (Afirmar): Imprime la oración normalmente.
- * Reutiliza el objeto 'VerbToBe' definido anteriormente.
- */
 const affirm = (subject, complement) => {
   const verb = VerbToBe[subject]; // 1. Obtenemos "am", "is", "are"
   console.log(`${subject} ${verb} ${complement}`); // 2. Imprimimos la afirmación
@@ -70,10 +66,6 @@ affirm("she", "ready");      // "She is ready"
 
   <TabItem label="Pasado">
 ```javascript
-/**
- * Función Affirm (Afirmar): Imprime la oración normalmente.
- * Reutiliza el objeto 'VerbToBe' definido anteriormente.
- */
 const affirm = (subject, complement) => {
   const verb = VerbToBe[subject]; // 1. Obtenemos "was", "were"
   console.log(`${subject} ${verb} ${complement}`); // 2. Imprimimos la afirmación
@@ -94,10 +86,6 @@ Para negar algo, añade la palabra `not` inmediatamente después del verbo. No n
 <Tabs>
   <TabItem label="Presente">
 ```javascript
-/**
- * Función Deny (Negar): Agrega el "not" después del verbo.
- * Reutiliza el objeto 'VerbToBe' definido anteriormente.
- */
 const deny = (subject, complement) => {
   const verb = VerbToBe[subject]; // 1. Obtenemos "am", "is", "are"
   console.log(`${subject} ${verb} not ${complement}`); // 2. Imprimimos la negación
@@ -112,10 +100,6 @@ deny("they", "ready");   // "They are not ready"
 
   <TabItem label="Pasado">
 ```javascript
-/**
- * Función Deny (Negar): Agrega el "not" después del verbo.
- * Reutiliza el objeto 'VerbToBe' definido anteriormente.
- */
 const deny = (subject, complement) => {
   const verb = VerbToBe[subject]; // 1. Obtenemos "was", "were"
   console.log(`${subject} ${verb} not ${complement}`); // 2. Imprimimos la negación
@@ -136,10 +120,6 @@ Para hacer una pregunta con `to be`, invierte el orden del sujeto y el verbo. El
 <Tabs>
   <TabItem label="Presente">
 ```javascript
-/**
- * Función Ask: Implementa la inversión de orden (Subject-Verb Swap)
- * Reutiliza el objeto 'VerbToBe' definido anteriormente.
- */ 
 const ask = (subject, complement) => {
   const verb = VerbToBe[subject]; // 1. Obtenemos "am", "is", "are"
   console.log(`${verb} ${subject} ${complement}?`); // 2. Imprimimos la pregunta
@@ -154,10 +134,6 @@ ask("I", "late"); // "Am I late?"
 
   <TabItem label="Pasado">
 ```javascript
-/**
- * Función Ask: Implementa la inversión de orden (Subject-Verb Swap)
- * Reutiliza el objeto 'VerbToBe' definido anteriormente.
- */ 
 const ask = (subject, complement) => {
   const verb = VerbToBe[subject]; // 1. Obtenemos "was", "were"
   console.log(`${verb} ${subject} ${complement}?`); // 2. Imprimimos la pregunta

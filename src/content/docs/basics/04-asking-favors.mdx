@@ -1,0 +1,156 @@
+---
+title: Asking Favors
+description: Aprende a pedir favores y permiso de manera educada en diferentes contextos.
+---
+
+import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
+
+Saber cómo pedir favores de manera apropiada es esencial para comunicarte efectivamente en diferentes contextos, desde conversaciones casuales con amigos hasta situaciones formales en el trabajo. Por suerte, el inglés tiene estructuras claras para cada nivel de formalidad.
+
+## Formas de Pedir Favores o Permiso
+
+Pedir favores en inglés no es solo traducir "¿puedes ayudarme?". El nivel de formalidad que uses depende del contexto: no es lo mismo pedirle algo a tu mejor amigo que a tu jefe. A continuación, veremos cómo estructurar estas peticiones de forma dinámica según el nivel de cortesía deseado.
+
+
+<Tabs>
+  <TabItem label="Informal">
+```javascript
+// Amigos, familia, compañeros cercanos
+
+const makeRequest = (subject, verb, complement) => {
+  return `Can ${subject} ${verb} ${complement}?`;
+};
+
+// Ejemplos de uso:
+console.log(makeRequest("you", "help", "me")); 
+// "Can you help me?"
+
+console.log(makeRequest("Ana", "borrow", "your pen")); 
+// "Can Ana borrow your pen?"
+```
+  </TabItem>
+
+  <TabItem label="Educado">
+```javascript
+// Conocidos, situaciones cotidianas, profesional casual
+
+const politePrefixes = ["Could", "Do you mind if"];
+
+const makeRequest = (subject, verb, complement, index = 0) => {
+  const chosenPrefix = politePrefixes[index % politePrefixes.length];
+
+  return `${chosenPrefix} ${subject} ${verb} ${complement}?`;
+};
+
+// Ejemplos de uso
+console.log(makeRequest("John", "open", "the window", 0));
+// "Could John open the window?"
+
+console.log(makeRequest("you", "help", "me with my homework", 1));
+// "Do you mind if you help me with my homework?"
+
+console.log(makeRequest("they", "join", "us for dinner", 1));
+// "Do you mind if they join us for dinner?"
+```
+  </TabItem>
+  <TabItem label="Formal">
+```javascript
+// Desconocidos, superiores, situaciones profesionales
+
+const politePrefixes = ["Would you mind", "Would you mind if", "May"];
+
+const makeRequest = (subject, verb, complement, index = 0) => {
+  const chosenPrefix = politePrefixes[index % politePrefixes.length];
+  subject = subject.toLowerCase();
+
+  if (chosenPrefix === "May" && subject !== "i" && subject !== "we")
+    return console.warn("Warning: 'May' normalmente se usa con 'I' o 'We'.");
+
+  return chosenPrefix === "Would you mind"
+    ? `${chosenPrefix} ${verb.replace(/e$/, "") + "ing"} ${complement}?`
+    : `${chosenPrefix} ${subject} ${verb} ${complement}?`;
+};
+
+// Ejemplos de uso
+console.log(makeRequest("John", "open", "the window", 0));
+// "Would you mind opening the window?"
+
+console.log(makeRequest("we", "leave", "early", 2));
+// "May we leave early?"
+
+console.log(makeRequest("they", "join", "us for dinner", 1));
+// "Would you mind if they join us for dinner?"
+
+```
+  </TabItem>
+</Tabs>
+
+<Aside type="note" title="Sujeto en las peticiones">
+  Para **can**, **could**, **do you mind if...** y **would you mind if...** se puede usar cualquier sujeto (I, you, he, she, we, they,...). Sin embargo, **may** se usa típicamente solo con "I" o "we" para pedir permiso. Y "would you mind + ing" siempre tiene "you" como sujeto, ya que estás preguntando si a la otra persona le importa hacer algo.
+</Aside>
+
+<Aside type="tip" title="Pro-Tip: El pasado no siempre es pasado">
+  ¿Te has preguntado por qué usamos **Could** (pasado de Can) o **Would** (pasado de Will) para pedir favores hoy?
+  
+  En inglés existe la **distancia lingüística**. Usar verbos en "pasado" crea una separación imaginaria entre tú y la petición, lo que hace que suene menos directa y más educada. 
+
+  * **Cerca (Directo):** "Can you...?" 
+  * **Lejos (Cortés):** "Could you...?" 
+
+  Incluso con **if**, verás que la gente más formal dice:  
+  * *Would you mind if I **borrowed** your pen?* (Usa el pasado, pero pide el lápiz **ahora**).
+</Aside>
+
+## Cómo responder a peticiones y favores
+
+Saber cómo responder es tan importante como saber preguntar. Aquí tienes una guía rápida de qué decir (y qué evitar) según lo que te hayan preguntado.
+
+### Respuestas para Can / Could / May
+
+<CardGrid>
+  <Card title="Aceptar (Correcto)" icon="approve-check-circle">
+    - **Sure!** (¡Claro!)
+    - **Of course!** (¡Por supuesto!)
+    - **Certainly.** (Ciertamente - más formal)
+    - **No problem.** (Sin problema)
+  </Card>
+  <Card title="Rechazar (Correcto)" icon="error">
+    - **I'm sorry, I can't.** (Lo siento, no puedo)
+    - **I'd love to, but...** (Me encantaría, pero...)
+    - **I'm afraid I'm busy right now.** (Me temo que estoy ocupado)
+  </Card>
+</CardGrid>
+
+### Respuestas para Would you mind / Do you mind
+
+¡Mucho cuidado aquí! Recuerda que estás respondiendo a si "te importa" o "te molesta".
+
+<CardGrid>
+  <Card title="Si quieres decir SÍ lo haré" icon="approve-check-circle">
+    *(No te importa hacerlo)*
+    - **No, not at all.** (No, para nada)
+    - **Of course not.** (Claro que no me importa)
+    - **No problem!** (¡Sin problema!)
+    - **Go ahead.** (Adelante - si pedían permiso)
+  </Card>
+  <Card title="Evita decir esto (Incorrecto/Confuso)" icon="warning">
+    - **Yes.** (Suena a "Sí, me importa/me molesta", por lo que NO quieres ayudar)
+    - **Sure.** (Es confuso porque significa "claro", pero "¿claro que te molesta?" o "¿claro que lo harás?")
+  </Card>
+</CardGrid>
+
+## Errores que debes evitar
+
+<Aside type="danger" title="Bug #1: Confundir la forma del verbo después de 'Would you mind'">
+  "Would you mind" requiere verbo con -ing, no forma base.
+
+  ```javascript
+  // ❌ BUG: Verbo en forma base
+  console.log("Would you mind help me?");    // Incorrecto
+  console.log("Would you mind close that?"); // Incorrecto
+
+  // ✅ FIX: Verbo con -ing
+  console.log("Would you mind helping me?");   // Correcto
+  console.log("Would you mind closing that?"); // Correcto
+  ```
+</Aside>

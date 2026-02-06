@@ -1,0 +1,259 @@
+---
+title: Question Words
+description: Aprende a hacer preguntas específicas en inglés usando question words.
+---
+
+import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
+
+Hacer preguntas va más allá de obtener respuestas de "sí" o "no". Las question words te permiten obtener información específica: quién, qué, dónde, cuándo, por qué y cómo.
+
+## Question Words (Palabras Interrogativas)
+
+Las question words son las palabras que usas cuando necesitas información específica. Cada una pregunta por un tipo diferente de información: personas, lugares, razones, tiempo, manera, etc.
+
+### El diccionario de Question Words
+
+Aquí está el catálogo completo de question words con su significado y uso:
+
+```javascript
+const questionWords = {
+  what: {
+    meaning: "Qué / Cuál",
+    asksAbout: "cosas, información general",
+    example: "What is your favorite movie?"
+  },
+  who: {
+    meaning: "Quién",
+    asksAbout: "personas, identidad",
+    example: "Who is your teacher?"
+  },
+  where: {
+    meaning: "Dónde",
+    asksAbout: "lugares, ubicación",
+    example: "Where do you live?"
+  },
+  when: {
+    meaning: "Cuándo",
+    asksAbout: "tiempo, fechas, momentos",
+    example: "When is your birthday?"
+  },
+  why: {
+    meaning: "Por qué",
+    asksAbout: "razones, motivos",
+    example: "Why are you learning English?"
+  },
+  how: {
+    meaning: "Cómo",
+    asksAbout: "manera, método, estado",
+    example: "How do you go to work?"
+  },
+  which: {
+    meaning: "Cuál (entre opciones)",
+    asksAbout: "selección entre opciones limitadas",
+    example: "Which color do you prefer, red or blue?"
+  },
+  whose: {
+    meaning: "De quién",
+    asksAbout: "posesión, propiedad",
+    example: "Whose phone is this?"
+  }
+};
+
+const howCombinations = {
+  "how much": {
+    meaning: "Cuánto (no contable)",
+    asksAbout: "cantidad de cosas no contables",
+    example: "How much money do you need?",
+    useWith: ["money", "water", "time", "sugar", "coffee"]
+  },
+  "how many": {
+    meaning: "Cuántos (contable)",
+    asksAbout: "cantidad de cosas contables",
+    example: "How many brothers do you have?",
+    useWith: ["apples", "people", "books", "cars", "days"]
+  },
+  "how often": {
+    meaning: "Con qué frecuencia",
+    asksAbout: "frecuencia de acciones",
+    example: "How often do you exercise?"
+  },
+  "how long": {
+    meaning: "Cuánto tiempo / Qué tan largo",
+    asksAbout: "duración o longitud",
+    example: "How long is the movie?"
+  }
+};
+```
+
+
+
+<Aside type="tip" title="How much vs How many">
+La diferencia es simple:
+- **How much**: Para cosas que no puedes contar individualmente (líquidos, dinero, tiempo)
+- **How many**: Para cosas que puedes contar una por una (personas, objetos, días)
+
+Pregúntate: ¿Puedo decir "one, two, three..." con esto? Si sí → **how many**. Si no → **how much**.
+</Aside>
+
+### Cómo construir preguntas con Question Words
+
+La estructura de una pregunta con question word sigue este orden: **Question Word + Auxiliar/Verbo + Sujeto + Complemento + ?**
+
+```javascript
+const buildQuestion = (questionWord, auxiliary, subject, complement) => {
+  return `${questionWord} ${auxiliary} ${subject} ${complement}?`;
+};
+
+// Ejemplos con diferentes auxiliares
+console.log(buildQuestion("What", "do", "you", "do"));
+// "What do you do?"
+
+console.log(buildQuestion("Where", "does", "she", "live"));
+// "Where does she live?"
+
+console.log(buildQuestion("Why", "does", "he", "play soccer"));
+// "Why does he play soccer?"
+
+console.log(buildQuestion("When", "did", "they", "arrive"));
+// "When did they arrive?"
+
+// Con el verbo "to be" NO usamos do/does
+console.log(buildQuestion("Where", "are", "you", "from"));
+// "Where are you from?"
+
+console.log(buildQuestion("Who", "is", "he", ""));
+// "Who is he?"
+```
+
+<Aside title="Regla importante con el verbo 'to be'">
+Cuando usas el verbo **to be** (am, is, are, was, were), **NO** necesitas auxiliares como `do` o `does`. La question word va directamente seguida del verbo to be.
+
+**Ejemplos correctos:**
+- "Where **are** you from?" ✓
+- "Who **is** she?" ✓
+- "When **was** the meeting?" ✓
+
+**Incorrecto:**
+- ~~"Where **do** you **are** from?"~~ ✗
+</Aside>
+
+### Casos especiales de uso
+
+<Tabs>
+  <TabItem label="What vs Which">
+```javascript
+/**
+ * What: Pregunta abierta, muchas opciones posibles
+ * Which: Pregunta con opciones limitadas
+ */
+
+// What - Opciones ilimitadas
+const whatQuestion = () => {
+  return "What do you want to eat?"; 
+  // Puede responder: pizza, tacos, sushi, pasta, etc.
+};
+
+// Which - Opciones específicas
+const whichQuestion = () => {
+  return "Which do you prefer, coffee or tea?";
+  // Solo puede elegir entre coffee o tea
+};
+```
+  </TabItem>
+
+  <TabItem label="Who - Casos especiales">
+```javascript
+/**
+ * Who puede funcionar como sujeto o como objeto de la pregunta
+ */
+
+// Who como sujeto (no necesita auxiliar)
+const whoAsSubject = () => {
+  return "Who called you?"; // Alguien llamó (¿quién?)
+  // NO: "Who did call you?" ✗
+};
+
+// Who como objeto (sí necesita auxiliar)
+const whoAsObject = () => {
+  return "Who did you call?"; // Tú llamaste a alguien (¿a quién?)
+};
+```
+  </TabItem>
+
+  <TabItem label="Whose vs Who's">
+```javascript
+/**
+ * Cuidado: Suenan igual pero significan cosas diferentes
+ */
+
+// Whose - Posesión (de quién)
+const whoseExample = () => {
+  return "Whose book is this?"; // ¿De quién es este libro?
+};
+
+// Who's - Contracción de "Who is" o "Who has"
+const whosExample = () => {
+  return "Who's coming to the party?"; // ¿Quién viene a la fiesta?
+  // Who's = Who is
+};
+```
+  </TabItem>
+</Tabs>
+
+## Errores que debes evitar
+
+<Aside type="danger" title="Bug #1: Question word en el lugar incorrecto">
+  La question word SIEMPRE va al inicio de la pregunta, no al final.
+
+  ```javascript
+  // ❌ BUG: Question word al final
+  console.log("You live where?");         // Incorrecto (muy informal/raro)
+  console.log("Your name is what?");      // Incorrecto
+
+  // ✅ FIX: Question word al inicio
+  console.log("Where do you live?");      // Correcto
+  console.log("What is your name?");      // Correcto
+  ```
+</Aside>
+
+<Aside type="danger" title="Bug #2: Usar do/does con el verbo 'to be'">
+  Este es un error muy común: intentar usar auxiliares con el verbo to be.
+
+  ```javascript
+  // ❌ BUG: Auxiliar innecesario con "to be"
+  console.log("Where do you are from?");     // Incorrecto
+  console.log("Who does she is?");           // Incorrecto
+
+  // ✅ FIX: Sin auxiliar con "to be"
+  console.log("Where are you from?");        // Correcto
+  console.log("Who is she?");                // Correcto
+  ```
+</Aside>
+
+<Aside type="danger" title="Bug #3: Confundir whose y who's">
+  Suenan igual pero son completamente diferentes.
+
+  ```javascript
+  // ❌ BUG: Usar who's para posesión
+  console.log("Who's book is this?");        // Incorrecto
+  // "Who's" = "Who is", entonces esto pregunta "¿Quién es libro?"
+
+  // ✅ FIX: Usar whose para posesión
+  console.log("Whose book is this?");        // Correcto
+  console.log("Who's reading that book?");   // Correcto (Who is...)
+  ```
+</Aside>
+
+<Aside type="danger" title="Bug #4: Mezclar how much y how many">
+  Usa "much" con no contables y "many" con contables.
+
+  ```javascript
+  // ❌ BUG: Usar la forma incorrecta
+  console.log("How many water do you need?");  // Incorrecto (agua no es contable)
+  console.log("How much apples do you want?"); // Incorrecto (manzanas son contables)
+
+  // ✅ FIX: Usar la forma correcta
+  console.log("How much water do you need?");  // Correcto (water = no contable)
+  console.log("How many apples do you want?"); // Correcto (apples = contable)
+  ```
+</Aside>

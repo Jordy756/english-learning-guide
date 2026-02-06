@@ -38,6 +38,10 @@ Estas son las 4 reglas que debes memorizar:
 3. **Consonante + y:** Si el verbo termina en una consonante seguida de "y", cambia la "y" por "i" y añade `-es`.
 4. **Vocal + y:** Si antes de la "y" hay una vocal, solo añade `-s` (sigue la regla general).
 
+<Aside title="Verbos regulares e irregulares">
+Existen verbos **regulares** (siguen reglas, como *work*) e **irregulares** (no siguen reglas, como *be* o *have*). En presente simple, esta distinción solo afecta a la tercera persona (he/she/it), ya que el resto usa la forma base del verbo.
+</Aside>
+
 ### Conjugación para he/she/it
 
 
@@ -48,10 +52,7 @@ const irregularVerbs = {
   be: "is",
 };
 
-/**
- * Función conjugateThirdPerson:
- * Conjuga cualquier verbo para he/she/it siguiendo las reglas.
- */
+// Luego, la función para conjugar verbos en tercera persona.
 const conjugateThirdPerson = (verb) => {
   // 1. Asegurarse de que el verbo esté en minúsculas para evitar problemas de mayúsculas
   verb = verb.toLowerCase();
@@ -79,10 +80,6 @@ console.log(conjugateThirdPerson("play")); // "plays" (vocal + y, regla general)
 console.log(conjugateThirdPerson("have")); // "has" (irregular)
 ```
 
-<Aside title="Nota">
-Existen verbos **regulares** (siguen reglas, como *work*) e **irregulares** (no siguen reglas, como *be* o *have*). En presente simple, esta distinción solo afecta a la tercera persona (he/she/it), ya que el resto usa la forma base del verbo.
-</Aside>
-
 <Aside type="tip" title="Truco para recordar">
 **La mayoría de verbos solo añaden -s.** Las otras reglas (-es, -ies) son para casos especiales que suenan mejor al pronunciarse. Por ejemplo, intenta decir "he watchs" en voz alta — suena raro. Por eso se convierte en "watches".
 </Aside>
@@ -96,15 +93,9 @@ El presente simple tiene tres formas principales: afirmativa, negativa e interro
 Para construir una oración afirmativa, usa la estructura: **Sujeto + Verbo + Complemento**. Recuerda aplicar las reglas de tercera persona cuando sea necesario.
 
 ```javascript
-const thirdPersonSubjects = ["he", "she", "it"];
-
-/**
- * Función affirm: Construye oraciones afirmativas en presente simple.
- * Detecta automáticamente si es tercera persona.
- */
 const affirm = (subject, verb, complement) => {  
   // Si es tercera persona, conjugar el verbo
-  const conjugatedVerb = thirdPersonSubjects.includes(subject.toLowerCase())
+  const conjugatedVerb = ["he", "she", "it"].includes(subject.toLowerCase())
     ? conjugateThirdPerson(verb)
     : verb;
   
@@ -129,15 +120,9 @@ Cuando usas `does` en negaciones o preguntas, el verbo principal **siempre** vue
 </Aside>
 
 ```javascript
-const thirdPersonSubjects = ["he", "she", "it"];
-
-/**
- * Función deny: Construye oraciones negativas en presente simple.
- * Usa do/does + not + verbo en forma base.
- */
 const deny = (subject, verb, complement) => {
   // Si es tercera persona, usar "does", si no, usar "do"
-  const auxiliary = thirdPersonSubjects.includes(subject.toLowerCase())
+  const auxiliary = ["he", "she", "it"].includes(subject.toLowerCase())
     ? "does"
     : "do";
   
@@ -157,15 +142,9 @@ deny("He", "speak", "French");              // "He does not speak French"
 Para hacer preguntas, coloca el auxiliar **do/does** al principio de la oración, seguido del sujeto y el verbo en forma base. La estructura es: **Do/Does + Sujeto + Verbo base + Complemento + ?**
 
 ```javascript
-const thirdPersonSubjects = ["he", "she", "it"];
-
-/**
- * Función ask: Construye preguntas en presente simple.
- * Invierte el orden: auxiliar primero, luego sujeto.
- */
 const ask = (subject, verb, complement) => {
   // Si es tercera persona, usar "does", si no, usar "do"
-  const auxiliary = thirdPersonSubjects.includes(subject.toLowerCase())
+  const auxiliary = ["he", "she", "it"].includes(subject.toLowerCase())
     ? "Does"
     : "Do";
   
