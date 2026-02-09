@@ -1,0 +1,12 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+interface Props extends HTMLAttributes<"svg"> {}
+
+const { width = 24, class: className, ...rest } = Astro.props as Props;
+---
+
+<svg fill="none" class={className} {...rest} width={width} viewBox="0 0 16 16"
+  ><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 3 5 5-5 5"
+  ></path></svg
+>

@@ -18,6 +18,7 @@ export default defineConfig({
       components: {
         Head: "./src/components/Head.astro",
         Sidebar: "./src/components/Sidebar.astro",
+        Hero: "./src/components/Hero.astro",
       },
       sidebar: [
         {
