@@ -21,62 +21,387 @@ En inglés, los verbos se dividen en dos categorías cuando hablamos del pasado:
 
 ### Verbos regulares
 
-Los verbos regulares son predecibles. Simplemente añades `-ed` al final del verbo, sin importar el sujeto:
+Los verbos regulares son predecibles. Simplemente añades `-ed` al final del verbo, sin importar el sujeto. 
 
+Antes de ver la lista, es importante conocer las **reglas de ortografía** para conjugar correctamente:
+
+1. **Termina en -e:** Solo añade `-d` (like → liked, dance → danced)
+2. **Consonante + y:** Cambia la "y" por "ied" (study → studied, carry → carried)
+3. **CVC (Consonante-Vocal-Consonante) en sílaba acentuada:** Duplica la última consonante y añade `-ed` (stop → stopped, plan → planned)
+4. **Regla general:** Añade `-ed` (work → worked, play → played)
+
+Aquí están los verbos regulares más comunes en inglés, organizados alfabéticamente:
+
+<Tabs>
+  <TabItem label="A">
 ```javascript
 const regularVerbs = {
-  work: "worked",
-  play: "played",
-  watch: "watched",
-  study: "studied",
-  stop: "stopped"
+  accept: { past: "accepted", meaning: "aceptar" },
+  add: { past: "added", meaning: "añadir" },
+  admire: { past: "admired", meaning: "admirar" },
+  admit: { past: "admitted", meaning: "admitir" },
+  agree: { past: "agreed", meaning: "estar de acuerdo" },
+  allow: { past: "allowed", meaning: "permitir" },
+  answer: { past: "answered", meaning: "responder" },
+  appear: { past: "appeared", meaning: "aparecer" },
+  apply: { past: "applied", meaning: "aplicar" },
+  arrive: { past: "arrived", meaning: "llegar" },
+  ask: { past: "asked", meaning: "preguntar" }
 };
-
-// La conjugación es igual para todas las personas
-const subjects = ["I", "You", "He", "She", "It", "We", "They"];
-subjects.forEach(subject => {
-  console.log(`${subject} worked yesterday`);
-});
-
-// Resultado:
-// "I worked yesterday"
-// "You worked yesterday"
-// "He worked yesterday"
-// ... (todas usando "worked")
 ```
+  </TabItem>
 
-### Reglas de ortografía para verbos regulares
+  <TabItem label="B">
+```javascript
+const regularVerbs = {
+  bake: { past: "baked", meaning: "hornear" },
+  believe: { past: "believed", meaning: "creer" },
+  belong: { past: "belonged", meaning: "pertenecer" },
+  boil: { past: "boiled", meaning: "hervir" },
+  borrow: { past: "borrowed", meaning: "pedir prestado" },
+  brush: { past: "brushed", meaning: "cepillar" }
+};
+```
+  </TabItem>
 
-Aunque la mayoría solo añade `-ed`, hay reglas especiales dependiendo de cómo termina el verbo:
+  <TabItem label="C">
+```javascript
+const regularVerbs = {
+  call: { past: "called", meaning: "llamar" },
+  carry: { past: "carried", meaning: "llevar/cargar" },
+  change: { past: "changed", meaning: "cambiar" },
+  clean: { past: "cleaned", meaning: "limpiar" },
+  climb: { past: "climbed", meaning: "escalar" },
+  close: { past: "closed", meaning: "cerrar" },
+  collect: { past: "collected", meaning: "coleccionar" },
+  communicate: { past: "communicated", meaning: "comunicar" },
+  compare: { past: "compared", meaning: "comparar" },
+  complete: { past: "completed", meaning: "completar" },
+  cook: { past: "cooked", meaning: "cocinar" },
+  copy: { past: "copied", meaning: "copiar" },
+  count: { past: "counted", meaning: "contar" },
+  cover: { past: "covered", meaning: "cubrir" },
+  create: { past: "created", meaning: "crear" },
+  cry: { past: "cried", meaning: "llorar" }
+};
+```
+  </TabItem>
+
+  <TabItem label="D">
+```javascript
+const regularVerbs = {
+  dance: { past: "danced", meaning: "bailar" },
+  decide: { past: "decided", meaning: "decidir" },
+  deliver: { past: "delivered", meaning: "entregar" },
+  describe: { past: "described", meaning: "describir" },
+  design: { past: "designed", meaning: "diseñar" },
+  destroy: { past: "destroyed", meaning: "destruir" },
+  develop: { past: "developed", meaning: "desarrollar" },
+  die: { past: "died", meaning: "morir" },
+  discover: { past: "discovered", meaning: "descubrir" },
+  discuss: { past: "discussed", meaning: "discutir" },
+  divide: { past: "divided", meaning: "dividir" },
+  download: { past: "downloaded", meaning: "descargar" }
+};
+```
+  </TabItem>
+
+  <TabItem label="E">
+```javascript
+const regularVerbs = {
+  earn: { past: "earned", meaning: "ganar (dinero)" },
+  end: { past: "ended", meaning: "terminar" },
+  enjoy: { past: "enjoyed", meaning: "disfrutar" },
+  enter: { past: "entered", meaning: "entrar" },
+  escape: { past: "escaped", meaning: "escapar" },
+  examine: { past: "examined", meaning: "examinar" },
+  exercise: { past: "exercised", meaning: "ejercitar" },
+  exist: { past: "existed", meaning: "existir" },
+  explain: { past: "explained", meaning: "explicar" },
+  explore: { past: "explored", meaning: "explorar" }
+};
+```
+  </TabItem>
+
+  <TabItem label="F">
+```javascript
+const regularVerbs = {
+  fail: { past: "failed", meaning: "fallar" },
+  fill: { past: "filled", meaning: "llenar" },
+  finish: { past: "finished", meaning: "terminar" },
+  follow: { past: "followed", meaning: "seguir" }
+};
+```
+  </TabItem>
+
+  <TabItem label="G">
+```javascript
+const regularVerbs = {
+  graduate: { past: "graduated", meaning: "graduarse" },
+  greet: { past: "greeted", meaning: "saludar" }
+};
+```
+  </TabItem>
+
+  <TabItem label="H">
+```javascript
+const regularVerbs = {
+  hand: { past: "handed", meaning: "entregar" },
+  happen: { past: "happened", meaning: "suceder" },
+  hate: { past: "hated", meaning: "odiar" },
+  help: { past: "helped", meaning: "ayudar" },
+  hope: { past: "hoped", meaning: "esperar" }
+};
+```
+  </TabItem>
+
+  <TabItem label="I">
+```javascript
+const regularVerbs = {
+  imagine: { past: "imagined", meaning: "imaginar" },
+  improve: { past: "improved", meaning: "mejorar" },
+  include: { past: "included", meaning: "incluir" },
+  increase: { past: "increased", meaning: "aumentar" },
+  invent: { past: "invented", meaning: "inventar" },
+  invite: { past: "invited", meaning: "invitar" }
+};
+```
+  </TabItem>
+
+  <TabItem label="J">
+```javascript
+const regularVerbs = {
+  join: { past: "joined", meaning: "unirse" },
+  jump: { past: "jumped", meaning: "saltar" }
+};
+```
+  </TabItem>
+
+  <TabItem label="K">
+```javascript
+const regularVerbs = {
+  kick: { past: "kicked", meaning: "patear" },
+  kill: { past: "killed", meaning: "matar" },
+  kiss: { past: "kissed", meaning: "besar" }
+};
+```
+  </TabItem>
+
+  <TabItem label="L">
+```javascript
+const regularVerbs = {
+  label: { past: "labeled", meaning: "etiquetar" },
+  land: { past: "landed", meaning: "aterrizar" },
+  last: { past: "lasted", meaning: "durar" },
+  laugh: { past: "laughed", meaning: "reír" },
+  learn: { past: "learned", meaning: "aprender" },
+  like: { past: "liked", meaning: "gustar" },
+  listen: { past: "listened", meaning: "escuchar" },
+  live: { past: "lived", meaning: "vivir" },
+  look: { past: "looked", meaning: "mirar" },
+  love: { past: "loved", meaning: "amar" }
+};
+```
+  </TabItem>
+
+  <TabItem label="M">
+```javascript
+const regularVerbs = {
+  manage: { past: "managed", meaning: "gestionar" },
+  mark: { past: "marked", meaning: "marcar" },
+  marry: { past: "married", meaning: "casarse" },
+  match: { past: "matched", meaning: "coincidir" },
+  matter: { past: "mattered", meaning: "importar" },
+  measure: { past: "measured", meaning: "medir" },
+  mention: { past: "mentioned", meaning: "mencionar" },
+  miss: { past: "missed", meaning: "extrañar/perder" },
+  mix: { past: "mixed", meaning: "mezclar" },
+  move: { past: "moved", meaning: "mover" }
+};
+```
+  </TabItem>
+
+  <TabItem label="N">
+```javascript
+const regularVerbs = {
+  name: { past: "named", meaning: "nombrar" },
+  need: { past: "needed", meaning: "necesitar" },
+  notice: { past: "noticed", meaning: "notar" }
+};
+```
+  </TabItem>
+
+  <TabItem label="O">
+```javascript
+const regularVerbs = {
+  observe: { past: "observed", meaning: "observar" },
+  occur: { past: "occurred", meaning: "ocurrir" },
+  offer: { past: "offered", meaning: "ofrecer" },
+  open: { past: "opened", meaning: "abrir" },
+  order: { past: "ordered", meaning: "ordenar" },
+  organize: { past: "organized", meaning: "organizar" },
+  own: { past: "owned", meaning: "poseer" }
+};
+```
+  </TabItem>
+
+  <TabItem label="P">
+```javascript
+const regularVerbs = {
+  paint: { past: "painted", meaning: "pintar" },
+  park: { past: "parked", meaning: "estacionar" },
+  pass: { past: "passed", meaning: "pasar" },
+  perform: { past: "performed", meaning: "realizar" },
+  pick: { past: "picked", meaning: "recoger" },
+  place: { past: "placed", meaning: "colocar" },
+  plan: { past: "planned", meaning: "planear" },
+  plant: { past: "planted", meaning: "plantar" },
+  play: { past: "played", meaning: "jugar" },
+  point: { past: "pointed", meaning: "señalar" },
+  practice: { past: "practiced", meaning: "practicar" },
+  prefer: { past: "preferred", meaning: "preferir" },
+  prepare: { past: "prepared", meaning: "preparar" },
+  present: { past: "presented", meaning: "presentar" },
+  press: { past: "pressed", meaning: "presionar" },
+  print: { past: "printed", meaning: "imprimir" },
+  produce: { past: "produced", meaning: "producir" },
+  program: { past: "programmed", meaning: "programar" },
+  promise: { past: "promised", meaning: "prometer" },
+  protect: { past: "protected", meaning: "proteger" },
+  provide: { past: "provided", meaning: "proveer" },
+  pull: { past: "pulled", meaning: "tirar/jalar" },
+  push: { past: "pushed", meaning: "empujar" }
+};
+```
+  </TabItem>
+
+  <TabItem label="R">
+```javascript
+const regularVerbs = {
+  rain: { past: "rained", meaning: "llover" },
+  reach: { past: "reached", meaning: "alcanzar" },
+  realize: { past: "realized", meaning: "darse cuenta" },
+  receive: { past: "received", meaning: "recibir" },
+  recognize: { past: "recognized", meaning: "reconocer" },
+  record: { past: "recorded", meaning: "grabar" },
+  reduce: { past: "reduced", meaning: "reducir" },
+  refuse: { past: "refused", meaning: "rechazar" },
+  register: { past: "registered", meaning: "registrar" },
+  relax: { past: "relaxed", meaning: "relajar" },
+  remember: { past: "remembered", meaning: "recordar" },
+  remove: { past: "removed", meaning: "remover" },
+  repair: { past: "repaired", meaning: "reparar" },
+  repeat: { past: "repeated", meaning: "repetir" },
+  replace: { past: "replaced", meaning: "reemplazar" },
+  reply: { past: "replied", meaning: "responder" },
+  report: { past: "reported", meaning: "reportar" },
+  require: { past: "required", meaning: "requerir" },
+  rest: { past: "rested", meaning: "descansar" },
+  return: { past: "returned", meaning: "regresar" }
+};
+```
+  </TabItem>
+
+  <TabItem label="S">
+```javascript
+const regularVerbs = {
+  save: { past: "saved", meaning: "guardar/salvar" },
+  search: { past: "searched", meaning: "buscar" },
+  select: { past: "selected", meaning: "seleccionar" },
+  serve: { past: "served", meaning: "servir" },
+  share: { past: "shared", meaning: "compartir" },
+  shop: { past: "shopped", meaning: "comprar" },
+  shout: { past: "shouted", meaning: "gritar" },
+  show: { past: "showed", meaning: "mostrar" },
+  sign: { past: "signed", meaning: "firmar" },
+  smile: { past: "smiled", meaning: "sonreír" },
+  smoke: { past: "smoked", meaning: "fumar" },
+  snow: { past: "snowed", meaning: "nevar" },
+  start: { past: "started", meaning: "empezar" },
+  stay: { past: "stayed", meaning: "quedarse" },
+  stop: { past: "stopped", meaning: "parar" },
+  study: { past: "studied", meaning: "estudiar" },
+  suggest: { past: "suggested", meaning: "sugerir" },
+  support: { past: "supported", meaning: "apoyar" },
+  suppose: { past: "supposed", meaning: "suponer" }
+};
+```
+  </TabItem>
+
+  <TabItem label="T">
+```javascript
+const regularVerbs = {
+  talk: { past: "talked", meaning: "hablar" },
+  taste: { past: "tasted", meaning: "probar/saborear" },
+  thank: { past: "thanked", meaning: "agradecer" },
+  touch: { past: "touched", meaning: "tocar" },
+  train: { past: "trained", meaning: "entrenar" },
+  travel: { past: "traveled", meaning: "viajar" },
+  try: { past: "tried", meaning: "intentar" },
+  turn: { past: "turned", meaning: "girar" },
+  type: { past: "typed", meaning: "escribir (a máquina)" }
+};
+```
+  </TabItem>
+
+  <TabItem label="U">
+```javascript
+const regularVerbs = {
+  use: { past: "used", meaning: "usar" }
+};
+```
+  </TabItem>
+
+  <TabItem label="V">
+```javascript
+const regularVerbs = {
+  visit: { past: "visited", meaning: "visitar" }
+};
+```
+  </TabItem>
+
+  <TabItem label="W">
+```javascript
+const regularVerbs = {
+  wait: { past: "waited", meaning: "esperar" },
+  walk: { past: "walked", meaning: "caminar" },
+  want: { past: "wanted", meaning: "querer" },
+  wash: { past: "washed", meaning: "lavar" },
+  watch: { past: "watched", meaning: "ver/observar" },
+  welcome: { past: "welcomed", meaning: "dar la bienvenida" },
+  wish: { past: "wished", meaning: "desear" },
+  wonder: { past: "wondered", meaning: "preguntarse" },
+  work: { past: "worked", meaning: "trabajar" },
+  worry: { past: "worried", meaning: "preocuparse" }
+};
+```
+  </TabItem>
+</Tabs>
+
+Ahora que conoces las reglas, aquí está la función para conjugar cualquier verbo regular automáticamente:
 
 ```javascript
-const conjugateRegular = (verb) => {
+const conjugateRegularVerb = (verb) => {
   // 1. Ya termina en -e: solo añade -d
-  if (verb.endsWith('e')) {
-    return verb + 'd';
-  }
-  
+  if (verb.endsWith("e")) return verb + "d";
+
   // 2. Termina en consonante + y: cambia y por ied
-  if (/[^aeiou]y$/.test(verb)) {
-    return verb.slice(0, -1) + 'ied';
-  }
-  
-  // 3. Termina en CVC (consonante-vocal-consonante) con una sílaba 
-  //    y la última sílaba es acentuada: duplica la última consonante + ed
-  if (/[^aeiou][aeiou][^aeiouwxy]$/.test(verb) && verb.length <= 4) {
-    return verb + verb.slice(-1) + 'ed';
-  }
-  
+  if (/[^aeiou]y$/.test(verb)) return verb.slice(0, -1) + "ied";
+
+  /* 3. Termina en CVC (consonante-vocal-consonante) con una sílaba
+        y la última sílaba es acentuada: duplica la última consonante + ed */
+  if (/[^aeiou][aeiou][^aeiouwxy]$/.test(verb) && verb.length <= 4) return verb + verb.slice(-1) + "ed";
+
   // 4. Regla general: añade -ed
-  return verb + 'ed';
+  return verb + "ed";
 };
 
 // Ejemplos
-console.log(conjugateRegular("work"));    // "worked" (regla general)
-console.log(conjugateRegular("like"));    // "liked" (termina en -e)
-console.log(conjugateRegular("study"));   // "studied" (consonante + y)
-console.log(conjugateRegular("stop"));    // "stopped" (duplica consonante)
-console.log(conjugateRegular("play"));    // "played" (vocal + y, regla general)
+console.log(conjugateRegularVerb("work")); // "worked" (regla general)
+console.log(conjugateRegularVerb("like")); // "liked" (termina en -e)
+console.log(conjugateRegularVerb("study")); // "studied" (consonante + y)
+console.log(conjugateRegularVerb("stop")); // "stopped" (duplica consonante)
+console.log(conjugateRegularVerb("play")); // "played" (vocal + y, regla general)
 ```
 
 <Aside type="tip" title="Truco para recordar">
@@ -195,42 +520,60 @@ Para construir oraciones afirmativas, usa: **Sujeto + Verbo en pasado + Compleme
 // Base de datos de verbos irregulares (algunos ejemplos)
 const irregularPastForms = {
   go: "went",
-  be: "was/were", // Be es especial
   have: "had",
   do: "did",
   see: "saw",
   make: "made",
   get: "got",
-  eat: "ate"
+  eat: "ate",
 };
 
 const conjugatePast = (verb) => {
-  // Si es irregular, retorna su forma irregular
-  if (irregularPastForms[verb]) {
-    return irregularPastForms[verb];
-  }
-  // Si es regular, aplica las reglas del -ed
-  return conjugateRegular(verb);
+  const irregularVerb = irregularPastForms[verb];
+
+  // Si es irregular, retorna su forma irregular; si no, aplica las reglas del -ed
+  return irregularVerb || conjugateRegularVerb(verb);
 };
 
-const affirm = (subject, verb, complement) => {
-  let pastVerb = conjugatePast(verb);
-  
-  // "Be" es especial: usa "was" con I/he/she/it, "were" con you/we/they
-  if (verb === "be") {
+const affirm = ({ subject, verb, complement }) => {
+  subject = subject.trim();
+  verb = verb.trim().toLowerCase();
+  complement = complement.trim();
+
+  let pastVerb = "";
+
+  // Manejo de los verbos "am", "is", "are"
+  if (["am", "is", "are"].includes(verb)) {
+    // Para "am", "is", "are", el pasado es "was" o "were" dependiendo del sujeto
     pastVerb = ["I", "he", "she", "it"].includes(subject) ? "was" : "were";
+  } else {
+    // Para otros verbos, conjugamos al pasado
+    pastVerb = conjugatePast(verb);
   }
-  
-  console.log(`${subject} ${pastVerb} ${complement}`);
+
+  return `${subject} ${pastVerb} ${complement}`;
 };
 
 // Ejemplos de uso
-affirm("I", "work", "yesterday");                  // "I worked yesterday"
-affirm("She", "go", "to the store");               // "She went to the store"
-affirm("They", "play", "soccer last week");        // "They played soccer last week"
-affirm("He", "eat", "pizza for dinner");           // "He ate pizza for dinner"
-affirm("We", "be", "friends in college");          // "We were friends in college"
-affirm("It", "be", "a great day");                 // "It was a great day"
+console.log(affirm({ subject: "I", verb: "am", complement: "happy" })); 
+// "I was happy" → "Yo estaba feliz"
+console.log(affirm({ subject: "I", verb: "work", complement: "yesterday" })); 
+// "I worked yesterday" → "Yo trabajé ayer"
+
+console.log(affirm({ subject: "She", verb: "go", complement: "to the store" })); 
+// "She went to the store" → "Ella fue a la tienda"
+
+console.log(affirm({ subject: "They", verb: "play", complement: "soccer last week" })); 
+// "They played soccer last week" → "Ellos jugaron fútbol la semana pasada"
+
+console.log(affirm({ subject: "He", verb: "eat", complement: "pizza for dinner" })); 
+// "He ate pizza for dinner" → "Él comió pizza para la cena"
+
+console.log(affirm({ subject: "We", verb: "are", complement: "friends in college" })); 
+// "We were friends in college" → "Nosotros éramos amigos en la universidad"
+
+console.log(affirm({ subject: "It", verb: "is", complement: "a great day" })); 
+// "It was a great day" → "Fue un gran día"
 ```
 
 ### Negaciones
@@ -242,25 +585,29 @@ Cuando usas `did` o `did not`, el verbo principal **siempre** vuelve a su forma 
 </Aside>
 
 ```javascript
-const deny = (subject, verb, complement) => {
-  // El verbo SIEMPRE va en forma base cuando usamos "did"
-  // No importa si el verbo es regular o irregular
-  console.log(`${subject} did not ${verb} ${complement}`);
+const deny = ({ subject, verb, complement }) => {
+  verb = verb.trim().toLowerCase();
+
+  return ["am", "is", "are"].includes(verb)
+    ? `${subject} ${verb === "are" ? "were" : "was"} not ${complement}`
+    : `${subject} did not ${verb} ${complement}`;
 };
 
-// Ejemplos de uso
-deny("I", "work", "yesterday");                    // "I did not work yesterday"
-deny("She", "go", "to the party");                 // "She did not go to the party"
-deny("They", "play", "video games");               // "They did not play video games"
-deny("He", "eat", "breakfast");                    // "He did not eat breakfast"
-deny("We", "see", "the movie");                    // "We did not see the movie"
+// Ejemplos de uso:
+console.log(deny({ subject: "I", verb: "work", complement: "yesterday" }));
+// "I did not work yesterday" → "No trabajé ayer"
 
-// Forma contraída (más común en conversación)
-const denyShort = (subject, verb, complement) => {
-  console.log(`${subject} didn't ${verb} ${complement}`);
-};
+console.log(deny({ subject: "She", verb: "go", complement: "to the party" }));
+// "She did not go to the party" → "Ella no fue a la fiesta"
 
-denyShort("I", "know", "that");                    // "I didn't know that"
+console.log(deny({ subject: "They", verb: "play", complement: "video games" }));
+// "They did not play video games" → "Ellos no jugaron videojuegos"
+
+console.log(deny({ subject: "He", verb: "eat", complement: "breakfast" }));
+// "He did not eat breakfast" → "Él no desayunó"
+
+console.log(deny({ subject: "We", verb: "are", complement: "late" }));
+// "We were not late" → "No llegamos tarde"
 ```
 
 <Aside type="caution" title="Error común">
@@ -275,17 +622,35 @@ Recuerda: cuando usas `did` o `didn't`, el verbo vuelve a su forma base. No uses
 Para hacer preguntas, coloca **did** al inicio, seguido del sujeto y el verbo en forma base. La estructura es: **Did + Sujeto + Verbo base + Complemento + ?**
 
 ```javascript
-const ask = (subject, verb, complement) => {
-  // El verbo SIEMPRE va en forma base
-  console.log(`Did ${subject} ${verb} ${complement}?`);
+const ask = ({ subject, verb, complement }) => {
+  verb = verb.trim().toLowerCase();
+
+  return ["am", "is", "are"].includes(verb)
+    ? `${verb === "am" || verb === "is" ? "Was" : "Were"} ${subject} ${complement}?`
+    : `Did ${subject} ${verb} ${complement}?`;
 };
 
-// Ejemplos de uso
-ask("you", "work", "yesterday");                   // "Did you work yesterday?"
-ask("she", "go", "to the meeting");                // "Did she go to the meeting?"
-ask("they", "play", "well");                       // "Did they play well?"
-ask("he", "eat", "lunch");                         // "Did he eat lunch?"
-ask("we", "see", "that movie before");             // "Did we see that movie before?"
+// Ejemplos de uso:
+console.log(ask({ subject: "you", verb: "work", complement: "yesterday" }));
+// "Did you work yesterday?" → "¿Trabajaste ayer?"
+
+console.log(ask({ subject: "she", verb: "go", complement: "to the meeting" }));
+// "Did she go to the meeting?" → "¿Ella fue a la reunión?"
+
+console.log(ask({ subject: "they", verb: "play", complement: "well" }));
+// "Did they play well?" → "¿Ellos jugaron bien?"
+
+console.log(ask({ subject: "he", verb: "eat", complement: "lunch" }));
+// "Did he eat lunch?" → "¿Él almorzó?"
+
+console.log(ask({ subject: "we", verb: "are", complement: "at the park" }));
+// "Were we at the park?" → "¿Estuvimos en el parque?"
+
+console.log(ask({ subject: "I", verb: "am", complement: "late" }));
+// "Was I late?" → "¿Llegué tarde?"
+
+console.log(ask({ subject: "she", verb: "is", complement: "ready" }));
+// "Was she ready?" → "¿Ella estaba lista?"
 ```
 
 <Aside title='Pregunta única: "To be" en pasado'>
@@ -303,78 +668,6 @@ El verbo **to be** es especial incluso en pasado. No necesita el auxiliar `did` 
 ## Pronunciación del -ed en verbos regulares
 
 Una de las partes más importantes del pasado simple es saber cómo pronunciar la terminación `-ed`. Hay tres posibles pronunciaciones: **/t/**, **/d/** o **/ɪd/** (id), y dependen del sonido final del verbo base.
-
-### Reglas de pronunciación
-
-```javascript
-// Función que determina cómo pronunciar el -ed
-const pronounceED = (verb) => {
-  // Obtener el último sonido del verbo (antes del -ed)
-  const lastLetter = verb.slice(-1).toLowerCase();
-  
-  // 1. Si el verbo termina en sonido sordo (voiceless): /t/
-  //    Consonantes sordas: p, k, f, s, sh, ch, th (como en "think")
-  const voiceless = ['p', 'k', 'f', 's', 'x'];
-  if (voiceless.includes(lastLetter) || verb.endsWith('sh') || verb.endsWith('ch') || verb.endsWith('ss')) {
-    return '/t/ (como "t")';
-  }
-  
-  // 2. Si el verbo termina en -t o -d: /ɪd/ (id)
-  //    Se añade una sílaba extra
-  if (lastLetter === 't' || lastLetter === 'd') {
-    return '/ɪd/ (como "id" - añade sílaba)';
-  }
-  
-  // 3. Si el verbo termina en sonido sonoro (voiced): /d/
-  //    Esto incluye vocales y consonantes sonoras: b, g, v, z, m, n, l, r, etc.
-  return '/d/ (como "d")';
-};
-
-// Ejemplos de cada tipo
-const examples = {
-  soundT: [
-    { verb: "work", past: "worked", sound: pronounceED("work") },
-    { verb: "stop", past: "stopped", sound: pronounceED("stop") },
-    { verb: "walk", past: "walked", sound: pronounceED("walk") },
-    { verb: "wash", past: "washed", sound: pronounceED("wash") },
-    { verb: "watch", past: "watched", sound: pronounceED("watch") },
-    { verb: "miss", past: "missed", sound: pronounceED("miss") },
-  ],
-  soundID: [
-    { verb: "want", past: "wanted", sound: pronounceED("want") },
-    { verb: "need", past: "needed", sound: pronounceED("need") },
-    { verb: "wait", past: "waited", sound: pronounceED("wait") },
-    { verb: "decide", past: "decided", sound: pronounceED("decide") },
-    { verb: "start", past: "started", sound: pronounceED("start") },
-    { verb: "end", past: "ended", sound: pronounceED("end") },
-  ],
-  soundD: [
-    { verb: "play", past: "played", sound: pronounceED("play") },
-    { verb: "clean", past: "cleaned", sound: pronounceED("clean") },
-    { verb: "live", past: "lived", sound: pronounceED("live") },
-    { verb: "study", past: "studied", sound: pronounceED("study") },
-    { verb: "call", past: "called", sound: pronounceED("call") },
-    { verb: "open", past: "opened", sound: pronounceED("open") },
-  ]
-};
-
-console.log("=== Pronunciación /t/ ===");
-examples.soundT.forEach(ex => {
-  console.log(`${ex.past}: ${ex.sound}`);
-});
-
-console.log("\n=== Pronunciación /ɪd/ (añade sílaba) ===");
-examples.soundID.forEach(ex => {
-  console.log(`${ex.past}: ${ex.sound}`);
-});
-
-console.log("\n=== Pronunciación /d/ ===");
-examples.soundD.forEach(ex => {
-  console.log(`${ex.past}: ${ex.sound}`);
-});
-```
-
-### Tabla de referencia rápida
 
 <CardGrid>
   <Card title="Pronunciación /t/" icon="star">
@@ -410,224 +703,34 @@ examples.soundD.forEach(ex => {
   </Card>
 </CardGrid>
 
-## Función interactiva: Conversor de pasado
+## Expresiones de tiempo comunes con pasado simple
 
-Ahora que conoces todas las reglas, aquí te dejo una función completa que convierte cualquier verbo al pasado simple y te dice cómo pronunciarlo:
+El pasado simple suele ir acompañado de expresiones de tiempo que indican cuándo ocurrió la acción:
 
 ```javascript
-// Base de datos completa de verbos irregulares
-const irregularVerbsDB = {
-  be: { past: "was/were", pronunciation: "was /wʌz/, were /wɜr/" },
-  go: { past: "went", pronunciation: "/went/" },
-  have: { past: "had", pronunciation: "/hæd/" },
-  do: { past: "did", pronunciation: "/dɪd/" },
-  say: { past: "said", pronunciation: "/sed/" },
-  get: { past: "got", pronunciation: "/ɡɑt/" },
-  make: { past: "made", pronunciation: "/meɪd/" },
-  see: { past: "saw", pronunciation: "/sɔ/" },
-  come: { past: "came", pronunciation: "/keɪm/" },
-  take: { past: "took", pronunciation: "/tʊk/" },
-  know: { past: "knew", pronunciation: "/nu/" },
-  think: { past: "thought", pronunciation: "/θɔt/" },
-  give: { past: "gave", pronunciation: "/ɡeɪv/" },
-  find: { past: "found", pronunciation: "/faʊnd/" },
-  tell: { past: "told", pronunciation: "/toʊld/" },
-  become: { past: "became", pronunciation: "/bɪˈkeɪm/" },
-  leave: { past: "left", pronunciation: "/left/" },
-  feel: { past: "felt", pronunciation: "/felt/" },
-  bring: { past: "brought", pronunciation: "/brɔt/" },
-  begin: { past: "began", pronunciation: "/bɪˈɡæn/" },
-  keep: { past: "kept", pronunciation: "/kept/" },
-  hold: { past: "held", pronunciation: "/held/" },
-  write: { past: "wrote", pronunciation: "/roʊt/" },
-  stand: { past: "stood", pronunciation: "/stʊd/" },
-  hear: { past: "heard", pronunciation: "/hɜrd/" },
-  let: { past: "let", pronunciation: "/let/" },
-  mean: { past: "meant", pronunciation: "/ment/" },
-  set: { past: "set", pronunciation: "/set/" },
-  meet: { past: "met", pronunciation: "/met/" },
-  run: { past: "ran", pronunciation: "/ræn/" },
-  pay: { past: "paid", pronunciation: "/peɪd/" },
-  sit: { past: "sat", pronunciation: "/sæt/" },
-  speak: { past: "spoke", pronunciation: "/spoʊk/" },
-  lie: { past: "lay", pronunciation: "/leɪ/" },
-  lead: { past: "led", pronunciation: "/led/" },
-  read: { past: "read", pronunciation: "/red/" },
-  grow: { past: "grew", pronunciation: "/ɡru/" },
-  lose: { past: "lost", pronunciation: "/lɔst/" },
-  fall: { past: "fell", pronunciation: "/fel/" },
-  send: { past: "sent", pronunciation: "/sent/" },
-  build: { past: "built", pronunciation: "/bɪlt/" },
-  understand: { past: "understood", pronunciation: "/ˌʌn·dərˈstʊd/" },
-  draw: { past: "drew", pronunciation: "/dru/" },
-  break: { past: "broke", pronunciation: "/broʊk/" },
-  spend: { past: "spent", pronunciation: "/spent/" },
-  cut: { past: "cut", pronunciation: "/kʌt/" },
-  rise: { past: "rose", pronunciation: "/roʊz/" },
-  drive: { past: "drove", pronunciation: "/droʊv/" },
-  buy: { past: "bought", pronunciation: "/bɔt/" },
-  wear: { past: "wore", pronunciation: "/wɔr/" },
-  choose: { past: "chose", pronunciation: "/tʃoʊz/" },
-  seek: { past: "sought", pronunciation: "/sɔt/" },
-  throw: { past: "threw", pronunciation: "/θru/" },
-  catch: { past: "caught", pronunciation: "/kɔt/" },
-  deal: { past: "dealt", pronunciation: "/delt/" },
-  win: { past: "won", pronunciation: "/wʌn/" },
-  forget: { past: "forgot", pronunciation: "/fərˈɡɑt/" },
-  sell: { past: "sold", pronunciation: "/soʊld/" },
-  fight: { past: "fought", pronunciation: "/fɔt/" },
-  teach: { past: "taught", pronunciation: "/tɔt/" },
-  eat: { past: "ate", pronunciation: "/eɪt/" },
-  fly: { past: "flew", pronunciation: "/flu/" },
-  hurt: { past: "hurt", pronunciation: "/hɜrt/" },
-  sleep: { past: "slept", pronunciation: "/slept/" },
-  wake: { past: "woke", pronunciation: "/woʊk/" },
-  sing: { past: "sang", pronunciation: "/sæŋ/" },
-  swim: { past: "swam", pronunciation: "/swæm/" },
-  drink: { past: "drank", pronunciation: "/dræŋk/" },
-  ring: { past: "rang", pronunciation: "/ræŋ/" },
-  hide: { past: "hid", pronunciation: "/hɪd/" },
-  steal: { past: "stole", pronunciation: "/stoʊl/" },
-  ride: { past: "rode", pronunciation: "/roʊd/" }
-};
+const timeExpressions = [
+  "yesterday",                    // ayer
+  "last night/week/month/year",   // anoche/la semana/mes/año pasado
+  "ago" ,                         // hace (two days ago = hace dos días)
+  "in 2020",                      // en 2020
+  "when I was young",             // cuando era joven
+  "at that time",                 // en ese momento
+  "once upon a time",             // érase una vez
+  "the other day"                 // el otro día
+];
 
-// Función para conjugar verbos regulares con reglas de ortografía
-const conjugateRegularVerb = (verb) => {
-  if (verb.endsWith('e')) {
-    return verb + 'd';
-  }
-  if (/[^aeiou]y$/.test(verb)) {
-    return verb.slice(0, -1) + 'ied';
-  }
-  if (/[^aeiou][aeiou][^aeiouwxy]$/.test(verb) && verb.length <= 4) {
-    return verb + verb.slice(-1) + 'ed';
-  }
-  return verb + 'ed';
-};
-
-// Función para determinar pronunciación del -ed
-const getEDPronunciation = (verb) => {
-  const lastLetter = verb.slice(-1).toLowerCase();
-  const lastTwoLetters = verb.slice(-2).toLowerCase();
-  
-  // /ɪd/ - si termina en t o d
-  if (lastLetter === 't' || lastLetter === 'd') {
-    return {
-      sound: '/ɪd/',
-      description: 'Suena como "id", añade una sílaba extra',
-      example: `${verb}ed suena como "${verb.slice(0, -1)}·ɪd"`
-    };
-  }
-  
-  // /t/ - después de sonidos sordos
-  const voiceless = ['p', 'k', 'f', 's', 'x'];
-  if (voiceless.includes(lastLetter) || 
-      lastTwoLetters === 'sh' || 
-      lastTwoLetters === 'ch' || 
-      lastTwoLetters === 'ss') {
-    return {
-      sound: '/t/',
-      description: 'Suena como "t"',
-      example: `${verb}ed suena como "${verb}t"`
-    };
-  }
-  
-  // /d/ - después de sonidos sonoros (vocales y consonantes sonoras)
-  return {
-    sound: '/d/',
-    description: 'Suena como "d"',
-    example: `${verb}ed suena como "${verb}d"`
-  };
-};
-
-// FUNCIÓN PRINCIPAL: Convierte verbo a pasado simple con pronunciación
-const convertToPast = (verb) => {
-  verb = verb.toLowerCase().trim();
-  
-  // 1. Verificar si es irregular
-  if (irregularVerbsDB[verb]) {
-    return {
-      verb: verb,
-      type: 'irregular',
-      past: irregularVerbsDB[verb].past,
-      pronunciation: irregularVerbsDB[verb].pronunciation,
-      tip: `"${verb}" es un verbo IRREGULAR. Debes memorizarlo.`
-    };
-  }
-  
-  // 2. Si es regular, conjugar y obtener pronunciación
-  const pastForm = conjugateRegularVerb(verb);
-  const pronunciation = getEDPronunciation(verb);
-  
-  return {
-    verb: verb,
-    type: 'regular',
-    past: pastForm,
-    pronunciation: pronunciation.sound,
-    description: pronunciation.description,
-    example: pronunciation.example,
-    tip: `"${verb}" es un verbo REGULAR. Solo añade -ed (con las reglas de ortografía).`
-  };
-};
-
-// ========== EJEMPLOS DE USO ==========
-
-console.log("=== VERBOS REGULARES ===\n");
-
-const regularTests = ["work", "play", "watch", "study", "stop", "want", "clean", "live"];
-regularTests.forEach(verb => {
-  const result = convertToPast(verb);
-  console.log(`🔹 ${result.verb} → ${result.past}`);
-  console.log(`   Tipo: ${result.type}`);
-  console.log(`   Pronunciación: ${result.pronunciation} (${result.description})`);
-  console.log(`   ${result.example}`);
-  console.log(`   💡 ${result.tip}\n`);
-});
-
-console.log("\n=== VERBOS IRREGULARES ===\n");
-
-const irregularTests = ["go", "eat", "see", "think", "buy", "run", "sleep"];
-irregularTests.forEach(verb => {
-  const result = convertToPast(verb);
-  console.log(`🔹 ${result.verb} → ${result.past}`);
-  console.log(`   Tipo: ${result.type}`);
-  console.log(`   Pronunciación: ${result.pronunciation}`);
-  console.log(`   💡 ${result.tip}\n`);
-});
-
-// Función interactiva para probar con cualquier verbo
-const testVerb = (verb) => {
-  console.log(`\n${"=".repeat(50)}`);
-  console.log(`ANALIZANDO: "${verb}"`);
-  console.log("=".repeat(50));
-  
-  const result = convertToPast(verb);
-  
-  console.log(`\n📝 Verbo: ${result.verb}`);
-  console.log(`📦 Tipo: ${result.type.toUpperCase()}`);
-  console.log(`⏮️  Pasado simple: ${result.past}`);
-  console.log(`🔊 Pronunciación: ${result.pronunciation}`);
-  if (result.description) {
-    console.log(`📖 Descripción: ${result.description}`);
-    console.log(`🎯 Ejemplo: ${result.example}`);
-  }
-  console.log(`💡 Tip: ${result.tip}`);
-  console.log("=".repeat(50));
-  
-  return result;
-};
-
-// ¡Prueba con cualquier verbo!
-testVerb("dance");   // Regular: danced /t/
-testVerb("need");    // Regular: needed /ɪd/
-testVerb("enjoy");   // Regular: enjoyed /d/
-testVerb("write");   // Irregular: wrote
-testVerb("teach");   // Irregular: taught
+// Ejemplos en oraciones
+const examples = [
+  "I worked from home yesterday",                  // Trabajé desde casa ayer
+  "She visited Paris last summer",                 // Ella visitó París el verano pasado
+  "They moved to New York three years ago",        // Hace tres años se mudaron a Nueva York
+  "He graduated in 2019",                          // En 2019 se graduó
+  "When I was young, I played soccer every day",   // Cuando era joven, jugaba fútbol todos los días
+  "We met at that time",                           // Nos encontramos en ese momento
+  "Once upon a time, there was a king",            // Érase una vez, había un rey
+  "I saw him the other day"                        // Lo vi el otro día
+];
 ```
-
-<Aside type="tip" title="Practica con la función">
-Copia el código de `convertToPast()` y pruébalo con tus propios verbos. Es una excelente manera de aprender tanto programación como inglés. ¡Puedes incluso extenderlo para incluir más verbos irregulares o agregar ejemplos de oraciones!
-</Aside>
 
 ## Errores comunes que debes evitar
 
@@ -672,32 +775,3 @@ console.log("I went to school");            // CORRECTO
 console.log("She ate breakfast");           // CORRECTO
 ```
 </Aside>
-
-## Expresiones de tiempo comunes con pasado simple
-
-El pasado simple suele ir acompañado de expresiones de tiempo que indican cuándo ocurrió la acción:
-
-```javascript
-const timeExpressions = [
-  "yesterday",                    // ayer
-  "last night/week/month/year",   // anoche/la semana/mes/año pasado
-  "ago" ,                         // hace (two days ago = hace dos días)
-  "in 2020",                      // en 2020
-  "when I was young",             // cuando era joven
-  "at that time",                 // en ese momento
-  "once upon a time",             // érase una vez
-  "the other day"                 // el otro día
-];
-
-// Ejemplos en oraciones
-const examples = [
-  "I worked from home yesterday",
-  "She visited Paris last summer",
-  "They moved to New York three years ago",
-  "He graduated in 2019",
-  "When I was young, I played soccer every day",
-  "We met at that time",
-  "Once upon a time, there was a king",
-  "I saw him the other day"
-];
-```
