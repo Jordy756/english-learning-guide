@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from "astro/config";
+import { defineConfig, fontProviders } from "astro/config";
 import starlight from "@astrojs/starlight";
 import tailwindcss from "@tailwindcss/vite";
 
@@ -7,13 +7,18 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   integrations: [
     starlight({
-      title: "English Learning Guide",
+      title: "TalkScript",
       social: [{ icon: "github", label: "GitHub", href: "https://github.com/withastro/starlight" }],
+      favicon: "/favicon.ico",
+      logo: {
+        src: "./public/logo.webp",
+        alt: "TalkScript Logo",
+      },
+      components: {
+        Head: "./src/components/Head.astro",
+        Sidebar: "./src/components/Sidebar.astro",
+      },
       sidebar: [
-        {
-          label: "Introducción",
-          link: "/",
-        },
         {
           label: "Fundamentos Básicos",
           autogenerate: { directory: "basics" },
@@ -36,5 +41,33 @@ export default defineConfig({
   ],
   vite: {
     plugins: [tailwindcss()],
+  },
+  experimental: {
+    fonts: [
+      {
+        name: "Space Grotesk",
+        cssVariable: "--font-space-grotesk",
+        provider: fontProviders.google(),
+        display: "swap",
+        subsets: ["latin"],
+        styles: ["normal"],
+        weights: [300],
+        formats: ["woff2"],
+        unicodeRange: ["U+0000-00FF"],
+        fallbacks: ["sans-serif"],
+      },
+      {
+        name: "Space Mono",
+        cssVariable: "--font-space-mono",
+        provider: fontProviders.google(),
+        display: "swap",
+        subsets: ["latin"],
+        styles: ["normal"],
+        weights: [400, 700],
+        formats: ["woff2"],
+        unicodeRange: ["U+0000-00FF"],
+        fallbacks: ["monospace"],
+      },
+    ],
   },
 });
