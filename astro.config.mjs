@@ -16,9 +16,9 @@ export default defineConfig({
         alt: "TalkScript Logo",
       },
       components: {
-        Head: "./src/components/Head.astro",
-        Sidebar: "./src/components/Sidebar.astro",
-        Hero: "./src/components/Hero.astro",
+        Head: "./src/components/overrides/Head.astro",
+        Sidebar: "./src/components/overrides/Sidebar.astro",
+        Hero: "./src/components/overrides/Hero.astro",
       },
       sidebar: [
         {

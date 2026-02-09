@@ -1,5 +1,5 @@
 ---
-import Chevron from "./icons/Chevron.astro";
+import ChevronIcon from "@components/icons/ChevronRight.astro";
 
 const { entry } = Astro.locals.starlightRoute;
 const { title = "TalkScript", description, hero } = entry.data;
@@ -23,7 +23,7 @@ const actions = hero?.actions || [];
               class={`hero-button ${action.variant === "minimal" ? "hero-button-minimal" : "hero-button-primary"}`}
             >
               {action.text}
-              <Chevron class="hero-button-icon" />
+              <ChevronIcon class="hero-button-icon" />
             </a>
           ))}
         </div>
