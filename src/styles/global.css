@@ -1,6 +1,21 @@
+@layer base, starlight, theme, components, utilities;
+
+@import "tailwindcss/theme.css" layer(theme);
 @import "tailwindcss/utilities.css" layer(utilities);
 
-:root {
+@theme {
+  /*
+    Configure your Tailwind theme that will be used by Starlight.
+    https://starlight.astro.build/guides/css-and-tailwind/#styling-starlight-with-tailwind
+  */
   --sl-font: var(--font-space-grotesk);
   --sl-font-mono: var(--font-space-mono);
+
+  --__sl-font: var(--sl-font, var(--sl-font-system)), var(--sl-font-system);
+  --__sl-font-mono: var(--sl-font-mono, var(--sl-font-system-mono)), var(--sl-font-system-mono);
 }
+
+/*
+Add additional Tailwind styles to this file:
+https://tailwindcss.com/docs/adding-custom-styles#using-custom-css
+*/
