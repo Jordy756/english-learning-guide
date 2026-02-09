@@ -15,6 +15,11 @@
   --__sl-font-mono: var(--sl-font-mono, var(--sl-font-system-mono)), var(--sl-font-system-mono);
 }
 
+#starlight__on-this-page {
+  font-family: var(--__sl-font-mono);
+  font-weight: 700;
+}
+
 /*
 Add additional Tailwind styles to this file:
 https://tailwindcss.com/docs/adding-custom-styles#using-custom-css
