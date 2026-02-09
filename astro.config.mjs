@@ -2,6 +2,7 @@
 import { defineConfig, fontProviders } from "astro/config";
 import starlight from "@astrojs/starlight";
 import tailwindcss from "@tailwindcss/vite";
+import { ion } from "starlight-ion-theme";
 
 // https://astro.build/config
 export default defineConfig({
@@ -35,6 +36,14 @@ export default defineConfig({
           label: "Referencia Rápida",
           autogenerate: { directory: "reference" },
         },
+      ],
+      plugins: [
+        ion({
+          footer: {
+            text: "© 2025 TalkScript. All rights reserved.",
+          },
+          icons: {},
+        }),
       ],
       customCss: ["./src/styles/global.css"],
     }),
