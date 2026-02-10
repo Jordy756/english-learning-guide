@@ -1,11 +1,542 @@
 ---
-title: Example Reference
-description: A reference page in my new Starlight docs site.
+title: Linking Words (Conectores)
+description: Aprende a conectar ideas de forma fluida y profesional en inglés.
 ---
 
-Reference pages are ideal for outlining how things work in terse and clear terms.
-Less concerned with telling a story or addressing a specific use case, they should give a comprehensive outline of what you're documenting.
+import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
 
-## Further reading
+Los **linking words** (conectores o palabras de enlace) son el "pegamento" que une tus ideas en inglés. Sin ellos, tus oraciones suenan desconectadas y abruptas. Con ellos, tu discurso fluye naturalmente y suena más profesional y sofisticado. Son especialmente importantes en escritura formal, presentaciones y conversaciones de negocios.
 
-- Read [about reference](https://diataxis.fr/reference/) in the Diátaxis framework
+## Categorías de Conectores
+
+Los conectores se agrupan según su función. Aquí está la clasificación principal:
+
+```javascript
+const linkingWords = {
+  addition: {
+    purpose: "Añadir información",
+    words: ["moreover", "furthermore", "in addition", "besides", "also"]
+  },
+  contrast: {
+    purpose: "Contrastar ideas",
+    words: ["however", "nevertheless", "on the other hand", "yet", "although"]
+  },
+  cause: {
+    purpose: "Indicar causa/efecto",
+    words: ["therefore", "thus", "consequently", "as a result", "because"]
+  },
+  sequence: {
+    purpose: "Ordenar eventos",
+    words: ["first", "then", "next", "finally", "meanwhile"]
+  },
+  emphasis: {
+    purpose: "Enfatizar puntos",
+    words: ["indeed", "in fact", "certainly", "obviously", "clearly"]
+  }
+};
+```
+
+---
+
+## Conectores de Adición
+
+Estos conectores añaden información que **apoya** tu idea anterior. Son como hacer `push()` a un array de argumentos:
+
+<Tabs>
+  <TabItem label="Moreover / Furthermore">
+
+```javascript
+class ArgumentBuilder {
+  constructor() {
+    this.arguments = [];
+  }
+
+  // Añadir el argumento principal
+  addMainPoint(point) {
+    this.arguments.push(`First, ${point}`);
+    return this;
+  }
+
+  // "Moreover" añade un punto adicional más fuerte
+  moreover(point) {
+    this.arguments.push(`Moreover, ${point}`);
+    return this;
+  }
+
+  // "Furthermore" es similar pero más formal
+  furthermore(point) {
+    this.arguments.push(`Furthermore, ${point}`);
+    return this;
+  }
+
+  build() {
+    return this.arguments.join(". ");
+  }
+}
+
+// Ejemplo de uso
+const argument = new ArgumentBuilder()
+  .addMainPoint("learning English opens career opportunities")
+  .moreover("it allows you to access global information")
+  .furthermore("it helps you connect with people worldwide")
+  .build();
+
+console.log(argument);
+// "First, learning English opens career opportunities. 
+//  Moreover, it allows you to access global information. 
+//  Furthermore, it helps you connect with people worldwide"
+```
+
+  </TabItem>
+
+  <TabItem label="In addition / Besides">
+
+```javascript
+// "In addition" es más neutral y común
+const buildResume = async (basicInfo) => {
+  let resume = `I have ${basicInfo.experience} years of experience.`;
+  
+  // Añadir información adicional
+  await new Promise(resolve => setTimeout(resolve, 100));
+  resume += ` In addition, I speak three languages.`;
+  
+  // "Besides" es más informal y conversacional
+  await new Promise(resolve => setTimeout(resolve, 100));
+  resume += ` Besides, I have worked on international projects.`;
+  
+  return resume;
+};
+
+buildResume({ experience: 5 }).then(console.log);
+// "I have 5 years of experience. In addition, I speak three languages. 
+//  Besides, I have worked on international projects."
+```
+
+  </TabItem>
+</Tabs>
+
+<Aside type="tip" title="Diferencia sutil">
+- **Moreover/Furthermore:** Más formales, usados en escritura académica o profesional
+- **In addition:** Neutral, apropiado para cualquier contexto
+- **Besides:** Más casual, común en conversaciones
+</Aside>
+
+---
+
+## Conectores de Contraste
+
+Estos conectores introducen ideas **opuestas** o **inesperadas**. Es como un `else` en tu lógica de argumentación:
+
+<Tabs>
+  <TabItem label="However / Nevertheless">
+
+```javascript
+const evaluateCandidate = async (candidate) => {
+  try {
+    const skills = await checkSkills(candidate);
+    let evaluation = `The candidate has excellent technical skills.`;
+    
+    // "However" introduce un contraste directo
+    if (!skills.experience) {
+      evaluation += ` However, they lack professional experience.`;
+    }
+    
+    // "Nevertheless" indica que a pesar del contraste, la conclusión es positiva
+    if (skills.learning) {
+      evaluation += ` Nevertheless, their learning ability is outstanding.`;
+    }
+    
+    return evaluation;
+  } catch (error) {
+    return "Evaluation failed";
+  }
+};
+
+// Función auxiliar
+const checkSkills = async (candidate) => {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve({
+        technical: true,
+        experience: false,
+        learning: true
+      });
+    }, 100);
+  });
+};
+
+evaluateCandidate({ name: "John" }).then(console.log);
+// "The candidate has excellent technical skills. 
+//  However, they lack professional experience. 
+//  Nevertheless, their learning ability is outstanding."
+```
+
+  </TabItem>
+
+  <TabItem label="On the other hand / Although">
+
+```javascript
+// "On the other hand" presenta el lado opuesto de un argumento
+const compareOptions = (optionA, optionB) => {
+  const comparison = {
+    optionA: `${optionA} is faster and more efficient.`,
+    transition: "On the other hand,",
+    optionB: `${optionB} is more reliable and stable.`
+  };
+  
+  return Object.values(comparison).join(" ");
+};
+
+console.log(compareOptions("Node.js", "Java"));
+// "Node.js is faster and more efficient. On the other hand, Java is more reliable and stable."
+
+// "Although" conecta en una sola oración
+const concessiveStatement = (mainIdea, contrast) => {
+  return `Although ${contrast}, ${mainIdea}.`;
+};
+
+console.log(concessiveStatement(
+  "I enjoy the challenge", 
+  "the project is difficult"
+));
+// "Although the project is difficult, I enjoy the challenge."
+```
+
+  </TabItem>
+</Tabs>
+
+<Aside title="Puntuación importante">
+**However** y **Nevertheless** van después de punto (.) o punto y coma (;), seguidos de coma (,):
+- ✓ "He studied hard. However, he failed."
+- ✓ "He studied hard; however, he failed."
+- ✗ "He studied hard, however he failed."
+</Aside>
+
+---
+
+## Conectores de Causa y Efecto
+
+Estos conectores muestran **relaciones de causa-efecto**. Es como encadenar `.then()` en promesas:
+
+<Tabs>
+  <TabItem label="Therefore / Thus">
+
+```javascript
+// Simulación de causa y efecto con promesas encadenadas
+const analyzeMarket = () => {
+  return Promise.resolve("The market is highly competitive");
+};
+
+const drawConclusion = (observation) => {
+  // "Therefore" indica una conclusión lógica directa
+  return `${observation}. Therefore, we need a unique value proposition.`;
+};
+
+const suggestAction = (conclusion) => {
+  // "Thus" es más formal y común en escritura académica
+  return `${conclusion} Thus, our strategy must focus on innovation.`;
+};
+
+// Encadenar el razonamiento
+analyzeMarket()
+  .then(drawConclusion)
+  .then(suggestAction)
+  .then(console.log);
+// "The market is highly competitive. Therefore, we need a unique value proposition. 
+//  Thus, our strategy must focus on innovation."
+```
+
+  </TabItem>
+
+  <TabItem label="Consequently / As a result">
+
+```javascript
+// Función para simular eventos con consecuencias
+const simulateEvent = async (event, delay = 500) => {
+  await new Promise(resolve => setTimeout(resolve, delay));
+  
+  const consequences = {
+    "increased traffic": {
+      connector: "Consequently",
+      result: "our servers needed an upgrade"
+    },
+    "positive feedback": {
+      connector: "As a result",
+      result: "we expanded the team"
+    },
+    "budget cuts": {
+      connector: "Consequently",
+      result: "we had to prioritize features"
+    }
+  };
+  
+  const { connector, result } = consequences[event];
+  return `${event}. ${connector}, ${result}.`;
+};
+
+// Ejecutar múltiples escenarios
+Promise.all([
+  simulateEvent("increased traffic", 200),
+  simulateEvent("positive feedback", 300),
+  simulateEvent("budget cuts", 100)
+]).then(results => {
+  results.forEach(console.log);
+});
+// "increased traffic. Consequently, our servers needed an upgrade."
+// "positive feedback. As a result, we expanded the team."
+// "budget cuts. Consequently, we had to prioritize features."
+```
+
+  </TabItem>
+
+  <TabItem label="Because / Since">
+
+```javascript
+// "Because" y "Since" explican la RAZÓN (van antes de la causa)
+const explainDecision = (decision, reason) => {
+  // "Because" es más directo y común
+  const withBecause = `${decision} because ${reason}.`;
+  
+  // "Since" es más formal y puede implicar algo obvio o conocido
+  const withSince = `Since ${reason}, ${decision}.`;
+  
+  return { withBecause, withSince };
+};
+
+const explanation = explainDecision(
+  "we chose React",
+  "it has a large community and ecosystem"
+);
+
+console.log(explanation.withBecause);
+// "we chose React because it has a large community and ecosystem."
+
+console.log(explanation.withSince);
+// "Since it has a large community and ecosystem, we chose React."
+```
+
+  </TabItem>
+</Tabs>
+
+---
+
+## Conectores de Secuencia
+
+Estos conectores organizan eventos en **orden cronológico**. Son como los pasos de un algoritmo:
+
+```javascript
+class ProcessGuide {
+  constructor(processName) {
+    this.processName = processName;
+    this.steps = [];
+  }
+
+  // Primer paso
+  first(step) {
+    this.steps.push(`First, ${step}`);
+    return this;
+  }
+
+  // Paso siguiente
+  then(step) {
+    this.steps.push(`Then, ${step}`);
+    return this;
+  }
+
+  // Paso posterior
+  next(step) {
+    this.steps.push(`Next, ${step}`);
+    return this;
+  }
+
+  // Mientras tanto (acción paralela)
+  meanwhile(step) {
+    this.steps.push(`Meanwhile, ${step}`);
+    return this;
+  }
+
+  // Paso final
+  finally(step) {
+    this.steps.push(`Finally, ${step}`);
+    return this;
+  }
+
+  async execute() {
+    console.log(`\n=== ${this.processName.toUpperCase()} ===`);
+    
+    for (const step of this.steps) {
+      await new Promise(resolve => setTimeout(resolve, 500));
+      console.log(`✓ ${step}`);
+    }
+    
+    console.log("Process completed!\n");
+  }
+}
+
+// Ejemplo: Proceso de deployment
+const deploymentGuide = new ProcessGuide("Deployment Process");
+
+deploymentGuide
+  .first("run all unit tests")
+  .then("build the production bundle")
+  .next("upload files to the server")
+  .meanwhile("notify the team about the deployment")
+  .finally("verify that everything works correctly")
+  .execute();
+
+// Salida:
+// === DEPLOYMENT PROCESS ===
+// ✓ First, run all unit tests
+// ✓ Then, build the production bundle
+// ✓ Next, upload files to the server
+// ✓ Meanwhile, notify the team about the deployment
+// ✓ Finally, verify that everything works correctly
+// Process completed!
+```
+
+<Aside type="caution" title='Nota sobre "Finally"'>
+En inglés, **"finally"** como conector significa "por último" o "finalmente" (para secuencias). No confundir con el `finally` de try/catch en programación, aunque el concepto es similar: "al final, pase lo que pase".
+</Aside>
+
+---
+
+## Conectores de Énfasis
+
+Estos conectores **refuerzan** tu punto o añaden evidencia. Son como añadir `console.assert()` a tu argumento:
+
+<Tabs>
+  <TabItem label="Indeed / In fact">
+
+```javascript
+// "Indeed" confirma y enfatiza algo que ya se mencionó
+// "In fact" añade información sorprendente o más fuerte
+
+const emphasizePoint = (claim, evidence) => {
+  return {
+    withIndeed: `${claim}. Indeed, ${evidence}.`,
+    withInFact: `${claim}. In fact, ${evidence}.`
+  };
+};
+
+const argument1 = emphasizePoint(
+  "TypeScript improves code quality",
+  "studies show it reduces bugs by 15%"
+);
+
+console.log(argument1.withIndeed);
+// "TypeScript improves code quality. Indeed, studies show it reduces bugs by 15%."
+
+const argument2 = emphasizePoint(
+  "Learning English is valuable",
+  "it's the most spoken language globally"
+);
+
+console.log(argument2.withInFact);
+// "Learning English is valuable. In fact, it's the most spoken language globally."
+```
+
+  </TabItem>
+
+  <TabItem label="Clearly / Obviously">
+
+```javascript
+// "Clearly" y "Obviously" indican que algo es evidente
+
+const analyzeData = async (data) => {
+  const results = data.filter(item => item.score > 90);
+  
+  if (results.length > data.length * 0.8) {
+    // "Clearly" para conclusiones basadas en evidencia clara
+    return `Clearly, the team performed exceptionally well.`;
+  }
+  
+  if (results.length === 0) {
+    // "Obviously" para cosas muy evidentes (puede sonar condescendiente, usar con cuidado)
+    return `Obviously, improvements are needed.`;
+  }
+  
+  return `The results are mixed.`;
+};
+
+const performanceData = [
+  { name: "Alice", score: 95 },
+  { name: "Bob", score: 92 },
+  { name: "Charlie", score: 91 },
+  { name: "Diana", score: 94 }
+];
+
+analyzeData(performanceData).then(console.log);
+// "Clearly, the team performed exceptionally well."
+```
+
+  </TabItem>
+</Tabs>
+
+<Aside type="caution" title="Cuidado con el tono">
+**Obviously** y **clearly** pueden sonar condescendientes si se usan incorrectamente, como si dijeras "es obvio, ¿no lo ves?". Úsalos cuando la evidencia sea realmente clara, no para menospreciar a tu audiencia.
+</Aside>
+
+---
+
+## Combinando Conectores
+
+En textos largos, es común usar múltiples conectores para crear argumentos complejos:
+
+```javascript
+const createArgument = async (topic) => {
+  const sections = [];
+  
+  // Introducción
+  sections.push(`${topic.intro}.`);
+  await new Promise(r => setTimeout(r, 200));
+  
+  // Añadir punto (Addition)
+  sections.push(`Moreover, ${topic.addition}.`);
+  await new Promise(r => setTimeout(r, 200));
+  
+  // Contraste (Contrast)
+  sections.push(`However, ${topic.contrast}.`);
+  await new Promise(r => setTimeout(r, 200));
+  
+  // Causa-efecto (Result)
+  sections.push(`Therefore, ${topic.conclusion}.`);
+  await new Promise(r => setTimeout(r, 200));
+  
+  // Énfasis final
+  sections.push(`Indeed, ${topic.emphasis}.`);
+  
+  return sections.join(" ");
+};
+
+const essay = await createArgument({
+  intro: "Remote work has transformed modern employment",
+  addition: "it offers flexibility and work-life balance",
+  contrast: "it can lead to isolation and communication challenges",
+  conclusion: "companies must establish clear remote work policies",
+  emphasis: "the future of work is hybrid"
+});
+
+console.log(essay);
+// "Remote work has transformed modern employment. Moreover, it offers flexibility 
+//  and work-life balance. However, it can lead to isolation and communication challenges. 
+//  Therefore, companies must establish clear remote work policies. Indeed, the future 
+//  of work is hybrid."
+```
+
+---
+
+## Ejercicio Práctico
+
+<CardGrid>
+  <Card title="🎯 Desafío" icon="pencil">
+    Crea una función que genere un argumento completo usando al menos 4 tipos diferentes de conectores (adición, contraste, causa-efecto, y énfasis).
+  </Card>
+
+  <Card title="💡 Tip" icon="information">
+    Los conectores hacen que tu inglés suene más fluido y profesional. Practica usando uno nuevo cada día en tus conversaciones o escritos.
+  </Card>
+</CardGrid>
+
+<Aside type="tip" title="Para recordar">
+Los linking words son como las **articulaciones** del lenguaje: conectan las diferentes partes y permiten que todo fluya naturalmente. Sin ellos, tu discurso suena robótico y desarticulado. Con ellos, suenas como un hablante nativo sofisticado.
+</Aside>
