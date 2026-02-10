@@ -24,16 +24,40 @@ export default defineConfig({
       },
       sidebar: [
         {
-          label: "Fundamentos Básicos",
-          autogenerate: { directory: "basics" },
+          label: "Primeros Pasos",
+          autogenerate: { directory: "getting-started" },
         },
         {
-          label: "Nivel Intermedio",
-          autogenerate: { directory: "intermediate" },
+          label: "Gramática Básica",
+          autogenerate: { directory: "grammar-basics" },
         },
         {
-          label: "Nivel Avanzado",
-          autogenerate: { directory: "advanced" },
+          label: "Verbos",
+          autogenerate: { directory: "verbs" },
+        },
+        {
+          label: "Estructura de Oraciones",
+          autogenerate: { directory: "sentence-structure" },
+        },
+        {
+          label: "Partes de la Oración",
+          autogenerate: { directory: "parts-of-speech" },
+        },
+        {
+          label: "Preposiciones",
+          autogenerate: { directory: "prepositions" },
+        },
+        {
+          label: "Vocabulario",
+          autogenerate: { directory: "vocabulary" },
+        },
+        {
+          label: "Pronunciación",
+          autogenerate: { directory: "pronunciation" },
+        },
+        {
+          label: "Escritura",
+          autogenerate: { directory: "writing" },
         },
         {
           label: "Referencia Rápida",
