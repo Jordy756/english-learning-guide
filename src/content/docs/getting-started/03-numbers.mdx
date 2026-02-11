@@ -78,10 +78,10 @@ console.log(compositeNumber("ninety", "nine"));  // "ninety-nine"
 ```
 
 **Ejemplos completos:**
-  - 21: twenty-one
-  - 47: forty-seven
-  - 63: sixty-three
-  - 89: eighty-nine
+  - 21: twenty-one _(veintiuno)_
+  - 47: forty-seven _(cuarenta y siete)_
+  - 63: sixty-three _(sesenta y tres)_
+  - 89: eighty-nine _(ochenta y nueve)_
 
   </TabItem>
 </Tabs>
@@ -101,12 +101,12 @@ Para números grandes, se usan "hundred", "thousand", "million" sin plural cuand
 
 ```js
 const largeNumbers = {
-  100: "one hundred",
-  200: "two hundred",        // NO "two hundreds"
-  1000: "one thousand",
-  5000: "five thousand",     // NO "five thousands"
-  1000000: "one million",
-  10000000: "ten million"
+  100: "one hundred",         // cien
+  200: "two hundred",         // doscientos (NO "two hundreds")
+  1000: "one thousand",       // mil
+  5000: "five thousand",      // cinco mil (NO "five thousands")
+  1000000: "one million",     // un millón
+  10000000: "ten million"     // diez millones
 };
 
 // Para números compuestos, usa "and" después de hundred
@@ -114,14 +114,15 @@ const buildNumber = (hundreds, tens) => {
   return `${hundreds} hundred and ${tens}`;
 };
 
-console.log(buildNumber("three", "forty-five")); // "three hundred and forty-five" (345)
+console.log(buildNumber("three", "forty-five")); 
+// "three hundred and forty-five" (345) - trescientos cuarenta y cinco
 ```
 
 **Estructura de números grandes:**
-- **456:** four hundred and fifty-six
-- **1,234:** one thousand, two hundred and thirty-four
-- **50,000:** fifty thousand
-- **1,000,000:** one million
+- **456:** four hundred and fifty-six _(cuatrocientos cincuenta y seis)_
+- **1,234:** one thousand, two hundred and thirty-four _(mil doscientos treinta y cuatro)_
+- **50,000:** fifty thousand _(cincuenta mil)_
+- **1,000,000:** one million _(un millón)_
 
 <Aside type="note" title="Diferencia UK vs US">
 En inglés británico, se usa "and" después de "hundred":  
@@ -185,10 +186,10 @@ console.log(makeOrdinal("twenty"));   // "twentieth"
 ```
 
 **Ordinales compuestos:**
-  - 21st: twenty-first
-  - 32nd: thirty-second
-  - 43rd: forty-third
-  - 54th: fifty-fourth
+  - 21st: twenty-first _(vigésimo primero)_
+  - 32nd: thirty-second _(trigésimo segundo)_
+  - 43rd: forty-third _(cuadragésimo tercero)_
+  - 54th: fifty-fourth _(quincuagésimo cuarto)_
 
   </TabItem>
 </Tabs>
@@ -199,32 +200,28 @@ console.log(makeOrdinal("twenty"));   // "twentieth"
 
 <CardGrid>
   <Card title="Años">
-**1990:** nineteen ninety  
-**2000:** two thousand  
-**2024:** twenty twenty-four  
-**1805:** eighteen oh five
+    - **1990:** nineteen ninety _(mil novecientos noventa)_
+    - **2000:** two thousand _(dos mil)_
+    - **2024:** twenty twenty-four _(dos mil veinticuatro)_
+    - **1805:** eighteen oh five _(mil ochocientos cinco)_
   </Card>
-
   <Card title="Teléfonos">
-Se dice dígito por dígito:  
-**555-1234:**  
-"five five five, one two three four"
-
-Doble dígito: "double five"
+    Se dice dígito por dígito:
+    - **555-1234:** "five five five, one two three four" _(cinco cinco cinco, uno dos tres cuatro)_
+    - Doble dígito: "double five" _(doble cinco)_
   </Card>
-
   <Card title="Decimales">
-Usa "point" para el punto decimal:  
-**3.14:** three point one four  
-**0.5:** zero point five  
-**10.99:** ten point nine nine
+    Usa "point" para el punto decimal:  
+    - **3.14:** three point one four _(tres punto catorce)_
+    - **0.5:** zero point five _(cero punto cinco)_
+    - **10.99:** ten point nine nine _(diez punto noventa y nueve)_
   </Card>
 
   <Card title="Dinero">
-**$5:** five dollars  
-**$1.50:** one dollar fifty / one fifty  
-**$99.99:** ninety-nine ninety-nine  
-**$1,000:** one thousand dollars
+    - **$5:** five dollars _(cinco dólares)_
+    - **$1.50:** one dollar fifty / one fifty _(un dólar cincuenta)_
+    - **$99.99:** ninety-nine ninety-nine _(noventa y nueve noventa y nueve)_
+    - **$1,000:** one thousand dollars _(mil dólares)_
   </Card>
 </CardGrid>
 
@@ -234,19 +231,19 @@ Usa "point" para el punto decimal:
 
 ```js
 const mathOperations = {
-  addition: "5 + 3 = 8",       // five plus three equals eight
-  subtraction: "10 - 4 = 6",   // ten minus four equals six
-  multiplication: "3 × 2 = 6", // three times two equals six
-  division: "8 ÷ 2 = 4"        // eight divided by two equals four
+  addition: "5 + 3 = 8",       // five plus three equals eight (cinco más tres es igual a ocho)
+  subtraction: "10 - 4 = 6",   // ten minus four equals six (diez menos cuatro es igual a seis)
+  multiplication: "3 × 2 = 6", // three times two equals six (tres por dos es igual a seis)
+  division: "8 ÷ 2 = 4"        // eight divided by two equals four (ocho dividido por dos es igual a cuatro)
 };
 ```
 
 **Vocabulario matemático:**
-- **+** : plus
-- **-** : minus
-- **×** : times / multiplied by
-- **÷** : divided by
-- **=** : equals / is
+- **+** : plus _(más)_
+- **-** : minus _(menos)_
+- **×** : times / multiplied by _(por / multiplicado por)_
+- **÷** : divided by _(dividido por)_
+- **=** : equals / is _(es igual a / es)_
 
 ---
 
@@ -259,13 +256,13 @@ Las fracciones usan ordinales para el denominador:
 
 ```js
 const commonFractions = {
-  "1/2": "one half / a half",         // excepción
-  "1/4": "one quarter / a quarter",   // excepción
-  "3/4": "three quarters",
-  "1/3": "one third",
-  "2/3": "two thirds",
-  "1/5": "one fifth",
-  "2/5": "two fifths"
+  "1/2": "one half / a half",         // un medio (excepción)
+  "1/4": "one quarter / a quarter",   // un cuarto (excepción)
+  "3/4": "three quarters",            // tres cuartos
+  "1/3": "one third",                 // un tercio
+  "2/3": "two thirds",                // dos tercios
+  "1/5": "one fifth",                 // un quinto
+  "2/5": "two fifths"                 // dos quintos
 };
 ```
 
@@ -297,7 +294,7 @@ console.log(makeFraction(5, "sixth"));  // "5 sixths"
 
 <Aside type="tip" title="Ejercicio diario">
 Practica decir en voz alta:
-- Tu edad: "I'm __ years old"
+- Tu edad: "I'm __ years old" _(Tengo __ años)_
 - Tu número de teléfono
 - Precios que ves en tiendas
 - El año actual y tu año de nacimiento

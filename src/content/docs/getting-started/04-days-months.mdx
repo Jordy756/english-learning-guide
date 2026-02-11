@@ -126,9 +126,9 @@ const buildDate = (month, day, year) => {
 ```
 
 **Ejemplos:**
-  - **January 1st, 2024** (formal)
-  - **January 1, 2024** (casual, más común)
-  - **1st of January, 2024** (estilo británico)
+  - **January 1st, 2024** _(primero de enero de 2024 - formal)_
+  - **January 1, 2024** _(1 de enero de 2024 - casual, más común)_
+  - **1st of January, 2024** _(1 de enero de 2024 - estilo británico)_
 
   </TabItem>
 </Tabs>
@@ -141,15 +141,15 @@ Aunque escribas "January 1", al hablar siempre usas ordinales:
 
 <CardGrid>
   <Card title="Escribes">
-**January 1, 2024**  
-**March 15, 2025**  
-**December 25**
+**January 1, 2024**  _(1 de enero de 2024)_
+**March 15, 2025**  _(15 de marzo de 2025)_
+**December 25**  _(25 de diciembre)_
   </Card>
 
   <Card title="Dices">
-"January **first**, twenty twenty-four"  
-"March **fifteenth**, twenty twenty-five"  
-"December **twenty-fifth**"
+"January **first**, twenty twenty-four"  _(primero de enero, dos mil veinticuatro)_
+"March **fifteenth**, twenty twenty-five"  _(quince de marzo, dos mil veinticinco)_
+"December **twenty-fifth**"  _(veinticinco de diciembre)_
   </Card>
 </CardGrid>
 
@@ -164,9 +164,11 @@ const sayDate = (month, day, year) => {
 // Ejemplos
 console.log(sayDate("May", 3, 2024));
 // Output: "May third, twenty twenty-four"
+// (Tres de mayo, dos mil veinticuatro)
 
 console.log(sayDate("October", 31, 2025));
 // Output: "October thirty-first, twenty twenty-five"
+// (Treinta y uno de octubre, dos mil veinticinco)
 ```
 
 ---
@@ -182,17 +184,17 @@ Usa **"on"** para días específicos y fechas completas:
 
 ```js
 const onUsage = {
-  specificDay: "on Monday",
-  specificDate: "on April 3rd",
-  fullDate: "on Monday, April 3rd, 2024",
-  specialDay: "on Christmas Day"
+  specificDay: "on Monday",           // el lunes
+  specificDate: "on April 3rd",       // el 3 de abril
+  fullDate: "on Monday, April 3rd, 2024", // el lunes 3 de abril de 2024
+  specialDay: "on Christmas Day"      // el día de Navidad
 };
 ```
 
 **Ejemplos:**
-  - "I have a meeting **on Friday**"
-  - "My birthday is **on** December 15th"
-  - "The event is **on** Saturday morning"
+  - "I have a meeting **on Friday**" _(Tengo una reunión el viernes)_
+  - "My birthday is **on** December 15th" _(Mi cumpleaños es el 15 de diciembre)_
+  - "The event is **on** Saturday morning" _(El evento es el sábado por la mañana)_
 
   </TabItem>
 
@@ -202,19 +204,19 @@ Usa **"in"** para meses, años, estaciones y partes del día:
 
 ```js
 const inUsage = {
-  month: "in January",
-  year: "in 2024",
-  season: "in summer",
-  partOfDay: "in the morning",
-  decade: "in the 90s",
-  century: "in the 21st century"
+  month: "in January",              // en enero
+  year: "in 2024",                  // en 2024
+  season: "in summer",              // en verano
+  partOfDay: "in the morning",      // en/por la mañana
+  decade: "in the 90s",             // en los 90
+  century: "in the 21st century"   // en el siglo 21
 };
 ```
 
 **Ejemplos:**
-  - "I was born **in** 1995"
-  - "We'll travel **in** July"
-  - "It's cold **in** winter"
+  - "I was born **in** 1995" _(Nací en 1995)_
+  - "We'll travel **in** July" _(Viajaremos en julio)_
+  - "It's cold **in** winter" _(Hace frío en invierno)_
 
   </TabItem>
 
@@ -224,18 +226,18 @@ Usa **"at"** para horas específicas y momentos puntuales:
 
 ```js
 const atUsage = {
-  time: "at 3:00 PM",
-  moment: "at midnight",
-  meal: "at lunch",
-  specific: "at the moment",
-  holiday: "at Christmas" // periodo, no día específico
+  time: "at 3:00 PM",               // a las 3:00 PM
+  moment: "at midnight",            // a medianoche
+  meal: "at lunch",                 // al almuerzo
+  specific: "at the moment",        // en este momento
+  holiday: "at Christmas"           // en Navidad (periodo, no día específico)
 };
 ```
 
 **Ejemplos:**
-  - "The meeting starts **at** 9:00 AM"
-  - "See you **at** noon"
-  - "We celebrate **at** Christmas" (periodo festivo)
+  - "The meeting starts **at** 9:00 AM" _(La reunión empieza a las 9:00 AM)_
+  - "See you **at** noon" _(Nos vemos al mediodía)_
+  - "We celebrate **at** Christmas" _(Celebramos en Navidad - periodo festivo)_
 
   </TabItem>
 </Tabs>
@@ -252,27 +254,27 @@ const atUsage = {
 
 ```js
 const timeExpressions = {
-  today: "today",
-  tomorrow: "tomorrow",
-  yesterday: "yesterday",
+  today: "today",           // hoy
+  tomorrow: "tomorrow",     // mañana
+  yesterday: "yesterday",   // ayer
   
-  nextWeek: "next week",
-  lastMonth: "last month",
-  thisYear: "this year",
+  nextWeek: "next week",    // la próxima semana
+  lastMonth: "last month",  // el mes pasado
+  thisYear: "this year",    // este año
   
-  ago: "three days ago",
-  later: "in two weeks",
+  ago: "three days ago",    // hace tres días
+  later: "in two weeks",    // en dos semanas
   
-  weekend: "on the weekend", // US
+  weekend: "on the weekend", // el fin de semana (US)
   // "at the weekend" en UK
 };
 ```
 
 **Ejemplos en contexto:**
-- "I saw her **yesterday**"
-- "The deadline is **next Friday**"
-- "We moved here **two years ago**"
-- "I'll call you **in an hour**"
+- "I saw her **yesterday**" _(La vi ayer)_
+- "The deadline is **next Friday**" _(La fecha límite es el próximo viernes)_
+- "We moved here **two years ago**" _(Nos mudamos aquí hace dos años)_
+- "I'll call you **in an hour**" _(Te llamo en una hora)_
 
 ---
 
@@ -280,15 +282,15 @@ const timeExpressions = {
 
 <CardGrid>
   <Card title="Pregunta">
-**"What's today's date?"**  
-**"When is your birthday?"**  
-**"What day is it?"**
+**"What's today's date?"** _(¿Qué fecha es hoy?)_
+**"When is your birthday?"** _(¿Cuándo es tu cumpleaños?)_
+**"What day is it?"** _(¿Qué día es?)_
   </Card>
 
   <Card title="Respuesta">
-"It's April 3rd, 2024"  
-"My birthday is on June 15th"  
-"It's Monday"
+"It's April 3rd, 2024" _(Es 3 de abril de 2024)_
+"My birthday is on June 15th" _(Mi cumpleaños es el 15 de junio)_
+"It's Monday" _(Es lunes)_
   </Card>
 </CardGrid>
 
@@ -304,7 +306,7 @@ Practica decir en voz alta:
 - El día de la semana de mañana
 - Una fecha del mes pasado
 
-Ejemplo: "Today is Monday, April 3rd, 2024"
+Ejemplo: "Today is Monday, April 3rd, 2024" _(Hoy es lunes, 3 de abril de 2024)_
 </Aside>
 
 ---
