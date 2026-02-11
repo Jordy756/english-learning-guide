@@ -18,12 +18,26 @@ Para amigos, familiares y situaciones casuales:
 
 ```js
 const informalGreetings = {
-  basic: ["Hi", "Hey", "Hello"], // Hola
-  casual: ["What's up?", "How's it going?"], // ¿Qué onda? / ¿Cómo va?
-  slang: ["Sup?", "Yo", "Howdy"], // ¿Qué hay? / Oye / Hola (cowboy)
-  
-  // Respuestas comunes
-  responses: ["Hey!", "Not much", "Good, you?"] // ¡Hola! / Nada / Bien, ¿y tú?
+  basic: [
+    "Hi", // Hola
+    "Hey", // Hola (más casual)
+    "Hello" // Hola (más neutral)
+  ],
+  casual: [
+    "What's up?", // ¿Qué onda?
+    "How's it going?", // ¿Cómo va?
+    "How are you doing?" // ¿Cómo te va?
+  ],
+  slang: [
+    "Sup?", // ¿Qué hay?
+    "Yo!", // ¡Ey!
+    "Hey there!" // ¡Hola!
+  ],
+  responses: [
+    "Hey!", // ¡Hola!
+    "Not much", // Nada
+    "Good, you?" // Bien, ¿y tú?
+  ]
 };
 ```
 
@@ -42,10 +56,15 @@ Para conocidos, compañeros de trabajo, situaciones cotidianas:
 
 ```js
 const neutralGreetings = {
-  general: ["Hello", "Hi there", "Good morning/afternoon/evening"], // Hola / Buenos días/tardes/noches
-  questions: ["How are you?", "How are you doing?"], // ¿Cómo estás? / ¿Cómo te va?
-  
-  // Respuestas estándar
+  general: [
+    "Hello", // Hola
+    "Hi there", // Hola (más cálido)
+    "Good morning/afternoon/evening" // Buenos días/tardes/noches
+  ],
+  questions: [
+    "How are you?", // ¿Cómo estás? 
+    "How are you doing?" // ¿Cómo te va?
+  ],
   responses: [
     "I'm fine, thank you. And you?", // Estoy bien, gracias. ¿Y tú?
     "Good, thanks. How are you?", // Bien, gracias. ¿Cómo estás?
@@ -76,8 +95,6 @@ const formalGreetings = {
     "Hello, Dr. Johnson", // Hola, Dr. Johnson
     "Good afternoon, Ms. Williams" // Buenas tardes, Sra. Williams
   ],
-  
-  // Respuestas formales
   responses: [
     "How do you do?", // ¿Cómo está? (respuesta a "How do you do?")
     "The pleasure is mine", // El placer es mío
@@ -129,40 +146,37 @@ Correcto: **"Good evening"** (al llegar), **"Good night"** (al irte)
 
 ---
 
-### Respuestas a "How are you?"
+## Respuestas a "How are you?"
 
 Esta pregunta es cortesía social, no siempre espera una respuesta detallada:
 
 <CardGrid>
   <Card title="Respuestas Positivas">
-**"I'm fine, thank you"** _(Estoy bien, gracias)_  
-**"Good, thanks"** _(Bien, gracias)_  
-**"Great! And you?"** _(¡Genial! ¿Y tú?)_  
-**"Pretty good"** _(Bastante bien)_  
-**"Couldn't be better"** _(No podría estar mejor)_
+    - **"I'm fine, thank you"** _(Estoy bien, gracias)_  
+    - **"Good, thanks"** _(Bien, gracias)_  
+    - **"Great! And you?"** _(¡Genial! ¿Y tú?)_  
+    - **"Pretty good"** _(Bastante bien)_  
+    - **"Couldn't be better"** _(No podría estar mejor)_
   </Card>
-
   <Card title="Respuestas Neutrales">
-**"Not bad"** _(Nada mal)_  
-**"Can't complain"** _(No me quejo)_  
-**"Same as always"** _(Como siempre)_  
-**"Alright"** _(Bien)_  
-**"Hanging in there"** _(Ahí voy / Sobreviviendo)_
+    - **"Not bad"** _(Nada mal)_  
+    - **"Can't complain"** _(No me quejo)_  
+    - **"Same as always"** _(Como siempre)_  
+    - **"Alright"** _(Bien)_  
+    - **"Hanging in there"** _(Ahí voy / Sobreviviendo)_
   </Card>
-
   <Card title="Respuestas Honestas">
-**"I'm okay"** _(Estoy bien)_  
-**"Could be better"** _(Podría estar mejor)_  
-**"A bit tired"** _(Un poco cansado)_  
-**"Not great, honestly"** _(No muy bien, honestamente)_
+    - **"I'm okay"** _(Estoy bien)_  
+    - **"Could be better"** _(Podría estar mejor)_  
+    - **"A bit tired"** _(Un poco cansado)_  
+    - **"Not great, honestly"** _(No muy bien, honestamente)_
   </Card>
-
   <Card title="Devolver la pregunta">
-Siempre puedes devolver la pregunta:
+    Siempre puedes devolver la pregunta:
 
-**"And you?"** _(¿Y tú?)_  
-**"How about you?"** _(¿Qué tal tú?)_  
-**"What about you?"** _(¿Y tú?)_
+    - **"And you?"** _(¿Y tú?)_  
+    - **"How about you?"** _(¿Qué tal tú?)_  
+    - **"What about you?"** _(¿Y tú?)_
   </Card>
 </CardGrid>
 
@@ -300,33 +314,30 @@ const formalGoodbyes = [
 
 <CardGrid>
   <Card title="Teléfono (contestar)">
-**Informal:** "Hello?" _(¿Hola?)_  
-**Neutral:** "Hello, this is Sarah" _(Hola, habla Sarah)_  
-**Formal:** "Good morning, John speaking" _(Buenos días, habla John)_
+    - **Informal:** "Hello?" _(¿Hola?)_
+    - **Neutral:** "Hello, this is Sarah" _(Hola, habla Sarah)_
+    - **Formal:** "Good morning, John speaking" _(Buenos días, habla John)_
   </Card>
-
   <Card title="Email/Mensaje">
-**Inicio:** "Hi/Hello [Name]," _(Hola [Nombre],)_  
-**Formal:** "Dear [Name]," _(Estimado/a [Nombre],)_  
-**Cierre:** "Best regards," _(Saludos cordiales,)_ / "Cheers," _(Saludos,)_
+    - **Inicio:** "Hi/Hello [Name]," _(Hola [Nombre],)_
+    - **Formal:** "Dear [Name]," _(Estimado/a [Nombre],)_
+    - **Cierre:** "Best regards," _(Saludos cordiales,)_ / "Cheers," _(Saludos,)_
   </Card>
-
   <Card title="Al volver a ver">
-**Mismo día:** "Hi again!" _(¡Hola de nuevo!)_  
-**Después de tiempo:** "Long time no see!" _(¡Cuánto tiempo sin verte!)_  
-**Sorpresa:** "Fancy seeing you here!" _(¡Qué sorpresa verte aquí!)_
+    - **Mismo día:** "Hi again!" _(¡Hola de nuevo!)_
+    - **Después de tiempo:** "Long time no see!" _(¡Cuánto tiempo sin verte!)_
+    - **Sorpresa:** "Fancy seeing you here!" _(¡Qué sorpresa verte aquí!)_
   </Card>
-
   <Card title="Despedida nocturna">
-**Al irse a dormir:** "Good night" _(Buenas noches)_  
-**Deseo:** "Sleep well" _(Duerme bien)_  
-**Informal:** "Nighty night" _(Buenas noches - muy casual)_
+    - **Al irse a dormir:** "Good night" _(Buenas noches)_
+    - **Deseo:** "Sleep well" _(Duerme bien)_s
+    - **Informal:** "Nighty night" _(Buenas noches - muy casual)_
   </Card>
 </CardGrid>
 
 ---
 
-### Práctica: Diálogos Completos
+## Práctica: Diálogos Completos
 
 <Aside type="tip" title="Ejercicio de conversación">
 Practica estos diálogos según el contexto:
