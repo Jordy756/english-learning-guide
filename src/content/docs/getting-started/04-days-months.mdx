@@ -3,3 +3,336 @@ title: Días, Meses y Fechas
 description: Aprende días, meses y cómo expresar fechas.
 ---
 
+import { Tabs, TabItem, Aside, CardGrid, Card } from '@astrojs/starlight/components';
+
+Los días, meses y fechas son como constantes globales en tu vocabulario: las usarás constantemente para programar citas, hablar del pasado o planear el futuro. A diferencia del español, en inglés los días y meses siempre se escriben con mayúscula inicial, y el formato de fechas varía significativamente entre EE.UU. y el Reino Unido.
+
+Dominar esta sección te permite organizar tu agenda, entender documentos y comunicar información temporal con precisión.
+
+## Días y Meses
+
+<Tabs>
+  <TabItem label="Días de la Semana">
+
+Todos los días terminan en "-day" y siempre van con mayúscula:
+
+```js
+const daysOfWeek = {
+  1: "Monday",      // Lunes
+  2: "Tuesday",     // Martes
+  3: "Wednesday",   // Miércoles - pronunciación: "wénsdei"
+  4: "Thursday",    // Jueves - pronunciación: "zérsdei"
+  5: "Friday",      // Viernes
+  6: "Saturday",    // Sábado
+  7: "Sunday"       // Domingo
+};
+```
+
+**Abreviaciones comunes:**
+- Mon, Tue, Wed, Thu, Fri, Sat, Sun
+
+<Aside type="caution" title="Pronunciación difícil">
+- **Wednesday:** Se pronuncia "WENZ-day" (la "d" del medio es muda)
+- **Thursday:** Se pronuncia "THURZ-day" (sonido "th" al inicio)
+</Aside>
+
+  </TabItem>
+
+  <TabItem label="Meses del Año">
+
+Todos los meses se escriben con mayúscula inicial:
+
+```js
+const monthsOfYear = {
+  1: "January",     // Enero
+  2: "February",    // Febrero - pronunciación: "fébrueri"
+  3: "March",       // Marzo
+  4: "April",       // Abril
+  5: "May",         // Mayo
+  6: "June",        // Junio
+  7: "July",        // Julio
+  8: "August",      // Agosto
+  9: "September",   // Septiembre
+  10: "October",    // Octubre
+  11: "November",   // Noviembre
+  12: "December"    // Diciembre
+};
+```
+
+**Abreviaciones comunes:**
+  - Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec
+
+  </TabItem>
+</Tabs>
+
+<Aside type="tip" title="Siempre con mayúscula">
+A diferencia del español, en inglés **siempre** se escriben días y meses con mayúscula inicial:
+- Correcto: **Monday**, **January**
+- Incorrecto: ~~monday~~, ~~january~~
+</Aside>
+
+---
+
+## Formatos de Fecha
+
+El formato de fechas es diferente en EE.UU. y el Reino Unido, lo cual puede causar confusión:
+
+<Tabs>
+  <TabItem label="Formato Numérico">
+
+```js
+const dateFormats = {
+  US: "MM/DD/YYYY",      // Mes/Día/Año
+  UK: "DD/MM/YYYY",      // Día/Mes/Año
+  ISO: "YYYY-MM-DD"      // Estándar internacional
+};
+
+// Ejemplo: 3 de abril de 2024
+const date = {
+  US: "04/03/2024",      // abril 3, 2024
+  UK: "03/04/2024",      // 3 abril, 2024
+  ISO: "2024-04-03"      // sin ambigüedad
+};
+```
+
+<Aside type="caution" title="Cuidado con la confusión">
+**05/06/2024** puede significar:
+- En EE.UU.: Mayo 6, 2024
+- En Reino Unido: 5 de Junio, 2024
+
+Usa el formato ISO (YYYY-MM-DD) cuando necesites claridad absoluta.
+</Aside>
+
+  </TabItem>
+
+  <TabItem label="Formato Escrito">
+
+Las fechas escritas usan ordinales, pero se pueden expresar de varias formas:
+
+```js
+// Diferentes formas de escribir la misma fecha
+const writtenDate = {
+  formal_US: "April 3rd, 2024",
+  formal_UK: "3rd April 2024",
+  casual: "April 3, 2024",
+  full: "Monday, April 3rd, 2024"
+};
+
+// Patrón para construir fechas
+const buildDate = (month, day, year) => {
+  const ordinal = getOrdinal(day); // 1st, 2nd, 3rd, 4th...
+  return `${month} ${ordinal}, ${year}`;
+};
+```
+
+**Ejemplos:**
+  - **January 1st, 2024** (formal)
+  - **January 1, 2024** (casual, más común)
+  - **1st of January, 2024** (estilo británico)
+
+  </TabItem>
+</Tabs>
+
+---
+
+## Cómo Decir Fechas
+
+Aunque escribas "January 1", al hablar siempre usas ordinales:
+
+<CardGrid>
+  <Card title="Escribes">
+**January 1, 2024**  
+**March 15, 2025**  
+**December 25**
+  </Card>
+
+  <Card title="Dices">
+"January **first**, twenty twenty-four"  
+"March **fifteenth**, twenty twenty-five"  
+"December **twenty-fifth**"
+  </Card>
+</CardGrid>
+
+```js
+const sayDate = (month, day, year) => {
+  const dayOrdinal = convertToOrdinal(day);
+  const yearSpoken = splitYear(year); // "2024" → "twenty twenty-four"
+  
+  return `${month} ${dayOrdinal}, ${yearSpoken}`;
+};
+
+// Ejemplos
+console.log(sayDate("May", 3, 2024));
+// Output: "May third, twenty twenty-four"
+
+console.log(sayDate("October", 31, 2025));
+// Output: "October thirty-first, twenty twenty-five"
+```
+
+---
+
+## Preposiciones con Tiempo
+
+Las preposiciones cambian según el contexto temporal:
+
+<Tabs>
+  <TabItem label="ON">
+
+Usa **"on"** para días específicos y fechas completas:
+
+```js
+const onUsage = {
+  specificDay: "on Monday",
+  specificDate: "on April 3rd",
+  fullDate: "on Monday, April 3rd, 2024",
+  specialDay: "on Christmas Day"
+};
+```
+
+**Ejemplos:**
+  - "I have a meeting **on Friday**"
+  - "My birthday is **on** December 15th"
+  - "The event is **on** Saturday morning"
+
+  </TabItem>
+
+  <TabItem label="IN">
+
+Usa **"in"** para meses, años, estaciones y partes del día:
+
+```js
+const inUsage = {
+  month: "in January",
+  year: "in 2024",
+  season: "in summer",
+  partOfDay: "in the morning",
+  decade: "in the 90s",
+  century: "in the 21st century"
+};
+```
+
+**Ejemplos:**
+  - "I was born **in** 1995"
+  - "We'll travel **in** July"
+  - "It's cold **in** winter"
+
+  </TabItem>
+
+  <TabItem label="AT">
+
+Usa **"at"** para horas específicas y momentos puntuales:
+
+```js
+const atUsage = {
+  time: "at 3:00 PM",
+  moment: "at midnight",
+  meal: "at lunch",
+  specific: "at the moment",
+  holiday: "at Christmas" // periodo, no día específico
+};
+```
+
+**Ejemplos:**
+  - "The meeting starts **at** 9:00 AM"
+  - "See you **at** noon"
+  - "We celebrate **at** Christmas" (periodo festivo)
+
+  </TabItem>
+</Tabs>
+
+<Aside type="note" title="Resumen rápido">
+- **ON** → días y fechas específicas
+- **IN** → meses, años, estaciones, partes del día
+- **AT** → horas exactas y momentos puntuales
+</Aside>
+
+---
+
+## Expresiones de Tiempo Comunes
+
+```js
+const timeExpressions = {
+  today: "today",
+  tomorrow: "tomorrow",
+  yesterday: "yesterday",
+  
+  nextWeek: "next week",
+  lastMonth: "last month",
+  thisYear: "this year",
+  
+  ago: "three days ago",
+  later: "in two weeks",
+  
+  weekend: "on the weekend", // US
+  // "at the weekend" en UK
+};
+```
+
+**Ejemplos en contexto:**
+- "I saw her **yesterday**"
+- "The deadline is **next Friday**"
+- "We moved here **two years ago**"
+- "I'll call you **in an hour**"
+
+---
+
+## Preguntar y Responder Fechas
+
+<CardGrid>
+  <Card title="Pregunta">
+**"What's today's date?"**  
+**"When is your birthday?"**  
+**"What day is it?"**
+  </Card>
+
+  <Card title="Respuesta">
+"It's April 3rd, 2024"  
+"My birthday is on June 15th"  
+"It's Monday"
+  </Card>
+</CardGrid>
+
+---
+
+## Práctica: Fechas Importantes
+
+<Aside type="tip" title="Ejercicio diario">
+Practica decir en voz alta:
+- La fecha de hoy (completa)
+- Tu fecha de nacimiento
+- Fechas importantes (cumpleaños, aniversarios)
+- El día de la semana de mañana
+- Una fecha del mes pasado
+
+Ejemplo: "Today is Monday, April 3rd, 2024"
+</Aside>
+
+---
+
+## Errores Comunes
+
+<Aside type="danger" title="Error #1: No usar mayúsculas en días y meses">
+**Explicación:** En inglés, los días de la semana y meses del año SIEMPRE se escriben con mayúscula inicial.
+
+Incorrecto: ~~"I'll see you on monday in january"~~  
+Correcto: **"I'll see you on Monday in January"**
+</Aside>
+
+<Aside type="danger" title="Error #2: Confundir preposiciones ON, IN, AT">
+**Explicación:** Cada preposición tiene un uso específico con expresiones de tiempo.
+
+Incorrecto: ~~"in Monday"~~, ~~"at 2024"~~, ~~"on 5:00 PM"~~  
+Correcto: **"on Monday"**, **"in 2024"**, **"at 5:00 PM"**
+
+Regla: ON (días), IN (meses/años), AT (horas)
+</Aside>
+
+<Aside type="danger" title='Error #3: Pronunciar mal "Wednesday" y "February"'>
+**Explicación:** Estas palabras tienen letras mudas que confunden a hispanohablantes.
+
+Incorrecto: ~~"wed-nes-day"~~ (pronunciando todas las letras), ~~"fe-bru-ary"~~  
+Correcto: **"WENZ-day"** /ˈwɛnzdeɪ/ (d muda), **"FEB-roo-ary"** /ˈfɛbruɛri/
+
+Consejo: Practica estas palabras específicamente porque son muy comunes.
+</Aside>
+
