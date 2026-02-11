@@ -3,3 +3,236 @@ title: El Alfabeto
 description: Domina el alfabeto en inglés.
 ---
 
+import { Tabs, TabItem, Aside, CardGrid, Card } from '@astrojs/starlight/components';
+
+El alfabeto en inglés es como un array de 26 elementos donde cada letra tiene su propia "pronunciación como método". Aunque compartes las mismas letras con el español (mismo conjunto de "claves"), la forma en que "invocas" cada una es completamente diferente. Deletrear correctamente es esencial para dar tu nombre, email, dirección o cualquier información por teléfono.
+
+Dominar el alfabeto te permite comunicar información letra por letra con claridad, evitando confusiones especialmente en contextos profesionales.
+
+## Las 26 Letras
+
+El alfabeto inglés tiene la misma estructura que el español, pero cada letra se pronuncia de forma única:
+
+```js
+const alphabet = {
+  total: 26,
+  vowels: ['A', 'E', 'I', 'O', 'U'],
+  consonants: 21,
+  pronunciationStyle: "fonética inglesa" // ≠ nombre en español
+};
+
+// Cada letra es como una función con output diferente
+const pronounce = (letter) => {
+  return englishSound[letter]; // no spanishSound[letter]
+};
+```
+
+<Aside type="tip" title="Regla clave">
+**No traduzcas** el nombre de las letras del español. Por ejemplo, "B" no se dice "be" como en español, sino "bi" /biː/ en inglés.
+</Aside>
+
+---
+
+## Pronunciación por Grupos
+
+<Tabs>
+  <TabItem label="Vocales">
+
+Las vocales tienen nombres que generalmente coinciden con su "sonido largo":
+
+```js
+const vowels = {
+  A: "ei" ,   // /eɪ/ - como "ei" en "beige"
+  E: "i" ,    // /iː/ - como "i" larga
+  I: "ai",    // /aɪ/ - como "ai" en "baile"  
+  O: "ou",    // /oʊ/ - como "ou" (no "o")
+  U: "iu"     // /juː/ - como "iu" (no "u")
+};
+```
+
+**Ejemplos de deletreo:**
+- A: "My name is **A**lice" → "ei-lice"
+- E: "**E**mail" → "i-meil"
+- I: "**I** am here" → "ai am jir"
+
+</TabItem>
+
+  <TabItem label="Consonantes B-H">
+
+```js
+const consonants_1 = {
+  B: "bi",    // /biː/ - NO "be" 
+  C: "si",    // /siː/ - como "si"
+  D: "di",    // /diː/ - como "di" larga
+  F: "ef",    // /ɛf/ - como "ef"
+  G: "yi",    // /dʒiː/ - como "yi" (suave)
+  H: "eich"   // /eɪtʃ/ - como "eich" (NO "ache")
+};
+```
+
+  </TabItem>
+
+  <TabItem label="Consonantes J-P">
+
+```js
+const consonants_2 = {
+  J: "yei",   // /dʒeɪ/ - como "yei"
+  K: "kei",   // /keɪ/ - como "kei"
+  L: "el",    // /ɛl/ - como "el"
+  M: "em",    // /ɛm/ - como "em"
+  N: "en",    // /ɛn/ - como "en"
+  P: "pi"     // /piː/ - como "pi" larga
+};
+```
+
+  </TabItem>
+
+  <TabItem label="Consonantes Q-V">
+
+```js
+const consonants_3 = {
+  Q: "kiu",   // /kjuː/ - como "kiu" 
+  R: "ar",    // /ɑːr/ - como "ar" (NO erre)
+  S: "es",    // /ɛs/ - como "es"
+  T: "ti",    // /tiː/ - como "ti" larga
+  V: "vi"     // /viː/ - como "vi" (dientes sobre labio)
+};
+```
+
+  </TabItem>
+
+  <TabItem label="Consonantes W-Z">
+
+```js
+const consonants_4 = {
+  W: "dabel iu",  // /ˈdʌbəl juː/ - "doble u"
+  X: "eks",       // /ɛks/ - como "eks"
+  Y: "uai",       // /waɪ/ - como "uai"
+  Z: "zi"         // /ziː/ - como "zi" (US) o "zed" (UK)
+};
+```
+
+**Diferencia regional:** En EE.UU. se dice "zi" /ziː/, en Reino Unido "zed" /zɛd/.
+
+  </TabItem>
+</Tabs>
+
+---
+
+## Deletrear (Spelling)
+
+Deletrear es la acción de decir una palabra letra por letra. Es como serializar un string en un array de caracteres:
+
+```js
+const spell = (word) => {
+  return word.split('').map(letter => pronounce(letter));
+};
+
+// Ejemplo
+spell("CODE");
+// Output: ["si", "ou", "di", "i"]
+// Se pronuncia: "si - ou - di - i"
+```
+
+**Contextos comunes para deletrear:**
+
+<CardGrid>
+  <Card title="Nombre propio">
+"My name is Smith, that's **S-M-I-T-H**"  
+→ "es - em - ai - ti - eich"
+  </Card>
+
+  <Card title="Email">
+"john.doe@email.com"  
+→ "yei-ou-eich-en dot di-ou-i at i-meil dot si-ou-em"
+  </Card>
+
+  <Card title="Dirección">
+"123 Oak Street"  
+→ "ou-ei-kei Street" (Oak deletreado)
+  </Card>
+
+  <Card title="Código postal">
+"The code is A1B2C3"  
+→ "ei-one-bi-two-si-three"
+  </Card>
+</CardGrid>
+
+<Aside type="tip" title="Frase útil para deletrear">
+Cuando necesites deletrear algo, usa:
+
+- "Let me spell that for you: ..."
+- "That's spelled ..."
+- "Could you spell that, please?"
+</Aside>
+
+---
+
+## El Alfabeto Fonético (NATO)
+
+En situaciones donde la claridad es crítica (aeropuertos, llamadas de negocios, soporte técnico), se usa el alfabeto fonético NATO:
+
+```js
+const natoAlphabet = {
+  A: "Alpha",   B: "Bravo",   C: "Charlie",
+  D: "Delta",   E: "Echo",    F: "Foxtrot",
+  G: "Golf",    H: "Hotel",   I: "India",
+  J: "Juliett", K: "Kilo",    L: "Lima",
+  M: "Mike",    N: "November",O: "Oscar",
+  P: "Papa",    Q: "Quebec",  R: "Romeo",
+  S: "Sierra",  T: "Tango",   U: "Uniform",
+  V: "Victor",  W: "Whiskey", X: "X-ray",
+  Y: "Yankee",  Z: "Zulu"
+};
+
+// Uso: "My flight is BA207"
+// → "Bravo Alpha two zero seven"
+```
+
+<Aside type="note" title="Cuándo usar NATO">
+Usa el alfabeto fonético cuando:
+- Hay mucho ruido de fondo
+- La conexión telefónica es mala
+- Necesitas precisión absoluta (códigos, contraseñas)
+- Trabajas en aviación, militar o emergencias
+</Aside>
+
+---
+
+## Práctica: Deletrea tu Información
+
+<Aside type="tip" title="Ejercicio diario">
+Practica deletrear en voz alta:
+- Tu nombre completo
+- Tu email
+- Tu dirección
+- El nombre de tu ciudad
+- Palabras difíciles en inglés (Wednesday, February, etc.)
+
+Grábate y compara con nativos.
+</Aside>
+
+---
+
+## Errores Comunes
+
+<Aside type="danger" title='Error #1: Decir "be" en vez de "bi" para la B'>
+**Explicación:** Es el error más común porque en español decimos "be". En inglés es "bi" /biː/.
+
+Incorrecto: ~~"be - ou - ou - kei"~~ (book)  
+Correcto: **"bi - ou - ou - kei"** /biː oʊ oʊ keɪ/
+</Aside>
+
+<Aside type="danger" title='Error #2: Pronunciar "H" como "ache"'>
+**Explicación:** La H en inglés se pronuncia "eich" /eɪtʃ/, no "ache" como en español.
+
+Incorrecto: ~~"ache - ou - em - i"~~ (home)  
+Correcto: **"eich - ou - em - i"** /eɪtʃ oʊ ɛm iː/
+</Aside>
+
+<Aside type="danger" title='Error #3: Confundir "I" con "E"'>
+**Explicación:** En inglés, "I" se pronuncia "ai" /aɪ/ y "E" se pronuncia "i" /iː/. Es al revés del español.
+
+Incorrecto: ~~"i - em - ei - ai - el"~~ (email) → suena como "I mail"  
+Correcto: **"i - em - ei - ai - el"** /iː ɛm eɪ aɪ ɛl/ → pronunciando E como "i" y I como "ai"
+</Aside>
