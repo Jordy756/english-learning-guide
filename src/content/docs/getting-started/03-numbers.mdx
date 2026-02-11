@@ -2,3 +2,336 @@
 title: Números
 description: Aprende a contar y usar números en inglés.
 ---
+
+import { Tabs, TabItem, Aside, CardGrid, Card } from '@astrojs/starlight/components';
+
+Los números en inglés son como tipos primitivos en JavaScript: esenciales y fundamentales para comunicarte en cualquier contexto. Desde dar tu edad y número de teléfono hasta hablar de precios, fechas y cantidades, dominar los números te permite expresar información cuantitativa con precisión.
+
+Aunque contar del 1 al 10 es fácil, los números en inglés tienen patrones específicos que debes memorizar, especialmente los números del 11 al 19 y las decenas.
+
+## Números del 0 al 20
+
+Estos son los números base que debes memorizar completamente, ya que forman la base de todos los demás:
+
+```js
+const basicNumbers = {
+  0: "zero",      1: "one",       2: "two",
+  3: "three",     4: "four",      5: "five",
+  6: "six",       7: "seven",     8: "eight",
+  9: "nine",      10: "ten",      11: "eleven",
+  12: "twelve",   13: "thirteen", 14: "fourteen",
+  15: "fifteen",  16: "sixteen",  17: "seventeen",
+  18: "eighteen", 19: "nineteen", 20: "twenty"
+};
+```
+
+<Aside type="tip" title="Patrón 13-19">
+Del 13 al 19, el patrón general es: **número base + "teen"**
+- Three → Thirteen
+- Four → Fourteen
+- Five → Fifteen (cambia a "fif")
+- Six → Sixteen
+
+Excepciones: eleven, twelve (no siguen ningún patrón)
+</Aside>
+
+---
+
+## Decenas y Números Compuestos
+
+Las decenas siguen un patrón consistente, y para números compuestos (21-99) usas guion:
+
+<Tabs>
+  <TabItem label="Decenas (10-90)">
+
+```js
+const tens = {
+  10: "ten",
+  20: "twenty",
+  30: "thirty",    // three → thirty
+  40: "forty",     // four → forty (NO "fourty")
+  50: "fifty",     // five → fifty
+  60: "sixty",
+  70: "seventy",
+  80: "eighty",
+  90: "ninety"
+};
+```
+
+**Patrón:** Número base + "ty" (con algunas variaciones ortográficas)
+
+  </TabItem>
+
+  <TabItem label="Compuestos (21-99)">
+
+Para números entre las decenas, usa guion:
+
+```js
+const compositeNumber = (tens, ones) => {
+  return `${tens}-${ones}`;
+};
+
+// Ejemplos
+console.log(compositeNumber("twenty", "one"));   // "twenty-one"
+console.log(compositeNumber("thirty", "five"));  // "thirty-five"
+console.log(compositeNumber("ninety", "nine"));  // "ninety-nine"
+```
+
+**Ejemplos completos:**
+  - 21: twenty-one
+  - 47: forty-seven
+  - 63: sixty-three
+  - 89: eighty-nine
+
+  </TabItem>
+</Tabs>
+
+<Aside type="caution" title="Error común: forty vs fourty">
+El número 40 se escribe **"forty"** (sin "u"). Es la única decena que pierde la "u" del número base.
+
+Incorrecto: ~~fourty~~  
+Correcto: **forty**
+</Aside>
+
+---
+
+## Números Grandes
+
+Para números grandes, se usan "hundred", "thousand", "million" sin plural cuando van precedidos de un número:
+
+```js
+const largeNumbers = {
+  100: "one hundred",
+  200: "two hundred",        // NO "two hundreds"
+  1000: "one thousand",
+  5000: "five thousand",     // NO "five thousands"
+  1000000: "one million",
+  10000000: "ten million"
+};
+
+// Para números compuestos, usa "and" después de hundred
+const buildNumber = (hundreds, tens) => {
+  return `${hundreds} hundred and ${tens}`;
+};
+
+console.log(buildNumber("three", "forty-five")); // "three hundred and forty-five" (345)
+```
+
+**Estructura de números grandes:**
+- **456:** four hundred and fifty-six
+- **1,234:** one thousand, two hundred and thirty-four
+- **50,000:** fifty thousand
+- **1,000,000:** one million
+
+<Aside type="note" title="Diferencia UK vs US">
+En inglés británico, se usa "and" después de "hundred":  
+- UK: "two hundred **and** fifty"
+- US: "two hundred fifty" (sin "and")
+
+Ambas formas son correctas, pero la versión británica es más común globalmente.
+</Aside>
+
+---
+
+## Números Ordinales
+
+Los ordinales indican posición u orden. La mayoría añaden "th", pero los tres primeros son irregulares:
+
+<Tabs>
+  <TabItem label="1st a 10th">
+
+```js
+const ordinals = {
+  1: "first",     // 1st - irregular
+  2: "second",    // 2nd - irregular
+  3: "third",     // 3rd - irregular
+  4: "fourth",    // 4th
+  5: "fifth",     // 5th
+  6: "sixth",     // 6th
+  7: "seventh",   // 7th
+  8: "eighth",    // 8th
+  9: "ninth",     // 9th
+  10: "tenth"     // 10th
+};
+```
+
+  </TabItem>
+
+  <TabItem label="Patrón General">
+
+Para formar ordinales, el patrón es: número cardinal + "th"
+
+```js
+const makeOrdinal = (cardinal) => {
+  const exceptions = {
+    "one": "first",
+    "two": "second",
+    "three": "third",
+    "five": "fifth",    // cambia a "fifth"
+    "twelve": "twelfth" // cambia a "twelfth"
+  };
+  
+  if (exceptions[cardinal]) {
+    return exceptions[cardinal];
+  }
+  
+  return cardinal + "th"; // patrón general
+};
+
+// Ejemplos
+console.log(makeOrdinal("four"));     // "fourth"
+console.log(makeOrdinal("thirteen")); // "thirteenth"
+console.log(makeOrdinal("twenty"));   // "twentieth"
+```
+
+**Ordinales compuestos:**
+  - 21st: twenty-first
+  - 32nd: thirty-second
+  - 43rd: forty-third
+  - 54th: fifty-fourth
+
+  </TabItem>
+</Tabs>
+
+---
+
+## Usos Especiales
+
+<CardGrid>
+  <Card title="Años">
+**1990:** nineteen ninety  
+**2000:** two thousand  
+**2024:** twenty twenty-four  
+**1805:** eighteen oh five
+  </Card>
+
+  <Card title="Teléfonos">
+Se dice dígito por dígito:  
+**555-1234:**  
+"five five five, one two three four"
+
+Doble dígito: "double five"
+  </Card>
+
+  <Card title="Decimales">
+Usa "point" para el punto decimal:  
+**3.14:** three point one four  
+**0.5:** zero point five  
+**10.99:** ten point nine nine
+  </Card>
+
+  <Card title="Dinero">
+**$5:** five dollars  
+**$1.50:** one dollar fifty / one fifty  
+**$99.99:** ninety-nine ninety-nine  
+**$1,000:** one thousand dollars
+  </Card>
+</CardGrid>
+
+---
+
+## Operaciones Matemáticas
+
+```js
+const mathOperations = {
+  addition: "5 + 3 = 8",       // five plus three equals eight
+  subtraction: "10 - 4 = 6",   // ten minus four equals six
+  multiplication: "3 × 2 = 6", // three times two equals six
+  division: "8 ÷ 2 = 4"        // eight divided by two equals four
+};
+```
+
+**Vocabulario matemático:**
+- **+** : plus
+- **-** : minus
+- **×** : times / multiplied by
+- **÷** : divided by
+- **=** : equals / is
+
+---
+
+## Fracciones
+
+Las fracciones usan ordinales para el denominador:
+
+<Tabs>
+  <TabItem label="Fracciones Comunes">
+
+```js
+const commonFractions = {
+  "1/2": "one half / a half",         // excepción
+  "1/4": "one quarter / a quarter",   // excepción
+  "3/4": "three quarters",
+  "1/3": "one third",
+  "2/3": "two thirds",
+  "1/5": "one fifth",
+  "2/5": "two fifths"
+};
+```
+
+  </TabItem>
+
+  <TabItem label="Patrón General">
+
+**Estructura:** numerador (cardinal) + denominador (ordinal plural si > 1)
+
+```js
+const makeFraction = (numerator, denominator) => {
+  const ordinal = makeOrdinal(denominator);
+  const plural = numerator > 1 ? ordinal + "s" : ordinal;
+  return `${numerator} ${plural}`;
+};
+
+// Ejemplos
+console.log(makeFraction(1, "eighth")); // "1 eighth"
+console.log(makeFraction(3, "eighth")); // "3 eighths"
+console.log(makeFraction(5, "sixth"));  // "5 sixths"
+```
+
+  </TabItem>
+</Tabs>
+
+---
+
+## Práctica: Números en Contexto
+
+<Aside type="tip" title="Ejercicio diario">
+Practica decir en voz alta:
+- Tu edad: "I'm __ years old"
+- Tu número de teléfono
+- Precios que ves en tiendas
+- El año actual y tu año de nacimiento
+- La hora actual
+- Direcciones (números de calle)
+</Aside>
+
+---
+
+## Errores Comunes
+
+<Aside type="danger" title='Error #1: Escribir "fourty" en vez de "forty"'>
+**Explicación:** El número 40 es la única decena que pierde la "u" del número base "four".
+
+Incorrecto: ~~fourty~~, ~~fourty-five~~  
+Correcto: **forty**, **forty-five**
+</Aside>
+
+<Aside type="danger" title='Error #2: Pluralizar "hundred", "thousand" o "million"'>
+**Explicación:** Cuando estos van precedidos de un número específico, NO se pluralizan.
+
+Incorrecto: ~~two hundreds~~, ~~five thousands~~, ~~ten millions~~  
+Correcto: **two hundred**, **five thousand**, **ten million**
+
+Nota: Solo se pluralizan cuando se usan de forma indefinida: "hundreds of people", "thousands of dollars"
+</Aside>
+
+<Aside type="danger" title='Error #3: Confundir "-teen" con "-ty"'>
+**Explicación:** Thirteen (13) vs. Thirty (30) suenan similar pero el acento cambia. "-teen" tiene acento al final, "-ty" al principio.
+
+Incorrecto: Confundir "fifteen" (15) con "fifty" (50)  
+Correcto: 
+- **Thirteen** /θɜːrˈtiːn/ → acento en "TEEN" (13)
+- **Thirty** /ˈθɜːrti/ → acento en "THIR" (30)
+
+Consejo: Exagera la pronunciación de la sílaba acentuada para evitar confusiones.
+</Aside>
