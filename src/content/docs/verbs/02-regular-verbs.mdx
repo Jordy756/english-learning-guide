@@ -3,3 +3,410 @@ title: Verbos Regulares
 description: Entiende el patrón de los verbos regulares.
 ---
 
+import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
+
+Los verbos regulares son como funciones predecibles en programación: siguen un patrón consistente que, una vez aprendido, puedes aplicar a miles de verbos. La buena noticia es que la mayoría de los verbos en inglés son regulares, así que dominar estas reglas te dará una base sólida.
+
+La característica principal de los verbos regulares es que forman el pasado y el participio pasado añadiendo **-ed** al verbo base.
+
+---
+
+## Presente Simple de Verbos Regulares
+
+En presente, los verbos regulares mantienen su forma base, excepto con he/she/it donde añaden **-s** o **-es**:
+
+```javascript
+const presentRegular = {
+  I: "work",          // yo trabajo
+  you: "work",        // tú trabajas
+  he: "works",        // él trabaja
+  she: "works",       // ella trabaja
+  it: "works",        // eso funciona
+  we: "work",         // nosotros trabajamos
+  they: "work"        // ellos trabajan
+};
+```
+
+**Ejemplos:**
+- I work every day (Trabajo todos los días)
+- You play guitar (Tocas guitarra)
+- She watches TV at night (Ella ve TV en la noche)
+- We study English (Estudiamos inglés)
+- They live in Madrid (Ellos viven en Madrid)
+
+<Aside type="tip">
+**Regla para tercera persona:** Añade **-s** normalmente. Usa **-es** si el verbo termina en -s, -sh, -ch, -x, -o: watches, goes, fixes.
+</Aside>
+
+---
+
+## Pasado Simple: Añadir -ed
+
+La magia de los verbos regulares está en el pasado: simplemente añade **-ed** y funciona para todos los sujetos:
+
+```javascript
+const pastRegular = {
+  rule: "verb + ed",
+  examples: {
+    work: "worked",      // trabajé/trabajaba
+    play: "played",      // jugué/jugaba
+    watch: "watched",    // vi/veía
+    start: "started",    // empecé/empezaba
+    finish: "finished"   // terminé/terminaba
+  }
+};
+```
+
+**Ejemplos:**
+- I worked yesterday (Trabajé ayer)
+- You played well (Jugaste bien)
+- She watched a movie (Ella vio una película)
+- We started at 9 (Empezamos a las 9)
+- They finished early (Terminaron temprano)
+
+---
+
+## Reglas de Ortografía para -ed
+
+No todos los verbos simplemente añaden -ed. Hay reglas ortográficas importantes:
+
+<Tabs>
+  <TabItem label="Regla General">
+    ```javascript
+    const generalRule = {
+      rule: "Añadir -ed directamente",
+      examples: [
+        "work → worked",     // trabajar
+        "play → played",     // jugar
+        "watch → watched",   // ver
+        "help → helped",     // ayudar
+        "clean → cleaned"    // limpiar
+      ]
+    };
+    ```
+    
+    La mayoría de verbos solo añaden **-ed** al final.
+  </TabItem>
+  
+  <TabItem label="Verbos en -e">
+    ```javascript
+    const endsInE = {
+      rule: "Solo añadir -d",
+      examples: [
+        "love → loved",      // amar
+        "live → lived",      // vivir
+        "move → moved",      // mover
+        "dance → danced",    // bailar
+        "create → created"   // crear
+      ]
+    };
+    ```
+    
+    Si el verbo ya termina en **-e**, solo añade **-d**.
+  </TabItem>
+  
+  <TabItem label="Consonante + y">
+    ```javascript
+    const consonantY = {
+      rule: "Cambiar y → ied",
+      examples: [
+        "study → studied",   // estudiar
+        "try → tried",       // intentar
+        "cry → cried",       // llorar
+        "carry → carried",   // cargar
+        "worry → worried"    // preocuparse
+      ]
+    };
+    ```
+    
+    Si termina en **consonante + y**, cambia la **y** por **ied**.
+  </TabItem>
+  
+  <TabItem label="Vocal + y">
+    ```javascript
+    const vowelY = {
+      rule: "Añadir -ed normalmente",
+      examples: [
+        "play → played",     // jugar
+        "stay → stayed",     // quedarse
+        "enjoy → enjoyed",   // disfrutar
+        "delay → delayed",   // retrasar
+        "destroy → destroyed"// destruir
+      ]
+    };
+    ```
+    
+    Si termina en **vocal + y**, solo añade **-ed** sin cambios.
+  </TabItem>
+  
+  <TabItem label="Duplicar Consonante">
+    ```javascript
+    const doubleConsonant = {
+      rule: "CVC corto → duplicar última consonante",
+      examples: [
+        "stop → stopped",    // parar
+        "plan → planned",    // planear
+        "drop → dropped",    // dejar caer
+        "rob → robbed",      // robar
+        "chat → chatted"     // chatear
+      ]
+    };
+    ```
+    
+    En verbos cortos (CVC: consonante-vocal-consonante), duplica la última consonante.
+  </TabItem>
+</Tabs>
+
+<Aside type="note">
+**CVC explicado:** Verbos de una sílaba que terminan en consonante-vocal-consonante (como "stop", "plan", "chat") duplican la consonante final. Esto NO aplica si terminan en -w, -x, -y: "play → played", "fix → fixed".
+</Aside>
+
+---
+
+## Pronunciación de -ed
+
+El sufijo -ed tiene **tres pronunciaciones** diferentes según el sonido final del verbo:
+
+<Tabs>
+  <TabItem label="/t/ - Sonido T">
+    ```javascript
+    const soundT = {
+      after: "sonidos sordos: /p/, /k/, /f/, /s/, /ʃ/, /tʃ/",
+      examples: [
+        "worked → /wɜːrkt/",    // trabajó
+        "stopped → /stɑːpt/",   // paró
+        "watched → /wɑːtʃt/",   // vio
+        "laughed → /læft/",     // rió
+        "kissed → /kɪst/"       // besó
+      ]
+    };
+    ```
+    
+    Después de sonidos **sordos** (sin vibración), -ed suena como **/t/**.
+  </TabItem>
+  
+  <TabItem label="/d/ - Sonido D">
+    ```javascript
+    const soundD = {
+      after: "sonidos sonoros y vocales",
+      examples: [
+        "played → /pleɪd/",     // jugó
+        "lived → /lɪvd/",       // vivió
+        "called → /kɔːld/",     // llamó
+        "loved → /lʌvd/",       // amó
+        "opened → /oʊpənd/"     // abrió
+      ]
+    };
+    ```
+    
+    Después de **vocales** y sonidos **sonoros**, -ed suena como **/d/**.
+  </TabItem>
+  
+  <TabItem label="/ɪd/ - Sonido ID">
+    ```javascript
+    const soundId = {
+      after: "verbos que terminan en /t/ o /d/",
+      examples: [
+        "wanted → /wɑːntɪd/",   // quiso
+        "needed → /niːdɪd/",    // necesitó
+        "started → /stɑːrtɪd/", // empezó
+        "waited → /weɪtɪd/",    // esperó
+        "ended → /endɪd/"       // terminó
+      ]
+    };
+    ```
+    
+    Después de **t** o **d**, -ed añade una sílaba extra: **/ɪd/**.
+  </TabItem>
+</Tabs>
+
+<Aside type="tip">
+**Truco práctico:** Si el verbo termina en sonido de T o D, pronuncias una sílaba extra (want**-ed**, need**-ed**). En los demás casos, -ed es casi imperceptible.
+</Aside>
+
+---
+
+## Formas del Pasado: Afirmativa, Negativa, Pregunta
+
+<Tabs>
+  <TabItem label="Afirmativa">
+    ```javascript
+    const affirmativePast = {
+      structure: "Subject + verb-ed",
+      examples: [
+        "I worked late",        // Trabajé tarde
+        "You played well",      // Jugaste bien
+        "He called you",        // Él te llamó
+        "She cooked dinner",    // Ella cocinó la cena
+        "We watched a movie",   // Vimos una película
+        "They arrived early"    // Llegaron temprano
+      ]
+    };
+    ```
+  </TabItem>
+  
+  <TabItem label="Negativa">
+    ```javascript
+    const negativePast = {
+      structure: "Subject + didn't + verb (base)",
+      examples: [
+        "I didn't work",        // No trabajé
+        "You didn't play",      // No jugaste
+        "He didn't call",       // Él no llamó
+        "She didn't cook",      // Ella no cocinó
+        "We didn't watch",      // No vimos
+        "They didn't arrive"    // No llegaron
+      ]
+    };
+    ```
+    
+    En negativo, usa **didn't** + verbo base (SIN -ed).
+  </TabItem>
+  
+  <TabItem label="Pregunta">
+    ```javascript
+    const questionPast = {
+      structure: "Did + subject + verb (base) + ?",
+      examples: [
+        "Did I work?",          // ¿Trabajé?
+        "Did you play?",        // ¿Jugaste?
+        "Did he call?",         // ¿Él llamó?
+        "Did she cook?",        // ¿Ella cocinó?
+        "Did we watch?",        // ¿Vimos?
+        "Did they arrive?"      // ¿Llegaron?
+      ]
+    };
+    ```
+    
+    En preguntas, usa **Did** + sujeto + verbo base (SIN -ed).
+  </TabItem>
+</Tabs>
+
+<Aside type="caution">
+**Importante:** Con **didn't** y **Did**, el verbo vuelve a su forma base. El -ed solo aparece en oraciones afirmativas.
+</Aside>
+
+---
+
+## Participio Pasado
+
+En verbos regulares, el participio pasado es **igual que el pasado simple**: añade -ed. Se usa en tiempos perfectos:
+
+```javascript
+const pastParticiple = {
+  formation: "verb + ed (igual que pasado)",
+  uses: {
+    presentPerfect: "I have worked",    // He trabajado
+    pastPerfect: "I had worked",        // Había trabajado
+    passive: "It was finished"          // Fue terminado
+  }
+};
+```
+
+**Ejemplos en Present Perfect:**
+- I have lived here for 5 years (He vivido aquí por 5 años)
+- She has studied a lot (Ella ha estudiado mucho)
+- They have traveled to Spain (Han viajado a España)
+- We have finished the project (Hemos terminado el proyecto)
+
+---
+
+## Verbos Regulares Comunes
+
+<CardGrid>
+  <Card title="Trabajo y Estudio">
+    - work (trabajar)
+    - study (estudiar)
+    - start (empezar)
+    - finish (terminar)
+    - use (usar)
+  </Card>
+  
+  <Card title="Comunicación">
+    - call (llamar)
+    - talk (hablar)
+    - ask (preguntar)
+    - answer (responder)
+    - explain (explicar)
+  </Card>
+  
+  <Card title="Movimiento">
+    - walk (caminar)
+    - move (mover)
+    - travel (viajar)
+    - arrive (llegar)
+    - return (regresar)
+  </Card>
+  
+  <Card title="Actividades Diarias">
+    - cook (cocinar)
+    - clean (limpiar)
+    - wash (lavar)
+    - watch (ver)
+    - listen (escuchar)
+  </Card>
+</CardGrid>
+
+**Ejemplos variados:**
+- I worked from home yesterday (Trabajé desde casa ayer)
+- She called me last night (Ella me llamó anoche)
+- We traveled to Paris (Viajamos a París)
+- They cooked a delicious meal (Cocinaron una comida deliciosa)
+- He cleaned the entire house (Él limpió toda la casa)
+
+---
+
+## Errores Comunes
+
+<Aside type="danger">
+**Añadir -ed en negativas y preguntas**
+
+Cuando usas **didn't** o **Did**, el verbo vuelve a su forma base:
+
+~~I didn't worked~~ / ~~Did you played?~~
+
+→ **I didn't work** (No trabajé)
+
+→ **Did you play?** (¿Jugaste?)
+</Aside>
+
+<Aside type="danger">
+**Olvidar duplicar consonantes**
+
+En verbos CVC cortos, debes duplicar la consonante final:
+
+~~stoped~~ / ~~planed~~ / ~~droped~~
+
+→ **stopped** (paró)
+
+→ **planned** (planeó)
+
+→ **dropped** (dejó caer)
+</Aside>
+
+<Aside type="danger">
+**No cambiar la Y por IED**
+
+Si el verbo termina en consonante + y, cambia y → ied:
+
+~~studyed~~ / ~~tryed~~ / ~~cryed~~
+
+→ **studied** (estudió)
+
+→ **tried** (intentó)
+
+→ **cried** (lloró)
+</Aside>
+
+<Aside type="danger">
+**Pronunciar -ed siempre como sílaba extra**
+
+Solo los verbos que terminan en T o D añaden sílaba:
+
+~~work-ed~~ (2 sílabas) → **worked** /wɜːrkt/ (1 sílaba)
+
+~~play-ed~~ (2 sílabas) → **played** /pleɪd/ (1 sílaba)
+
+✓ **want-ed** /wɑːntɪd/ (2 sílabas) - correcto porque termina en T
+</Aside>
+
