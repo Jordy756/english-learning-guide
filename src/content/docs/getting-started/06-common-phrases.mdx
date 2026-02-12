@@ -3,3 +3,464 @@ title: Frases Comunes
 description: Aprende las frases más usadas en el día a día.
 ---
 
+import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
+
+Las frases comunes son como las funciones utilitarias en programación: las usas constantemente y hacen tu código (o conversación) mucho más fluido. Dominar estas expresiones te permite comunicarte con naturalidad en situaciones cotidianas, desde pedir ayuda hasta expresar agradecimiento.
+
+Estas frases son tu toolkit esencial para el inglés del día a día. Memorízalas y úsalas con frecuencia para sonar más natural.
+
+---
+
+## Cortesía Básica
+
+Las palabras mágicas que funcionan en cualquier contexto:
+
+```javascript
+const politeness = {
+  request: "Please",           // Por favor
+  gratitude: "Thank you",      // Gracias
+  response: "You're welcome",  // De nada
+  apology: "Sorry",            // Lo siento
+  permission: "Excuse me"      // Disculpe / Perdón
+};
+```
+
+**Variaciones en contexto:**
+
+<Tabs>
+  <TabItem label="Agradecer">
+    ```javascript
+    const thankYou = {
+      basic: "Thank you",                // Gracias
+      emphatic: "Thank you very much",   // Muchas gracias
+      casual: "Thanks",                  // Gracias (casual)
+      enthusiastic: "Thanks a lot!",     // ¡Muchas gracias!
+      formal: "I appreciate it"          // Lo aprecio
+    };
+    ```
+    
+    - Thanks for your help! (¡Gracias por tu ayuda!)
+    - Thank you very much for coming (Muchas gracias por venir)
+    - I really appreciate it (De verdad lo aprecio)
+  </TabItem>
+  
+  <TabItem label="Responder a gracias">
+    ```javascript
+    const responses = {
+      standard: "You're welcome",       // De nada
+      casual: "No problem",             // Sin problema
+      informal: "No worries",           // No te preocupes
+      friendly: "Anytime!",             // ¡Cuando quieras!
+      dismissive: "Don't mention it"    // No lo menciones
+    };
+    ```
+    
+    - You're welcome! (¡De nada!)
+    - No problem at all (No hay problema)
+    - Happy to help (Encantado de ayudar)
+  </TabItem>
+  
+  <TabItem label="Disculparse">
+    ```javascript
+    const apologies = {
+      light: "Sorry",                  // Perdón
+      sincere: "I'm sorry",            // Lo siento
+      formal: "I apologize",           // Me disculpo
+      emphatic: "I'm so sorry",        // Lo siento mucho
+      withExcuse: "Sorry about that"   // Perdón por eso
+    };
+    ```
+    
+    - Sorry I'm late (Perdón por llegar tarde)
+    - I apologize for the confusion (Me disculpo por la confusión)
+    - I'm so sorry about that (Lo siento muchísimo)
+  </TabItem>
+</Tabs>
+
+---
+
+## Pedir Ayuda y Aclaraciones
+
+Cuando no entiendes o necesitas ayuda:
+
+<CardGrid>
+  <Card title="Pedir repetición">
+    - **Sorry?** (¿Perdón?)
+    - **Pardon?** (¿Disculpe? - más formal)
+    - **What was that?** (¿Qué fue eso?)
+    - **Could you repeat that?** (¿Podrías repetir eso?)
+    - **Say that again?** (¿Puedes decir eso otra vez?)
+  </Card>
+  
+  <Card title="Pedir clarificación">
+    - **I don't understand** (No entiendo)
+    - **What do you mean?** (¿Qué quieres decir?)
+    - **Can you explain that?** (¿Puedes explicar eso?)
+    - **I'm not sure I follow** (No estoy seguro de seguirte)
+    - **Could you clarify?** (¿Podrías aclarar?)
+  </Card>
+  
+  <Card title="Pedir hablar más lento">
+    - **Can you speak more slowly?** (¿Puedes hablar más despacio?)
+    - **Could you slow down?** (¿Podrías ir más lento?)
+    - **A bit slower, please** (Un poco más lento, por favor)
+  </Card>
+  
+  <Card title="Pedir ayuda en inglés">
+    - **Do you speak English?** (¿Hablas inglés?)
+    - **Can you help me?** (¿Puedes ayudarme?)
+    - **I need help** (Necesito ayuda)
+    - **How do you say...?** (¿Cómo se dice...?)
+  </Card>
+</CardGrid>
+
+**Ejemplos de diálogo:**
+
+- Excuse me, can you help me? (Disculpe, ¿puede ayudarme?)
+- Sorry, I don't understand. Can you repeat that? (Perdón, no entiendo. ¿Puedes repetir eso?)
+- How do you say "biblioteca" in English? (¿Cómo se dice "biblioteca" en inglés?)
+
+---
+
+## Hacer Peticiones
+
+```javascript
+const makeRequest = (action, politeness = "standard") => {
+  const formats = {
+    direct: action,                    // Directo
+    polite: `Can you ${action}?`,      // Cortés
+    formal: `Could you ${action}?`,    // Formal
+    veryFormal: `Would you ${action}?` // Muy formal
+  };
+  return formats[politeness];
+};
+
+// Ejemplos:
+makeRequest("open the door", "polite");
+// "Can you open the door?" (¿Puedes abrir la puerta?)
+
+makeRequest("send me the file", "formal");
+// "Could you send me the file?" (¿Podrías enviarme el archivo?)
+```
+
+**Patrones comunes:**
+
+- Can you help me with this? (¿Puedes ayudarme con esto?)
+- Could you pass me the salt? (¿Podrías pasarme la sal?)
+- Would you mind closing the window? (¿Te importaría cerrar la ventana?)
+- Please call me later (Por favor llámame más tarde)
+- Let me know when you're ready (Avísame cuando estés listo)
+
+<Aside type="tip">
+**Más cortés:** "Could you..." y "Would you mind..." son más formales que "Can you...". Usa "please" para añadir cortesía a cualquier petición.
+</Aside>
+
+---
+
+## Expresar Acuerdo y Desacuerdo
+
+<Tabs>
+  <TabItem label="De acuerdo">
+    ```javascript
+    const agreement = {
+      basic: [
+        "Yes",           // Sí
+        "OK",            // OK
+        "Alright",       // De acuerdo
+        "Sure"           // Claro
+      ],
+      emphatic: [
+        "Absolutely",    // Absolutamente
+        "Definitely",    // Definitivamente
+        "Exactly",       // Exactamente
+        "For sure"       // Por supuesto
+      ],
+      opinions: [
+        "I agree",           // Estoy de acuerdo
+        "I think so too",    // Yo también lo creo
+        "That's right",      // Es correcto
+        "You're right"      // Tienes razón
+      ]
+    };
+    ```
+    
+    - Absolutely! (¡Absolutamente!)
+    - I totally agree (Estoy totalmente de acuerdo)
+    - That makes sense (Eso tiene sentido)
+    - Good idea! (¡Buena idea!)
+  </TabItem>
+  
+  <TabItem label="En desacuerdo">
+    ```javascript
+    const disagreement = {
+      soft: [
+        "I'm not sure about that",        // No estoy seguro de eso
+        "I see what you mean, but...",    // Veo lo que quieres decir, pero...
+        "Maybe, but..."                   // Quizás, pero...
+      ],
+      direct: [
+        "I don't think so",      // No lo creo
+        "I disagree",            // No estoy de acuerdo
+        "I don't agree"          // No concuerdo
+      ],
+      strong: [
+        "No way",                 // De ninguna manera
+        "Absolutely not",         // Absolutamente no
+        "I totally disagree"      // Estoy totalmente en desacuerdo
+      ]
+    };
+    ```
+    
+    - I'm not sure about that (No estoy seguro de eso)
+    - I see your point, but... (Entiendo tu punto, pero...)
+    - I respectfully disagree (Respetuosamente no estoy de acuerdo)
+  </TabItem>
+  
+  <TabItem label="Neutral">
+    ```javascript
+    const neutral = [
+      "Maybe",          // Quizás
+      "Perhaps",        // Tal vez
+      "I'm not sure",   // No estoy seguro
+      "It depends",     // Depende
+      "Could be"        // Podría ser
+    ];
+    ```
+    
+    - It depends on the situation (Depende de la situación)
+    - I'm not sure yet (No estoy seguro todavía)
+    - Let me think about it (Déjame pensarlo)
+  </TabItem>
+</Tabs>
+
+---
+
+## Frases para Compras y Restaurantes
+
+<CardGrid>
+  <Card title="En la tienda">
+    - **I'm just looking** (Solo estoy mirando)
+    - **How much is this?** (¿Cuánto cuesta esto?)
+    - **Do you have this in...?** (¿Tienen esto en...?)
+    - **I'll take it** (Me lo llevo)
+    - **Can I pay by card?** (¿Puedo pagar con tarjeta?)
+    - **Do you have a bag?** (¿Tienen bolsa?)
+  </Card>
+  
+  <Card title="En el restaurante">
+    - **A table for two, please** (Una mesa para dos, por favor)
+    - **Can I see the menu?** (¿Puedo ver el menú?)
+    - **I'll have...** (Tomaré... / Yo quiero...)
+    - **The check, please** (La cuenta, por favor)
+    - **Is service included?** (¿Está incluido el servicio?)
+    - **This is delicious!** (¡Esto está delicioso!)
+  </Card>
+  
+  <Card title="Preguntas comunes">
+    - **Where is...?** (¿Dónde está...?)
+    - **How do I get to...?** (¿Cómo llego a...?)
+    - **What time is it?** (¿Qué hora es?)
+    - **Do you accept credit cards?** (¿Aceptan tarjetas de crédito?)
+    - **Is there a bathroom?** (¿Hay un baño?)
+  </Card>
+  
+  <Card title="Problemas">
+    - **There's a problem** (Hay un problema)
+    - **This isn't what I ordered** (Esto no es lo que pedí)
+    - **It doesn't work** (No funciona)
+    - **Can I speak to the manager?** (¿Puedo hablar con el gerente?)
+  </Card>
+</CardGrid>
+
+---
+
+## Conversación Social
+
+Frases para charlar y mantener la conversación:
+
+```javascript
+const smallTalk = {
+  starters: [
+    "How's your day going?",      // ¿Cómo va tu día?
+    "What have you been up to?",  // ¿Qué has estado haciendo?
+    "Any plans for the weekend?"  // ¿Planes para el fin de semana?
+  ],
+  
+  reactions: [
+    "That's interesting!",   // ¡Qué interesante!
+    "Really?",               // ¿En serio?
+    "No way!",               // ¡No puede ser!
+    "That's awesome!",       // ¡Qué genial!
+    "I see"                  // Ya veo
+  ],
+  
+  fillers: [
+    "You know...",     // Sabes...
+    "Well...",         // Bueno...
+    "Actually...",     // De hecho...
+    "By the way...",   // Por cierto...
+    "Anyway..."        // En fin...
+  ]
+};
+```
+
+**Ejemplos en conversación:**
+
+- That's awesome! Tell me more (¡Qué genial! Cuéntame más)
+- Really? I didn't know that (¿En serio? No sabía eso)
+- By the way, have you seen John? (Por cierto, ¿has visto a John?)
+- Anyway, I should get going (En fin, debería irme)
+- That reminds me... (Eso me recuerda...)
+
+---
+
+## Opiniones y Preferencias
+
+<Tabs>
+  <TabItem label="Me gusta">
+    ```javascript
+    const likes = {
+      basic: "I like it",              // Me gusta
+      strong: "I love it",             // Me encanta
+      enthusiastic: "I'm into it",     // Me va / Me interesa
+      preference: "I prefer...",       // Prefiero...
+      favorite: "My favorite is..."   // Mi favorito es...
+    };
+    ```
+    
+    - I really like this place (Me gusta mucho este lugar)
+    - I love Italian food (Me encanta la comida italiana)
+    - I prefer tea over coffee (Prefiero té en lugar de café)
+  </TabItem>
+  
+  <TabItem label="No me gusta">
+    ```javascript
+    const dislikes = {
+      mild: "I'm not a fan of...",        // No soy fanático de...
+      moderate: "I don't really like...",  // Realmente no me gusta...
+      strong: "I hate...",                 // Odio...
+      polite: "It's not my thing"          // No es lo mío
+    };
+    ```
+    
+    - I'm not a fan of spicy food (No soy fanático de la comida picante)
+    - It's not really my thing (No es realmente lo mío)
+    - I don't like waiting (No me gusta esperar)
+  </TabItem>
+  
+  <TabItem label="Sugerencias">
+    ```javascript
+    const suggestions = [
+      "How about...?",        // ¿Qué tal...?
+      "Why don't we...?",     // ¿Por qué no...?
+      "Let's...",             // Vamos a...
+      "We could...",          // Podríamos...
+      "What if we...?"        // ¿Y si...?
+    ];
+    ```
+    
+    - How about going to the movies? (¿Qué tal ir al cine?)
+    - Let's grab lunch (Vamos a almorzar)
+    - We could meet at 3 PM (Podríamos encontrarnos a las 3 PM)
+  </TabItem>
+</Tabs>
+
+---
+
+## Frases de Emergencia
+
+Frases importantes para situaciones urgentes:
+
+<Aside type="caution">
+**Situaciones de emergencia:**
+
+- **Help!** (¡Ayuda!)
+- **Call the police!** (¡Llama a la policía!)
+- **I need a doctor** (Necesito un médico)
+- **There's been an accident** (Ha habido un accidente)
+- **Where's the hospital?** (¿Dónde está el hospital?)
+- **I'm lost** (Estoy perdido/a)
+- **I lost my passport** (Perdí mi pasaporte)
+- **Someone stole my wallet** (Alguien robó mi cartera)
+</Aside>
+
+---
+
+## Expresiones de Tiempo
+
+```javascript
+const timeExpressions = {
+  now: "right now / at the moment",     // ahora mismo
+  soon: "in a minute / shortly",        // pronto
+  later: "later / in a while",          // más tarde
+  always: "all the time / constantly",  // siempre
+  never: "never / not at all"           // nunca
+};
+```
+
+**En oraciones:**
+
+- I'm busy right now (Estoy ocupado ahora mismo)
+- I'll be there in a minute (Estaré ahí en un minuto)
+- Let's talk later (Hablemos más tarde)
+- I go there all the time (Voy ahí todo el tiempo)
+- I never eat fast food (Nunca como comida rápida)
+
+---
+
+## Errores Comunes
+
+<Aside type="danger">
+**Confundir "Sorry" con "Excuse me"**
+
+Use **"Excuse me"** para:
+- Interrumpir educadamente: Excuse me, can I ask a question? (Disculpe, ¿puedo hacer una pregunta?)
+- Pedir paso: Excuse me (Al pasar entre personas)
+- Llamar atención: Excuse me, waiter! (¡Disculpe, camarero!)
+
+Use **"Sorry"** para:
+- Disculparse: Sorry I'm late (Perdón por llegar tarde)
+- Simpatía: I'm sorry to hear that (Lamento escuchar eso)
+- Pedir repetición (informal): Sorry? (¿Perdón?)
+</Aside>
+
+<Aside type="danger">
+**Decir "No problem" a TODO**
+
+~~A: "Thank you!" B: "No problem"~~ (correcto pero informal)
+
+**En contextos formales**, mejor usa:
+- **"You're welcome"** (De nada)
+- **"My pleasure"** (Es un placer)
+- **"Happy to help"** (Encantado de ayudar)
+
+"No problem" es muy casual para situaciones profesionales.
+</Aside>
+
+<Aside type="danger">
+**Olvidar "please" en peticiones directas**
+
+Peticiones directas sin "please" pueden sonar bruscas:
+
+~~"Give me the pen"~~ (suena como orden)
+
+→ **"Can you give me the pen, please?"** (¿Puedes darme el bolígrafo, por favor?)
+
+→ **"Please give me the pen"** (Por favor dame el bolígrafo)
+
+Siempre añade cortesía a las peticiones.
+</Aside>
+
+<Aside type="danger">
+**Traducir literalmente "De nada"**
+
+~~"Of nothing"~~ (traducción literal incorrecta)
+
+→ **"You're welcome"** (De nada - respuesta estándar)
+
+→ **"No problem"** (Sin problema - casual)
+
+→ **"Anytime"** (Cuando quieras - amigable)
+
+No traduzcas palabra por palabra, usa las expresiones naturales en inglés.
+</Aside>
