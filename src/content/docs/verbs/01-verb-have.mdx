@@ -3,3 +3,388 @@ title: Verbo Have
 description: Aprende todos los usos del verbo have.
 ---
 
+import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
+
+El verbo **have** (tener) es como un método multipropósito en programación: puede funcionar como verbo principal para indicar posesión, o como auxiliar para construir tiempos perfectos. A diferencia del español, donde "haber" y "tener" son verbos separados, en inglés **have** cumple ambas funciones.
+
+Dominar este verbo es esencial porque aparece en expresiones cotidianas, tiempos compuestos y estructuras fundamentales del inglés.
+
+---
+
+## Formas del Verbo Have (Presente)
+
+El verbo have tiene dos formas en presente:
+
+```javascript
+const toHave = {
+  I: "have",         // yo tengo
+  you: "have",       // tú tienes
+  he: "has",         // él tiene
+  she: "has",        // ella tiene
+  it: "has",         // eso tiene
+  we: "have",        // nosotros tenemos
+  they: "have"       // ellos tienen
+};
+```
+
+**Ejemplos:**
+- I have a car (Tengo un carro)
+- You have two brothers (Tienes dos hermanos)
+- She has a meeting (Ella tiene una reunión)
+- We have time (Tenemos tiempo)
+- They have questions (Ellos tienen preguntas)
+
+<Aside type="tip">
+**Regla simple:** Usa **has** solo con "he/she/it". Para todo lo demás, usa **have**.
+</Aside>
+
+---
+
+## Tres Formas: Afirmativa, Negativa, Pregunta
+
+<Tabs>
+  <TabItem label="Afirmativa">
+    ```javascript
+    const affirmative = {
+      structure: "Subject + have/has + object",
+      examples: [
+        "I have a dog",         // Tengo un perro
+        "You have talent",      // Tienes talento
+        "He has money",         // Él tiene dinero
+        "She has an idea",      // Ella tiene una idea
+        "It has wheels",        // Tiene ruedas
+        "We have plans",        // Tenemos planes
+        "They have kids"        // Ellos tienen hijos
+      ]
+    };
+    ```
+  </TabItem>
+  
+  <TabItem label="Negativa">
+    ```javascript
+    const negative = {
+      structure: "Subject + don't/doesn't + have",
+      examples: [
+        "I don't have time",       // No tengo tiempo
+        "You don't have to go",    // No tienes que ir
+        "He doesn't have a car",   // Él no tiene carro
+        "She doesn't have pets",   // Ella no tiene mascotas
+        "It doesn't have sound",   // No tiene sonido
+        "We don't have money",     // No tenemos dinero
+        "They don't have keys"     // No tienen llaves
+      ]
+    };
+    ```
+    
+    Para negar, usa **don't have** (I/you/we/they) o **doesn't have** (he/she/it).
+  </TabItem>
+  
+  <TabItem label="Pregunta">
+    ```javascript
+    const question = {
+      structure: "Do/Does + subject + have + ?",
+      examples: [
+        "Do I have time?",          // ¿Tengo tiempo?
+        "Do you have a pen?",       // ¿Tienes un bolígrafo?
+        "Does he have siblings?",   // ¿Tiene hermanos?
+        "Does she have a phone?",   // ¿Tiene teléfono?
+        "Does it have a name?",     // ¿Tiene nombre?
+        "Do we have options?",      // ¿Tenemos opciones?
+        "Do they have tickets?"     // ¿Tienen boletos?
+      ]
+    };
+    ```
+    
+    Para preguntar, usa **Do...have** o **Does...have** según el sujeto.
+  </TabItem>
+</Tabs>
+
+---
+
+## Have Got (Alternativa Británica)
+
+En inglés británico, **have got** es común para expresar posesión. Significa exactamente lo mismo que **have**, pero su estructura es diferente:
+
+<Tabs>
+  <TabItem label="Afirmativa">
+    ```javascript
+    const haveGot = {
+      structure: "Subject + have/has + got + object",
+      examples: [
+        "I've got a car",        // Tengo un carro
+        "You've got mail",       // Tienes correo
+        "He's got a problem",    // Él tiene un problema
+        "She's got blue eyes",   // Ella tiene ojos azules
+        "We've got news",        // Tenemos noticias
+        "They've got talent"     // Ellos tienen talento
+      ]
+    };
+    ```
+  </TabItem>
+  
+  <TabItem label="Negativa">
+    ```javascript
+    const haveGotNegative = {
+      structure: "Subject + haven't/hasn't + got",
+      examples: [
+        "I haven't got time",      // No tengo tiempo
+        "You haven't got a clue",  // No tienes idea
+        "He hasn't got money",     // Él no tiene dinero
+        "She hasn't got patience", // No tiene paciencia
+        "We haven't got food",     // No tenemos comida
+        "They haven't got keys"    // No tienen llaves
+      ]
+    };
+    ```
+    
+    Con **have got**, no necesitas "do/does" para negar.
+  </TabItem>
+  
+  <TabItem label="Pregunta">
+    ```javascript
+    const haveGotQuestion = {
+      structure: "Have/Has + subject + got + ?",
+      examples: [
+        "Have I got this right?",  // ¿Lo entendí bien?
+        "Have you got a minute?",  // ¿Tienes un minuto?
+        "Has he got the keys?",    // ¿Tiene las llaves?
+        "Has she got a boyfriend?",// ¿Tiene novio?
+        "Have we got enough?",     // ¿Tenemos suficiente?
+        "Have they got children?"  // ¿Tienen hijos?
+      ]
+    };
+    ```
+    
+    Con **have got**, inviertes el orden sin necesitar "do/does".
+  </TabItem>
+</Tabs>
+
+<Aside type="note">
+**Have** vs **Have got**: Ambos son correctos. **Have** es más común en inglés americano y en contextos formales. **Have got** es más coloquial y frecuente en inglés británico.
+</Aside>
+
+---
+
+## Usos Principales de Have
+
+### Posesión
+
+El uso más básico de **have** es indicar que algo te pertenece o está en tu poder:
+
+- I have a new laptop (Tengo una laptop nueva)
+- She has three cats (Ella tiene tres gatos)
+- They have a beautiful house (Tienen una casa hermosa)
+- Do you have my number? (¿Tienes mi número?)
+
+### Relaciones y Características
+
+**Have** también describe relaciones personales y características físicas:
+
+- I have two sisters (Tengo dos hermanas)
+- He has brown hair (Él tiene cabello castaño)
+- She has a great personality (Ella tiene una gran personalidad)
+- We have good neighbors (Tenemos buenos vecinos)
+
+### Experiencias y Estados
+
+En muchos casos donde el español usa "estar" o "sentir", el inglés usa **have**:
+
+- I have a headache (Tengo dolor de cabeza)
+- She has a cold (Ella tiene un resfriado)
+- They have doubts (Tienen dudas)
+- We have a problem (Tenemos un problema)
+
+---
+
+## Expresiones Comunes con Have
+
+El verbo **have** aparece en muchas expresiones fijas que NO significan "tener" literalmente:
+
+<CardGrid>
+  <Card title="Comidas">
+    - have breakfast (desayunar)
+    - have lunch (almorzar)
+    - have dinner (cenar)
+    - have a snack (merendar)
+    - have a drink (tomar algo)
+  </Card>
+  
+  <Card title="Actividades">
+    - have a shower (ducharse)
+    - have a bath (bañarse)
+    - have a nap (tomar una siesta)
+    - have a rest (descansar)
+    - have a walk (dar un paseo)
+  </Card>
+  
+  <Card title="Experiencias">
+    - have fun (divertirse)
+    - have a good time (pasarla bien)
+    - have a bad day (tener un mal día)
+    - have an accident (tener un accidente)
+    - have a dream (tener un sueño)
+  </Card>
+  
+  <Card title="Conversaciones">
+    - have a chat (charlar)
+    - have a talk (hablar/conversar)
+    - have an argument (discutir)
+    - have a meeting (tener una reunión)
+    - have an appointment (tener una cita)
+  </Card>
+</CardGrid>
+
+**Ejemplos en contexto:**
+- I usually have breakfast at 8 (Usualmente desayuno a las 8)
+- Let's have a coffee (Tomemos un café)
+- We had a great time (La pasamos genial)
+- She's having a shower (Ella se está duchando)
+
+<Aside type="tip">
+En estas expresiones, **have** funciona como un verbo de acción y puede usarse en tiempos continuos: "I'm having dinner" (Estoy cenando).
+</Aside>
+
+---
+
+## Have To (Obligación)
+
+**Have to** expresa obligación o necesidad, similar a "tener que" en español:
+
+```javascript
+const haveTo = {
+  affirmative: "Subject + have/has to + verb",
+  negative: "Subject + don't/doesn't have to",
+  question: "Do/Does + subject + have to + ?"
+};
+```
+
+**Ejemplos:**
+- I have to work tomorrow (Tengo que trabajar mañana)
+- She has to study for the exam (Ella tiene que estudiar para el examen)
+- You don't have to pay (No tienes que pagar)
+- Do we have to wait? (¿Tenemos que esperar?)
+
+<Aside type="note">
+**Don't have to** significa "no es necesario", no "estar prohibido". Para prohibición, usa **must not**: "You mustn't smoke here" (No debes fumar aquí).
+</Aside>
+
+---
+
+## Have como Auxiliar (Tiempos Perfectos)
+
+Como auxiliar, **have** se usa para formar tiempos perfectos:
+
+<Tabs>
+  <TabItem label="Present Perfect">
+    ```javascript
+    const presentPerfect = {
+      structure: "have/has + past participle",
+      examples: [
+        "I have worked here",    // He trabajado aquí
+        "She has finished",      // Ella ha terminado
+        "They have eaten",       // Ellos han comido
+        "We have seen it"        // Lo hemos visto
+      ]
+    };
+    ```
+  </TabItem>
+  
+  <TabItem label="Past Perfect">
+    ```javascript
+    const pastPerfect = {
+      structure: "had + past participle",
+      examples: [
+        "I had worked there",    // Había trabajado allí
+        "She had finished",      // Ella había terminado
+        "They had eaten",        // Ellos habían comido
+        "We had seen it"         // Lo habíamos visto
+      ]
+    };
+    ```
+  </TabItem>
+</Tabs>
+
+<Aside type="tip">
+Cuando **have** es auxiliar, las contracciones son muy comunes: I've, you've, he's, she's, we've, they've, I'd, you'd, etc.
+</Aside>
+
+---
+
+## Pasado de Have
+
+En pasado, **have** se convierte en **had** para todos los sujetos:
+
+```javascript
+const hadPast = {
+  I: "had",          // yo tenía/tuve
+  you: "had",        // tú tenías/tuviste
+  he: "had",         // él tenía/tuvo
+  she: "had",        // ella tenía/tuvo
+  it: "had",         // eso tenía/tuvo
+  we: "had",         // nosotros teníamos/tuvimos
+  they: "had"        // ellos tenían/tuvieron
+};
+```
+
+**Ejemplos:**
+- I had a bicycle when I was young (Tenía una bicicleta cuando era joven)
+- She had a lot of friends in school (Ella tenía muchos amigos en la escuela)
+- We had a great vacation (Tuvimos unas vacaciones geniales)
+- They didn't have internet back then (No tenían internet en ese entonces)
+- Did you have fun? (¿Te divertiste?)
+
+---
+
+## Errores Comunes
+
+<Aside type="danger">
+**Usar "have" con la tercera persona sin cambiar a "has"**
+
+Con he/she/it, siempre usa **has**, no "have":
+
+~~He have a car~~ / ~~She have money~~
+
+→ **He has a car** (Él tiene un carro)
+
+→ **She has money** (Ella tiene dinero)
+</Aside>
+
+<Aside type="danger">
+**Negar con "haven't" en lugar de "don't have"**
+
+En inglés americano estándar, no se usa "haven't" solo para negar posesión:
+
+~~I haven't a car~~ / ~~She hasn't money~~
+
+→ **I don't have a car** (No tengo carro)
+
+→ **She doesn't have money** (Ella no tiene dinero)
+
+Excepción: Con **have got** sí es correcto: "I haven't got a car".
+</Aside>
+
+<Aside type="danger">
+**Confundir "have to" con "must" en negativo**
+
+Significan cosas diferentes en negativo:
+
+**Don't have to** = No es necesario (tienes opción)
+
+**Must not** = Está prohibido (no tienes opción)
+
+- You don't have to come (No tienes que venir - es opcional)
+- You must not smoke here (No debes fumar aquí - prohibido)
+</Aside>
+
+<Aside type="danger">
+**Decir "I am have" o "She is has"**
+
+Nunca combines "to be" con "have" de esta forma:
+
+~~I am have a problem~~ / ~~She is has a car~~
+
+→ **I have a problem** (Tengo un problema)
+
+→ **She has a car** (Ella tiene un carro)
+</Aside>
+
