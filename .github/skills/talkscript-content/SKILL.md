@@ -64,7 +64,6 @@ Use **only** Starlight built-in components:
 ## Document Structure Guidelines
 
 ### Frontmatter (Required)
-
 ```yaml
 ---
 title: [Topic name in Spanish]
@@ -73,7 +72,6 @@ description: [One-line description in Spanish]
 ```
 
 ### Import Statement (Required)
-
 ```javascript
 import { [needed components] } from '@astrojs/starlight/components';
 ```
@@ -112,26 +110,32 @@ import { [needed components] } from '@astrojs/starlight/components';
 ### Code Block Requirements
 
 - Maximum 10 lines per block
+- **Keep examples short and simple** to avoid horizontal scrolling
+- Limit line length to approximately 50 characters when possible
 - Include brief inline comments when helpful
 - Use JavaScript syntax highlighting
 - Focus on data structures (objects, arrays) over functions
+- **Inside `<Tabs>`: Each `<TabItem>` should include code examples**
 
-### Alternative Formats
+### Alternative Formats for Simple Patterns
 
-If code doesn't add clarity, use:
-
-- Plain text with arrows/symbols for transformations
-- Bulleted lists for examples
-- Tables (via text formatting or `<Card>`)
-- Visual diagrams using text art
+For very simple transformations or rules, use plain text with visual indicators instead of code blocks
 
 ## Content Quality Standards
 
 ### Examples
-- Always provide 3-5 practical examples per concept
+
+**Code/Pattern Examples (within tabs or main explanations)**:
+- Keep code examples **short and simple** to avoid horizontal scroll
+- Use concise variable names and clear structure
+- Limit line length to avoid scrolling
+- Every code example must demonstrate the pattern clearly
+
+**Additional Real-World Examples (after code blocks)**:
+- Provide 3-5 practical examples per concept in plain text
 - Use realistic, everyday contexts
 - **Every English example must include Spanish translation in parentheses**
-- Format: `English text` (Traducción en español)
+- Format: English text (Traducción en español)
 - Show Spanish → English translation when relevant
 - Vary the examples (don't repeat same subject/verb patterns)
 
@@ -183,8 +187,10 @@ Before delivering content, verify:
 - [ ] Exactly 1 or more common errors at the end
 - [ ] No emojis or decorative symbols
 - [ ] Code blocks are justified and minimal
+- [ ] Code examples are short to avoid horizontal scrolling
+- [ ] Each TabItem contains code examples
 - [ ] Examples are practical and varied
-- [ ] **All English examples include Spanish translation**
+- [ ] All English examples include Spanish translation
 - [ ] Spanish language throughout (except frontmatter keys)
 - [ ] No custom components used
 
@@ -197,9 +203,10 @@ Before delivering content, verify:
 1. Assess complexity: Intermediate (has rules for he/she/it, negatives, questions)
 2. Determine structure: Main sections for affirmative, negative, interrogative
 3. Choose metaphors: Object for conjugation rules, pattern matching for transformations
-4. Create 3-5 examples per section with varied contexts
-5. Identify 3 most common errors (forgetting -s, using auxiliars incorrectly, etc.)
-6. Write in Spanish with appropriate Starlight components
+4. Create code examples within each TabItem (keep short, avoid horizontal scroll)
+5. Provide 3-5 real-world examples after code blocks with Spanish translations
+6. Identify common errors (forgetting -s, using auxiliars incorrectly, etc.)
+7. Write in Spanish with appropriate Starlight components
 
 **Output**: Complete `.mdx` file following all guidelines, adapted to topic complexity
 

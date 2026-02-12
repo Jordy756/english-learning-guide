@@ -3,236 +3,249 @@ title: Pronunciación Básica
 description: Aprende los fundamentos de la pronunciación en inglés.
 ---
 
-import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
+import { Aside, Tabs, TabItem, Card, CardGrid } from '@astrojs/starlight/components';
 
-La pronunciación en inglés es como configurar tu motor de texto a voz: necesitas mapear sonidos del español a nuevos sonidos del inglés. A diferencia del español donde cada letra tiene generalmente un sonido fijo, el inglés es más como JavaScript: la misma "variable" (letra) puede tener diferentes "valores" (sonidos) según el contexto.
+## Introducción
 
-Dominar la pronunciación básica te permitirá ser entendido y ganar confianza desde el primer día. No necesitas un acento perfecto, solo claridad en los sonidos clave.
+La pronunciación en inglés puede parecer complicada al principio, especialmente porque el español tiene una relación casi perfecta entre escritura y sonido, mientras que el inglés no. La misma letra puede sonar diferente en distintas palabras, y diferentes letras pueden producir el mismo sonido.
 
-## El Sistema de Sonidos
+Piensa en la pronunciación como un **sistema de mapeo** donde cada símbolo escrito puede tener múltiples valores posibles. En programación, esto es similar a un objeto que puede tener diferentes propiedades según su contexto. No necesitas memorizar todo de inmediato, solo familiarizarte con los patrones más comunes.
 
-El inglés tiene aproximadamente 44 sonidos distintos (fonemas), mientras que el español tiene solo 24. Es como aprender nuevas funciones que no existen en tu lenguaje nativo:
+---
 
-```js
-const spanishSounds = {
-  vowels: 5,      // a, e, i, o, u (siempre igual)
-  consonants: 19
-};
+## El Alfabeto Fonético Internacional (IPA)
 
-const englishSounds = {
-  vowels: 20,     // vocales + diptongos (varían según contexto)
-  consonants: 24  // incluye sonidos nuevos como th, r, v
+Para representar sonidos de forma precisa, usaremos el **IPA** (International Phonetic Alphabet). Es como tener una **notación estándar** que elimina la ambigüedad.
+
+<Aside type="tip">
+El IPA usa símbolos entre barras diagonales: `/bʊk/` para "book". Cada símbolo representa exactamente un sonido.
+</Aside>
+
+No te preocupes por aprender todos los símbolos ahora. Con el tiempo, los reconocerás naturalmente.
+
+---
+
+## Vocales: Los Patrones Básicos
+
+El inglés tiene **12 sonidos vocálicos** principales, comparado con las 5 del español. Aquí están los más importantes para empezar:
+
+<Tabs>
+  <TabItem label="Vocales Cortas">
+```javascript
+const vocalesCortas = {
+  /ɪ/: "sit, big, fish",
+  /e/: "bed, red, said",
+  /æ/: "cat, hat, man",
+  /ʌ/: "cup, but, love",
+  /ɒ/: "hot, box, dog"
 };
 ```
 
-<Aside type="tip" title="Regla fundamental">
-En inglés, la **ortografía ≠ pronunciación**. Debes aprender los sonidos independientemente de cómo se escriben las palabras.
+Estas vocales son breves y tensas. **No las alargues** como harías en español.
+  </TabItem>
+  
+  <TabItem label="Vocales Largas">
+```javascript
+const vocalesLargas = {
+  /iː/: "see, eat, key",
+  /uː/: "food, blue, soon",
+  /ɑː/: "car, father, arm",
+  /ɔː/: "door, ball, More",
+  /ɜː/: "bird, work, learn"
+};
+```
+
+Los dos puntos `ː` indican que el sonido se sostiene más tiempo.
+  </TabItem>
+  
+  <TabItem label="Diptongos">
+```javascript
+const diptongos = {
+  /eɪ/: "name, day, make",
+  /aɪ/: "my, time, like",
+  /ɔɪ/: "boy, coin, join",
+  /aʊ/: "now, house, out",
+  /əʊ/: "go, home, no"
+};
+```
+
+Los diptongos **combinan dos sonidos** en una sílaba deslizándose de uno al otro.
+  </TabItem>
+</Tabs>
+
+**Ejemplos prácticos:**
+
+- I **sit** on the chair (Me siento en la silla) - /sɪt/
+- She can **see** the ocean (Ella puede ver el océano) - /siː/
+- This is **my** book (Este es mi libro) - /maɪ/
+- The **house** is big (La casa es grande) - /haʊs/
+- He has a **cup** of coffee (Él tiene una taza de café) - /kʌp/
+
+---
+
+## Consonantes: Lo Que Necesitas Saber
+
+La mayoría de las consonantes en inglés son similares al español, pero hay algunas diferencias críticas:
+
+<CardGrid>
+  <Card title="TH Suave /θ/" icon="information">
+    Como la "c" en "cielo" peninsular español
+    
+    **think** (pensar), **three** (tres), **birthday** (cumpleaños)
+  </Card>
+  
+  <Card title="TH Sonora /ð/" icon="information">
+    Vibración en las cuerdas vocales
+    
+    **this** (esto), **that** (eso), **mother** (madre)
+  </Card>
+  
+  <Card title="H Aspirada /h/" icon="information">
+    Como exhalar suavemente
+    
+    **hello** (hola), **house** (casa), **happy** (feliz)
+  </Card>
+  
+  <Card title="R Suave /r/" icon="information">
+    La lengua NO toca el paladar
+    
+    **red** (rojo), **car** (coche), **very** (muy)
+  </Card>
+</CardGrid>
+
+**Ejemplos comparativos:**
+
+- I **think** about you (Pienso en ti) - /θɪŋk/
+- **This** is my friend (Este es mi amigo) - /ðɪs/
+- **Hello**, how are you? (Hola, ¿cómo estás?) - /həˈləʊ/
+- The **red** car is fast (El coche rojo es rápido) - /red/
+
+---
+
+## Acento y Énfasis
+
+En inglés, cada palabra tiene una **sílaba acentuada** que suena más fuerte y clara. Cambiar el acento puede cambiar el significado:
+
+```javascript
+const patronesAcento = {
+  present: {
+    sustantivo: "PREsent (regalo)", // ˈprezənt
+    verbo: "preSENT (presentar)"    // prɪˈzent
+  },
+  record: {
+    sustantivo: "REcord (disco)",   // ˈrekɔːd
+    verbo: "reCORD (grabar)"        // rɪˈkɔːd
+  }
+};
+```
+
+<Aside type="note">
+En el IPA, el símbolo `ˈ` antes de una sílaba indica que lleva el acento principal.
 </Aside>
+
+**Ejemplos en contexto:**
+
+- This is a **present** for you (Esto es un regalo para ti) - /ˈprezənt/
+- Let me **present** my team (Déjame presentar mi equipo) - /prɪˈzent/
+- I bought a new **record** (Compré un disco nuevo) - /ˈrekɔːd/
+- Can you **record** this? (¿Puedes grabar esto?) - /rɪˈkɔːd/
 
 ---
 
 ## Sonidos que No Existen en Español
 
-Estos son los "métodos nuevos" que debes agregar a tu repertorio:
+Algunos sonidos ingleses no tienen equivalente directo en español:
 
 <Tabs>
-  <TabItem label="TH sonoro /ð/">
-
-**Ejemplo:** this, that, mother  _(este/a, ese/a, madre)_
-**Cómo hacerlo:** Lengua entre los dientes, vibrar cuerdas vocales
-
-```js
-// Mapeo incorrecto (español)
-const wrong = "dis" // ✗
-
-// Mapeo correcto (inglés)
-const correct = "ðɪs" // ✓ (th suena)
-```
-
-  </TabItem>
-
-  <TabItem label="TH sordo /θ/">
-
-**Ejemplo:** think, thank, nothing  _(pensar, agradecer, nada)_
-**Cómo hacerlo:** Lengua entre los dientes, sin vibrar cuerdas vocales
-
-```js
-// Mapeo incorrecto
-const wrong = "sink" // ✗ (cambia significado)
-
-// Mapeo correcto
-const correct = "θɪŋk" // ✓ (th aspirado)
-```
-
-  </TabItem>
-
-  <TabItem label="R americana /r/">
-
-**Ejemplo:** red, car, word  _(rojo, carro, palabra)_
-**Cómo hacerlo:** Lengua enrollada hacia atrás, sin tocar el paladar
-
-```js
-// Mapeo español (vibrante)
-const wrong = "rojo" // ✗ (suena muy fuerte)
-
-// Mapeo inglés (retroflexa)
-const correct = "ɹɛd" // ✓ (suave, gutural)
-```
-
-  </TabItem>
-
-  <TabItem label="V labial /v/">
-
-**Ejemplo:** very, have, love  _(muy, tener, amor)_
-**Cómo hacerlo:** Dientes superiores sobre labio inferior, vibrar
-
-```js
-// Error común: pronunciar como B
-const wrong = "bery" // ✗
-
-// Correcto: dientes sobre labio
-const correct = "vɛri" // ✓
-```
-
-  </TabItem>
-
   <TabItem label="Schwa /ə/">
-
-**Ejemplo:** about, banana, problem  _(acerca de, plátano, problema)_
-**Cómo hacerlo:** Vocal neutra, boca relajada (sonido más común en inglés)
-
-```js
-// Todas las vocales pueden reducirse a schwa:
-const words = {
-  about: "əˈbaʊt",    // primera 'a' = schwa
-  banana: "bəˈnænə",  // primera y última 'a' = schwa
-  problem: "ˈprɑbləm" // segunda sílaba = schwa
+```javascript
+// El sonido más común en inglés
+// Vocal reducida, relajada, neutral
+const schwa = {
+  about: "/əˈbaʊt/",
+  sofa: "/ˈsəʊfə/",
+  teacher: "/ˈtiːtʃə/"
 };
 ```
 
+Es el sonido de una vocal **sin estrés**, muy suave y breve.
+  </TabItem>
+  
+  <TabItem label="V /v/">
+```javascript
+// Dientes superiores tocan labio inferior
+const sonidoV = {
+  very: "/ˈveri/",
+  give: "/ɡɪv/",
+  love: "/lʌv/"
+};
+```
+
+**No confundir** con /b/. La "v" vibra con los dientes sobre el labio.
+  </TabItem>
+  
+  <TabItem label="Z /z/">
+```javascript
+// Como una "s" pero vibrando
+const sonidoZ = {
+  zoo: "/zuː/",
+  please: "/pliːz/",
+  eyes: "/aɪz/"
+};
+```
+
+Las cuerdas vocales vibran, a diferencia de /s/ que es sorda.
   </TabItem>
 </Tabs>
 
----
+**Práctica con ejemplos:**
 
-## Acentuación: El Timing del Inglés
-
-El inglés es un lenguaje de "stress-timing" (como un bucle que enfatiza elementos clave), mientras que el español es "syllable-timed" (iteración uniforme). Esto significa que en inglés, las sílabas acentuadas se alargan y las no acentuadas se reducen:
-
-```js
-// Español: todas las sílabas tienen igual duración
-español.forEach(syllable => console.log(syllable)); // TA-TA-TA-TA
-
-// Inglés: sílabas acentuadas son más largas
-english.forEach((syllable, i) => {
-  if (i === stressedIndex) {
-    console.log(syllable.toUpperCase() + "---"); // TA---ta-ta-TA---
-  } else {
-    console.log(syllable.toLowerCase());
-  }
-});
-```
-
-**Patrón de énfasis:**
-- **WA**ter _(agua)_ → no "wa-TER"
-- **COM**puter _(computadora)_ → no "com-pu-TER"
-- im**POR**tant _(importante)_ → no "IM-por-tant"
-
-<Aside type="caution" title="Diccionarios y marcas de acento">
-Los diccionarios marcan la sílaba acentuada con `ˈ` antes de ella:  
-- `ˈwater` → "WA-ter"  
-- `comˈputer` → "com-PU-ter"  
-- `imˈportant` → "im-POR-tant"
-
-Aprende a identificar este símbolo para pronunciar correctamente palabras nuevas.
-</Aside>
-
----
-
-## Vocales: Cortas vs Largas
-
-A diferencia del español donde "a" siempre suena igual, en inglés la duración de la vocal cambia el significado:
-
-<CardGrid>
-  <Card title="Vocales Cortas">
-    - **ship** /ɪ/ (barco)
-    - **cat** /æ/ (gato)
-    - **hot** /ɑ/ (caliente)
-    - **cut** /ʌ/ (cortar)
-  </Card>
-  <Card title="Vocales Largas">
-    - **sheep** /i:/ (oveja)
-    - **cart** /ɑ:/ (carrito)
-    - **bought** /ɔ:/ (compró)
-    - **boot** /u:/ (bota)
-  </Card>
-</CardGrid>
-
-```js
-// La duración importa (como setTimeout vs setInterval)
-const short = "ship"; // /ɪ/ - corto
-const long = "sheep"; // /i:/ - largo (el : indica duración)
-
-// Cambiar duración = cambiar significado
-if (duration === "short") return "barco";
-if (duration === "long") return "oveja";
-```
-
----
-
-## Consonantes Finales: No Omitir
-
-En español, las consonantes finales a menudo se suavizan o desaparecen. En inglés, debes pronunciarlas claramente:
-
-```js
-// Español: tendencia a omitir final
-const español = "amor" → "amo(r)" // r casi desaparece
-
-// Inglés: la consonante final es crítica
-const english = {
-  "car": "kɑr",    // la R debe sonar
-  "card": "kɑrd",  // la D debe sonar
-  "cards": "kɑrdz" // la S/Z debe sonar
-};
-```
-
-**Pares críticos:**
-- cat /kæt/ vs. cab /kæb/ _(gato vs. taxi)_
-- seat /sit/ vs. seed /sid/ _(asiento vs. semilla)_
-- back /bæk/ vs. bag /bæg/ _(espalda vs. bolsa)_
-
----
-
-## Consejos Prácticos
-
-<Aside type="tip" title="Entrenamiento diario">
-- Practica sonidos individuales 5 minutos al día (como hacer ejercicios de sintaxis)
-- Grábate y compara con nativos (debugging de tu pronunciación)
-- Exagera los sonidos nuevos al principio (luego optimiza)
-- Usa el espejo para ver la posición de labios y lengua
-</Aside>
+- It's **about** time (Ya es hora) - /əˈbaʊt/
+- She is **very** smart (Ella es muy inteligente) - /ˈveri/
+- I **love** this song (Amo esta canción) - /lʌv/
+- **Please** help me (Por favor ayúdame) - /pliːz/
+- The **zoo** is open (El zoológico está abierto) - /zuː/
 
 ---
 
 ## Errores Comunes
 
-<Aside type="danger" title="Error #1: Pronunciar TH como T o D">
-**Explicación:** El sonido "th" no existe en español y muchos lo reemplazan por "t" o "d".
+<Aside type="danger">
+**Error:** Pronunciar todas las vocales igual de largas
 
-Incorrecto: ~~"tink"~~ (think), ~~"dis"~~ (this)  
-Correcto: **"think"** /θɪŋk/, **"this"** /ðɪs/ (lengua entre dientes)
+~~I sit on the chair~~ → Pronunciar "sit" como "seet"
+
+**Correcto:** I **sit** /sɪt/ on the chair (vocal corta y rápida)
 </Aside>
 
-<Aside type="danger" title="Error #2: V como B">
-**Explicación:** En español, "v" y "b" suenan igual. En inglés, "v" requiere dientes sobre labio.
+<Aside type="danger">
+**Error:** Pronunciar la "h" en español (sin sonido)
 
-Incorrecto: ~~"bery good"~~ (very good), ~~"I hab"~~ (I have)  
-Correcto: **"very good"** /ˈvɛri ɡʊd/, **"I have"** /aɪ hæv/ (dientes sobre labio inferior)
+~~Hello~~ → Decir "elo" sin aspiración
+
+**Correcto:** **Hello** /həˈləʊ/ (con aire suave al inicio)
 </Aside>
 
-<Aside type="danger" title="Error #3: Pronunciar todas las letras como se escriben">
-**Explicación:** El inglés tiene muchas letras mudas y combinaciones especiales.
+<Aside type="danger">
+**Error:** Usar la "r" vibrante del español
 
-Incorrecto: ~~"k-now"~~ (know), ~~"lis-ten"~~ (listen), ~~"cas-tle"~~ (castle)  
-Correcto: **"no"** /noʊ/ (k muda), **"lissen"** /ˈlɪsən/ (t muda), **"cassel"** /ˈkæsəl/ (t muda)
+~~Red car~~ → "Red" con r fuerte como "perro"
+
+**Correcto:** **Red** /red/ (lengua no toca el paladar, sonido suave)
+</Aside>
+
+<Aside type="danger">
+**Error:** No diferenciar /b/ y /v/
+
+~~Very good~~ → Decir "bery good"
+
+**Correcto:** **Very** /ˈveri/ good (dientes sobre labio inferior)
+</Aside>
+
+<Aside type="danger">
+**Error:** Ignorar el acento en las palabras
+
+~~Present~~ → Acentuar cualquier sílaba aleatoriamente
+
+**Correcto:** **PRE**sent /ˈprezənt/ (regalo) vs pre**SENT** /prɪˈzent/ (presentar)
 </Aside>
