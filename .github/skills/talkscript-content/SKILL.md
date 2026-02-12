@@ -26,6 +26,7 @@ Generate educational content for TalkScript, an English grammar guide that expla
 3. **Show, don't tell**: Use visual patterns and examples over lengthy explanations
 4. **Consistency matters**: Maintain uniform structure across all topics
 5. **Practical focus**: Every concept needs real-world English examples
+6. **Strategic organization**: Use subsections and tabs purposefully to prevent information overload
 
 ### JavaScript Metaphors
 
@@ -58,6 +59,7 @@ Use **only** Starlight built-in components:
 - Custom interactive components
 - Emojis or decorative symbols
 - Native Markdown alerts (use `<Aside>` instead)
+- Native Markdown tables (use code blocks or `<Card>` components instead)
 - Complex executable JavaScript functions
 - More than 3 code blocks per major section
 
@@ -90,6 +92,14 @@ import { [needed components] } from '@astrojs/starlight/components';
 - Complex topics: Use subsections (###) when genuinely needed
 - Use `---` horizontal rules to separate major sections visually
 
+**Strategic use of `<Tabs>`**:
+
+- Group related variations to reduce scrolling and information overload
+- Examples: verb forms (affirmative/negative/interrogative), tense variations, formality levels
+- Keep users focused by showing one variation at a time
+- Each `<TabItem>` should be self-contained with clear examples
+- Prevents overwhelming users with too much vertical content at once
+
 ### Common Errors Section (Required)
 
 - Always end with "Errores comunes" section
@@ -112,6 +122,7 @@ import { [needed components] } from '@astrojs/starlight/components';
 - Maximum 10 lines per block
 - **Keep examples short and simple** to avoid horizontal scrolling
 - Limit line length to approximately 50 characters when possible
+- **All variables, properties, and identifiers must be in English** (never Spanish)
 - Include brief inline comments when helpful
 - Use JavaScript syntax highlighting
 - Focus on data structures (objects, arrays) over functions
@@ -163,30 +174,42 @@ Before generating content, evaluate:
 - **Intermediate topics** (Tenses, Modals): Moderate structure, strategic code use
 - **Advanced topics** (Conditionals, Reported Speech): Complex structure, more subsections
 
-### Subsection Guidelines
+### Subsection Strategy
 
-Create subsections (###) only when:
+**When to use subsections (###)**:
 
-- Topic has 2+ distinct sub-concepts
-- Each sub-concept needs separate explanation
-- Improves scannability and navigation
+- Topic has 2+ distinct sub-concepts that warrant separate focus
+- Each sub-concept needs independent explanation with its own examples
+- Improves document navigation and scannability
+- Prevents information overload by breaking complex topics into digestible chunks
 
-**Don't create subsections** for:
+**When NOT to use subsections**:
 
 - Single concepts with variations (use `<Tabs>` instead)
-- Simple lists or examples
-- Minor distinctions that fit in one section
+- Simple lists or examples that belong together
+- Minor distinctions that fit naturally in one section
+- Content that flows better as a continuous explanation
+
+**Best practice**: Use subsections strategically to organize content hierarchically. A well-structured document uses subsections to guide readers through related but distinct concepts, not just to break up long text.
 
 ## Output Validation
 
 Before delivering content, verify:
+
+**Structure & Format**:
 - [ ] Frontmatter is complete and correct
 - [ ] Imports include all used components
 - [ ] Introduction is 1-2 paragraphs maximum
 - [ ] Structure matches topic complexity (not all topics are identical)
+- [ ] Subsections are used strategically (not excessively or unnecessarily)
+- [ ] `<Tabs>` are used to group similar variations and reduce scroll
+
+**Content Quality**:
 - [ ] Exactly 1 or more common errors at the end
 - [ ] No emojis or decorative symbols
+- [ ] No native Markdown tables (use code blocks or components)
 - [ ] Code blocks are justified and minimal
+- [ ] All variables/identifiers in code are in English (never Spanish)
 - [ ] Code examples are short to avoid horizontal scrolling
 - [ ] Each TabItem contains code examples
 - [ ] Examples are practical and varied
