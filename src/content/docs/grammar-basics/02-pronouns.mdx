@@ -11,124 +11,89 @@ Dominar los pronombres te permite hablar de manera más fluida y natural, sin re
 
 ---
 
-## Pronombres de Sujeto
-
-Los pronombres de sujeto realizan la acción del verbo. Van **antes del verbo**:
-
-```javascript
-const subjectPronouns = {
-  singular: {
-    first: "I",         // yo
-    second: "you",      // tú/usted
-    third: {
-      male: "he",       // él
-      female: "she",    // ella
-      thing: "it"       // eso/ello
-    }
-  },
-  plural: {
-    first: "we",        // nosotros/nosotras
-    second: "you",      // ustedes/vosotros
-    third: "they"       // ellos/ellas
-  }
-};
-```
-
-**Ejemplos:**
-- **I** work here (Yo trabajo aquí)
-- **You** are smart (Tú eres inteligente)
-- **He** lives in Paris (Él vive en París)
-- **She** speaks Spanish (Ella habla español)
-- **It** is raining (Está lloviendo)
-- **We** are friends (Somos amigos)
-- **They** study English (Ellos estudian inglés)
-
-<Aside type="tip">
-**"I" siempre se escribe en mayúscula**, sin importar dónde esté en la oración: "I am happy" o "Sarah and I are friends".
-</Aside>
-
----
-
-## Pronombres de Objeto
-
-Los pronombres de objeto reciben la acción del verbo. Van **después del verbo o preposición**:
-
-```javascript
-const objectPronouns = {
-  singular: {
-    first: "me",        // me/mí
-    second: "you",      // te/ti/usted
-    third: {
-      male: "him",      // lo/le (a él)
-      female: "her",    // la/le (a ella)
-      thing: "it"       // lo/la (eso)
-    }
-  },
-  plural: {
-    first: "us",        // nos/nosotros
-    second: "you",      // les/ustedes
-    third: "them"       // los/las/les (a ellos)
-  }
-};
-```
-
-**Ejemplos:**
-- Call **me** later (Llámame luego)
-- I see **you** (Te veo)
-- She loves **him** (Ella lo ama)
-- We know **her** (La conocemos)
-- Buy **it** now (Cómpralo ahora)
-- Tell **us** the truth (Dinos la verdad)
-- I'm with **them** (Estoy con ellos)
-
----
-
-## Comparación Sujeto vs. Objeto
+## Tipos de Pronombres
 
 <Tabs>
-  <TabItem label="Sujeto → Objeto">
+  <TabItem label="Sujeto">
+    Los pronombres de sujeto realizan la acción del verbo. Van **antes del verbo**:
+
     ```javascript
-    const pronounMap = {
-      "I": "me",        // yo → me/mí
-      "you": "you",     // tú → te/ti
-      "he": "him",      // él → lo/le
-      "she": "her",     // ella → la/le
-      "it": "it",       // eso → lo/la
-      "we": "us",       // nosotros → nos
-      "they": "them"    // ellos → los/las
+    const subjectPronouns = {
+      "I": "I",      // yo
+      "you": "you",  // tú/usted
+      "he": "he",    // él
+      "she": "she",  // ella
+      "it": "it",    // eso/ello
+      "we": "we",    // nosotros
+      "they": "they" // ellos
     };
     ```
+
+    **Ejemplos:**
+    - **I** work here (Yo trabajo aquí)
+    - **You** are smart (Tú eres inteligente)
+    - **He** lives in Paris (Él vive en París)
+    - **She** speaks Spanish (Ella habla español)
+    - **It** is raining (Está lloviendo)
+    - **We** are friends (Somos amigos)
+    - **They** study English (Ellos estudian inglés)
+
+    <Aside type="tip">
+    **"I" siempre se escribe en mayúscula**, sin importar dónde esté en la oración: "I am happy" o "Sarah and I are friends".
+    </Aside>
   </TabItem>
   
-  <TabItem label="En oraciones">
+  <TabItem label="Objeto">
+    Los pronombres de objeto reciben la acción del verbo. Van **después del verbo o preposición**:
+
     ```javascript
-    // Sujeto | Objeto
-    const examples = [
-      "I love music → Music inspires me",
-      // Yo amo la música → La música me inspira
-      
-      "He calls Sarah → Sarah calls him",
-      // Él llama a Sarah → Sarah lo llama
-      
-      "We help John → John helps us",
-      // Ayudamos a John → John nos ayuda
-      
-      "They invited Mary → Mary invited them"
-      // Invitaron a Mary → Mary los invitó
-    ];
+    const objectPronouns = {
+      "I": "me",     // mí
+      "you": "you",  // te/ti
+      "he": "him",   // lo/le (a él)
+      "she": "her",  // la/le (a ella)
+      "it": "it",    // lo/la (eso)
+      "we": "us",    // nos
+      "they": "them" // los/las/les (a ellos)
+    };
     ```
+
+    **Ejemplos:**
+    - Call **me** later (Llámame luego)
+    - I see **you** (Te veo)
+    - She loves **him** (Ella lo ama)
+    - We know **her** (La conocemos)
+    - Buy **it** now (Cómpralo ahora)
+    - Tell **us** the truth (Dinos la verdad)
+    - I'm with **them** (Estoy con ellos)
   </TabItem>
   
-  <TabItem label="Tabla completa">
-    | Sujeto | Objeto | Español |
-    |--------|--------|---------|
-    | I | me | yo / me, mí |
-    | you | you | tú, usted / te, ti |
-    | he | him | él / lo, le (a él) |
-    | she | her | ella / la, le (a ella) |
-    | it | it | eso / lo, la |
-    | we | us | nosotros / nos |
-    | they | them | ellos / los, las, les |
+  <TabItem label="Reflexivos">
+    Cuando el sujeto y el objeto son la misma persona, usamos pronombres reflexivos:
+
+    ```javascript
+    const reflexivePronouns = {
+      "I": "myself",         // yo mismo/a
+      "you": "yourself",     // tú mismo/a
+      "he": "himself",       // él mismo
+      "she": "herself",      // ella misma
+      "it": "itself",        // eso mismo
+      "we": "ourselves",     // nosotros mismos
+      "they": "themselves"   // ellos mismos
+    };
+    ```
+
+    **Ejemplos:**
+    - I did it **myself** (Lo hice yo mismo)
+    - She taught **herself** English (Ella se enseñó inglés a sí misma)
+    - They enjoyed **themselves** (Ellos se divirtieron)
+    - Make **yourself** at home (Ponte cómodo / Siéntete como en casa)
+    - He talks to **himself** (Él habla solo / consigo mismo)
+    - We cleaned the house **ourselves** (Limpiamos la casa nosotros mismos)
+    
+    <Aside type="note">
+    Los pronombres reflexivos también se usan para énfasis: "I **myself** don't agree" (Yo mismo no estoy de acuerdo).
+    </Aside>
   </TabItem>
 </Tabs>
 
@@ -298,30 +263,6 @@ const withAnd = {
   - "Sarah and **I** went" → "**I** went" ✓ (correcto)
   - "She saw Sarah and **me**" → "She saw **me**" ✓ (correcto)
   - ~~"Sarah and me went"~~ → ~~"Me went"~~ ✗ (incorrecto)
-
----
-
-## Pronombres Reflexivos (Bonus)
-
-Cuando el sujeto y el objeto son la misma persona:
-
-```javascript
-const reflexivePronouns = {
-  "I": "myself",         // yo mismo/a
-  "you": "yourself",     // tú mismo/a
-  "he": "himself",       // él mismo
-  "she": "herself",      // ella misma
-  "it": "itself",        // eso mismo
-  "we": "ourselves",     // nosotros mismos
-  "they": "themselves"   // ellos mismos
-};
-```
-
-**Ejemplos:**
-- I did it **myself** (Lo hice yo mismo)
-- She taught **herself** English (Ella se enseñó inglés a sí misma)
-- They enjoyed **themselves** (Ellos se divirtieron)
-- Make **yourself** at home (Ponte cómodo / Siéntete como en casa)
 
 ---
 
