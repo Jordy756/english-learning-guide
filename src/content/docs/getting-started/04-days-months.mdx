@@ -1,0 +1,242 @@
+---
+title: Días, Meses y Fechas
+description: Aprende a expresar días de la semana, meses del año y fechas en inglés
+---
+
+import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
+
+Dominar días, meses y fechas es fundamental para la comunicación diaria en inglés: programar reuniones, hacer reservas, hablar sobre eventos o simplemente mencionar tu cumpleaños. A diferencia del español, en inglés **los días y meses siempre se escriben con mayúscula inicial**.
+
+Piensa en los días y meses como arrays ordenados en JavaScript: cada elemento tiene una posición fija, y en inglés, ciertas convenciones sobre cómo expresar fechas pueden variar según el contexto (británico vs. americano).
+
+---
+
+## Días de la semana
+
+Los días de la semana en inglés son invariables (no cambian de forma) y **siempre se escriben con mayúscula**.
+
+```javascript
+const weekDays = [
+  "Monday",    // Lunes
+  "Tuesday",   // Martes
+  "Wednesday", // Miércoles
+  "Thursday",  // Jueves
+  "Friday",    // Viernes
+  "Saturday",  // Sábado
+  "Sunday"     // Domingo
+];
+```
+
+**Ejemplos en contexto:**
+
+- I work from Monday to Friday (Trabajo de lunes a viernes)
+- The meeting is on Wednesday (La reunión es el miércoles)
+- We don't work on Sundays (No trabajamos los domingos)
+- See you next Tuesday! (¡Nos vemos el próximo martes!)
+- My birthday is on a Saturday this year (Mi cumpleaños cae en sábado este año)
+
+<Aside type="tip">
+Usa **on** antes del día: "on Monday", "on Saturday". Para rangos usa **from... to**: "from Monday to Friday".
+</Aside>
+
+---
+
+## Meses del año
+
+Los meses también se escriben **siempre con mayúscula inicial** en inglés.
+
+```javascript
+const months = [
+  "January",   // Enero
+  "February",  // Febrero
+  "March",     // Marzo
+  "April",     // Abril
+  "May",       // Mayo
+  "June",      // Junio
+  "July",      // Julio
+  "August",    // Agosto
+  "September", // Septiembre
+  "October",   // Octubre
+  "November",  // Noviembre
+  "December"   // Diciembre
+];
+```
+
+**Ejemplos en contexto:**
+
+- My birthday is in July (Mi cumpleaños es en julio)
+- We're traveling in December (Viajaremos en diciembre)
+- Spring starts in March (La primavera empieza en marzo)
+- I started working here in January (Empecé a trabajar aquí en enero)
+- The conference is in October (La conferencia es en octubre)
+
+<Aside type="tip">
+Usa **in** antes del mes: "in January", "in December". También se usa **in** para años: "in 2024".
+</Aside>
+
+---
+
+## Expresar fechas
+
+Las fechas en inglés tienen formatos diferentes según el contexto (británico vs. americano).
+
+<Tabs>
+  <TabItem label="Formato Británico">
+    ```javascript
+    // Orden: día + mes + año
+    const britishDate = {
+      written: "15th March 2024",
+      numeric: "15/03/2024",
+      spoken: "the fifteenth of March"
+    };
+    ```
+    
+    El formato británico sigue el orden: **día → mes → año**
+  </TabItem>
+  
+  <TabItem label="Formato Americano">
+    ```javascript
+    // Orden: mes + día + año
+    const americanDate = {
+      written: "March 15th, 2024",
+      numeric: "03/15/2024",
+      spoken: "March fifteenth"
+    };
+    ```
+    
+    El formato americano sigue el orden: **mes → día → año**
+  </TabItem>
+  
+  <TabItem label="Números Ordinales">
+    ```javascript
+    const ordinals = {
+      1: "1st (first)",
+      2: "2nd (second)",
+      3: "3rd (third)",
+      4: "4th (fourth)",
+      5: "5th (fifth)",
+      21: "21st (twenty-first)",
+      22: "22nd (twenty-second)",
+      31: "31st (thirty-first)"
+    };
+    ```
+    
+    Los ordinales se usan para los días del mes
+  </TabItem>
+</Tabs>
+
+**Ejemplos completos:**
+
+- Today is Monday, January 15th (Hoy es lunes 15 de enero)
+- The deadline is March 31st (La fecha límite es el 31 de marzo)
+- I was born on June 5th, 1990 (Nací el 5 de junio de 1990)
+- The event is on Friday, December 20th (El evento es el viernes 20 de diciembre)
+- We're meeting on the 10th of May (Nos reunimos el 10 de mayo)
+
+---
+
+## Preguntar y responder fechas
+
+<CardGrid>
+  <Card title="¿Qué día es hoy?">
+    **What day is it today?**
+    
+    → It's Monday (Es lunes)
+    
+    → Today is Wednesday (Hoy es miércoles)
+  </Card>
+  
+  <Card title="¿Qué fecha es?">
+    **What's the date today?**
+    
+    → It's March 15th (Es 15 de marzo)
+    
+    → Today is the 20th (Hoy es el día 20)
+  </Card>
+  
+  <Card title="¿Cuándo es...?">
+    **When is your birthday?**
+    
+    → My birthday is in July (Mi cumpleaños es en julio)
+    
+    → It's on July 25th (Es el 25 de julio)
+  </Card>
+</CardGrid>
+
+**Más ejemplos de conversación:**
+
+- When is the meeting? - It's on Thursday (¿Cuándo es la reunión? - Es el jueves)
+- What month is your anniversary? - It's in June (¿En qué mes es tu aniversario? - Es en junio)
+- When do classes start? - They start in September (¿Cuándo empiezan las clases? - Empiezan en septiembre)
+
+---
+
+## Expresiones útiles con tiempo
+
+```javascript
+const timeExpressions = {
+  relative: [
+    "today",      // hoy
+    "tomorrow",   // mañana
+    "yesterday",  // ayer
+    "this week",  // esta semana
+    "next month", // el próximo mes
+    "last year"   // el año pasado
+  ],
+  
+  frequency: [
+    "every Monday",    // cada lunes
+    "on weekends",     // los fines de semana
+    "once a month",    // una vez al mes
+    "twice a week"     // dos veces por semana
+  ]
+};
+```
+
+**Ejemplos prácticos:**
+
+- I have a meeting tomorrow morning (Tengo una reunión mañana por la mañana)
+- We visited them last December (Los visitamos el diciembre pasado)
+- I go to the gym every Tuesday and Thursday (Voy al gimnasio cada martes y jueves)
+- The report is due next Friday (El reporte vence el próximo viernes)
+- We travel once a year in August (Viajamos una vez al año en agosto)
+
+---
+
+## Errores comunes
+
+<Aside type="danger">
+**No usar mayúsculas en días y meses**
+
+~~I'll see you on monday in july.~~
+
+→ I'll see you on Monday in July. (Te veré el lunes en julio)
+</Aside>
+
+<Aside type="danger">
+**Confundir preposiciones de tiempo**
+
+~~My birthday is at May.~~ / ~~The meeting is in Monday.~~
+
+→ My birthday is **in** May. (Mi cumpleaños es en mayo)
+
+→ The meeting is **on** Monday. (La reunión es el lunes)
+</Aside>
+
+<Aside type="danger">
+**Invertir el orden en fechas numéricas**
+
+Al leer 03/05/2024, los británicos leen "3 de mayo", pero los americanos leen "5 de marzo". ¡Puede causar confusión!
+
+→ Es mejor escribir: **March 5, 2024** o **5th March 2024** para evitar ambigüedad.
+</Aside>
+
+<Aside type="danger">
+**Olvidar números ordinales al hablar**
+
+~~Today is October twenty-five.~~
+
+→ Today is October **twenty-fifth**. (Hoy es veinticinco de octubre)
+
+→ Today is the **25th** of October.
+</Aside>

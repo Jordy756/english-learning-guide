@@ -1,0 +1,388 @@
+---
+title: Saludos Básicos
+description: Domina los saludos esenciales en inglés.
+---
+
+import { Tabs, TabItem, Aside, CardGrid, Card } from '@astrojs/starlight/components';
+
+Los saludos son como las funciones de inicialización en programación: son el primer punto de contacto con cualquier interacción. Un saludo apropiado establece el tono de la conversación y demuestra respeto por el contexto social. En inglés, el nivel de formalidad varía según la situación, desde encuentros casuales con amigos hasta reuniones profesionales.
+
+Dominar los saludos te permite iniciar conversaciones con confianza en cualquier contexto, desde informal hasta corporativo.
+
+## Saludos por Nivel de Formalidad
+
+<Tabs>
+  <TabItem label="Informal">
+
+Para amigos, familiares y situaciones casuales:
+
+```js
+const informalGreetings = {
+  basic: [
+    "Hi", // Hola
+    "Hey", // Hola (más casual)
+    "Hello" // Hola (más neutral)
+  ],
+  casual: [
+    "What's up?", // ¿Qué onda?
+    "How's it going?", // ¿Cómo va?
+    "How are you doing?" // ¿Cómo te va?
+  ],
+  slang: [
+    "Sup?", // ¿Qué hay?
+    "Yo!", // ¡Ey!
+    "Hey there!" // ¡Hola!
+  ],
+  responses: [
+    "Hey!", // ¡Hola!
+    "Not much", // Nada
+    "Good, you?" // Bien, ¿y tú?
+  ]
+};
+```
+
+**Diálogos típicos:**
+  - A: "Hey! How's it going?" _(¡Hola! ¿Cómo va?)_
+  - B: "Good! How about you?" _(¡Bien! ¿Y tú?)_
+
+  - A: "What's up?" _(¿Qué hay?)_
+  - B: "Not much, just chilling" _(Nada, aquí relajado)_
+
+  </TabItem>
+
+  <TabItem label="Neutral">
+
+Para conocidos, compañeros de trabajo, situaciones cotidianas:
+
+```js
+const neutralGreetings = {
+  general: [
+    "Hello", // Hola
+    "Hi there", // Hola (más cálido)
+    "Good morning/afternoon/evening" // Buenos días/tardes/noches
+  ],
+  questions: [
+    "How are you?", // ¿Cómo estás? 
+    "How are you doing?" // ¿Cómo te va?
+  ],
+  responses: [
+    "I'm fine, thank you. And you?", // Estoy bien, gracias. ¿Y tú?
+    "Good, thanks. How are you?", // Bien, gracias. ¿Cómo estás?
+    "Pretty good, yourself?" // Bastante bien, ¿y tú?
+  ]
+};
+```
+
+**Diálogos típicos:**
+  - A: "Good morning! How are you?" _(¡Buenos días! ¿Cómo estás?)_
+  - B: "I'm fine, thank you. How are you?" _(Estoy bien, gracias. ¿Y tú?)_
+
+  </TabItem>
+
+  <TabItem label="Formal">
+
+Para entrevistas, clientes, superiores, contextos profesionales:
+
+```js
+const formalGreetings = {
+  professional: [
+    "Good morning/afternoon/evening", // Buenos días/tardes/noches
+    "It's a pleasure to meet you", // Es un placer conocerle
+    "How do you do?" // ¿Cómo está? (muy formal)
+  ],
+  withTitle: [
+    "Good morning, Mr. Smith", // Buenos días, Sr. Smith
+    "Hello, Dr. Johnson", // Hola, Dr. Johnson
+    "Good afternoon, Ms. Williams" // Buenas tardes, Sra. Williams
+  ],
+  responses: [
+    "How do you do?", // ¿Cómo está? (respuesta a "How do you do?")
+    "The pleasure is mine", // El placer es mío
+    "I'm very well, thank you" // Estoy muy bien, gracias
+  ]
+};
+```
+
+**Nota:** "How do you do?" es MUY formal y se responde con "How do you do?" (no es realmente una pregunta sobre tu estado).
+
+  </TabItem>
+</Tabs>
+
+<Aside type="tip" title="Regla de contexto">
+Usa el nivel de formalidad según:
+- **Informal:** Amigos, familia, personas de tu edad
+- **Neutral:** Situaciones cotidianas, tiendas, conocidos
+- **Formal:** Trabajo, entrevistas, personas mayores, primera vez
+</Aside>
+
+---
+
+## Saludos por Momento del Día
+
+El saludo cambia según la hora, pero estos son específicos y más formales que "Hi":
+
+```js
+const timeBasedGreetings = {
+  morning: "Good morning",     // Buenos días (5:00 AM - 12:00 PM)
+  afternoon: "Good afternoon", // Buenas tardes (12:00 PM - 6:00 PM)
+  evening: "Good evening",     // Buenas noches (6:00 PM - 10:00 PM)
+  night: null // NO existe "Good night" como saludo
+};
+
+const greet = (hour) => {
+  if (hour >= 5 && hour < 12) return "Good morning"; // Buenos días
+  if (hour >= 12 && hour < 18) return "Good afternoon"; // Buenas tardes
+  if (hour >= 18 && hour < 22) return "Good evening"; // Buenas noches
+  return "Hello"; // Hola (si es muy tarde, usa saludo neutral)
+};
+```
+
+<Aside type="caution" title='"Good night" NO es un saludo'>
+**"Good night"** es una DESPEDIDA, no un saludo. Se usa al irte a dormir o al final del día.
+
+Incorrecto: ~~"Good night"~~ (al llegar a las 8 PM)  
+Correcto: **"Good evening"** (al llegar), **"Good night"** (al irte)
+</Aside>
+
+---
+
+## Respuestas a "How are you?"
+
+Esta pregunta es cortesía social, no siempre espera una respuesta detallada:
+
+<CardGrid>
+  <Card title="Respuestas Positivas">
+    - **"I'm fine, thank you"** _(Estoy bien, gracias)_  
+    - **"Good, thanks"** _(Bien, gracias)_  
+    - **"Great! And you?"** _(¡Genial! ¿Y tú?)_  
+    - **"Pretty good"** _(Bastante bien)_  
+    - **"Couldn't be better"** _(No podría estar mejor)_
+  </Card>
+  <Card title="Respuestas Neutrales">
+    - **"Not bad"** _(Nada mal)_  
+    - **"Can't complain"** _(No me quejo)_  
+    - **"Same as always"** _(Como siempre)_  
+    - **"Alright"** _(Bien)_  
+    - **"Hanging in there"** _(Ahí voy / Sobreviviendo)_
+  </Card>
+  <Card title="Respuestas Honestas">
+    - **"I'm okay"** _(Estoy bien)_  
+    - **"Could be better"** _(Podría estar mejor)_  
+    - **"A bit tired"** _(Un poco cansado)_  
+    - **"Not great, honestly"** _(No muy bien, honestamente)_
+  </Card>
+  <Card title="Devolver la pregunta">
+    Siempre puedes devolver la pregunta:
+
+    - **"And you?"** _(¿Y tú?)_  
+    - **"How about you?"** _(¿Qué tal tú?)_  
+    - **"What about you?"** _(¿Y tú?)_
+  </Card>
+</CardGrid>
+
+```js
+const respond = (feeling, returnQuestion = true) => {
+  const response = `${feeling}, thanks`;
+  return returnQuestion ? `${response}. And you?` : response;
+};
+
+console.log(respond("Good", true)); 
+// "Good, thanks. And you?" (Bien, gracias. ¿Y tú?)
+```
+
+---
+
+## Presentaciones
+
+Cuando conoces a alguien por primera vez:
+
+<Tabs>
+  <TabItem label="Informal">
+
+```js
+const informalIntro = {
+  self: "I'm John" + " / " + "My name is John", // Soy John / Mi nombre es John
+  nice: "Nice to meet you", // Encantado de conocerte
+  response: "Nice to meet you too" // Encantado de conocerte también
+};
+```
+
+**Diálogo:**
+  - A: "Hi! I'm Sarah" _(¡Hola! Soy Sarah)_
+  - B: "Hey! I'm Mike. Nice to meet you" _(¡Hola! Soy Mike. Encantado de conocerte)_
+  - A: "Nice to meet you too!" _(¡Encantada de conocerte también!)_
+
+  </TabItem>
+
+  <TabItem label="Formal">
+
+```js
+const formalIntro = {
+  self: "My name is John Smith", // Mi nombre es John Smith
+  title: "I'm Dr./Mr./Ms. Johnson", // Soy Dr./Sr./Sra. Johnson
+  pleasure: "It's a pleasure to meet you", // Es un placer conocerle
+  response: "The pleasure is mine" // El placer es mío
+};
+```
+
+**Diálogo:**
+  - A: "Good morning. My name is Robert Chen" _(Buenos días. Mi nombre es Robert Chen)_
+  - B: "Good morning, Mr. Chen. I'm Dr. Williams. It's a pleasure to meet you" _(Buenos días, Sr. Chen. Soy el Dr. Williams. Es un placer conocerle)_
+  - A: "The pleasure is mine" _(El placer es mío)_
+
+  </TabItem>
+
+  <TabItem label="Con Contexto">
+
+Añade información sobre ti:
+
+```js
+const introWithContext = (name, role, place) => {
+  return `Hi, I'm ${name}. I'm a ${role} at ${place}`;
+};
+
+console.log(introWithContext("Ana", "developer", "Google"));
+// "Hi, I'm Ana. I'm a developer at Google" 
+// (Hola, soy Ana. Soy desarrolladora en Google)
+```
+
+**Ejemplos:**
+  - "I'm Carlos. I'm a student at MIT" _(Soy Carlos. Soy estudiante en MIT)_
+  - "My name is Lisa. I work in marketing" _(Mi nombre es Lisa. Trabajo en marketing)_
+  - "I'm Tom from the IT department" _(Soy Tom del departamento de IT)_
+
+  </TabItem>
+</Tabs>
+
+---
+
+## Despedidas
+
+Las despedidas también varían según el nivel de formalidad:
+
+<Tabs>
+  <TabItem label="Informales">
+
+```js
+const informalGoodbyes = [
+  "Bye", // Adiós
+  "See you", // Nos vemos
+  "See you later", // Nos vemos luego
+  "Take care", // Cuídate
+  "Catch you later", // Te veo luego
+  "Later", // Luego
+  "Peace" // Paz (muy informal)
+];
+```
+
+  </TabItem>
+
+  <TabItem label="Neutrales">
+
+```js
+const neutralGoodbyes = [
+  "Goodbye", // Adiós
+  "Have a good day", // Que tengas un buen día
+  "Have a nice weekend", // Que tengas un buen fin de semana
+  "See you soon", // Nos vemos pronto
+  "Talk to you later", // Hablamos luego
+  "Take it easy" // Tómatelo con calma
+];
+```
+
+  </TabItem>
+
+  <TabItem label="Formales">
+
+```js
+const formalGoodbyes = [
+  "Goodbye", // Adiós
+  "Have a pleasant day", // Que tenga un día agradable
+  "It was nice meeting you", // Fue un placer conocerle
+  "Until next time", // Hasta la próxima
+  "Best regards", // Saludos cordiales
+  "Good night" // Buenas noches (al final del día/noche)
+];
+```
+
+  </TabItem>
+</Tabs>
+
+---
+
+## Situaciones Especiales
+
+<CardGrid>
+  <Card title="Teléfono (contestar)">
+    - **Informal:** "Hello?" _(¿Hola?)_
+    - **Neutral:** "Hello, this is Sarah" _(Hola, habla Sarah)_
+    - **Formal:** "Good morning, John speaking" _(Buenos días, habla John)_
+  </Card>
+  <Card title="Email/Mensaje">
+    - **Inicio:** "Hi/Hello [Name]," _(Hola [Nombre],)_
+    - **Formal:** "Dear [Name]," _(Estimado/a [Nombre],)_
+    - **Cierre:** "Best regards," _(Saludos cordiales,)_ / "Cheers," _(Saludos,)_
+  </Card>
+  <Card title="Al volver a ver">
+    - **Mismo día:** "Hi again!" _(¡Hola de nuevo!)_
+    - **Después de tiempo:** "Long time no see!" _(¡Cuánto tiempo sin verte!)_
+    - **Sorpresa:** "Fancy seeing you here!" _(¡Qué sorpresa verte aquí!)_
+  </Card>
+  <Card title="Despedida nocturna">
+    - **Al irse a dormir:** "Good night" _(Buenas noches)_
+    - **Deseo:** "Sleep well" _(Duerme bien)_s
+    - **Informal:** "Nighty night" _(Buenas noches - muy casual)_
+  </Card>
+</CardGrid>
+
+---
+
+## Práctica: Diálogos Completos
+
+<Aside type="tip" title="Ejercicio de conversación">
+Practica estos diálogos según el contexto:
+
+**Encuentro casual con amigo:**
+- A: "Hey! What's up?" _(¡Hola! ¿Qué hay?)_
+- B: "Not much. How about you?" _(Nada. ¿Y tú?)_
+- A: "Same. Wanna grab coffee?" _(Igual. ¿Quieres tomar café?)_
+- B: "Sure! See you in 10" _(¡Claro! Nos vemos en 10)_
+
+**Encuentro profesional:**
+- A: "Good morning. I'm Jennifer Park" _(Buenos días. Soy Jennifer Park)_
+- B: "Good morning, Ms. Park. I'm David Lee. It's a pleasure to meet you" _(Buenos días, Sra. Park. Soy David Lee. Es un placer conocerla)_
+- A: "The pleasure is mine. Shall we begin?" _(El placer es mío. ¿Empezamos?)_
+</Aside>
+
+---
+
+## Errores Comunes
+
+<Aside type="danger" title='Error #1: Usar "Good night" como saludo'>
+**Explicación:** "Good night" es una despedida para el final del día, NO un saludo al llegar de noche.
+
+Incorrecto: ~~"Good night! How are you?"~~ (al llegar a las 9 PM)  
+Correcto: **"Good evening! How are you?"** (saludo), luego **"Good night!"** (al irte)
+</Aside>
+
+<Aside type="danger" title='Error #2: Responder "How do you do?" literalmente'>
+**Explicación:** "How do you do?" es una fórmula formal de cortesía, NO una pregunta sobre tu estado. Se responde con la misma frase.
+
+Incorrecto: ~~"I'm doing fine, thanks"~~  
+Correcto: **"How do you do?"** (misma respuesta)
+
+Nota: Esta frase es MUY formal y poco común en conversación moderna. Es más común "Nice to meet you."
+</Aside>
+
+<Aside type="danger" title='Error #3: No devolver la pregunta "How are you?"'>
+**Explicación:** En inglés, es cortés devolver la pregunta después de responder. No hacerlo puede sonar cortante o descortés.
+
+Incorrecto: 
+- A: "How are you?"
+- B: "Fine" (y se queda callado)
+
+Correcto:
+- A: "How are you?"
+- B: **"Good, thanks. And you?"** o **"Fine. How about you?"**
+</Aside>
+

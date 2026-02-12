@@ -1,0 +1,195 @@
+---
+title: Alfabeto
+description: Domina el alfabeto en inglés.
+---
+
+import { Tabs, TabItem, Aside, CardGrid, Card } from '@astrojs/starlight/components';
+
+El alfabeto en inglés es como un array de 26 elementos donde cada letra tiene su propia "pronunciación como método". Aunque compartes las mismas letras con el español (mismo conjunto de "claves"), la forma en que "invocas" cada una es completamente diferente. Deletrear correctamente es esencial para dar tu nombre, email, dirección o cualquier información por teléfono.
+
+Dominar el alfabeto te permite comunicar información letra por letra con claridad, evitando confusiones especialmente en contextos profesionales.
+
+## Las 26 Letras
+
+El alfabeto inglés tiene la misma estructura que el español, pero cada letra se pronuncia de forma única:
+
+```js
+const alphabet = {
+  total: 26,
+  vowels: ['A', 'E', 'I', 'O', 'U'],
+  consonants: 21,
+  pronunciationStyle: "fonética inglesa" // ≠ nombre en español
+};
+
+// Cada letra es como una función con output diferente
+const pronounce = (letter) => {
+  return englishSound[letter]; // no spanishSound[letter]
+};
+```
+
+<Aside type="tip" title="Regla clave">
+**No traduzcas** el nombre de las letras del español. Por ejemplo, "B" no se dice "be" como en español, sino "bi" /biː/ en inglés.
+</Aside>
+
+---
+
+## Alfabeto
+
+<Tabs>
+  <TabItem label="Normal">
+
+Pronunciación estándar de cada letra del alfabeto:
+
+```js
+const englishAlphabet = {
+  A: "ei",        B: "bi",        C: "si",
+  D: "di",        E: "i",         F: "ef",
+  G: "yi",        H: "eich",      I: "ai",
+  J: "yei",       K: "kei",       L: "el",
+  M: "em",        N: "en",        O: "ou",
+  P: "pi",        Q: "kiu",       R: "ar",
+  S: "es",        T: "ti",        U: "iu",
+  V: "vi",        W: "dabel iu",  X: "eks",
+  Y: "uai",       Z: "zi" // "zed" en UK
+};
+```
+
+**Ejemplos de deletreo:**
+- **BOOK:** "bi - ou - ou - kei" _(libro)_
+- **CODE:** "si - ou - di - i" _(código)_
+- **EMAIL:** "i - em - ei - ai - el" _(correo)_
+- **HOME:** "eich - ou - em - i" _(hogar)_
+
+<Aside type="note" title="Vocales importantes">
+Las vocales tienen nombres que coinciden con su "sonido largo":
+- **A** = "ei" /eɪ/ (no "a")
+- **E** = "i" /iː/ (no "e")
+- **I** = "ai" /aɪ/ (no "i")
+- **O** = "ou" /oʊ/ (no "o")
+- **U** = "iu" /juː/ (no "u")
+</Aside>
+
+  </TabItem>
+
+  <TabItem label="NATO">
+
+Alfabeto fonético usado en contextos profesionales donde la claridad es crítica (aeropuertos, llamadas de negocios, soporte técnico, militar):
+
+```js
+const natoAlphabet = {
+  A: "Alpha",     B: "Bravo",     C: "Charlie",
+  D: "Delta",     E: "Echo",      F: "Foxtrot",
+  G: "Golf",      H: "Hotel",     I: "India",
+  J: "Juliett",   K: "Kilo",      L: "Lima",
+  M: "Mike",      N: "November",  O: "Oscar",
+  P: "Papa",      Q: "Quebec",    R: "Romeo",
+  S: "Sierra",    T: "Tango",     U: "Uniform",
+  V: "Victor",    W: "Whiskey",   X: "X-ray",
+  Y: "Yankee",    Z: "Zulu"
+};
+```
+
+**Ejemplo de uso:**
+- **"My flight is BA207"** → "Bravo Alpha two zero seven" _(Mi vuelo es BA207)_
+- **"Code: XY3"** → "X-ray Yankee three" _(Código: XY3)_
+- **"ID: JK45"** → "Juliett Kilo four five" _(ID: JK45)_
+
+<Aside type="note" title="Cuándo usar NATO">
+Usa el alfabeto fonético cuando:
+- Hay mucho ruido de fondo
+- La conexión telefónica es mala
+- Necesitas precisión absoluta (códigos, contraseñas, ID)
+- Trabajas en aviación, militar, emergencias o soporte técnico
+</Aside>
+
+  </TabItem>
+</Tabs>
+
+---
+
+## Deletrear (Spelling)
+
+Deletrear es la acción de decir una palabra letra por letra. Es como serializar un string en un array de caracteres:
+
+```js
+const spell = (word) => {
+  return word.split('').map(letter => pronounce(letter));
+};
+
+// Ejemplo
+spell("CODE");
+// Output: ["si", "ou", "di", "i"]
+// Se pronuncia: "si - ou - di - i"
+```
+
+**Contextos comunes para deletrear:**
+
+<CardGrid>
+  <Card title="Nombre propio">
+"My name is Smith, that's **S-M-I-T-H**"  _(Mi nombre es Smith, es S-M-I-T-H)_
+→ "es - em - ai - ti - eich"
+  </Card>
+
+  <Card title="Email">
+"john.doe@email.com"  
+→ "yei-ou-eich-en dot di-ou-i at i-meil dot si-ou-em"
+  </Card>
+
+  <Card title="Dirección">
+"123 Oak Street"  _(Calle Oak 123)_
+→ "ou-ei-kei Street" (Oak deletreado)
+  </Card>
+
+  <Card title="Código postal">
+"The code is A1B2C3"  _(El código es A1B2C3)_
+→ "ei-one-bi-two-si-three"
+  </Card>
+</CardGrid>
+
+<Aside type="tip" title="Frase útil para deletrear">
+Cuando necesites deletrear algo, usa:
+
+- "Let me spell that for you: ..." _(Déjame deletrearlo: ...)_
+- "That's spelled ..." _(Se deletrea ...)_
+- "Could you spell that, please?" _(¿Podría deletrearlo, por favor?)_
+</Aside>
+
+---
+
+## Práctica: Deletrea tu Información
+
+<Aside type="tip" title="Ejercicio diario">
+Practica deletrear en voz alta:
+- Tu nombre completo
+- Tu email
+- Tu dirección
+- El nombre de tu ciudad
+- Palabras difíciles en inglés (Wednesday, February, etc.)
+
+Grábate y compara con nativos.
+</Aside>
+
+---
+
+## Errores Comunes
+
+<Aside type="danger" title='Error #1: Decir "be" en vez de "bi" para la B'>
+**Explicación:** Es el error más común porque en español decimos "be". En inglés es "bi" /biː/.
+
+Incorrecto: ~~"be - ou - ou - kei"~~ (book)  
+Correcto: **"bi - ou - ou - kei"** /biː oʊ oʊ keɪ/
+</Aside>
+
+<Aside type="danger" title='Error #2: Pronunciar "H" como "ache"'>
+**Explicación:** La H en inglés se pronuncia "eich" /eɪtʃ/, no "ache" como en español.
+
+Incorrecto: ~~"ache - ou - em - i"~~ (home)  
+Correcto: **"eich - ou - em - i"** /eɪtʃ oʊ ɛm iː/
+</Aside>
+
+<Aside type="danger" title='Error #3: Confundir "I" con "E"'>
+**Explicación:** En inglés, "I" se pronuncia "ai" /aɪ/ y "E" se pronuncia "i" /iː/. Es al revés del español.
+
+Incorrecto: ~~"i - em - ei - ai - el"~~ (email) → suena como "I mail"  
+Correcto: **"i - em - ei - ai - el"** /iː ɛm eɪ aɪ ɛl/ → pronunciando E como "i" y I como "ai"
+</Aside>

@@ -1,0 +1,247 @@
+---
+title: Pronunciación Básica
+description: Aprende los fundamentos de la pronunciación en inglés.
+---
+
+import { Aside, Tabs, TabItem, Card, CardGrid } from '@astrojs/starlight/components';
+
+La pronunciación en inglés puede parecer complicada porque la misma letra puede sonar diferente en distintas palabras. Piensa en ello como un **sistema de mapeo** donde cada símbolo escrito puede tener múltiples valores posibles, similar a un objeto con diferentes propiedades según su contexto.
+
+---
+
+## El Alfabeto Fonético Internacional (IPA)
+
+Para representar sonidos de forma precisa, usaremos el **IPA** (International Phonetic Alphabet). Es como tener una **notación estándar** que elimina la ambigüedad.
+
+<Aside type="tip">
+El IPA usa símbolos entre barras diagonales: `/bʊk/` para "book". Cada símbolo representa exactamente un sonido.
+</Aside>
+
+No te preocupes por aprender todos los símbolos ahora. Con el tiempo, los reconocerás naturalmente.
+
+---
+
+## Vocales: Los Patrones Básicos
+
+El inglés tiene **12 sonidos vocálicos** principales, comparado con las 5 del español. Aquí están los más importantes para empezar:
+
+<Tabs>
+  <TabItem label="Vocales Cortas">
+```javascript
+const shortVowels = {
+  /ɪ/: "sit, big, fish",
+  /e/: "bed, red, said",
+  /æ/: "cat, hat, man",
+  /ʌ/: "cup, but, love",
+  /ɒ/: "hot, box, dog"
+};
+```
+
+Estas vocales son breves y tensas. **No las alargues** como harías en español.
+  </TabItem>
+  
+  <TabItem label="Vocales Largas">
+```javascript
+const longVowels = {
+  /iː/: "see, eat, key",
+  /uː/: "food, blue, soon",
+  /ɑː/: "car, father, arm",
+  /ɔː/: "door, ball, More",
+  /ɜː/: "bird, work, learn"
+};
+```
+
+Los dos puntos `ː` indican que el sonido se sostiene más tiempo.
+  </TabItem>
+  
+  <TabItem label="Diptongos">
+```javascript
+const diphthongs = {
+  /eɪ/: "name, day, make",
+  /aɪ/: "my, time, like",
+  /ɔɪ/: "boy, coin, join",
+  /aʊ/: "now, house, out",
+  /əʊ/: "go, home, no"
+};
+```
+
+Los diptongos **combinan dos sonidos** en una sílaba deslizándose de uno al otro.
+  </TabItem>
+</Tabs>
+
+**Ejemplos prácticos:**
+
+- I **sit** on the chair (Me siento en la silla) - /sɪt/
+- She can **see** the ocean (Ella puede ver el océano) - /siː/
+- This is **my** book (Este es mi libro) - /maɪ/
+- The **house** is big (La casa es grande) - /haʊs/
+- He has a **cup** of coffee (Él tiene una taza de café) - /kʌp/
+
+---
+
+## Consonantes: Lo Que Necesitas Saber
+
+La mayoría de las consonantes en inglés son similares al español, pero hay algunas diferencias críticas:
+
+<CardGrid>
+  <Card title="TH Suave /θ/" icon="information">
+    Como la "c" en "cielo" peninsular español
+    
+    **think** (pensar), **three** (tres), **birthday** (cumpleaños)
+  </Card>
+  
+  <Card title="TH Sonora /ð/" icon="information">
+    Vibración en las cuerdas vocales
+    
+    **this** (esto), **that** (eso), **mother** (madre)
+  </Card>
+  
+  <Card title="H Aspirada /h/" icon="information">
+    Como exhalar suavemente
+    
+    **hello** (hola), **house** (casa), **happy** (feliz)
+  </Card>
+  
+  <Card title="R Suave /r/" icon="information">
+    La lengua NO toca el paladar
+    
+    **red** (rojo), **car** (coche), **very** (muy)
+  </Card>
+</CardGrid>
+
+**Ejemplos comparativos:**
+
+- I **think** about you (Pienso en ti) - /θɪŋk/
+- **This** is my friend (Este es mi amigo) - /ðɪs/
+- **Hello**, how are you? (Hola, ¿cómo estás?) - /həˈləʊ/
+- The **red** car is fast (El coche rojo es rápido) - /red/
+
+---
+
+## Acento y Énfasis
+
+En inglés, cada palabra tiene una **sílaba acentuada** que suena más fuerte y clara. Cambiar el acento puede cambiar el significado:
+
+```javascript
+const stressPatterns = {
+  present: {
+    sustantivo: "PREsent (regalo)", // ˈprezənt
+    verbo: "preSENT (presentar)"    // prɪˈzent
+  },
+  record: {
+    sustantivo: "REcord (disco)",   // ˈrekɔːd
+    verbo: "reCORD (grabar)"        // rɪˈkɔːd
+  }
+};
+```
+
+<Aside type="note">
+En el IPA, el símbolo `ˈ` antes de una sílaba indica que lleva el acento principal.
+</Aside>
+
+**Ejemplos en contexto:**
+
+- This is a **present** for you (Esto es un regalo para ti) - /ˈprezənt/
+- Let me **present** my team (Déjame presentar mi equipo) - /prɪˈzent/
+- I bought a new **record** (Compré un disco nuevo) - /ˈrekɔːd/
+- Can you **record** this? (¿Puedes grabar esto?) - /rɪˈkɔːd/
+
+---
+
+## Sonidos que No Existen en Español
+
+Algunos sonidos ingleses no tienen equivalente directo en español:
+
+<Tabs>
+  <TabItem label="Schwa /ə/">
+```javascript
+// El sonido más común en inglés
+// Vocal reducida, relajada, neutral
+const schwa = {
+  about: "/əˈbaʊt/",
+  sofa: "/ˈsəʊfə/",
+  teacher: "/ˈtiːtʃə/"
+};
+```
+
+Es el sonido de una vocal **sin estrés**, muy suave y breve.
+  </TabItem>
+  
+  <TabItem label="V /v/">
+```javascript
+// Dientes superiores tocan labio inferior
+const soundV = {
+  very: "/ˈveri/",
+  give: "/ɡɪv/",
+  love: "/lʌv/"
+};
+```
+
+**No confundir** con /b/. La "v" vibra con los dientes sobre el labio.
+  </TabItem>
+  
+  <TabItem label="Z /z/">
+```javascript
+// Como una "s" pero vibrando
+const soundZ = {
+  zoo: "/zuː/",
+  please: "/pliːz/",
+  eyes: "/aɪz/"
+};
+```
+
+Las cuerdas vocales vibran, a diferencia de /s/ que es sorda.
+  </TabItem>
+</Tabs>
+
+**Práctica con ejemplos:**
+
+- It's **about** time (Ya es hora) - /əˈbaʊt/
+- She is **very** smart (Ella es muy inteligente) - /ˈveri/
+- I **love** this song (Amo esta canción) - /lʌv/
+- **Please** help me (Por favor ayúdame) - /pliːz/
+- The **zoo** is open (El zoológico está abierto) - /zuː/
+
+---
+
+## Errores Comunes
+
+<Aside type="danger">
+**Error:** Pronunciar todas las vocales igual de largas
+
+~~I sit on the chair~~ → Pronunciar "sit" como "seet"
+
+**Correcto:** I **sit** /sɪt/ on the chair (vocal corta y rápida)
+</Aside>
+
+<Aside type="danger">
+**Error:** Pronunciar la "h" en español (sin sonido)
+
+~~Hello~~ → Decir "elo" sin aspiración
+
+**Correcto:** **Hello** /həˈləʊ/ (con aire suave al inicio)
+</Aside>
+
+<Aside type="danger">
+**Error:** Usar la "r" vibrante del español
+
+~~Red car~~ → "Red" con r fuerte como "perro"
+
+**Correcto:** **Red** /red/ (lengua no toca el paladar, sonido suave)
+</Aside>
+
+<Aside type="danger">
+**Error:** No diferenciar /b/ y /v/
+
+~~Very good~~ → Decir "bery good"
+
+**Correcto:** **Very** /ˈveri/ good (dientes sobre labio inferior)
+</Aside>
+
+<Aside type="danger">
+**Error:** Ignorar el acento en las palabras
+
+~~Present~~ → Acentuar cualquier sílaba aleatoriamente
+
+**Correcto:** **PRE**sent /ˈprezənt/ (regalo) vs pre**SENT** /prɪˈzent/ (presentar)
+</Aside>
