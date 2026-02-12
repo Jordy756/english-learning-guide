@@ -5,11 +5,7 @@ description: Aprende los fundamentos de la pronunciación en inglés.
 
 import { Aside, Tabs, TabItem, Card, CardGrid } from '@astrojs/starlight/components';
 
-## Introducción
-
-La pronunciación en inglés puede parecer complicada al principio, especialmente porque el español tiene una relación casi perfecta entre escritura y sonido, mientras que el inglés no. La misma letra puede sonar diferente en distintas palabras, y diferentes letras pueden producir el mismo sonido.
-
-Piensa en la pronunciación como un **sistema de mapeo** donde cada símbolo escrito puede tener múltiples valores posibles. En programación, esto es similar a un objeto que puede tener diferentes propiedades según su contexto. No necesitas memorizar todo de inmediato, solo familiarizarte con los patrones más comunes.
+La pronunciación en inglés puede parecer complicada porque la misma letra puede sonar diferente en distintas palabras. Piensa en ello como un **sistema de mapeo** donde cada símbolo escrito puede tener múltiples valores posibles, similar a un objeto con diferentes propiedades según su contexto.
 
 ---
 
@@ -32,7 +28,7 @@ El inglés tiene **12 sonidos vocálicos** principales, comparado con las 5 del 
 <Tabs>
   <TabItem label="Vocales Cortas">
 ```javascript
-const vocalesCortas = {
+const shortVowels = {
   /ɪ/: "sit, big, fish",
   /e/: "bed, red, said",
   /æ/: "cat, hat, man",
@@ -46,7 +42,7 @@ Estas vocales son breves y tensas. **No las alargues** como harías en español.
   
   <TabItem label="Vocales Largas">
 ```javascript
-const vocalesLargas = {
+const longVowels = {
   /iː/: "see, eat, key",
   /uː/: "food, blue, soon",
   /ɑː/: "car, father, arm",
@@ -60,7 +56,7 @@ Los dos puntos `ː` indican que el sonido se sostiene más tiempo.
   
   <TabItem label="Diptongos">
 ```javascript
-const diptongos = {
+const diphthongs = {
   /eɪ/: "name, day, make",
   /aɪ/: "my, time, like",
   /ɔɪ/: "boy, coin, join",
@@ -127,7 +123,7 @@ La mayoría de las consonantes en inglés son similares al español, pero hay al
 En inglés, cada palabra tiene una **sílaba acentuada** que suena más fuerte y clara. Cambiar el acento puede cambiar el significado:
 
 ```javascript
-const patronesAcento = {
+const stressPatterns = {
   present: {
     sustantivo: "PREsent (regalo)", // ˈprezənt
     verbo: "preSENT (presentar)"    // prɪˈzent
@@ -174,7 +170,7 @@ Es el sonido de una vocal **sin estrés**, muy suave y breve.
   <TabItem label="V /v/">
 ```javascript
 // Dientes superiores tocan labio inferior
-const sonidoV = {
+const soundV = {
   very: "/ˈveri/",
   give: "/ɡɪv/",
   love: "/lʌv/"
@@ -187,7 +183,7 @@ const sonidoV = {
   <TabItem label="Z /z/">
 ```javascript
 // Como una "s" pero vibrando
-const sonidoZ = {
+const soundZ = {
   zoo: "/zuː/",
   please: "/pliːz/",
   eyes: "/aɪz/"
