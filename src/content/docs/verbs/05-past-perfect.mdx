@@ -3,3 +3,430 @@ title: Pasado Perfecto
 description: Habla sobre acciones anteriores a otras en el pasado.
 ---
 
+import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
+
+El Past Perfect es como un commit anterior en el historial de git: te permite referenciar una acción que ocurrió **antes** de otra acción pasada. Es el "pasado del pasado", usado para establecer secuencias temporales claras cuando narras eventos.
+
+Este tiempo verbal usa **had** + **participio pasado** y es igual para todos los sujetos.
+
+---
+
+## Estructura del Past Perfect
+
+Se forma con **had** + **participio pasado** para todos los sujetos:
+
+```javascript
+const pastPerfect = {
+  structure: "had + past participle",
+  conjugation: {
+    I: "had + pp",        // I had worked
+    you: "had + pp",      // You had worked
+    he: "had + pp",       // He had worked
+    she: "had + pp",      // She had worked
+    it: "had + pp",       // It had worked
+    we: "had + pp",       // We had worked
+    they: "had + pp"      // They had worked
+  }
+};
+```
+
+**Ejemplos:**
+- I had finished before he arrived (Había terminado antes de que él llegara)
+- You had already left when I called (Ya te habías ido cuando llamé)
+- She had never seen snow before (Ella nunca había visto nieve antes)
+- We had eaten before the movie started (Habíamos comido antes de que empezara la película)
+
+<Aside type="tip">
+**Simple de recordar:** Solo una forma para todos: **had** + participio. No hay "has" ni variaciones.
+</Aside>
+
+---
+
+## Tres Formas: Afirmativa, Negativa, Pregunta
+
+<Tabs>
+  <TabItem label="Afirmativa">
+    ```javascript
+    const affirmative = {
+      structure: "Subject + had + past participle",
+      examples: [
+        "I had finished",       // Había terminado
+        "You had eaten",        // Habías comido
+        "He had left",          // Él se había ido
+        "She had arrived",      // Ella había llegado
+        "We had started",       // Habíamos empezado
+        "They had gone"         // Se habían ido
+      ]
+    };
+    ```
+  </TabItem>
+  
+  <TabItem label="Negativa">
+    ```javascript
+    const negative = {
+      structure: "Subject + had + not + pp",
+      examples: [
+        "I had not finished",    // No había terminado
+        "You hadn't eaten",      // No habías comido
+        "He hadn't left",        // Él no se había ido
+        "She hadn't arrived",    // Ella no había llegado
+        "We hadn't started",     // No habíamos empezado
+        "They hadn't gone"       // No se habían ido
+      ]
+    };
+    ```
+    
+    Añade **not** después de had, o usa la contracción: **hadn't**.
+  </TabItem>
+  
+  <TabItem label="Pregunta">
+    ```javascript
+    const question = {
+      structure: "Had + subject + past participle?",
+      examples: [
+        "Had I met her?",        // ¿La había conocido?
+        "Had you eaten?",        // ¿Habías comido?
+        "Had he left?",          // ¿Se había ido él?
+        "Had she arrived?",      // ¿Había llegado ella?
+        "Had we started?",       // ¿Habíamos empezado?
+        "Had they gone?"         // ¿Se habían ido?
+      ]
+    };
+    ```
+    
+    Invierte el orden: **Had** va antes del sujeto.
+  </TabItem>
+</Tabs>
+
+---
+
+## Contracciones
+
+Las contracciones son comunes en habla cotidiana:
+
+```javascript
+const contractions = {
+  affirmative: {
+    "I had": "I'd",           // I'd finished
+    "you had": "you'd",       // You'd seen it
+    "he had": "he'd",         // He'd left
+    "she had": "she'd",       // She'd arrived
+    "it had": "it'd",         // It'd started
+    "we had": "we'd",         // We'd gone
+    "they had": "they'd"      // They'd eaten
+  },
+  negative: {
+    "had not": "hadn't"       // I hadn't seen it
+  }
+};
+```
+
+<Aside type="caution">
+**Cuidado:** La contracción **'d** puede ser "had" o "would". El contexto lo aclara: "I'd finished" (had) vs "I'd like coffee" (would).
+</Aside>
+
+---
+
+## Uso Principal: El Pasado del Pasado
+
+El Past Perfect establece que una acción ocurrió **antes** de otra en el pasado:
+
+```javascript
+const timeline = {
+  first: "Action A (Past Perfect)",   // Acción anterior
+  second: "Action B (Past Simple)",   // Acción posterior
+  example: {
+    A: "I had eaten",                 // (primero comí)
+    B: "when she arrived",            // (después ella llegó)
+    full: "I had eaten when she arrived"
+  }
+};
+```
+
+**Ejemplos:**
+- When I arrived, the movie **had started** (Cuando llegué, la película había empezado)
+- She **had left** before I called (Ella se había ido antes de que llamara)
+- They **had finished** dinner when we got there (Habían terminado la cena cuando llegamos)
+- I **had never seen** her before that day (Nunca la había visto antes de ese día)
+
+<Aside type="note">
+**Visualízalo:** Si el Past Simple es "ayer", el Past Perfect es "antes de ayer" en la narración.
+</Aside>
+
+---
+
+## Palabras Clave del Past Perfect
+
+<CardGrid>
+  <Card title="Secuencia">
+    - before (antes)
+    - after (después)
+    - when (cuando)
+    - by the time (para cuando)
+    - as soon as (tan pronto como)
+  </Card>
+  
+  <Card title="Experiencia Pasada">
+    - never (nunca)
+    - ever (alguna vez)
+    - already (ya)
+    - just (justo/recién)
+    - yet (todavía)
+  </Card>
+  
+  <Card title="Duración">
+    - for (por/durante)
+    - since (desde)
+    - how long (cuánto tiempo)
+    - until then (hasta entonces)
+  </Card>
+  
+  <Card title="Reportar">
+    - said that (dijo que)
+    - told me that (me dijo que)
+    - thought that (pensó que)
+    - realized that (se dio cuenta que)
+  </Card>
+</CardGrid>
+
+---
+
+## Usos Específicos del Past Perfect
+
+### 1. Secuencia de Eventos Pasados
+
+Mostrar qué pasó primero cuando narras eventos:
+
+- When I got to the station, the train **had left** (Cuando llegué a la estación, el tren se había ido)
+- After she **had finished** work, she went home (Después de terminar el trabajo, se fue a casa)
+- I was tired because I **had worked** all day (Estaba cansado porque había trabajado todo el día)
+- The streets were wet because it **had rained** (Las calles estaban mojadas porque había llovido)
+
+### 2. Experiencias hasta un Punto del Pasado
+
+Similar al Present Perfect, pero en contexto pasado:
+
+- I **had never flown** before that trip (Nunca había volado antes de ese viaje)
+- She **had visited** Paris twice before moving there (Había visitado París dos veces antes de mudarse)
+- By 2020, they **had lived** there for 10 years (Para 2020, habían vivido ahí por 10 años)
+- He **had already seen** the movie when I suggested it (Ya había visto la película cuando la sugerí)
+
+### 3. Reported Speech (Discurso Indirecto)
+
+Cuando reportas lo que alguien dijo:
+
+- She said she **had finished** (Ella dijo que había terminado)
+- He told me he **had seen** the accident (Me dijo que había visto el accidente)
+- They explained they **had tried** everything (Explicaron que habían intentado todo)
+- I realized I **had forgotten** my wallet (Me di cuenta que había olvidado mi cartera)
+
+### 4. Situaciones Hipotéticas (con wish/if only)
+
+Para expresar arrepentimiento sobre el pasado:
+
+- I wish I **had studied** harder (Ojalá hubiera estudiado más)
+- If only I **had known** earlier (Si tan solo hubiera sabido antes)
+- She wished she **hadn't said** that (Ella deseaba no haber dicho eso)
+- If I **had seen** you, I would have said hi (Si te hubiera visto, te habría saludado)
+
+---
+
+## By the Time / When / After / Before
+
+Estas expresiones son muy comunes con el Past Perfect:
+
+<Tabs>
+  <TabItem label="By the time">
+    ```javascript
+    const byTheTime = {
+      meaning: "para cuando",
+      pattern: "By the time + past simple, past perfect",
+      examples: [
+        "By the time I arrived, she had left",
+        // Para cuando llegué, ella se había ido
+        "By the time he woke up, she had gone",
+        // Para cuando despertó, ella se había ido
+        "By the time we got there, it had ended"
+        // Para cuando llegamos, había terminado
+      ]
+    };
+    ```
+  </TabItem>
+  
+  <TabItem label="When">
+    ```javascript
+    const when = {
+      meaning: "cuando",
+      pattern: "When + past simple, past perfect",
+      examples: [
+        "When I arrived, they had already left",
+        // Cuando llegué, ya se habían ido
+        "When she called, I had finished",
+        // Cuando llamó, yo había terminado
+        "When we met, he had lived there for years"
+        // Cuando nos conocimos, había vivido ahí por años
+      ]
+    };
+    ```
+  </TabItem>
+  
+  <TabItem label="After">
+    ```javascript
+    const after = {
+      meaning: "después de",
+      pattern: "After + past perfect, past simple",
+      examples: [
+        "After I had eaten, I went out",
+        // Después de comer, salí
+        "After she had finished, she relaxed",
+        // Después de terminar, se relajó
+        "After they had arrived, we started"
+        // Después de que llegaron, empezamos
+      ]
+    };
+    ```
+  </TabItem>
+  
+  <TabItem label="Before">
+    ```javascript
+    const before = {
+      meaning: "antes de",
+      pattern: "Past simple + before + past perfect",
+      examples: [
+        "I left before she had arrived",
+        // Me fui antes de que ella llegara
+        "He called before I had woken up",
+        // Llamó antes de que yo despertara
+        "We started before they had come"
+        // Empezamos antes de que vinieran
+      ]
+    };
+    ```
+  </TabItem>
+</Tabs>
+
+---
+
+## Past Perfect vs Past Simple
+
+No siempre necesitas Past Perfect para hablar del pasado:
+
+<Tabs>
+  <TabItem label="Past Perfect Necesario">
+    ```javascript
+    const pastPerfectNeeded = {
+      reason: "orden de eventos no es claro",
+      examples: [
+        "When I arrived, she had left",
+        // (ella se fue ANTES de que yo llegara)
+        "I realized I had forgotten my keys",
+        // (olvidé las llaves ANTES de darme cuenta)
+        "The movie had started when we got there"
+        // (la película empezó ANTES)
+      ]
+    };
+    ```
+    
+    Usa Past Perfect cuando el orden importa.
+  </TabItem>
+  
+  <TabItem label="Past Simple Suficiente">
+    ```javascript
+    const pastSimpleSufficient = {
+      reason: "orden cronológico claro",
+      examples: [
+        "I woke up, ate breakfast, and left",
+        // (orden obvio: 1, 2, 3)
+        "She came home and cooked dinner",
+        // (orden natural de eventos)
+        "First I studied, then I took the test"
+        // ("first/then" ya indica orden)
+      ]
+    };
+    ```
+    
+    Si el orden es obvio, Past Simple es suficiente.
+  </TabItem>
+</Tabs>
+
+<Aside type="tip">
+**Cuándo usar Past Perfect:** Úsalo cuando necesitas dejar claro que algo pasó ANTES de otra acción pasada. Si el orden es obvio o no importa, Past Simple es suficiente.
+</Aside>
+
+---
+
+## Past Perfect Continuous
+
+Para acciones continuas que ocurrieron antes de otra acción pasada:
+
+```javascript
+const pastPerfectContinuous = {
+  structure: "had been + verb-ing",
+  focus: "duración de la acción anterior",
+  examples: [
+    "I had been waiting for 2 hours",
+    // Había estado esperando por 2 horas
+    "She had been working all day",
+    // Ella había estado trabajando todo el día
+    "They had been living there since 2010",
+    // Habían estado viviendo ahí desde 2010
+    "It had been raining for hours"
+    // Había estado lloviendo por horas
+  ]
+};
+```
+
+**Comparación:**
+- She **had worked** there for 5 years (énfasis en el hecho completado)
+- She **had been working** there for 5 years (énfasis en la duración continua)
+
+---
+
+## Errores Comunes
+
+<Aside type="danger">
+**Usar Past Perfect sin contexto pasado**
+
+El Past Perfect necesita un punto de referencia en el pasado:
+
+~~I had eaten breakfast~~ (¿antes de qué?)
+
+→ **I had eaten breakfast when she called** (Había desayunado cuando ella llamó)
+
+→ O simplemente: **I ate breakfast** (si no hay otra acción pasada)
+</Aside>
+
+<Aside type="danger">
+**Confundir "had" con "have"**
+
+**Had** = Past Perfect / **Have/has** = Present Perfect:
+
+~~I have finished before he arrived~~ (mezcla de tiempos)
+
+→ **I had finished before he arrived** (Había terminado antes de que llegara)
+</Aside>
+
+<Aside type="danger">
+**Usar Past Perfect para todo lo pasado**
+
+No uses Past Perfect solo porque algo pasó hace mucho tiempo:
+
+~~I had visited Paris in 2010~~ (sin punto de referencia)
+
+→ **I visited Paris in 2010** (Past Simple es correcto aquí)
+
+→ **I had visited Paris before my trip in 2015** (Past Perfect con referencia)
+</Aside>
+
+<Aside type="danger">
+**Confundir la contracción 'd**
+
+**'d** puede ser "had" o "would":
+
+"I'd finished" = I **had** finished (Past Perfect)
+
+"I'd like coffee" = I **would** like (condicional)
+
+Identifica por el verbo que sigue: participio = had, verbo base = would.
+</Aside>
+
