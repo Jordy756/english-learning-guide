@@ -3,3 +3,396 @@ title: Verbos Irregulares
 description: Aprende los verbos irregulares más comunes.
 ---
 
+import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
+
+Los verbos irregulares son como excepciones en un sistema de tipos: no siguen el patrón estándar de añadir -ed, así que debes memorizarlos individualmente. La buena noticia es que los verbos irregulares más usados son relativamente pocos, y muchos siguen patrones internos que facilitan su aprendizaje.
+
+Estos verbos tienen formas únicas para el **pasado simple** y/o el **participio pasado** que no puedes predecir con reglas.
+
+---
+
+## Estructura: Base, Pasado, Participio
+
+Cada verbo irregular tiene tres formas que debes conocer:
+
+```javascript
+const verbForms = {
+  base: "go",           // forma base (presente)
+  past: "went",         // pasado simple
+  participle: "gone"    // participio pasado
+};
+
+// Uso:
+// Base: I go to work (Voy al trabajo)
+// Past: I went yesterday (Fui ayer)
+// Participle: I have gone (He ido)
+```
+
+<Aside type="tip">
+**Las tres formas:** Siempre aprende los verbos irregulares en grupos de tres: **go - went - gone**, **eat - ate - eaten**, etc.
+</Aside>
+
+---
+
+## Patrones de Verbos Irregulares
+
+Aunque son "irregulares", muchos siguen patrones similares que ayudan a memorizarlos:
+
+<Tabs>
+  <TabItem label="Las 3 Iguales">
+    ```javascript
+    const allSame = {
+      pattern: "AAA (las tres formas iguales)",
+      verbs: [
+        "cut - cut - cut",       // cortar
+        "put - put - put",       // poner
+        "let - let - let",       // dejar
+        "set - set - set",       // establecer
+        "hit - hit - hit",       // golpear
+        "shut - shut - shut"     // cerrar
+      ]
+    };
+    ```
+    
+    Estos verbos **nunca cambian**. Simple de recordar.
+  </TabItem>
+  
+  <TabItem label="Pasado = Participio">
+    ```javascript
+    const pastEqualsParticiple = {
+      pattern: "ABB (pasado y participio iguales)",
+      verbs: [
+        "buy - bought - bought",   // comprar
+        "bring - brought - brought", // traer
+        "think - thought - thought", // pensar
+        "catch - caught - caught",   // atrapar
+        "teach - taught - taught",   // enseñar
+        "feel - felt - felt"         // sentir
+      ]
+    };
+    ```
+    
+    El pasado y participio son iguales, solo la base es diferente.
+  </TabItem>
+  
+  <TabItem label="Todas Diferentes">
+    ```javascript
+    const allDifferent = {
+      pattern: "ABC (las tres diferentes)",
+      verbs: [
+        "go - went - gone",        // ir
+        "do - did - done",         // hacer
+        "see - saw - seen",        // ver
+        "eat - ate - eaten",       // comer
+        "take - took - taken",     // tomar
+        "give - gave - given"      // dar
+      ]
+    };
+    ```
+    
+    Las tres formas son distintas. Requieren más memorización.
+  </TabItem>
+  
+  <TabItem label="Cambio de Vocal">
+    ```javascript
+    const vowelChange = {
+      pattern: "i-a-u (cambio vocálico)",
+      verbs: [
+        "sing - sang - sung",      // cantar
+        "swim - swam - swum",      // nadar
+        "drink - drank - drunk",   // beber
+        "ring - rang - rung",      // sonar
+        "begin - began - begun"    // empezar
+      ]
+    };
+    ```
+    
+    Siguen el patrón **i → a → u** en la vocal central.
+  </TabItem>
+</Tabs>
+
+---
+
+## Los 20 Verbos Irregulares Más Usados
+
+Estos verbos aparecen constantemente en inglés. Domínalos primero:
+
+```javascript
+const top20 = [
+  { base: "be",    past: "was/were", pp: "been" },    // ser/estar
+  { base: "have",  past: "had",      pp: "had" },     // tener
+  { base: "do",    past: "did",      pp: "done" },    // hacer
+  { base: "say",   past: "said",     pp: "said" },    // decir
+  { base: "go",    past: "went",     pp: "gone" },    // ir
+  { base: "get",   past: "got",      pp: "got/gotten" }, // obtener
+  { base: "make",  past: "made",     pp: "made" },    // hacer/fabricar
+  { base: "know",  past: "knew",     pp: "known" },   // saber
+  { base: "think", past: "thought",  pp: "thought" }, // pensar
+  { base: "take",  past: "took",     pp: "taken" }    // tomar
+];
+```
+
+**Continuación:**
+
+```javascript
+const top20continued = [
+  { base: "see",   past: "saw",      pp: "seen" },    // ver
+  { base: "come",  past: "came",     pp: "come" },    // venir
+  { base: "find",  past: "found",    pp: "found" },   // encontrar
+  { base: "give",  past: "gave",     pp: "given" },   // dar
+  { base: "tell",  past: "told",     pp: "told" },    // contar
+  { base: "feel",  past: "felt",     pp: "felt" },    // sentir
+  { base: "leave", past: "left",     pp: "left" },    // dejar/irse
+  { base: "put",   past: "put",      pp: "put" },     // poner
+  { base: "bring", past: "brought",  pp: "brought" }, // traer
+  { base: "write", past: "wrote",    pp: "written" }  // escribir
+];
+```
+
+---
+
+## Verbos Irregulares por Categoría
+
+<CardGrid>
+  <Card title="Comunicación">
+    - say - said - said (decir)
+    - tell - told - told (contar)
+    - speak - spoke - spoken (hablar)
+    - write - wrote - written (escribir)
+    - read - read - read (leer)
+  </Card>
+  
+  <Card title="Movimiento">
+    - go - went - gone (ir)
+    - come - came - come (venir)
+    - run - ran - run (correr)
+    - fly - flew - flown (volar)
+    - drive - drove - driven (conducir)
+  </Card>
+  
+  <Card title="Acciones Cotidianas">
+    - eat - ate - eaten (comer)
+    - drink - drank - drunk (beber)
+    - sleep - slept - slept (dormir)
+    - wake - woke - woken (despertar)
+    - wear - wore - worn (llevar puesto)
+  </Card>
+  
+  <Card title="Sentidos y Emociones">
+    - see - saw - seen (ver)
+    - hear - heard - heard (oír)
+    - feel - felt - felt (sentir)
+    - know - knew - known (saber)
+    - understand - understood - understood (entender)
+  </Card>
+</CardGrid>
+
+---
+
+## Uso en Oraciones
+
+<Tabs>
+  <TabItem label="Pasado Simple">
+    ```javascript
+    const pastSimple = {
+      structure: "Subject + past form",
+      examples: [
+        "I went to the store",     // Fui a la tienda
+        "She ate breakfast",       // Ella desayunó
+        "They saw a movie",        // Vieron una película
+        "He bought a car",         // Él compró un carro
+        "We made dinner"           // Hicimos la cena
+      ]
+    };
+    ```
+    
+    En afirmativo, usa la forma de **pasado** directamente.
+  </TabItem>
+  
+  <TabItem label="Negativo">
+    ```javascript
+    const negativePast = {
+      structure: "Subject + didn't + base form",
+      examples: [
+        "I didn't go",             // No fui
+        "She didn't eat",          // Ella no comió
+        "They didn't see it",      // No lo vieron
+        "He didn't buy anything",  // Él no compró nada
+        "We didn't make it"        // No lo logramos
+      ]
+    };
+    ```
+    
+    Con **didn't**, el verbo vuelve a su forma **base**.
+  </TabItem>
+  
+  <TabItem label="Pregunta">
+    ```javascript
+    const questionPast = {
+      structure: "Did + subject + base form?",
+      examples: [
+        "Did you go?",             // ¿Fuiste?
+        "Did she eat?",            // ¿Ella comió?
+        "Did they see it?",        // ¿Lo vieron?
+        "Did he buy it?",          // ¿Lo compró?
+        "Did we make it?"          // ¿Lo logramos?
+      ]
+    };
+    ```
+    
+    Con **Did**, el verbo también usa la forma **base**.
+  </TabItem>
+  
+  <TabItem label="Present Perfect">
+    ```javascript
+    const presentPerfect = {
+      structure: "have/has + past participle",
+      examples: [
+        "I have gone there",       // He ido allí
+        "She has eaten",           // Ella ha comido
+        "They have seen it",       // Lo han visto
+        "He has bought a house",   // Él ha comprado una casa
+        "We have made progress"    // Hemos progresado
+      ]
+    };
+    ```
+    
+    En tiempos perfectos, usa el **participio pasado**.
+  </TabItem>
+</Tabs>
+
+<Aside type="caution">
+**Importante:** La forma irregular solo aparece en oraciones **afirmativas** en pasado o con **have/has** en tiempos perfectos. Con did/didn't, siempre usa la forma base.
+</Aside>
+
+---
+
+## Verbos con Dos Participios
+
+Algunos verbos tienen dos formas válidas de participio (británico vs americano):
+
+```javascript
+const dualForms = {
+  get: {
+    british: "got",      // I have got
+    american: "gotten"   // I have gotten
+  },
+  learn: {
+    british: "learnt",   // I have learnt
+    american: "learned"  // I have learned
+  },
+  dream: {
+    british: "dreamt",   // I have dreamt
+    american: "dreamed"  // I have dreamed
+  }
+};
+```
+
+**Otros verbos con formas duales:**
+- burn: burnt / burned (quemar)
+- spell: spelt / spelled (deletrear)
+- spill: spilt / spilled (derramar)
+- leap: leapt / leaped (saltar)
+
+<Aside type="note">
+Ambas formas son correctas. Las terminaciones en **-t** son más comunes en inglés británico, y las terminaciones en **-ed** en inglés americano.
+</Aside>
+
+---
+
+## Pronunciación Especial
+
+Algunos verbos irregulares tienen pronunciación que no coincide con su escritura:
+
+```javascript
+const pronunciation = {
+  read: {
+    present: "/riːd/",    // lee (como "reed")
+    past: "/red/",        // leyó (como "red")
+    note: "Se escribe igual, se pronuncia diferente"
+  },
+  said: "/sed/",          // no "seid"
+  bought: "/bɔːt/",       // la "gh" es muda
+  thought: "/θɔːt/",      // la "gh" es muda
+  caught: "/kɔːt/"        // la "gh" es muda
+};
+```
+
+<Aside type="tip">
+**Read es especial:** En presente se pronuncia /riːd/ (como "reed"), pero en pasado se pronuncia /red/ (como el color "red"). ¡Mismo spelling, diferente sonido!
+</Aside>
+
+---
+
+## Estrategias de Memorización
+
+Para aprender verbos irregulares efectivamente:
+
+1. **Agrupa por patrón:** Aprende juntos los verbos que siguen el mismo patrón (sing-sang-sung, ring-rang-rung, drink-drank-drunk)
+
+2. **Prioriza por frecuencia:** Empieza con los 20 más usados antes de expandir tu lista
+
+3. **Usa contexto:** Crea oraciones con cada verbo en lugar de memorizar listas aisladas
+
+4. **Practica las tres formas:** Siempre di las tres formas juntas: "go-went-gone, go-went-gone"
+
+5. **Lee y escucha:** La exposición natural refuerza la memoria mejor que la memorización forzada
+
+---
+
+## Errores Comunes
+
+<Aside type="danger">
+**Añadir -ed a verbos irregulares**
+
+Los verbos irregulares NO usan -ed:
+
+~~goed~~ / ~~eated~~ / ~~thinked~~ / ~~buyed~~
+
+→ **went** (fui)
+
+→ **ate** (comí)
+
+→ **thought** (pensé)
+
+→ **bought** (compré)
+</Aside>
+
+<Aside type="danger">
+**Usar la forma de pasado con did/didn't**
+
+Con did y didn't, el verbo va en forma base:
+
+~~Did you went?~~ / ~~I didn't went~~
+
+→ **Did you go?** (¿Fuiste?)
+
+→ **I didn't go** (No fui)
+</Aside>
+
+<Aside type="danger">
+**Confundir pasado con participio**
+
+Algunos verbos tienen formas diferentes:
+
+~~I have went~~ / ~~I have ate~~ / ~~I have saw~~
+
+→ **I have gone** (He ido)
+
+→ **I have eaten** (He comido)
+
+→ **I have seen** (He visto)
+</Aside>
+
+<Aside type="danger">
+**Pronunciar "read" (pasado) como "read" (presente)**
+
+En pasado, "read" se pronuncia /red/:
+
+~~I read /riːd/ a book yesterday~~
+
+→ **I read /red/ a book yesterday** (Leí un libro ayer)
+
+El contexto te dice si es presente o pasado.
+</Aside>
+
