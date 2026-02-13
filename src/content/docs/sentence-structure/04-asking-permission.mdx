@@ -3,3 +3,338 @@ title: Pedir Permiso y Favores
 description: Aprende a pedir cosas de forma educada.
 ---
 
+import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
+
+En español, "¿Puedo...?" sirve para casi todo. En inglés, tienes un **espectro de formalidad** con diferentes modales. Piensa en ello como niveles de permisos en un sistema: cada modal te da un nivel diferente de acceso, y usar el incorrecto puede parecer demasiado casual o excesivamente formal.
+
+Elegir el modal correcto muestra respeto y te ayuda a obtener lo que necesitas sin sonar rudo o extraño.
+
+---
+
+## Niveles de Formalidad
+
+El inglés ofrece varios modales para pedir permiso, ordenados de informal a formal:
+
+```javascript
+const formalityLevels = {
+  informal: ["Can I...?", "Could I...?"],
+  neutral: ["May I...?"],
+  formal: ["Would it be possible...?", "Might I...?"],
+  // Mientras más formal, más cortés
+};
+```
+
+<CardGrid>
+  <Card title="Can I...?">
+    Informal, amigos y familia
+    
+    *Can I borrow your pen?*
+  </Card>
+  
+  <Card title="Could I...?">
+    Semi-formal, uso general
+    
+    *Could I use your phone?*
+  </Card>
+  
+  <Card title="May I...?">
+    Formal, profesional
+    
+    *May I speak with the manager?*
+  </Card>
+  
+  <Card title="Would it be possible...?">
+    Muy formal, peticiones importantes
+    
+    *Would it be possible to reschedule?*
+  </Card>
+</CardGrid>
+
+---
+
+## Can I / Can you
+
+La forma más común e informal para pedir permiso y favores:
+
+<Tabs>
+  <TabItem label="Pedir permiso">
+    ```javascript
+    const canPermission = {
+      structure: "Can I + base verb...?",
+      examples: [
+        "Can I sit here?",         // ¿Puedo sentarme aquí?
+        "Can I ask a question?",   // ¿Puedo hacer una pregunta?
+        "Can I leave early?"       // ¿Puedo irme temprano?
+      ]
+    };
+    ```
+    
+    **Ejemplos:**
+    - Can I open the window? (¿Puedo abrir la ventana?)
+    - Can I try this on? (¿Puedo probarme esto?)
+    - Can I have some water? (¿Puedo tomar agua?)
+  </TabItem>
+  
+  <TabItem label="Pedir favores">
+    ```javascript
+    const canFavors = {
+      structure: "Can you + base verb...?",
+      examples: [
+        "Can you help me?",        // ¿Puedes ayudarme?
+        "Can you open the door?",  // ¿Puedes abrir la puerta?
+        "Can you wait a moment?"   // ¿Puedes esperar un momento?
+      ]
+    };
+    ```
+    
+    **Ejemplos:**
+    - Can you pass the salt? (¿Puedes pasarme la sal?)
+    - Can you explain that again? (¿Puedes explicar eso de nuevo?)
+    - Can you call me later? (¿Puedes llamarme después?)
+  </TabItem>
+</Tabs>
+
+<Aside type="tip">
+Usa **can** con amigos, familia y en situaciones informales. Es directo pero no grosero en el contexto correcto.
+</Aside>
+
+---
+
+## Could I / Could you
+
+Más educado que "can", ideal para la mayoría de situaciones:
+
+<Tabs>
+  <TabItem label="Pedir permiso">
+    ```javascript
+    const couldPermission = {
+      structure: "Could I + base verb...?",
+      // Más cortés que "can"
+      examples: [
+        "Could I speak with you?",    // ¿Podría hablar contigo?
+        "Could I see the menu?",      // ¿Podría ver el menú?
+        "Could I borrow your car?"    // ¿Podría usar tu carro?
+      ]
+    };
+    ```
+    
+    **Ejemplos:**
+    - Could I have the bill, please? (¿Podría traerme la cuenta?)
+    - Could I take a day off? (¿Podría tomarme un día libre?)
+    - Could I use your bathroom? (¿Podría usar su baño?)
+  </TabItem>
+  
+  <TabItem label="Pedir favores">
+    ```javascript
+    const couldFavors = {
+      structure: "Could you + base verb...?",
+      examples: [
+        "Could you repeat that?",     // ¿Podrías repetir eso?
+        "Could you send me the file?", // ¿Podrías enviarme el archivo?
+        "Could you give me a ride?"   // ¿Podrías llevarme?
+      ]
+    };
+    ```
+    
+    **Ejemplos:**
+    - Could you speak more slowly? (¿Podrías hablar más lento?)
+    - Could you check this for me? (¿Podrías revisar esto?)
+    - Could you let me know? (¿Podrías avisarme?)
+  </TabItem>
+</Tabs>
+
+<Aside type="tip">
+**Could** es tu opción segura: lo suficientemente formal para extraños, lo suficientemente casual para conocidos.
+</Aside>
+
+---
+
+## May I
+
+Formal y educado, usado en contextos profesionales:
+
+```javascript
+const mayPermission = {
+  structure: "May I + base verb...?",
+  context: "Formal, profesional, respetuoso",
+  examples: [
+    "May I come in?",              // ¿Puedo entrar?
+    "May I have your attention?",  // ¿Puedo tener su atención?
+    "May I ask who's calling?"     // ¿Puedo preguntar quién llama?
+  ]
+};
+// Nota: "May you...?" NO se usa para pedir favores
+```
+
+**Ejemplos:**
+- May I sit here? (¿Puedo sentarme aquí?)
+- May I speak freely? (¿Puedo hablar libremente?)
+- May I make a suggestion? (¿Puedo hacer una sugerencia?)
+- May I be excused? (¿Puedo retirarme?)
+
+<Aside type="caution">
+**May** solo se usa para pedir permiso, **no** para pedir favores. ~~May you help me?~~ → **Could you help me?**
+</Aside>
+
+---
+
+## Would you mind...?
+
+Una forma muy educada que usa la estructura negativa para ser cortés:
+
+<Tabs>
+  <TabItem label="Estructura">
+    ```javascript
+    const wouldYouMind = {
+      structure: "Would you mind + verb-ing...?",
+      // Literalmente: "¿Te importaría...?"
+      positiveAnswer: "No, not at all",  // Sí, lo haré
+      negativeAnswer: "I'm sorry, but..." // No puedo
+    };
+    // Respuesta confusa: "No" = Sí lo haré
+    ```
+  </TabItem>
+  
+  <TabItem label="Ejemplos">
+    ```javascript
+    const examples = [
+      "Would you mind closing the door?",
+      // ¿Te importaría cerrar la puerta?
+      "Would you mind waiting here?",
+      // ¿Te importaría esperar aquí?
+      "Would you mind helping me?"
+      // ¿Te importaría ayudarme?
+    ];
+    ```
+  </TabItem>
+</Tabs>
+
+**Ejemplos:**
+- Would you mind turning down the music? (¿Te importaría bajar la música?)
+- Would you mind if I opened the window? (¿Te importaría si abro la ventana?)
+- Would you mind speaking in English? (¿Te importaría hablar en inglés?)
+
+<Aside type="caution">
+Las respuestas son contra-intuitivas: **"No, not at all"** significa "sí, lo haré" porque estás diciendo que no te importa hacerlo.
+</Aside>
+
+---
+
+## Estructuras Formales
+
+Para situaciones muy formales o peticiones importantes:
+
+```javascript
+const formalStructures = {
+  structures: [
+    "Would it be possible to...?",
+    "I was wondering if I could...?",
+    "Would you be so kind as to...?",
+    "I would appreciate it if you could..."
+  ]
+};
+```
+
+<Tabs>
+  <TabItem label="Would it be possible">
+    ```javascript
+    const possible = {
+      structure: "Would it be possible to + base verb?",
+      examples: [
+        "Would it be possible to change my seat?",
+        // ¿Sería posible cambiar mi asiento?
+        "Would it be possible to get an extension?",
+        // ¿Sería posible obtener una extensión?
+      ]
+    };
+    ```
+  </TabItem>
+  
+  <TabItem label="I was wondering">
+    ```javascript
+    const wondering = {
+      structure: "I was wondering if I/you could...?",
+      examples: [
+        "I was wondering if I could leave early",
+        // Me preguntaba si podría irme temprano
+        "I was wondering if you could help me"
+        // Me preguntaba si podrías ayudarme
+      ]
+    };
+    ```
+  </TabItem>
+</Tabs>
+
+**Ejemplos:**
+- Would it be possible to reschedule our meeting? (¿Sería posible reprogramar nuestra reunión?)
+- I was wondering if you could review my report (Me preguntaba si podrías revisar mi informe)
+- Would you be so kind as to forward the email? (¿Sería tan amable de reenviar el correo?)
+
+---
+
+## Cómo Responder
+
+<Tabs>
+  <TabItem label="Aceptar">
+    ```javascript
+    const acceptingResponses = {
+      informal: [
+        "Sure!",                // ¡Claro!
+        "Of course!",           // ¡Por supuesto!
+        "No problem!",          // ¡Sin problema!
+        "Go ahead!"             // ¡Adelante!
+      ],
+      formal: [
+        "Certainly",            // Ciertamente
+        "By all means",         // Por supuesto
+        "Of course, please do"  // Claro, adelante
+      ]
+    };
+    ```
+  </TabItem>
+  
+  <TabItem label="Rechazar">
+    ```javascript
+    const decliningResponses = {
+      polite: [
+        "I'm sorry, but...",    // Lo siento, pero...
+        "I'm afraid I can't...", // Me temo que no puedo...
+        "Unfortunately...",     // Desafortunadamente...
+        "I wish I could, but..."  // Quisiera, pero...
+      ]
+    };
+    // Siempre da una razón cuando rechazas
+    ```
+  </TabItem>
+</Tabs>
+
+**Ejemplos de rechazo educado:**
+- I'm sorry, but that seat is taken (Lo siento, pero ese asiento está ocupado)
+- I'm afraid I can't help you right now (Me temo que no puedo ayudarte ahora)
+- I wish I could, but I have a meeting (Quisiera, pero tengo una reunión)
+
+---
+
+## Errores Comunes
+
+<Aside type="danger">
+**Usar "may" para pedir favores:**
+- ~~May you help me?~~ → **Could you help me?** (¿Podrías ayudarme?)
+- ~~May you pass the salt?~~ → **Can you pass the salt?** (¿Puedes pasar la sal?)
+</Aside>
+
+<Aside type="danger">
+**Olvidar "please" en peticiones formales:**
+- ~~Could I have the bill~~ → **Could I have the bill, please?** (¿Podría traerme la cuenta, por favor?)
+</Aside>
+
+<Aside type="danger">
+**Confundir respuestas a "Would you mind":**
+- "Would you mind helping me?" - "~~Yes~~" (significa que sí te importa = no lo harás)
+- Respuesta correcta para aceptar: **"No, not at all"** o **"Of course not"**
+</Aside>
+
+<Aside type="danger">
+**Usar infinitivo con "Would you mind":**
+- ~~Would you mind to help me?~~ → **Would you mind helping me?** (¿Te importaría ayudarme?)
+</Aside>
