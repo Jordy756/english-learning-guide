@@ -3,3 +3,426 @@ title: Estilo Indirecto
 description: Reporta lo que otros dijeron.
 ---
 
+import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
+
+Cuando cuentas lo que alguien dijo, no siempre usas sus palabras exactas. El **reported speech** (estilo indirecto) transforma las palabras originales. Piensa en ello como una función que recibe el mensaje original y lo procesa: cambia pronombres, tiempos verbales y referencias de tiempo.
+
+Dominar el estilo indirecto es esencial para contar historias, reportar conversaciones y comunicar información de terceros.
+
+---
+
+## Direct vs Reported Speech
+
+La diferencia fundamental entre citar directamente y reportar:
+
+```javascript
+const comparison = {
+  direct: 'She said, "I am tired"',
+  // Palabras exactas entre comillas
+  reported: "She said (that) she was tired",
+  // Transformado: pronombre + tiempo verbal
+};
+```
+
+<CardGrid>
+  <Card title="Estilo Directo">
+    Palabras exactas con comillas
+    
+    *"I love pizza," he said*
+  </Card>
+  
+  <Card title="Estilo Indirecto">
+    Palabras transformadas sin comillas
+    
+    *He said (that) he loved pizza*
+  </Card>
+</CardGrid>
+
+<Aside type="tip">
+La palabra **that** es opcional en reported speech: "He said he was tired" = "He said **that** he was tired"
+</Aside>
+
+---
+
+## Cambio de Tiempos Verbales (Backshift)
+
+Cuando el verbo de reporte está en pasado (said, told), los tiempos verbales "retroceden":
+
+```javascript
+const tenseBackshift = {
+  present_simple: "past_simple",
+  present_continuous: "past_continuous",
+  present_perfect: "past_perfect",
+  past_simple: "past_perfect",
+  will: "would",
+  can: "could",
+  may: "might"
+};
+```
+
+<Tabs>
+  <TabItem label="Presente → Pasado">
+    ```javascript
+    const presentToPast = {
+      direct: '"I work here"',
+      reported: "He said he worked there",
+      // Simple present → Simple past
+      
+      direct2: '"I am working"',
+      reported2: "He said he was working"
+      // Present continuous → Past continuous
+    };
+    ```
+    
+    **Ejemplos:**
+    - "I like coffee" → She said she liked coffee (Dijo que le gustaba el café)
+    - "I'm studying" → He said he was studying (Dijo que estaba estudiando)
+  </TabItem>
+  
+  <TabItem label="Pasado → Past Perfect">
+    ```javascript
+    const pastToPastPerfect = {
+      direct: '"I saw the movie"',
+      reported: "She said she had seen the movie",
+      // Simple past → Past perfect
+      
+      direct2: '"I was sleeping"',
+      reported2: "He said he had been sleeping"
+      // Past continuous → Past perfect continuous
+    };
+    ```
+    
+    **Ejemplos:**
+    - "I went home" → She said she had gone home (Dijo que se había ido a casa)
+    - "I bought a car" → He said he had bought a car (Dijo que había comprado un carro)
+  </TabItem>
+  
+  <TabItem label="Modales">
+    ```javascript
+    const modals = {
+      will: "would",     // "I will call" → He said he would call
+      can: "could",      // "I can swim" → She said she could swim
+      may: "might",      // "I may go" → He said he might go
+      must: "had to"     // "I must leave" → She said she had to leave
+    };
+    // would, could, might, should NO cambian
+    ```
+    
+    **Ejemplos:**
+    - "I will help" → He said he would help (Dijo que ayudaría)
+    - "I can drive" → She said she could drive (Dijo que podía manejar)
+  </TabItem>
+</Tabs>
+
+<Aside type="caution">
+**Would, could, should, might** ya están "retrocedidos" — no cambian en reported speech.
+</Aside>
+
+---
+
+## Cambio de Pronombres
+
+Los pronombres cambian según quién reporta:
+
+```javascript
+const pronounChanges = {
+  I: "he/she",
+  me: "him/her",
+  my: "his/her",
+  we: "they",
+  us: "them",
+  our: "their"
+};
+// Depende de quién habló originalmente
+```
+
+<Tabs>
+  <TabItem label="Ejemplos">
+    ```javascript
+    const examples = {
+      original: '"I love my job"',
+      // John habla de sí mismo
+      reported: "John said he loved his job",
+      // Cambia I→he, my→his
+      
+      original2: '"We need our tools"',
+      reported2: "They said they needed their tools"
+      // Cambia we→they, our→their
+    };
+    ```
+  </TabItem>
+  
+  <TabItem label="Contexto">
+    ```javascript
+    const context = {
+      // Si TÚ reportas lo que dijiste:
+      direct: '"I am tired"',
+      reported: "I said I was tired",
+      // I no cambia porque TÚ lo dijiste
+      
+      // Si reportas lo que te dijeron:
+      direct2: '"You are smart"',
+      reported2: "She said I was smart"
+      // You → I porque te lo dijeron a ti
+    };
+    ```
+  </TabItem>
+</Tabs>
+
+**Ejemplos:**
+- "I need help" (Mary) → Mary said she needed help (Mary dijo que necesitaba ayuda)
+- "We're coming" (friends) → They said they were coming (Dijeron que venían)
+
+---
+
+## Cambio de Tiempo y Lugar
+
+Las referencias de tiempo y lugar también cambian:
+
+```javascript
+const timeChanges = {
+  today: "that day",
+  yesterday: "the day before",
+  tomorrow: "the next day",
+  now: "then",
+  here: "there",
+  this: "that",
+  these: "those"
+};
+```
+
+<Tabs>
+  <TabItem label="Tiempo">
+    ```javascript
+    const timeExamples = {
+      direct: '"I will call you tomorrow"',
+      reported: "He said he would call me the next day",
+      
+      direct2: '"I saw her yesterday"',
+      reported2: "She said she had seen her the day before"
+    };
+    ```
+    
+    **Ejemplos:**
+    - "I'm busy today" → He said he was busy that day (Dijo que estaba ocupado ese día)
+    - "I'll do it now" → She said she would do it then (Dijo que lo haría entonces)
+  </TabItem>
+  
+  <TabItem label="Lugar">
+    ```javascript
+    const placeExamples = {
+      direct: '"I work here"',
+      reported: "She said she worked there",
+      
+      direct2: '"I like this book"',
+      reported2: "He said he liked that book"
+    };
+    ```
+    
+    **Ejemplos:**
+    - "Come here" → She told me to go there (Me dijo que fuera allí)
+    - "I want this one" → He said he wanted that one (Dijo que quería ese)
+  </TabItem>
+</Tabs>
+
+---
+
+## Reportar Preguntas
+
+Las preguntas en reported speech cambian su estructura:
+
+<Tabs>
+  <TabItem label="Yes/No Questions">
+    ```javascript
+    const yesNoQuestions = {
+      structure: "asked + if/whether + statement order",
+      direct: '"Do you like coffee?"',
+      reported: "She asked if I liked coffee",
+      // Nota: orden de oración, NO de pregunta
+    };
+    ```
+    
+    **Ejemplos:**
+    - "Are you coming?" → He asked if I was coming (Preguntó si yo venía)
+    - "Did you see it?" → She asked whether I had seen it (Preguntó si lo había visto)
+    - "Can you help?" → He asked if I could help (Preguntó si podía ayudar)
+  </TabItem>
+  
+  <TabItem label="Wh- Questions">
+    ```javascript
+    const whQuestions = {
+      structure: "asked + wh-word + statement order",
+      direct: '"Where do you live?"',
+      reported: "She asked where I lived",
+      // SIN auxiliar do/does/did
+    };
+    ```
+    
+    **Ejemplos:**
+    - "What is your name?" → He asked what my name was (Preguntó cuál era mi nombre)
+    - "When did you arrive?" → She asked when I had arrived (Preguntó cuándo había llegado)
+    - "Why are you sad?" → He asked why I was sad (Preguntó por qué estaba triste)
+  </TabItem>
+</Tabs>
+
+<Aside type="caution">
+En reported questions, el orden es de **oración** (sujeto + verbo), **no** de pregunta. Y **no** llevan signo de interrogación.
+</Aside>
+
+---
+
+## Reportar Órdenes y Peticiones
+
+Usa **told/asked + object + to + infinitive**:
+
+```javascript
+const orders = {
+  tell: "para órdenes",
+  ask: "para peticiones",
+  structure: "told/asked + person + (not) to + verb"
+};
+```
+
+<Tabs>
+  <TabItem label="Órdenes (tell)">
+    ```javascript
+    const tellExamples = {
+      direct: '"Close the door," he said',
+      reported: "He told me to close the door",
+      
+      negative: '"Don\'t be late"',
+      reported2: "She told him not to be late"
+    };
+    ```
+    
+    **Ejemplos:**
+    - "Sit down" → She told me to sit down (Me dijo que me sentara)
+    - "Don't touch that" → He told her not to touch that (Le dijo que no tocara eso)
+  </TabItem>
+  
+  <TabItem label="Peticiones (ask)">
+    ```javascript
+    const askExamples = {
+      direct: '"Please help me," she said',
+      reported: "She asked me to help her",
+      
+      direct2: '"Could you wait?"',
+      reported2: "He asked me to wait"
+    };
+    ```
+    
+    **Ejemplos:**
+    - "Please call me" → She asked me to call her (Me pidió que la llamara)
+    - "Don't leave yet" → He asked me not to leave yet (Me pidió que no me fuera todavía)
+  </TabItem>
+</Tabs>
+
+---
+
+## Say vs Tell
+
+La diferencia importante entre estos verbos de reporte:
+
+```javascript
+const sayVsTell = {
+  say: {
+    structure: "say (that) + clause",
+    noObject: true,
+    example: "She said (that) she was tired"
+  },
+  tell: {
+    structure: "tell + person + (that) + clause",
+    needsObject: true,
+    example: "She told me (that) she was tired"
+  }
+};
+```
+
+<Tabs>
+  <TabItem label="Say">
+    ```javascript
+    const sayExamples = [
+      "He said he was busy",      // correcto
+      "He said that he was busy", // correcto
+      // "He said me..." ← INCORRECTO
+    ];
+    // Say NO lleva objeto directo (persona)
+    ```
+    
+    **Ejemplos:**
+    - She said she would come (Dijo que vendría)
+    - They said it was expensive (Dijeron que era caro)
+  </TabItem>
+  
+  <TabItem label="Tell">
+    ```javascript
+    const tellExamples = [
+      "He told me he was busy",    // correcto
+      "He told us the truth",      // correcto
+      // "He told that..." ← INCORRECTO
+    ];
+    // Tell SIEMPRE necesita objeto (a quién le dijeron)
+    ```
+    
+    **Ejemplos:**
+    - She told me she would come (Me dijo que vendría)
+    - They told us it was expensive (Nos dijeron que era caro)
+  </TabItem>
+</Tabs>
+
+<Aside type="tip">
+Recuerda: **Say** algo, **Tell** a alguien algo. "She said to me" también es correcto pero menos común.
+</Aside>
+
+---
+
+## Cuándo NO Cambiar el Tiempo
+
+A veces el backshift es opcional o no aplica:
+
+```javascript
+const noBackshift = {
+  stillTrue: "La información sigue siendo verdad",
+  recentPast: "Se dijo hace poco",
+  examples: [
+    // Verdad universal
+    '"The earth is round"',
+    'He said the earth is/was round',
+    
+    // Dicho hace poco
+    '"I'm hungry" (hace 5 min)',
+    'She said she is hungry'  // aún válido
+  ]
+};
+```
+
+**Ejemplos donde puedes mantener el tiempo:**
+- "Paris is beautiful" → She said Paris is beautiful (Es verdad universal)
+- "I have a headache" (dicho hace 1 minuto) → He said he has a headache (Aún tiene)
+
+---
+
+## Errores Comunes
+
+<Aside type="danger">
+**Mantener orden de pregunta en reported questions:**
+- ~~She asked where was I going~~ → **She asked where I was going** (Preguntó adónde iba)
+- ~~He asked did I like it~~ → **He asked if I liked it** (Preguntó si me gustó)
+</Aside>
+
+<Aside type="danger">
+**Confundir say y tell:**
+- ~~He said me that...~~ → **He told me that...** (Me dijo que...)
+- ~~She told that...~~ → **She said that...** (Dijo que...)
+</Aside>
+
+<Aside type="danger">
+**Olvidar cambiar los pronombres:**
+- ~~She said "I am tired" → She said I was tired~~ → **She said she was tired** (Dijo que estaba cansada)
+</Aside>
+
+<Aside type="danger">
+**Usar "to" con say para órdenes:**
+- ~~He said me to go~~ → **He told me to go** (Me dijo que fuera)
+- **Say** no se usa para reportar órdenes
+</Aside>
