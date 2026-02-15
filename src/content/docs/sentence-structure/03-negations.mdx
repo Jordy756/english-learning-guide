@@ -3,3 +3,342 @@ title: Formar Negaciones
 description: Aprende a negar correctamente en todos los tiempos.
 ---
 
+import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
+
+En español, negar es simple: añades "no" antes del verbo. En inglés, el proceso depende del **tipo de verbo** que uses. Piensa en la negación como una función que transforma oraciones, pero que necesita saber qué tipo de verbo está procesando para aplicar la regla correcta.
+
+Dominar las negaciones es fundamental porque expresar lo que **no** haces, **no** quieres o **no** sabes es tan importante como expresar lo que sí.
+
+---
+
+## Negación con el Verbo "Be"
+
+El verbo **be** es especial: solo añades **not** directamente después:
+
+```javascript
+const negateWithBe = {
+  rule: "Subject + Be + not + Complement",
+  transform: {
+    positive: "She is happy",
+    negative: "She is not happy"  // Ella no está feliz
+  }
+};
+```
+
+<Tabs>
+  <TabItem label="Presente">
+    ```javascript
+    const presentBe = {
+      "I am not": "I'm not",        // No soy/estoy
+      "You are not": "You aren't",  // No eres/estás
+      "He is not": "He isn't",      // No es/está
+      "She is not": "She isn't",    // No es/está
+      "We are not": "We aren't",    // No somos/estamos
+      "They are not": "They aren't" // No son/están
+    };
+    ```
+    
+    **Ejemplos:**
+    - I'm not tired (No estoy cansado)
+    - She isn't a doctor (Ella no es doctora)
+    - We aren't ready (No estamos listos)
+  </TabItem>
+  
+  <TabItem label="Pasado">
+    ```javascript
+    const pastBe = {
+      "I was not": "I wasn't",       // No era/estaba
+      "You were not": "You weren't", // No eras/estabas
+      "He was not": "He wasn't",     // No era/estaba
+      "We were not": "We weren't",   // No éramos/estábamos
+      "They were not": "They weren't" // No eran/estaban
+    };
+    ```
+    
+    **Ejemplos:**
+    - I wasn't at the party (No estuve en la fiesta)
+    - They weren't happy (No estaban felices)
+    - It wasn't my fault (No fue mi culpa)
+  </TabItem>
+</Tabs>
+
+<Aside type="tip">
+Con **"be"**, nunca usas **do/does/did** para negar: ~~I don't be tired~~ → **I'm not tired**
+</Aside>
+
+---
+
+## Negación con Auxiliares Modales
+
+Los modales (can, will, should, must, etc.) también añaden **not** directamente:
+
+```javascript
+const negateModals = {
+  rule: "Subject + Modal + not + Base Verb",
+  examples: {
+    can: "I cannot swim",      // No puedo nadar
+    will: "She will not come", // Ella no vendrá
+    should: "You should not go", // No deberías ir
+    must: "We must not forget"   // No debemos olvidar
+  }
+};
+```
+
+<Tabs>
+  <TabItem label="Contracciones">
+    ```javascript
+    const modalContractions = {
+      "cannot": "can't",
+      "will not": "won't",       // irregular!
+      "would not": "wouldn't",
+      "should not": "shouldn't",
+      "could not": "couldn't",
+      "must not": "mustn't"
+    };
+    ```
+  </TabItem>
+  
+  <TabItem label="Ejemplos">
+    ```javascript
+    const examples = [
+      "I can't find my keys",     // No encuentro mis llaves
+      "She won't answer",         // Ella no contestará
+      "You shouldn't worry",      // No deberías preocuparte
+      "We couldn't see anything"  // No podíamos ver nada
+    ];
+    ```
+  </TabItem>
+</Tabs>
+
+**Más ejemplos:**
+- I can't speak French (No puedo hablar francés)
+- They won't be late (No llegarán tarde)
+- You shouldn't eat that (No deberías comer eso)
+- We couldn't understand him (No podíamos entenderlo)
+
+<Aside type="caution">
+**won't** es la contracción de "will not" — es irregular, no "willn't".
+</Aside>
+
+---
+
+## Negación con Do/Does/Did
+
+Para verbos regulares, necesitas el auxiliar **do/does/did** + **not**:
+
+```javascript
+const negateWithDo = {
+  structure: "Subject + do/does/did + not + Base Verb",
+  present: {
+    I_you_we_they: "I do not work",
+    he_she_it: "She does not work"
+  },
+  past: "They did not work"
+};
+// El verbo principal SIEMPRE en forma base
+```
+
+<Tabs>
+  <TabItem label="Presente">
+    ```javascript
+    const presentNegative = {
+      "do not": "don't",       // I/you/we/they
+      "does not": "doesn't",   // he/she/it
+      examples: [
+        "I don't like coffee",    // No me gusta el café
+        "She doesn't work here",  // Ella no trabaja aquí
+        "We don't have time"      // No tenemos tiempo
+      ]
+    };
+    ```
+    
+    **Ejemplos:**
+    - I don't understand (No entiendo)
+    - He doesn't speak English (Él no habla inglés)
+    - They don't know the answer (No saben la respuesta)
+  </TabItem>
+  
+  <TabItem label="Pasado">
+    ```javascript
+    const pastNegative = {
+      "did not": "didn't",
+      examples: [
+        "I didn't see her",       // No la vi
+        "She didn't call me",     // Ella no me llamó
+        "They didn't come"        // No vinieron
+      ]
+    };
+    // Mismo para todos los sujetos
+    ```
+    
+    **Ejemplos:**
+    - I didn't know that (No sabía eso)
+    - She didn't finish her homework (No terminó su tarea)
+    - We didn't go to the party (No fuimos a la fiesta)
+  </TabItem>
+</Tabs>
+
+<Aside type="tip">
+Cuando usas **does/did**, el verbo principal va en **forma base**: ~~She doesn't works~~ → **She doesn't work**
+</Aside>
+
+---
+
+## Negación con Have/Has
+
+El verbo **have** tiene dos formas de negación según su uso:
+
+<Tabs>
+  <TabItem label="Have como auxiliar">
+    ```javascript
+    const haveAuxiliary = {
+      // Present Perfect, Past Perfect
+      rule: "Subject + have/has/had + not + past participle",
+      examples: [
+        "I haven't finished",   // No he terminado
+        "She hasn't eaten",     // Ella no ha comido
+        "We hadn't seen it"     // No lo habíamos visto
+      ]
+    };
+    ```
+    
+    **Ejemplos:**
+    - I haven't been there (No he estado allí)
+    - He hasn't called yet (Él no ha llamado aún)
+    - They hadn't heard the news (No habían oído las noticias)
+  </TabItem>
+  
+  <TabItem label="Have como verbo principal">
+    ```javascript
+    const haveMain = {
+      // Posesión: "have" = tener
+      rule: "Subject + don't/doesn't + have",
+      examples: [
+        "I don't have money",    // No tengo dinero
+        "She doesn't have time", // Ella no tiene tiempo
+        "They didn't have a car" // No tenían carro
+      ]
+    };
+    // En inglés americano, usa do/don't
+    ```
+    
+    **Ejemplos:**
+    - I don't have any brothers (No tengo hermanos)
+    - She doesn't have a phone (Ella no tiene teléfono)
+    - We didn't have enough food (No teníamos suficiente comida)
+  </TabItem>
+</Tabs>
+
+---
+
+## Palabras Negativas
+
+Además de **not**, hay palabras que hacen negativa una oración:
+
+```javascript
+const negativeWords = {
+  nobody: "nadie",        // Nobody knows
+  nothing: "nada",        // Nothing happened
+  nowhere: "en ningún lugar", // Nowhere to go
+  never: "nunca",         // I never lie
+  no: "ningún/ninguno"    // No problem
+};
+// Una sola palabra negativa por oración
+```
+
+<Tabs>
+  <TabItem label="Uso correcto">
+    ```javascript
+    const correctUsage = [
+      "Nobody called me",        // Nadie me llamó
+      "I saw nothing",           // No vi nada
+      "She never complains",     // Nunca se queja
+      "There is no reason"       // No hay razón
+    ];
+    // Solo UNA negación en inglés estándar
+    ```
+  </TabItem>
+  
+  <TabItem label="Alternativas">
+    ```javascript
+    const alternatives = {
+      // Dos formas de decir lo mismo:
+      option1: "I don't know anything",
+      option2: "I know nothing",
+      // Ambas significan "No sé nada"
+      
+      option3: "He doesn't have any money",
+      option4: "He has no money"
+      // Ambas significan "Él no tiene dinero"
+    };
+    ```
+  </TabItem>
+</Tabs>
+
+**Ejemplos:**
+- Nobody came to the meeting (Nadie vino a la reunión)
+- I have nothing to say (No tengo nada que decir)
+- She goes nowhere without her phone (No va a ningún lado sin su teléfono)
+- There's no milk in the fridge (No hay leche en el refrigerador)
+
+<Aside type="caution">
+En inglés estándar, **evita la doble negación**: ~~I don't know nothing~~ → **I don't know anything** o **I know nothing**
+</Aside>
+
+---
+
+## Resumen de Estructuras
+
+<CardGrid>
+  <Card title="Con Be">
+    Subject + be + **not** + complement
+    
+    *She is **not** happy*
+  </Card>
+  
+  <Card title="Con Modales">
+    Subject + modal + **not** + base verb
+    
+    *I can**not** swim*
+  </Card>
+  
+  <Card title="Con Do/Does/Did">
+    Subject + do/does/did + **not** + base verb
+    
+    *She **doesn't** work*
+  </Card>
+  
+  <Card title="Con Have (auxiliar)">
+    Subject + have/has + **not** + past participle
+    
+    *I **haven't** finished*
+  </Card>
+</CardGrid>
+
+---
+
+## Errores Comunes
+
+<Aside type="danger">
+**Usar "do" con el verbo "be":**
+- ~~I don't be hungry~~ → **I'm not hungry** (No tengo hambre)
+- ~~She doesn't be tired~~ → **She isn't tired** (Ella no está cansada)
+</Aside>
+
+<Aside type="danger">
+**Conjugar el verbo principal con does/did:**
+- ~~She doesn't likes pizza~~ → **She doesn't like pizza** (No le gusta la pizza)
+- ~~He didn't went home~~ → **He didn't go home** (Él no fue a casa)
+</Aside>
+
+<Aside type="danger">
+**Doble negación:**
+- ~~I don't have no money~~ → **I don't have any money** o **I have no money** (No tengo dinero)
+- ~~She doesn't know nobody~~ → **She doesn't know anybody** o **She knows nobody** (Ella no conoce a nadie)
+</Aside>
+
+<Aside type="danger">
+**Olvidar el auxiliar con verbos regulares:**
+- ~~I not like coffee~~ → **I don't like coffee** (No me gusta el café)
+- ~~She not works here~~ → **She doesn't work here** (Ella no trabaja aquí)
+</Aside>

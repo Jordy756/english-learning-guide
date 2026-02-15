@@ -3,3 +3,410 @@ title: Presente Perfecto
 description: Conecta el pasado con el presente.
 ---
 
+import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
+
+El Present Perfect es como un puente entre dos estados en programación: conecta una acción del pasado con el momento presente. A diferencia del español, donde "he comido" y "comí" a veces se usan indistintamente, en inglés el Present Perfect tiene usos muy específicos que lo distinguen del pasado simple.
+
+Este tiempo verbal expresa acciones que ocurrieron en un momento no especificado del pasado, o que tienen relevancia en el presente.
+
+---
+
+## Estructura del Present Perfect
+
+Se forma con **have/has** + **participio pasado**:
+
+```javascript
+const presentPerfect = {
+  structure: "have/has + past participle",
+  conjugation: {
+    I: "have + pp",       // I have worked
+    you: "have + pp",     // You have worked
+    he: "has + pp",       // He has worked
+    she: "has + pp",      // She has worked
+    it: "has + pp",       // It has worked
+    we: "have + pp",      // We have worked
+    they: "have + pp"     // They have worked
+  }
+};
+```
+
+**Ejemplos:**
+- I have finished my work (He terminado mi trabajo)
+- You have learned a lot (Has aprendido mucho)
+- She has traveled to Japan (Ella ha viajado a Japón)
+- We have seen that movie (Hemos visto esa película)
+- They have lived here for years (Han vivido aquí por años)
+
+<Aside type="tip">
+**Regla simple:** Usa **has** con he/she/it, y **have** con todo lo demás.
+</Aside>
+
+---
+
+## Tres Formas: Afirmativa, Negativa, Pregunta
+
+<Tabs>
+  <TabItem label="Afirmativa">
+    ```javascript
+    const affirmative = {
+      structure: "Subject + have/has + past participle",
+      examples: [
+        "I have eaten",         // He comido
+        "You have called",      // Has llamado
+        "He has arrived",       // Él ha llegado
+        "She has finished",     // Ella ha terminado
+        "We have started",      // Hemos empezado
+        "They have left"        // Se han ido
+      ]
+    };
+    ```
+  </TabItem>
+  
+  <TabItem label="Negativa">
+    ```javascript
+    const negative = {
+      structure: "Subject + have/has + not + pp",
+      examples: [
+        "I have not eaten",     // No he comido
+        "You haven't called",   // No has llamado
+        "He hasn't arrived",    // Él no ha llegado
+        "She hasn't finished",  // Ella no ha terminado
+        "We haven't started",   // No hemos empezado
+        "They haven't left"     // No se han ido
+      ]
+    };
+    ```
+    
+    Añade **not** después de have/has, o usa contracciones: **haven't** / **hasn't**.
+  </TabItem>
+  
+  <TabItem label="Pregunta">
+    ```javascript
+    const question = {
+      structure: "Have/Has + subject + past participle?",
+      examples: [
+        "Have I met you?",       // ¿Te he conocido?
+        "Have you eaten?",       // ¿Has comido?
+        "Has he arrived?",       // ¿Ha llegado él?
+        "Has she finished?",     // ¿Ha terminado ella?
+        "Have we started?",      // ¿Hemos empezado?
+        "Have they left?"        // ¿Se han ido?
+      ]
+    };
+    ```
+    
+    Invierte el orden: **Have/Has** va antes del sujeto.
+  </TabItem>
+</Tabs>
+
+---
+
+## Contracciones Comunes
+
+Las contracciones hacen el Present Perfect más natural:
+
+```javascript
+const contractions = {
+  affirmative: {
+    "I have": "I've",         // I've seen it
+    "you have": "you've",     // You've done well
+    "he has": "he's",         // He's gone home
+    "she has": "she's",       // She's finished
+    "it has": "it's",         // It's changed
+    "we have": "we've",       // We've arrived
+    "they have": "they've"    // They've left
+  },
+  negative: {
+    "have not": "haven't",    // I haven't seen it
+    "has not": "hasn't"       // She hasn't called
+  }
+};
+```
+
+<Aside type="caution">
+**Cuidado:** "He's" puede ser "he is" o "he has". El contexto lo aclara: "He's tired" (is) vs "He's finished" (has).
+</Aside>
+
+---
+
+## Usos del Present Perfect
+
+### 1. Experiencias de Vida (sin tiempo específico)
+
+Para hablar de experiencias en tu vida sin decir cuándo exactamente:
+
+- I have visited Paris (He visitado París)
+- She has never eaten sushi (Ella nunca ha comido sushi)
+- Have you ever seen a whale? (¿Alguna vez has visto una ballena?)
+- They have traveled to many countries (Han viajado a muchos países)
+
+<Aside type="note">
+**Ever** y **never** son muy comunes con este uso: "Have you **ever**...?" (¿Alguna vez...?) / "I have **never**..." (Nunca he...)
+</Aside>
+
+### 2. Acciones Recientes con Resultado Presente
+
+Cuando una acción pasada tiene un efecto visible o relevante ahora:
+
+- I have lost my keys (He perdido mis llaves → ahora no las tengo)
+- She has broken her leg (Se ha roto la pierna → ahora está rota)
+- The train has arrived (El tren ha llegado → está aquí ahora)
+- I've finished my homework (He terminado mi tarea → ya está hecha)
+
+### 3. Situaciones que Continúan hasta el Presente
+
+Con **for** (duración) y **since** (punto de inicio):
+
+- I have lived here for 10 years (He vivido aquí por 10 años)
+- She has worked here since 2020 (Ella ha trabajado aquí desde 2020)
+- We have known each other for ages (Nos conocemos desde hace mucho)
+- They have been married since June (Están casados desde junio)
+
+### 4. Acciones Repetidas hasta el Presente
+
+Para acciones que se han repetido varias veces hasta ahora:
+
+- I have seen that movie three times (He visto esa película tres veces)
+- She has called you twice today (Ella te ha llamado dos veces hoy)
+- We have visited them many times (Los hemos visitado muchas veces)
+- He has won several awards (Ha ganado varios premios)
+
+---
+
+## Palabras Clave del Present Perfect
+
+<CardGrid>
+  <Card title="Experiencias">
+    - ever (alguna vez)
+    - never (nunca)
+    - before (antes)
+    - once/twice (una/dos veces)
+    - many times (muchas veces)
+  </Card>
+  
+  <Card title="Acciones Recientes">
+    - just (justo ahora)
+    - already (ya)
+    - yet (todavía/ya)
+    - recently (recientemente)
+    - lately (últimamente)
+  </Card>
+  
+  <Card title="Duración">
+    - for (por/durante)
+    - since (desde)
+    - so far (hasta ahora)
+    - up to now (hasta ahora)
+    - all my life (toda mi vida)
+  </Card>
+  
+  <Card title="Frecuencia">
+    - always (siempre)
+    - often (a menudo)
+    - several times (varias veces)
+    - how many times (cuántas veces)
+  </Card>
+</CardGrid>
+
+---
+
+## Just, Already, Yet
+
+Estas tres palabras son muy comunes con el Present Perfect:
+
+<Tabs>
+  <TabItem label="Just">
+    ```javascript
+    const just = {
+      meaning: "hace muy poco tiempo",
+      position: "entre have/has y el participio",
+      examples: [
+        "I have just arrived",     // Acabo de llegar
+        "She has just left",       // Ella acaba de irse
+        "They have just eaten",    // Acaban de comer
+        "We've just finished"      // Acabamos de terminar
+      ]
+    };
+    ```
+    
+    **Just** indica que algo ocurrió hace muy poco.
+  </TabItem>
+  
+  <TabItem label="Already">
+    ```javascript
+    const already = {
+      meaning: "ya (antes de lo esperado)",
+      position: "entre have/has y el participio",
+      examples: [
+        "I have already done it",   // Ya lo he hecho
+        "She has already left",     // Ella ya se fue
+        "They've already eaten",    // Ya han comido
+        "We've already seen it"     // Ya lo hemos visto
+      ]
+    };
+    ```
+    
+    **Already** expresa que algo pasó antes de lo esperado.
+  </TabItem>
+  
+  <TabItem label="Yet">
+    ```javascript
+    const yet = {
+      meaning: "todavía (neg) / ya (preg)",
+      position: "al final de la oración",
+      examples: [
+        "I haven't finished yet",   // Todavía no he terminado
+        "She hasn't called yet",    // Ella no ha llamado todavía
+        "Have you eaten yet?",      // ¿Ya has comido?
+        "Has it arrived yet?"       // ¿Ya ha llegado?
+      ]
+    };
+    ```
+    
+    **Yet** se usa en negativas y preguntas, al final.
+  </TabItem>
+</Tabs>
+
+---
+
+## For vs Since
+
+Dos palabras esenciales para expresar duración:
+
+```javascript
+const forVsSince = {
+  for: {
+    use: "período de tiempo (duración)",
+    examples: [
+      "for 5 years",      // por 5 años
+      "for a week",       // por una semana
+      "for ages",         // por mucho tiempo
+      "for a long time"   // por mucho tiempo
+    ]
+  },
+  since: {
+    use: "punto de inicio específico",
+    examples: [
+      "since 2020",       // desde 2020
+      "since Monday",     // desde el lunes
+      "since I was born", // desde que nací
+      "since then"        // desde entonces
+    ]
+  }
+};
+```
+
+**Ejemplos comparados:**
+- I have worked here **for** 3 years (He trabajado aquí por 3 años)
+- I have worked here **since** 2023 (He trabajado aquí desde 2023)
+- She has been sick **for** a week (Ha estado enferma por una semana)
+- She has been sick **since** Friday (Ha estado enferma desde el viernes)
+
+<Aside type="tip">
+**Truco:** Si puedes contar el tiempo (días, años, horas), usa **for**. Si es una fecha o momento específico, usa **since**.
+</Aside>
+
+---
+
+## Present Perfect vs Past Simple
+
+Esta es una de las distinciones más importantes en inglés:
+
+<Tabs>
+  <TabItem label="Present Perfect">
+    ```javascript
+    const presentPerfectUse = {
+      when: "tiempo NO especificado o conexión con presente",
+      examples: [
+        "I have visited London",      // (alguna vez)
+        "She has lost her phone",     // (todavía perdido)
+        "We have eaten",              // (ya comimos)
+        "I have lived here for 5 years" // (sigo viviendo)
+      ]
+    };
+    ```
+    
+    No importa cuándo pasó, o sigue siendo relevante ahora.
+  </TabItem>
+  
+  <TabItem label="Past Simple">
+    ```javascript
+    const pastSimpleUse = {
+      when: "tiempo específico o acción terminada",
+      examples: [
+        "I visited London in 2019",    // (fecha específica)
+        "She lost her phone yesterday",// (ayer)
+        "We ate at 7pm",               // (hora específica)
+        "I lived there for 5 years"    // (ya no vivo ahí)
+      ]
+    };
+    ```
+    
+    Dices exactamente cuándo pasó, o ya no es relevante.
+  </TabItem>
+</Tabs>
+
+**Comparación directa:**
+- I **have seen** that movie (experiencia general, sin decir cuándo)
+- I **saw** that movie yesterday (ayer = tiempo específico)
+- She **has worked** here for 2 years (sigue trabajando)
+- She **worked** here for 2 years (ya no trabaja aquí)
+
+<Aside type="caution">
+**Regla clave:** Si mencionas **cuándo** exactamente (yesterday, last week, in 2020, when I was young), usa **Past Simple**, NO Present Perfect.
+</Aside>
+
+---
+
+## Errores Comunes
+
+<Aside type="danger">
+**Usar Present Perfect con tiempo específico**
+
+El Present Perfect NO se usa cuando dices cuándo pasó algo:
+
+~~I have seen him yesterday~~ / ~~She has called last week~~
+
+→ **I saw him yesterday** (Lo vi ayer)
+
+→ **She called last week** (Ella llamó la semana pasada)
+</Aside>
+
+<Aside type="danger">
+**Confundir for y since**
+
+**For** = duración / **Since** = punto de inicio:
+
+~~I have lived here since 5 years~~ / ~~for 2020~~
+
+→ **I have lived here for 5 years** (por 5 años)
+
+→ **I have lived here since 2020** (desde 2020)
+</Aside>
+
+<Aside type="danger">
+**Olvidar have/has**
+
+El Present Perfect SIEMPRE necesita have/has:
+
+~~I seen that movie~~ / ~~She gone home~~
+
+→ **I have seen that movie** (He visto esa película)
+
+→ **She has gone home** (Ella se ha ido a casa)
+</Aside>
+
+<Aside type="danger">
+**Usar been con verbos de acción incorrectamente**
+
+"Been" es el participio de "be", no de "go":
+
+~~I have been to the store~~ (correcto solo para "ir y volver")
+
+Para acciones, usa el participio correcto:
+
+→ **I have gone to the store** (He ido a la tienda)
+
+→ **I have been to Paris** (He estado en París - implica que ya regresaste)
+</Aside>
+

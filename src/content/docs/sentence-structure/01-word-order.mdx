@@ -3,3 +3,246 @@ title: Orden de Palabras
 description: Aprende la estructura correcta de las oraciones.
 ---
 
+import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
+
+En español, el orden de palabras es flexible: "Yo como pizza" y "Pizza como yo" se entienden. En inglés, el orden es **rígido**. Piensa en una oración como un array donde cada posición tiene un propósito específico, y cambiar el orden cambia completamente el significado.
+
+El inglés sigue una estructura predecible que, una vez dominada, te permite construir oraciones correctas automáticamente.
+
+---
+
+## Estructura Básica: SVO
+
+La estructura fundamental del inglés es **Subject + Verb + Object** (Sujeto + Verbo + Objeto):
+
+```javascript
+const basicSentence = {
+  structure: ["Subject", "Verb", "Object"],
+  example: ["I", "eat", "pizza"]
+  // Yo como pizza
+};
+```
+
+**Ejemplos:**
+- She reads books (Ella lee libros)
+- They play football (Ellos juegan fútbol)
+- My brother loves music (Mi hermano ama la música)
+- The cat caught a mouse (El gato atrapó un ratón)
+- We need more time (Necesitamos más tiempo)
+
+<Aside type="tip">
+A diferencia del español, en inglés **siempre** necesitas expresar el sujeto. No puedes decir solo "Am tired" — debes decir **"I am tired"**.
+</Aside>
+
+---
+
+## Estructura Extendida: SVOMPT
+
+Para oraciones más completas, el inglés sigue el patrón **SVOMPT**:
+
+```javascript
+const extendedStructure = {
+  S: "Subject",      // Sujeto
+  V: "Verb",         // Verbo
+  O: "Object",       // Objeto (qué/quién)
+  M: "Manner",       // Manera (cómo)
+  P: "Place",        // Lugar (dónde)
+  T: "Time"          // Tiempo (cuándo)
+};
+```
+
+<Tabs>
+  <TabItem label="Estructura">
+    ```javascript
+    const sentence = [
+      "She",           // Subject
+      "plays",         // Verb
+      "the piano",     // Object
+      "beautifully",   // Manner (cómo)
+      "at home",       // Place (dónde)
+      "every day"      // Time (cuándo)
+    ];
+    // Ella toca el piano bellamente en casa todos los días
+    ```
+  </TabItem>
+  
+  <TabItem label="Ejemplos">
+    ```javascript
+    const examples = [
+      // S + V + O + M + P + T
+      "He drives his car carefully on the highway at night",
+      // S + V + O + P + T (sin Manner)
+      "I met my friend at the park yesterday",
+      // S + V + O + T (solo tiempo)
+      "We watch movies every Friday"
+    ];
+    ```
+  </TabItem>
+</Tabs>
+
+**Más ejemplos:**
+- I study English at the library every morning (Estudio inglés en la biblioteca cada mañana)
+- She works quietly in her office on Mondays (Ella trabaja silenciosamente en su oficina los lunes)
+- They eat dinner together at home every night (Cenan juntos en casa cada noche)
+
+<Aside type="caution">
+El orden **MPT** (Manner → Place → Time) es flexible, pero **nunca** pongas estos elementos entre el verbo y el objeto.
+</Aside>
+
+---
+
+## Orden de Adjetivos
+
+Cuando usas múltiples adjetivos, siguen un orden específico:
+
+```javascript
+const adjectiveOrder = [
+  "Opinion",      // beautiful, ugly
+  "Size",         // big, small
+  "Age",          // old, new, young
+  "Shape",        // round, square
+  "Color",        // red, blue
+  "Origin",       // Spanish, American
+  "Material",     // wooden, plastic
+  "Purpose"       // sleeping (bag)
+];
+// OSASCOMP para recordar
+```
+
+<Tabs>
+  <TabItem label="Correcto">
+    ```javascript
+    const correct = {
+      example1: "a beautiful small old house",
+      // Opinion + Size + Age
+      example2: "a big round wooden table",
+      // Size + Shape + Material
+      example3: "an expensive new Italian car"
+      // Opinion + Age + Origin
+    };
+    ```
+  </TabItem>
+  
+  <TabItem label="Incorrecto">
+    ```javascript
+    const incorrect = {
+      wrong1: "a old small beautiful house",
+      wrong2: "a wooden round big table",
+      wrong3: "an Italian new expensive car"
+    };
+    // El orden afecta cómo suena natural
+    ```
+  </TabItem>
+</Tabs>
+
+**Ejemplos:**
+- A lovely little old cottage (Una hermosa pequeña cabaña antigua)
+- A beautiful long black dress (Un hermoso vestido largo negro)
+- A small Japanese ceramic vase (Un pequeño jarrón cerámico japonés)
+
+---
+
+## Posición de Adverbios
+
+Los adverbios cambian de posición según su tipo:
+
+<Tabs>
+  <TabItem label="Frecuencia">
+    ```javascript
+    const frequency = {
+      position: "Before main verb, after 'be'",
+      adverbs: ["always", "usually", "often", "never"],
+      examples: [
+        "I always wake up early",   // antes del verbo
+        "She is always happy"       // después de 'be'
+      ]
+    };
+    ```
+    
+    **Ejemplos:**
+    - He never eats meat (Él nunca come carne)
+    - They usually arrive late (Usualmente llegan tarde)
+    - I am often tired (A menudo estoy cansado)
+  </TabItem>
+  
+  <TabItem label="Manera">
+    ```javascript
+    const manner = {
+      position: "After verb/object",
+      adverbs: ["quickly", "slowly", "carefully"],
+      examples: [
+        "She spoke quietly",        // después del verbo
+        "He drives the car slowly"  // después del objeto
+      ]
+    };
+    ```
+    
+    **Ejemplos:**
+    - The children played happily (Los niños jugaron felizmente)
+    - She answered the question correctly (Respondió la pregunta correctamente)
+  </TabItem>
+  
+  <TabItem label="Tiempo/Lugar">
+    ```javascript
+    const timePlace = {
+      position: "Usually at end of sentence",
+      examples: [
+        "I saw him yesterday",      // tiempo al final
+        "She works here",           // lugar al final
+        "We met at the cafe today"  // lugar + tiempo
+      ]
+    };
+    ```
+    
+    **Ejemplos:**
+    - I'm going to Madrid tomorrow (Voy a Madrid mañana)  
+    - They live nearby (Viven cerca)
+  </TabItem>
+</Tabs>
+
+---
+
+## Posición de "Enough" y "Too"
+
+Estas palabras tienen posiciones específicas:
+
+```javascript
+const position = {
+  enough: {
+    afterAdj: "good enough",      // después de adjetivo
+    beforeNoun: "enough money"    // antes de sustantivo
+  },
+  too: {
+    beforeAdj: "too expensive",   // antes de adjetivo
+    beforeAdv: "too quickly"      // antes de adverbio
+  }
+};
+```
+
+**Ejemplos:**
+- This coffee is hot enough (Este café está suficientemente caliente)
+- I don't have enough time (No tengo suficiente tiempo)
+- This bag is too heavy (Esta bolsa es demasiado pesada)
+- You're driving too fast (Estás conduciendo demasiado rápido)
+
+---
+
+## Errores Comunes
+
+<Aside type="danger">
+**Objeto entre verbo y complemento:**
+- ~~I like very much chocolate~~ → **I like chocolate very much** (Me gusta mucho el chocolate)
+- ~~She speaks well English~~ → **She speaks English well** (Ella habla bien inglés)
+</Aside>
+
+<Aside type="danger">
+**Adverbio de frecuencia mal ubicado:**
+- ~~I go always to the gym~~ → **I always go to the gym** (Siempre voy al gimnasio)
+- ~~She is late never~~ → **She is never late** (Ella nunca llega tarde)
+</Aside>
+
+<Aside type="danger">
+**Orden de adjetivos incorrecto:**
+- ~~A red big car~~ → **A big red car** (Un carro grande rojo)
+- ~~A wooden old table~~ → **An old wooden table** (Una mesa vieja de madera)
+</Aside>

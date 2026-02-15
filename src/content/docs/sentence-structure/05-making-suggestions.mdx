@@ -3,3 +3,395 @@ title: Hacer Sugerencias
 description: Propón ideas y sugerencias en inglés.
 ---
 
+import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
+
+En español, "vamos a..." o "¿por qué no...?" cubren la mayoría de sugerencias. En inglés, tienes varias estructuras según si te incluyes en la sugerencia o no. Piensa en ello como diferentes funciones que reciben la misma idea pero la expresan con distinta sintaxis según el contexto.
+
+Dominar las sugerencias te permite proponer ideas, planear actividades y ofrecer soluciones de forma natural.
+
+---
+
+## Tipos de Sugerencias
+
+Las sugerencias se dividen según quién está incluido:
+
+```javascript
+const suggestionTypes = {
+  inclusive: ["Let's...", "Shall we...?", "How about...?"],
+  // Te incluyes tú también
+  toOthers: ["You should...", "Why don't you...?"],
+  // Solo para la otra persona
+  offers: ["Shall I...?", "Would you like me to...?"]
+  // Te ofreces a hacer algo
+};
+```
+
+---
+
+## Let's (Vamos a...)
+
+La forma más común para sugerir actividades grupales:
+
+```javascript
+const lets = {
+  structure: "Let's + base verb",
+  meaning: "Vamos a...",
+  negative: "Let's not + base verb",
+  examples: [
+    "Let's go to the beach",     // Vamos a la playa
+    "Let's eat something",       // Comamos algo
+    "Let's not argue"            // No discutamos
+  ]
+};
+```
+
+<Tabs>
+  <TabItem label="Afirmativo">
+    ```javascript
+    const positive = [
+      "Let's start the meeting",    // Empecemos la reunión
+      "Let's take a break",         // Tomemos un descanso
+      "Let's try again",            // Intentemos de nuevo
+      "Let's watch a movie"         // Veamos una película
+    ];
+    ```
+    
+    **Ejemplos:**
+    - Let's have dinner together (Cenemos juntos)
+    - Let's call her now (Llamémosla ahora)
+    - Let's think about it (Pensémoslo)
+  </TabItem>
+  
+  <TabItem label="Negativo">
+    ```javascript
+    const negative = [
+      "Let's not waste time",       // No perdamos tiempo
+      "Let's not be late",          // No lleguemos tarde
+      "Let's not forget the keys",  // No olvidemos las llaves
+      "Let's not panic"             // No nos asustemos
+    ];
+    ```
+    
+    **Ejemplos:**
+    - Let's not talk about work (No hablemos de trabajo)
+    - Let's not give up (No nos rindamos)
+    - Let's not make the same mistake (No cometamos el mismo error)
+  </TabItem>
+</Tabs>
+
+<Aside type="tip">
+**Let's** es una contracción de "let us" pero nadie dice "let us" en conversación moderna. Siempre usa **let's**.
+</Aside>
+
+---
+
+## Shall we...? / Shall I...?
+
+Forma educada para sugerencias y ofrecimientos:
+
+<Tabs>
+  <TabItem label="Shall we (sugerencia)">
+    ```javascript
+    const shallWe = {
+      structure: "Shall we + base verb?",
+      meaning: "¿Vamos a...? / ¿Deberíamos...?",
+      examples: [
+        "Shall we go?",            // ¿Nos vamos?
+        "Shall we order?",         // ¿Pedimos?
+        "Shall we begin?"          // ¿Empezamos?
+      ]
+    };
+    ```
+    
+    **Ejemplos:**
+    - Shall we dance? (¿Bailamos?)
+    - Shall we take a taxi? (¿Tomamos un taxi?)
+    - Shall we meet at 8? (¿Nos vemos a las 8?)
+  </TabItem>
+  
+  <TabItem label="Shall I (ofrecimiento)">
+    ```javascript
+    const shallI = {
+      structure: "Shall I + base verb?",
+      meaning: "¿Quieres que yo...?",
+      examples: [
+        "Shall I help you?",       // ¿Te ayudo?
+        "Shall I open the window?", // ¿Abro la ventana?
+        "Shall I call a taxi?"     // ¿Llamo un taxi?
+      ]
+    };
+    ```
+    
+    **Ejemplos:**
+    - Shall I carry that for you? (¿Te lo llevo?)
+    - Shall I make some coffee? (¿Hago café?)
+    - Shall I wait here? (¿Espero aquí?)
+  </TabItem>
+</Tabs>
+
+<Aside type="caution">
+**Shall** es más común en inglés británico. En inglés americano, se prefiere "Should we...?" o "Do you want me to...?".
+</Aside>
+
+---
+
+## How about...? / What about...?
+
+Estructuras casuales para proponer ideas:
+
+```javascript
+const howAbout = {
+  structures: [
+    "How about + verb-ing?",
+    "How about + noun?",
+    "What about + verb-ing?",
+    "What about + noun?"
+  ],
+  // Todas significan "¿Qué tal si...?"
+};
+```
+
+<Tabs>
+  <TabItem label="How about">
+    ```javascript
+    const howAboutExamples = {
+      withVerb: [
+        "How about going to the cinema?",
+        // ¿Qué tal ir al cine?
+        "How about ordering pizza?",
+        // ¿Qué tal pedir pizza?
+      ],
+      withNoun: [
+        "How about a coffee?",
+        // ¿Qué tal un café?
+        "How about tomorrow?"
+        // ¿Qué tal mañana?
+      ]
+    };
+    ```
+    
+    **Ejemplos:**
+    - How about meeting at noon? (¿Qué tal si nos vemos al mediodía?)
+    - How about Italian food? (¿Qué tal comida italiana?)
+  </TabItem>
+  
+  <TabItem label="What about">
+    ```javascript
+    const whatAboutExamples = {
+      withVerb: [
+        "What about taking the train?",
+        // ¿Qué tal tomar el tren?
+        "What about inviting John?"
+        // ¿Qué tal si invitamos a John?
+      ],
+      withNoun: [
+        "What about next week?",
+        // ¿Qué tal la próxima semana?
+        "What about this one?"
+        // ¿Qué tal este?
+      ]
+    };
+    ```
+    
+    **Ejemplos:**  
+    - What about staying home? (¿Qué tal quedarnos en casa?)
+    - What about the blue one? (¿Qué tal el azul?)
+  </TabItem>
+</Tabs>
+
+---
+
+## Why don't...?
+
+Sugiere soluciones de forma directa:
+
+<Tabs>
+  <TabItem label="Why don't you">
+    ```javascript
+    const whyDontYou = {
+      structure: "Why don't you + base verb?",
+      meaning: "¿Por qué no...?",
+      examples: [
+        "Why don't you take a break?",
+        // ¿Por qué no tomas un descanso?
+        "Why don't you ask him?",
+        // ¿Por qué no le preguntas?
+        "Why don't you try again?"
+        // ¿Por qué no intentas de nuevo?
+      ]
+    };
+    ```
+    
+    **Ejemplos:**
+    - Why don't you call her? (¿Por qué no la llamas?)
+    - Why don't you see a doctor? (¿Por qué no ves a un doctor?)
+    - Why don't you relax? (¿Por qué no te relajas?)
+  </TabItem>
+  
+  <TabItem label="Why don't we">
+    ```javascript
+    const whyDontWe = {
+      structure: "Why don't we + base verb?",
+      meaning: "¿Por qué no...? (incluyéndote)",
+      examples: [
+        "Why don't we go together?",
+        // ¿Por qué no vamos juntos?
+        "Why don't we split the bill?",
+        // ¿Por qué no dividimos la cuenta?
+        "Why don't we start over?"
+        // ¿Por qué no empezamos de nuevo?
+      ]
+    };
+    ```
+    
+    **Ejemplos:**
+    - Why don't we meet later? (¿Por qué no nos vemos después?)
+    - Why don't we order dessert? (¿Por qué no pedimos postre?)
+  </TabItem>
+</Tabs>
+
+---
+
+## Should / Could / Might
+
+Para sugerencias más cautelosas o consejos:
+
+```javascript
+const modalSuggestions = {
+  should: "Deberías (consejo directo)",
+  could: "Podrías (opción)",
+  might: "Podrías (muy tentativo)"
+};
+// De más directo a más suave
+```
+
+<Tabs>
+  <TabItem label="Should">
+    ```javascript
+    const should = {
+      structure: "You should + base verb",
+      tone: "Consejo directo",
+      examples: [
+        "You should try this restaurant",
+        // Deberías probar este restaurante
+        "You should get some rest",
+        // Deberías descansar
+        "You should apologize"
+        // Deberías disculparte
+      ]
+    };
+    ```
+  </TabItem>
+  
+  <TabItem label="Could">
+    ```javascript
+    const could = {
+      structure: "You could + base verb",
+      tone: "Opción sugerida",
+      examples: [
+        "You could take the bus",
+        // Podrías tomar el autobús
+        "You could ask for help",
+        // Podrías pedir ayuda
+        "You could try online"
+        // Podrías intentar en línea
+      ]
+    };
+    ```
+  </TabItem>
+  
+  <TabItem label="Might">
+    ```javascript
+    const might = {
+      structure: "You might want to + base verb",
+      tone: "Muy suave, tentativo",
+      examples: [
+        "You might want to check that",
+        // Quizás quieras revisar eso
+        "You might want to reconsider",
+        // Quizás quieras reconsiderar
+      ]
+    };
+    ```
+  </TabItem>
+</Tabs>
+
+**Ejemplos:**
+- You should talk to your boss (Deberías hablar con tu jefe)
+- You could always try again later (Siempre podrías intentar más tarde)
+- You might want to bring an umbrella (Quizás quieras traer un paraguas)
+
+---
+
+## Cómo Responder a Sugerencias
+
+<Tabs>
+  <TabItem label="Aceptar">
+    ```javascript
+    const accepting = {
+      enthusiastic: [
+        "Great idea!",             // ¡Gran idea!
+        "Sounds good!",            // ¡Suena bien!
+        "That's a good idea!"      // ¡Buena idea!
+      ],
+      agreeing: [
+        "Sure, why not?",          // Claro, ¿por qué no?
+        "OK, let's do it!",        // OK, ¡hagámoslo!
+        "I'd love to!"             // ¡Me encantaría!
+      ]
+    };
+    ```
+  </TabItem>
+  
+  <TabItem label="Rechazar">
+    ```javascript
+    const declining = {
+      polite: [
+        "I'd rather not",          // Preferiría no
+        "Maybe another time",       // Quizás otro día
+        "I'm not sure about that"  // No estoy seguro de eso
+      ],
+      withReason: [
+        "I'd love to, but...",     // Me encantaría, pero...
+        "That sounds fun, but..."  // Suena divertido, pero...
+      ]
+    };
+    ```
+  </TabItem>
+</Tabs>
+
+**Ejemplos de aceptación:**
+- That's a great idea! Let's do it! (¡Es una gran idea! ¡Hagámoslo!)
+- Why not? I'm free this weekend (¿Por qué no? Estoy libre este fin de semana)
+
+**Ejemplos de rechazo educado:**
+- I'd rather stay home tonight (Preferiría quedarme en casa esta noche)
+- That sounds fun, but I have plans (Suena divertido, pero tengo planes)
+
+---
+
+## Errores Comunes
+
+<Aside type="danger">
+**Usar infinitivo con "How about" / "What about":**
+- ~~How about to go to the cinema?~~ → **How about going to the cinema?** (¿Qué tal ir al cine?)
+- ~~What about to eat pizza?~~ → **What about eating pizza?** (¿Qué tal comer pizza?)
+</Aside>
+
+<Aside type="danger">
+**Olvidar "don't" en "Why don't...":**
+- ~~Why you don't try?~~ → **Why don't you try?** (¿Por qué no intentas?)
+- ~~Why we don't go?~~ → **Why don't we go?** (¿Por qué no vamos?)
+</Aside>
+
+<Aside type="danger">
+**Confundir "Let's" con "Let us":**
+- ~~Let us go~~ (muy formal/anticuado) → **Let's go** (¡Vamos!)
+- En contexto moderno, siempre usa la contracción **Let's**
+</Aside>
+
+<Aside type="danger">
+**Usar "shall" con "you" para sugerencias:**
+- ~~Shall you help me?~~ → **Could you help me?** o **Will you help me?** (¿Podrías ayudarme?)
+- **Shall** solo funciona con I/we en sugerencias
+</Aside>
