@@ -5,301 +5,243 @@ description: Aprende a usar el tiempo verbal más común del inglés para hablar
 
 import { Tabs, TabItem, Aside } from '@astrojs/starlight/components';
 
-El presente simple es el tiempo verbal que usas para hablar de rutinas, hábitos, hechos y verdades universales. A diferencia del presente continuo, el presente simple no describe acciones que están ocurriendo ahora mismo, sino acciones que se repiten o son verdades generales.
+El presente simple es como una variable constante en tu código: representa estados que se repiten o verdades que no cambian. Lo usas para rutinas, hábitos, hechos universales y situaciones permanentes.
 
 ## Conjugación básica
 
-La buena noticia es que el presente simple es muy fácil de conjugar. Para la mayoría de personas, simplemente usas el verbo en su forma base (infinitivo sin "to"):
+Para la mayoría de sujetos (I, you, we, they), el verbo se mantiene en su forma base:
 
 ```javascript
-// Para I, you, we, they: usa el verbo base
-const subjects = ["I", "You", "We", "They"];
+const subjects = ["I", "you", "we", "they"];
 const verb = "work";
-
-subjects.forEach(subject => {
-  console.log(`${subject} ${verb}`);
-});
-
-// Resultado:
-// "I work"
-// "You work"
-// "We work"
-// "They work"
+// Todos usan la forma base
+// I work, you work, we work, they work
 ```
+
+**Ejemplos reales:**
+- I work from home (Trabajo desde casa)
+- You speak English well (Hablas inglés bien)
+- We like pizza (Nos gusta la pizza)
+- They study every day (Estudian todos los días)
+
+---
 
 ## La regla de tercera persona
 
-Aquí está el único cambio importante: cuando el sujeto es **he**, **she** o **it** (tercera persona singular), el verbo necesita una terminación especial. Dependiendo de cómo termina el verbo, añadimos `-s`, `-es` o `-ies`.
-
-Estas son las 4 reglas que debes memorizar:
+Cuando el sujeto es **he**, **she** o **it**, el verbo necesita una terminación especial. Piénsalo como un método que transforma el verbo según estas 4 reglas:
 
 1. **La mayoría de verbos:** Simplemente añade `-s`.
 2. **Terminaciones especiales (-ch, -sh, -s, -x, -z, -o):** Añade `-es` para facilitar la pronunciación.
 3. **Consonante + y:** Si el verbo termina en una consonante seguida de "y", cambia la "y" por "i" y añade `-es`.
 4. **Vocal + y:** Si antes de la "y" hay una vocal, solo añade `-s` (sigue la regla general).
 
-<Aside title="Verbos regulares e irregulares">
-Existen verbos **regulares** (siguen reglas, como *work*) e **irregulares** (no siguen reglas, como *be* o *have*). En presente simple, esta distinción solo afecta a la tercera persona (he/she/it), ya que el resto usa la forma base del verbo.
-</Aside>
-
-### Conjugación para he/she/it
-
-
 ```javascript
-// Primero, los verbos irregulares más comunes.
-const irregularVerbs = {
-  have: "has",
-  be: "is",
-};
-
-// Luego, la función para conjugar verbos en tercera persona.
-const conjugateThirdPerson = (verb) => {
-  // 1. Asegurarse de que el verbo esté en minúsculas para evitar problemas de mayúsculas
-  verb = verb.toLowerCase();
-
-  // 2. Verificar si es irregular
-  if (irregularVerbs[verb]) return irregularVerbs[verb];
-
-  // 3. Verificar si termina en -s, -x, -z, -ch, -sh, o -o
-  if (/[sxz]$|[cs]h$|o$/.test(verb)) return verb + "es";
-
-  // 4. Verificar si termina en consonante + y
-  if (/[^aeiou]y$/.test(verb)) return verb.slice(0, -1) + "ies";
-
-  // 5. Si no cumple ninguna regla especial, solo añade -s
-  return verb + "s";
-};
-
-// Ejemplos de uso
-console.log(conjugateThirdPerson("work")); // "works"
-console.log(conjugateThirdPerson("BE"));  // "is" (irregular)
-console.log(conjugateThirdPerson("go")); // "goes"
-console.log(conjugateThirdPerson("watch")); // "watches" (termina en -ch)
-console.log(conjugateThirdPerson("study")); // "studies" (consonante + y)
-console.log(conjugateThirdPerson("play")); // "plays" (vocal + y, regla general)
-console.log(conjugateThirdPerson("have")); // "has" (irregular)
-```
-
-<Aside type="tip" title="Truco para recordar">
-**La mayoría de verbos solo añaden -s.** Las otras reglas (-es, -ies) son para casos especiales que suenan mejor al pronunciarse. Por ejemplo, intenta decir "he watchs" en voz alta — suena raro. Por eso se convierte en "watches".
-</Aside>
-
-## Formas de uso
-
-El presente simple tiene tres formas principales: afirmativa, negativa e interrogativa. A diferencia del verbo `to be`, el presente simple **sí necesita auxiliares** (`do` o `does`) para formar negaciones y preguntas.
-
-### Afirmaciones
-
-Para construir una oración afirmativa, usa la estructura: **Sujeto + Verbo + Complemento**. Recuerda aplicar las reglas de tercera persona cuando sea necesario.
-
-```javascript
-const affirm = (subject, verb, complement) => {  
-  // Si es tercera persona, conjugar el verbo
-  const conjugatedVerb = ["he", "she", "it"].includes(subject.toLowerCase())
-    ? conjugateThirdPerson(verb)
-    : verb;
+const conjugate = {
+  // Regla 1: Mayoría de verbos
+  work: "works",
+  eat: "eats",
   
-  console.log(`${subject} ${conjugatedVerb} ${complement}`);
+  // Regla 2: Terminaciones especiales
+  watch: "watches", // -ch
+  wash: "washes",   // -sh
+  go: "goes",       // -o
+  
+  // Regla 3: Consonante + y
+  study: "studies",
+  try: "tries",
+  
+  // Regla 4: Vocal + y
+  play: "plays",
+  enjoy: "enjoys"
 };
-
-// Ejemplos de uso
-affirm("I", "work", "from home");           // "I work from home"
-affirm("She", "work", "at Google");         // "She works at Google"
-affirm("They", "play", "soccer");           // "They play soccer"
-affirm("He", "study", "English");           // "He studies English"
-affirm("We", "have", "a meeting");          // "We have a meeting"
-affirm("It", "work", "perfectly");          // "It works perfectly"
 ```
 
-### Negaciones
+**Ejemplos reales:**
+- She works at Google (Ella trabaja en Google)
+- He watches TV at night (Él ve TV por la noche)
+- It goes fast (Va rápido)
+- She studies medicine (Ella estudia medicina)
+- He plays guitar (Él toca guitarra)
 
-Para negar en presente simple, necesitas el auxiliar **do** (para I/you/we/they) o **does** (para he/she/it), seguido de **not** y el verbo en su forma base. La estructura es: **Sujeto + do/does + not + Verbo base + Complemento**.
-
-<Aside title="Importante">
-Cuando usas `does` en negaciones o preguntas, el verbo principal **siempre** vuelve a su forma base. No lleva -s, -es o -ies porque el auxiliar `does` ya indica la tercera persona.
+<Aside type="tip" title="Truco de pronunciación">
+Las reglas de `-es` e `-ies` existen para que las palabras suenen mejor. Intenta decir "he watchs" en voz alta — suena raro, por eso se convierte en "watches".
 </Aside>
 
-```javascript
-const deny = (subject, verb, complement) => {
-  // Si es tercera persona, usar "does", si no, usar "do"
-  const auxiliary = ["he", "she", "it"].includes(subject.toLowerCase())
-    ? "does"
-    : "do";
-  
-  // El verbo SIEMPRE va en forma base con auxiliares
-  console.log(`${subject} ${auxiliary} not ${verb} ${complement}`);
-};
+### Verbos irregulares importantes
 
-// Ejemplos de uso
-deny("I", "like", "coffee");                // "I do not like coffee"
-deny("She", "work", "on weekends");         // "She does not work on weekends"
-deny("They", "play", "video games");        // "They do not play video games"
-deny("He", "speak", "French");              // "He does not speak French"
-```
-
-### Preguntas
-
-Para hacer preguntas, coloca el auxiliar **do/does** al principio de la oración, seguido del sujeto y el verbo en forma base. La estructura es: **Do/Does + Sujeto + Verbo base + Complemento + ?**
+Dos verbos no siguen estas reglas:
 
 ```javascript
-const ask = (subject, verb, complement) => {
-  // Si es tercera persona, usar "does", si no, usar "do"
-  const auxiliary = ["he", "she", "it"].includes(subject.toLowerCase())
-    ? "Does"
-    : "Do";
-  
-  // El verbo SIEMPRE va en forma base
-  console.log(`${auxiliary} ${subject} ${verb} ${complement}?`);
+const irregular = {
+  be: "is",    // He is happy
+  have: "has"  // She has a car
 };
-
-// Ejemplos de uso
-ask("you", "like", "pizza");                // "Do you like pizza?"
-ask("she", "work", "here");                 // "Does she work here?"
-ask("they", "speak", "English");            // "Do they speak English?"
-ask("he", "play", "guitar");                // "Does he play guitar?"
 ```
 
-<Aside title='Diferencia clave con "to be"'>
-Recuerda que el verbo **to be** es especial y no necesita auxiliares. Compara:
+---
 
-**Con to be (sin auxiliar):**
-- "**Is** he happy?" ✓
-- "He **is not** sad" ✓
+## Formas del presente simple
 
-**Con otros verbos (con auxiliar):**
-- "**Does** he work here?" ✓
-- "He **does not** work today" ✓
-- ~~"Works he here?"~~ ✗
-- ~~"He works not today"~~ ✗
+A diferencia de `to be`, otros verbos necesitan los auxiliares `do` o `does` para negaciones y preguntas.
+
+<Tabs>
+<TabItem label="Afirmativa">
+
+**Estructura:** Sujeto + Verbo (+ complemento)
+
+```javascript
+// I/you/we/they: verbo base
+"I work here"
+"They play soccer"
+
+// He/she/it: verbo + s/es/ies
+"She works here"
+"He plays soccer"
+```
+
+**Ejemplos:**
+- I drink coffee every morning (Tomo café cada mañana)
+- You understand English (Entiendes inglés)
+- We live in Madrid (Vivimos en Madrid)
+- She loves chocolate (Ella ama el chocolate)
+- He runs every day (Él corre todos los días)
+
+</TabItem>
+
+<TabItem label="Negativa">
+
+**Estructura:** Sujeto + do/does + not + verbo base
+
+```javascript
+// I/you/we/they + do not
+"I do not work there"
+"They do not play tennis"
+
+// He/she/it + does not
+"She does not work there"
+"He does not play tennis"
+```
+
+**Ejemplos:**
+- I do not (don't) like coffee (No me gusta el café)
+- You do not (don't) need help (No necesitas ayuda)
+- We do not (don't) watch TV (No vemos TV)
+- She does not (doesn't) speak French (Ella no habla francés)
+- He does not (doesn't) eat meat (Él no come carne)
+
+<Aside>
+**Importante:** Con `does`, el verbo principal siempre vuelve a su forma base. El auxiliar `does` ya indica tercera persona.
 </Aside>
 
-## Usos del presente simple
+</TabItem>
 
-El presente simple se usa en cuatro situaciones principales:
+<TabItem label="Interrogativa">
 
-### 1. Rutinas y hábitos
+**Estructura:** Do/Does + sujeto + verbo base + ?
+
+```javascript
+// Do + I/you/we/they
+"Do you work here?"
+"Do they play soccer?"
+
+// Does + he/she/it
+"Does she work here?"
+"Does he play soccer?"
+```
+
+**Ejemplos:**
+- Do I need an appointment? (¿Necesito una cita?)
+- Do you speak Spanish? (¿Hablas español?)
+- Do we have class today? (¿Tenemos clase hoy?)
+- Does she like music? (¿A ella le gusta la música?)
+- Does it work properly? (¿Funciona correctamente?)
+
+</TabItem>
+</Tabs>
+
+<Aside title='Diferencia con "to be"'>
+El verbo `to be` es especial y no necesita auxiliares:
+- **Con to be:** "Is he happy?" / "He is not sad"
+- **Con otros verbos:** "Does he work here?" / "He does not work today"
+</Aside>
+
+---
+
+## Cuándo usar el presente simple
+
+### Rutinas y hábitos
 
 Acciones que repites regularmente:
 
-```javascript
-const dailyRoutines = [
-  "I wake up at 7 AM every day",
-  "She drinks coffee in the morning",
-  "They go to the gym three times a week",
-  "He studies English on Mondays"
-];
-```
+- I wake up at 7 AM (Me despierto a las 7 AM)
+- She drinks coffee every morning (Ella toma café cada mañana)
+- They go to the gym twice a week (Van al gimnasio dos veces por semana)
+- He studies English on Mondays (Él estudia inglés los lunes)
 
-### 2. Hechos y verdades universales
+### Hechos y verdades universales
 
 Información que siempre es cierta:
 
-```javascript
-const facts = [
-  "The sun rises in the east",
-  "Water boils at 100 degrees Celsius",
-  "Cats have four legs",
-  "The Earth orbits the sun"
-];
-```
+- The sun rises in the east (El sol sale por el este)
+- Water boils at 100°C (El agua hierve a 100°C)
+- Cats have four legs (Los gatos tienen cuatro patas)
+- The Earth orbits the sun (La Tierra orbita el sol)
 
-### 3. Gustos y preferencias permanentes
+### Gustos y preferencias
 
-Cosas que te gustan o no te gustan:
+Cosas que te gustan o disgutan:
 
-```javascript
-const preferences = [
-  "I love pizza",
-  "She hates cold weather",
-  "We prefer tea over coffee",
-  "He likes action movies"
-];
-```
+- I love pizza (Me encanta la pizza)
+- She hates cold weather (Ella odia el clima frío)
+- We prefer tea over coffee (Preferimos té sobre café)
+- He likes action movies (A él le gustan las películas de acción)
 
-### 4. Horarios y programas fijos
+### Horarios fijos
 
 Eventos programados que no cambian:
 
-```javascript
-const schedules = [
-  "The train leaves at 9:00 AM",
-  "The store opens at 10:00",
-  "Class starts at 8:30",
-  "The movie begins at 7 PM"
-];
-```
+- The train leaves at 9:00 AM (El tren sale a las 9:00 AM)
+- The store opens at 10:00 (La tienda abre a las 10:00)
+- Class starts at 8:30 (La clase empieza a las 8:30)
+- The movie begins at 7 PM (La película comienza a las 7 PM)
 
-## Errores que debes evitar
+---
 
-<Aside type="danger" title="Bug #1: Olvidar la -s en tercera persona">
-  Este es el error más común. Recuerda que he/she/it siempre llevan terminación especial.
+## Errores comunes
 
-  ```javascript
-  // ❌ BUG: Falta la conjugación
-  console.log("She work at home");  // "She work at home" (Incorrecto)
+<Aside type="danger" title="Olvidar la -s en tercera persona">
+~~She work at home~~ → **She works at home**
 
-  // ✅ FIX: Añade la terminación correcta
-  console.log("She works at home"); // "She works at home"
-  ```
+Este es el error #1. Recuerda que he/she/it siempre llevan terminación especial.
 </Aside>
 
-<Aside type="danger" title="Bug #2: Añadir -s cuando no es tercera persona">
-  Solo he/she/it llevan -s. Los demás sujetos usan el verbo base.
+<Aside type="danger" title="Añadir -s cuando no es tercera persona">
+~~I works here~~ → **I work here**  
+~~They plays soccer~~ → **They play soccer**
 
-  ```javascript
-  // ❌ BUG: "I" no es tercera persona
-  console.log("I works from home");     // Incorrecto
-  console.log("They plays soccer");     // Incorrecto
-
-  // ✅ FIX: Usa el verbo base
-  console.log("I work from home");      // Correcto
-  console.log("They play soccer");      // Correcto
-  ```
+Solo he/she/it llevan -s.
 </Aside>
 
-<Aside type="danger" title="Bug #3: No usar auxiliar en negaciones y preguntas">
-  A diferencia de "to be", otros verbos necesitan do/does.
+<Aside type="danger" title="Olvidar el auxiliar do/does">
+~~You like pizza?~~ → **Do you like pizza?**  
+~~She not works here~~ → **She does not work here**
 
-  ```javascript
-  // ❌ BUG: Falta el auxiliar
-  console.log("You like pizza?");           // Suena informal/incorrecto
-  console.log("She not works here");        // Totalmente incorrecto
-
-  // ✅ FIX: Usa do/does correctamente
-  console.log("Do you like pizza?");        // Correcto
-  console.log("She does not work here");    // Correcto
-  ```
+A diferencia de "to be", otros verbos necesitan auxiliar.
 </Aside>
 
-<Aside type="danger" title="Bug #4: Mantener -s con auxiliar does">
-  Cuando usas "does", el verbo vuelve a su forma base.
+<Aside type="danger" title="Usar -s con el auxiliar does">
+~~Does she works here?~~ → **Does she work here?**  
+~~He does not likes coffee~~ → **He does not like coffee**
 
-  ```javascript
-  // ❌ BUG: No puedes tener "does" y "-s" juntos
-  console.log("Does she works here?");      // Incorrecto
-  console.log("He does not likes coffee");  // Incorrecto
-
-  // ✅ FIX: Con "does", el verbo pierde la -s
-  console.log("Does she work here?");       // Correcto
-  console.log("He does not like coffee");   // Correcto
-  ```
+Cuando usas `does`, el verbo pierde la -s (ya está indicada en el auxiliar).
 </Aside>
 
-<Aside type="danger" title="Bug #5: Confundir consonante + y con vocal + y">
-  Solo cuando la "y" está precedida por consonante se convierte en "ies".
+<Aside type="danger" title="Confundir consonante + y con vocal + y">
+**Correcto:**
+- play → plays (vocal + y, solo añade -s)
+- study → studies (consonante + y, cambia a -ies)
 
-  ```javascript
-  // ❌ BUG: "play" tiene vocal antes de "y"
-  console.log(conjugateThirdPerson("play")); // Si devuelve "plies" está mal
-
-  // ✅ FIX: Vocal + y solo añade -s
-  // play → plays
-  // enjoy → enjoys
-  // buy → buys
-
-  // Consonante + y cambia a -ies
-  // study → studies
-  // try → tries
-  // cry → cries
-  ```
+**Incorrecto:**
+- ~~play → plies~~
+- ~~study → studys~~
 </Aside>
