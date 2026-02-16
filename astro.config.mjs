@@ -29,34 +29,42 @@ export default defineConfig({
         },
         {
           label: "Gramática Básica",
+          collapsed: true,
           autogenerate: { directory: "grammar-basics" },
         },
         {
           label: "Verbos",
+          collapsed: true,
           autogenerate: { directory: "verbs" },
         },
         {
           label: "Estructura de Oraciones",
+          collapsed: true,
           autogenerate: { directory: "sentence-structure" },
         },
         {
           label: "Partes de la Oración",
+          collapsed: true,
           autogenerate: { directory: "parts-of-speech" },
         },
         {
           label: "Preposiciones",
+          collapsed: true,
           autogenerate: { directory: "prepositions" },
         },
         {
           label: "Vocabulario",
+          collapsed: true,
           autogenerate: { directory: "vocabulary" },
         },
         {
           label: "Pronunciación",
+          collapsed: true,
           autogenerate: { directory: "pronunciation" },
         },
         {
           label: "Escritura",
+          collapsed: true,
           autogenerate: { directory: "writing" },
         },
         {
