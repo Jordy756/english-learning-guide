@@ -7,7 +7,7 @@ import { Tabs, TabItem, Aside, CardGrid, Card } from '@astrojs/starlight/compone
 
 Los números en inglés son como tipos primitivos en JavaScript: esenciales y fundamentales para comunicarte en cualquier contexto. Desde dar tu edad y número de teléfono hasta hablar de precios, fechas y cantidades, dominar los números te permite expresar información cuantitativa con precisión.
 
-Aunque contar del 1 al 10 es fácil, los números en inglés tienen patrones específicos que debes memorizar, especialmente los números del 11 al 19 y las decenas.
+---
 
 ## Números del 0 al 20
 
@@ -86,11 +86,11 @@ console.log(compositeNumber("ninety", "nine"));  // "ninety-nine"
   </TabItem>
 </Tabs>
 
-<Aside type="caution" title="Error común: forty vs fourty">
+<Aside type="caution" title="El número 40 se escribe sin u">
 El número 40 se escribe **"forty"** (sin "u"). Es la única decena que pierde la "u" del número base.
 
-Incorrecto: ~~fourty~~  
-Correcto: **forty**
+- Fourty ⛔
+- **Forty** ✅
 </Aside>
 
 ---
@@ -290,45 +290,38 @@ console.log(makeFraction(5, "sixth"));  // "5 sixths"
 
 ---
 
-## Práctica: Números en Contexto
+## Errores Comunes
 
-<Aside type="tip" title="Ejercicio diario">
-Practica decir en voz alta:
-- Tu edad: "I'm __ years old" _(Tengo __ años)_
-- Tu número de teléfono
-- Precios que ves en tiendas
-- El año actual y tu año de nacimiento
-- La hora actual
-- Direcciones (números de calle)
+<Aside type="danger" title="Escribir fourty en vez de forty">
+- **Fourty**, fourty-five ⛔
+- **Forty**, forty-five ✅
+
+El número 40 es la única decena que pierde la "u" del número base "four".
+</Aside>
+
+<Aside type="danger" title="Pluralizar hundred, thousand o million con números específicos">
+- Two **hundreds**, five **thousands**, ten **millions** ⛔
+- Two **hundred**, five **thousand**, ten **million** ✅
+
+Cuando van precedidos de un número específico, NO se pluralizan. Solo se pluralizan cuando se usan de forma indefinida: "hundreds of people", "thousands of dollars".
+</Aside>
+
+<Aside type="danger" title="Confundir teen con ty por el acento">
+- Confundir "fifteen" (15) con "fifty" (50) debido al acento ⛔
+- **Thirteen** /θɜːrˈtiːn/ → acento en "TEEN" (13) ✅
+- **Thirty** /ˈθɜːrti/ → acento en "THIR" (30) ✅
+
+La diferencia está en el acento: "-teen" tiene acento al final, "-ty" al principio. Exagera la pronunciación de la sílaba acentuada para evitar confusiones.
 </Aside>
 
 ---
 
-## Errores Comunes
+## Práctica
 
-<Aside type="danger" title='Error #1: Escribir "fourty" en vez de "forty"'>
-**Explicación:** El número 40 es la única decena que pierde la "u" del número base "four".
-
-Incorrecto: ~~fourty~~, ~~fourty-five~~  
-Correcto: **forty**, **forty-five**
-</Aside>
-
-<Aside type="danger" title='Error #2: Pluralizar "hundred", "thousand" o "million"'>
-**Explicación:** Cuando estos van precedidos de un número específico, NO se pluralizan.
-
-Incorrecto: ~~two hundreds~~, ~~five thousands~~, ~~ten millions~~  
-Correcto: **two hundred**, **five thousand**, **ten million**
-
-Nota: Solo se pluralizan cuando se usan de forma indefinida: "hundreds of people", "thousands of dollars"
-</Aside>
-
-<Aside type="danger" title='Error #3: Confundir "-teen" con "-ty"'>
-**Explicación:** Thirteen (13) vs. Thirty (30) suenan similar pero el acento cambia. "-teen" tiene acento al final, "-ty" al principio.
-
-Incorrecto: Confundir "fifteen" (15) con "fifty" (50)  
-Correcto: 
-- **Thirteen** /θɜːrˈtiːn/ → acento en "TEEN" (13)
-- **Thirty** /ˈθɜːrti/ → acento en "THIR" (30)
-
-Consejo: Exagera la pronunciación de la sílaba acentuada para evitar confusiones.
+<Aside type="tip" title="Ejercicio diario">
+- Practica diciendo tu edad en voz alta: "I'm __ years old"
+- Di tu número de teléfono completo dígito por dígito
+- Lee precios en tiendas o páginas web en voz alta (en dólares)
+- Practica diciendo el año actual, tu año de nacimiento y años históricos importantes
+- Di la hora actual cada vez que la veas durante el día
 </Aside>

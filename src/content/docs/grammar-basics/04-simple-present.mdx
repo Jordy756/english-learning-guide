@@ -3,3 +3,291 @@ title: Presente Simple
 description: Aprende el tiempo verbal más usado en inglés.
 ---
 
+import { Tabs, TabItem, Aside } from '@astrojs/starlight/components';
+
+El **presente simple** es el tiempo verbal más utilizado en inglés. Lo usas para hablar de rutinas y hábitos, hechos generales y verdades universales, gustos y preferencias, y horarios fijos. Es como una función que se ejecuta regularmente: describe lo que haces todos los días, lo que es verdad ahora, o lo que siempre funciona de cierta manera.
+
+---
+
+## Reglas para Tercera Persona
+
+A diferencia del español, el presente simple en inglés tiene una particularidad importante: con los sujetos **he, she, it** (tercera persona singular), el verbo **cambia** añadiendo -s, -es, o -ies según su terminación.
+
+<Tabs>
+  <TabItem label="-s">
+    **Regla general: añade -s**
+    
+    La mayoría de verbos simplemente añaden **-s** al final.
+    
+    ```javascript
+    const verbs = {
+      work: "works",      // trabaja
+      play: "plays",      // juega
+      eat: "eats",        // come
+      sleep: "sleeps",    // duerme
+      run: "runs",        // corre
+      like: "likes",      // gusta
+      speak: "speaks"     // habla
+    };
+    ```
+    
+    También aplica cuando el verbo termina en **vocal + y**:
+    
+    ```javascript
+    const verbs = {
+      play: "plays",      // juega
+      say: "says",        // dice
+      buy: "buys",        // compra
+      enjoy: "enjoys",    // disfruta
+      pay: "pays"         // paga
+    };
+    ```
+  </TabItem>
+  
+  <TabItem label="-es">
+    **Añade -es para facilitar pronunciación**
+    
+    Si el verbo termina en **-ch, -sh, -s, -x, -z, -o**, añade **-es**.
+    
+    ```javascript
+    const verbs = {
+      watch: "watches",   // mira
+      wash: "washes",     // lava
+      kiss: "kisses",     // besa
+      fix: "fixes",       // arregla
+      buzz: "buzzes",     // zumba
+      go: "goes",         // va
+      do: "does"          // hace
+    };
+    ```
+  </TabItem>
+  
+  <TabItem label="-ies">
+    **Consonante + y: cambia y por ies**
+    
+    Si el verbo termina en **consonante + y**, cambia la **y** por **i** y añade **-es**.
+    
+    ```javascript
+    const verbs = {
+      study: "studies",   // estudia
+      try: "tries",       // intenta
+      cry: "cries",       // llora
+      fly: "flies",       // vuela
+      carry: "carries",   // lleva
+      worry: "worries"    // preocupa
+    };
+    ```
+  </TabItem>
+</Tabs>
+
+<Aside type="tip" title="Truco de pronunciación">
+Si puedes pronunciar el verbo + "s" fácilmente, usa **-s**. Si suena raro o difícil (como "watchs"), necesitas **-es**.
+</Aside>
+
+---
+
+## Estructura del Presente Simple
+
+<Tabs>
+  <TabItem label="Afirmativa">
+    ```javascript
+    const affirmative = {
+      structure: "Subject + verb (+ s/es)",
+      examples: [
+        "I work from home",        // Trabajo desde casa
+        "You speak English",       // Hablas inglés
+        "He plays guitar",         // Él toca guitarra
+        "She studies math",        // Ella estudia matemáticas
+        "It works perfectly",      // Funciona perfectamente
+        "We live in Madrid",       // Vivimos en Madrid
+        "They watch Netflix"       // Ellos ven Netflix
+      ]
+    };
+    ```
+
+    **Ejemplos adicionales:**
+    - My brother **works** at a bank (Mi hermano trabaja en un banco)
+    - The store **opens** at 9 AM (La tienda abre a las 9 AM)
+    - Dogs **love** to play (A los perros les encanta jugar)
+    - I **drink** coffee every morning (Tomo café todas las mañanas)
+    - Sarah **teaches** English online (Sarah enseña inglés online)
+  </TabItem>
+  
+  <TabItem label="Negativa">
+    ```javascript
+    const negative = {
+      structure: "Subject + don't/doesn't + verb",
+      helpers: {
+        "I/you/we/they": "don't",
+        "he/she/it": "doesn't"
+      },
+      examples: [
+        "I don't work on Sundays",     // No trabajo los domingos
+        "You don't like pizza",        // No te gusta la pizza
+        "He doesn't play soccer",      // Él no juega fútbol
+        "She doesn't study here",      // Ella no estudia aquí
+        "It doesn't work",             // No funciona
+        "We don't eat meat",           // No comemos carne
+        "They don't watch TV"          // No ven televisión
+      ]
+    };
+    ```
+
+    **Ejemplos adicionales:**
+    - My cat doesn't **like** water (A mi gato no le gusta el agua)
+    - We don't **understand** the question (No entendemos la pregunta)
+    - John doesn't **drink** alcohol (John no bebe alcohol)
+    - I don't **speak** French (No hablo francés)
+    - They don't **live** together (Ellos no viven juntos)
+  </TabItem>
+  
+  <TabItem label="Pregunta">
+    ```javascript
+    const question = {
+      structure: "Do/Does + subject + verb + ?",
+      helpers: {
+        "I/you/we/they": "Do",
+        "he/she/it": "Does"
+      },
+      examples: [
+        "Do I know you?",              // ¿Te conozco?
+        "Do you like music?",          // ¿Te gusta la música?
+        "Does he work here?",          // ¿Trabaja él aquí?
+        "Does she speak Spanish?",     // ¿Habla ella español?
+        "Does it work?",               // ¿Funciona?
+        "Do we need tickets?",         // ¿Necesitamos boletos?
+        "Do they live nearby?"         // ¿Viven cerca?
+      ]
+    };
+    ```
+
+    **Respuestas cortas:**
+    - Do you **work**? → Yes, I do / No, I don't
+    - Does she **study**? → Yes, she does / No, she doesn't
+
+    **Ejemplos adicionales:**
+    - Do you **play** any instrument? (¿Tocas algún instrumento?)
+    - Does your sister **work** downtown? (¿Tu hermana trabaja en el centro?)
+    - Do they **understand** English? (¿Ellos entienden inglés?)
+    - Does the bus **stop** here? (¿El autobús para aquí?)
+    - Do you **remember** me? (¿Te acuerdas de mí?)
+  </TabItem>
+</Tabs>
+
+<Aside type="caution" title="Con auxiliares, el verbo vuelve a forma base">
+Cuando usas auxiliares (**do, does, don't, doesn't**), el verbo principal **siempre** vuelve a su forma base, sin importar el sujeto:
+- She doesn't work / Does he play? ✅
+- She doesn't works / Does he plays? ⛔
+</Aside>
+
+---
+
+## Adverbios de Frecuencia
+
+El presente simple va de la mano con adverbios que indican qué tan seguido ocurre algo. Estos adverbios se colocan **antes del verbo principal**, pero **después del verbo to be**.
+
+<Tabs>
+  <TabItem label="Alta Frecuencia">
+    ```javascript
+    const highFrequency = {
+      always: "100%",           // siempre
+      usually: "90%",           // usualmente
+      normally: "90%",          // normalmente
+      generally: "85%",         // generalmente
+      frequently: "70%",        // frecuentemente
+      often: "70%"              // a menudo
+    };
+    ```
+    
+    **Ejemplos:**
+    - I **always** wake up early (Siempre me despierto temprano)
+    - She **usually** drinks tea (Ella usualmente toma té)
+    - We **normally** eat together (Normalmente comemos juntos)
+    - They **frequently** travel (Ellos viajan frecuentemente)
+    - He **often** works late (Él a menudo trabaja tarde)
+  </TabItem>
+  
+  <TabItem label="Media Frecuencia">
+    ```javascript
+    const mediumFrequency = {
+      sometimes: "50%",         // a veces
+      occasionally: "30%"       // ocasionalmente
+    };
+    ```
+    
+    **Ejemplos:**
+    - I **sometimes** work from home (A veces trabajo desde casa)
+    - She **occasionally** goes out (Ella sale ocasionalmente)
+    - We **sometimes** eat pizza (A veces comemos pizza)
+    - They **occasionally** visit us (Ocasionalmente nos visitan)
+  </TabItem>
+  
+  <TabItem label="Baja Frecuencia">
+    ```javascript
+    const lowFrequency = {
+      rarely: "15%",            // raramente
+      seldom: "10%",            // casi nunca
+      "hardly ever": "5%",      // casi nunca
+      never: "0%"               // nunca
+    };
+    ```
+    
+    **Ejemplos:**
+    - He **rarely** eats breakfast (Él raramente desayuna)
+    - I **seldom** watch TV (Casi nunca veo TV)
+    - She **hardly ever** complains (Ella casi nunca se queja)
+    - They **never** smoke (Ellos nunca fuman)
+  </TabItem>
+</Tabs>
+
+<Aside type="note" title="Posición especial con 'to be'">
+Con el verbo **to be**, el adverbio va **después**: "She is always happy" (Ella siempre está feliz).
+</Aside>
+
+---
+
+## Errores Comunes
+
+<Aside type="danger" title="Olvidar la -s en tercera persona">
+- She **work** at home ⛔
+- She **works** at home ✅
+
+Recuerda: he/she/it **siempre** necesita -s, -es o -ies.
+</Aside>
+
+<Aside type="danger" title="Añadir -s cuando hay auxiliar">
+- Does he **works** here? ⛔
+- Does he **work** here? ✅
+- She doesn't **likes** coffee ⛔
+- She doesn't **like** coffee ✅
+
+Con **does/doesn't**, el verbo vuelve a su forma base.
+</Aside>
+
+<Aside type="danger" title="Confundir presente simple con continuo">
+- I am **working** every day (esto suena temporal) ⛔
+- I **work** every day (rutina establecida) ✅
+
+El presente simple es para hábitos regulares, no acciones en progreso.
+</Aside>
+
+<Aside type="danger" title="Aplicar incorrectamente las reglas de terminación">
+- He **studys** English (consonante + y) ⛔
+- He **studies** English ✅
+- She **plaies** piano (vocal + y) ⛔
+- She **plays** piano ✅
+
+Revisa si antes de la "y" hay vocal o consonante.
+</Aside>
+
+---
+
+## Práctica
+
+<Aside type="tip" title="Ejercicio diario">
+- Escribe 5 oraciones sobre tu rutina diaria usando presente simple, luego conviértelas en negativas y preguntas
+- Describe las actividades de un familiar o amigo, prestando especial atención a añadir -s/-es/-ies correctamente  
+- Lee un artículo en inglés y subraya todos los verbos en presente simple, identifica cuáles llevan -s y por qué
+- Practica con adverbios de frecuencia: crea oraciones sobre tus hábitos usando always, usually, sometimes, rarely y never
+- Haz una lista de 10 preguntas con "Do/Does" que le harías a alguien nuevo que conoces
+</Aside>

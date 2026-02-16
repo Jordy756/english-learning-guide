@@ -1,241 +1,259 @@
 ---
 name: talkscript-content
-description: Educational content generator for TalkScript - English grammar guide using JavaScript metaphors
+description: Generate educational grammar content for TalkScript using JavaScript metaphors
 metadata:
-  version: "1.0.0"
+  version: "2.0.0"
   author: "Jordy Castro"
 ---
 
 # TalkScript Content Generator
 
-Generate educational content for TalkScript, an English grammar guide that explains concepts using JavaScript programming metaphors for Spanish-speaking learners.
+Generate Spanish-language educational content explaining English grammar through JavaScript programming metaphors for Spanish-speaking learners.
 
-## Project Context
+## Context
 
-**Target Audience**: Spanish speakers learning English (all levels: beginner to advanced)
-**Tech Stack**: Astro + Starlight documentation framework
-**Content Language**: Spanish (instructions may be in English)
-**Core Philosophy**: Code as pattern visualization, not executable logic
+**Audience**: Spanish speakers learning English (beginner to advanced)
+**Stack**: Astro + Starlight documentation framework
+**Output Language**: Spanish (code identifiers in English)
+**Philosophy**: Code visualizes patterns, not executable logic
 
-## Content Principles
+## Core Principles
 
-### Golden Rules
+1. **Clarity over cleverness** - Direct, accessible explanations
+2. **Brevity** - 3-5 minute read maximum per page
+3. **Visual patterns** - Show structure through code examples
+4. **Consistency** - Uniform structure across topics
+5. **Practical examples** - Real-world English usage with Spanish translations
+6. **Strategic organization** - Use tabs to prevent information overload
 
-1. **Clarity over cleverness**: Explanations must be direct and accessible
-2. **Brevity is key**: Keep sections scannable (3-5 minute read maximum)
-3. **Show, don't tell**: Use visual patterns and examples over lengthy explanations
-4. **Consistency matters**: Maintain uniform structure across all topics
-5. **Practical focus**: Every concept needs real-world English examples
-6. **Strategic organization**: Use subsections and tabs purposefully to prevent information overload
+## JavaScript Metaphors
 
-### JavaScript Metaphors
+Use programming concepts when they clarify grammar:
 
-Use programming concepts naturally when they clarify grammar:
+- Objects → conjugation tables
+- Arrays → word order
+- Functions → transformations (affirmative → negative → question)
+- Pattern matching → grammar rules
+- Destructuring → sentence analysis
+- Type systems → word categories
 
-- Objects for conjugation tables
-- Arrays for word order
-- Functions for transformations (affirmative → negative → question)
-- Pattern matching for grammar rules
-- Destructuring for sentence analysis
-- Type systems for word categories
+**Rule**: Only use code metaphors when they genuinely aid understanding.
 
-**Important**: Only use code metaphors when they genuinely help understanding. Not every topic needs JavaScript.
+## Component Usage
 
-## Technical Constraints
+### Allowed Components
 
-### Required Components
+**Starlight built-in only**:
 
-Use **only** Starlight built-in components:
+- `<Tabs>` / `<TabItem>` - Variations (tenses, forms, levels)
+- `<Aside>` - Contextual information (tip, caution, danger, note)
+- `<Card>` / `<CardGrid>` - Group related information
+- `<Steps>` - Sequential instructions
+- `<LinkCard>` - Navigation
+- `<Badge>` - Inline labels
 
-- `<Tabs>` / `<TabItem>` - For variations (tense, form, etc.)
-- `<Aside>` - For tips, warnings, notes (types: tip, caution, danger, note)
-- `<Card>` / `<CardGrid>` - For grouping related information
-- `<Steps>` - For sequential instructions
-- `<LinkCard>` - For navigation suggestions
-- `<Badge>` - For inline labels
+### Component Rules
+
+**`<Aside>` Requirements**:
+- Always include descriptive `title` attribute
+- Title must explain the content, not just repeat the type
+- Format: `<Aside type="type" title="Descriptive explanation of what this contains">`
+
+**Code Block Rules**:
+- Never place code blocks inside `<Card>` components
+- Use code blocks directly in document flow or within `<TabItem>`
+- Maximum 10 lines per block
+- Maximum ~50 characters per line (avoid horizontal scroll)
+- All identifiers in English (never Spanish)
+- Include brief inline comments when helpful
+
+**`<Tabs>` Strategy**:
+- Group related variations (affirmative/negative/interrogative)
+- Each `<TabItem>` must be self-contained
+- Include code examples in each tab when applicable
+- Reduces vertical scrolling and information overload
 
 ### Prohibited
 
 - Custom interactive components
 - Emojis or decorative symbols
-- Native Markdown alerts (use `<Aside>` instead)
-- Native Markdown tables (use code blocks or `<Card>` components instead)
-- Complex executable JavaScript functions
+- Native Markdown tables (use code blocks or components)
+- Native Markdown alerts (use `<Aside>`)
+- Complex executable functions
 - More than 3 code blocks per major section
 
-## Document Structure Guidelines
+## Document Structure
 
-### Frontmatter (Required)
+### Required Frontmatter
+
 ```yaml
 ---
-title: [Topic name in Spanish]
+title: [Topic in Spanish]
 description: [One-line description in Spanish]
 ---
 ```
 
-### Import Statement (Required)
+### Required Import
+
 ```javascript
-import { [needed components] } from '@astrojs/starlight/components';
+import { [components] } from '@astrojs/starlight/components';
 ```
 
-### Introduction (Required)
+### Introduction (1 paragraph maximum)
 
-- 1-2 paragraphs maximum
-- Explain what the topic is and why it matters
-- Include a programming metaphor if natural
+- Explain topic and relevance
+- Include programming metaphor if natural
 
-### Main Sections (Flexible)
+### Main Content
 
-**Adapt structure to content complexity**:
+Adapt structure to topic complexity:
 
-- Simple topics: 2-3 main sections (no subsections needed)
-- Complex topics: Use subsections (###) when genuinely needed
-- Use `---` horizontal rules to separate major sections visually
+- **Simple topics**: 2-3 main sections
+- **Intermediate topics**: Main sections + strategic tabs
+- **Complex topics**: More sections as needed
 
-**Strategic use of `<Tabs>`**:
+Use `---` horizontal rules to separate major sections visually.
 
-- Group related variations to reduce scrolling and information overload
-- Examples: verb forms (affirmative/negative/interrogative), tense variations, formality levels
-- Keep users focused by showing one variation at a time
-- Each `<TabItem>` should be self-contained with clear examples
-- Prevents overwhelming users with too much vertical content at once
+Use `<Tabs>` to group variations and reduce scrolling.
 
 ### Common Errors Section (Required)
 
-- Always end with "Errores comunes" section
-- Include exactly **1 or more common mistakes**
-- Use `<Aside type="danger">` for each error
-- Format: Show incorrect ~~example~~ → Correct **example**
+**Section title**: "Errores comunes"
 
-## Code Usage Guidelines
+**Format**:
+- Each error in separate `<Aside type="danger">` with descriptive title
+- Use ⛔ for incorrect examples
+- Use ✅ for correct examples
+- Never use strikethrough (~~text~~)
+- Include brief explanation in Spanish
 
-### When to Use Code Blocks
+**Requirements**:
+- Include 1+ common mistakes
+- Descriptive title format: "[Specific mistake description]"
 
-- **DO**: Visualize patterns (conjugation tables, word order rules)
-- **DO**: Show structure comparisons (affirmative vs negative)
-- **DO**: Illustrate transformations (statement → question)
-- **DON'T**: Write executable logic or complex functions
-- **DON'T**: Use code for simple lists or examples
+### Practice Section (Required)
 
-### Code Block Requirements
+**Section title**: "Práctica"
 
-- Maximum 10 lines per block
-- **Keep examples short and simple** to avoid horizontal scrolling
-- Limit line length to approximately 50 characters when possible
-- **All variables, properties, and identifiers must be in English** (never Spanish)
-- Include brief inline comments when helpful
-- Use JavaScript syntax highlighting
-- Focus on data structures (objects, arrays) over functions
-- **Inside `<Tabs>`: Each `<TabItem>` should include code examples**
+**Format**:
+- Use `<Aside type="tip" title="Ejercicio diario">`
+- List 3-5 suggested practice activities in Spanish
+- Not interactive exercises, just recommendations
 
-### Alternative Formats for Simple Patterns
+**Place**: After "Errores comunes" section, at end of document.
 
-For very simple transformations or rules, use plain text with visual indicators instead of code blocks
+## Code Guidelines
 
-## Content Quality Standards
+### When to Use Code
 
-### Examples
+**DO**:
+- Visualize patterns (conjugation tables, word order)
+- Show structural comparisons
+- Illustrate transformations
 
-**Code/Pattern Examples (within tabs or main explanations)**:
-- Keep code examples **short and simple** to avoid horizontal scroll
-- Use concise variable names and clear structure
-- Limit line length to avoid scrolling
-- Every code example must demonstrate the pattern clearly
+**DON'T**:
+- Write executable logic
+- Use for simple lists
+- Place inside `<Card>` components
 
-**Additional Real-World Examples (after code blocks)**:
-- Provide 3-5 practical examples per concept in plain text
-- Use realistic, everyday contexts
-- **Every English example must include Spanish translation in parentheses**
-- Format: English text (Traducción en español)
-- Show Spanish → English translation when relevant
-- Vary the examples (don't repeat same subject/verb patterns)
+### Code Requirements
 
-### Tone and Voice
+- Max 10 lines per block
+- Max ~50 characters per line
+- All identifiers in English
+- JavaScript syntax highlighting: ```javascript
+- Focus on data structures (objects, arrays)
+- Each `<TabItem>` should include code when applicable
 
-- Professional but approachable (technical mentor)
-- Direct and concise (no fluff)
-- Encouraging but realistic about difficulty
-- Use "tú" form (second person informal) in Spanish
+### Alternative to Code
+
+For simple patterns, use plain text with visual indicators instead of code blocks.
+
+## Content Standards
+
+### Examples Requirements
+
+**Code Examples** (inside content/tabs):
+- Short and simple
+- Clear structure
+- Demonstrate pattern effectively
+- Avoid horizontal scroll
+
+**Real-World Examples** (after code blocks):
+- 3-5 practical examples per concept
+- Realistic, everyday contexts
+- **Every English example must include Spanish translation**
+- Format: `English text (Traducción en español)`
+- Vary examples (different subjects/verbs)
+
+### Tone
+
+- Professional but approachable
+- Direct and concise
+- Encouraging but realistic
+- Use "tú" form (informal second person) in Spanish
 
 ### Formatting
 
-- Use **bold** for emphasis on key terms
-- Use `code formatting` for English grammar terms and examples
-- Use ~~strikethrough~~ for incorrect examples
-- Keep paragraphs short (2-4 sentences maximum)
+- **Bold** for key terms
+- `code formatting` for English grammar terms/examples
+- ✅ for correct examples
+- ⛔ for incorrect examples
+- Short paragraphs (2-4 sentences max)
 
-## Adaptation Rules
+## MDX Best Practices
 
-### Topic Complexity Assessment
+### Valid MDX Format
 
-Before generating content, evaluate:
+**Self-closing tags**:
+- Cards and LinkCards must be self-closing
 
-- **Basic topics** (Verb To Be, Articles): Simple structure, minimal code
-- **Intermediate topics** (Tenses, Modals): Moderate structure, strategic code use
-- **Advanced topics** (Conditionals, Reported Speech): Complex structure, more subsections
+**Component nesting**:
+- Code blocks outside `<Card>` components (allowed)
+- Code blocks inside `<TabItem>` (allowed)
+- Code blocks inside `<Card>` (NOT allowed)
 
-### Subsection Strategy
+**Proper spacing**:
+- Leave blank lines before and after component blocks
 
-**When to use subsections (###)**:
+**Aside titles**:
+- Always use descriptive titles, not generic type names
 
-- Topic has 2+ distinct sub-concepts that warrant separate focus
-- Each sub-concept needs independent explanation with its own examples
-- Improves document navigation and scannability
-- Prevents information overload by breaking complex topics into digestible chunks
+## Validation Checklist
 
-**When NOT to use subsections**:
+**Structure**:
+- [ ] Valid frontmatter (title, description)
+- [ ] Components imported
+- [ ] 1 paragraph introduction
+- [ ] `<Tabs>` used strategically
+- [ ] "Errores comunes" section at end
+- [ ] "Práctica" section after errorstip
 
-- Single concepts with variations (use `<Tabs>` instead)
-- Simple lists or examples that belong together
-- Minor distinctions that fit naturally in one section
-- Content that flows better as a continuous explanation
+**Content**:
+- [ ] 1+ common errors with descriptive titles
+- [ ] ✅⛔ format for correct/incorrect examples
+- [ ] No strikethrough (~~)
+- [ ] No code inside `<Card>`
+- [ ] Code blocks properly formatted
+- [ ] All code identifiers in English
+- [ ] Examples short (avoid horizontal scroll)
+- [ ] 3-5 real-world examples with Spanish translations
+- [ ] All `<Aside>` components have descriptive titles
+- [ ] Practice recommendations provided
 
-**Best practice**: Use subsections strategically to organize content hierarchically. A well-structured document uses subsections to guide readers through related but distinct concepts, not just to break up long text.
-
-## Output Validation
-
-Before delivering content, verify:
-
-**Structure & Format**:
-- [ ] Frontmatter is complete and correct
-- [ ] Imports include all used components
-- [ ] Introduction is 1-2 paragraphs maximum
-- [ ] Structure matches topic complexity (not all topics are identical)
-- [ ] Subsections are used strategically (not excessively or unnecessarily)
-- [ ] `<Tabs>` are used to group similar variations and reduce scroll
-
-**Content Quality**:
-- [ ] Exactly 1 or more common errors at the end
+**Format**:
+- [ ] Valid MDX syntax
+- [ ] Proper component spacing
+- [ ] Self-closing tags where required
+- [ ] Spanish throughout (except code identifiers)
 - [ ] No emojis or decorative symbols
-- [ ] No native Markdown tables (use code blocks or components)
-- [ ] Code blocks are justified and minimal
-- [ ] All variables/identifiers in code are in English (never Spanish)
-- [ ] Code examples are short to avoid horizontal scrolling
-- [ ] Each TabItem contains code examples
-- [ ] Examples are practical and varied
-- [ ] All English examples include Spanish translation
-- [ ] Spanish language throughout (except frontmatter keys)
-- [ ] No custom components used
+- [ ] No native Markdown tables
 
-## Example Workflow
+## Generation Tips
 
-**Input**: "Create content for Simple Present tense"
-
-**Process**:
-
-1. Assess complexity: Intermediate (has rules for he/she/it, negatives, questions)
-2. Determine structure: Main sections for affirmative, negative, interrogative
-3. Choose metaphors: Object for conjugation rules, pattern matching for transformations
-4. Create code examples within each TabItem (keep short, avoid horizontal scroll)
-5. Provide 3-5 real-world examples after code blocks with Spanish translations
-6. Identify common errors (forgetting -s, using auxiliars incorrectly, etc.)
-7. Write in Spanish with appropriate Starlight components
-
-**Output**: Complete `.mdx` file following all guidelines, adapted to topic complexity
-
-## Notes
-
-- Flexibility is important: Not every topic needs identical structure
-- Code is a tool, not a requirement: Use when it clarifies, skip when it doesn't
-- Quality over template adherence: A clear explanation beats following a rigid format
-- Context matters: Beginner topics need simpler structure than advanced ones
+- Adapt structure to topic complexity
+- Code clarifies, not required everywhere
+- Quality over rigid templates
+- Focus on learner understanding
+- Keep token usage efficient
+- Prioritize scannable, digestible content
