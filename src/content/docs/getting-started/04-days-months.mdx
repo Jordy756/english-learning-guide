@@ -5,9 +5,7 @@ description: Aprende a expresar días de la semana, meses del año y fechas en i
 
 import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
 
-Dominar días, meses y fechas es fundamental para la comunicación diaria en inglés: programar reuniones, hacer reservas, hablar sobre eventos o simplemente mencionar tu cumpleaños. A diferencia del español, en inglés **los días y meses siempre se escriben con mayúscula inicial**.
-
-Piensa en los días y meses como arrays ordenados en JavaScript: cada elemento tiene una posición fija, y en inglés, ciertas convenciones sobre cómo expresar fechas pueden variar según el contexto (británico vs. americano).
+Dominar días, meses y fechas es fundamental para la comunicación diaria en inglés: programar reuniones, hacer reservas, hablar sobre eventos o simplemente mencionar tu cumpleaños. A diferencia del español, los días y meses **siempre se escriben con mayúscula inicial**, y existen convenciones diferentes según el contexto británico o americano, similar a cómo en JavaScript podemos tener diferentes formatos para representar la misma información.
 
 ---
 
@@ -35,7 +33,7 @@ const weekDays = [
 - See you next Tuesday! (¡Nos vemos el próximo martes!)
 - My birthday is on a Saturday this year (Mi cumpleaños cae en sábado este año)
 
-<Aside type="tip">
+<Aside type="tip" title="Preposición on para días específicos">
 Usa **on** antes del día: "on Monday", "on Saturday". Para rangos usa **from... to**: "from Monday to Friday".
 </Aside>
 
@@ -70,7 +68,7 @@ const months = [
 - I started working here in January (Empecé a trabajar aquí en enero)
 - The conference is in October (La conferencia es en octubre)
 
-<Aside type="tip">
+<Aside type="tip" title="Preposición in para meses y años">
 Usa **in** antes del mes: "in January", "in December". También se usa **in** para años: "in 2024".
 </Aside>
 
@@ -203,40 +201,47 @@ const timeExpressions = {
 
 ---
 
-## Errores comunes
+## Errores Comunes
 
-<Aside type="danger">
-**No usar mayúsculas en días y meses**
+<Aside type="danger" title="No usar mayúsculas en días y meses">
+- I'll see you on monday in july. ⛔
+- I'll see you on **Monday** in **July**. (Te veré el lunes en julio) ✅
 
-~~I'll see you on monday in july.~~
-
-→ I'll see you on Monday in July. (Te veré el lunes en julio)
+Los días de la semana y meses siempre se escriben con mayúscula inicial en inglés.
 </Aside>
 
-<Aside type="danger">
-**Confundir preposiciones de tiempo**
+<Aside type="danger" title="Confundir preposiciones de tiempo">
+- My birthday is **at** May. ⛔
+- The meeting is **in** Monday. ⛔
+- My birthday is **in** May. (Mi cumpleaños es en mayo) ✅
+- The meeting is **on** Monday. (La reunión es el lunes) ✅
 
-~~My birthday is at May.~~ / ~~The meeting is in Monday.~~
-
-→ My birthday is **in** May. (Mi cumpleaños es en mayo)
-
-→ The meeting is **on** Monday. (La reunión es el lunes)
+Usa **in** para meses y años, **on** para días específicos.
 </Aside>
 
-<Aside type="danger">
-**Invertir el orden en fechas numéricas**
+<Aside type="danger" title="Confusión con formato numérico de fechas">
+- Al leer 03/05/2024: británicos leen "3 de mayo", americanos leen "5 de marzo" ⛔
+- Escribir **March 5, 2024** o **5th March 2024** para evitar ambigüedad ✅
 
-Al leer 03/05/2024, los británicos leen "3 de mayo", pero los americanos leen "5 de marzo". ¡Puede causar confusión!
-
-→ Es mejor escribir: **March 5, 2024** o **5th March 2024** para evitar ambigüedad.
+El formato numérico puede causar confusión entre contextos británico y americano.
 </Aside>
 
-<Aside type="danger">
-**Olvidar números ordinales al hablar**
+<Aside type="danger" title="Olvidar números ordinales al hablar de fechas">
+- Today is October twenty-five. ⛔
+- Today is October **twenty-fifth**. (Hoy es veinticinco de octubre) ✅
+- Today is the **25th** of October. ✅
 
-~~Today is October twenty-five.~~
+Los días del mes siempre se expresan con números ordinales al hablar.
+</Aside>
 
-→ Today is October **twenty-fifth**. (Hoy es veinticinco de octubre)
+---
 
-→ Today is the **25th** of October.
+## Práctica
+
+<Aside type="tip" title="Ejercicio diario">
+- Practica diciendo la fecha completa cada mañana: "Today is [day], [month] [ordinal], [year]"
+- Deletrea en voz alta los días de la semana y meses del año escribiéndolos con mayúscula
+- Escribe 5 fechas importantes para ti (cumpleaños, aniversarios) en formato británico y americano
+- Pregunta y responde en voz alta: "When is your birthday?", "What's the date today?"
+- Practica expresiones de tiempo: "I have a meeting next Monday", "I traveled last December"
 </Aside>
