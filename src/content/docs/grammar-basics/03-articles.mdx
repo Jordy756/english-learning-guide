@@ -5,9 +5,7 @@ description: Aprende cuándo y cómo usar los artículos en inglés.
 
 import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
 
-Los artículos en inglés son como **type annotations** en TypeScript: determinan si estás hablando de algo específico, algo general, o algo por primera vez. En inglés solo hay tres artículos (**a**, **an**, **the**), pero sus reglas de uso son precisas y afectan el significado de tus oraciones.
-
-Dominar los artículos te permite comunicarte con precisión y sonar natural en inglés.
+Los artículos en inglés son como **type annotations** en TypeScript: determinan si estás hablando de algo específico, algo general, o algo por primera vez. En inglés solo hay tres artículos (**a**, **an**, **the**), y dominar sus reglas de uso te permite comunicarte con precisión natural, ya que afectan directamente el significado de tus oraciones.
 
 ---
 
@@ -44,7 +42,7 @@ const indefiniteArticle = (word) => {
 - **an** orange (una naranja)
 - **an** hour (una hora) - la "h" es muda
 
-<Aside type="tip">
+<Aside type="tip" title="Regla basada en sonido, no en letra">
 La regla es por **sonido**, no por letra. "University" empieza con sonido "yu" (consonante), por eso es **a university**. "Hour" empieza con sonido vocal porque la "h" no se pronuncia, por eso es **an hour**.
 </Aside>
 
@@ -80,9 +78,11 @@ const useIndefiniteArticle = {
 - It costs $10 **a** person (Cuesta $10 por persona)
 - **An** idea came to me (Se me ocurrió una idea)
 
-<Aside type="note">
-**NO uses a/an con plurales** o sustantivos incontables: ~~a books~~, ~~an water~~.
-Solo con singulares contables: "a book", "an apple".
+<Aside type="note" title="A/an solo con singulares contables">
+**NO uses a/an con plurales** o sustantivos incontables:
+
+- a books / an water ⛔
+- **a** book / **an** apple ✅
 </Aside>
 
   </TabItem>
@@ -357,60 +357,55 @@ const articleChoice = {
 
 ## Errores Comunes
 
-<Aside type="danger">
-**Usar artículo con sustantivos generales incontables o plurales**
-
+<Aside type="danger" title="Usar the con sustantivos generales">
 Cuando hablas en general, NO uses "the" con plurales o incontables:
 
-~~The cats are animals~~ → **Cats** are animals (Los gatos son animales - en general)
+- The cats are animals / The water is important / The life is beautiful ⛔
+- **Cats** are animals (Los gatos son animales - en general) ✅
+- **Water** is important (El agua es importante - en general) ✅
+- **Life** is beautiful (La vida es hermosa - concepto general) ✅
 
-~~The water is important~~ → **Water** is important (El agua es importante - en general)
-
-~~The life is beautiful~~ → **Life** is beautiful (La vida es hermosa - concepto general)
-
-✓ Usa "the" solo si es específico: "**The** water in this bottle" (El agua en esta botella)
+Usa "the" solo si es específico: "**The** water in this bottle" (El agua en esta botella) ✅
 </Aside>
 
-<Aside type="danger">
-**Confundir "a" y "an"**
-
+<Aside type="danger" title="Confundir a y an por letra en vez de sonido">
 La regla es por **sonido**, no por letra escrita:
 
-~~a apple~~ / ~~an book~~ / ~~a hour~~
-
-→ **an** apple (sonido vocal)
-
-→ **a** book (sonido consonante)
-
-→ **an** hour (la "h" es muda, sonido vocal)
-
-~~an university~~ → **a** university (suena "yuniversity" - consonante)
+- a apple / an book / a hour / an university ⛔
+- **an** apple (sonido vocal) ✅
+- **a** book (sonido consonante) ✅
+- **an** hour (la "h" es muda, sonido vocal) ✅
+- **a** university (suena "yuniversity" - consonante) ✅
 </Aside>
 
-<Aside type="danger">
-**Olvidar "the" con instrumentos musicales**
-
+<Aside type="danger" title="Olvidar the con instrumentos musicales">
 Cuando hablas de tocar un instrumento, SIEMPRE usa "the":
 
-~~I play guitar~~ → I play **the** guitar (Toco la guitarra)
-
-~~She plays piano~~ → She plays **the** piano (Ella toca el piano)
-
-~~He plays violin~~ → He plays **the** violin (Él toca el violín)
-
-Esta es una excepción importante a memorizar.
+- I play guitar / She plays piano / He plays violin ⛔
+- I play **the** guitar (Toco la guitarra) ✅
+- She plays **the** piano (Ella toca el piano) ✅
+- He plays **the** violin (Él toca el violín) ✅
 </Aside>
 
-<Aside type="danger">
-**Usar artículo con idiomas y comidas**
-
+<Aside type="danger" title="Usar artículo con idiomas y comidas">
 Idiomas y comidas generalmente NO llevan artículo:
 
-~~I speak the English~~ → I speak **English** (Hablo inglés)
+- I speak the English / I have the breakfast at 8 / She studies the Spanish ⛔
+- I speak **English** (Hablo inglés) ✅
+- I have **breakfast** at 8 (Desayuno a las 8) ✅
+- She studies **Spanish** (Ella estudia español) ✅
 
-~~I have the breakfast at 8~~ → I have **breakfast** at 8 (Desayuno a las 8)
+Excepción: Si es específico: "I love **the** English you speak" (Amo el inglés que hablas) ✅
+</Aside>
 
-~~She studies the Spanish~~ → She studies **Spanish** (Ella estudia español)
+---
 
-Excepción: Si es específico: "I love **the** English you speak" (Amo el inglés que hablas)
+## Práctica
+
+<Aside type="tip" title="Ejercicio diario">
+- Lee un párrafo en inglés e identifica todos los artículos (a/an/the) explicando por qué se usa cada uno
+- Escribe 5 oraciones usando "a", 5 con "an", 5 con "the", y 5 sin artículo (zero article)
+- Practica la diferencia: di 3 oraciones generales sin artículo y luego hazlas específicas con "the"
+- Memoriza las excepciones: instrumentos musicales (the guitar), países con "the" (the USA, the UK)
+- Graba un audio describiendo tu día usando correctamente los artículos en cada oración
 </Aside>

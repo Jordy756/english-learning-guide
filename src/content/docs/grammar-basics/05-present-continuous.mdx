@@ -3,3 +3,393 @@ title: Presente Continuo
 description: Expresa acciones que están ocurriendo ahora.
 ---
 
+import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
+
+El presente continuo (present continuous) es como una función que se ejecuta en tiempo real: describe acciones que están ocurriendo en este momento o en un período temporal actual. Se forma con el verbo **to be + verbo-ing**, y es esencial para hablar de lo que está pasando ahora, planes futuros cercanos, o situaciones temporales, siendo uno de los tiempos verbales más usados en conversaciones cotidianas.
+
+---
+
+## Estructura del Presente Continuo
+
+<Tabs>
+  <TabItem label="Afirmativa">
+    ```javascript
+    const presentContinuous = {
+      structure: "Subject + to be + verb-ing",
+      examples: [
+        "I am working",           // Estoy trabajando
+        "You are reading",        // Estás leyendo
+        "He is sleeping",         // Él está durmiendo
+        "She is cooking",         // Ella está cocinando
+        "It is raining",          // Está lloviendo
+        "We are studying",        // Estamos estudiando
+        "They are playing"        // Están jugando
+      ]
+    };
+    ```
+    
+    **Patrón:** Usa la forma correcta de **to be** (am/is/are) + verbo con **-ing**.
+    
+    - I **am eating** lunch (Estoy almorzando)
+    - She **is watching** TV (Ella está viendo televisión)
+    - We **are learning** English (Estamos aprendiendo inglés)
+  </TabItem>
+  
+  <TabItem label="Negativa">
+    ```javascript
+    const negative = {
+      structure: "Subject + to be + not + verb-ing",
+      examples: [
+        "I am not working",         // No estoy trabajando
+        "You are not reading",      // No estás leyendo
+        "He is not sleeping",       // Él no está durmiendo
+        "She is not cooking",       // Ella no está cocinando
+        "It is not raining",        // No está lloviendo
+        "We are not studying",      // No estamos estudiando
+        "They are not playing"      // No están jugando
+      ]
+    };
+    ```
+    
+    Para negar, añade **not** después de **to be**.
+    
+    - I **am not listening** (No estoy escuchando)
+    - He **is not coming** today (Él no viene hoy)
+    - They **are not working** now (Ellos no están trabajando ahora)
+  </TabItem>
+  
+  <TabItem label="Pregunta">
+    ```javascript
+    const question = {
+      structure: "To be + subject + verb-ing + ?",
+      examples: [
+        "Am I working?",              // ¿Estoy trabajando?
+        "Are you reading?",           // ¿Estás leyendo?
+        "Is he sleeping?",            // ¿Está él durmiendo?
+        "Is she cooking?",            // ¿Está ella cocinando?
+        "Is it raining?",             // ¿Está lloviendo?
+        "Are we studying?",           // ¿Estamos estudiando?
+        "Are they playing?"           // ¿Están jugando?
+      ]
+    };
+    ```
+    
+    Invierte el orden: **to be** antes del sujeto.
+    
+    **Respuestas cortas:**
+    - **Are** you working? → Yes, I **am** / No, I **am** not
+    - **Is** she coming? → Yes, she **is** / No, she **is** not
+  </TabItem>
+</Tabs>
+
+---
+
+## Formación del -ing
+
+Reglas para añadir **-ing** al verbo:
+
+```javascript
+const addIng = (verb) => {
+  const rules = {
+    regular: verb + "ing",        // work → working
+    endE: verb.slice(0, -1) + "ing",  // make → making (quita la e)
+    doubleConsonant: verb + verb.slice(-1) + "ing"  // run → running
+  };
+  
+  // Ejemplos
+  return {
+    "work": "working",       // trabajar → trabajando
+    "play": "playing",       // jugar → jugando
+    "make": "making",        // hacer → haciendo (quita e)
+    "write": "writing",      // escribir → escribiendo (quita e)
+    "run": "running",        // correr → corriendo (dobla n)
+    "sit": "sitting",        // sentar → sentando (dobla t)
+    "swim": "swimming"       // nadar → nadando (dobla m)
+  };
+};
+```
+
+<CardGrid>
+  <Card title="Regla normal">
+    Añade **-ing** directamente:
+    
+    - work → **working**
+    - play → **playing**
+    - read → **reading**
+    - eat → **eating**
+  </Card>
+  
+  <Card title="Verbos terminados en -e">
+    Quita la **e** y añade **-ing**:
+    
+    - make → **making**
+    - write → **writing**
+    - come → **coming**
+    - live → **living**
+  </Card>
+  
+  <Card title="Consonante + vocal + consonante">
+    Dobla la última consonante:
+    
+    - run → **running**
+    - sit → **sitting**
+    - swim → **swimming**
+    - stop → **stopping**
+    
+    Excepto si termina en w, x, y:
+    - snow → **snowing** ✅
+  </Card>
+  
+  <Card title="Verbos terminados en -ie">
+    Cambia **-ie** por **-ying**:
+    
+    - lie → **lying** (mentir/yacer)
+    - die → **dying** (morir)
+    - tie → **tying** (atar)
+  </Card>
+</CardGrid>
+
+<Aside type="tip" title="Regla para doblar consonante">
+Para doblar la última consonante, el verbo debe:
+1. Terminar en consonante + vocal + consonante
+2. Ser de una sílaba (o acentuada en la última)
+
+Ejemplo: **run** (r-u-n) → running ✅ | **open** (o-pen, acento en primera) → opening ✅
+</Aside>
+
+---
+
+## Usos del Presente Continuo
+
+<CardGrid>
+  <Card title="Acción en progreso AHORA">
+    Lo que está pasando en este momento exacto:
+    
+    - I **am writing** an email (Estoy escribiendo un correo - ahora mismo)
+    - She **is talking** on the phone (Está hablando por teléfono - en este momento)
+    - They **are having** lunch (Están almorzando - ahora)
+    - It **is raining** outside (Está lloviendo afuera - ahora)
+  </Card>
+  
+  <Card title="Situación temporal">
+    Algo que ocurre en este período, aunque no exactamente ahora:
+    
+    - I **am reading** a book (Estoy leyendo un libro - en estos días)
+    - She **is studying** French (Está estudiando francés - actualmente)
+    - He **is working** at home (Está trabajando en casa - temporalmente)
+    - We **are staying** at a hotel (Nos estamos quedando en un hotel - esta semana)
+  </Card>
+  
+  <Card title="Planes futuros">
+    Planes o arreglos ya decididos para el futuro cercano:
+    
+    - I **am meeting** John tomorrow (Me encuentro con John mañana)
+    - We **are traveling** next week (Viajamos la próxima semana)
+    - She **is coming** tonight (Ella viene esta noche)
+    - They **are leaving** on Monday (Se van el lunes)
+    
+    **Nota:** Requiere contexto temporal (tomorrow, tonight, next week).
+  </Card>
+  
+  <Card title="Cambios y tendencias">
+    Cambios en progreso o tendencias actuales:
+    
+    - The weather **is getting** colder (El clima se está poniendo más frío)
+    - Technology **is improving** (La tecnología está mejorando)
+    - My English **is getting** better (Mi inglés está mejorando)
+    - Prices **are rising** (Los precios están subiendo)
+  </Card>
+</CardGrid>
+
+**Expresiones de tiempo comunes:**
+
+```javascript
+const timeExpressions = {
+  now: "now, right now, at the moment",
+  // ahora, ahora mismo, en este momento
+  
+  temporary: "these days, this week, currently, temporarily",
+  // en estos días, esta semana, actualmente, temporalmente
+  
+  future: "tomorrow, tonight, next week, this evening",
+  // mañana, esta noche, la próxima semana, esta tarde
+  
+  progressive: "more and more, increasingly"
+  // cada vez más, incrementalmente
+};
+```
+
+**Ejemplos en contexto:**
+
+- I **am working** on a project **right now** (Estoy trabajando en un proyecto ahora mismo)
+- She **is living** in Paris **these days** (Ella está viviendo en París en estos días)
+- We **are going** to the movies **tonight** (Vamos al cine esta noche)
+- The city **is becoming** more expensive (La ciudad se está volviendo más cara)
+
+---
+
+## Presente Simple vs Presente Continuo
+
+```javascript
+const comparison = {
+  simple: {
+    use: "Rutinas, hábitos, hechos permanentes",
+    structure: "Subject + verb (+ s/es para he/she/it)",
+    examples: [
+      "I work every day",          // Trabajo todos los días (rutina)
+      "She lives in Madrid",       // Vive en Madrid (permanente)
+      "The sun rises in the east"  // El sol sale por el este (hecho)
+    ]
+  },
+  
+  continuous: {
+    use: "Acciones en progreso, temporal, planes futuros",
+    structure: "Subject + to be + verb-ing",
+    examples: [
+      "I am working now",              // Estoy trabajando ahora (ahora)
+      "She is living in Madrid",       // Está viviendo en Madrid (temporal)
+      "The sun is rising"              // El sol está saliendo (en progreso)
+    ]
+  }
+};
+```
+
+**Ejemplos comparativos:**
+
+- I **live** in London (Vivo en Londres - permanente)
+- I **am living** in London (Estoy viviendo en Londres - temporal, por ahora)
+
+- She **works** at Google (Trabaja en Google - empleo permanente)
+- She **is working** late today (Está trabajando hasta tarde hoy - situación temporal)
+
+- What do you **do**? (¿A qué te dedicas? - profesión)
+- What **are** you **doing**? (¿Qué estás haciendo? - ahora mismo)
+
+- They **study** English (Estudian inglés - en general)
+- They **are studying** for the exam (Están estudiando para el examen - ahora)
+
+- It **rains** a lot here (Llueve mucho aquí - clima general)
+- It **is raining** now (Está lloviendo ahora - en este momento)
+
+---
+
+## Verbos de Estado (Stative Verbs)
+
+Algunos verbos en inglés describen **estados o condiciones** en lugar de acciones, y por eso normalmente NO se usan en presente continuo. Estos verbos expresan situaciones que no son temporales ni tienen progreso visible.
+
+```javascript
+const stativeVerbs = {
+  mental: ["know", "understand", "believe", "think", "remember"],
+  // saber, entender, creer, pensar, recordar
+  
+  emotions: ["love", "like", "hate", "want", "need"],
+  // amar, gustar, odiar, querer, necesitar
+  
+  senses: ["see", "hear", "smell", "taste"],
+  // ver, oír, oler, saborear
+  
+  possession: ["have", "own", "belong"],
+  // tener, poseer, pertenecer
+  
+  others: ["be", "seem", "appear", "exist"]
+  // ser/estar, parecer, aparecer, existir
+};
+```
+
+<Aside type="note" title="Por qué no usan -ing estos verbos">
+**Estos verbos describen estados permanentes o de larga duración**, no acciones momentáneas:
+
+- "Love" (amar) es un sentimiento constante, no algo que "estás haciendo" momentáneamente
+- "Know" (saber) es conocimiento que tienes, no una acción en progreso
+- "Have" (tener/poseer) es posesión, no una actividad temporal
+
+En inglés, estos verbos se usan en presente simple porque describen **cómo son las cosas**, no **qué está pasando**.
+</Aside>
+
+**Por qué no puedes decir "She is loving chocolate":**
+
+- She is loving chocolate ⛔ (incorrecto en inglés estándar)
+- She **loves** chocolate (Ella ama el chocolate) ✅
+
+En inglés, "love" describe un **estado emocional constante**, no una acción temporal. No es algo que "está pasando justo ahora" de manera temporal, sino una condición que existe de forma continua.
+
+**Más ejemplos incorrectos vs correctos:**
+
+- I am knowing the answer ⛔
+- I **know** the answer (Sé la respuesta) ✅
+
+- They are having a car ⛔
+- They **have** a car (Tienen un carro) ✅
+
+- I am wanting ice cream ⛔
+- I **want** ice cream (Quiero helado) ✅
+
+<Aside type="tip" title="Excepciones importantes">
+Algunos verbos de estado pueden usarse en continuo cuando cambian de significado:
+
+**Have:**
+- I **have** a car (Tengo un carro - posesión) → simple ✅
+- I **am having** lunch (Estoy almorzando - acción) → continuo ✅
+- We **are having** a party (Estamos haciendo una fiesta - evento) → continuo ✅
+
+**Think:**
+- I **think** it's good (Creo que es bueno - opinión) → simple ✅
+- I **am thinking** about it (Estoy pensándolo - proceso activo) → continuo ✅
+
+**See:**
+- I **see** the problem (Veo/entiendo el problema) → simple ✅
+- I **am seeing** a doctor tomorrow (Voy a ver a un doctor - cita) → continuo ✅
+</Aside>
+
+---
+
+## Errores Comunes
+
+<Aside type="danger" title="Olvidar el verbo to be">
+El presente continuo SIEMPRE necesita **to be**:
+
+- I working now / She studying English ⛔
+- I **am working** now (Estoy trabajando ahora) ✅
+- She **is studying** English (Ella está estudiando inglés) ✅
+</Aside>
+
+<Aside type="danger" title="Error en la formación del -ing">
+Sigue las reglas de ortografía correctamente:
+
+- runing / writting / stoping / swiming ⛔
+- **running** (dobla n) ✅
+- **writing** (quita e) ✅
+- **stopping** (dobla p) ✅
+- **swimming** (dobla m) ✅
+</Aside>
+
+<Aside type="danger" title="Usar verbos de estado con -ing">
+Los verbos de estado normalmente NO van en continuo:
+
+- I am knowing / She is loving / They are having a car ⛔
+- I **know** (Sé) ✅
+- She **loves** (Ella ama) ✅
+- They **have** a car (Tienen un carro) ✅
+
+Excepción: "I am having lunch" (acción, no posesión) ✅
+</Aside>
+
+<Aside type="danger" title="Confundir usos con presente simple">
+Usa presente simple para rutinas, continuo para acciones temporales:
+
+- I am working every day (rutina con continuo) ⛔
+- I **work** every day (Trabajo todos los días - rutina) ✅
+- I **am working** now (Estoy trabajando ahora - temporal) ✅
+</Aside>
+
+---
+
+## Práctica
+
+<Aside type="tip" title="Ejercicio diario">
+- Describe lo que estás haciendo ahora mismo usando 5 oraciones en presente continuo
+- Convierte 5 oraciones de presente simple a continuo explicando el cambio de significado
+- Practica la formación del -ing: escribe 10 verbos en su forma -ing aplicando las reglas correctas
+- Identifica en una conversación o texto cuándo se usa simple vs continuo y por qué
+- Haz un plan para mañana usando presente continuo: "Tomorrow I am meeting...", "I am going..."
+</Aside>
