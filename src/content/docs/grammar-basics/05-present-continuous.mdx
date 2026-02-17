@@ -13,118 +13,96 @@ El presente continuo (present continuous) es como una función que se ejecuta en
 
 Reglas para añadir **-ing** al verbo:
 
+<Tabs>
+  <TabItem label="Regla normal">
+    Añade **-ing** directamente al verbo:
+    
+    ```javascript
+    const regularVerbs = {
+      "work": "working",     // trabajar → trabajando
+      "play": "playing",     // jugar → jugando
+      "read": "reading",     // leer → leyendo
+      "eat": "eating",       // comer → comiendo
+      "study": "studying"    // estudiar → estudiando
+    };
+    ```
 
-<CardGrid>
-  <Card title="Regla normal">
-    Añade **-ing** directamente:
+    **Ejemplos**
     
     - work → **working** (trabajar → trabajando)
     - play → **playing** (jugar → jugando)
     - read → **reading** (leer → leyendo)
     - eat → **eating** (comer → comiendo)
-  </Card>
+  </TabItem>
   
-  <Card title="Verbos terminados en -e">
-    Quita la **e** y añade **-ing**:
+  <TabItem label="Verbos en -e">
+    Quita la **e** final y añade **-ing**:
     
-    - make → **making** (hacer → haciendo)
-    - write → **writing** (escribir → escribiendo)
-    - come → **coming** (venir → viniendo)
-    - live → **living** (vivir → viviendo)
-  </Card>
+    ```javascript
+    const eVerbs = {
+      "make": "making",      // hacer → haciendo
+      "write": "writing",    // escribir → escribiendo
+      "come": "coming",      // venir → viniendo
+      "live": "living",      // vivir → viviendo
+      "take": "taking"       // tomar → tomando
+    };
+    ```
+
+    **Ejemplos**
+    
+    - make → mak~~e~~ → **making** (hacer → haciendo)
+    - write → writ~~e~~ → **writing** (escribir → escribiendo)
+    - come → com~~e~~ → **coming** (venir → viniendo)
+    - live → liv~~e~~ → **living** (vivir → viviendo)
+  </TabItem>
   
-  <Card title="Consonante + vocal + consonante">
-    Dobla la última consonante:
+  <TabItem label="Doblar consonante">
+    Si el verbo termina en **consonante + vocal + consonante** y tiene acento en la última sílaba, dobla la última consonante:
     
-    - run → **running** (correr → corriendo)
-    - sit → **sitting** (sentar → sentando)
-    - swim → **swimming** (nadar → nadando)
-    - stop → **stopping** (parar → parando)
+    ```javascript
+    const doubleConsonant = {
+      "run": "running",      // correr → corriendo (n→nn)
+      "sit": "sitting",      // sentar → sentando (t→tt)
+      "swim": "swimming",    // nadar → nadando (m→mm)
+      "stop": "stopping",    // parar → parando (p→pp)
+      "plan": "planning"     // planear → planeando (n→nn)
+    };
+    ```
+
+    **Ejemplos**
     
-    Excepto si termina en w, x, y:
-    - snow → **snowing** (nevar → nevando) ✅
-  </Card>
+    - run → ru**n** → ru**nn**ing (correr → corriendo)
+    - sit → si**t** → si**tt**ing (sentar → sentando)
+    - swim → swi**m** → swi**mm**ing (nadar → nadando)
+    - stop → sto**p** → sto**pp**ing (parar → parando)
+    
+    <Aside type="caution" title="Excepciones con w, x, y">
+    No se dobla la consonante si el verbo termina en **w**, **x** o **y**:
+    - snow → **snowing** ✅ (nevar → nevando)
+    - fix → **fixing** ✅ (arreglar → arreglando)
+    </Aside>
+  </TabItem>
   
-  <Card title="Verbos terminados en -ie">
+  <TabItem label="Verbos en -ie">
     Cambia **-ie** por **-ying**:
     
-    - lie → **lying** (mentir/yacer → mintiendo/yaciendo)
-    - die → **dying** (morir → muriendo)
-    - tie → **tying** (atar → atando)
-  </Card>
-</CardGrid>
+    ```javascript
+    const ieVerbs = {
+      "lie": "lying",        // mentir/yacer → mintiendo
+      "die": "dying",        // morir → muriendo
+      "tie": "tying"         // atar → atando
+    };
+    ```
 
-```javascript
-const addIng = (verb) => {
-  const rules = {
-    regular: verb + "ing",        // work → working (trabajar → trabajando)
-    endE: verb.slice(0, -1) + "ing",  // make → making (hacer → haciendo, quita la e)
-    doubleConsonant: verb + verb.slice(-1) + "ing"  // run → running (correr → corriendo)
-  };
-  
-  return {
-    "work": "working",       // trabajar → trabajando
-    "play": "playing",       // jugar → jugando
-    "make": "making",        // hacer → haciendo (quita e)
-    "write": "writing",      // escribir → escribiendo (quita e)
-    "run": "running",        // correr → corriendo (dobla n)
-    "sit": "sitting",        // sentar → sentando (dobla t)
-    "swim": "swimming"       // nadar → nadando (dobla m)
-  };
-};
-```
-
-<Aside type="tip" title="Regla para doblar consonante">
-Para doblar la última consonante, el verbo debe:
-1. Terminar en consonante + vocal + consonante
-2. Ser de una sílaba (o acentuada en la última)
-
-Ejemplo: **run** (r-u-n) → running ✅ | **open** (o-pen, acento en primera) → opening ✅
-</Aside>
+    **Ejemplos**
+    
+    - lie → l~~ie~~ → l**y**ing (mentir → mintiendo)
+    - die → d~~ie~~ → d**y**ing (morir → muriendo)
+    - tie → t~~ie~~ → t**y**ing (atar → atando)
+  </TabItem>
+</Tabs>
 
 ---
-
-## Usos del Presente Continuo
-
-<CardGrid>
-  <Card title="Acción en progreso AHORA">
-    Lo que está pasando en este momento exacto:
-    
-    - I **am writing** an email (Estoy escribiendo un correo - ahora mismo)
-    - She **is talking** on the phone (Está hablando por teléfono - en este momento)
-    - They **are having** lunch (Están almorzando - ahora)
-    - It **is raining** outside (Está lloviendo afuera - ahora)
-  </Card>
-  
-  <Card title="Situación temporal">
-    Algo que ocurre en este período, aunque no exactamente ahora:
-    
-    - I **am reading** a book (Estoy leyendo un libro - en estos días)
-    - She **is studying** French (Está estudiando francés - actualmente)
-    - He **is working** at home (Está trabajando en casa - temporalmente)
-    - We **are staying** at a hotel (Nos estamos quedando en un hotel - esta semana)
-  </Card>
-  
-  <Card title="Planes futuros">
-    Planes o arreglos ya decididos para el futuro cercano:
-    
-    - I **am meeting** John tomorrow (Me encuentro con John mañana)
-    - We **are traveling** next week (Viajamos la próxima semana)
-    - She **is coming** tonight (Ella viene esta noche)
-    - They **are leaving** on Monday (Se van el lunes)
-    
-    **Nota:** Requiere contexto temporal (tomorrow, tonight, next week).
-  </Card>
-  
-  <Card title="Cambios y tendencias">
-    Cambios en progreso o tendencias actuales:
-    
-    - The weather **is getting** colder (El clima se está poniendo más frío)
-    - Technology **is improving** (La tecnología está mejorando)
-    - My English **is getting** better (Mi inglés está mejorando)
-    - Prices **are rising** (Los precios están subiendo)
-  </Card>
-</CardGrid>
 
 ## Expresiones de tiempo
 
@@ -139,6 +117,8 @@ Ejemplo: **run** (r-u-n) → running ✅ | **open** (o-pen, acento en primera) �
       "currently"          // actualmente
     ];
     ```
+
+    **Ejemplos**
 
     - I **am working** **now** (Estoy trabajando ahora)
     - She **is cooking** **right now** (Ella está cocinando ahora mismo)
@@ -159,6 +139,8 @@ Ejemplo: **run** (r-u-n) → running ✅ | **open** (o-pen, acento en primera) �
       "for now"            // por ahora
     ];
     ```
+
+    **Ejemplos**
 
     - I **am learning** Spanish **these days** (Estoy aprendiendo español en estos días)
     - She **is working** from home **this week** (Está trabajando desde casa esta semana)
@@ -182,6 +164,8 @@ Ejemplo: **run** (r-u-n) → running ✅ | **open** (o-pen, acento en primera) �
       "later"              // más tarde
     ];
     ```
+
+    **Ejemplos**
         
     - I **am meeting** Sarah **tomorrow** (Me encuentro con Sarah mañana)
     - We **are going** to the cinema **tonight** (Vamos al cine esta noche)
@@ -203,6 +187,8 @@ Ejemplo: **run** (r-u-n) → running ✅ | **open** (o-pen, acento en primera) �
       "rapidly"            // rápidamente
     ];
     ```
+
+    **Ejemplos**
 
     - The weather **is getting** colder **gradually** (El clima se está poniendo más frío gradualmente)
     - Prices **are rising** **more and more** (Los precios están subiendo cada vez más)
@@ -310,6 +296,8 @@ Algunos verbos describen **estados o condiciones** en lugar de acciones, y norma
       // ["reconocer", "significar/tener intención", "imaginar"]
     };
     ```
+
+    **Ejemplos**
     
     - I **know** the answer (Sé la respuesta)
     - She **understands** English (Ella entiende inglés)
@@ -336,6 +324,8 @@ Algunos verbos describen **estados o condiciones** en lugar de acciones, y norma
       // ["importar", "importar/molestar", "apreciar"]
     };
     ```
+
+    **Ejemplos**
     
     - I **love** chocolate (Amo el chocolate)
     - She **likes** coffee (A ella le gusta el café)
@@ -356,6 +346,8 @@ Algunos verbos describen **estados o condiciones** en lugar de acciones, y norma
       // ["parecer/verse", "sonar", "parecer", "aparecer"]
     };
     ```
+
+    **Ejemplos**
     
     - I **see** the problem (Veo el problema)
     - She **hears** music (Ella escucha música)
@@ -376,6 +368,8 @@ Algunos verbos describen **estados o condiciones** en lugar de acciones, y norma
       // ["contener", "incluir", "consistir", "depender"]
     };
     ```
+
+    **Ejemplos**
     
     - I **have** a car (Tengo un carro)
     - She **owns** a house (Ella posee una casa)
@@ -398,6 +392,8 @@ Algunos verbos describen **estados o condiciones** en lugar de acciones, y norma
       // ["ser igual a", "parecerse a", "diferir", "quedar bien"]
     };
     ```
+
+    **Ejemplos**
     
     - This **is** important (Esto es importante)
     - Ghosts **exist** (Los fantasmas existen)
