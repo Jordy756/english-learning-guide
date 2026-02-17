@@ -9,36 +9,9 @@ El pasado continuo (past continuous) es como una foto instantánea de un proceso
 
 ---
 
-## Formación
-
-El pasado continuo se forma con el pasado del verbo **to be** (was/were) + el verbo en forma **-ing**:
-
-```javascript
-const pastContinuous = {
-  formula: "was/were + verb-ing",
-  toBe: {
-    "I": "was",
-    "you": "were",
-    "he/she/it": "was",
-    "we/you/they": "were"
-  },
-  examples: {
-    "I": "was working",          // estaba trabajando
-    "you": "were studying",      // estabas estudiando
-    "he": "was sleeping",        // estaba durmiendo
-    "we": "were eating",         // estábamos comiendo
-    "they": "were watching"      // estaban viendo
-  }
-};
-```
-
-<Aside type="tip" title="Reglas del -ing">
-Las reglas para formar el **-ing** son las mismas que en el [presente continuo](./05-present-continuous.mdx#formación-del--ing): añadir -ing, quitar la -e final, doblar consonante, o cambiar -ie por -ying según corresponda.
-</Aside>
-
----
-
 ## Estructura del Pasado Continuo
+
+El pasado continuo se forma con el pasado del verbo to be (was/were) + el verbo en forma -ing. Las reglas para formar el **-ing** son las mismas que en el [presente continuo](./05-present-continuous.mdx#formación-del--ing): añadir -ing, quitar la -e final, doblar consonante, o cambiar -ie por -ying según corresponda.
 
 <Tabs>
   <TabItem label="Afirmativa">
@@ -188,60 +161,117 @@ Las reglas para formar el **-ing** son las mismas que en el [presente continuo](
 
 ---
 
-## Pasado Simple vs Pasado Continuo
+## Usos del Pasado Continuo
 
-La diferencia principal es el enfoque: el pasado simple describe acciones **completadas**, mientras el pasado continuo describe acciones **en progreso**.
-
-```javascript
-const comparison = {
-  simple: {
-    focus: "acción completa",
-    example: "I worked yesterday"  // Trabajé ayer (acción terminada)
-  },
-  continuous: {
-    focus: "acción en progreso",
-    example: "I was working at 3 PM"  // Estaba trabajando a las 3 PM (en proceso)
-  }
-};
-```
-
-**Contraste en uso:**
+El pasado continuo se combina frecuentemente con el pasado simple para crear narrativas ricas y contextuales. Aquí están los patrones más importantes:
 
 <Tabs>
-  <TabItem label="Acción completa vs en progreso">
-    - I **read** a book yesterday ✅ (Leí un libro ayer - lo terminé)
-    - I **was reading** a book at 8 PM ✅ (Estaba leyendo un libro a las 8 PM - estaba en proceso)
-    
-    - She **cooked** dinner ✅ (Ella cocinó la cena - ya está lista)
-    - She **was cooking** dinner when I arrived ✅ (Estaba cocinando cuando llegué - aún no terminaba)
-  </TabItem>
-  
   <TabItem label="Interrupción">
-    **Pasado continuo** (acción larga) + **pasado simple** (acción corta que interrumpe):
+    Cuando una acción en progreso es interrumpida por otra acción más corta.
 
-    - I **was watching** TV when the phone **rang** ✅
-    - (Estaba viendo TV cuando sonó el teléfono)
-    
-    - We **were having** dinner when they **arrived** ✅
-    - (Estábamos cenando cuando llegaron)
-    
-    - She **was driving** when she **saw** the accident ✅
-    - (Estaba manejando cuando vio el accidente)
+    ```javascript
+    const interruption = {
+      // Opción 1: Continuo + when + Simple
+      pattern1: "was/were + verb-ing + when + past simple",
+      
+      // Opción 2: Simple + Continuo (orden inverso)
+      pattern2: "When + past simple, was/were + verb-ing",
+      
+      // Opción 3: While + Continuo + Simple
+      pattern3: "While + was/were + verb-ing, past simple"
+    };
+    ```
+
+    **Ejemplos**
+
+    - I **was watching** TV **when** the phone **rang** (Estaba viendo TV cuando sonó el teléfono)
+    - **When** they **arrived**, we **were having** dinner (Cuando llegaron, estábamos cenando)
+    - **While** I **was sleeping**, someone **knocked** on the door (Mientras dormía, alguien tocó la puerta)
+    - The lights **went** out while we **were dancing** (Las luces se fueron mientras bailábamos)
+
+    <Aside type="tip" title="Orden flexible según énfasis">
+    El orden no cambia el significado, solo el énfasis. Empieza con la acción que quieras destacar.
+    </Aside>
   </TabItem>
-  
+
   <TabItem label="Simultáneas">
-    Dos acciones **simultáneas** usan ambas pasado continuo con **while**:
+    Dos o más acciones ocurriendo al mismo tiempo en el pasado. Ambas van en pasado continuo.
 
-    - I **was studying** while he **was playing** ✅
-    - (Estudiaba mientras él jugaba)
-    
-    - She **was reading** while I **was cooking** ✅
-    - (Ella leía mientras yo cocinaba)
-    
-    Dos acciones **secuenciales** usan pasado simple:
+    ```javascript
+    const simultaneous = {
+      // Opción 1: While conectando dos continuos
+      pattern1: "was/were + verb-ing + while + was/were + verb-ing",
+      
+      // Opción 2: And para describir escena
+      pattern2: "was/were + verb-ing + and + was/were + verb-ing",
+      
+      // Opción 3: As (mientras/conforme)
+      pattern3: "was/were + verb-ing + as + was/were + verb-ing"
+    };
+    ```
 
-    - I **finished** work and **went** home ✅
-    - (Terminé el trabajo y me fui a casa)
+    **Ejemplos**
+
+    - I **was studying** **while** he **was playing** (Yo estudiaba mientras él jugaba)
+    - The sun **was shining** **and** birds **were singing** (El sol brillaba y los pájaros cantaban)
+    - She **was smiling** **as** she **was reading** the letter (Sonreía mientras leía la carta)
+    - The kids **were playing** while their parents **were talking** (Los niños jugaban mientras sus padres conversaban)
+
+    <Aside type="note" title="Todas las acciones en progreso">
+    Cuando describes acciones simultáneas, todas deben estar en pasado continuo porque todas estaban ocurriendo al mismo tiempo.
+    </Aside>
+  </TabItem>
+
+  <TabItem label="Secuenciales">
+    Acciones que ocurrieron una después de otra. El tiempo verbal depende del tipo de secuencia.
+
+    ```javascript
+    const sequential = {
+      // Eventos completados: Pasado simple
+      completed: "past simple + and + past simple",
+      
+      // Descripción de escena: Pasado continuo
+      contextual: "was/were + verb-ing + and + was/were + verb-ing"
+    };
+    ```
+
+    **Ejemplos**
+
+    - I **finished** work **and** **went** home (Terminé el trabajo y me fui a casa - eventos completados)
+    - She **woke** up, **took** a shower, **and** **had** breakfast (Se despertó, se duchó y desayunó - secuencia completada)
+    - The sun **was shining** **and** birds **were singing** (El sol brillaba y los pájaros cantaban - describe atmósfera)
+    - She **was crying** **and shaking** with fear (Lloraba y temblaba de miedo - describe estado)
+
+    <Aside type="caution" title="Diferencia clave entre pasado simple y continuo">
+    **Pasado simple** = Eventos que se completaron uno tras otro. **Pasado continuo** = Acciones en progreso que pintan una escena o contexto.
+    </Aside>
+  </TabItem>
+
+  <TabItem label="Contexto">
+    El pasado continuo establece el escenario, el pasado simple narra la acción principal.
+
+    ```javascript
+    const narrative = {
+      background: "past continuous (contexto)",
+      mainAction: "past simple (lo que pasó)",
+      
+      // Diferentes órdenes posibles
+      order1: "Contexto (continuo) + Acción (simple)",
+      order2: "Acción (simple) + because + Contexto (continuo)",
+      order3: "Contexto + Acción + Contexto + Acción..."
+    };
+    ```
+
+    **Ejemplos**
+
+    - The sun **was shining**. I **opened** the window (El sol brillaba. Abrí la ventana)
+    - I **decided** to stay home because it **was raining** heavily (Decidí quedarme porque estaba lloviendo fuerte)
+    - I **was walking** down the street when I **saw** an old friend. We **stopped** and **talked** (Caminaba por la calle cuando vi a un viejo amigo. Nos detuvimos y conversamos)
+    - The music **was playing** loudly. People **were dancing**. Suddenly, the lights **went** out (La música sonaba fuerte. La gente bailaba. De repente, se fueron las luces)
+
+    <Aside type="tip" title="Narrativa efectiva con continuo + simple">
+    Esta combinación hace tus historias más vívidas. El continuo crea la atmósfera, el simple cuenta los eventos principales.
+    </Aside>
   </TabItem>
 </Tabs>
 
