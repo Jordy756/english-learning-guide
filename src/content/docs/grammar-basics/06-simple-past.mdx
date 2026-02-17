@@ -3,3 +3,379 @@ title: Pasado Simple
 description: Habla sobre acciones completadas en el pasado.
 ---
 
+import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
+
+El pasado simple (simple past) es como un registro de eventos completados: describe acciones que comenzaron y terminaron en un momento específico del pasado. Es el tiempo verbal que usas para contar historias, narrar experiencias, y hablar de hechos históricos. Se forma añadiendo **-ed** a verbos regulares o usando formas especiales para verbos irregulares.
+
+---
+
+## Verbos Regulares
+
+Los verbos regulares forman el pasado simple añadiendo **-ed** al infinitivo:
+
+<Tabs>
+  <TabItem label="Regla normal">
+    Añade **-ed** directamente al verbo:
+    
+    ```javascript
+    const regularVerbs = {
+      "work": "worked",      // trabajar → trabajó
+      "play": "played",      // jugar → jugó
+      "help": "helped",      // ayudar → ayudó
+      "watch": "watched",    // ver → vio
+      "call": "called"       // llamar → llamó
+    };
+    ```
+
+    **Ejemplos**
+    
+    - work → **worked** (trabajar → trabajó/trabajé)
+    - play → **played** (jugar → jugó/jugué)
+    - help → **helped** (ayudar → ayudó/ayudé)
+    - watch → **watched** (ver → vio/vi)
+  </TabItem>
+  
+  <TabItem label="Verbos en -e">
+    Si el verbo ya termina en **-e**, solo añade **-d**:
+    
+    ```javascript
+    const eVerbs = {
+      "live": "lived",       // vivir → vivió
+      "love": "loved",       // amar → amó
+      "like": "liked",       // gustar → gustó
+      "use": "used",         // usar → usó
+      "arrive": "arrived"    // llegar → llegó
+    };
+    ```
+
+    **Ejemplos**
+    
+    - live → liv**ed** (vivir → vivió/viví)
+    - love → lov**ed** (amar → amó/amé)
+    - arrive → arriv**ed** (llegar → llegó/llegué)
+    - use → us**ed** (usar → usó/usé)
+  </TabItem>
+  
+  <TabItem label="Consonante + y">
+    Si termina en **consonante + y**, cambia la **y** por **i** y añade **-ed**:
+    
+    ```javascript
+    const yVerbs = {
+      "study": "studied",    // estudiar → estudió
+      "try": "tried",        // intentar → intentó
+      "carry": "carried",    // llevar → llevó
+      "worry": "worried",    // preocupar → preocupó
+      "cry": "cried"         // llorar → lloró
+    };
+    ```
+
+    **Ejemplos**
+    
+    - study → stud**ied** (estudiar → estudió/estudié)
+    - try → tr**ied** (intentar → intentó/intenté)
+    - carry → carr**ied** (llevar → llevó/llevé)
+    
+    <Aside type="caution" title="Excepción con vocal + y">
+    Si el verbo termina en **vocal + y**, solo añade **-ed**:
+    - play → **played** ✅ (jugar → jugó)
+    - enjoy → **enjoyed** ✅ (disfrutar → disfrutó)
+    </Aside>
+  </TabItem>
+  
+  <TabItem label="Doblar consonante">
+    Si el verbo de una sílaba termina en **consonante + vocal + consonante**, dobla la última consonante:
+    
+    ```javascript
+    const doubleConsonant = {
+      "stop": "stopped",     // parar → paró
+      "plan": "planned",     // planear → planeó
+      "drop": "dropped",     // dejar caer → dejó caer
+      "shop": "shopped"      // comprar → compró
+    };
+    ```
+
+    **Ejemplos**
+    
+    - stop → sto**pp**ed (parar → paró/paré)
+    - plan → pla**nn**ed (planear → planeó/planeé)
+    - drop → dro**pp**ed (dejar caer → dejó/dejé caer)
+  </TabItem>
+</Tabs>
+
+<Aside type="tip" title="Lista completa de verbos regulares">
+Hay miles de verbos regulares en inglés. Consulta la [lista completa de verbos regulares](../reference/01-regular-verbs-list.mdx) en la sección de referencia.
+</Aside>
+
+---
+
+## Verbos Irregulares
+
+Los verbos irregulares no siguen la regla de **-ed**. Cada uno tiene su propia forma en pasado que debes memorizar:
+
+```javascript
+const irregularVerbs = {
+  "go": "went",          // ir → fue/fui
+  "come": "came",        // venir → vino/vine
+  "see": "saw",          // ver → vio/vi
+  "have": "had",         // tener → tuvo/tuve
+  "do": "did",           // hacer → hizo/hice
+  "make": "made",        // hacer → hizo/hice
+  "take": "took",        // tomar → tomó/tomé
+  "get": "got",          // obtener → obtuvo/obtuve
+  "give": "gave",        // dar → dio/di
+  "say": "said",         // decir → dijo/dije
+  "eat": "ate",          // comer → comió/comí
+  "drink": "drank",      // beber → bebió/bebí
+  "write": "wrote",      // escribir → escribió/escribí
+  "buy": "bought",       // comprar → compró/compré
+  "think": "thought"     // pensar → pensó/pensé
+};
+```
+
+**Ejemplos**
+
+- I **went** to Paris last year (Fui a París el año pasado)
+- She **saw** a movie yesterday (Ella vio una película ayer)
+- We **had** dinner at 8 PM (Cenamos a las 8 PM)
+- They **bought** a new car (Compraron un auto nuevo)
+- He **wrote** a letter (Él escribió una carta)
+
+<Aside type="tip" title="Lista completa de verbos irregulares">
+Hay aproximadamente 200 verbos irregulares en inglés. Consulta la [lista completa de verbos irregulares](../reference/02-irregular-verbs-list.mdx) en la sección de referencia.
+</Aside>
+
+---
+
+## Estructura del Pasado Simple
+
+<Tabs>
+  <TabItem label="Afirmativa">
+    ```javascript
+    const affirmative = {
+      structure: "Subject + verb-ed/irregular",
+      examples: [
+        "I worked yesterday",          // Trabajé ayer
+        "You played soccer",           // Jugaste fútbol
+        "He visited London",           // Él visitó Londres
+        "She went to school",          // Ella fue a la escuela
+        "It rained all day",           // Llovió todo el día
+        "We watched a movie",          // Vimos una película
+        "They studied hard"            // Estudiaron mucho
+      ]
+    };
+    ```
+
+    **Ejemplos**
+    
+    - My sister **traveled** to Italy (Mi hermana viajó a Italia)
+    - I **finished** my homework (Terminé mi tarea)
+    - The meeting **started** at 10 AM (La reunión empezó a las 10 AM)
+    - We **lived** in Tokyo for 3 years (Vivimos en Tokio por 3 años)
+    - She **made** a delicious cake (Ella hizo un pastel delicioso)
+  </TabItem>
+  
+  <TabItem label="Negativa">
+    ```javascript
+    const negative = {
+      structure: "Subject + didn't + verb (base)",
+      helper: "didn't (did not)",
+      examples: [
+        "I didn't work yesterday",     // No trabajé ayer
+        "You didn't play soccer",      // No jugaste fútbol
+        "He didn't visit London",      // Él no visitó Londres
+        "She didn't go to school",     // Ella no fue a la escuela
+        "It didn't rain",              // No llovió
+        "We didn't watch a movie",     // No vimos una película
+        "They didn't study"            // No estudiaron
+      ]
+    };
+    ```
+
+    **Ejemplos**
+    
+    - I **didn't finish** the report (No terminé el reporte)
+    - She **didn't call** me back (Ella no me devolvió la llamada)
+    - We **didn't buy** anything (No compramos nada)
+    - They **didn't understand** the lesson (No entendieron la lección)
+    - He **didn't eat** breakfast (Él no desayunó)
+
+    <Aside type="caution" title="El verbo vuelve a su forma base">
+    Después de **didn't**, el verbo siempre va en su forma base (infinitivo sin "to"):
+    - didn't **work** ✅ (no worked ⛔)
+    - didn't **go** ✅ (no went ⛔)
+    </Aside>
+  </TabItem>
+  
+  <TabItem label="Pregunta">
+    ```javascript
+    const question = {
+      structure: "Did + subject + verb (base) + ?",
+      helper: "Did (para todos los sujetos)",
+      examples: [
+        "Did I say something?",        // ¿Dije algo?
+        "Did you work yesterday?",     // ¿Trabajaste ayer?
+        "Did he visit London?",        // ¿Él visitó Londres?
+        "Did she go to school?",       // ¿Fue ella a la escuela?
+        "Did it rain?",                // ¿Llovió?
+        "Did we watch a movie?",       // ¿Vimos una película?
+        "Did they study?"              // ¿Estudiaron?
+      ]
+    };
+    ```
+
+    **Ejemplos**
+    
+    - **Did** you **finish** your work? (¿Terminaste tu trabajo?)
+    - **Did** she **call** you? (¿Te llamó ella?)
+    - **Did** they **enjoy** the party? (¿Disfrutaron la fiesta?)
+    - **Did** he **buy** the tickets? (¿Compró él los boletos?)
+    - **Did** it **work** well? (¿Funcionó bien?)
+
+    <Aside type="tip" title="Respuestas cortas">
+    - Yes, I **did** / No, I **didn't**
+    - Yes, she **did** / No, she **didn't**
+    - Yes, they **did** / No, they **didn't**
+    </Aside>
+  </TabItem>
+</Tabs>
+
+---
+
+## Expresiones de Tiempo
+
+El pasado simple frecuentemente se usa con estas expresiones de tiempo:
+
+<Tabs>
+  <TabItem label="Yesterday / Last">
+    ```javascript
+    const specificPast = [
+      "yesterday",           // ayer
+      "last night",          // anoche
+      "last week",           // la semana pasada
+      "last month",          // el mes pasado
+      "last year",           // el año pasado
+      "last Monday",         // el lunes pasado
+      "last summer"          // el verano pasado
+    ];
+    ```
+
+    **Ejemplos**
+    
+    - I **saw** him **yesterday** (Lo vi ayer)
+    - She **called** me **last night** (Me llamó anoche)
+    - We **traveled** **last summer** (Viajamos el verano pasado)
+    - They **visited** us **last week** (Nos visitaron la semana pasada)
+  </TabItem>
+  
+  <TabItem label="Ago">
+    ```javascript
+    const ago = [
+      "a minute ago",        // hace un minuto
+      "an hour ago",         // hace una hora
+      "two days ago",        // hace dos días
+      "a week ago",          // hace una semana
+      "three years ago",     // hace tres años
+      "a long time ago"      // hace mucho tiempo
+    ];
+    ```
+
+    **Ejemplos**
+    
+    - We **met** five years **ago** (Nos conocimos hace cinco años)
+    - She **left** an hour **ago** (Ella se fue hace una hora)
+    - I **finished** a minute **ago** (Terminé hace un minuto)
+    - They **moved** a long time **ago** (Se mudaron hace mucho tiempo)
+  </TabItem>
+  
+  <TabItem label="Fechas específicas">
+    ```javascript
+    const specificDates = [
+      "in 2020",             // en 2020
+      "in May",              // en mayo
+      "in 1990",             // en 1990
+      "on Monday",           // el lunes
+      "on January 15th",     // el 15 de enero
+      "at 3 PM"              // a las 3 PM
+    ];
+    ```
+
+    **Ejemplos**
+    
+    - They **moved** here **in 2018** (Se mudaron aquí en 2018)
+    - I **graduated** **in May** (Me gradué en mayo)
+    - She **was born** **in 1990** (Ella nació en 1990)
+    - The meeting **started** **at 3 PM** (La reunión empezó a las 3 PM)
+  </TabItem>
+  
+  <TabItem label="When / Other">
+    ```javascript
+    const contextual = [
+      "when I was young",    // cuando era joven
+      "when she arrived",    // cuando ella llegó
+      "this morning",        // esta mañana
+      "that day",            // ese día
+      "in the past",         // en el pasado
+      "then"                 // entonces
+    ];
+    ```
+
+    **Ejemplos**
+    
+    - He **started** working **when** he was 18 (Empezó a trabajar cuando tenía 18)
+    - I **saw** her **when** she arrived (La vi cuando llegó)
+    - We **talked** **this morning** (Hablamos esta mañana)
+    - I **lived** there **in the past** (Viví ahí en el pasado)
+  </TabItem>
+</Tabs>
+
+---
+
+## Errores comunes
+
+<Aside type="danger" title="Usar -ed con verbos irregulares">
+- I **goed** to the store ⛔
+- I **went** to the store ✅
+- She **maked** a cake ⛔
+- She **made** a cake ✅
+
+Los verbos irregulares no siguen la regla de -ed. Debes memorizar sus formas especiales.
+</Aside>
+
+<Aside type="danger" title="Olvidar usar el verbo base después de didn't">
+- I **didn't went** to work ⛔
+- I **didn't go** to work ✅
+- She **didn't called** me ⛔
+- She **didn't call** me ✅
+
+Después de **didn't**, el verbo siempre vuelve a su forma base (infinitivo sin "to").
+</Aside>
+
+<Aside type="danger" title="Usar didn't en forma afirmativa">
+- I **didn't went** shopping ⛔
+- I **went** shopping ✅
+- I **didn't go** shopping ✅
+
+**Didn't** solo se usa en oraciones negativas, no en afirmativas.
+</Aside>
+
+<Aside type="danger" title="Confundir was/were con verbos de acción">
+- I **was work** yesterday ⛔
+- I **worked** yesterday ✅
+- They **were study** all night ⛔
+- They **studied** all night ✅
+
+**Was/were** son solo para el verbo "to be", no para verbos de acción.
+</Aside>
+
+---
+
+## Práctica
+
+<Aside type="tip" title="Ejercicio diario">
+- Escribe 3 cosas que hiciste ayer usando el pasado simple
+- Cuenta una historia corta de algo que te pasó la semana pasada
+- Practica verbos irregulares: memoriza 5 nuevos cada día
+- Lee noticias o historias en inglés y subraya los verbos en pasado simple
+- Haz preguntas sobre el fin de semana de alguien usando "Did you...?"
+</Aside>
+
