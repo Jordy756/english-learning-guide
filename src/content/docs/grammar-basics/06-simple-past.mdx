@@ -102,6 +102,10 @@ Los verbos regulares forman el pasado simple añadiendo **-ed** al infinitivo:
   </TabItem>
 </Tabs>
 
+<Aside type="tip" title="Lista completa de verbos regulares">
+Hay miles de verbos regulares en inglés. Consulta la [lista completa de verbos regulares](../reference/01-regular-verbs-list.mdx) en la sección de referencia.
+</Aside>
+
 ---
 
 ## Verbos Irregulares
@@ -241,80 +245,126 @@ Hay aproximadamente 200 verbos irregulares en inglés. Consulta la [lista comple
 
 El pasado simple frecuentemente se usa con estas expresiones de tiempo:
 
-```javascript
-const timeExpressions = {
-  specific: [
-    "yesterday",           // ayer
-    "last night",          // anoche
-    "last week",           // la semana pasada
-    "last month",          // el mes pasado
-    "last year"            // el año pasado
-  ],
-  ago: [
-    "two days ago",        // hace dos días
-    "a week ago",          // hace una semana
-    "three years ago"      // hace tres años
-  ],
-  dates: [
-    "in 2020",             // en 2020
-    "in May",              // en mayo
-    "on Monday"            // el lunes
-  ],
-  when: [
-    "when I was young",    // cuando era joven
-    "when she arrived"     // cuando ella llegó
-  ]
-};
-```
+<Tabs>
+  <TabItem label="Yesterday / Last">
+    ```javascript
+    const specificPast = [
+      "yesterday",           // ayer
+      "last night",          // anoche
+      "last week",           // la semana pasada
+      "last month",          // el mes pasado
+      "last year",           // el año pasado
+      "last Monday",         // el lunes pasado
+      "last summer"          // el verano pasado
+    ];
+    ```
 
-**Ejemplos**
+    **Ejemplos**
+    
+    - I **saw** him **yesterday** (Lo vi ayer)
+    - She **called** me **last night** (Me llamó anoche)
+    - We **traveled** **last summer** (Viajamos el verano pasado)
+    - They **visited** us **last week** (Nos visitaron la semana pasada)
+  </TabItem>
+  
+  <TabItem label="Ago">
+    ```javascript
+    const ago = [
+      "a minute ago",        // hace un minuto
+      "an hour ago",         // hace una hora
+      "two days ago",        // hace dos días
+      "a week ago",          // hace una semana
+      "three years ago",     // hace tres años
+      "a long time ago"      // hace mucho tiempo
+    ];
+    ```
 
-- I **saw** him **yesterday** (Lo vi ayer)
-- She **called** me **last night** (Me llamó anoche)
-- We **met** five years **ago** (Nos conocimos hace cinco años)
-- They **moved** here **in 2018** (Se mudaron aquí en 2018)
-- He **started** working **when** he was 18 (Empezó a trabajar cuando tenía 18)
+    **Ejemplos**
+    
+    - We **met** five years **ago** (Nos conocimos hace cinco años)
+    - She **left** an hour **ago** (Ella se fue hace una hora)
+    - I **finished** a minute **ago** (Terminé hace un minuto)
+    - They **moved** a long time **ago** (Se mudaron hace mucho tiempo)
+  </TabItem>
+  
+  <TabItem label="Fechas específicas">
+    ```javascript
+    const specificDates = [
+      "in 2020",             // en 2020
+      "in May",              // en mayo
+      "in 1990",             // en 1990
+      "on Monday",           // el lunes
+      "on January 15th",     // el 15 de enero
+      "at 3 PM"              // a las 3 PM
+    ];
+    ```
+
+    **Ejemplos**
+    
+    - They **moved** here **in 2018** (Se mudaron aquí en 2018)
+    - I **graduated** **in May** (Me gradué en mayo)
+    - She **was born** **in 1990** (Ella nació en 1990)
+    - The meeting **started** **at 3 PM** (La reunión empezó a las 3 PM)
+  </TabItem>
+  
+  <TabItem label="When / Other">
+    ```javascript
+    const contextual = [
+      "when I was young",    // cuando era joven
+      "when she arrived",    // cuando ella llegó
+      "this morning",        // esta mañana
+      "that day",            // ese día
+      "in the past",         // en el pasado
+      "then"                 // entonces
+    ];
+    ```
+
+    **Ejemplos**
+    
+    - He **started** working **when** he was 18 (Empezó a trabajar cuando tenía 18)
+    - I **saw** her **when** she arrived (La vi cuando llegó)
+    - We **talked** **this morning** (Hablamos esta mañana)
+    - I **lived** there **in the past** (Viví ahí en el pasado)
+  </TabItem>
+</Tabs>
 
 ---
 
 ## Errores comunes
 
 <Aside type="danger" title="Usar -ed con verbos irregulares">
-Los verbos irregulares no siguen la regla de -ed:
+- I **goed** to the store ⛔
+- I **went** to the store ✅
+- She **maked** a cake ⛔
+- She **made** a cake ✅
 
-⛔ I **goed** to the store
-✅ I **went** to the store (Fui a la tienda)
-
-⛔ She **maked** a cake
-✅ She **made** a cake (Ella hizo un pastel)
+Los verbos irregulares no siguen la regla de -ed. Debes memorizar sus formas especiales.
 </Aside>
 
 <Aside type="danger" title="Olvidar usar el verbo base después de didn't">
-Después de **didn't**, el verbo debe estar en su forma base:
+- I **didn't went** to work ⛔
+- I **didn't go** to work ✅
+- She **didn't called** me ⛔
+- She **didn't call** me ✅
 
-⛔ I **didn't went** to work
-✅ I **didn't go** to work (No fui a trabajar)
-
-⛔ She **didn't called** me
-✅ She **didn't call** me (Ella no me llamó)
+Después de **didn't**, el verbo siempre vuelve a su forma base (infinitivo sin "to").
 </Aside>
 
 <Aside type="danger" title="Usar didn't en forma afirmativa">
-**Didn't** solo se usa en negativas:
+- I **didn't went** shopping ⛔
+- I **went** shopping ✅
+- I **didn't go** shopping ✅
 
-⛔ I **didn't went** shopping
-✅ I **went** shopping (Fui de compras)
-✅ I **didn't go** shopping (No fui de compras)
+**Didn't** solo se usa en oraciones negativas, no en afirmativas.
 </Aside>
 
 <Aside type="danger" title="Confundir was/were con verbos de acción">
-**Was/were** son solo para el verbo "to be":
+- I **was work** yesterday ⛔
+- I **worked** yesterday ✅
+- They **were study** all night ⛔
+- They **studied** all night ✅
 
-⛔ I **was work** yesterday
-✅ I **worked** yesterday (Trabajé ayer)
-
-⛔ They **were study** all night
-✅ They **studied** all night (Estudiaron toda la noche)
+**Was/were** son solo para el verbo "to be", no para verbos de acción.
 </Aside>
 
 ---
