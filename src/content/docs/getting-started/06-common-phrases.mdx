@@ -11,20 +11,6 @@ Las frases comunes son como las funciones utilitarias en programación: las usas
 
 ## Cortesía Básica
 
-Las palabras mágicas que funcionan en cualquier contexto:
-
-```javascript
-const politeness = {
-  request: "Please",           // Por favor
-  gratitude: "Thank you",      // Gracias
-  response: "You're welcome",  // De nada
-  apology: "Sorry",            // Lo siento
-  permission: "Excuse me"      // Disculpe / Perdón
-};
-```
-
-**Variaciones en contexto:**
-
 <Tabs>
   <TabItem label="Agradecer">
     ```javascript
@@ -269,6 +255,154 @@ makeRequest("send me the file", "formal");
     - **Can I speak to the manager?** (¿Puedo hablar con el gerente?)
   </Card>
 </CardGrid>
+
+---
+
+## Frases para el Aula de Clases
+
+Expresiones esenciales para el entorno educativo:
+
+<CardGrid>
+  <Card title="Pedir permiso">
+    - **May I go to the bathroom?** (¿Puedo ir al baño?)
+    - **Can I ask a question?** (¿Puedo hacer una pregunta?)
+    - **May I come in?** (¿Puedo entrar?)
+    - **Can I borrow a pen?** (¿Puedo pedir prestado un bolígrafo?)
+    - **Is it okay if I leave early?** (¿Está bien si me voy temprano?)
+  </Card>
+  
+  <Card title="Preguntas al profesor">
+    - **I don't understand** (No entiendo)
+    - **Can you explain that again?** (¿Puede explicar eso de nuevo?)
+    - **What does this word mean?** (¿Qué significa esta palabra?)
+    - **How do you spell that?** (¿Cómo se deletrea eso?)
+    - **Is this correct?** (¿Está correcto esto?)
+    - **When is the test?** (¿Cuándo es el examen?)
+  </Card>
+  
+  <Card title="Participar en clase">
+    - **I have a question** (Tengo una pregunta)
+    - **Can I try?** (¿Puedo intentarlo?)
+    - **I think the answer is...** (Creo que la respuesta es...)
+    - **I'm not sure, but...** (No estoy seguro, pero...)
+    - **Could you repeat the question?** (¿Podría repetir la pregunta?)
+  </Card>
+  
+  <Card title="Trabajo en grupo">
+    - **What page are we on?** (¿En qué página estamos?)
+    - **Do you understand this?** (¿Entiendes esto?)
+    - **Let's work together** (Trabajemos juntos)
+    - **Can you help me?** (¿Puedes ayudarme?)
+    - **I have an idea** (Tengo una idea)
+    - **What do you think?** (¿Qué piensas?)
+  </Card>
+</CardGrid>
+
+**Diálogos típicos del aula:**
+
+```javascript
+const classroomDialogue = {
+  askingPermission: {
+    student: "May I go to the bathroom?",
+    teacher: "Yes, go ahead" // Sí, adelante
+  },
+  
+  needingHelp: {
+    student: "I don't understand. Can you explain that again?",
+    teacher: "Of course. Let me repeat..." // Por supuesto. Déjame repetir...
+  },
+  
+  participating: {
+    teacher: "Does anyone know the answer?", // ¿Alguien sabe la respuesta?
+    student: "I think it's 42" // Creo que es 42
+  }
+};
+```
+
+<Aside type="tip" title="Vocabulario útil del aula">
+- **Homework:** Tarea  
+- **Assignment:** Trabajo/Asignación  
+- **Quiz:** Prueba corta  
+- **Test/Exam:** Examen  
+- **Grade:** Nota/Calificación  
+- **Due date:** Fecha de entrega  
+- **Textbook:** Libro de texto  
+- **Whiteboard:** Pizarra blanca  
+- **Handout:** Material impreso  
+</Aside>
+
+---
+
+## Frases para la Calle
+
+Situaciones comunes cuando te desplazas por la ciudad:
+
+<Tabs>
+  <TabItem label="Pedir direcciones">
+```javascript
+const askingDirections = {
+  polite: [
+    "Excuse me, where is...?",      // Disculpe, ¿dónde está...?
+    "How do I get to...?",           // ¿Cómo llego a...?
+    "Is this the way to...?",        // ¿Este es el camino a...?
+    "Could you show me on the map?"  // ¿Podría mostrarme en el mapa?
+  ],
+  
+  responses: [
+    "Go straight",           // Siga derecho
+    "Turn left/right",       // Gire a la izquierda/derecha
+    "It's on your left",     // Está a su izquierda
+    "It's two blocks away",  // Está a dos cuadras
+    "Take the subway"        // Tome el metro
+  ]
+};
+```
+
+  **Ejemplo de diálogo:**
+  - "Excuse me, how do I get to the train station?" (Disculpe, ¿cómo llego a la estación de tren?)
+  - "Go straight for two blocks, then turn right" (Siga derecho dos cuadras, luego gire a la derecha)
+  - "Thank you so much!" (¡Muchas gracias!)
+  </TabItem>
+  
+  <TabItem label="Transporte público">
+```javascript
+const publicTransport = {
+  questions: [
+    "Where is the bus stop?",        // ¿Dónde está la parada de autobús?
+    "How much is a ticket?",         // ¿Cuánto cuesta un boleto?
+    "Does this bus go to...?",       // ¿Este autobús va a...?
+    "What time does it leave?",      // ¿A qué hora sale?
+    "Which platform?"                // ¿Qué andén?
+  ],
+  
+  useful: [
+    "One ticket, please",     // Un boleto, por favor
+    "Can I get a map?",       // ¿Puedo obtener un mapa?
+    "Is this seat taken?",    // ¿Está ocupado este asiento?
+    "Next stop, please"       // Próxima parada, por favor
+  ]
+};
+```
+  </TabItem>
+  
+  <TabItem label="Interacciones breves">
+```javascript
+const streetInteractions = [
+  "Excuse me",                // Disculpe (para pasar)
+  "After you",                // Después de usted
+  "Watch out!",               // ¡Cuidado!
+  "Are you okay?",            // ¿Estás bien?
+  "I'm in a hurry",           // Tengo prisa
+  "Have a nice day"           // Que tenga un buen día
+];
+```
+
+  **Situaciones comunes:**
+  - Al chocar con alguien: "Sorry!" / "Excuse me!"
+  - Alguien te sostiene la puerta: "Thank you!" / "Thanks!"
+  - Ofrecer ayuda: "Do you need help?" (¿Necesitas ayuda?)
+  </TabItem>
+</Tabs>
 
 ---
 
