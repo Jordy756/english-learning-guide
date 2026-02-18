@@ -1,0 +1,278 @@
+---
+title: Formar Negativos
+description: Aprende a negar correctamente en inglés.
+---
+
+import { Tabs, TabItem, Aside } from '@astrojs/starlight/components';
+
+Formar negativos en inglés es como aplicar el operador `!` (NOT) en programación: necesitas el operador correcto en la posición correcta para invertir el valor. A diferencia del español donde simplemente añades "no" antes del verbo, en inglés necesitas **auxiliares específicos** según el tiempo verbal y el tipo de verbo.
+
+---
+
+## Negativas con el Verbo "To Be"
+
+El verbo **to be** es especial: no necesita auxiliares para formar negativos. Simplemente añades **not** después del verbo.
+
+```javascript
+const toBeNegative = {
+  present: {
+    "I am": "I am not / I'm not",
+    "You/We/They are": "are not / aren't",  
+    "He/She/It is": "is not / isn't"
+  },
+  past: {
+    "I/He/She/It was": "was not / wasn't",
+    "You/We/They were": "were not / weren't"
+  }
+};
+```
+
+**Ejemplos con Present Simple (to be)**
+
+- I **am not** tired (No estoy cansado)
+- She **isn't** at home (Ella no está en casa)
+- They **aren't** ready (Ellos no están listos)
+- We **aren't** busy today (No estamos ocupados hoy)
+
+**Ejemplos con Past Simple (to be)**
+
+- I **wasn't** there yesterday (No estuve ahí ayer)
+- He **wasn't** happy (Él no estaba feliz)
+- We **weren't** late (No llegamos tarde)
+- They **weren't** at the party (Ellos no estaban en la fiesta)
+
+<Aside type="note" title="Contracciones son comunes">
+En inglés hablado y escrito informal, se usan las contracciones: **isn't**, **aren't**, **wasn't**, **weren't**. Con "I am" solo existe **I'm not** (no existe "amn't").
+</Aside>
+
+---
+
+## Negativas con Otros Verbos
+
+Para todos los verbos excepto "to be", necesitas **auxiliares** para formar negativos: **do not / don't**, **does not / doesn't**, **did not / didn't**.
+
+<Tabs>
+  <TabItem label="Present Simple">
+    ```javascript
+    const presentNegative = {
+      structure: "Subject + do/does + not + verb",
+      "I/You/We/They": "don't + verb",
+      "He/She/It": "doesn't + verb",
+      important: "El verbo va en forma base"
+    };
+    ```
+
+    **Estructura:** Subject + **don't/doesn't** + verb (base form)
+
+    **Ejemplos**
+
+    - I **don't** like coffee (No me gusta el café)
+    - She **doesn't** speak French (Ella no habla francés)
+    - We **don't** live here (No vivimos aquí)
+    - He **doesn't** work on Sundays (Él no trabaja los domingos)
+    - They **don't** have a car (Ellos no tienen un carro)
+
+    <Aside type="caution" title="El verbo va en forma base">
+    Después de **don't/doesn't**, el verbo SIEMPRE va en forma base (sin -s, sin -es, sin -ed).
+    - She doesn't **works** ⛔
+    - She doesn't **work** ✅
+    </Aside>
+  </TabItem>
+
+  <TabItem label="Past Simple">
+    ```javascript
+    const pastNegative = {
+      structure: "Subject + did not + verb",
+      allSubjects: "didn't + verb (base form)",
+      important: "Mismo auxiliar para todos"
+    };
+    ```
+
+    **Estructura:** Subject + **didn't** + verb (base form)
+
+    **Ejemplos**
+
+    - I **didn't** go to work (No fui al trabajo)
+    - She **didn't** call me (Ella no me llamó)
+    - We **didn't** see the movie (No vimos la película)
+    - He **didn't** eat breakfast (Él no desayunó)
+    - They **didn't** understand (Ellos no entendieron)
+
+    <Aside type="caution" title="Usa la forma base del verbo">
+    Con **didn't**, el verbo va en forma base, NO en pasado.
+    - He didn't **went** ⛔
+    - He didn't **go** ✅
+    - She didn't **ate** ⛔
+    - She didn't **eat** ✅
+    </Aside>
+  </TabItem>
+
+  <TabItem label="Present Continuous">
+    ```javascript
+    const continuousNegative = {
+      structure: "Subject + am/is/are + not + verb-ing",
+      rule: "To be + not + gerundio"
+    };
+    ```
+
+    **Estructura:** Subject + **am/is/are + not** + verb-ing
+
+    **Ejemplos**
+
+    - I'**m not working** right now (No estoy trabajando ahora)
+    - She **isn't listening** (Ella no está escuchando)
+    - We **aren't studying** today (No estamos estudiando hoy)
+    - They **aren't coming** to the party (Ellos no van a venir a la fiesta)
+
+    <Aside type="note" title="No uses don't con el continuo">
+    En Present Continuous, niegas el verbo "to be", no uses do/don't.
+    </Aside>
+  </TabItem>
+
+  <TabItem label="Future (will)">
+    ```javascript
+    const futureNegative = {
+      structure: "Subject + will not + verb",
+      contraction: "won't",
+      allSubjects: "Mismo auxiliar para todos"
+    };
+    ```
+
+    **Estructura:** Subject + **will not / won't** + verb (base form)
+
+    **Ejemplos**
+
+    - I **won't** go tomorrow (No iré mañana)
+    - She **won't** help us (Ella no nos ayudará)
+    - We **won't** be late (No llegaremos tarde)
+    - They **won't** forget (Ellos no olvidarán)
+
+    <Aside type="tip" title="Won't es la contracción de will not">
+    **Won't** es una contracción irregular que se usa comúnmente en lugar de "will not".
+    </Aside>
+  </TabItem>
+</Tabs>
+
+---
+
+## Negativas con "There is/are"
+
+Para negar "there is/are", simplemente añades **not** después del verbo to be.
+
+```javascript
+const thereNegative = {
+  singular: "There is not / There isn't",
+  plural: "There are not / There aren't",
+  past: {
+    singular: "There was not / wasn't",
+    plural: "There were not / weren't"
+  }
+};
+```
+
+**Ejemplos Presente**
+
+- **There isn't** a bank here (No hay un banco aquí)
+- **There isn't** any milk (No hay leche)
+- **There aren't** many people (No hay mucha gente)
+- **There aren't** any problems (No hay ningún problema)
+
+**Ejemplos Pasado**
+
+- **There wasn't** a meeting yesterday (No hubo una reunión ayer)
+- **There weren't** many students (No había muchos estudiantes)
+
+<Aside type="tip" title="Any en negativas">
+En oraciones negativas, se usa **any** en lugar de **some**. "There isn't **any** coffee" (No hay café).
+</Aside>
+
+---
+
+## La Importancia de los Auxiliares
+
+En inglés, **no puedes negar un verbo directamente** como en español. Necesitas el auxiliar correcto:
+
+| Tiempo Verbal | Auxiliar Negativo | Ejemplo |
+|---------------|------------------|---------|
+| Present Simple | don't / doesn't | I **don't** know |
+| Past Simple | didn't | She **didn't** come |
+| Present Continuous | am/is/are not | We **aren't** working |
+| Will Future | won't / will not | They **won't** go |
+| Present Perfect | haven't / hasn't | I **haven't** seen it |
+
+**Regla fundamental:** El auxiliar lleva la información del tiempo verbal, el verbo principal va en forma base.
+
+<Aside type="caution" title="El verbo principal no cambia">
+Cuando usas un auxiliar negativo, el verbo principal SIEMPRE queda en forma base (infinitivo sin "to").
+- She doesn't **likes** ⛔
+- She doesn't **like** ✅
+- They didn't **played** ⛔
+- They didn't **play** ✅
+</Aside>
+
+---
+
+## Errores comunes
+
+<Aside type="danger" title="Usar 'no' directamente antes del verbo">
+En español se dice "Yo **no** trabajo", pero en inglés no puedes copiar esta estructura.
+
+- I **no** work ⛔
+- I **don't** work ✅
+- She **no** likes pizza ⛔
+- She **doesn't** like pizza ✅
+
+El inglés requiere el auxiliar correspondiente (don't/doesn't/didn't).
+</Aside>
+
+<Aside type="danger" title="Usar auxiliar con el verbo to be">
+El verbo **to be** no necesita auxiliares (do/does/did) para formar negativos.
+
+- She **doesn't is** happy ⛔
+- She **isn't** happy ✅
+- They **don't are** here ⛔
+- They **aren't** here ✅
+- I **didn't was** there ⛔
+- I **wasn't** there ✅
+</Aside>
+
+<Aside type="danger" title="No cambiar el verbo a forma base">
+Después de don't/doesn't/didn't, el verbo debe estar en forma base.
+
+- He **doesn't likes** it ⛔ (verbo con -s)
+- He **doesn't like** it ✅
+- She **didn't went** home ⛔ (verbo en pasado)
+- She **didn't go** home ✅
+- I **don't working** today ⛔ (gerundio incorrecto)
+- I'm **not working** today ✅
+</Aside>
+
+<Aside type="danger" title="Confundir don't con doesn't">
+**Don't** se usa con I/you/we/they. **Doesn't** se usa con he/she/it.
+
+- She **don't** like it ⛔
+- She **doesn't** like it ✅
+- He **don't** work here ⛔
+- He **doesn't** work here ✅
+</Aside>
+
+<Aside type="danger" title="Doble negación">
+En inglés estándar, no se usan dos negativos en la misma oración.
+
+- I **don't** have **nothing** ⛔
+- I **don't** have **anything** ✅
+- She **doesn't** know **nobody** ⛔
+- She **doesn't** know **anybody** ✅
+</Aside>
+
+---
+
+## Práctica
+
+<Aside type="tip" title="Ejercicio diario">
+- Convierte 10 oraciones afirmativas en negativas usando diferentes tiempos verbales
+- Practica contracciones: escribe la forma completa y contraída (do not → don't)
+- Identifica errores: busca oraciones incorrectas y corrígelas
+- Describe tu día usando solo oraciones negativas: "I didn't wake up late, I didn't skip breakfast..."
+- Compara oraciones en español e inglés para entender las diferencias estructurales
+</Aside>
