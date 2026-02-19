@@ -24,51 +24,126 @@ export default defineConfig({
       },
       sidebar: [
         {
-          label: "Primeros Pasos",
-          autogenerate: { directory: "getting-started" },
+          label: "A1 - Principiante",
+          items: [
+            {
+              label: "Fundamentos",
+              autogenerate: { directory: "a1/01-basics" },
+            },
+            {
+              label: "Gramática",
+              collapsed: true,
+              autogenerate: { directory: "a1/02-grammar" },
+            },
+            {
+              label: "Habilidades",
+              collapsed: true,
+              autogenerate: { directory: "a1/03-skills" },
+            },
+          ],
         },
         {
-          label: "Gramática Básica",
+          label: "A2 - Elemental",
           collapsed: true,
-          autogenerate: { directory: "grammar-basics" },
+          items: [
+            {
+              label: "Fundamentos",
+              collapsed: true,
+              autogenerate: { directory: "a2/01-basics" },
+            },
+            {
+              label: "Gramática",
+              collapsed: true,
+              autogenerate: { directory: "a2/02-grammar" },
+            },
+            {
+              label: "Habilidades",
+              collapsed: true,
+              autogenerate: { directory: "a2/03-skills" },
+            },
+          ],
         },
         {
-          label: "Verbos",
+          label: "B1 - Intermedio",
           collapsed: true,
-          autogenerate: { directory: "verbs" },
+          items: [
+            {
+              label: "Fundamentos",
+              collapsed: true,
+              autogenerate: { directory: "b1/01-basics" },
+            },
+            {
+              label: "Gramática",
+              collapsed: true,
+              autogenerate: { directory: "b1/02-grammar" },
+            },
+            {
+              label: "Habilidades",
+              collapsed: true,
+              autogenerate: { directory: "b1/03-skills" },
+            },
+          ],
         },
         {
-          label: "Estructura de Oraciones",
+          label: "B2 - Intermedio Alto",
           collapsed: true,
-          autogenerate: { directory: "sentence-structure" },
+          items: [
+            {
+              label: "Fundamentos",
+              collapsed: true,
+              autogenerate: { directory: "b2/01-basics" },
+            },
+            {
+              label: "Gramática",
+              collapsed: true,
+              autogenerate: { directory: "b2/02-grammar" },
+            },
+            {
+              label: "Habilidades",
+              collapsed: true,
+              autogenerate: { directory: "b2/03-skills" },
+            },
+          ],
         },
         {
-          label: "Partes de la Oración",
+          label: "C1 - Avanzado",
           collapsed: true,
-          autogenerate: { directory: "parts-of-speech" },
+          items: [
+            {
+              label: "Fundamentos",
+              collapsed: true,
+              autogenerate: { directory: "c1/01-basics" },
+            },
+            {
+              label: "Gramática",
+              collapsed: true,
+              autogenerate: { directory: "c1/02-grammar" },
+            },
+            {
+              label: "Habilidades",
+              collapsed: true,
+              autogenerate: { directory: "c1/03-skills" },
+            },
+          ],
         },
         {
-          label: "Preposiciones",
+          label: "C2 - Maestría",
           collapsed: true,
-          autogenerate: { directory: "prepositions" },
+          items: [
+            {
+              label: "Gramática",
+              collapsed: true,
+              autogenerate: { directory: "c2/02-grammar" },
+            },
+            {
+              label: "Habilidades",
+              collapsed: true,
+              autogenerate: { directory: "c2/03-skills" },
+            },
+          ],
         },
         {
-          label: "Vocabulario",
-          collapsed: true,
-          autogenerate: { directory: "vocabulary" },
-        },
-        {
-          label: "Pronunciación",
-          collapsed: true,
-          autogenerate: { directory: "pronunciation" },
-        },
-        {
-          label: "Escritura",
-          collapsed: true,
-          autogenerate: { directory: "writing" },
-        },
-        {
-          label: "Referencia Rápida",
+          label: "Referencia",
           autogenerate: { directory: "reference" },
         },
       ],
