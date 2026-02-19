@@ -3,3 +3,409 @@ title: Verbo Have
 description: Aprende todos los usos del verbo have.
 ---
 
+import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
+
+El verbo **have** es como una función sobrecargada en programación: el mismo nombre, pero con múltiples comportamientos según el contexto. Puede funcionar como verbo principal para expresar posesión y experiencias, o como auxiliar para formar tiempos perfectos. Dominar sus usos es fundamental para comunicarte con precisión en inglés.
+
+---
+
+## Conjugación del Verbo Have
+
+<Tabs>
+  <TabItem label="Presente">
+    ```javascript
+    const havePresent = {
+      I: "have",         // yo tengo
+      you: "have",       // tú tienes
+      he: "has",         // él tiene
+      she: "has",        // ella tiene
+      it: "has",         // eso/ello tiene
+      we: "have",        // nosotros tenemos
+      they: "have"       // ellos tienen
+    };
+    ```
+
+    **Ejemplos:**
+    - I **have** a car (Tengo un carro)
+    - You **have** time (Tienes tiempo)
+    - He **has** two brothers (Él tiene dos hermanos)
+    - She **has** brown eyes (Ella tiene ojos cafés)
+    - It **has** three bedrooms (Tiene tres habitaciones)
+    - We **have** a meeting (Tenemos una reunión)
+    - They **have** a problem (Ellos tienen un problema)
+
+    <Aside type="tip" title="Regla simple para el presente">
+    **Regla:** Usa **have** con "I/you/we/they", y **has** con "he/she/it".
+    </Aside>
+  </TabItem>
+
+  <TabItem label="Pasado">
+    ```javascript
+    const havePast = {
+      I: "had",          // yo tenía/tuve
+      you: "had",        // tú tenías/tuviste
+      he: "had",         // él tenía/tuvo
+      she: "had",        // ella tenía/tuvo
+      it: "had",         // tenía/tuvo
+      we: "had",         // nosotros teníamos/tuvimos
+      they: "had"        // ellos tenían/tuvieron
+    };
+    ```
+
+    **Ejemplos:**
+    - I **had** a car (Tenía/Tuve un carro)
+    - You **had** time (Tenías/Tuviste tiempo)
+    - He **had** two brothers (Él tenía dos hermanos)
+    - She **had** long hair (Ella tenía pelo largo)
+    - It **had** problems (Tenía problemas)
+    - We **had** dinner together (Cenamos juntos)
+    - They **had** a meeting (Ellos tuvieron una reunión)
+
+    <Aside type="tip" title="Regla simple para el pasado">
+    **Regla:** Usa **had** con todos los sujetos. No hay variaciones en pasado.
+    </Aside>
+  </TabItem>
+</Tabs>
+
+---
+
+## Estructura del Verbo Have
+
+El verbo have sigue patrones específicos dependiendo de si la oración es afirmativa (declarar algo), negativa (negar algo) o interrogativa (hacer una pregunta). A diferencia del verbo to be, have utiliza los auxiliares do/does/did para formar negaciones y preguntas. A continuación veremos cómo funciona en presente y pasado.
+
+### Presente
+
+En presente, las estructuras con have requieren el uso de do/does para negaciones y preguntas. Es importante recordar que cuando usas does (con he/she/it), el verbo have vuelve a su forma base.
+
+<Tabs>
+  <TabItem label="Afirmativa">
+    ```javascript
+    const affirmative = {
+      structure: "Subject + have/has + object",
+      examples: [
+        "I have a car",            // Tengo un carro
+        "You have time",           // Tienes tiempo
+        "He has a dog",            // Él tiene un perro
+        "She has two cats",        // Ella tiene dos gatos
+        "It has a garden",         // Tiene un jardín
+        "We have a plan",          // Tenemos un plan
+        "They have questions"      // Ellos tienen preguntas
+      ]
+    };
+    ```
+  </TabItem>
+  
+  <TabItem label="Negativa">
+    ```javascript
+    const negative = {
+      structure: "Subject + do/does + not + have + object",
+      examples: [
+        "I do not have time",           // No tengo tiempo
+        "You do not have a car",        // No tienes un carro
+        "He does not have money",       // Él no tiene dinero
+        "She does not have a job",      // Ella no tiene un trabajo
+        "It does not have a name",      // No tiene un nombre
+        "We do not have a choice",      // No tenemos opción
+        "They do not have experience"   // No tienen experiencia
+      ]
+    };
+    ```
+    
+    Para negar, usa **do not** (I/you/we/they) o **does not** (he/she/it) + **have**.
+  </TabItem>
+  
+  <TabItem label="Pregunta">
+    ```javascript
+    const question = {
+      structure: "Do/Does + subject + have + object + ?",
+      examples: [
+        "Do I have time?",              // ¿Tengo tiempo?
+        "Do you have a pen?",           // ¿Tienes un bolígrafo?
+        "Does he have a car?",          // ¿Él tiene un carro?
+        "Does she have siblings?",      // ¿Ella tiene hermanos?
+        "Does it have Wi-Fi?",          // ¿Tiene Wi-Fi?
+        "Do we have a meeting?",        // ¿Tenemos una reunión?
+        "Do they have questions?"       // ¿Tienen preguntas?
+      ]
+    };
+    ```
+    
+    Para preguntar, usa **do** (I/you/we/they) o **does** (he/she/it) al inicio + sujeto + **have**.
+
+    **Respuestas cortas:**
+    - **Do** you have a car? → Yes, I **do** / No, I **do not**
+    - **Does** she have pets? → Yes, she **does** / No, she **does not**
+    - **Do** they have time? → Yes, they **do** / No, they **do not**
+  </TabItem>
+</Tabs>
+
+---
+
+### Pasado
+
+Las estructuras en pasado funcionan de manera similar al presente, pero usando did para negaciones y preguntas. El verbo have se convierte en had en afirmativas, pero regresa a have cuando usas did.
+
+<Tabs>
+  <TabItem label="Afirmativa">
+    ```javascript
+    const pastAffirmative = {
+      structure: "Subject + had + object",
+      examples: [
+        "I had a car",                  // Tenía/Tuve un carro
+        "You had time",                 // Tenías/Tuviste tiempo
+        "He had a dog",                 // Él tenía un perro
+        "She had a meeting",            // Ella tuvo una reunión
+        "It had problems",              // Tenía problemas
+        "We had dinner together",       // Cenamos juntos
+        "They had a great time"         // La pasaron bien
+      ]
+    };
+    ```
+  </TabItem>
+
+  <TabItem label="Negativa">
+    ```javascript
+    const pastNegative = {
+      structure: "Subject + did + not + have + object",
+      examples: [
+        "I did not have time",           // No tenía tiempo
+        "You did not have a choice",     // No tenías opción
+        "He did not have money",         // Él no tenía dinero
+        "She did not have a car",        // Ella no tenía un carro
+        "It did not have a solution",    // No tenía solución
+        "We did not have plans",         // No teníamos planes
+        "They did not have experience"   // No tenían experiencia
+      ]
+    };
+    ```
+
+    Para negar en pasado, usa **did not** + **have** con todos los sujetos.
+  </TabItem>
+
+  <TabItem label="Pregunta">
+    ```javascript
+    const pastQuestion = {
+      structure: "Did + subject + have + object + ?",
+      examples: [
+        "Did I have time?",              // ¿Tenía tiempo?
+        "Did you have fun?",             // ¿Te divertiste?
+        "Did he have a car?",            // ¿Él tenía un carro?
+        "Did she have dinner?",          // ¿Ella cenó?
+        "Did it have a warranty?",       // ¿Tenía garantía?
+        "Did we have homework?",         // ¿Teníamos tarea?
+        "Did they have problems?"        // ¿Tuvieron problemas?
+      ]
+    };
+    ```
+
+    Para preguntar en pasado, usa **did** al inicio + sujeto + **have** con todos los sujetos.
+
+    **Respuestas cortas:**
+    - **Did** you have a car? → Yes, I **did** / No, I **did not**
+    - **Did** she have time? → Yes, she **did** / No, she **did not**
+    - **Did** they have fun? → Yes, they **did** / No, they **did not**
+  </TabItem>
+</Tabs>
+
+**Ejemplos en contexto:**
+
+- I **had** a great time at the party (La pasé muy bien en la fiesta)
+- We **did not have** any problems (No tuvimos ningún problema)
+- **Did** you **have** breakfast this morning? (¿Desayunaste esta mañana?)
+- She **has** three children (Ella tiene tres hijos)
+- They **do not have** a car (Ellos no tienen un carro)
+
+---
+
+## Have como Verbo Principal
+
+Cuando **have** es el verbo principal, expresa posesión, relaciones, características o experiencias.
+
+### Posesión
+
+```javascript
+const possession = {
+  physical: "Objetos físicos que posees",
+  abstract: "Conceptos abstractos",
+  examples: [
+    "have a car", "have money",
+    "have time", "have a problem"
+  ]
+};
+```
+
+**Ejemplos**
+
+- I **have** a car (Tengo un carro)
+- She **has** two brothers (Ella tiene dos hermanos)
+- We **have** a meeting tomorrow (Tenemos una reunión mañana)
+- They **do not have** much time (No tienen mucho tiempo)
+- Do you **have** any questions? (¿Tienes alguna pregunta?)
+
+### Características y Estados
+
+**Ejemplos**
+
+- He **has** brown eyes (Él tiene ojos cafés)
+- She **has** long hair (Ella tiene pelo largo)
+- The house **has** three bedrooms (La casa tiene tres habitaciones)
+- I **have** a headache (Tengo dolor de cabeza)
+- Do you **have** a cold? (¿Tienes un resfriado?)
+
+---
+
+## Expresiones Comunes con Have
+
+El verbo **have** se combina con sustantivos para crear expresiones que indican actividades. En español, a menudo se traducen con verbos diferentes.
+
+<Tabs>
+  <TabItem label="Comidas">
+    ```javascript
+    const meals = [
+      "have breakfast",  // desayunar
+      "have lunch",      // almorzar
+      "have dinner",     // cenar
+      "have a snack"     // comer un snack
+    ];
+    ```
+
+    **Ejemplos**
+
+    - I **have breakfast** at 7 AM (Desayuno a las 7 AM)
+    - She **has lunch** with her friends (Ella almuerza con sus amigas)
+    - We **have dinner** together (Cenamos juntos)
+    - Did you **have** a snack? (¿Comiste un snack?)
+  </TabItem>
+
+  <TabItem label="Higiene">
+    ```javascript
+    const hygiene = [
+      "have a shower",   // ducharse
+      "have a bath",     // bañarse
+      "have a shave",    // afeitarse
+      "have a wash"      // lavarse
+    ];
+    ```
+
+    **Ejemplos**
+
+    - I **have a shower** every morning (Me ducho cada mañana)
+    - He **has a bath** before bed (Él se baña antes de dormir)
+    - Do you **have** a shower in the morning? (¿Te duchas en la mañana?)
+  </TabItem>
+
+  <TabItem label="Actividades">
+    ```javascript
+    const activities = [
+      "have fun",        // divertirse
+      "have a party",    // hacer una fiesta
+      "have a meeting",  // tener una reunión
+      "have a rest",     // descansar
+      "have a walk"      // dar un paseo
+    ];
+    ```
+
+    **Ejemplos**
+
+    - **Have fun** at the party! (¡Diviértete en la fiesta!)
+    - We are **having a meeting** now (Estamos teniendo una reunión ahora)
+    - She **had a rest** after work (Ella descansó después del trabajo)
+    - Let us **have a walk** in the park (Demos un paseo en el parque)
+  </TabItem>
+
+  <TabItem label="Conversaciones">
+    ```javascript
+    const communication = [
+      "have a conversation", // conversar
+      "have a chat",         // charlar
+      "have an argument",    // discutir
+      "have a word"          // hablar brevemente
+    ];
+    ```
+
+    **Ejemplos**
+
+    - Can we **have a chat**? (¿Podemos charlar?)
+    - They **had an argument** yesterday (Discutieron ayer)
+    - I need to **have a word** with you (Necesito hablar contigo)
+  </TabItem>
+
+  <TabItem label="Experiencias">
+    ```javascript
+    const experiences = [
+      "have a good time",     // pasarla bien
+      "have a bad day",       // tener un mal día
+      "have trouble",         // tener problemas
+      "have difficulty",      // tener dificultad
+      "have an accident"      // tener un accidente
+    ];
+    ```
+
+    **Ejemplos**
+
+    - I **had a good time** at the concert (La pasé bien en el concierto)
+    - She is **having a bad day** (Ella está teniendo un mal día)
+    - Did you **have trouble** finding it? (¿Tuviste problemas encontrándolo?)
+    - He **had an accident** last week (Él tuvo un accidente la semana pasada)
+  </TabItem>
+</Tabs>
+
+<Aside type="tip" title="Have + sustantivo = acción">
+Muchas expresiones con **have** + sustantivo reemplazan verbos en español: **have dinner** (cenar), **have a shower** (ducharse), **have fun** (divertirse).
+</Aside>
+
+---
+
+## Errores comunes
+
+<Aside type="danger" title="Olvidar la -s en tercera persona">
+Con **he/she/it**, el verbo **have** se convierte en **has** en presente.
+
+- She **have** a car ⛔
+- She **has** a car ✅
+- He **have** two dogs ⛔
+- He **has** two dogs ✅
+</Aside>
+
+<Aside type="danger" title="Usar have para edad">
+En español dices "tengo 25 años", pero en inglés se usa el verbo **to be**.
+
+- I **have** 25 years ⛔
+- I **am** 25 years old ✅
+- She **has** 30 years ⛔
+- She **is** 30 years old ✅
+</Aside>
+
+<Aside type="danger" title="Traducir literalmente estados físicos">
+Estados como hambre, sed, frío, calor se expresan con **to be** + adjetivo, no con **have**.
+
+- I **have** hunger ⛔
+- I **am** hungry ✅
+- We **have** thirst ⛔
+- We **are** thirsty ✅
+- He **has** cold ⛔
+- He **is** cold ✅
+</Aside>
+
+<Aside type="danger" title="No usar do/does en preguntas y negaciones">
+El verbo **have** como verbo principal necesita los auxiliares do/does/did para formar preguntas y negaciones.
+
+- **Have** you a car? ⛔
+- **Do** you **have** a car? ✅
+- I **have not** time ⛔
+- I **do not have** time ✅
+- **Has** she a dog? ⛔
+- **Does** she **have** a dog? ✅
+</Aside>
+
+---
+
+## Práctica
+
+<Aside type="tip" title="Ejercicio diario">
+- Describe lo que tienes en tu casa usando have: I have a laptop, I have three chairs
+- Practica expresiones con have: escribe tu rutina usando have breakfast, have a shower, have fun
+- Convierte oraciones con tener en español a inglés: identifica si es have, to be, u otro verbo
+- Forma preguntas y negaciones con have en presente y pasado usando do/does/did
+- Compara el uso de have en español y en inglés para evitar traducciones literales
+</Aside>
