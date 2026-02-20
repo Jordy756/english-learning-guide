@@ -3,3 +3,318 @@ title: Adjetivos
 description: Describe personas, lugares y cosas.
 ---
 
+import { Tabs, TabItem, Aside } from '@astrojs/starlight/components';
+
+Los **adjetivos** son palabras que describen o modifican sustantivos. Son como propiedades de un objeto en JavaScript: agregan información específica sobre características, cualidades o estados. En inglés, los adjetivos tienen reglas de posición y orden muy claras que debes dominar para describir personas, lugares y cosas correctamente.
+
+---
+
+## Posición de Adjetivos
+
+Los adjetivos en inglés tienen dos posiciones principales según el contexto de la oración.
+
+<Tabs>
+  <TabItem label="Antes del Sustantivo">
+
+Los adjetivos van **antes** del sustantivo cuando lo describes directamente. Esta es su posición más común.
+
+```javascript
+const descriptions = {
+  size: "a big house",        // una casa grande
+  color: "the blue car",      // el carro azul
+  age: "an old book",         // un libro viejo
+  opinion: "a beautiful day"  // un día hermoso
+};
+```
+
+**Ejemplos:**
+
+- I have a **red** bike (Tengo una bicicleta roja)
+- She lives in a **small** apartment (Ella vive en un apartamento pequeño)
+- They own a **modern** restaurant (Tienen un restaurante moderno)
+- We visited an **interesting** museum (Visitamos un museo interesante)
+- He drives a **fast** car (Él maneja un carro rápido)
+
+</TabItem>
+
+  <TabItem label="Después del Verbo To Be">
+
+Los adjetivos van **después** del verbo to be (am, is, are, was, were) cuando hablas sobre el estado o característica del sujeto.
+
+```javascript
+const states = {
+  subject: "The house",
+  verb: "is",
+  adjective: "big"
+  // Resultado: "The house is big" (La casa es grande)
+};
+```
+
+**Ejemplos:**
+
+- The weather **is cold** (El clima está frío)
+- My sister **is tall** (Mi hermana es alta)
+- These exercises **are easy** (Estos ejercicios son fáciles)
+- The movie **was boring** (La película fue aburrida)
+- Your room **is clean** (Tu habitación está limpia)
+
+</TabItem>
+</Tabs>
+
+<Aside type="note" title="Los adjetivos no cambian con plural">
+A diferencia del español, los adjetivos en inglés **nunca** cambian su forma. Usa la misma forma para singular y plural: "a big house" y "big houses".
+</Aside>
+
+---
+
+## Categorías Comunes de Adjetivos
+
+Los adjetivos se agrupan en categorías según qué aspecto describen. Conocer estas categorías te ayuda a construir descripciones más ricas y variadas.
+
+<Tabs>
+  <TabItem label="Tamaño">
+
+Describen qué tan grande o pequeño es algo.
+
+```javascript
+const size = {
+  large: ["big", "large", "huge", "enormous"],
+  // grande: [grande, enorme, gigantesco]
+  
+  small: ["small", "little", "tiny", "mini"],
+  // pequeño: [pequeño, diminuto, mini]
+};
+```
+
+- The elephant is **big** (El elefante es grande)
+- She has a **tiny** apartment (Ella tiene un apartamento diminuto)
+- We need a **large** table (Necesitamos una mesa grande)
+- He caught a **small** fish (Él pescó un pez pequeño)
+
+</TabItem>
+
+  <TabItem label="Color">
+
+Describen el color de algo.
+
+```javascript
+const colors = {
+  basic: ["red", "blue", "green", "yellow"],
+  // básicos: [rojo, azul, verde, amarillo]
+
+  dark: ["black", "brown", "gray", "purple"],
+  // oscuros: [negro, marrón, gris, morado]
+
+  light: ["white", "pink", "orange"]
+  // claros: [blanco, rosa, naranja]
+};
+```
+
+- I like your **blue** shirt (Me gusta tu camisa azul)
+- The walls are **white** (Las paredes son blancas)
+- She has **brown** eyes (Ella tiene ojos marrones)
+- They painted the door **red** (Pintaron la puerta de rojo)
+
+</TabItem>
+
+  <TabItem label="Edad">
+
+Describen qué tan viejo o nuevo es algo.
+
+```javascript
+const age = {
+  old: ["old", "ancient", "antique"],
+  // viejo: [viejo, antiguo, antiguo]
+
+  new: ["new", "modern", "recent", "young"]
+  // nuevo: [nuevo, moderno, reciente, joven]
+};
+```
+
+- This is an **old** building (Este es un edificio viejo)
+- She bought a **new** phone (Ella compró un teléfono nuevo)
+- They live in a **modern** house (Viven en una casa moderna)
+- He's a **young** teacher (Él es un profesor joven)
+
+</TabItem>
+
+  <TabItem label="Forma">
+
+Describen la forma física de algo.
+
+```javascript
+const shape = {
+  forms: ["round", "square", "flat", "curved"],
+  // formas: [redondo, cuadrado, plano, curvo]
+
+  thickness: ["thin", "thick", "wide", "narrow"]
+  // grosor: [delgado, grueso, ancho, angosto]
+};
+```
+
+- The Earth is **round** (La Tierra es redonda)
+- I need a **square** box (Necesito una caja cuadrada)
+- She has a **thin** notebook (Ella tiene un cuaderno delgado)
+- They crossed a **narrow** bridge (Cruzaron un puente angosto)
+
+</TabItem>
+
+  <TabItem label="Opinión">
+
+Expresan tu juicio personal sobre algo.
+
+```javascript
+const opinion = {
+  positive: ["beautiful", "nice", "good", "great"],
+  // positivos: [hermoso, agradable, bueno, genial]
+
+  negative: ["ugly", "bad", "terrible", "awful"],
+  // negativos: [feo, malo, terrible, horrible]
+
+  neutral: ["interesting", "strange", "different"]
+  // neutrales: [interesante, extraño, diferente]
+};
+```
+
+- What a **beautiful** sunset (Qué atardecer hermoso)
+- This is a **terrible** idea (Esta es una idea terrible)
+- She's a **nice** person (Ella es una persona agradable)
+- That's an **interesting** story (Esa es una historia interesante)
+
+</TabItem>
+</Tabs>
+
+---
+
+## Adjetivos Opuestos
+
+Los adjetivos opuestos te permiten describir contrastes. Aprender pares de opuestos amplía tu vocabulario y te ayuda a expresar diferencias claramente.
+
+<Tabs>
+  <TabItem label="Tamaño y Dimensiones">
+
+```javascript
+const sizeOpposites = {
+  big: "small",           // grande / pequeño
+  large: "tiny",          // grande / diminuto
+  tall: "short",          // alto / bajo
+  long: "short",          // largo / corto
+  wide: "narrow",         // ancho / angosto
+  thick: "thin"           // grueso / delgado
+};
+```
+
+- The building is **tall**, not **short** (El edificio es alto, no bajo)
+- I need a **long** rope, not a **short** one (Necesito una cuerda larga, no una corta)
+- This street is **wide**, that one is **narrow** (Esta calle es ancha, esa es angosta)
+
+</TabItem>
+
+  <TabItem label="Temperatura y Sensaciones">
+
+```javascript
+const temperatureOpposites = {
+  hot: "cold",            // caliente / frío
+  warm: "cool",           // cálido / fresco
+  wet: "dry",             // mojado / seco
+  hard: "soft",           // duro / suave
+  heavy: "light"          // pesado / ligero
+};
+```
+
+- The coffee is **hot**, the juice is **cold** (El café está caliente, el jugo está frío)
+- This pillow is **soft**, that one is **hard** (Esta almohada es suave, esa es dura)
+- The box is **heavy**, the bag is **light** (La caja es pesada, la bolsa es ligera)
+
+</TabItem>
+
+  <TabItem label="Edad y Condición">
+
+```javascript
+const conditionOpposites = {
+  new: "old",             // nuevo / viejo
+  modern: "ancient",      // moderno / antiguo
+  young: "old",           // joven / viejo
+  clean: "dirty",         // limpio / sucio
+  fresh: "stale"          // fresco / pasado
+};
+```
+
+- My phone is **new**, yours is **old** (Mi teléfono es nuevo, el tuyo es viejo)
+- Keep your room **clean**, not **dirty** (Mantén tu habitación limpia, no sucia)
+- The bread is **fresh**, not **stale** (El pan está fresco, no pasado)
+
+</TabItem>
+
+  <TabItem label="Calidad y Velocidad">
+
+```javascript
+const qualityOpposites = {
+  good: "bad",            // bueno / malo
+  beautiful: "ugly",      // hermoso / feo
+  easy: "difficult",      // fácil / difícil
+  fast: "slow",           // rápido / lento
+  cheap: "expensive",     // barato / caro
+  full: "empty"           // lleno / vacío
+};
+```
+
+- This test is **easy**, that one is **difficult** (Este examen es fácil, ese es difícil)
+- The car is **fast**, the truck is **slow** (El carro es rápido, el camión es lento)
+- The hotel is **cheap**, not **expensive** (El hotel es barato, no caro)
+
+</TabItem>
+</Tabs>
+
+---
+
+## Errores Comunes
+
+<Aside type="danger" title="Poner el adjetivo después del sustantivo">
+- A house **big** ⛔
+- A **big** house (Una casa grande) ✅
+- The car **red** ⛔
+- The **red** car (El carro rojo) ✅
+
+Los adjetivos siempre van **antes** del sustantivo cuando lo describes directamente.
+</Aside>
+
+<Aside type="danger" title="Cambiar el adjetivo a plural">
+- Two **bigs** houses ⛔
+- Two **big** houses (Dos casas grandes) ✅
+- Three **reds** cars ⛔
+- Three **red** cars (Tres carros rojos) ✅
+
+Los adjetivos **nunca** cambian su forma. Usa la misma forma para singular y plural.
+</Aside>
+
+<Aside type="danger" title="Confundir la posición con el verbo to be">
+- The house **big is** ⛔
+- The house **is big** (La casa es grande) ✅
+- My car **red is** ⛔
+- My car **is red** (Mi carro es rojo) ✅
+
+Con el verbo to be, el adjetivo va **después** del verbo, no entre el sustantivo y el verbo.
+</Aside>
+
+<Aside type="danger" title="Usar adjetivos de tamaño con personas incorrectamente">
+- She is **big** ⛔
+- She is **tall** (Ella es alta) ✅
+- He is **small** ⛔
+- He is **short** (Él es bajo) ✅
+
+Para personas usa **tall/short** (altura). **Big/small** generalmente suena poco respetuoso al describir personas adultas.
+</Aside>
+
+---
+
+## Práctica
+
+<Aside type="tip" title="Ejercicio diario">
+- Describe tu habitación usando 5 adjetivos diferentes (tamaño, color, edad, opinión)
+- Escribe 10 pares de oraciones usando adjetivos opuestos para comparar dos objetos
+- Mira una foto y describe lo que ves usando el orden correcto: opinión, tamaño, color
+- Crea listas de 5 adjetivos por categoría y úsalos en oraciones completas
+- Practica describir a una persona (apariencia física, personalidad, ropa) usando solo adjetivos apropiados
+- Lee descripciones en inglés e identifica la posición de cada adjetivo (antes del sustantivo o después de to be)
+</Aside>
