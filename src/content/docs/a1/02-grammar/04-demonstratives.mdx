@@ -9,20 +9,20 @@ Los **demostrativos** (demonstratives) son palabras que usas para señalar perso
 
 ---
 
-## This y That (Singular)
+## Singular y Plural
 
-Usa **this** para algo **cerca** y **that** para algo **lejos**. Ambos son singulares.
+Los demostrativos cambian según si hablas de **uno** (singular) o **varios** (plural), y también según la **distancia**.
 
 <Tabs>
-<TabItem label="This (cerca)">
+<TabItem label="Singular">
 
-**This** = este, esta, esto (cerca de ti)
+Usa **this** (cerca) y **that** (lejos) para hablar de **una sola** cosa.
 
 ```javascript
-const nearObject = {
-  word: "this",              // this: este/esta/esto
-  distance: "near you",      // distancia: cerca de ti
-};
+const singular = [
+  { word: "this", distance: "cerca de ti" },  // this: este/esta/esto
+  { word: "that", distance: "lejos de ti" }   // that: ese/esa/eso
+];
 ```
 
 **Ejemplos:**
@@ -30,46 +30,22 @@ const nearObject = {
 - **This** is my phone (Este es mi teléfono) *[señalando tu teléfono]*
 - **This** chair is comfortable (Esta silla es cómoda) *[sentado en ella]*
 - **This** question is easy (Esta pregunta es fácil) *[mirando la pregunta]*
-
-</TabItem>
-
-<TabItem label="That (lejos)">
-
-**That** = ese, esa, eso, aquel, aquella, aquello (lejos de ti)
-
-```javascript
-const farObject = {
-  word: "that",              // that: ese/esa/eso
-  distance: "away from you", // distancia: lejos de ti
-};
-```
-
-**Ejemplos:**
 - **That** car is red (Ese carro es rojo) *[carro en la calle]*
 - **That** is your house (Esa es tu casa) *[apuntando a lo lejos]*
 - **That** building is tall (Ese edificio es alto) *[edificio a distancia]*
 - **That** idea is good (Esa idea es buena) *[idea mencionada antes]*
 
 </TabItem>
-</Tabs>
 
----
+<TabItem label="Plural">
 
-## These y Those (Plural)
-
-Usa **these** para varias cosas **cerca** y **those** para varias cosas **lejos**.
-
-<Tabs>
-<TabItem label="These (cerca, plural)">
-
-**These** = estos, estas (cerca de ti, varios)
+Usa **these** (cerca) y **those** (lejos) para hablar de **varias** cosas.
 
 ```javascript
-const nearObjects = {
-  word: "these",             // these: estos/estas
-  distance: "near you",      // distancia: cerca de ti
-
-};
+const plural = [
+  { word: "these", distance: "cerca de ti" },  // these: estos/estas
+  { word: "those", distance: "lejos de ti" }   // those: esos/esas
+]
 ```
 
 **Ejemplos:**
@@ -77,22 +53,6 @@ const nearObjects = {
 - **These** are my friends (Estos son mis amigos) *[amigos a tu lado]*
 - **These** cookies are delicious (Estas galletas están deliciosas) *[comiendo galletas]*
 - **These** shoes are new (Estos zapatos son nuevos) *[zapatos puestos]*
-
-</TabItem>
-
-<TabItem label="Those (lejos, plural)">
-
-**Those** = esos, esas, aquellos, aquellas (lejos de ti, varios)
-
-```javascript
-const farObjects = {
-  word: "those",             // those: esos/esas
-  distance: "away from you", // distancia: lejos de ti
-
-};
-```
-
-**Ejemplos:**
 - **Those** birds are beautiful (Esos pájaros son hermosos) *[pájaros en un árbol]*
 - **Those** are your books (Esos son tus libros) *[libros en una mesa lejana]*
 - **Those** mountains are high (Esas montañas son altas) *[montañas a distancia]*
@@ -114,7 +74,7 @@ Demostrativo + Sustantivo (funcionan como adjetivos):
 
 ```javascript
 const withNoun = {
-  pattern: "demonstrative + noun",  // patrón: demostrativo + sustantivo
+  pattern: "demonstrative + noun",
   examples: [
     "this book",    // este libro
     "that car",     // ese carro
@@ -138,7 +98,7 @@ Demostrativo solo, sin sustantivo (funcionan como pronombres):
 
 ```javascript
 const alone = {
-  pattern: "demonstrative alone",  // patrón: demostrativo solo
+  pattern: "demonstrative alone",
   examples: [
     "This is good",     // Esto es bueno
     "That is wrong",    // Eso está mal
