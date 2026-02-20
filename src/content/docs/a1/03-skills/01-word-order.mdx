@@ -9,9 +9,12 @@ El **orden de palabras** (word order) en inglés es muy importante porque determ
 
 ---
 
-## Estructura Básica (SVO)
+## Estructura de Oraciones
 
-La estructura más común en inglés es **Sujeto + Verbo + Objeto** (Subject-Verb-Object). Este orden es fijo y casi nunca cambia.
+<Tabs>
+  <TabItem label="Básica (SVO)">
+
+La estructura más común en inglés es **Sujeto + Verbo + Objeto**. Este orden es fijo y casi nunca cambia.
 
 ```javascript
 const sentence = {
@@ -22,15 +25,23 @@ const sentence = {
 // Resultado: "I eat pizza" (Yo como pizza)
 ```
 
+**Ejemplos:**
+
+- I drink water (Yo tomo agua)
+- She reads books (Ella lee libros)
+- They play soccer (Ellos juegan fútbol)
+- We watch movies (Vemos películas)
+- He speaks English (Él habla inglés)
+
 <Aside type="note" title="El sujeto es obligatorio en inglés">
 En español puedes omitir el sujeto ("Como pizza"), pero en inglés el sujeto **siempre** debe estar presente: **I** eat pizza.
 </Aside>
 
----
+  </TabItem>
 
-## Estructura Extendida (SVOMPT)
+  <TabItem label="Extendida (SVOMPT)">
 
-Cuando agregas más información a la oración, sigue el orden **Sujeto + Verbo + Objeto + Manera + Lugar + Tiempo** (Subject-Verb-Object-Manner-Place-Time).
+Cuando agregas más información, sigue el orden **Sujeto + Verbo + Objeto + Manera + Lugar + Tiempo**.
 
 ```javascript
 const extendedSentence = {
@@ -47,15 +58,18 @@ const extendedSentence = {
 
 **Ejemplos:**
 
-- **She** plays **tennis** well at the park on Sundays (Ella juega tenis bien en el parque los domingos)
-- **They** eat **lunch** quickly in the cafeteria at noon (Ellos almuerzan rápido en la cafetería al mediodía)
-- **We** watch **movies** together at the cinema on Fridays (Vemos películas juntos en el cine los viernes)
-- **He** reads **books** quietly in his room every night (Él lee libros silenciosamente en su habitación todas las noches)
-- **I** drink **coffee** slowly at the café in the morning (Tomo café lentamente en el café por la mañana)
+- She plays tennis well at the park on Sundays (Ella juega tenis bien en el parque los domingos)
+- They eat lunch quickly in the cafeteria at noon (Ellos almuerzan rápido en la cafetería al mediodía)
+- We watch movies together at the cinema on Fridays (Vemos películas juntos en el cine los viernes)
+- He reads books quietly in his room every night (Él lee libros silenciosamente en su habitación todas las noches)
+- I drink coffee slowly at the café in the morning (Tomo café lentamente en el café por la mañana)
 
 <Aside type="note" title="No es obligatorio usar todos los elementos">
-No necesitas incluir siempre **Manera + Lugar + Tiempo** en cada oración. Usa solo los elementos que necesites para comunicar tu mensaje, pero respeta el orden **MPT** cuando los uses.
+No necesitas incluir siempre manera, lugar y tiempo en cada oración. Usa solo los elementos que necesites para comunicar tu mensaje, pero respeta el orden cuando los uses.
 </Aside>
+
+  </TabItem>
+</Tabs>
 
 ---
 
@@ -65,16 +79,18 @@ Los **adjetivos** en inglés van **antes** del sustantivo. Cuando usas varios ad
 
 ```javascript
 const adjectiveOrder = {
-  opinion: ["beautiful", "nice", "ugly"],       // opinión: [hermoso, agradable, feo]
-  size: ["big", "small", "large"],              // tamaño: [grande, pequeño, grande]
-  age: ["old", "new", "young"],                 // edad: [viejo, nuevo, joven]
-  shape: ["round", "square", "thin"],           // forma: [redondo, cuadrado, delgado]
-  color: ["red", "blue", "green"],              // color: [rojo, azul, verde]
-  origin: ["American", "Mexican", "European"],  // origen: [americano, mexicano, europeo]
-  material: ["wooden", "metal", "plastic"],     // material: [de madera, de metal, de plástico]
-  purpose: ["sleeping (bag)", "cooking (pot)"]  // propósito: [para dormir (bolsa), para cocinar (olla)]
+  opinion: ["beautiful", "nice", "ugly"],
+  size: ["big", "small", "large"],
+  age: ["old", "new", "young"],
+  shape: ["round", "square", "thin"],
+  color: ["red", "blue", "green"],
+  origin: ["American", "Mexican", "European"],
+  material: ["wooden", "metal", "plastic"],
+  purpose: ["sleeping (bag)", "cooking (pot)"]
 };
 ```
+
+El orden es **opinión** (beautiful), **tamaño** (big), **edad** (old), **forma** (round), **color** (red), **origen** (American), **material** (wooden) y **propósito** (sleeping bag).
 
 **Ejemplos:**
 
@@ -101,14 +117,13 @@ Los adverbios de frecuencia van **antes del verbo principal**, pero **después d
 
 ```javascript
 const frequency = {
-  position: "antes del verbo / después de 'be'",
-  adverbs: ["always", "usually", "often", "sometimes", "never"], // [siempre, usualmente, a menudo, a veces, nunca]
-  examples: [
-    "I always eat breakfast", // I siempre desayuno (antes del verbo)
-    "She is always happy"     // Ella siempre está feliz (después de 'be')
-  ]
+  adverbs: ["always", "usually", "often", "sometimes", "never"],
+  beforeVerb: "I always eat breakfast",
+  afterBe: "She is always happy"
 };
 ```
+
+Estos adverbios significan siempre, usualmente, a menudo, a veces y nunca. Van **antes del verbo principal** pero **después del verbo "be"**.
 
 **Ejemplos:**
 
@@ -128,14 +143,13 @@ Los adverbios de manera van **después del verbo u objeto**.
 
 ```javascript
 const manner = {
-  position: "después del verbo/objeto", 
-  adverbs: ["quickly", "slowly", "carefully"], // [rápidamente, lentamente, cuidadosamente]
-  examples: [
-    "She spoke quietly",        // Ella habló silenciosamente (después del verbo)
-    "He drives the car slowly"  // Él conduce el carro lentamente (después del objeto)
-  ]
+  adverbs: ["quickly", "slowly", "carefully"],
+  afterVerb: "She spoke quietly",
+  afterObject: "He drives the car slowly"
 };
 ```
+
+Estos adverbios significan rápidamente, lentamente y cuidadosamente. Van **después del verbo u objeto**.
 
 **Ejemplos:**
 
@@ -153,15 +167,14 @@ Los adverbios de tiempo y lugar pueden ir al **principio** o al **final** de la 
 
 ```javascript
 const timePlace = {
-  position: "inicio/final de oración",
-  time: ["today", "yesterday", "tomorrow", "now"], // [hoy, ayer, mañana, ahora]
-  place: ["here", "there", "everywhere"], // [aquí, allí, en todas partes]
-  examples: [
-    "Today I work", // Hoy trabajo (inicio)
-    "I work today"  // Trabajo hoy (final)
-  ]
+  time: ["today", "yesterday", "tomorrow", "now"],
+  place: ["here", "there", "everywhere"],
+  atStart: "Today I work",
+  atEnd: "I work today"
 };
 ```
+
+Los adverbios de **tiempo** (hoy, ayer, mañana, ahora) y **lugar** (aquí, allí, en todas partes) pueden ir al principio o al final de la oración.
 
 **Ejemplos:**
 
@@ -182,14 +195,12 @@ const timePlace = {
 
 ```javascript
 const enoughToo = {
-  enough: "adjetivo/adverbio + enough",
-  too: "too + adjetivo/adverbio", 
-  examples: [
-    "big enough", // suficientemente grande
-    "too big"     // demasiado grande
-  ]
+  enough: "big enough",
+  too: "too big"
 };
 ```
+
+**Enough** significa suficiente y va **después** del adjetivo o adverbio. **Too** significa demasiado y va **antes** del adjetivo o adverbio.
 
 **Ejemplos:**
 
