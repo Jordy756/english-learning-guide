@@ -3,3 +3,193 @@ title: Posesivos
 description: Expresa posesión y pertenencia.
 ---
 
+import { Tabs, TabItem, Aside, CardGrid, Card } from '@astrojs/starlight/components';
+
+Los **posesivos** (possessives) indican que algo pertenece a alguien. Son como las **propiedades de un objeto** en programación: muestran la relación de pertenencia entre una persona y una cosa. En inglés hay tres formas principales de expresar posesión: **adjetivos posesivos** (my, your, his...), **pronombres posesivos** (mine, yours, his...) y el **posesivo 's** (John's book).
+
+---
+
+## Formas de Posesión
+
+<Tabs>
+<TabItem label="Adjetivos Posesivos">
+
+Los **adjetivos posesivos** van **antes del sustantivo** y muestran a quién pertenece algo.
+
+```javascript
+const possessiveAdjectives = {
+  I: "my",       // yo → mi/mis
+  you: "your",   // tú/usted → tu/tus, su/sus
+  he: "his",     // él → su/sus (de él)
+  she: "her",    // ella → su/sus (de ella)
+  it: "its",     // eso → su/sus (de cosa/animal)
+  we: "our",     // nosotros → nuestro/nuestra/nuestros/nuestras
+  they: "their"  // ellos/ellas → su/sus (de ellos/ellas)
+};
+```
+
+**Ejemplos:**
+
+- **My** name is Carlos (Mi nombre es Carlos)
+- **Your** car is new (Tu carro es nuevo)
+- **His** book is interesting (Su libro es interesante) *[libro de él]*
+- **Her** phone is expensive (Su teléfono es caro) *[teléfono de ella]*
+- **Its** color is blue (Su color es azul) *[color de algo]*
+- **Our** house is big (Nuestra casa es grande)
+- **Their** dog is friendly (Su perro es amigable) *[perro de ellos]*
+
+<Aside type="note" title="Los adjetivos posesivos siempre van con un sustantivo">
+Los adjetivos posesivos **nunca** van solos. Siempre deben estar seguidos de un sustantivo: **my book**, **your pen**, **their house**.
+</Aside>
+
+</TabItem>
+
+<TabItem label="Pronombres Posesivos">
+
+Los **pronombres posesivos** reemplazan al sustantivo completo. Van **solos**, sin sustantivo después.
+
+```javascript
+const possessivePronouns = {
+  I: "mine",     // yo → el mío/la mía/los míos/las mías
+  you: "yours",  // tú/usted → el tuyo/la tuya/los tuyos/las tuyas
+  he: "his",     // él → el suyo/la suya (de él)
+  she: "hers",   // ella → el suyo/la suya (de ella)
+  it: "-",       // (no existe pronombre posesivo para "it")
+  we: "ours",    // nosotros → el nuestro/la nuestra
+  they: "theirs" // ellos/ellas → el suyo/la suya (de ellos)
+};
+```
+
+**Ejemplos:**
+
+- This book is **mine** (Este libro es mío)
+- That car is **yours** (Ese carro es tuyo)
+- The red pen is **his** (El bolígrafo rojo es suyo) *[de él]*
+- This phone is **hers** (Este teléfono es suyo) *[de ella]*
+- The house is **ours** (La casa es nuestra)
+- Those keys are **theirs** (Esas llaves son suyas) *[de ellos]*
+
+<Aside type="caution" title="'His' es igual como adjetivo y pronombre">
+**His** es especial porque funciona tanto como adjetivo posesivo ("his book") como pronombre posesivo ("the book is his").
+</Aside>
+
+</TabItem>
+
+<TabItem label="Posesivo 's">
+
+Para mostrar que algo pertenece a una **persona específica**, usa **'s** después del nombre.
+
+```javascript
+const apostropheS = {
+  pattern: "name + 's + thing",           // nombre + 's + cosa
+  examples: [
+    "John's car",      // el carro de John
+    "Maria's book",    // el libro de María
+    "Tom's house",     // la casa de Tom
+    "Sarah's phone"    // el teléfono de Sarah
+  ]
+};
+```
+
+**Ejemplos:**
+
+- **John's** car is red (El carro de John es rojo)
+- **Maria's** book is on the table (El libro de María está en la mesa)
+- **Tom's** dog is big (El perro de Tom es grande)
+- **Sarah's** house is beautiful (La casa de Sarah es hermosa)
+- **David's** phone is new (El teléfono de David es nuevo)
+
+</TabItem>
+</Tabs>
+
+---
+
+## Reglas Especiales del 's
+
+### Plural terminado en -s
+
+Si el sustantivo ya termina en **-s**, solo agrega el apóstrofe **'** (sin otra s):
+
+```javascript
+const pluralRule = {
+  singular: "the boy's toy",      // el juguete del niño
+  plural: "the boys' toys"        // los juguetes de los niños
+};
+```
+
+**Ejemplos:**
+- The **students' books** (Los libros de los estudiantes)
+- My **parents' house** (La casa de mis padres)
+- The **teachers' room** (La sala de los profesores)
+
+### Nombres propios terminados en -s
+
+Puedes usar **'s** o solo **'**:
+- **James's** book o **James'** book (El libro de James)
+- **Carlos's** car o **Carlos'** car (El carro de Carlos)
+
+---
+
+## Errores Comunes
+
+<Aside type="danger" title="Confundir 'its' (posesivo) con 'it's' (it is)">
+- ⛔ The dog is in **it's** house
+- ✅ The dog is in **its** house (El perro está en su casa)
+- ⛔ **Its** raining
+- ✅ **It's** raining (Está lloviendo)
+
+**Its** = posesivo (sin apóstrofe). **It's** = it is (con apóstrofe).
+</Aside>
+
+<Aside type="danger" title="Usar pronombre posesivo con sustantivo">
+- ⛔ This is **mine** book
+- ✅ This is **my** book (Este es mi libro)
+- ✅ This book is **mine** (Este libro es mío)
+- ⛔ That is **yours** car
+- ✅ That is **your** car (Ese es tu carro)
+- ✅ That car is **yours** (Ese carro es tuyo)
+
+Los pronombres posesivos van **solos**, sin sustantivo después.
+</Aside>
+
+<Aside type="danger" title="Olvidar el apóstrofe en 's">
+- ⛔ This is **Johns** book
+- ✅ This is **John's** book (Este es el libro de John)
+- ⛔ **Marias** phone is new
+- ✅ **Maria's** phone is new (El teléfono de María es nuevo)
+
+Siempre usa el apóstrofe **'** antes de la **s**.
+</Aside>
+
+<Aside type="danger" title="Confundir 'their' (posesivo) con 'they're' (they are) y 'there' (allí)">
+- ⛔ **Their** going to the park
+- ✅ **They're** going to the park (Ellos van al parque)
+- ⛔ **There** house is big
+- ✅ **Their** house is big (Su casa es grande)
+- ⛔ Put it over **their**
+- ✅ Put it over **there** (Ponlo allí)
+
+**Their** = posesivo, **they're** = they are, **there** = allí.
+</Aside>
+
+<Aside type="danger" title="Traducir literalmente el español">
+- ⛔ The book of John
+- ✅ **John's** book (El libro de John)
+- ⛔ The car of my father
+- ✅ **My father's** car (El carro de mi padre)
+
+En inglés usamos **'s**, no "of".
+</Aside>
+
+---
+
+## Práctica
+
+<Aside type="tip" title="Ejercicio diario">
+1. Mira 5 objetos a tu alrededor y di: "This is my [object]" y luego "This is mine"
+2. Señala objetos de otras personas y practica: "That is your pen" / "That pen is yours"
+3. Practica con nombres: Toma fotos de objetos y etiquétalos con "John's phone", "Maria's book", etc.
+4. Describe tu familia usando posesivos: "My mother's name is...", "Her car is...", "Their house is..."
+5. Compara objetos con un amigo: "This is my book. That is yours. His book is on the table"
+</Aside>
+
