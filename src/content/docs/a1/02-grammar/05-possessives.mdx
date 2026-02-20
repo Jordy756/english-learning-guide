@@ -46,7 +46,7 @@ Los adjetivos posesivos **nunca** van solos. Siempre deben estar seguidos de un 
 
 <TabItem label="Pronombres Posesivos">
 
-Los **pronombres posesivos** reemplazan al sustantivo completo. Van **solos**, sin sustantivo después.
+Los **pronombres posesivos** reemplazan al sustantivo por completo. Se caracterizan por ir **solos**, sin un sustantivo después, y generalmente se ubican al final de la oración.
 
 ```javascript
 const possessivePronouns = {
@@ -106,7 +106,8 @@ const apostropheS = {
 
 ## Reglas Especiales del 's
 
-### Plural terminado en -s
+<Tabs>
+<TabItem label="Plural terminado en -s">
 
 Si el sustantivo ya termina en **-s**, solo agrega el apóstrofe **'** (sin otra s):
 
@@ -122,11 +123,26 @@ const pluralRule = {
 - My **parents' house** (La casa de mis padres)
 - The **teachers' room** (La sala de los profesores)
 
-### Nombres propios terminados en -s
+</TabItem>
 
-Puedes usar **'s** o solo **'**:
+<TabItem label="Nombres propios en -s">
+
+Si el nombre propio ya termina en **-s**, puedes usar **'s** o solo **'** (ambas formas son correctas):
+
+```javascript
+const properNamesRule = {
+  option1: "James's book",        // libro de James (con 's)
+  option2: "James' book"          // libro de James (solo ')
+};
+```
+
+**Ejemplos:**
 - **James's** book o **James'** book (El libro de James)
 - **Carlos's** car o **Carlos'** car (El carro de Carlos)
+- **Chris's** phone o **Chris'** phone (El teléfono de Chris)
+
+</TabItem>
+</Tabs>
 
 ---
 
