@@ -5,324 +5,275 @@ description: Domina todos los tipos de preguntas en inglés.
 
 import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
 
-En español, puedes convertir una afirmación en pregunta solo con entonación: "¿Tienes hambre?". En inglés, necesitas **reorganizar** la oración. Piensa en ello como una función que transforma la estructura: el verbo auxiliar se mueve al inicio.
-
-Dominar las preguntas es esencial porque son la base de cualquier conversación: pedir información, confirmar datos, y conectar con otros.
+Las **preguntas** (questions) en inglés tienen un orden específico diferente al español. Es como **invertir el orden de un array**: cambias la posición de los elementos para transformar una afirmación en pregunta. En este nivel aprenderás a hacer preguntas básicas usando el verbo **to be**.
 
 ---
 
-## Preguntas Yes/No
+## Preguntas Sí/No con "To Be"
 
-Estas preguntas esperan "sí" o "no" como respuesta. La estructura depende del tipo de verbo:
+Para hacer preguntas de sí/no, **inviertes** el orden: pones el verbo **to be** antes del sujeto.
+
+```javascript
+const question = {
+  affirmative: ["You", "are", "happy"],      // afirmación: estás feliz
+  question: ["Are", "you", "happy", "?"]     // pregunta: ¿estás feliz?
+};
+// Inversión: verbo + sujeto
+```
 
 <Tabs>
-  <TabItem label="Con 'Be'">
-    ```javascript
-    const withBe = {
-      structure: "Be + Subject + Complement?",
-      transform: {
-        statement: "She is a doctor",
-        question: "Is she a doctor?"
-        // ¿Es ella doctora?
-      }
-    };
-    ```
-    
-    **Ejemplos:**
-    - Is he your friend? (¿Es él tu amigo?)
-    - Are they at home? (¿Están en casa?)
-    - Was the movie good? (¿Estuvo buena la película?)
-    - Were you tired? (¿Estabas cansado?)
-  </TabItem>
-  
-  <TabItem label="Con auxiliar">
-    ```javascript
-    const withAuxiliary = {
-      structure: "Auxiliary + Subject + Verb?",
-      transform: {
-        statement: "She can swim",
-        question: "Can she swim?"
-        // ¿Puede ella nadar?
-      }
-    };
-    // Auxiliares: can, will, would, should, must...
-    ```
-    
-    **Ejemplos:**
-    - Can you help me? (¿Puedes ayudarme?)
-    - Will they come? (¿Vendrán ellos?)
-    - Should I wait? (¿Debería esperar?)
-    - Have you finished? (¿Has terminado?)
-  </TabItem>
-  
-  <TabItem label="Con Do/Does/Did">
-    ```javascript
-    const withDo = {
-      structure: "Do/Does/Did + Subject + Base Verb?",
-      present: {
-        I_you_we_they: "Do you like coffee?",
-        he_she_it: "Does she like coffee?"
-      },
-      past: "Did you see that?"
-    };
-    // El verbo principal va en forma base
-    ```
-    
-    **Ejemplos:**
-    - Do you speak Spanish? (¿Hablas español?)
-    - Does he work here? (¿Trabaja él aquí?)
-    - Did they call you? (¿Te llamaron?)
-    - Do we need tickets? (¿Necesitamos boletos?)
-  </TabItem>
-</Tabs>
+<TabItem label="Am / Is / Are">
 
-<Aside type="tip">
-Cuando usas **do/does/did**, el verbo principal **siempre** va en forma base: ~~Does she likes~~ → **Does she like**
+**Estructura:** **Verbo + Sujeto + Complemento + ?**
+
+```javascript
+const beQuestions = {
+  am: "Am I...?",             // ¿Soy yo...? / ¿Estoy yo...?
+  is: "Is he/she/it...?",     // ¿Es/Está él/ella/eso...?
+  are: "Are you/we/they...?"  // ¿Son/Están ustedes/nosotros/ellos...?
+};
+```
+
+**Ejemplos:**
+
+- **Am I** late? (¿Estoy tarde?)
+- **Is she** a teacher? (¿Es ella profesora?)
+- **Is he** happy? (¿Está él feliz?)
+- **Is it** cold? (¿Está frío?)
+- **Are you** ready? (¿Estás listo?)
+- **Are we** friends? (¿Somos amigos?)
+- **Are they** students? (¿Son ellos estudiantes?)
+
+</TabItem>
+
+<TabItem label="Respuestas Cortas">
+
+Las respuestas cortas usan **Yes/No + sujeto + verbo to be**:
+
+```javascript
+const shortAnswers = {
+  yes: ["Yes,", "I", "am"],   // Sí, lo soy/estoy
+  no: ["No,", "I", "am not"]  // No, no lo soy/estoy
+};
+```
+
+**Ejemplos:**
+
+- Are you a student? → **Yes, I am** / **No, I'm not** (¿Eres estudiante? → Sí, lo soy / No, no lo soy)
+- Is she tired? → **Yes, she is** / **No, she isn't** (¿Está ella cansada? → Sí, está / No, no está)
+- Is he a doctor? → **Yes, he is** / **No, he isn't** (¿Es él doctor? → Sí, lo es / No, no lo es)
+- Are they at home? → **Yes, they are** / **No, they aren't** (¿Están ellos en casa? → Sí, están / No, no están)
+- Are we late? → **Yes, we are** / **No, we aren't** (¿Estamos tarde? → Sí, estamos / No, no estamos)
+
+<Aside type="note" title="No repitas el complemento en respuestas cortas">
+No digas "Yes, I am a student". Solo di "Yes, I am". El complemento no se repite en las respuestas cortas.
 </Aside>
 
----
+</TabItem>
 
-## Preguntas con Wh-
+<TabItem label="Transformación">
 
-Las **Wh-questions** piden información específica. Comienzan con una palabra interrogativa:
+**De Afirmación a Pregunta:**
 
 ```javascript
-const whWords = {
-  What: "qué",        // What is your name?
-  Who: "quién",       // Who is she?
-  Where: "dónde",     // Where do you live?
-  When: "cuándo",     // When did you arrive?
-  Why: "por qué",     // Why are you sad?
-  Which: "cuál",      // Which one do you want?
-  How: "cómo"         // How are you?
+const transformation = {
+  affirmative: ["She", "is", "happy"],  // Ella está feliz
+  question: ["Is", "she", "happy", "?"] // ¿Está ella feliz?
+};
+// Mueve el verbo al inicio para formar la pregunta
+```
+
+**Ejemplos:**
+
+- You **are** a teacher → **Are** you a teacher? (Eres profesor → ¿Eres profesor?)
+- He **is** from Spain → **Is** he from Spain? (Él es de España → ¿Es él de España?)
+- They **are** friends → **Are** they friends? (Ellos son amigos → ¿Son ellos amigos?)
+- I **am** late → **Am** I late? (Estoy tarde → ¿Estoy tarde?)
+- It **is** cold → **Is** it cold? (Está frío → ¿Está frío?)
+
+</TabItem>
+</Tabs>
+
+---
+
+## Palabras Interrogativas
+
+Las **palabras interrogativas** (question words) se usan para obtener información específica. En nivel A1 usamos tres palabras básicas con el verbo **to be**.
+
+<Tabs>
+<TabItem label="What (Qué/Cuál)">
+
+**What** se usa para preguntar sobre **cosas, nombres, o información general**.
+
+```javascript
+const whatQuestions = {
+  pattern: ["What", "is/are", "sujeto/objecto", "?"],
+  examples: [
+    "What is your name?", // ¿Cuál es tu nombre?
+    "What are those?"     // ¿Qué son esos?
+  ]
 };
 ```
 
-<Tabs>
-  <TabItem label="Estructura">
-    ```javascript
-    const whStructure = {
-      withBe: "Wh- + Be + Subject?",
-      withAux: "Wh- + Auxiliary + Subject + Verb?",
-      withDo: "Wh- + Do/Does/Did + Subject + Verb?"
-    };
-    ```
-  </TabItem>
-  
-  <TabItem label="Ejemplos">
-    ```javascript
-    const examples = {
-      withBe: [
-        "Where is the station?",
-        "What is your job?"
-      ],
-      withDo: [
-        "What do you want?",
-        "Where did she go?"
-      ],
-      withAux: [
-        "When will you arrive?",
-        "How can I help?"
-      ]
-    };
-    ```
-  </TabItem>
-</Tabs>
+**Ejemplos:**
 
-**Más ejemplos:**
-- What do you do? (¿A qué te dedicas?)
-- Where does she live? (¿Dónde vive ella?)
-- When did the movie start? (¿Cuándo empezó la película?)
-- Why are you laughing? (¿Por qué te ríes?)
-- How did you learn English? (¿Cómo aprendiste inglés?)
+- **What is** your name? (¿Cuál es tu nombre?)
+- **What is** this? (¿Qué es esto?)
+- **What is** that? (¿Qué es eso?)
+- **What are** these? (¿Qué son estos?)
+- **What are** those? (¿Qué son esos?)
+- **What is** your favorite color? (¿Cuál es tu color favorito?)
+- **What are** their names? (¿Cuáles son sus nombres?)
 
----
-
-## Casos Especiales con Who/What (Sujeto)
-
-Cuando **who** o **what** es el **sujeto** de la pregunta, **no** usamos auxiliar:
-
-<Tabs>
-  <TabItem label="Sujeto">
-    ```javascript
-    const subjectQuestion = {
-      rule: "Who/What + Verb (conjugated)",
-      // Who/What ES el sujeto
-      examples: [
-        "Who called you?",        // ¿Quién te llamó?
-        "What happened?",         // ¿Qué pasó?
-        "Who lives here?"         // ¿Quién vive aquí?
-      ]
-    };
-    // NO: Who did call you?
-    ```
-  </TabItem>
-  
-  <TabItem label="Objeto">
-    ```javascript
-    const objectQuestion = {
-      rule: "Who/What + Auxiliary + Subject + Verb",
-      // Who/What es el OBJETO
-      examples: [
-        "Who did you call?",      // ¿A quién llamaste?
-        "What did you buy?",      // ¿Qué compraste?
-        "Who do you love?"        // ¿A quién amas?
-      ]
-    };
-    // Aquí SÍ necesitas el auxiliar
-    ```
-  </TabItem>
-</Tabs>
-
-**Comparación:**
-- Who broke the window? (¿Quién rompió la ventana?) — Who = sujeto
-- Who did you see? (¿A quién viste?) — Who = objeto
-
-<Aside type="caution">
-Si puedes responder con un nombre en posición de sujeto ("John broke it"), la pregunta no lleva auxiliar. Si el nombre sería el objeto ("I saw John"), sí lleva auxiliar.
+<Aside type="note" title="'What' para cosas y nombres">
+Usa **what** cuando preguntas por objetos, nombres, o información general. Para personas específicas, usa **who**.
 </Aside>
 
----
+</TabItem>
 
-## How + Adjetivo/Adverbio
+<TabItem label="Who (Quién)">
 
-**How** se combina con adjetivos y adverbios para preguntas específicas:
+**Who** se usa para preguntar sobre **personas**.
 
 ```javascript
-const howCombinations = {
-  "How old": "¿Cuántos años?",      // How old are you?
-  "How long": "¿Cuánto tiempo?",    // How long is the movie?
-  "How far": "¿Qué tan lejos?",     // How far is the airport?
-  "How often": "¿Qué tan seguido?", // How often do you exercise?
-  "How much": "¿Cuánto? (no contable)", // How much does it cost?
-  "How many": "¿Cuántos? (contable)"    // How many brothers do you have?
+const whoQuestions = {
+  pattern: ["Who", "is/are", "sujeto/complemento", "?"],
+  examples: [
+    "Who is she?",  // ¿Quién es ella?
+    "Who are they?" // ¿Quiénes son ellos?
+  ]
 };
 ```
 
 **Ejemplos:**
-- How old is your car? (¿Cuántos años tiene tu carro?)
-- How long did you wait? (¿Cuánto tiempo esperaste?)
-- How often do you travel? (¿Qué tan seguido viajas?)
-- How much water do you need? (¿Cuánta agua necesitas?)
-- How many languages do you speak? (¿Cuántos idiomas hablas?)
 
----
+- **Who is** he? (¿Quién es él?)
+- **Who is** she? (¿Quién es ella?)
+- **Who is** that? (¿Quién es ese/esa?)
+- **Who are** you? (¿Quién eres tú?)
+- **Who are** they? (¿Quiénes son ellos?)
+- **Who is** your teacher? (¿Quién es tu profesor?)
+- **Who are** those people? (¿Quiénes son esas personas?)
 
-## Question Tags
+<Aside type="note" title="'Who' solo para personas">
+Usa **who** solo para personas. Para objetos o animales, usa **what**.
+</Aside>
 
-Los **question tags** son mini-preguntas al final para confirmar información:
+</TabItem>
 
-<Tabs>
-  <TabItem label="Regla">
-    ```javascript
-    const tagRule = {
-      positive: "+ statement, - tag?",
-      negative: "- statement, + tag?",
-      // Si la oración es positiva, el tag es negativo
-      // Si la oración es negativa, el tag es positivo
-    };
-    ```
-  </TabItem>
-  
-  <TabItem label="Ejemplos">
-    ```javascript
-    const tags = {
-      positive_negative: [
-        "You're coming, aren't you?",
-        "She can swim, can't she?",
-        "They left, didn't they?"
-      ],
-      negative_positive: [
-        "You aren't tired, are you?",
-        "He doesn't smoke, does he?",
-        "They weren't late, were they?"
-      ]
-    };
-    ```
-  </TabItem>
-</Tabs>
+<TabItem label="Where (Dónde)">
 
-**Ejemplos:**
-- It's beautiful, isn't it? (Es hermoso, ¿no?)
-- You like coffee, don't you? (Te gusta el café, ¿verdad?)
-- She didn't call, did she? (Ella no llamó, ¿o sí?)
-- We should go, shouldn't we? (Deberíamos ir, ¿no?)
-
----
-
-## Preguntas Indirectas
-
-Las preguntas indirectas son más formales y corteses. El orden de palabras cambia:
+**Where** se usa para preguntar sobre **lugares o ubicaciones**.
 
 ```javascript
-const indirect = {
-  direct: "Where is the station?",
-  indirect: "Could you tell me where the station is?",
-  // El orden vuelve a ser sujeto + verbo
-  rule: "Polite phrase + Wh- + Subject + Verb"
+const whereQuestions = {
+  pattern: ["Where", "is/are", "sujeto", "?"],
+  examples: [
+    "Where is the book?", // ¿Dónde está el libro?
+    "Where are you?"      // ¿Dónde estás tú?
+  ]
 };
 ```
 
-<Tabs>
-  <TabItem label="Estructura">
-    ```javascript
-    const politeStarters = [
-      "Could you tell me...",
-      "Do you know...",
-      "I wonder...",
-      "Can you explain..."
-    ];
-    // Después: wh- + subject + verb (orden normal)
-    ```
-  </TabItem>
-  
-  <TabItem label="Comparación">
-    ```javascript
-    const comparison = {
-      direct: [
-        "What time is it?",
-        "Where does she work?",
-        "Why did he leave?"
-      ],
-      indirect: [
-        "Could you tell me what time it is?",
-        "Do you know where she works?",
-        "I wonder why he left."
-      ]
-    };
-    // Nota: sin signo de interrogación si empieza con "I wonder"
-    ```
-  </TabItem>
+**Ejemplos:**
+
+- **Where is** the book? (¿Dónde está el libro?)
+- **Where is** your house? (¿Dónde está tu casa?)
+- **Where is** he? (¿Dónde está él?)
+- **Where are** you? (¿Dónde estás tú?)
+- **Where are** they? (¿Dónde están ellos?)
+- **Where is** the bathroom? (¿Dónde está el baño?)
+- **Where are** my keys? (¿Dónde están mis llaves?)
+
+</TabItem>
 </Tabs>
 
-**Ejemplos:**
-- Could you tell me where the bathroom is? (¿Podría decirme dónde está el baño?)
-- Do you know what time the bank opens? (¿Sabes a qué hora abre el banco?)
-- I was wondering if you could help me (Me preguntaba si podrías ayudarme)
+---
+
+## Diálogo de Supervivencia
+
+**Conversación en un aeropuerto:**
+
+```javascript
+const dialogue = [
+  "A: Hello! Are you John?",                // Hola, ¿eres John?
+  "B: Yes, I am. Are you Maria?",           // Sí, lo soy. ¿Eres María?
+  "A: Yes! Where is your hotel?",           // ¡Sí! ¿Dónde está tu hotel?
+  "B: It is near the beach.",               // Está cerca de la playa.
+  "A: Is it far?",                          // ¿Está lejos?
+  "B: No, it isn't. What is your address?", // No, no está. ¿Cuál es tu dirección?
+  "A: I am at the Grand Hotel.",            // Estoy en el Hotel Grand.
+  "B: Who is that person?",                 // ¿Quién es esa persona?
+  "A: She is my friend, Lisa."              // Ella es mi amiga, Lisa.
+];
+```
 
 ---
 
 ## Errores Comunes
 
-<Aside type="danger">
-**Usar do/does con el verbo "be":**
-- ~~Do you are tired?~~ → **Are you tired?** (¿Estás cansado?)
-- ~~Does she is a student?~~ → **Is she a student?** (¿Es ella estudiante?)
+<Aside type="danger" title="No invertir el orden del sujeto y verbo">
+- ⛔ You are happy?
+- ✅ Are you happy? (¿Estás feliz?)
+- ⛔ She is a teacher?
+- ✅ Is she a teacher? (¿Es ella profesora?)
+- ⛔ They are students?
+- ✅ Are they students? (¿Son ellos estudiantes?)
+
+En inglés, debes **invertir** el orden: verbo antes del sujeto.
 </Aside>
 
-<Aside type="danger">
-**Olvidar cambiar el verbo a forma base con do/does:**
-- ~~Does she likes pizza?~~ → **Does she like pizza?** (¿Le gusta la pizza?)
-- ~~Did you went there?~~ → **Did you go there?** (¿Fuiste allí?)
+<Aside type="danger" title="Olvidar el signo de interrogación">
+- ⛔ Are you happy.
+- ✅ Are you happy? (¿Estás feliz?)
+- ⛔ Where is he.
+- ✅ Where is he? (¿Dónde está él?)
+- ⛔ Who is that
+- ✅ Who is that? (¿Quién es ese?)
+
+Las preguntas siempre terminan con **?** (question mark).
 </Aside>
 
-<Aside type="danger">
-**Usar auxiliar cuando Who/What es sujeto:**
-- ~~Who did call you?~~ → **Who called you?** (¿Quién te llamó?)
-- ~~What did happen?~~ → **What happened?** (¿Qué pasó?)
+<Aside type="danger" title="Usar 'what' para personas">
+- ⛔ What is he?
+- ✅ Who is he? (¿Quién es él?)
+- ⛔ What is your teacher?
+- ✅ Who is your teacher? (¿Quién es tu profesor?)
+- ⛔ What are they?
+- ✅ Who are they? (¿Quiénes son ellos?)
+
+Usa **who** para personas, **what** para cosas.
 </Aside>
 
-<Aside type="danger">
-**Orden incorrecto en preguntas indirectas:**
-- ~~Could you tell me where is the bank?~~ → **Could you tell me where the bank is?** (¿Podría decirme dónde está el banco?)
+<Aside type="danger" title="Repetir el complemento en respuestas cortas">
+- ⛔ Are you a student? → Yes, I am a student
+- ✅ Are you a student? → Yes, I am (¿Eres estudiante? → Sí, lo soy)
+- ⛔ Is she tired? → No, she isn't tired
+- ✅ Is she tired? → No, she isn't (¿Está ella cansada? → No, no está)
+- ⛔ Are they at home? → Yes, they are at home
+- ✅ Are they at home? → Yes, they are (¿Están ellos en casa? → Sí, están)
+
+No repitas el complemento. Solo usa: **Yes/No + sujeto + verbo to be**.
+</Aside>
+
+<Aside type="danger" title="Olvidar usar 'am' con 'I' en respuestas">
+- ⛔ Am I late? → Yes, you are
+- ✅ Am I late? → Yes, I am (¿Estoy tarde? → Sí, estoy)
+- ⛔ Am I ready? → No, you aren't
+- ✅ Am I ready? → No, I'm not (¿Estoy listo? → No, no estoy)
+
+Cuando respondes a "Am I...?", usa **I am** o **I'm not**, no "you are".
+</Aside>
+
+---
+
+## Práctica
+
+<Aside type="tip" title="Ejercicio diario">
+- Practica transformando afirmaciones a preguntas: "He is happy" → "Is he happy?"
+- Haz 5 preguntas usando what, who, y where sobre tu entorno inmediato
+- Practica respuestas cortas con un compañero: hacen preguntas de sí/no y responden
+- Escucha conversaciones básicas en inglés e identifica las preguntas con "to be"
+- Crea tarjetas de preguntas comunes (What is your name? Where are you from?) y practica responderlas
+- Escribe un mini-diálogo usando solo preguntas con "to be" y las tres palabras interrogativas aprendidas
 </Aside>
