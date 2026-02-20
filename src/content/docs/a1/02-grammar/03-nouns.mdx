@@ -3,3 +3,262 @@ title: Sustantivos
 description: Aprende sobre sustantivos y sus tipos.
 ---
 
+import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
+
+Los **sustantivos** (nouns) son palabras que nombran personas, lugares, cosas, animales o ideas. Son como las **variables** en programación: identifican y almacenan información sobre entidades del mundo real. Cuando hablas o escribes en inglés, los sustantivos son los bloques fundamentales de tus oraciones.
+
+---
+
+## ¿Qué es un sustantivo?
+
+Un sustantivo puede ser cualquier cosa que puedas nombrar:
+
+```javascript
+const noun = {
+  people: ["teacher", "Maria", "doctor"],    // personas: profesor, María, doctor
+  places: ["school", "London", "park"],      // lugares: escuela, Londres, parque
+  things: ["book", "computer", "car"],       // cosas: libro, computadora, carro
+  animals: ["dog", "cat", "elephant"],       // animales: perro, gato, elefante
+  ideas: ["love", "freedom", "happiness"]    // ideas: amor, libertad, felicidad
+};
+```
+
+**Ejemplos:**
+- I have a **phone** (Tengo un teléfono)
+- The **student** is smart (El estudiante es inteligente)
+- **Paris** is romantic (París es romántica)
+- **Freedom** is valuable (La libertad es valiosa)
+
+---
+
+## Singular y Plural
+
+Los sustantivos tienen forma **singular** (uno) y **plural** (más de uno). En inglés, la mayoría de sustantivos forman el plural agregando `-s`.
+
+<Tabs>
+<TabItem label="Plural Regular: -s">
+
+La regla más común es agregar **-s** al final:
+
+```javascript
+const nouns = {
+  singular: ["book", "cat", "car"],       // singular: libro, gato, carro
+  plural: ["books", "cats", "cars"]       // plural: libros, gatos, carros
+};
+```
+
+**Ejemplos:**
+- I need a **pen** → I need two **pens** (Necesito un bolígrafo → Necesito dos bolígrafos)
+- The **dog** is big → The **dogs** are big (El perro es grande → Los perros son grandes)
+- This **chair** is new → These **chairs** are new (Esta silla es nueva → Estas sillas son nuevas)
+- One **student** → Five **students** (Un estudiante → Cinco estudiantes)
+- The **table** is clean → The **tables** are clean (La mesa está limpia → Las mesas están limpias)
+
+</TabItem>
+
+<TabItem label="Plural: -es">
+
+Si el sustantivo termina en **-s, -ss, -sh, -ch, -x, -z**, agrega **-es**:
+
+```javascript
+const nouns = {
+  singular: ["box", "bus", "glass"],      // singular: caja, autobús, vaso
+  plural: ["boxes", "buses", "glasses"]   // plural: cajas, autobuses, vasos
+};
+```
+
+**Ejemplos:**
+- One **dish** → Two **dishes** (Un plato → Dos platos)
+- The **watch** is expensive → The **watches** are expensive (El reloj es caro → Los relojes son caros)
+- A **church** → Many **churches** (Una iglesia → Muchas iglesias)
+- This **brush** → These **brushes** (Este cepillo → Estos cepillos)
+- The **fox** → The **foxes** (El zorro → Los zorros)
+
+</TabItem>
+
+<TabItem label="Plural: consonante + y">
+
+Si termina en **consonante + y**, cambia la **y** por **-ies**:
+
+```javascript
+const nouns = {
+  singular: ["baby", "city", "party"],     // consonante + y: bebé, ciudad, fiesta
+  plural: ["babies", "cities", "parties"]  // plural: bebés, ciudades, fiestas
+};
+```
+
+**Ejemplos:**
+- The **story** is good → The **stories** are good (La historia es buena → Las historias son buenas)
+- One **family** → Two **families** (Una familia → Dos familias)
+- A **fly** → Many **flies** (Una mosca → Muchas moscas)
+- The **country** is beautiful → The **countries** are beautiful (El país es hermoso → Los países son hermosos)
+- This **lady** → These **ladies** (Esta señora → Estas señoras)
+
+<Aside type="note" title="Excepción con vocal + y">
+Si termina en **vocal + y**, solo agrega **-s**: boy → boys, key → keys, day → days
+</Aside>
+
+</TabItem>
+
+<TabItem label="Plurales Irregulares">
+
+Algunos sustantivos tienen plurales **irregulares** que debes memorizar:
+
+```javascript
+const irregular = {
+  "man": "men",         // hombre → hombres
+  "woman": "women",     // mujer → mujeres
+  "child": "children",  // niño → niños
+  "person": "people",   // persona → personas
+  "tooth": "teeth",     // diente → dientes
+  "foot": "feet",       // pie → pies
+  "mouse": "mice"       // ratón → ratones
+};
+```
+
+**Ejemplos comunes:**
+- The **woman** is tall → The **women** are tall (La mujer es alta → Las mujeres son altas)
+- One **child** plays → Three **children** play (Un niño juega → Tres niños juegan)
+- A **person** waits → Many **people** wait (Una persona espera → Muchas personas esperan)
+- My **foot** hurts → My **feet** hurt (Me duele el pie → Me duelen los pies)
+- The **mouse** is small → The **mice** are small (El ratón es pequeño → Los ratones son pequeños)
+
+</TabItem>
+</Tabs>
+
+---
+
+## Sustantivos Propios: Mayúsculas
+
+Los **sustantivos propios** (proper nouns) son nombres específicos de personas, lugares o cosas. En inglés, **siempre** se escriben con mayúscula inicial.
+
+```javascript
+const properNouns = {
+  commonNoun: "city",      // sustantivo común: ciudad (minúscula)
+  properNoun: "London"     // sustantivo propio: Londres (mayúscula)
+};
+```
+
+<Tabs>
+<TabItem label="Nombres de Personas">
+
+Todos los nombres personales llevan mayúscula:
+
+**Ejemplos:**
+- **David** is my brother (David es mi hermano)
+- I met **Jennifer** yesterday (Conocí a Jennifer ayer)
+- **Carlos** speaks English (Carlos habla inglés)
+- **Emma** and **Michael** are students (Emma y Michael son estudiantes)
+
+</TabItem>
+
+<TabItem label="Nombres de Lugares">
+
+Ciudades, países, continentes, calles, etc.:
+
+**Ejemplos:**
+- I live in **Spain** (Vivo en España)
+- **Tokyo** is in Japan (Tokio está en Japón)
+- We visited **Africa** (Visitamos África)
+- They work on **Fifth Avenue** (Ellos trabajan en Fifth Avenue)
+
+</TabItem>
+
+<TabItem label="Días, Meses, Fiestas">
+
+A diferencia del español, estos llevan mayúscula:
+
+**Ejemplos:**
+- **Friday** is my birthday (El viernes es mi cumpleaños)
+- School starts in **September** (La escuela empieza en septiembre)
+- We celebrate **Easter** every year (Celebramos Pascua cada año)
+- **Wednesday** is a workday (El miércoles es día laboral)
+
+</TabItem>
+
+<TabItem label="Marcas y Empresas">
+
+Nombres de compañías y productos:
+
+**Ejemplos:**
+- She works at **Microsoft** (Ella trabaja en Microsoft)
+- I bought a **Samsung** phone (Compré un teléfono Samsung)
+- He drinks **Coca-Cola** (El bebe Coca-Cola)
+- **Amazon** delivers packages ( Amazon entrega paquetes)
+
+</TabItem>
+</Tabs>
+
+<Aside type="caution" title="Diferencia con el español en días y meses">
+En inglés, los días de la semana y los meses **siempre** llevan mayúscula: Monday, Tuesday, January, February. En español, estos se escriben con minúscula.
+</Aside>
+
+---
+
+## Identificación de Sustantivos
+
+Para identificar un sustantivo en una oración, pregúntate:
+- ¿Es el nombre de una persona? → **sustantivo**
+- ¿Es el nombre de un lugar? → **sustantivo**
+- ¿Es el nombre de una cosa? → **sustantivo**
+- ¿Puedo poner "the" o "a" antes? → probablemente **sustantivo**
+
+**Ejemplo de análisis:**
+
+*The teacher has three books on the table.*
+
+```javascript
+const sentence = {
+  nouns: ["teacher", "books", "table"],  // sustantivos: profesor, libros, mesa
+  // teacher = persona (singular)
+  // books = cosas (plural)
+  // table = cosa (singular)
+};
+```
+
+---
+
+## Errores Comunes
+
+<Aside type="danger" title="Olvidar la -s en plural regular">
+- ⛔ I have two **book**
+- ✅ I have two **books** (Tengo dos libros)
+
+Recuerda agregar **-s** al plural de la mayoría de sustantivos.
+</Aside>
+
+<Aside type="danger" title="Usar plural irregular como regular">
+- ⛔ There are many **childs** in the park
+- ✅ There are many **children** in the park (Hay muchos niños en el parque)
+
+Los plurales irregulares como **child → children** deben memorizarse.
+</Aside>
+
+<Aside type="danger" title="No usar mayúscula en sustantivos propios">
+- ⛔ I live in **new york**
+- ✅ I live in **New York** (Vivo en Nueva York)
+
+Los nombres de lugares **siempre** llevan mayúscula.
+</Aside>
+
+<Aside type="danger" title="Confundir reglas de -es y -ies">
+- ⛔ I see two **foxs**
+- ✅ I see two **foxes** (Veo dos zorros)
+- ⛔ The **storys** are interesting
+- ✅ The **stories** are interesting (Las historias son interesantes)
+
+Aplica las reglas correctas según la **terminación** del sustantivo.
+</Aside>
+
+---
+
+## Práctica
+
+<Aside type="tip" title="Ejercicio diario">
+1. **Identifica sustantivos**: Lee una página de un libro en inglés y subraya todos los sustantivos que encuentres
+2. **Practica plurales**: Escribe 10 sustantivos en singular y conviértelos a plural (incluye al menos 2 irregulares)
+3. **Mayúsculas**: Escribe 5 oraciones sobre ti usando sustantivos propios (tu nombre, ciudad, país, día favorito)
+4. **Categorías**: Crea listas de 5 sustantivos para cada categoría: personas, lugares, cosas, animales
+5. **Transformación**: Convierte oraciones de singular a plural: "The child has a toy" → "The children have toys"
+</Aside>
+
