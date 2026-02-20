@@ -3,3 +3,335 @@ title: Adverbios
 description: Modifica verbos, adjetivos y otros adverbios.
 ---
 
+import { Tabs, TabItem, Aside } from '@astrojs/starlight/components';
+
+Los **adverbios** son palabras que modifican o describen verbos, adjetivos u otros adverbios. Son como modificadores de funciones en programación: agregan información sobre cómo, cuándo, dónde o con qué frecuencia ocurre algo. A diferencia de los adjetivos que describen sustantivos, los adverbios describen acciones y cualidades, haciendo tus oraciones más precisas y expresivas.
+
+---
+
+## Qué Modifican los Adverbios
+
+Los adverbios pueden modificar tres tipos de palabras distintas, y su posición cambia según lo que estén modificando.
+
+<Tabs>
+  <TabItem label="Verbos">
+
+Los adverbios modifican verbos para describir **cómo** se realiza la acción. Van **después del verbo** o **después del objeto** si hay uno.
+
+```javascript
+const modifyVerb = {
+  verb: "speaks",
+  adverb: "clearly",
+  result: "She speaks clearly"  // Ella habla claramente
+};
+```
+
+**Ejemplos:**
+
+- He drives **carefully** (Él maneja cuidadosamente)
+- They work **hard** (Ellos trabajan duro)
+- She sings **beautifully** (Ella canta hermosamente)
+- We arrived **late** (Llegamos tarde)
+- The baby sleeps **quietly** (El bebé duerme silenciosamente)
+
+</TabItem>
+
+  <TabItem label="Adjetivos">
+
+Los adverbios modifican adjetivos para indicar **el grado o intensidad** de la cualidad. Van **antes del adjetivo**.
+
+```javascript
+const modifyAdjective = {
+  adverb: "very",
+  adjective: "tall",
+  result: "He is very tall"  // Él es muy alto
+};
+```
+
+**Ejemplos:**
+
+- The movie was **extremely** good (La película fue extremadamente buena)
+- She is **very** smart (Ella es muy inteligente)
+- This coffee is **too** hot (Este café está demasiado caliente)
+- The test was **really** difficult (El examen fue realmente difícil)
+- I'm **quite** tired (Estoy bastante cansado)
+
+</TabItem>
+
+  <TabItem label="Otros Adverbios">
+
+Los adverbios pueden modificar otros adverbios para intensificar o cambiar su significado. Van **antes del adverbio** que modifican.
+
+```javascript
+const modifyAdverb = {
+  adverb1: "very",
+  adverb2: "quickly",
+  result: "She runs very quickly"  // Ella corre muy rápidamente
+};
+```
+
+**Ejemplos:**
+
+- He speaks **too** fast (Él habla demasiado rápido)
+- She works **very** hard (Ella trabaja muy duro)
+- They arrived **quite** late (Llegaron bastante tarde)
+- The car moves **extremely** slowly (El carro se mueve extremadamente lento)
+- I dance **really** well (Bailo realmente bien)
+
+</TabItem>
+</Tabs>
+
+---
+
+## Formación de Adverbios con -ly
+
+La mayoría de los adverbios de manera se forman agregando **-ly** al adjetivo. Es como aplicar una transformación a un valor en programación.
+
+<Tabs>
+  <TabItem label="Regla Básica">
+
+Agrega **-ly** al final del adjetivo.
+
+```javascript
+const basicRule = {
+  quick: "quickly",      // rápido → rápidamente
+  slow: "slowly",        // lento → lentamente
+  careful: "carefully",  // cuidadoso → cuidadosamente
+  quiet: "quietly",      // silencioso → silenciosamente
+  loud: "loudly"         // ruidoso → ruidosamente
+};
+```
+
+**Ejemplos:**
+
+- She walked **slowly** through the park (Ella caminó lentamente por el parque)
+- Please speak **quietly** in the library (Por favor habla silenciosamente en la biblioteca)
+- He answered **quickly** (Él respondió rápidamente)
+- They listened **carefully** (Escucharon cuidadosamente)
+
+</TabItem>
+
+  <TabItem label="Termina en -y">
+
+Si el adjetivo termina en **consonante + y**, cambia la **y** por **i** y agrega **-ly**.
+
+```javascript
+const yRule = {
+  happy: "happily",      // feliz → felizmente
+  easy: "easily",        // fácil → fácilmente
+  angry: "angrily",      // enojado → enojadamente
+  lazy: "lazily",        // perezoso → perezosamente
+  lucky: "luckily"       // afortunado → afortunadamente
+};
+```
+
+**Ejemplos:**
+
+- The children played **happily** (Los niños jugaron felizmente)
+- She solved the problem **easily** (Ella resolvió el problema fácilmente)
+- He spoke **angrily** (Él habló enojadamente)
+- **Luckily**, we arrived on time (Afortunadamente, llegamos a tiempo)
+
+</TabItem>
+
+  <TabItem label="Termina en -le">
+
+Si el adjetivo termina en **-le**, reemplaza la **e** con **y**.
+
+```javascript
+const leRule = {
+  simple: "simply",      // simple → simplemente
+  terrible: "terribly",  // terrible → terriblemente
+  possible: "possibly",  // posible → posiblemente
+  comfortable: "comfortably",  // cómodo → cómodamente
+  gentle: "gently"       // gentil → gentilmente
+};
+```
+
+**Ejemplos:**
+
+- He explained it **simply** (Él lo explicó simplemente)
+- The room is **terribly** cold (La habitación está terriblemente fría)
+- She **possibly** forgot (Ella posiblemente olvidó)
+- They sat **comfortably** (Se sentaron cómodamente)
+
+</TabItem>
+
+  <TabItem label="Termina en -ic">
+
+Si el adjetivo termina en **-ic**, agrega **-ally** (no solo -ly).
+
+```javascript
+const icRule = {
+  basic: "basically",        // básico → básicamente
+  automatic: "automatically",  // automático → automáticamente
+  dramatic: "dramatically",    // dramático → dramáticamente
+  scientific: "scientifically"  // científico → científicamente
+};
+```
+
+**Ejemplos:**
+
+- **Basically**, I agree with you (Básicamente, estoy de acuerdo contigo)
+- The door closes **automatically** (La puerta se cierra automáticamente)
+- The situation changed **dramatically** (La situación cambió dramáticamente)
+
+</TabItem>
+</Tabs>
+
+---
+
+## Adverbios Irregulares
+
+Algunos adverbios no siguen la regla de **-ly**. Estos son irregulares y debes memorizarlos porque su forma no cambia o cambia completamente.
+
+```javascript
+const irregularAdverbs = {
+  good: "well",          // bueno → bien
+  fast: "fast",          // rápido → rápido
+  hard: "hard",          // duro → duro
+  late: "late",          // tarde → tarde
+  early: "early"         // temprano → temprano
+};
+```
+
+<Aside type="caution" title="'Good' nunca es un adverbio">
+El adjetivo **good** (bueno) se convierte en el adverbio **well** (bien). Nunca uses "good" como adverbio. "He plays **well**" es correcto; "He plays **good**" está mal.
+</Aside>
+
+**Ejemplos:**
+
+- She speaks English **well** (Ella habla inglés bien)
+- He runs **fast** (Él corre rápido)
+- They work **hard** every day (Ellos trabajan duro todos los días)
+- We arrived **late** to class (Llegamos tarde a clase)
+- I wake up **early** on weekdays (Me despierto temprano entre semana)
+
+<Aside type="note" title="'Hard' vs 'Hardly'">
+**Hard** significa "duro/duramente". **Hardly** significa "apenas/casi no". Son palabras diferentes: "I work **hard**" (Trabajo duro) vs "I **hardly** work" (Apenas trabajo).
+</Aside>
+
+---
+
+## Adverbios de Frecuencia
+
+El presente simple va de la mano con adverbios que indican qué tan seguido ocurre algo. Estos adverbios se colocan **antes del verbo principal**, pero **después del verbo to be**.
+
+<Tabs>
+  <TabItem label="Alta Frecuencia">
+    ```javascript
+    const highFrequency = {
+      always: "100%",           // siempre
+      usually: "90%",           // usualmente
+      normally: "90%",          // normalmente
+      generally: "85%",         // generalmente
+      frequently: "70%",        // frecuentemente
+      often: "70%"              // a menudo
+    };
+    ```
+    
+    **Ejemplos:**
+    - I **am always** happy (Siempre estoy feliz)
+    - She **usually** drinks tea (Ella usualmente toma té)
+    - We **normally** eat together (Normalmente comemos juntos)
+    - They **frequently** travel (Ellos viajan frecuentemente)
+    - He **is often** late (Él a menudo llega tarde)
+  </TabItem>
+  
+  <TabItem label="Media Frecuencia">
+    ```javascript
+    const mediumFrequency = {
+      sometimes: "50%",         // a veces
+      occasionally: "30%"       // ocasionalmente
+    };
+    ```
+    
+    **Ejemplos:**
+    - I **am sometimes** tired (A veces estoy cansado)
+    - She **is occasionally** late (Ella es ocasionalmente tarde)
+    - We **sometimes** eat pizza (A veces comemos pizza)
+    - They **occasionally** visit us (Ocasionalmente nos visitan)
+  </TabItem>
+  
+  <TabItem label="Baja Frecuencia">
+    ```javascript
+    const lowFrequency = {
+      rarely: "15%",            // raramente
+      seldom: "10%",            // casi nunca
+      "hardly ever": "5%",      // casi nunca
+      never: "0%"               // nunca
+    };
+    ```
+    
+    **Ejemplos:**
+    - He **rarely** eats breakfast (Él raramente desayuna)
+    - I **seldom** watch TV (Casi nunca veo TV)
+    - She **is hardly ever** late (Ella casi nunca llega tarde)
+    - They **are never** late (Ellos nunca llegan tarde)
+  </TabItem>
+</Tabs>
+
+<Aside type="note" title="Posición especial con 'to be'">
+Con el verbo **to be**, el adverbio va **después**: "She is always happy" (Ella siempre está feliz).
+</Aside>
+
+---
+
+## Errores Comunes
+
+<Aside type="danger" title="Usar 'good' como adverbio">
+- He plays guitar **good** ⛔
+- He plays guitar **well** (Él toca guitarra bien) ✅
+- She cooks **good** ⛔
+- She cooks **well** (Ella cocina bien) ✅
+
+**Good** es adjetivo (bueno). **Well** es adverbio (bien). No confundas sus funciones.
+</Aside>
+
+<Aside type="danger" title="Olvidar cambiar -y por -i antes de -ly">
+- She smiled **happyly** ⛔
+- She smiled **happily** (Ella sonrió felizmente) ✅
+- He finished **easyly** ⛔
+- He finished **easily** (Él terminó fácilmente) ✅
+
+Cuando el adjetivo termina en consonante + y, cambia la y por i antes de agregar -ly.
+</Aside>
+
+<Aside type="danger" title="Poner adverbios de frecuencia en el lugar incorrecto">
+- I **am tired always** ⛔
+- I **am always tired** (Siempre estoy cansado) ✅
+- She **drinks always** coffee ⛔
+- She **always drinks** coffee (Ella siempre toma café) ✅
+
+Con to be, el adverbio va después. Con otros verbos, el adverbio va antes del verbo.
+</Aside>
+
+<Aside type="danger" title="Confundir 'hard' con 'hardly'">
+- I **hardly** work (casi no trabajo) vs I work **hard** (trabajo duro)
+- He **hardly** studies ⛔ (si quieres decir que estudia mucho)
+- He studies **hard** (Él estudia duro) ✅
+
+**Hard** significa duramente/duro. **Hardly** significa apenas/casi no. Son opuestos.
+</Aside>
+
+<Aside type="danger" title="Poner el adverbio entre el verbo y el objeto">
+- She speaks **fluently** English ⛔
+- She speaks English **fluently** (Ella habla inglés fluidamente) ✅
+- He drives **carefully** the car ⛔
+- He drives the car **carefully** (Él maneja el carro cuidadosamente) ✅
+
+El adverbio de manera va después del objeto, no entre el verbo y el objeto.
+</Aside>
+
+---
+
+## Práctica
+
+<Aside type="tip" title="Ejercicio diario">
+- Transforma 10 adjetivos en adverbios usando la regla -ly y crea oraciones con cada uno
+- Escribe 5 oraciones usando adverbios de frecuencia (varía entre to be y otros verbos)
+- Practica la diferencia: escribe 5 oraciones con adjetivos y transfórmalas usando adverbios
+- Lee un texto en inglés e identifica todos los adverbios, clasifícalos por tipo (frecuencia, manera, etc.)
+- Describe tu rutina diaria usando al menos 6 adverbios de frecuencia diferentes
+- Memoriza los 5 adverbios irregulares principales (well, fast, hard, late, early) y úsalos en contexto
+</Aside>
