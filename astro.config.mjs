@@ -32,12 +32,10 @@ export default defineConfig({
             },
             {
               label: "Gramática",
-              collapsed: true,
               autogenerate: { directory: "a1/02-grammar" },
             },
             {
               label: "Habilidades",
-              collapsed: true,
               autogenerate: { directory: "a1/03-skills" },
             },
           ],
@@ -48,17 +46,14 @@ export default defineConfig({
           items: [
             {
               label: "Fundamentos",
-              collapsed: true,
               autogenerate: { directory: "a2/01-basics" },
             },
             {
               label: "Gramática",
-              collapsed: true,
               autogenerate: { directory: "a2/02-grammar" },
             },
             {
               label: "Habilidades",
-              collapsed: true,
               autogenerate: { directory: "a2/03-skills" },
             },
           ],
@@ -69,17 +64,14 @@ export default defineConfig({
           items: [
             {
               label: "Fundamentos",
-              collapsed: true,
               autogenerate: { directory: "b1/01-basics" },
             },
             {
               label: "Gramática",
-              collapsed: true,
               autogenerate: { directory: "b1/02-grammar" },
             },
             {
               label: "Habilidades",
-              collapsed: true,
               autogenerate: { directory: "b1/03-skills" },
             },
           ],
@@ -90,17 +82,14 @@ export default defineConfig({
           items: [
             {
               label: "Fundamentos",
-              collapsed: true,
               autogenerate: { directory: "b2/01-basics" },
             },
             {
               label: "Gramática",
-              collapsed: true,
               autogenerate: { directory: "b2/02-grammar" },
             },
             {
               label: "Habilidades",
-              collapsed: true,
               autogenerate: { directory: "b2/03-skills" },
             },
           ],
@@ -111,17 +100,14 @@ export default defineConfig({
           items: [
             {
               label: "Fundamentos",
-              collapsed: true,
               autogenerate: { directory: "c1/01-basics" },
             },
             {
               label: "Gramática",
-              collapsed: true,
               autogenerate: { directory: "c1/02-grammar" },
             },
             {
               label: "Habilidades",
-              collapsed: true,
               autogenerate: { directory: "c1/03-skills" },
             },
           ],
@@ -132,12 +118,10 @@ export default defineConfig({
           items: [
             {
               label: "Gramática",
-              collapsed: true,
               autogenerate: { directory: "c2/02-grammar" },
             },
             {
               label: "Habilidades",
-              collapsed: true,
               autogenerate: { directory: "c2/03-skills" },
             },
           ],
