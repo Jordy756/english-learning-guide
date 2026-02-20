@@ -80,13 +80,28 @@ Los **adjetivos** en inglés van **antes** del sustantivo. Cuando usas varios ad
 ```javascript
 const adjectiveOrder = {
   opinion: ["beautiful", "nice", "ugly"],
+  // opinión: [hermoso, agradable, feo]
+
   size: ["big", "small", "large"],
+  // tamaño: [grande, pequeño, grande]
+
   age: ["old", "new", "young"],
+  // edad: [viejo, nuevo, joven]
+
   shape: ["round", "square", "thin"],
+  // forma: [redondo, cuadrado, delgado]
+
   color: ["red", "blue", "green"],
+  // color: [rojo, azul, verde]
+
   origin: ["American", "Mexican", "European"],
+  // origen: [americano, mexicano, europeo]
+
   material: ["wooden", "metal", "plastic"],
+  // material: [de madera, de metal, de plástico]
+
   purpose: ["sleeping (bag)", "cooking (pot)"]
+  // propósito: [para dormir (bolsa), para cocinar (olla)]
 };
 ```
 
@@ -118,8 +133,10 @@ Los adverbios de frecuencia van **antes del verbo principal**, pero **después d
 ```javascript
 const frequency = {
   adverbs: ["always", "usually", "often", "sometimes", "never"],
-  beforeVerb: "I always eat breakfast",
-  afterBe: "She is always happy"
+  // frecuencia: [siempre, usualmente, a menudo, a veces, nunca]
+
+  beforeVerb: "I always eat breakfast", // Siempre desayuno
+  afterBe: "She is usually happy"         // Ella usualmente está feliz
 };
 ```
 
@@ -144,8 +161,10 @@ Los adverbios de manera van **después del verbo u objeto**.
 ```javascript
 const manner = {
   adverbs: ["quickly", "slowly", "carefully"],
-  afterVerb: "She spoke quietly",
-  afterObject: "He drives the car slowly"
+  // manera: [rápidamente, lentamente, cuidadosamente]
+
+  afterVerb: "She spoke quietly", // Ella habló silenciosamente
+  afterObject: "He drives the car slowly" // Él maneja el carro lentamente
 };
 ```
 
@@ -168,9 +187,13 @@ Los adverbios de tiempo y lugar pueden ir al **principio** o al **final** de la 
 ```javascript
 const timePlace = {
   time: ["today", "yesterday", "tomorrow", "now"],
+  // tiempo: [hoy, ayer, mañana, ahora]
+
   place: ["here", "there", "everywhere"],
-  atStart: "Today I work",
-  atEnd: "I work today"
+  // lugar: [aquí, allí, en todas partes]
+  
+  atStart: "Today I work", // Hoy trabajo
+  atEnd: "I work today" // Trabajo hoy
 };
 ```
 
@@ -195,12 +218,15 @@ Los adverbios de **tiempo** (hoy, ayer, mañana, ahora) y **lugar** (aquí, all�
 
 ```javascript
 const enoughToo = {
-  enough: "big enough",
-  too: "too big"
+  enough: [
+    { position: "Después del adjetivo o adverbio" }
+  ],
+  too: [
+    { position: "Antes del adjetivo o adverbio" }
+  ]
 };
 ```
 
-**Enough** significa suficiente y va **después** del adjetivo o adverbio. **Too** significa demasiado y va **antes** del adjetivo o adverbio.
 
 **Ejemplos:**
 
