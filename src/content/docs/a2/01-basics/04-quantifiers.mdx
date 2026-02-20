@@ -1,5 +1,415 @@
 ---
 title: Cuantificadores
-description: Aprende much, many, few, little, some, any.
+description: Aprende a usar much, many, a lot of, a little, a few, too y enough.
 ---
 
+import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
+
+Los **cuantificadores** son palabras que indican cantidad sin especificar un número exacto. Son como funciones que toman un tipo de sustantivo (contable o incontable) y devuelven una expresión de cantidad apropiada. Dominar estos cuantificadores es esencial porque la elección incorrecta puede hacer que tu inglés suene poco natural, especialmente cuando trabajas con sustantivos incontables.
+
+---
+
+## Much vs Many
+
+**Much** y **many** significan "mucho/mucha/muchos/muchas", pero se usan con diferentes tipos de sustantivos.
+
+<Tabs>
+  <TabItem label="Many (Contables)">
+
+Usa **many** con sustantivos **contables en plural**. Se refiere a un número grande de elementos individuales.
+
+```javascript
+const manyUsage = {
+  type: "contables en plural",
+  examples: [
+    "many books",                 // muchos libros
+    "many people",                // muchas personas
+    "many cities",                // muchas ciudades
+    "many questions"              // muchas preguntas
+  ]
+};
+```
+
+**Ejemplos:**
+
+- How **many books** do you have? (¿Cuántos libros tienes?)
+- There are **many people** here (Hay muchas personas aquí)
+- She visited **many cities** (Ella visitó muchas ciudades)
+- I don't have **many friends** in this city (No tengo muchos amigos en esta ciudad)
+- Do you have **many questions**? (¿Tienes muchas preguntas?)
+
+</TabItem>
+
+  <TabItem label="Much (Incontables)">
+
+Usa **much** con sustantivos **incontables**. Se refiere a una gran cantidad de algo que no puedes contar.
+
+```javascript
+const muchUsage = {
+  type: "incontables",
+  examples: [
+    "much water",                 // mucha agua
+    "much time",                  // mucho tiempo
+    "much money",                 // mucho dinero
+    "much information"            // mucha información
+  ]
+};
+```
+
+**Ejemplos:**
+
+- How **much water** do you drink? (¿Cuánta agua tomas?)
+- I don't have **much time** (No tengo mucho tiempo)
+- She doesn't earn **much money** (Ella no gana mucho dinero)
+- There isn't **much information** available (No hay mucha información disponible)
+- Do you need **much help**? (¿Necesitas mucha ayuda?)
+
+</TabItem>
+</Tabs>
+
+<Aside type="note" title="Much es menos común en afirmativas">
+En oraciones afirmativas, es más natural usar **a lot of** en lugar de **much**. Decir "I have much time" suena muy formal o anticuado. Mejor: "I have a lot of time".
+</Aside>
+
+---
+
+## A Lot Of / Lots Of
+
+**A lot of** y **lots of** significan "muchos/muchas" y funcionan con **ambos tipos** de sustantivos. Son más versátiles y comunes en conversación.
+
+<Tabs>
+  <TabItem label="Con Contables">
+
+```javascript
+const lotOfCountable = {
+  singular: false,                // NO con singular
+  plural: true,                   // SÍ con plural
+  examples: [
+    "a lot of books",             // muchos libros
+    "lots of people",             // muchas personas
+    "a lot of cars",              // muchos carros
+    "lots of ideas"               // muchas ideas
+  ]
+};
+```
+
+**Ejemplos:**
+
+- I have **a lot of books** (Tengo muchos libros)
+- There are **lots of people** here (Hay muchas personas aquí)
+- She knows **a lot of languages** (Ella sabe muchos idiomas)
+- We visited **lots of museums** (Visitamos muchos museos)
+- He has **a lot of friends** (Él tiene muchos amigos)
+
+</TabItem>
+
+  <TabItem label="Con Incontables">
+
+```javascript
+const lotOfUncountable = {
+  noPlural: true,                 // sin forma plural
+  examples: [
+    "a lot of water",             // mucha agua
+    "lots of time",               // mucho tiempo
+    "a lot of money",             // mucho dinero
+    "lots of information"         // mucha información
+  ]
+};
+```
+
+**Ejemplos:**
+
+- I drink **a lot of water** (Tomo mucha agua)
+- We have **lots of time** (Tenemos mucho tiempo)
+- She makes **a lot of money** (Ella gana mucho dinero)
+- There's **lots of information** online (Hay mucha información en línea)
+- He needs **a lot of help** (Él necesita mucha ayuda)
+
+</TabItem>
+
+  <TabItem label="Diferencia entre ambos">
+
+**A lot of** y **lots of** son intercambiables en significado:
+
+```javascript
+const comparison = {
+  "a lot of": "más neutral",      // más neutro
+  "lots of": "más informal"       // más informal/conversacional
+};
+```
+
+**Ejemplos:**
+
+- **A lot of** students passed (Muchos estudiantes aprobaron) - neutral
+- **Lots of** students passed (Muchos estudiantes aprobaron) - más informal
+- I have **a lot of** work (Tengo mucho trabajo) - neutral
+- I have **lots of** work (Tengo mucho trabajo) - más informal
+
+</TabItem>
+</Tabs>
+
+---
+
+## A Little vs A Few
+
+**A little** y **a few** significan "un poco de/unos pocos", indicando una **cantidad pequeña**.
+
+<Tabs>
+  <TabItem label="A Few (Contables)">
+
+Usa **a few** con sustantivos **contables en plural** para indicar una **cantidad pequeña pero suficiente**.
+
+```javascript
+const aFewUsage = {
+  type: "countable plural",       // contables en plural
+  meaning: "algunos, unos pocos", // cantidad pequeña positiva
+  examples: [
+    "a few books",                // unos pocos libros
+    "a few friends",              // unos pocos amigos
+    "a few days",                 // unos días
+    "a few questions"             // unas preguntas
+  ]
+};
+```
+
+**Ejemplos:**
+
+- I have **a few books** to read (Tengo unos pocos libros para leer)
+- She has **a few friends** here (Ella tiene unos pocos amigos aquí)
+- Wait **a few minutes** (Espera unos minutos)
+- I have **a few questions** (Tengo unas preguntas)
+- We met **a few people** at the party (Conocimos a unas personas en la fiesta)
+
+</TabItem>
+
+  <TabItem label="A Little (Incontables)">
+
+Usa **a little** con sustantivos **incontables** para indicar una **cantidad pequeña pero suficiente**.
+
+```javascript
+const aLittleUsage = {
+  type: "uncountable",            // incontables
+  meaning: "un poco de",          // cantidad pequeña positiva
+  examples: [
+    "a little water",             // un poco de agua
+    "a little time",              // un poco de tiempo
+    "a little money",             // un poco de dinero
+    "a little information"        // un poco de información
+  ]
+};
+```
+
+**Ejemplos:**
+
+- I need **a little water** (Necesito un poco de agua)
+- We have **a little time** (Tenemos un poco de tiempo)
+- She has **a little money** saved (Ella tiene un poco de dinero ahorrado)
+- There's **a little milk** left (Queda un poco de leche)
+- I speak **a little English** (Hablo un poco de inglés)
+
+</TabItem>
+
+  <TabItem label="Sin 'A': Few vs Little">
+
+**Sin el artículo "a"**, el significado cambia a una connotación más **negativa** (casi nada):
+
+```javascript
+const withoutA = {
+  "a few": "algunos (positivo)",     // algunos, suficiente
+  "few": "pocos (negativo)",         // casi ninguno, insuficiente
+  "a little": "un poco (positivo)",  // algo, suficiente
+  "little": "poco (negativo)"        // casi nada, insuficiente
+};
+```
+
+**Ejemplos:**
+
+- I have **a few friends** (Tengo algunos amigos) - positivo
+- I have **few friends** (Tengo pocos amigos) - negativo, casi ninguno
+- We have **a little time** (Tenemos un poco de tiempo) - positivo
+- We have **little time** (Tenemos poco tiempo) - negativo, casi nada
+
+</TabItem>
+</Tabs>
+
+<Aside type="caution" title="La diferencia sutil entre 'a few/little' y 'few/little'">
+El artículo **"a"** hace una gran diferencia. **A few/a little** indica que hay **algo suficiente** (tono positivo). Sin "a", **few/little** indica una cantidad **insuficiente** o **escasa** (tono negativo).
+</Aside>
+
+---
+
+## Too Much / Too Many / Enough
+
+Estos cuantificadores expresan **exceso** (too much/many) o **suficiencia** (enough).
+
+<Tabs>
+  <TabItem label="Too Many (Contables)">
+
+**Too many** significa "demasiados/demasiadas" y se usa con sustantivos **contables en plural**.
+
+```javascript
+const tooManyUsage = {
+  meaning: "demasiados (exceso)",  // cantidad excesiva
+  type: "countable plural",        // contables en plural
+  examples: [
+    "too many books",              // demasiados libros
+    "too many people",             // demasiadas personas
+    "too many questions",          // demasiadas preguntas
+    "too many cars"                // demasiados carros
+  ]
+};
+```
+
+**Ejemplos:**
+
+- There are **too many people** here (Hay demasiadas personas aquí)
+- I have **too many books** (Tengo demasiados libros)
+- You ask **too many questions** (Haces demasiadas preguntas)
+- There's **too many cars** on the road (Hay demasiados carros en la carretera)
+- She has **too many things** to do (Ella tiene demasiadas cosas que hacer)
+
+</TabItem>
+
+  <TabItem label="Too Much (Incontables)">
+
+**Too much** significa "demasiado/demasiada" y se usa con sustantivos **incontables**.
+
+```javascript
+const tooMuchUsage = {
+  meaning: "demasiado (exceso)",   // cantidad excesiva
+  type: "uncountable",             // incontables
+  examples: [
+    "too much water",              // demasiada agua
+    "too much time",               // demasiado tiempo
+    "too much money",              // demasiado dinero
+    "too much noise"               // demasiado ruido
+  ]
+};
+```
+
+**Ejemplos:**
+
+- There's **too much noise** here (Hay demasiado ruido aquí)
+- I spend **too much time** online (Paso demasiado tiempo en línea)
+- This costs **too much money** (Esto cuesta demasiado dinero)
+- You drink **too much coffee** (Tomas demasiado café)
+- She has **too much work** (Ella tiene demasiado trabajo)
+
+</TabItem>
+
+  <TabItem label="Enough (Ambos)">
+
+**Enough** significa "suficiente/suficientes" y funciona con **ambos tipos** de sustantivos.
+
+```javascript
+const enoughUsage = {
+  meaning: "suficiente",           // cantidad adecuada
+  withCountable: "enough books",   // suficientes libros
+  withUncountable: "enough water", // suficiente agua
+  position: "before noun"          // antes del sustantivo
+};
+```
+
+**Ejemplos:**
+
+- Do we have **enough chairs**? (¿Tenemos suficientes sillas?)
+- There aren't **enough people** (No hay suficientes personas)
+- I have **enough friends** (Tengo suficientes amigos)
+- Is there **enough water**? (¿Hay suficiente agua?)
+- We don't have **enough time** (No tenemos suficiente tiempo)
+- She has **enough money** (Ella tiene suficiente dinero)
+
+</TabItem>
+</Tabs>
+
+<Aside type="note" title="Enough también se usa con adjetivos y verbos">
+**Enough** no solo se usa con sustantivos. También puede ir después de adjetivos ("good enough" - suficientemente bueno) o verbos ("I sleep enough" - duermo suficiente). Pero con sustantivos siempre va **antes**: "enough money" (no "money enough").
+</Aside>
+
+---
+
+## Errores Comunes
+
+<Aside type="danger" title="Confundir much con many en contables plurales">
+
+- How much books do you have? ⛔
+- I don't have much friends ⛔
+- She reads much novels ⛔
+- How **many books** do you have? (¿Cuántos libros tienes?) ✅
+- I don't have **many friends** (No tengo muchos amigos) ✅
+- She reads **many novels** (Ella lee muchas novelas) ✅
+
+Usa **many** con contables plurales, **much** con incontables.
+
+</Aside>
+
+<Aside type="danger" title="Usar much en afirmativas suena poco natural">
+
+- I have much money ⛔
+- She drinks much water ⛔
+- We have much time ⛔
+- I have **a lot of money** (Tengo mucho dinero) ✅
+- She drinks **a lot of water** (Ella toma mucha agua) ✅
+- We have **a lot of time** (Tenemos mucho tiempo) ✅
+
+En afirmativas, usa **a lot of** en lugar de **much**.
+
+</Aside>
+
+<Aside type="danger" title="Confundir a few con a little">
+
+- I have a little friends ⛔
+- She needs a few water ⛔
+- We have a little books ⛔
+- I have **a few friends** (Tengo unos pocos amigos) ✅
+- She needs **a little water** (Ella necesita un poco de agua) ✅
+- We have **a few books** (Tenemos unos pocos libros) ✅
+
+**A few** = contables | **A little** = incontables
+
+</Aside>
+
+<Aside type="danger" title="Olvidar que 'enough' va antes del sustantivo">
+
+- We don't have money enough ⛔
+- There isn't time enough ⛔
+- Do you have chairs enough? ⛔
+- We don't have **enough money** (No tenemos suficiente dinero) ✅
+- There isn't **enough time** (No hay suficiente tiempo) ✅
+- Do you have **enough chairs**? (¿Tienes suficientes sillas?) ✅
+
+Con sustantivos, **enough** siempre va **antes**.
+
+</Aside>
+
+<Aside type="danger" title="Usar too many/much sin el too">
+
+- I have many problems ⛔ (queriendo decir "demasiados")
+- There is much noise ⛔ (queriendo decir "demasiado")
+- I have **too many problems** (Tengo demasiados problemas) ✅
+- There is **too much noise** (Hay demasiado ruido) ✅
+
+Si quieres decir "muchos" sin exceso:
+
+- I have **many problems** (Tengo muchos problemas) ✅
+- There is **a lot of noise** (Hay mucho ruido) ✅
+
+**Too** convierte "mucho" en "demasiado" (exceso negativo).
+
+</Aside>
+
+---
+
+## Práctica
+
+<Aside type="tip" title="Ejercicio diario">
+
+Practica los cuantificadores con estas actividades:
+
+1. Haz una lista de compras usando los cuantificadores correctos (a lot of, a few, a little, enough, too many/much)
+2. Describe tu rutina mencionando cantidades: "I drink a lot of coffee", "I have a few hours free", "I don't have much time"
+3. Pregunta cantidades a alguien: "How many books do you read?", "How much water do you drink?"
+4. Escribe una receta simple usando cuantificadores: "Add a little salt", "Use many tomatoes", "Don't add too much oil"
+5. Identifica errores en textos donde veas much/many, a few/a little, too/enough y corrige mentalmente
+
+</Aside>
