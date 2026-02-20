@@ -19,9 +19,9 @@ Los sustantivos **contables** son cosas que puedes contar individualmente. Tiene
 ```javascript
 const countableNouns = {
   characteristics: {
-    usesArticles: true,        // usa a/an con singular
-    hasPlural: true,           // tiene forma plural (-s, -es)
-    usesNumbers: true,         // acepta números (one, two, three)
+    usesArticles: true,           // usa a/an con singular
+    hasPlural: true,              // tiene forma plural (-s, -es)
+    usesNumbers: true,            // acepta números (one, two, three)
     quantifiers: ["many", "few"]  // usa many (muchos) y few (pocos)
   },
   examples: [
@@ -51,11 +51,11 @@ Los sustantivos **incontables** son materiales, líquidos, o conceptos que **no 
 ```javascript
 const uncountableNouns = {
   characteristics: {
-    usesArticles: false,       // NO usa a/an directamente
-    hasPlural: false,          // NO tiene forma plural
-    usesNumbers: false,        // NO acepta números directamente
+    usesArticles: false,              // NO usa a/an directamente
+    hasPlural: false,                 // NO tiene forma plural
+    usesNumbers: false,               // NO acepta números directamente
     quantifiers: ["much", "little"],  // usa much (mucho) y little (poco)
-    needsContainers: true      // necesita contenedores para contar
+    needsContainers: true             // necesita contenedores para contar
   },
   examples: [
     "water",        // agua
@@ -100,17 +100,17 @@ Los artículos **a/an** (un/una) solo se usan con sustantivos **contables singul
   <TabItem label="Contables">
 
 ```javascript
-const withArticles = {
-  incorrect: [
-    "a water",             // un agua (incorrecto)
-    "an information",      // una información (incorrecto)
-    "a money",             // un dinero (incorrecto)
-    "an advice"            // un consejo (incorrecto)
-  ],
-  correct: [
-    "a book",              // un libro
-    "an apple",            // una manzana
+const countableWithArticles = {
+  withA: [
+    "a book",              // un libro (consonante)
     "a car",               // un carro
+    "a sandwich",          // un sándwich
+    "a computer"           // una computadora
+  ],
+  withAn: [
+    "an apple",            // una manzana (vocal)
+    "an elephant",         // un elefante
+    "an umbrella",         // un paraguas
     "an idea"              // una idea
   ]
 };
@@ -125,30 +125,37 @@ const withArticles = {
 
 </TabItem>
 
-  <TabItem label="Incontables ⛔">
+  <TabItem label="Incontables">
 
 ```javascript
-const withoutArticles = {
-  incorrect: [
-    "a water",             // un agua (incorrecto)
-    "an information",      // una información (incorrecto)
-    "a money",             // un dinero (incorrecto)
-    "an advice"            // un consejo (incorrecto)
+const uncountableNoArticles = {
+  noArticle: [
+    "water",                  // agua (sin artículo)
+    "information",            // información
+    "money",                  // dinero
+    "advice"                  // consejo
   ],
-  correct: [
-    "water",               // agua (sin artículo)
-    "some water",          // algo de agua (con cuantificador)
-    "a glass of water"     // un vaso de agua (con contenedor)
+  useQuantifier: [
+    "some water",             // algo de agua
+    "some information",       // algo de información
+    "some money",             // algo de dinero
+    "some advice"             // algún consejo
+  ],
+  useContainer: [
+    "a glass of water",       // un vaso de agua
+    "a piece of information", // un dato
+    "an item of advice"       // un consejo
+    "an item of advice"       // un consejo
   ]
 };
 ```
 
 **Ejemplos:**
 
-- I need **water** ⛔ (not "a water")
-- I need **some water** ✅ (Necesito agua)
-- She wants **information** ⛔ (not "an information")  
-- She wants **some information** ✅ (Ella quiere información)
+- I need **water** (not "a water")
+- I need **some water** (Necesito agua)
+- She wants **information** (not "an information")  
+- She wants **some information** (Ella quiere información)
 
 </TabItem>
 </Tabs>
