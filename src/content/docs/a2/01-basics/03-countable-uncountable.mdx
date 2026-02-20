@@ -18,26 +18,21 @@ Los sustantivos **contables** son cosas que puedes contar individualmente. Tiene
 
 ```javascript
 const countableNouns = {
-  singular: "a book",      // un libro
-  plural: "two books",     // dos libros
-  canCount: true,          // puedes contar: 1, 2, 3...
-  hasPlural: true          // tiene forma plural
+  characteristics: {
+    usesArticles: true,        // usa a/an con singular
+    hasPlural: true,           // tiene forma plural (-s, -es)
+    usesNumbers: true,         // acepta números (one, two, three)
+    quantifiers: ["many", "few"]  // usa many (muchos) y few (pocos)
+  },
+  examples: [
+    "book",      // libro
+    "apple",     // manzana
+    "person",    // persona
+    "car",       // carro
+    "idea"       // idea
+  ]
 };
 ```
-
-**Características:**
-- Puedes usar **a/an** con la forma singular
-- Tienen forma **plural** (agrega -s, -es, o forma irregular)
-- Puedes usar **números** (one, two, three...)
-- Puedes usar **many** (muchos) y **few** (pocos)
-
-**Categorías comunes:**
-
-- **Personas**: person, child, friend, student, teacher, doctor
-- **Animales**: dog, cat, bird, fish, horse, lion
-- **Cosas**: book, car, phone, chair, table, pen
-- **Lugares**: city, country, house, school, store, park
-- **Comida**: apple, egg, cookie, sandwich, tomato, potato
 
 **Ejemplos:**
 
@@ -55,27 +50,22 @@ Los sustantivos **incontables** son materiales, líquidos, o conceptos que **no 
 
 ```javascript
 const uncountableNouns = {
-  form: "water",           // agua
-  canCount: false,         // no puedes decir "one water, two waters"
-  hasPlural: false,        // no existe "waters" (en este contexto)
-  needsContainer: true     // usa "a glass of water"
+  characteristics: {
+    usesArticles: false,       // NO usa a/an directamente
+    hasPlural: false,          // NO tiene forma plural
+    usesNumbers: false,        // NO acepta números directamente
+    quantifiers: ["much", "little"],  // usa much (mucho) y little (poco)
+    needsContainers: true      // necesita contenedores para contar
+  },
+  examples: [
+    "water",        // agua
+    "information",  // información
+    "money",        // dinero
+    "furniture",    // muebles
+    "advice"        // consejo
+  ]
 };
 ```
-
-**Características:**
-- **NO** puedes usar **a/an** directamente
-- **NO** tienen forma plural
-- **NO** puedes usar números directamente
-- Usa **much** (mucho) y **little** (poco)
-- Necesitas **contenedores o unidades** para contar
-
-**Categorías comunes:**
-
-- **Líquidos**: water, milk, juice, coffee, tea, oil, wine
-- **Alimentos**: bread, rice, pasta, meat, cheese, butter, sugar
-- **Materiales**: wood, paper, glass, metal, plastic, cotton
-- **Abstractos**: information, advice, money, time, work, music
-- **Colectivos**: furniture, luggage, equipment, traffic, weather
 
 **Ejemplos:**
 
@@ -86,7 +76,15 @@ const uncountableNouns = {
 - He gave me good **advice** (Él me dio buen consejo)
 
 <Aside type="caution" title="Incontables que confunden a hispanohablantes">
-Estos son **incontables** en inglés pero contables en español: **information** (información), **advice** (consejo), **furniture** (muebles), **luggage** (equipaje), **homework** (tarea), **bread** (pan), **rice** (arroz).
+Estos son **incontables** en inglés pero contables en español: 
+- **Information** (información)
+- **Advice** (consejo)
+- **Furniture** (muebles)
+- **Luggage** (equipaje)
+- **Homework** (tarea)
+- **Bread** (pan)
+- **Rice** (arroz).
+- **Hair** (cabello)
 </Aside>
 
 </TabItem>
@@ -230,7 +228,7 @@ Para contar sustantivos incontables, usa **contenedores, porciones o unidades**.
 
 ```javascript
 const containers = {
-  pattern: "a/an + container + of + uncountable noun",
+  pattern: "a/an + contenedor + of + incontable sustantivo",
   example: "a glass of water"  // un vaso de agua
 };
 ```
@@ -238,139 +236,141 @@ const containers = {
 <Tabs>
   <TabItem label="Bebidas">
 
-**Con líquidos y bebidas:**
+```javascript
+const drinkContainers = {
+  glass: "a glass of",       // un vaso de
+  cup: "a cup of",           // una taza de
+  mug: "a mug of",           // una taza grande de
+  bottle: "a bottle of",     // una botella de
+  can: "a can of",           // una lata de
+  carton: "a carton of",     // un cartón de
+  jug: "a jug of"            // una jarra de
+};
+```
 
-- **a glass of** water (un vaso de agua)
-- **a glass of** milk (un vaso de leche)
-- **a glass of** juice (un vaso de jugo)
-- **a glass of** wine (una copa de vino)
-- **a cup of** coffee (una taza de café)
-- **a cup of** tea (una taza de té)
-- **a cup of** hot chocolate (una taza de chocolate caliente)
-- **a bottle of** water (una botella de agua)
-- **a bottle of** milk (una botella de leche)
-- **a bottle of** juice (una botella de jugo)
-- **a bottle of** wine (una botella de vino)
-- **a bottle of** beer (una botella de cerveza)
-- **a bottle of** soda (una botella de refresco)
-- **a can of** soda (una lata de refresco)
-- **a can of** beer (una lata de cerveza)
-- **a can of** juice (una lata de jugo)
-- **a mug of** coffee (una taza grande de café)
-- **a mug of** tea (una taza grande de té)
-- **a carton of** milk (un cartón de leche)
-- **a carton of** juice (un cartón de jugo)
-- **a jug of** water (una jarra de agua)
-- **a jug of** lemonade (una jarra de limonada)
+**Ejemplos:**
+
+- **A glass of** water (Un vaso de agua)
+- **A cup of** coffee (Una taza de café)
+- **A bottle of** milk (Una botella de leche)
+- **A can of** soda (Una lata de refresco)
+- **A carton of** juice (Un cartón de jugo)
 
 </TabItem>
 
   <TabItem label="Comida">
 
-**Con alimentos sólidos y líquidos:**
+```javascript
+const foodContainers = {
+  bowl: "a bowl of",         // un tazón de
+  plate: "a plate of",       // un plato de
+  slice: "a slice of",       // una rebanada de
+  piece: "a piece of",       // un pedazo de
+  loaf: "a loaf of",         // una barra de
+  bar: "a bar of",           // una barra de
+  box: "a box of",           // una caja de
+  bag: "a bag of",           // una bolsa de
+  packet: "a packet of"      // un paquete de
+};
+```
 
-- **a bowl of** rice (un tazón de arroz)
-- **a bowl of** soup (un tazón de sopa)
-- **a bowl of** cereal (un tazón de cereal)
-- **a bowl of** pasta (un tazón de pasta)
-- **a bowl of** salad (un tazón de ensalada)
-- **a plate of** food (un plato de comida)
-- **a plate of** pasta (un plato de pasta)
-- **a plate of** rice (un plato de arroz)
-- **a slice of** bread (una rebanada de pan)
-- **a slice of** pizza (una rebanada de pizza)
-- **a slice of** cake (una rebanada de pastel)
-- **a slice of** cheese (una rebanada de queso)
-- **a slice of** ham (una rebanada de jamón)
-- **a slice of** toast (una rebanada de pan tostado)
-- **a piece of** bread (un pedazo de pan)
-- **a piece of** cake (un pedazo de pastel)
-- **a piece of** cheese (un pedazo de queso)
-- **a piece of** chicken (un pedazo de pollo)
-- **a piece of** meat (un pedazo de carne)
-- **a piece of** fish (un pedazo de pescado)
-- **a loaf of** bread (una barra de pan)
-- **a bar of** chocolate (una barra de chocolate)
-- **a bar of** soap (una barra de jabón)
-- **a box of** cereal (una caja de cereal)
-- **a box of** cookies (una caja de galletas)
-- **a box of** chocolates (una caja de chocolates)
-- **a bag of** rice (una bolsa de arroz)
-- **a bag of** sugar (una bolsa de azúcar)
-- **a bag of** flour (una bolsa de harina)
-- **a bag of** chips (una bolsa de papas fritas)
-- **a packet of** sugar (un paquete de azúcar)
-- **a packet of** salt (un paquete de sal)
-- **a spoonful of** sugar (una cucharada de azúcar)
-- **a spoonful of** honey (una cucharada de miel)
-- **a tablespoon of** oil (una cucharada de aceite)
-- **a teaspoon of** salt (una cucharadita de sal)
+**Ejemplos:**
+
+- **A bowl of** rice (Un tazón de arroz)
+- **A slice of** bread (Una rebanada de pan)
+- **A piece of** cake (Un pedazo de pastel)
+- **A loaf of** bread (Una barra de pan)
+- **A bag of** sugar (Una bolsa de azúcar)
 
 </TabItem>
 
-  <TabItem label="Abstractos e Información">
+  <TabItem label="Porciones">
 
-**Con conceptos abstractos:**
+```javascript
+const portionUnits = {
+  spoonful: "a spoonful of",         // una cucharada de
+  tablespoon: "a tablespoon of",     // una cucharada de
+  teaspoon: "a teaspoon of",         // una cucharadita de
+  pinch: "a pinch of",               // una pizca de
+  drop: "a drop of",                 // una gota de
+  lump: "a lump of"                  // un terrón de
+};
+```
 
-- **a piece of** advice (un consejo)
-- **a piece of** information (un dato/una información)
-- **a piece of** news (una noticia)
-- **a piece of** evidence (una evidencia)
-- **a piece of** furniture (un mueble)
-- **a piece of** equipment (un equipo)
-- **a piece of** luggage (una pieza de equipaje)
-- **a piece of** paper (un papel/una hoja)
-- **a piece of** work (un trabajo/una obra)
-- **a piece of** music (una pieza musical)
-- **a bit of** information (un poco de información)
-- **a bit of** advice (un pequeño consejo)
-- **a bit of** luck (un poco de suerte)
-- **a bit of** help (un poco de ayuda)
-- **an item of** clothing (una prenda de ropa)
-- **an item of** furniture (un mueble)
-- **an item of** luggage (una pieza de equipaje)
-- **an article of** clothing (un artículo de ropa)
-- **a sheet of** paper (una hoja de papel)
-- **a drop of** water (una gota de agua)
-- **a drop of** rain (una gota de lluvia)
-- **a grain of** rice (un grano de arroz)
-- **a grain of** sand (un grano de arena)
-- **a blade of** grass (una brizna de hierba)
-- **a lump of** sugar (un terrn de azúcar)
-- **a pinch of** salt (una pizca de sal)
+**Ejemplos:**
+
+- **A spoonful of** sugar (Una cucharada de azúcar)
+- **A tablespoon of** oil (Una cucharada de aceite)
+- **A teaspoon of** salt (Una cucharadita de sal)
+- **A pinch of** salt (Una pizca de sal)
+- **A drop of** water (Una gota de agua)
 
 </TabItem>
 
-  <TabItem label="Materiales y Otros">
+  <TabItem label="Conceptos Abstractos">
 
-**Con materiales y otras sustancias:**
+```javascript
+const abstractUnits = {
+  piece: "a piece of",       // un pedazo de / una pieza de
+  bit: "a bit of",           // un poco de
+  item: "an item of",        // un artículo de
+  sheet: "a sheet of",       // una hoja de
+  article: "an article of"   // un artículo de
+};
+```
 
-- **a sheet of** paper (una hoja de papel)
-- **a piece of** paper (un pedazo de papel)
-- **a piece of** wood (un pedazo de madera)
-- **a piece of** metal (un pedazo de metal)
-- **a piece of** glass (un pedazo de vidrio)
-- **a piece of** cloth (un pedazo de tela)
-- **a roll of** paper (un rollo de papel)
-- **a roll of** toilet paper (un rollo de papel higiénico)
-- **a tube of** toothpaste (un tubo de pasta de dientes)
-- **a bar of** soap (una barra de jabón)
-- **a bottle of** shampoo (una botella de champú)
-- **a jar of** honey (un frasco de miel)
-- **a jar of** jam (un frasco de mermelada)
-- **a can of** paint (una lata de pintura)
-- **a bucket of** water (un balde de agua)
-- **a bucket of** sand (un balde de arena)
-- **a pile of** dirt (un montón de tierra)
-- **a pile of** sand (un montón de arena)
-- **a pile of** snow (un montón de nieve)
-- **a liter of** water (un litro de agua)
-- **a liter of** milk (un litro de leche)
-- **a gallon of** water (un galón de agua)
-- **a gallon of** gas (un galón de gasolina)
-- **a kilo of** rice (un kilo de arroz)
-- **a pound of** sugar (una libra de azúcar)
-- **a ton of** sand (una tonelada de arena)
+**Ejemplos:**
+
+- **A piece of** advice (Un consejo)
+- **A piece of** information (Una información/dato)
+- **A piece of** furniture (Un mueble)
+- **A bit of** help (Un poco de ayuda)
+- **An item of** clothing (Una prenda de ropa)
+
+</TabItem>
+
+  <TabItem label="Materiales">
+
+```javascript
+const materialUnits = {
+  sheet: "a sheet of",       // una hoja de
+  roll: "a roll of",         // un rollo de
+  tube: "a tube of",         // un tubo de
+  jar: "a jar of",           // un frasco de
+  pile: "a pile of",         // un montón de
+  bucket: "a bucket of"      // un balde de
+};
+```
+
+**Ejemplos:**
+
+- **A sheet of** paper (Una hoja de papel)
+- **A roll of** toilet paper (Un rollo de papel higiénico)
+- **A tube of** toothpaste (Un tubo de pasta de dientes)
+- **A jar of** honey (Un frasco de miel)
+- **A bucket of** water (Un balde de agua)
+
+</TabItem>
+
+  <TabItem label="Grupos y Cantidades">
+
+```javascript
+const groupUnits = {
+  bunch: "a bunch of",       // un manojo de / un racimo de
+  pile: "a pile of",         // un montón de
+  heap: "a heap of",         // un montón de
+  load: "a load of",         // una carga de
+  ton: "a ton of"            // una tonelada de
+};
+```
+
+**Ejemplos:**
+
+- **A bunch of** grapes (Un racimo de uvas)
+- **A bunch of** flowers (Un ramo de flores)
+- **A pile of** books (Un montón de libros)
+- **A heap of** clothes (Un montón de ropa)
+- **A load of** laundry (Una carga de ropa)
 
 </TabItem>
 </Tabs>
