@@ -1,0 +1,331 @@
+---
+title: Pasado Continuo
+description: Describe acciones que estaban en progreso en el pasado.
+---
+
+import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
+
+El pasado continuo (past continuous) es como una foto instantánea de un proceso en ejecución: captura acciones que estaban ocurriendo en un momento específico del pasado. Se forma con **was/were + verbo-ing**, y es esencial para describir contextos, acciones interrumpidas, y situaciones temporales que estaban en progreso en el pasado.
+
+---
+
+## Estructura del Pasado Continuo
+
+El pasado continuo se forma con el pasado del verbo to be (was/were) + el verbo en forma -ing. Las reglas para formar el **-ing** son las mismas que en el [presente continuo](./05-present-continuous.mdx#formación-del--ing): añadir -ing, quitar la -e final, doblar consonante, o cambiar -ie por -ying según corresponda.
+
+<Tabs>
+  <TabItem label="Afirmativa">
+    ```javascript
+    const affirmative = {
+      structure: "Subject + was/were + verb-ing",
+      examples: [
+        "I was working",               // Yo estaba trabajando
+        "You were studying",           // Estabas estudiando
+        "He was sleeping",             // Él estaba durmiendo
+        "She was cooking",             // Ella estaba cocinando
+        "It was raining",              // Estaba lloviendo
+        "We were watching TV",         // Estábamos viendo TV
+        "They were playing soccer"     // Estaban jugando fútbol
+      ]
+    };
+    ```
+
+    **Ejemplos**
+    
+    - I **was reading** a book at 8 PM (Estaba leyendo un libro a las 8 PM)
+    - She **was working** on the project yesterday (Estaba trabajando en el proyecto ayer)
+    - We **were having** dinner when you called (Estábamos cenando cuando llamaste)
+    - They **were traveling** around Europe (Estaban viajando por Europa)
+    - It **was snowing** all morning (Estuvo nevando toda la mañana)
+  </TabItem>
+  
+  <TabItem label="Negativa">
+    ```javascript
+    const negative = {
+      structure: "Subject + wasn't/weren't + verb-ing",
+      contractions: {
+        "was not": "wasn't",
+        "were not": "weren't"
+      },
+      examples: [
+        "I wasn't working",            // No estaba trabajando
+        "You weren't studying",        // No estabas estudiando
+        "He wasn't sleeping",          // Él no estaba durmiendo
+        "She wasn't cooking",          // Ella no estaba cocinando
+        "It wasn't raining",           // No estaba lloviendo
+        "We weren't watching TV",      // No estábamos viendo TV
+        "They weren't playing"         // No estaban jugando
+      ]
+    };
+    ```
+
+    **Ejemplos**
+    
+    - I **wasn't paying** attention (No estaba prestando atención)
+    - She **wasn't feeling** well yesterday (No se estaba sintiendo bien ayer)
+    - We **weren't expecting** visitors (No estábamos esperando visitas)
+    - They **weren't listening** to the teacher (No estaban escuchando al profesor)
+    - It **wasn't working** properly (No estaba funcionando bien)
+  </TabItem>
+  
+  <TabItem label="Pregunta">
+    ```javascript
+    const question = {
+      structure: "Was/Were + subject + verb-ing + ?",
+      examples: [
+        "Was I dreaming?",             // ¿Estaba soñando?
+        "Were you working?",           // ¿Estabas trabajando?
+        "Was he sleeping?",            // ¿Estaba él durmiendo?
+        "Was she cooking?",            // ¿Estaba ella cocinando?
+        "Was it raining?",             // ¿Estaba lloviendo?
+        "Were we making noise?",       // ¿Estábamos haciendo ruido?
+        "Were they playing?"           // ¿Estaban jugando?
+      ]
+    };
+    ```
+
+    **Ejemplos**
+    
+    - **Was** she **studying** at the library? (¿Estaba ella estudiando en la biblioteca?)
+    - **Were** you **watching** TV at 9 PM? (¿Estabas viendo TV a las 9 PM?)
+    - **Were** they **waiting** for us? (¿Estaban esperándonos?)
+    - **Was** it **snowing** when you left? (¿Estaba nevando cuando te fuiste?)
+    - **Was** he **working** late last night? (¿Estaba trabajando hasta tarde anoche?)
+
+    <Aside type="tip" title="Respuestas cortas">
+    - Yes, I **was** / No, I **wasn't**
+    - Yes, she **was** / No, she **wasn't**
+    - Yes, they **were** / No, they **weren't**
+    </Aside>
+  </TabItem>
+</Tabs>
+
+---
+
+## Expresiones de Tiempo
+
+<Tabs>
+  <TabItem label="Hora específica">
+    ```javascript
+    const specificTime = [
+      "at 8 PM",                 // a las 8 PM
+      "at that moment",          // en ese momento
+      "at that time",            // en ese momento
+      "at midnight",             // a medianoche
+      "yesterday at 3 PM"        // ayer a las 3 PM
+    ];
+    ```
+
+    **Ejemplos**
+    
+    - I **was studying** **at 8 PM** (Estaba estudiando a las 8 PM)
+    - She **was sleeping** **at that moment** (Estaba durmiendo en ese momento)
+    - We **were eating** **at midnight** (Estábamos comiendo a medianoche)
+  </TabItem>
+  
+  <TabItem label="While / When">
+    ```javascript
+    const temporal = {
+      while: "acción continua simultánea",
+      when: "acción simple que interrumpe"
+    };
+    ```
+
+    **Ejemplos**
+    
+    - I was reading **while** she was cooking (Leía mientras ella cocinaba)
+    - They were playing **when** it started raining (Jugaban cuando empezó a llover)
+    - **While** I was working, he called me (Mientras trabajaba, me llamó)
+    - She was driving **when** the accident happened (Manejaba cuando ocurrió el accidente)
+  </TabItem>
+  
+  <TabItem label="Períodos pasados">
+    ```javascript
+    const periods = [
+      "all morning",             // toda la mañana
+      "all day yesterday",       // todo el día ayer
+      "all night",               // toda la noche
+      "the whole afternoon",     // toda la tarde
+      "during the meeting"       // durante la reunión
+    ];
+    ```
+
+    **Ejemplos**
+    
+    - It **was raining** **all morning** (Estuvo lloviendo toda la mañana)
+    - I **was working** **all day yesterday** (Estuve trabajando todo el día ayer)
+    - She **was studying** **all night** (Estuvo estudiando toda la noche)
+    - They **were talking** **during the meeting** (Estaban hablando durante la reunión)
+  </TabItem>
+</Tabs>
+
+---
+
+## Usos del Pasado Continuo
+
+El pasado continuo se combina frecuentemente con el pasado simple para crear narrativas ricas y contextuales. Aquí están los patrones más importantes:
+
+<Tabs>
+  <TabItem label="Interrupción">
+    Cuando una acción en progreso es interrumpida por otra acción más corta.
+
+    ```javascript
+    const interruption = {
+      // Opción 1: Continuo + when + Simple
+      pattern1: "was/were + verb-ing + when + past simple",
+      
+      // Opción 2: Simple + Continuo (orden inverso)
+      pattern2: "When + past simple, was/were + verb-ing",
+      
+      // Opción 3: While + Continuo + Simple
+      pattern3: "While + was/were + verb-ing, past simple"
+    };
+    ```
+
+    **Ejemplos**
+
+    - I **was watching** TV **when** the phone **rang** (Estaba viendo TV cuando sonó el teléfono)
+    - **When** they **arrived**, we **were having** dinner (Cuando llegaron, estábamos cenando)
+    - **While** I **was sleeping**, someone **knocked** on the door (Mientras dormía, alguien tocó la puerta)
+    - The lights **went** out while we **were dancing** (Las luces se fueron mientras bailábamos)
+
+    <Aside type="tip" title="Orden flexible según énfasis">
+    El orden no cambia el significado, solo el énfasis. Empieza con la acción que quieras destacar.
+    </Aside>
+  </TabItem>
+
+  <TabItem label="Simultáneas">
+    Dos o más acciones ocurriendo al mismo tiempo en el pasado. Ambas van en pasado continuo.
+
+    ```javascript
+    const simultaneous = {
+      // Opción 1: While conectando dos continuos
+      pattern1: "was/were + verb-ing + while + was/were + verb-ing",
+      
+      // Opción 2: And para describir escena
+      pattern2: "was/were + verb-ing + and + was/were + verb-ing",
+      
+      // Opción 3: As (mientras/conforme)
+      pattern3: "was/were + verb-ing + as + was/were + verb-ing"
+    };
+    ```
+
+    **Ejemplos**
+
+    - I **was studying** **while** he **was playing** (Yo estudiaba mientras él jugaba)
+    - The sun **was shining** **and** birds **were singing** (El sol brillaba y los pájaros cantaban)
+    - She **was smiling** **as** she **was reading** the letter (Sonreía mientras leía la carta)
+    - The kids **were playing** while their parents **were talking** (Los niños jugaban mientras sus padres conversaban)
+
+    <Aside type="note" title="Todas las acciones en progreso">
+    Cuando describes acciones simultáneas, todas deben estar en pasado continuo porque todas estaban ocurriendo al mismo tiempo.
+    </Aside>
+  </TabItem>
+
+  <TabItem label="Secuenciales">
+    Acciones que ocurrieron una después de otra. El tiempo verbal depende del tipo de secuencia.
+
+    ```javascript
+    const sequential = {
+      // Eventos completados: Pasado simple
+      completed: "past simple + and + past simple",
+      
+      // Descripción de escena: Pasado continuo
+      contextual: "was/were + verb-ing + and + was/were + verb-ing"
+    };
+    ```
+
+    **Ejemplos**
+
+    - I **finished** work **and** **went** home (Terminé el trabajo y me fui a casa - eventos completados)
+    - She **woke** up, **took** a shower, **and** **had** breakfast (Se despertó, se duchó y desayunó - secuencia completada)
+    - The sun **was shining** **and** birds **were singing** (El sol brillaba y los pájaros cantaban - describe atmósfera)
+    - She **was crying** **and shaking** with fear (Lloraba y temblaba de miedo - describe estado)
+
+    <Aside type="caution" title="Diferencia clave entre pasado simple y continuo">
+    **Pasado simple** = Eventos que se completaron uno tras otro. **Pasado continuo** = Acciones en progreso que pintan una escena o contexto.
+    </Aside>
+  </TabItem>
+
+  <TabItem label="Contexto">
+    El pasado continuo establece el escenario, el pasado simple narra la acción principal.
+
+    ```javascript
+    const narrative = {
+      background: "past continuous (contexto)",
+      mainAction: "past simple (lo que pasó)",
+      
+      // Diferentes órdenes posibles
+      order1: "Contexto (continuo) + Acción (simple)",
+      order2: "Acción (simple) + because + Contexto (continuo)",
+      order3: "Contexto + Acción + Contexto + Acción..."
+    };
+    ```
+
+    **Ejemplos**
+
+    - The sun **was shining**. I **opened** the window (El sol brillaba. Abrí la ventana)
+    - I **decided** to stay home because it **was raining** heavily (Decidí quedarme porque estaba lloviendo fuerte)
+    - I **was walking** down the street when I **saw** an old friend. We **stopped** and **talked** (Caminaba por la calle cuando vi a un viejo amigo. Nos detuvimos y conversamos)
+    - The music **was playing** loudly. People **were dancing**. Suddenly, the lights **went** out (La música sonaba fuerte. La gente bailaba. De repente, se fueron las luces)
+
+    <Aside type="tip" title="Narrativa efectiva con continuo + simple">
+    Esta combinación hace tus historias más vívidas. El continuo crea la atmósfera, el simple cuenta los eventos principales.
+    </Aside>
+  </TabItem>
+</Tabs>
+
+---
+
+## Errores comunes
+
+<Aside type="danger" title="Olvidar was/were">
+- I working at 8 PM ⛔
+- I **was working** at 8 PM ✅
+- They playing soccer ⛔
+- They **were playing** soccer ✅
+
+El pasado continuo SIEMPRE necesita **was** o **were**.
+</Aside>
+
+<Aside type="danger" title="Confundir was/were con el sujeto">
+- I **were** studying ⛔
+- I **was** studying ✅
+- She **were** cooking ⛔
+- She **was** cooking ✅
+- We **was** working ⛔
+- We **were** working ✅
+
+Usa **was** con I/he/she/it y **were** con you/we/they.
+</Aside>
+
+<Aside type="danger" title="Usar pasado continuo para acciones completas">
+- I **was watching** three movies yesterday ⛔
+- I **watched** three movies yesterday ✅
+- She **was finishing** her homework last night ⛔
+- She **finished** her homework last night ✅
+
+El continuo es para acciones **en progreso**, no completas. Si terminaste algo, usa pasado simple.
+</Aside>
+
+<Aside type="danger" title="Usar verbos de estado en continuo">
+- I **was knowing** the answer ⛔
+- I **knew** the answer ✅
+- She **was having** a car ⛔
+- She **had** a car ✅
+
+Los verbos de estado (know, have-posesión, want, need, etc.) normalmente no van en continuo.
+</Aside>
+
+---
+
+## Práctica
+
+<Aside type="tip" title="Ejercicio diario">
+- Describe qué estabas haciendo a las 8 PM ayer, al mediodía, y a las 10 PM
+- Escribe 3 oraciones sobre acciones que fueron interrumpidas: "I was... when..."
+- Cuenta una historia corta usando pasado continuo para el contexto y pasado simple para las acciones principales
+- Practica diferenciar: ¿qué hiciste ayer (completo) vs qué estabas haciendo en momentos específicos (en progreso)?
+- Describe una escena del pasado usando múltiples acciones simultáneas con "while"
+</Aside>
+

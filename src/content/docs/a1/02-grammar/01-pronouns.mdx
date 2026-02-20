@@ -1,0 +1,317 @@
+---
+title: Pronombres
+description: Domina los pronombres de sujeto y objeto.
+---
+
+import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
+
+Los pronombres son como variables en programación: reemplazan nombres para evitar repeticiones y hacen el código más limpio. En inglés existen varios tipos de pronombres, pero los más importantes son los **pronombres de sujeto** (quién hace la acción), **pronombres de objeto** (quién recibe la acción) y **pronombres reflexivos** (cuando la acción recae sobre uno mismo), y dominarlos te permite hablar de manera más fluida y natural.
+
+---
+
+## Tipos de Pronombres
+
+<Tabs>
+  <TabItem label="Sujeto">
+    Los pronombres de sujeto realizan la acción del verbo. Van **antes del verbo**:
+
+    ```javascript
+    const subjectPronouns = {
+      "I": "I",      // yo
+      "you": "you",  // tú/usted
+      "he": "he",    // él
+      "she": "she",  // ella
+      "it": "it",    // eso/ello
+      "we": "we",    // nosotros
+      "they": "they" // ellos
+    };
+    ```
+
+    **Ejemplos:**
+    - **I** work here (Yo trabajo aquí)
+    - **You** are smart (Tú eres inteligente)
+    - **He** lives in Paris (Él vive en París)
+    - **She** speaks Spanish (Ella habla español)
+    - **It** is raining (Está lloviendo)
+    - **We** are friends (Somos amigos)
+    - **They** study English (Ellos estudian inglés)
+
+    <Aside type="tip" title="Regla mnemotécnica para I mayúscula">
+    **"I" siempre se escribe en mayúscula**, sin importar dónde esté en la oración: "I am happy" o "Sarah and I are friends".
+    </Aside>
+  </TabItem>
+  
+  <TabItem label="Objeto">
+    Los pronombres de objeto reciben la acción del verbo. Van **después del verbo o preposición**:
+
+    ```javascript
+    const objectPronouns = {
+      "I": "me",     // mí
+      "you": "you",  // te/ti
+      "he": "him",   // lo/le (a él)
+      "she": "her",  // la/le (a ella)
+      "it": "it",    // lo/la (eso)
+      "we": "us",    // nos
+      "they": "them" // los/las/les (a ellos)
+    };
+    ```
+
+    **Ejemplos:**
+    - Call **me** later (Llámame luego)
+    - I see **you** (Te veo)
+    - She loves **him** (Ella lo ama)
+    - We know **her** (La conocemos)
+    - Buy **it** now (Cómpralo ahora)
+    - Tell **us** the truth (Dinos la verdad)
+    - I'm with **them** (Estoy con ellos)
+  </TabItem>
+  
+  <TabItem label="Reflexivos">
+    Cuando el sujeto y el objeto son la misma persona, usamos pronombres reflexivos:
+
+    ```javascript
+    const reflexivePronouns = {
+      "I": "myself",         // yo mismo/a
+      "you": "yourself",     // tú mismo/a
+      "he": "himself",       // él mismo
+      "she": "herself",      // ella misma
+      "it": "itself",        // eso mismo
+      "we": "ourselves",     // nosotros mismos
+      "they": "themselves"   // ellos mismos
+    };
+    ```
+
+    **Ejemplos:**
+    - I hurt **myself** (Me lastimé)
+    - She prepared **herself** (Ella se preparó)
+    - They defended **themselves** (Se defendieron)
+    - Help **yourself**! (¡Sírvete!)
+    
+    <Aside type="note" title="Uso de pronombres reflexivos para énfasis">
+    Los pronombres reflexivos también se usan para énfasis: "I **myself** don't agree" (Yo mismo no estoy de acuerdo).
+    </Aside>
+  </TabItem>
+</Tabs>
+
+**Ejemplos comparativos:**
+
+- **I** like **him**, but **he** doesn't like **me** (Me gusta él, pero yo no le gusto a él)
+- **She** knows **us**, and **we** know **her** (Ella nos conoce, y nosotros la conocemos)
+- **They** invited **you**, did **you** invite **them**? (Ellos te invitaron, ¿tú los invitaste?)
+- I talk to **myself** when I'm alone (Hablo conmigo mismo cuando estoy solo)
+
+---
+
+## Casos Especiales
+
+<Tabs>
+  <TabItem label="Pronombre It">
+
+El pronombre **it** tiene usos especiales en inglés:
+
+```javascript
+const itUses = {
+  things: "The book is new. It is expensive",
+  // El libro es nuevo. Es caro
+  
+  animals: "The cat is hungry. Feed it",
+  // El gato tiene hambre. Aliméntalo
+  
+  weather: "It is raining / It is cold",
+  // Está lloviendo / Está frío
+  
+  time: "It is 3 PM / It is late",
+  // Son las 3 PM / Es tarde
+  
+  distance: "It is 5 km to the city",
+  // Son 5 km a la ciudad
+  
+  situations: "It is difficult / It is important"
+  // Es difícil / Es importante
+};
+```
+
+**Más ejemplos:**
+- Where is my phone? **It** is on the table (¿Dónde está mi teléfono? Está en la mesa)
+- **It** is sunny today (Está soleado hoy)
+- **It** is important to study (Es importante estudiar)
+- I found a wallet. I gave **it** to the police (Encontré una cartera. La di a la policía)
+
+<Aside type="note" title="Uso de it para animales">
+En inglés, **it** se usa para animales cuando no sabemos el sexo o cuando hablamos en general. Si conoces el sexo, puedes usar he/she: "My dog is smart. **He** loves to play".
+</Aside>
+
+  </TabItem>
+
+  <TabItem label="Pronombre You">
+
+**You** es único porque sirve para singular y plural, formal e informal:
+
+```javascript
+const youContext = {
+  singular: {
+    informal: "You are my friend",    // Tú eres mi amigo
+    formal: "You are the manager"     // Usted es el gerente
+  },
+  plural: {
+    informal: "You are my friends",   // Ustedes/Vosotros son mis amigos
+    formal: "You are our clients"     // Ustedes son nuestros clientes
+  }
+};
+```
+
+  **El contexto determina el significado:**
+  - Are **you** ready, John? (¿Estás listo, John?) - singular
+  - Are **you** ready, everyone? (¿Están listos, todos?) - plural
+
+  </TabItem>
+</Tabs>
+
+---
+
+## Reglas de Uso
+
+<Tabs>
+  <TabItem label="Después de Preposiciones">
+
+Después de preposiciones, **siempre** usa pronombres de objeto:
+
+```javascript
+const withPrepositions = {
+  for: "This is for me/you/him/her/us/them",
+  // Esto es para mí/ti/él/ella/nosotros/ellos
+  
+  with: "Come with me/us",
+  // Ven conmigo/con nosotros
+  
+  to: "She gave it to him/her/them",
+  // Ella se lo dio a él/ella/ellos
+  
+  about: "We're talking about you/him/her",
+  // Estamos hablando de ti/él/ella
+  
+  between: "Between you and me",
+  // Entre tú y yo
+};
+```
+
+**Ejemplos comunes:**
+- This gift is for **you** (Este regalo es para ti)
+- She's talking to **me** (Ella está hablando conmigo)
+- Come with **us** (Ven con nosotros)
+- I'm thinking about **him** (Estoy pensando en él)
+- Sit next to **her** (Siéntate junto a ella)
+
+<Aside type="caution" title="Error común con between you and I">
+Después de preposiciones siempre va el pronombre de objeto:
+
+- Between you and I ⛔
+- **Between you and me** (Entre tú y yo) ✅
+</Aside>
+
+<Aside type="note" title="Excepción con by para expresar solo/sola">
+Los pronombres reflexivos se usan con "by" para indicar "solo/a":
+
+- I did it **by myself** (Lo hice yo solo)
+- She lives **by herself** (Ella vive sola)
+- They finished **by themselves** (Terminaron ellos solos)
+</Aside>
+
+  </TabItem>
+
+  <TabItem label="Construcciones con And">
+
+Cuando hay dos sujetos u objetos conectados con "and":
+
+```javascript
+const withAnd = {
+  subjects: [
+    "Sarah and I are friends",       // Sarah y yo somos amigas
+    "He and she work together",      // Él y ella trabajan juntos
+    "You and they are welcome"       // Tú y ellos son bienvenidos
+  ],
+  
+  objects: [
+    "She invited John and me",       // Invitó a John y a mí
+    "Call Mary and him tomorrow",    // Llama a Mary y a él mañana
+    "This is between you and her"    // Esto es entre tú y ella
+  ],
+  
+  reflexives: [
+    "My brother and I did it ourselves",    // Mi hermano y yo lo hicimos nosotros mismos
+    "You and she can do it yourselves",     // Tú y ella pueden hacerlo ustedes mismas
+    "He and I built the house ourselves"    // Él y yo construimos la casa nosotros mismos
+  ]
+};
+```
+
+<Aside type="tip" title="Regla de cortesía al mencionarte con otros">
+Cuando te menciones a ti mismo con otros, ponte al **final**: "Sarah and I" (no "I and Sarah"), "John and me" (no "me and John").
+</Aside>
+
+  **Truco para saber si es sujeto u objeto:**
+  - Remove la otra persona y ve si suena correcto:
+    - "Sarah and **I** went" → "**I** went" ✓ (correcto)
+    - "She saw Sarah and **me**" → "She saw **me**" ✓ (correcto)
+    - ~~"Sarah and me went"~~ → ~~"Me went"~~ ✗ (incorrecto)
+
+  **Con reflexivos:**
+  - Usa el reflexivo plural cuando hay múltiples personas:
+    - John and I = **ourselves** (nosotros mismos)
+    - You and Sarah = **yourselves** (ustedes mismos/mismas)
+    - Mary and Tom = **themselves** (ellos mismos)
+
+  </TabItem>
+</Tabs>
+
+---
+
+## Errores Comunes
+
+<Aside type="danger" title="Usar pronombre de sujeto después de preposición">
+Las preposiciones requieren pronombres de **objeto**:
+
+- This is for I / Come with we / Between she and I ⛔
+- This is for **me** (Esto es para mí) ✅
+- Come with **us** (Ven con nosotros) ✅
+- Between **her** and **me** (Entre ella y yo) ✅
+</Aside>
+
+<Aside type="danger" title="Confundir he/she con him/her">
+**He/She** = sujeto (hacen la acción) | **Him/Her** = objeto (reciben la acción)
+
+- I like she / Him called me ⛔
+- I like **her** (Me gusta ella) ✅
+- **He** called me (Él me llamó) ✅
+- **She** is my friend (Ella es mi amiga) ✅
+</Aside>
+
+<Aside type="danger" title="Orden incorrecto con and I / and me">
+Sigue la regla de cortesía: tú al final.
+
+- I and John went / Me and Sarah like pizza ⛔
+- **John and I** went (John y yo fuimos) ✅
+- **Sarah and I** like pizza (A Sarah y a mí nos gusta la pizza) ✅
+
+Para objeto está bien: "She invited Sarah and me" ✅
+</Aside>
+
+<Aside type="danger" title="No escribir I en mayúscula">
+El pronombre "I" **siempre** va en mayúscula, sin importar su posición:
+
+- i am happy / My friend and i ⛔
+- **I** am happy (Estoy feliz) ✅
+- My friend and **I** (Mi amigo y yo) ✅
+</Aside>
+
+---
+
+## Práctica
+
+<Aside type="tip" title="Ejercicio diario">
+- Escribe 10 oraciones usando diferentes pronombres de sujeto y objeto en cada una
+- Practica la diferencia entre he/him y she/her creando 5 pares de oraciones
+- Identifica en un texto en inglés todos los pronombres y clasifícalos por tipo
+- Practica presentarte a ti y otros usando "X and I" correctamente en 3 situaciones
+- Crea oraciones con pronombres reflexivos describiendo tu rutina diaria: "I wake myself up", etc.
+</Aside>
