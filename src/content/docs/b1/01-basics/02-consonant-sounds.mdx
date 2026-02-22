@@ -3,3 +3,306 @@ title: Sonidos Consonánticos
 description: Aprende los sonidos consonánticos del inglés.
 ---
 
+import { Aside, Tabs, TabItem } from '@astrojs/starlight/components';
+
+El inglés tiene varios sonidos consonánticos que no existen en español. Piensa en las consonantes como **funciones específicas** que transforman el aire en sonidos distintos. Dominar estas diferencias es clave para que te entiendan correctamente.
+
+---
+
+## Consonantes Problemáticas para Hispanohablantes
+
+Algunos sonidos ingleses no tienen equivalente directo en español y requieren práctica específica.
+
+<Tabs>
+  <TabItem label="TH Sorda /θ/">
+```javascript
+const thVoiceless = {
+  sound: "/θ/",
+  position: "lengua entre los dientes",
+  vibration: false,
+  examples: ["think", "three", "mouth", "bath"]
+};
+```
+
+La lengua se coloca **entre los dientes** y el aire pasa sin vibración.
+  </TabItem>
+  
+  <TabItem label="TH Sonora /ð/">
+```javascript
+const thVoiced = {
+  sound: "/ð/",
+  position: "lengua entre los dientes",
+  vibration: true,
+  examples: ["this", "that", "mother", "breathe"]
+};
+```
+
+Igual posición que /θ/, pero las **cuerdas vocales vibran**.
+  </TabItem>
+  
+  <TabItem label="V /v/">
+```javascript
+const soundV = {
+  sound: "/v/",
+  position: "dientes superiores en labio inferior",
+  vibration: true,
+  examples: ["very", "love", "have", "rive"]
+};
+```
+
+**No es igual a /b/**. Los dientes tocan el labio inferior.
+  </TabItem>
+</Tabs>
+
+**Ejemplos de /θ/ (TH sorda):**
+
+- I **think** you're right (Creo que tienes razón) - /θɪŋk/
+- She's **three** years old (Ella tiene tres años) - /θriː/
+- Open your **mouth** (Abre la boca) - /maʊθ/
+
+**Ejemplos de /ð/ (TH sonora):**
+
+- **This** is my house (Esta es mi casa) - /ðɪs/
+- I love my **mother** (Amo a mi madre) - /ˈmʌðə/
+- **The** weather is nice (El clima está agradable) - /ðə/
+
+**Ejemplos de /v/:**
+
+- **Very** good! (¡Muy bien!) - /ˈveri/
+- I **love** you (Te amo) - /lʌv/
+- I **have** a question (Tengo una pregunta) - /hæv/
+
+---
+
+## La R Inglesa vs. La R Española
+
+La **r inglesa** /r/ es completamente diferente a la española. La lengua **nunca toca el paladar**.
+
+```javascript
+const englishR = {
+  spanish: {
+    position: "lengua toca el paladar",
+    type: "vibrante (trill/tap)"
+  },
+  english: {
+    position: "lengua curvada hacia atrás",
+    type: "aproximante (no toca nada)"
+  }
+};
+```
+
+<Aside type="tip" title="Cómo producir la R inglesa">
+Curva la lengua ligeramente hacia atrás sin tocar nada. Es como prepararte para decir "r" pero sin llegar a vibrar.
+</Aside>
+
+**Ejemplos en contexto:**
+
+- The **red** car is fast (El coche rojo es rápido) - /red/
+- **Right** or left? (¿Derecha o izquierda?) - /raɪt/
+- I **run** every morning (Corro cada mañana) - /rʌn/
+- She is **very** smart (Ella es muy inteligente) - /ˈveri/
+
+---
+
+## Sonidos /s/ vs. /z/
+
+En español, la "s" siempre suena igual. En inglés, puede ser **sorda /s/** o **sonora /z/**.
+
+<Tabs>
+  <TabItem label="S Sorda /s/">
+```javascript
+const soundS = {
+  sound: "/s/",
+  vibration: false,
+  examples: ["see", "bus", "cats", "this"]
+};
+```
+
+Sin vibración de cuerdas vocales. Como la "s" española.
+  </TabItem>
+  
+  <TabItem label="Z Sonora /z/">
+```javascript
+const soundZ = {
+  sound: "/z/",
+  vibration: true,
+  examples: ["zoo", "dogs", "is", "has"]
+};
+```
+
+Las cuerdas vocales **vibran**. Pon la mano en tu garganta para sentirlo.
+  </TabItem>
+</Tabs>
+
+**Ejemplos de /s/:**
+
+- Can you **see** it? (¿Puedes verlo?) - /siː/
+- I have two **cats** (Tengo dos gatos) - /kæts/
+- Take the **bus** (Toma el autobús) - /bʌs/
+
+**Ejemplos de /z/:**
+
+- Let's go to the **zoo** (Vamos al zoológico) - /zuː/
+- I have three **dogs** (Tengo tres perros) - /dɒɡz/
+- He **is** my friend (Él es mi amigo) - /ɪz/
+
+<Aside type="note" title="Regla del plural">
+Después de sonidos sonoros, la "s" del plural se pronuncia /z/: dogs /dɒɡz/, boys /bɔɪz/. Después de sonidos sordos, se pronuncia /s/: cats /kæts/, books /bʊks/.
+</Aside>
+
+---
+
+## La H Aspirada
+
+En español, la "h" es muda. En inglés, la **h siempre se pronuncia** (excepto en palabras específicas).
+
+```javascript
+const aspiratedH = {
+  spanish: "h muda (hora = /ora/)",
+  english: "h aspirada (hour = /aʊə/ - excepción)",
+  production: "exhalar suavemente",
+  examples: {
+    pronounced: ["hello", "house", "happy", "help"],
+    silent: ["hour", "honest", "heir", "honor"]
+  }
+};
+```
+
+**Ejemplos con H pronunciada:**
+
+- **Hello**, how are you? (Hola, ¿cómo estás?) - /həˈləʊ/
+- This is my **house** (Esta es mi casa) - /haʊs/
+- I'm so **happy**! (¡Estoy tan feliz!) - /ˈhæpi/
+- Can you **help** me? (¿Puedes ayudarme?) - /help/
+
+**Ejemplos con H muda:**
+
+- Wait an **hour** (Espera una hora) - /aʊə/
+- Be **honest** with me (Sé honesto conmigo) - /ˈɒnɪst/
+
+---
+
+## Consonantes Finales
+
+En español, las palabras rara vez terminan en consonantes fuertes. En inglés, las **consonantes finales son cruciales**.
+
+```javascript
+const finalConsonants = {
+  common: ["p", "t", "k", "b", "d", "g", "m", "n"],
+  importance: "distinguen significado",
+  examples: {
+    "cup vs cu": "la p final es esencial",
+    "sit vs si": "la t final cambia todo",
+    "dog vs do": "la g final importa"
+  }
+};
+```
+
+<Aside type="caution" title="No añadas vocales al final">
+No digas "stoppe" por "stop" o "booke" por "book". Las consonantes finales se pronuncian secas, sin vocal adicional.
+</Aside>
+
+**Practica estas terminaciones:**
+
+- **Stop** the car (Para el coche) - /stɒp/
+- I need to **sit** (Necesito sentarme) - /sɪt/
+- I **walked** to work (Caminé al trabajo) - /wɔːkt/
+- She **helped** me (Ella me ayudó) - /helpt/
+
+---
+
+## Grupos Consonánticos (Clusters)
+
+El inglés permite combinaciones de consonantes que no existen en español.
+
+```javascript
+const consonantClusters = {
+  initial: {
+    str: ["street", "strong", "strange"],
+    spr: ["spring", "spray", "spread"],
+    scr: ["screen", "scream", "scratch"]
+  },
+  final: {
+    nts: ["students", "events", "parents"],
+    sts: ["tests", "lists", "costs"],
+    sks: ["asks", "tasks", "desks"]
+  }
+};
+```
+
+**Ejemplos de clusters iniciales:**
+
+- Walk down the **street** (Camina por la calle) - /striːt/
+- I feel **strong** today (Me siento fuerte hoy) - /strɒŋ/
+- **Spring** is coming (La primavera viene) - /sprɪŋ/
+
+**Ejemplos de clusters finales:**
+
+- The **students** are here (Los estudiantes están aquí) - /ˈstjuːdənts/
+- I have two **tests** (Tengo dos exámenes) - /tests/
+- She **asks** many questions (Ella hace muchas preguntas) - /ɑːsks/
+
+---
+
+## Pares Mínimos Consonánticos
+
+Practica estos pares para distinguir sonidos similares:
+
+```javascript
+const consonantPairs = {
+  "b_v": ["bet/vet", "berry/very", "base/vase"],
+  "s_z": ["sip/zip", "bus/buzz", "price/prize"],
+  "th_t": ["three/tree", "thin/tin", "thought/taught"],
+  "th_d": ["they/day", "those/doze", "breathe/breed"]
+};
+```
+
+**Practica en contexto:**
+
+- I **bet** you can / The **vet** is here (Apuesto a que puedes / El veterinario está aquí)
+- Take a **sip** / Close the **zip** (Toma un sorbo / Cierra la cremallera)
+- Count to **three** / Climb the **tree** (Cuenta hasta tres / Sube al árbol)
+
+---
+
+## Errores Comunes
+
+<Aside type="danger" title="Pronunciar V como B">
+- ⛔ "I hab a bery good idea" (con sonido de B)
+- ✅ "I **have** a **very** good idea" (dientes sobre labio inferior)
+
+La /v/ requiere que los dientes superiores toquen el labio inferior.
+</Aside>
+
+<Aside type="danger" title="Usar la R vibrante española">
+- ⛔ "Red" con R fuerte como en "perro"
+- ✅ **Red** /red/ (lengua curvada, sin tocar el paladar)
+
+La R inglesa es suave y aproximante, nunca vibrante.
+</Aside>
+
+<Aside type="danger" title="Omitir la H aspirada">
+- ⛔ "I'm appy" (sin sonido de H)
+- ✅ "I'm **happy**" /ˈhæpi/ (con exhalación suave)
+
+La H en inglés siempre se pronuncia (excepto en palabras específicas como "hour").
+</Aside>
+
+<Aside type="danger" title="Añadir vocales a consonantes finales">
+- ⛔ "stoppe", "booke", "worke"
+- ✅ **stop** /stɒp/, **book** /bʊk/, **work** /wɜːk/
+
+Las consonantes finales se pronuncian secas, sin añadir vocales.
+</Aside>
+
+---
+
+## Práctica
+
+<Aside type="tip" title="Ejercicio diario">
+- Practica los sonidos TH frente a un espejo, verificando que tu lengua esté entre los dientes
+- Grábate diciendo pares mínimos (very/berry, think/sink) y compara con hablantes nativos
+- Lee trabalenguas en inglés enfocándote en consonantes específicas
+- Practica clusters consonánticos comenzando lento y aumentando velocidad gradualmente
+- Usa la técnica del lápiz: sostén un lápiz horizontalmente entre los dientes y practica la R inglesa sin tocarlo
+</Aside>
