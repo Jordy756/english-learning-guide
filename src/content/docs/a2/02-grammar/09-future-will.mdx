@@ -3,7 +3,7 @@ title: Futuro con Will
 description: Expresa predicciones, decisiones espontáneas, promesas y ofrecimientos
 ---
 
-import { Tabs, TabItem, Aside } from '@astrojs/starlight/components';
+import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
 
 El **futuro con will** es como una función que se ejecuta en el momento: no sabías que ibas a hacerlo, pero de repente surge la situación y reaccionas. Lo usas para predicciones basadas en lo que piensas (no en evidencia), decisiones que tomas en el momento, promesas que haces y para ofrecer ayuda. Es directo, inmediato y universal para cualquier sujeto.
 
@@ -105,91 +105,67 @@ En conversaciones informales, **will** se contrae con el sujeto: **I'll**, **you
 
 ## Usos del Futuro con Will
 
-### Predicciones sin evidencia
+<Tabs>
+  <TabItem label="Predicciones">
+    <Card title="Predicciones sin evidencia">
+      Usa **will** cuando haces una predicción basada en lo que **piensas, crees u opinas**, no en algo que estás viendo en el momento.
 
-Usa **will** cuando haces una predicción basada en lo que **piensas, crees u opinas**, no en algo que estás viendo en el momento.
+      **Ejemplos:**
 
-```javascript
-const predictions = {
-  opinion: "I think it will rain",      // Creo que lloverá
-  belief: "She will be a great chef",   // Será una gran chef
-  guess: "The test will be easy"        // El examen será fácil
-};
-```
+      - I think you **will like** this book (Creo que te gustará este libro)
+      - The movie **will be** amazing (La película será increíble)
+      - He **will arrive** late, as always (Llegará tarde, como siempre)
+      - Computers **will replace** many jobs (Las computadoras reemplazarán muchos trabajos)
+      - We **will win** the game (Ganaremos el juego)
+    </Card>
 
-**Ejemplos:**
+    <Aside type="note" title="Palabras clave con predicciones">
+    Es común usar: **I think**, **I believe**, **probably**, **maybe**, **I'm sure** antes de una predicción con will.
+    </Aside>
+  </TabItem>
 
-- I think you **will like** this book (Creo que te gustará este libro)
-- The movie **will be** amazing (La película será increíble)
-- He **will arrive** late, as always (Llegará tarde, como siempre)
-- Computers **will replace** many jobs (Las computadoras reemplazarán muchos trabajos)
-- We **will win** the game (Ganaremos el juego)
+  <TabItem label="Decisiones espontáneas">
+    <Card title="Decisiones en el momento">
+      Usa **will** cuando decides algo **ahora mismo**, mientras hablas. No lo planeaste antes, simplemente reaccionas a la situación.
 
-<Aside type="note" title="Palabras clave con predicciones">
-Es común usar: **I think**, **I believe**, **probably**, **maybe**, **I'm sure** antes de una predicción con will.
-</Aside>
+      **Ejemplos:**
 
-### Decisiones espontáneas (en el momento)
+      - I'm hungry. I'**ll make** a sandwich (Tengo hambre. Haré un sándwich)
+      - Oh no! I forgot my wallet. I'**ll go** back (¡Oh no! Olvidé mi cartera. Volveré)
+      - It's hot in here. I'**ll open** the window (Hace calor aquí. Abriré la ventana)
+      - The phone is ringing. I'**ll get** it (El teléfono está sonando. Lo contesto)
+      - I'**ll have** the chicken, please (Tomaré el pollo, por favor)
+    </Card>
+  </TabItem>
 
-Usa **will** cuando decides algo **ahora mismo**, mientras hablas. No lo planeaste antes, simplemente reaccionas a la situación.
+  <TabItem label="Promesas">
+    <Card title="Compromisos futuros">
+      Usa **will** cuando te comprometes a hacer algo en el futuro.
 
-```javascript
-const spontaneous = {
-  situation: "Phone is ringing",
-  decision: "I'll answer it!",      // ¡Lo contesto!
-  timing: "decided right now"        // decidido ahora mismo
-};
-```
+      **Ejemplos:**
 
-**Ejemplos:**
+      - I **will help** you, I promise (Te ayudaré, lo prometo)
+      - I **won't forget** your birthday (No olvidaré tu cumpleaños)
+      - We **will finish** this project (Terminaremos este proyecto)
+      - I **will be** there for you (Estaré ahí para ti)
+      - I **will never lie** to you (Nunca te mentiré)
+    </Card>
+  </TabItem>
 
-- I'm hungry. I'**ll make** a sandwich (Tengo hambre. Haré un sándwich)
-- Oh no! I forgot my wallet. I'**ll go** back (¡Oh no! Olvidé mi cartera. Volveré)
-- It's hot in here. I'**ll open** the window (Hace calor aquí. Abriré la ventana)
-- The phone is ringing. I'**ll get** it (El teléfono está sonando. Lo contesto)
-- I'**ll have** the chicken, please (Tomaré el pollo, por favor)
+  <TabItem label="Ofrecimientos">
+    <Card title="Ofrecer ayuda">
+      Usa **will** cuando ofreces hacer algo por alguien.
 
-### Promesas
+      **Ejemplos:**
 
-Usa **will** cuando te comprometes a hacer algo en el futuro.
-
-```javascript
-const promises = [
-  "I will call you tomorrow",      // Te llamaré mañana
-  "I won't tell anyone",           // No le diré a nadie
-  "I will always remember this",   // Siempre recordaré esto
-  "We will be there on time"       // Estaremos ahí a tiempo
-];
-```
-
-**Ejemplos:**
-
-- I **will help** you, I promise (Te ayudaré, lo prometo)
-- I **won't forget** your birthday (No olvidaré tu cumpleaños)
-- We **will finish** this project (Terminaremos este proyecto)
-- I **will be** there for you (Estaré ahí para ti)
-- I **will never lie** to you (Nunca te mentiré)
-
-### Ofrecimientos
-
-Usa **will** cuando ofreces hacer algo por alguien.
-
-```javascript
-const offers = [
-  "I'll help you with that",       // Te ayudaré con eso
-  "I'll carry your bags",          // Cargaré tus bolsas
-  "I'll drive you home",           // Te llevaré a casa
-  "I'll make some coffee"          // Haré café
-];
-```
-
-**Ejemplos:**
-
-- I'**ll hold** the door for you (Te sostendré la puerta)
-- I'**ll send** you the information (Te enviaré la información)
-- Don't worry, I'**ll take care** of it (No te preocupes, yo me encargo)
-- I'**ll teach** you how to do it (Te enseñaré cómo hacerlo)
-- I'**ll pay** for dinner tonight (Yo pago la cena esta noche)
+      - I'**ll hold** the door for you (Te sostendré la puerta)
+      - I'**ll send** you the information (Te enviaré la información)
+      - Don't worry, I'**ll take care** of it (No te preocupes, yo me encargo)
+      - I'**ll teach** you how to do it (Te enseñaré cómo hacerlo)
+      - I'**ll pay** for dinner tonight (Yo pago la cena esta noche)
+    </Card>
+  </TabItem>
+</Tabs>
 
 ---
 
