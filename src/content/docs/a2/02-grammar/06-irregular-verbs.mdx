@@ -48,17 +48,17 @@ Estos verbos están organizados por patrones de transformación para facilitar s
 
 <Tabs>
   <TabItem label="Sin cambio">
-    Estos verbos **no cambian** en pasado simple. Son los más fáciles de recordar:
+    Estos verbos **no cambian** en pasado simple ni en participio pasado. Son los más fáciles de recordar:
     
     ```javascript
     const noChange = {
-      cut: "cut",      // cortar
-      put: "put",      // poner
-      let: "let",      // permitir/dejar
-      set: "set",      // establecer
-      cost: "cost",    // costar
-      hit: "hit",      // golpear
-      hurt: "hurt"     // herir/doler
+      cut: { past: "cut", participle: "cut", meaning: "cortar" },
+      put: { past: "put", participle: "put", meaning: "poner" },
+      let: { past: "let", participle: "let", meaning: "permitir/dejar" },
+      set: { past: "set", participle: "set", meaning: "establecer" },
+      cost: { past: "cost", participle: "cost", meaning: "costar" },
+      hit: { past: "hit", participle: "hit", meaning: "golpear" },
+      hurt: { past: "hurt", participle: "hurt", meaning: "herir/doler" }
     };
     ```
 
@@ -71,16 +71,16 @@ Estos verbos están organizados por patrones de transformación para facilitar s
   </TabItem>
   
   <TabItem label="Cambio i → a">
-    Estos verbos cambian la vocal **i** por **a** en el pasado:
+    Estos verbos cambian la vocal **i** por **a** en el pasado, y muchos añaden **-u** en el participio:
     
     ```javascript
     const iToA = {
-      begin: "began",     // comenzar/empezar
-      drink: "drank",     // beber
-      ring: "rang",       // sonar/timbrar
-      sing: "sang",       // cantar
-      swim: "swam",       // nadar
-      sit: "sat"          // sentarse
+      begin: { past: "began", participle: "begun", meaning: "comenzar/empezar" },
+      drink: { past: "drank", participle: "drunk", meaning: "beber" },
+      ring: { past: "rang", participle: "rung", meaning: "sonar/timbrar" },
+      sing: { past: "sang", participle: "sung", meaning: "cantar" },
+      swim: { past: "swam", participle: "swum", meaning: "nadar" },
+      sit: { past: "sat", participle: "sat", meaning: "sentarse" }
     };
     ```
 
@@ -93,16 +93,16 @@ Estos verbos están organizados por patrones de transformación para facilitar s
   </TabItem>
   
   <TabItem label="Patrón -ought/-aught">
-    Estos verbos terminan en **-ought** o **-aught** en el pasado:
+    Estos verbos terminan en **-ought** o **-aught** tanto en pasado como en participio:
     
     ```javascript
     const oughtAught = {
-      bring: "brought",   // traer
-      buy: "bought",      // comprar
-      catch: "caught",    // atrapar/agarrar
-      fight: "fought",    // pelear
-      teach: "taught",    // enseñar
-      think: "thought"    // pensar
+      bring: { past: "brought", participle: "brought", meaning: "traer" },
+      buy: { past: "bought", participle: "bought", meaning: "comprar" },
+      catch: { past: "caught", participle: "caught", meaning: "atrapar/agarrar" },
+      fight: { past: "fought", participle: "fought", meaning: "pelear" },
+      teach: { past: "taught", participle: "taught", meaning: "enseñar" },
+      think: { past: "thought", participle: "thought", meaning: "pensar" }
     };
     ```
 
@@ -119,19 +119,19 @@ Estos verbos están organizados por patrones de transformación para facilitar s
     
     ```javascript
     const vowelChange = {
-      come: "came",       // venir
-      run: "ran",         // correr
-      become: "became",   // convertirse
-      eat: "ate",         // comer
-      give: "gave",       // dar
-      see: "saw",         // ver
-      take: "took",       // tomar/llevar
-      write: "wrote",     // escribir
-      break: "broke",     // romper
-      speak: "spoke",     // hablar
-      drive: "drove",     // conducir/manejar
-      get: "got",         // obtener/conseguir
-      forget: "forgot"    // olvidar
+      come: { past: "came", participle: "come", meaning: "venir" },
+      run: { past: "ran", participle: "run", meaning: "correr" },
+      become: { past: "became", participle: "become", meaning: "convertirse" },
+      eat: { past: "ate", participle: "eaten", meaning: "comer" },
+      give: { past: "gave", participle: "given", meaning: "dar" },
+      see: { past: "saw", participle: "seen", meaning: "ver" },
+      take: { past: "took", participle: "taken", meaning: "tomar/llevar" },
+      write: { past: "wrote", participle: "written", meaning: "escribir" },
+      break: { past: "broke", participle: "broken", meaning: "romper" },
+      speak: { past: "spoke", participle: "spoken", meaning: "hablar" },
+      drive: { past: "drove", participle: "driven", meaning: "conducir/manejar" },
+      get: { past: "got", participle: "gotten/got", meaning: "obtener/conseguir" },
+      forget: { past: "forgot", participle: "forgotten", meaning: "olvidar" }
     };
     ```
 
@@ -144,27 +144,27 @@ Estos verbos están organizados por patrones de transformación para facilitar s
   </TabItem>
   
   <TabItem label="Completamente diferentes">
-    Estos verbos cambian totalmente y no siguen ningún patrón:
+    Estos verbos cambian de maneras únicas y no siguen ningún patrón:
     
     ```javascript
     const totalChange = {
-      be: "was/were",     // ser/estar
-      do: "did",          // hacer
-      go: "went",         // ir
-      have: "had",        // tener
-      make: "made",       // hacer
-      say: "said",        // decir
-      tell: "told",       // decir/contar
-      find: "found",      // encontrar
-      hear: "heard",      // oír/escuchar
-      leave: "left",      // dejar/irse
-      meet: "met",        // conocer/encontrarse
-      pay: "paid",        // pagar
-      send: "sent",       // enviar
-      sleep: "slept",     // dormir
-      stand: "stood",     // estar de pie
-      understand: "understood", // entender
-      win: "won"          // ganar
+      be: { past: "was/were", participle: "been", meaning: "ser/estar" },
+      do: { past: "did", participle: "done", meaning: "hacer" },
+      go: { past: "went", participle: "gone", meaning: "ir" },
+      have: { past: "had", participle: "had", meaning: "tener" },
+      make: { past: "made", participle: "made", meaning: "hacer" },
+      say: { past: "said", participle: "said", meaning: "decir" },
+      tell: { past: "told", participle: "told", meaning: "decir/contar" },
+      find: { past: "found", participle: "found", meaning: "encontrar" },
+      hear: { past: "heard", participle: "heard", meaning: "oír/escuchar" },
+      leave: { past: "left", participle: "left", meaning: "dejar/irse" },
+      meet: { past: "met", participle: "met", meaning: "conocer/encontrarse" },
+      pay: { past: "paid", participle: "paid", meaning: "pagar" },
+      send: { past: "sent", participle: "sent", meaning: "enviar" },
+      sleep: { past: "slept", participle: "slept", meaning: "dormir" },
+      stand: { past: "stood", participle: "stood", meaning: "estar de pie" },
+      understand: { past: "understood", participle: "understood", meaning: "entender" },
+      win: { past: "won", participle: "won", meaning: "ganar" }
     };
     ```
 
@@ -179,6 +179,45 @@ Estos verbos están organizados por patrones de transformación para facilitar s
 
 <Aside type="tip" title="Lista completa de verbos irregulares">
 Encontrarás una lista completa organizada de todos los verbos irregulares en la [Lista de Verbos Irregulares](/reference/01-irregular-verbs-list/).
+</Aside>
+
+---
+
+## Pronunciación de Verbos Irregulares
+
+A diferencia de los verbos regulares que tienen solo 3 pronunciaciones para -ed, los verbos irregulares tienen pronunciaciones únicas que debes aprender individualmente:
+
+<CardGrid>
+  <Card title="Pronunciación idéntica">
+    Algunos verbos suenan igual en presente y pasado, solo cambia la ortografía:
+    
+    - **read** /riːd/ → **read** /rɛd/ (diferente pronunciación)
+    - **cut** /kʌt/ → **cut** /kʌt/ (misma pronunciación)
+    - **put** /pʊt/ → **put** /pʊt/ (misma pronunciación)
+    - **hit** /hɪt/ → **hit** /hɪt/ (misma pronunciación)
+  </Card>
+  
+  <Card title="Cambios importantes">
+    Otros verbos tienen cambios significativos en la pronunciación:
+    
+    - **go** /ɡoʊ/ → **went** /wɛnt/
+    - **buy** /baɪ/ → **bought** /bɔːt/
+    - **think** /θɪŋk/ → **thought** /θɔːt/
+    - **do** /duː/ → **did** /dɪd/
+  </Card>
+  
+  <Card title="Patrones similares">
+    Verbos con cambios fonéticos parecidos:
+    
+    - **sing** /sɪŋ/ → **sang** /sæŋ/
+    - **drink** /drɪŋk/ → **drank** /dræŋk/
+    - **begin** /bɪˈɡɪn/ → **began** /bɪˈɡæn/
+    - **swim** /swɪm/ → **swam** /swæm/
+  </Card>
+</CardGrid>
+
+<Aside type="tip" title="Práctica de pronunciación">
+La mejor manera de aprender la pronunciación de verbos irregulares es escuchándolos en contexto. Usa videos, podcasts o aplicaciones de pronunciación para familiarizarte con los sonidos correctos.
 </Aside>
 
 ---
