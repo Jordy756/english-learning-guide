@@ -1,5 +1,304 @@
 ---
 title: Verbos Modales
-description: Aprende can, could, should, would, may, might, must.
+description: Aprende can, could, should, must y otros verbos modales esenciales
 ---
+
+import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
+
+Los **verbos modales** son como modificadores de función: no tienen significado completo por sí solos, pero cambian el significado del verbo principal. Son palabras especiales que expresan habilidad (can), obligación (must), consejo (should), posibilidad (may/might) o permiso. A diferencia de otros verbos, los modales tienen reglas únicas: nunca llevan -s en tercera persona, siempre van seguidos del verbo en forma base, y no necesitan auxiliares como do/does.
+
+---
+
+## Reglas Generales de los Modales
+
+Los verbos modales siguen reglas diferentes al resto de verbos en inglés:
+
+1. **Siempre van seguidos del verbo en forma base** (sin "to")
+2. **No añaden -s en tercera persona**
+3. **No usan do/does en preguntas**
+4. **La negación va directamente después del modal**
+
+<Aside type="caution" title="No son verbos normales">
+Los modales NO se conjugan como verbos regulares. No dicen "I canned" o "he musts". Cada modal tiene sus propias formas especiales para pasado y futuro.
+</Aside>
+
+---
+
+## Can / Can't
+
+<Tabs>
+  <TabItem label="Habilidad">
+    **Can** expresa habilidad o capacidad para hacer algo.
+
+    ```javascript
+    const ability = {
+      affirmative: "I can swim",         // Puedo nadar
+      negative: "I can't drive",         // No puedo manejar
+      question: "Can you speak French?"  // ¿Puedes hablar francés?
+    };
+    ```
+
+    **Ejemplos:**
+    - I **can play** the guitar (Puedo tocar la guitarra)
+    - She **can speak** three languages (Ella puede hablar tres idiomas)
+    - They **can run** very fast (Ellos pueden correr muy rápido)
+    - He **can't swim** (Él no puede nadar)
+    - We **can't see** anything (No podemos ver nada)
+  </TabItem>
+
+  <TabItem label="Permiso">
+    **Can** se usa para pedir o dar permiso de manera informal.
+
+    ```javascript
+    const permission = {
+      asking: "Can I leave early?",      // ¿Puedo irme temprano?
+      giving: "You can use my phone",    // Puedes usar mi teléfono
+      denying: "You can't park here"     // No puedes estacionar aquí
+    };
+    ```
+
+    **Ejemplos:**
+    - **Can** I open the window? (¿Puedo abrir la ventana?)
+    - **Can** we sit here? (¿Podemos sentarnos aquí?)
+    - You **can go** now (Puedes irte ahora)
+    - You **can't smoke** here (No puedes fumar aquí)
+    - Students **can't use** phones in class (Los estudiantes no pueden usar teléfonos en clase)
+  </TabItem>
+
+  <TabItem label="Estructura">
+    ```javascript
+    const structure = {
+      affirmative: "Sujeto + can + verbo base",
+      negative: "Sujeto + can't/cannot + verbo base",
+      question: "Can + sujeto + verbo base + ?"
+    };
+    ```
+
+    **Formas negativas:**
+    - **cannot** (una palabra, formal)
+    - **can't** (contracción, informal)
+
+    **Ejemplos:**
+    - **Can** you **help** me? (¿Puedes ayudarme?)
+    - Yes, I **can** / No, I **can't**
+    - **Can** she **come** with us? (¿Puede ella venir con nosotros?)
+    - What languages **can** you **speak**? (¿Qué idiomas puedes hablar?)
+  </TabItem>
+</Tabs>
+
+---
+
+## Could
+
+<Tabs>
+  <TabItem label="Habilidad pasada">
+    **Could** expresa habilidad en el pasado (es el pasado de can).
+
+    ```javascript
+    const pastAbility = {
+      past: "I could swim when I was 5",     // Podía nadar a los 5
+      present: "Now I can swim very well"    // Ahora puedo nadar muy bien
+    };
+    ```
+
+    **Ejemplos:**
+    - I **could read** at age 4 (Podía leer a los 4 años)
+    - She **could play** piano when she was young (Ella podía tocar piano cuando era joven)
+    - We **couldn't understand** him (No podíamos entenderlo)
+    - They **could speak** German as children (Podían hablar alemán de niños)
+    - **Could** you swim when you were 6? (¿Podías nadar cuando tenías 6 años?)
+  </TabItem>
+
+  <TabItem label="Peticiones corteses">
+    **Could** se usa para hacer peticiones más educadas que "can".
+
+    ```javascript
+    const politeRequests = {
+      informal: "Can you help me?",      // ¿Puedes ayudarme? (casual)
+      polite: "Could you help me?"       // ¿Podrías ayudarme? (educado)
+    };
+    ```
+
+    **Ejemplos:**
+    - **Could** you open the door, please? (¿Podrías abrir la puerta, por favor?)
+    - **Could** you speak more slowly? (¿Podrías hablar más despacio?)
+    - **Could** I borrow your pen? (¿Podría pedir prestado tu bolígrafo?)
+    - **Could** we have the menu, please? (¿Podríamos tener el menú, por favor?)
+    - **Could** you tell me the time? (¿Podrías decirme la hora?)
+  </TabItem>
+</Tabs>
+
+---
+
+## Must / Mustn't
+
+<Tabs>
+  <TabItem label="Obligación fuerte">
+    **Must** expresa obligación fuerte o necesidad. Es más fuerte que "should".
+
+    ```javascript
+    const strongObligation = {
+      must: "You must wear a helmet",        // Debes usar casco
+      mustNot: "You mustn't smoke here"      // No debes fumar aquí
+    };
+    ```
+
+    **Ejemplos:**
+    - You **must study** for the exam (Debes estudiar para el examen)
+    - I **must finish** this today (Debo terminar esto hoy)
+    - We **must arrive** on time (Debemos llegar a tiempo)
+    - Students **must wear** uniforms (Los estudiantes deben usar uniformes)
+    - You **must see** a doctor (Debes ver a un doctor)
+  </TabItem>
+
+  <TabItem label="Prohibición">
+    **Mustn't** (must not) expresa prohibición con autoridad. Es más fuerte que "can't".
+
+    ```javascript
+    const prohibition = {
+      cantGeneral: "You can't park here",        // No puedes
+      mustNotRules: "You mustn't smoke here"     // No debes (prohibido)
+    };
+    ```
+
+    **Ejemplos:**
+    - You **mustn't tell** anyone (No debes decirle a nadie)
+    - We **mustn't be** late (No debemos llegar tarde)
+    - You **mustn't touch** that (No debes tocar eso)
+    - Children **mustn't play** with fire (Los niños no deben jugar con fuego)
+    - Passengers **mustn't open** the door (Los pasajeros no deben abrir la puerta)
+
+    <Aside type="caution" title="Must vs Can't">
+    **Can't** = no es posible o no tienes permiso  
+    **Mustn't** = está prohibido, es una regla fuerte
+    </Aside>
+  </TabItem>
+</Tabs>
+
+---
+
+## Should / Shouldn't
+
+<Tabs>
+  <TabItem label="Consejos">
+    **Should** expresa consejo, recomendación o lo que es correcto hacer.
+
+    ```javascript
+    const advice = {
+      positive: "You should drink more water",    // Deberías
+      negative: "You shouldn't eat so much"       // No deberías
+    };
+    ```
+
+    **Ejemplos:**
+    - You **should sleep** 8 hours (Deberías dormir 8 horas)
+    - We **should leave** now (Deberíamos irnos ahora)
+    - She **should see** a dentist (Ella debería ver a un dentista)
+    - You **should try** this restaurant (Deberías probar este restaurante)
+    - They **should study** more (Deberían estudiar más)
+  </TabItem>
+
+  <TabItem label="No deberías">
+    **Shouldn't** (should not) indica que algo no es buena idea o no es recomendable.
+
+    ```javascript
+    const negativeAdvice = {
+      health: "You shouldn't smoke",          // No deberías fumar
+      behavior: "You shouldn't lie",          // No deberías mentir
+      safety: "You shouldn't drive tired"     // No deberías manejar cansado
+    };
+    ```
+
+    **Ejemplos:**
+    - You **shouldn't eat** too much sugar (No deberías comer mucha azúcar)
+    - We **shouldn't waste** water (No deberíamos desperdiciar agua)
+    - He **shouldn't work** so late (Él no debería trabajar tan tarde)
+    - You **shouldn't worry** about it (No deberías preocuparte por eso)
+    - They **shouldn't spend** so much money (No deberían gastar tanto dinero)
+
+    <Aside type="note" title="Should vs Must">
+    **Should** = consejo, recomendación (es opcional seguirlo)  
+    **Must** = obligación fuerte (es necesario hacerlo)
+    </Aside>
+  </TabItem>
+</Tabs>
+
+---
+
+## May / Might
+
+Ambos expresan **posibilidad**. May es ligeramente más probable que might, pero en la práctica se usan de manera intercambiable.
+
+```javascript
+const possibility = {
+  may: "It may rain today",           // Puede que llueva
+  might: "She might be home",         // Puede que esté en casa
+  mayNot: "He may not come",          // Puede que no venga
+  mightNot: "It might not work"       // Puede que no funcione
+};
+```
+
+**Ejemplos:**
+
+- It **may rain** tomorrow (Puede que llueva mañana)
+- She **might call** later (Puede que ella llame después)
+- They **may not come** to the party (Puede que no vengan a la fiesta)
+- I **might be** late (Puede que llegue tarde)
+- He **may know** the answer (Puede que él sepa la respuesta)
+
+<Aside type="tip" title="May vs Might en el presente">
+Úsalos de manera simple para expresar posibilidad. La diferencia de probabilidad entre may y might es mínima en inglés moderno. Ambos significan "puede que" o "quizás".
+</Aside>
+
+---
+
+## Errores Comunes
+
+<Aside type="danger" title="Añadir 'to' después del modal">
+Los modales van seguidos del verbo en **forma base**, nunca con "to".
+
+- I can **to swim** ⛔
+- I can **swim** ✅ (Puedo nadar)
+- You must **to study** ⛔
+- You must **study** ✅ (Debes estudiar)
+</Aside>
+
+<Aside type="danger" title="Añadir -s en tercera persona">
+Los modales **nunca** cambian con he, she o it.
+
+- She **cans** speak English ⛔
+- She **can** speak English ✅ (Ella puede hablar inglés)
+- He **musts** go ⛔
+- He **must** go ✅ (Él debe ir)
+</Aside>
+
+<Aside type="danger" title="Usar do/does en preguntas">
+Los modales forman preguntas por inversión, no con do/does.
+
+- **Do** you **can** swim? ⛔
+- **Can** you swim? ✅ (¿Puedes nadar?)
+- **Does** he **must** go? ⛔
+- **Must** he go? ✅ (¿Debe él ir?)
+</Aside>
+
+<Aside type="danger" title="Confundir mustn't con don't have to">
+**Mustn't** = prohibición (no debes hacerlo)  
+**Don't have to** = no es necesario (opcional)
+
+- You **mustn't** smoke here ✅ (Prohibido, es contra las reglas)
+- You **don't have to** come ✅ (No es obligatorio, pero puedes si quieres)
+- You **mustn't** come ⛔ (Esto significa que está prohibido venir)
+</Aside>
+
+---
+
+## Práctica
+
+<Aside type="tip" title="Ejercicio diario">
+- Escribe 10 oraciones sobre tus habilidades usando can y can't, incluye al menos 3 preguntas
+- Haz una lista de 5 cosas que debes hacer esta semana usando must y 5 cosas que deberías hacer usando should
+- Escribe un diálogo corto entre dos amigos haciendo planes usando al menos 5 modales diferentes
+- Identifica situaciones del día: elige el modal correcto para cada una (habilidad, obligación, consejo, posibilidad)
+- Graba un audio describiendo las reglas de tu escuela o trabajo usando must, mustn't, can y can't
+</Aside>
 
