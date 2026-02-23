@@ -3,3 +3,443 @@ title: Contables e Incontables
 description: Distingue entre sustantivos contables e incontables.
 ---
 
+import { Tabs, TabItem, Aside } from '@astrojs/starlight/components';
+
+Los sustantivos en inglés se dividen en dos categorías fundamentales: **contables** e **incontables**. Es como clasificar datos en tipos discretos (puedes contar cada elemento) versus continuos (medibles pero no individuales). Esta distinción es crucial porque determina qué artículos y cuantificadores puedes usar, y muchos errores comunes de hispanohablantes vienen de no reconocer qué sustantivos son incontables en inglés.
+
+---
+
+## Tipos de Sustantivos
+
+<Tabs>
+  <TabItem label="Contables">
+
+Los sustantivos **contables** son cosas que puedes contar individualmente. Tienen forma singular y plural.
+
+```javascript
+const countableNouns = {
+  characteristics: {
+    usesArticles: true,           // usa a/an con singular
+    hasPlural: true,              // tiene forma plural (-s, -es)
+    usesNumbers: true,            // acepta números (one, two, three)
+    quantifiers: ["many", "few"]  // usa many (muchos) y few (pocos)
+  },
+  examples: [
+    "book",      // libro
+    "apple",     // manzana
+    "person",    // persona
+    "car",       // carro
+    "idea"       // idea
+  ]
+};
+```
+
+**Ejemplos:**
+
+- I have **three books** (Tengo tres libros)
+- She bought **two apples** (Ella compró dos manzanas)
+- There are **five people** waiting (Hay cinco personas esperando)
+- We visited **many countries** (Visitamos muchos países)
+- He owns **a car** and **a motorcycle** (Él tiene un carro y una motocicleta)
+
+</TabItem>
+
+  <TabItem label="Incontables">
+
+Los sustantivos **incontables** son materiales, líquidos, o conceptos que **no puedes dividir en unidades individuales**.
+
+```javascript
+const uncountableNouns = {
+  characteristics: {
+    usesArticles: false,              // NO usa a/an directamente
+    hasPlural: false,                 // NO tiene forma plural
+    usesNumbers: false,               // NO acepta números directamente
+    quantifiers: ["much", "little"],  // usa much (mucho) y little (poco)
+    needsContainers: true             // necesita contenedores para contar
+  },
+  examples: [
+    "water",        // agua
+    "information",  // información
+    "money",        // dinero
+    "furniture",    // muebles
+    "advice"        // consejo
+  ]
+};
+```
+
+**Ejemplos:**
+
+- I drink **water** every day (Tomo agua todos los días)
+- She needs **information** (Ella necesita información)
+- They bought **furniture** (Compraron muebles)
+- We don't have **time** (No tenemos tiempo)
+- He gave me good **advice** (Él me dio buen consejo)
+
+<Aside type="caution" title="Incontables que confunden a hispanohablantes">
+Estos son **incontables** en inglés pero contables en español: 
+- **Information** (información)
+- **Advice** (consejo)
+- **Furniture** (muebles)
+- **Luggage** (equipaje)
+- **Homework** (tarea)
+- **Bread** (pan)
+- **Rice** (arroz).
+- **Hair** (cabello)
+</Aside>
+
+</TabItem>
+</Tabs>
+
+---
+
+## Uso de A/An
+
+Los artículos **a/an** (un/una) solo se usan con sustantivos **contables singulares**. Nunca con incontables.
+
+<Tabs>
+  <TabItem label="Contables">
+
+```javascript
+const countableWithArticles = {
+  withA: [
+    "a book",              // un libro (consonante)
+    "a car",               // un carro
+    "a sandwich",          // un sándwich
+    "a computer"           // una computadora
+  ],
+  withAn: [
+    "an apple",            // una manzana (vocal)
+    "an elephant",         // un elefante
+    "an umbrella",         // un paraguas
+    "an idea"              // una idea
+  ]
+};
+```
+
+**Ejemplos:**
+
+- I want **a sandwich** (Quiero un sándwich)
+- She needs **an umbrella** (Ella necesita un paraguas)
+- He's reading **a book** (Él está leyendo un libro)
+- We saw **an elephant** (Vimos un elefante)
+
+</TabItem>
+
+  <TabItem label="Incontables">
+
+```javascript
+const uncountableNoArticles = {
+  noArticle: [
+    "water",                  // agua (sin artículo)
+    "information",            // información
+    "money",                  // dinero
+    "advice"                  // consejo
+  ],
+  useQuantifier: [
+    "some water",             // algo de agua
+    "some information",       // algo de información
+    "some money",             // algo de dinero
+    "some advice"             // algún consejo
+  ],
+  useContainer: [
+    "a glass of water",       // un vaso de agua
+    "a piece of information", // un dato
+    "an item of advice"       // un consejo
+    "an item of advice"       // un consejo
+  ]
+};
+```
+
+**Ejemplos:**
+
+- I need **water** (not "a water")
+- I need **some water** (Necesito agua)
+- She wants **information** (not "an information")  
+- She wants **some information** (Ella quiere información)
+
+</TabItem>
+</Tabs>
+
+---
+
+## Uso de Some y Any
+
+**Some** (algo de/algunos) y **any** (algo de/ningún) se usan con sustantivos **contables en plural** e **incontables**.
+
+<Tabs>
+  <TabItem label="Some (Afirmativas)">
+
+Usa **some** en oraciones **afirmativas** para indicar una cantidad indefinida.
+
+```javascript
+const someUsage = {
+  countable: "I have some books",        // Tengo algunos libros
+  uncountable: "I have some money"       // Tengo algo de dinero
+};
+```
+
+**Ejemplos:**
+
+- We need **some apples** (Necesitamos algunas manzanas) - contable
+- They have **some water** (Tienen algo de agua) - incontable
+- She bought **some chairs** (Ella compró algunas sillas) - contable
+- I want **some information** (Quiero algo de información) - incontable
+
+</TabItem>
+
+  <TabItem label="Any (Negativas/Preguntas)">
+
+Usa **any** en oraciones **negativas** y **preguntas**.
+
+```javascript
+const anyUsage = {
+  question: "Do you have any books?",       // ¿Tienes algunos libros?
+  negative: "I don't have any money"        // No tengo dinero
+};
+```
+
+**Ejemplos:**
+
+- Do you have **any eggs**? (¿Tienes huevos?) - pregunta, contable
+- Is there **any milk**? (¿Hay leche?) - pregunta, incontable
+- We don't have **any chairs** (No tenemos sillas) - negativa, contable
+- I don't need **any help** (No necesito ayuda) - negativa, incontable
+
+</TabItem>
+
+  <TabItem label="Some en Preguntas (Ofrecimientos)">
+
+Usa **some** en preguntas cuando **ofreces** algo o **pides** algo de manera cortés.
+
+```javascript
+const someInQuestions = {
+  offering: "Would you like some coffee?",      // ¿Te gustaría café?
+  requesting: "Can I have some water?"          // ¿Puedo tener agua?
+};
+```
+
+**Ejemplos:**
+
+- Would you like **some cookies**? (¿Te gustarían algunas galletas?)
+- Can I have **some advice**? (¿Puedo recibir algún consejo?)
+- Do you want **some help**? (¿Quieres ayuda?)
+
+</TabItem>
+</Tabs>
+
+---
+
+## Contenedores y Unidades
+
+Para contar sustantivos incontables, usa **contenedores, porciones o unidades**. Es como envolver datos continuos en estructuras discretas.
+
+```javascript
+const containers = {
+  pattern: "a/an + contenedor + of + incontable sustantivo",
+  example: "a glass of water"  // un vaso de agua
+};
+```
+
+<Tabs>
+  <TabItem label="Bebidas">
+
+```javascript
+const drinkContainers = {
+  glass: "a glass of",       // un vaso de
+  cup: "a cup of",           // una taza de
+  mug: "a mug of",           // una taza grande de
+  bottle: "a bottle of",     // una botella de
+  can: "a can of",           // una lata de
+  carton: "a carton of",     // un cartón de
+  jug: "a jug of"            // una jarra de
+};
+```
+
+**Ejemplos:**
+
+- **A glass of** water (Un vaso de agua)
+- **A cup of** coffee (Una taza de café)
+- **A bottle of** milk (Una botella de leche)
+- **A can of** soda (Una lata de refresco)
+- **A carton of** juice (Un cartón de jugo)
+
+</TabItem>
+
+  <TabItem label="Comida">
+
+```javascript
+const foodContainers = {
+  bowl: "a bowl of",         // un tazón de
+  plate: "a plate of",       // un plato de
+  slice: "a slice of",       // una rebanada de
+  piece: "a piece of",       // un pedazo de
+  loaf: "a loaf of",         // una barra de
+  bar: "a bar of",           // una barra de
+  box: "a box of",           // una caja de
+  bag: "a bag of",           // una bolsa de
+  packet: "a packet of"      // un paquete de
+};
+```
+
+**Ejemplos:**
+
+- **A bowl of** rice (Un tazón de arroz)
+- **A slice of** bread (Una rebanada de pan)
+- **A piece of** cake (Un pedazo de pastel)
+- **A loaf of** bread (Una barra de pan)
+- **A bag of** sugar (Una bolsa de azúcar)
+
+</TabItem>
+
+  <TabItem label="Porciones">
+
+```javascript
+const portionUnits = {
+  spoonful: "a spoonful of",         // una cucharada de
+  tablespoon: "a tablespoon of",     // una cucharada de
+  teaspoon: "a teaspoon of",         // una cucharadita de
+  pinch: "a pinch of",               // una pizca de
+  drop: "a drop of",                 // una gota de
+  lump: "a lump of"                  // un terrón de
+};
+```
+
+**Ejemplos:**
+
+- **A spoonful of** sugar (Una cucharada de azúcar)
+- **A tablespoon of** oil (Una cucharada de aceite)
+- **A teaspoon of** salt (Una cucharadita de sal)
+- **A pinch of** salt (Una pizca de sal)
+- **A drop of** water (Una gota de agua)
+
+</TabItem>
+
+  <TabItem label="Conceptos Abstractos">
+
+```javascript
+const abstractUnits = {
+  piece: "a piece of",       // un pedazo de / una pieza de
+  bit: "a bit of",           // un poco de
+  item: "an item of",        // un artículo de
+  sheet: "a sheet of",       // una hoja de
+  article: "an article of"   // un artículo de
+};
+```
+
+**Ejemplos:**
+
+- **A piece of** advice (Un consejo)
+- **A piece of** information (Una información/dato)
+- **A piece of** furniture (Un mueble)
+- **A bit of** help (Un poco de ayuda)
+- **An item of** clothing (Una prenda de ropa)
+
+</TabItem>
+
+  <TabItem label="Materiales">
+
+```javascript
+const materialUnits = {
+  sheet: "a sheet of",       // una hoja de
+  roll: "a roll of",         // un rollo de
+  tube: "a tube of",         // un tubo de
+  jar: "a jar of",           // un frasco de
+  pile: "a pile of",         // un montón de
+  bucket: "a bucket of"      // un balde de
+};
+```
+
+**Ejemplos:**
+
+- **A sheet of** paper (Una hoja de papel)
+- **A roll of** toilet paper (Un rollo de papel higiénico)
+- **A tube of** toothpaste (Un tubo de pasta de dientes)
+- **A jar of** honey (Un frasco de miel)
+- **A bucket of** water (Un balde de agua)
+
+</TabItem>
+
+  <TabItem label="Grupos y Cantidades">
+
+```javascript
+const groupUnits = {
+  bunch: "a bunch of",       // un manojo de / un racimo de
+  pile: "a pile of",         // un montón de
+  heap: "a heap of",         // un montón de
+  load: "a load of",         // una carga de
+  ton: "a ton of"            // una tonelada de
+};
+```
+
+**Ejemplos:**
+
+- **A bunch of** grapes (Un racimo de uvas)
+- **A bunch of** flowers (Un ramo de flores)
+- **A pile of** books (Un montón de libros)
+- **A heap of** clothes (Un montón de ropa)
+- **A load of** laundry (Una carga de ropa)
+
+</TabItem>
+</Tabs>
+
+---
+
+## Errores Comunes
+
+<Aside type="danger" title="Usar a/an con sustantivos incontables">
+- I need **a** water ⛔
+- I need **some** water (Necesito agua) ✅
+- She wants **an** information ⛔
+- She wants **some** information (Ella quiere información) ✅
+
+Los incontables NUNCA llevan **a/an**. Usa **some**, o un contenedor como "a glass of water".
+</Aside>
+
+<Aside type="danger" title="Pluralizar sustantivos incontables">
+- I have two **breads** ⛔
+- I have two **loaves of bread** (Tengo dos barras de pan) ✅
+- We need three **furnitures** ⛔
+- We need three **pieces of furniture** (Necesitamos tres muebles) ✅
+
+Los incontables no tienen plural. Usa contenedores o unidades para contarlos.
+</Aside>
+
+<Aside type="danger" title="Tratar 'advice', 'information', 'furniture' como contables">
+- Can you give me **an advice**? ⛔
+- Can you give me **some advice**? (¿Puedes darme un consejo?) ✅
+- I need **informations** ⛔
+- I need **some information** (Necesito información) ✅
+
+Estos sustantivos son incontables en inglés aunque sean contables en español.
+</Aside>
+
+<Aside type="danger" title="Usar 'any' en afirmativas">
+- I have **any** money ⛔
+- I have **some** money (Tengo dinero) ✅
+- We bought **any** apples ⛔
+- We bought **some** apples (Compramos manzanas) ✅
+
+Usa **some** en afirmativas. **Any** es para negativas y preguntas.
+</Aside>
+
+<Aside type="danger" title="Confundir 'much' y 'many'">
+- There are **much** people ⛔
+- There are **many** people (Hay muchas personas) ✅
+- I don't have **many** money ⛔
+- I don't have **much** money (No tengo mucho dinero) ✅
+
+**Many** con contables, **much** con incontables (esto se profundiza en el siguiente tema).
+</Aside>
+
+---
+
+## Práctica
+
+<Aside type="tip" title="Ejercicio diario">
+- Clasifica 20 sustantivos como contables o incontables (libro, agua, consejo, silla, dinero, etc.)
+- Completa oraciones con a/an/some/any: "I need ___ water", "Do you have ___ books?", "She doesn't have ___ time"
+- Transforma sustantivos incontables usando contenedores: "water" → "a glass of water", "bread" → "a loaf of bread"
+- Lee un artículo en inglés y subraya todos los sustantivos incontables, verifica si se usan correctamente
+- Practica con comida: haz una lista de compras usando some/any correctamente
+- Memoriza los 10 incontables más problemáticos: water, money, information, advice, furniture, luggage, homework, bread, rice, hair
+</Aside>

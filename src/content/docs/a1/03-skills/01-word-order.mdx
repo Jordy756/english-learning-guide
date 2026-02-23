@@ -3,246 +3,264 @@ title: Orden de Palabras
 description: Aprende la estructura correcta de las oraciones.
 ---
 
-import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
+import { Tabs, TabItem, Aside, CardGrid, Card, Steps } from '@astrojs/starlight/components';
 
-En español, el orden de palabras es flexible: "Yo como pizza" y "Pizza como yo" se entienden. En inglés, el orden es **rígido**. Piensa en una oración como un array donde cada posición tiene un propósito específico, y cambiar el orden cambia completamente el significado.
-
-El inglés sigue una estructura predecible que, una vez dominada, te permite construir oraciones correctas automáticamente.
+El **orden de palabras** (word order) en inglés es muy importante porque determina el significado de la oración. Es como un **array en JavaScript**: el orden de los elementos cambia el resultado. A diferencia del español, el inglés tiene reglas de orden más estrictas que debes seguir para que tus oraciones sean correctas y claras.
 
 ---
 
-## Estructura Básica: SVO
+## Estructura de Oraciones
 
-La estructura fundamental del inglés es **Subject + Verb + Object** (Sujeto + Verbo + Objeto):
+<Tabs>
+  <TabItem label="Básica (SVO)">
+
+La estructura más común en inglés es **Sujeto + Verbo + Objeto**. Este orden es fijo y casi nunca cambia.
 
 ```javascript
-const basicSentence = {
-  structure: ["Subject", "Verb", "Object"],
-  example: ["I", "eat", "pizza"]
-  // Yo como pizza
+const sentence = {
+  subject: "I",          // sujeto: yo
+  verb: "eat",           // verbo: como
+  object: "pizza"        // objeto: pizza
 };
+// Resultado: "I eat pizza" (Yo como pizza)
 ```
 
 **Ejemplos:**
-- She reads books (Ella lee libros)
-- They play football (Ellos juegan fútbol)
-- My brother loves music (Mi hermano ama la música)
-- The cat caught a mouse (El gato atrapó un ratón)
-- We need more time (Necesitamos más tiempo)
 
-<Aside type="tip">
-A diferencia del español, en inglés **siempre** necesitas expresar el sujeto. No puedes decir solo "Am tired" — debes decir **"I am tired"**.
+- I drink water (Yo tomo agua)
+- She reads books (Ella lee libros)
+- They play soccer (Ellos juegan fútbol)
+- We watch movies (Vemos películas)
+- He speaks English (Él habla inglés)
+
+<Aside type="note" title="El sujeto es obligatorio en inglés">
+En español puedes omitir el sujeto ("Como pizza"), pero en inglés el sujeto **siempre** debe estar presente: **I** eat pizza.
 </Aside>
 
----
+  </TabItem>
 
-## Estructura Extendida: SVOMPT
+  <TabItem label="Extendida (SVOMPT)">
 
-Para oraciones más completas, el inglés sigue el patrón **SVOMPT**:
+Cuando agregas más información, sigue el orden **Sujeto + Verbo + Objeto + Manera + Lugar + Tiempo**.
 
 ```javascript
-const extendedStructure = {
-  S: "Subject",      // Sujeto
-  V: "Verb",         // Verbo
-  O: "Object",       // Objeto (qué/quién)
-  M: "Manner",       // Manera (cómo)
-  P: "Place",        // Lugar (dónde)
-  T: "Time"          // Tiempo (cuándo)
+const extendedSentence = {
+  subject: "I",           // sujeto: yo
+  verb: "study",          // verbo: estudio
+  object: "English",      // objeto: inglés
+  manner: "carefully",    // manera: cuidadosamente
+  place: "at home",       // lugar: en casa
+  time: "every day"       // tiempo: todos los días
 };
+// Resultado: "I study English carefully at home every day"
+// (Yo estudio inglés cuidadosamente en casa todos los días)
 ```
 
-<Tabs>
-  <TabItem label="Estructura">
-    ```javascript
-    const sentence = [
-      "She",           // Subject
-      "plays",         // Verb
-      "the piano",     // Object
-      "beautifully",   // Manner (cómo)
-      "at home",       // Place (dónde)
-      "every day"      // Time (cuándo)
-    ];
-    // Ella toca el piano bellamente en casa todos los días
-    ```
-  </TabItem>
-  
-  <TabItem label="Ejemplos">
-    ```javascript
-    const examples = [
-      // S + V + O + M + P + T
-      "He drives his car carefully on the highway at night",
-      // S + V + O + P + T (sin Manner)
-      "I met my friend at the park yesterday",
-      // S + V + O + T (solo tiempo)
-      "We watch movies every Friday"
-    ];
-    ```
+**Ejemplos:**
+
+- She plays tennis well at the park on Sundays (Ella juega tenis bien en el parque los domingos)
+- They eat lunch quickly in the cafeteria at noon (Ellos almuerzan rápido en la cafetería al mediodía)
+- We watch movies together at the cinema on Fridays (Vemos películas juntos en el cine los viernes)
+- He reads books quietly in his room every night (Él lee libros silenciosamente en su habitación todas las noches)
+- I drink coffee slowly at the café in the morning (Tomo café lentamente en el café por la mañana)
+
+<Aside type="note" title="No es obligatorio usar todos los elementos">
+No necesitas incluir siempre manera, lugar y tiempo en cada oración. Usa solo los elementos que necesites para comunicar tu mensaje, pero respeta el orden cuando los uses.
+</Aside>
+
   </TabItem>
 </Tabs>
-
-**Más ejemplos:**
-- I study English at the library every morning (Estudio inglés en la biblioteca cada mañana)
-- She works quietly in her office on Mondays (Ella trabaja silenciosamente en su oficina los lunes)
-- They eat dinner together at home every night (Cenan juntos en casa cada noche)
-
-<Aside type="caution">
-El orden **MPT** (Manner → Place → Time) es flexible, pero **nunca** pongas estos elementos entre el verbo y el objeto.
-</Aside>
 
 ---
 
 ## Orden de Adjetivos
 
-Cuando usas múltiples adjetivos, siguen un orden específico:
+Los **adjetivos** en inglés van **antes** del sustantivo. Cuando usas varios adjetivos juntos, siguen un orden específico llamado **OSASCOMP**. El orden es **opinión**, **tamaño**, **edad**, **forma**, **color**, **origen**, **material** y **propósito**.
 
 ```javascript
-const adjectiveOrder = [
-  "Opinion",      // beautiful, ugly
-  "Size",         // big, small
-  "Age",          // old, new, young
-  "Shape",        // round, square
-  "Color",        // red, blue
-  "Origin",       // Spanish, American
-  "Material",     // wooden, plastic
-  "Purpose"       // sleeping (bag)
-];
-// OSASCOMP para recordar
+const adjectiveOrder = {
+  opinion: ["beautiful", "nice", "ugly"],       // [hermoso, agradable, feo]
+  size: ["big", "small", "large"],              // [grande, pequeño, grande]
+  age: ["old", "new", "young"],                 // [viejo, nuevo, joven]
+  shape: ["round", "square", "thin"],           // [redondo, cuadrado, delgado]
+  color: ["red", "blue", "green"],              // [rojo, azul, verde]
+  origin: ["American", "Mexican", "European"],  // [americano, mexicano, europeo]
+  material: ["wooden", "metal", "plastic"],     // [de madera, de metal, de plástico]
+  purpose: ["sleeping (bag)", "cooking (pot)"]  // [para dormir (bolsa), para cocinar (olla)]
+};
 ```
 
-<Tabs>
-  <TabItem label="Correcto">
-    ```javascript
-    const correct = {
-      example1: "a beautiful small old house",
-      // Opinion + Size + Age
-      example2: "a big round wooden table",
-      // Size + Shape + Material
-      example3: "an expensive new Italian car"
-      // Opinion + Age + Origin
-    };
-    ```
-  </TabItem>
-  
-  <TabItem label="Incorrecto">
-    ```javascript
-    const incorrect = {
-      wrong1: "a old small beautiful house",
-      wrong2: "a wooden round big table",
-      wrong3: "an Italian new expensive car"
-    };
-    // El orden afecta cómo suena natural
-    ```
-  </TabItem>
-</Tabs>
-
 **Ejemplos:**
-- A lovely little old cottage (Una hermosa pequeña cabaña antigua)
-- A beautiful long black dress (Un hermoso vestido largo negro)
-- A small Japanese ceramic vase (Un pequeño jarrón cerámico japonés)
+
+- A **beautiful big old red wooden** house (Una hermosa casa grande vieja roja de madera)
+- The **nice small round blue** ball (La pelota agradable pequeña redonda azul)
+- A **lovely little white** cat (Un gato encantador pequeño blanco)
+- Some **expensive new Italian leather** shoes (Unos zapatos italianos de cuero nuevos caros)
+- That **ugly large square metal** box (Esa caja metálica cuadrada grande fea)
+
+<Aside type="note" title="No uses demasiados adjetivos a la vez">
+Aunque la regla OSASCOMP existe, en conversaciones cotidianas es más natural usar solo 1-2 adjetivos. Usar muchos adjetivos juntos suena poco natural.
+</Aside>
 
 ---
 
 ## Posición de Adverbios
 
-Los adverbios cambian de posición según su tipo:
+Los **adverbios** cambian de posición según su tipo:
 
 <Tabs>
-  <TabItem label="Frecuencia">
-    ```javascript
-    const frequency = {
-      position: "Before main verb, after 'be'",
-      adverbs: ["always", "usually", "often", "never"],
-      examples: [
-        "I always wake up early",   // antes del verbo
-        "She is always happy"       // después de 'be'
-      ]
-    };
-    ```
-    
-    **Ejemplos:**
-    - He never eats meat (Él nunca come carne)
-    - They usually arrive late (Usualmente llegan tarde)
-    - I am often tired (A menudo estoy cansado)
-  </TabItem>
-  
-  <TabItem label="Manera">
-    ```javascript
-    const manner = {
-      position: "After verb/object",
-      adverbs: ["quickly", "slowly", "carefully"],
-      examples: [
-        "She spoke quietly",        // después del verbo
-        "He drives the car slowly"  // después del objeto
-      ]
-    };
-    ```
-    
-    **Ejemplos:**
-    - The children played happily (Los niños jugaron felizmente)
-    - She answered the question correctly (Respondió la pregunta correctamente)
-  </TabItem>
-  
-  <TabItem label="Tiempo/Lugar">
-    ```javascript
-    const timePlace = {
-      position: "Usually at end of sentence",
-      examples: [
-        "I saw him yesterday",      // tiempo al final
-        "She works here",           // lugar al final
-        "We met at the cafe today"  // lugar + tiempo
-      ]
-    };
-    ```
-    
-    **Ejemplos:**
-    - I'm going to Madrid tomorrow (Voy a Madrid mañana)  
-    - They live nearby (Viven cerca)
-  </TabItem>
-</Tabs>
+<TabItem label="Frecuencia">
 
----
-
-## Posición de "Enough" y "Too"
-
-Estas palabras tienen posiciones específicas:
+Los adverbios de frecuencia van **antes del verbo principal**, pero **después del verbo "be"**.
 
 ```javascript
-const position = {
-  enough: {
-    afterAdj: "good enough",      // después de adjetivo
-    beforeNoun: "enough money"    // antes de sustantivo
-  },
-  too: {
-    beforeAdj: "too expensive",   // antes de adjetivo
-    beforeAdv: "too quickly"      // antes de adverbio
-  }
+const frequency = {
+  adverbs: ["always", "usually", "often", "sometimes", "never"],
+  // frecuencia: [siempre, usualmente, a menudo, a veces, nunca]
+
+  beforeVerb: "I always eat breakfast", // Siempre desayuno
+  afterBe: "She is usually happy"         // Ella usualmente está feliz
 };
 ```
 
+Estos adverbios significan siempre, usualmente, a menudo, a veces y nunca. Van **antes del verbo principal** pero **después del verbo "be"**.
+
 **Ejemplos:**
-- This coffee is hot enough (Este café está suficientemente caliente)
-- I don't have enough time (No tengo suficiente tiempo)
-- This bag is too heavy (Esta bolsa es demasiado pesada)
-- You're driving too fast (Estás conduciendo demasiado rápido)
+
+- I **always** drink water (Siempre tomo agua)
+- They **usually** arrive early (Usualmente llegan temprano)
+- We **often** play tennis (A menudo jugamos tenis)
+- He **sometimes** reads books (A veces lee libros)
+- She **never** eats meat (Nunca come carne)
+- I **am always** tired (Siempre estoy cansado)
+- She **is usually** happy (Usualmente está feliz)
+
+</TabItem>
+
+<TabItem label="Manera">
+
+Los adverbios de manera van **después del verbo u objeto**.
+
+```javascript
+const manner = {
+  adverbs: ["quickly", "slowly", "carefully"],
+  // manera: [rápidamente, lentamente, cuidadosamente]
+
+  afterVerb: "She spoke quietly", // Ella habló silenciosamente
+  afterObject: "He drives the car slowly" // Él maneja el carro lentamente
+};
+```
+
+Estos adverbios significan rápidamente, lentamente y cuidadosamente. Van **después del verbo u objeto**.
+
+**Ejemplos:**
+
+- The children played **happily** (Los niños jugaron felizmente)
+- She answered the question **correctly** (Respondió la pregunta correctamente)
+- He runs **fast** (Él corre rápido)
+- They work **hard** (Ellos trabajan duro)
+- I drive **carefully** (Yo manejo cuidadosamente)
+
+</TabItem>
+
+<TabItem label="Tiempo/Lugar">
+
+Los adverbios de tiempo y lugar pueden ir al **principio** o al **final** de la oración.
+
+```javascript
+const timePlace = {
+  time: ["today", "yesterday", "tomorrow", "now"],
+  // tiempo: [hoy, ayer, mañana, ahora]
+
+  place: ["here", "there", "everywhere"],
+  // lugar: [aquí, allí, en todas partes]
+
+  atStart: "Today I work", // Hoy trabajo
+  atEnd: "I work today" // Trabajo hoy
+};
+```
+
+Los adverbios de **tiempo** (hoy, ayer, mañana, ahora) y **lugar** (aquí, allí, en todas partes) pueden ir al principio o al final de la oración.
+
+**Ejemplos:**
+
+- I study English **every day** (Estudio inglés todos los días)
+- **Tomorrow** I have a meeting (Mañana tengo una reunión)
+- **Yesterday** we played soccer (Ayer jugamos fútbol)
+- She is working **here** (Ella está trabajando aquí)
+- We can go **there** (Podemos ir allí)
+
+</TabItem>
+</Tabs>
 
 ---
 
 ## Errores Comunes
 
-<Aside type="danger">
-**Objeto entre verbo y complemento:**
-- ~~I like very much chocolate~~ → **I like chocolate very much** (Me gusta mucho el chocolate)
-- ~~She speaks well English~~ → **She speaks English well** (Ella habla bien inglés)
+<Aside type="danger" title="Poner el objeto antes del verbo">
+- I pizza eat ⛔
+- I eat pizza (Yo como pizza) ✅
+- She books reads ⛔
+- She reads books (Ella lee libros) ✅
+- They soccer play ⛔
+- They play soccer (Ellos juegan fútbol) ✅
+
+El orden en inglés es fijo: **Sujeto + Verbo + Objeto**.
 </Aside>
 
-<Aside type="danger">
-**Adverbio de frecuencia mal ubicado:**
-- ~~I go always to the gym~~ → **I always go to the gym** (Siempre voy al gimnasio)
-- ~~She is late never~~ → **She is never late** (Ella nunca llega tarde)
+<Aside type="danger" title="Poner el adjetivo después del sustantivo">
+- A house **big** ⛔
+- A **big** house (Una casa grande) ✅
+- The car **red** ⛔
+- The **red** car (El carro rojo) ✅
+- A dog **small** ⛔
+- A **small** dog (Un perro pequeño) ✅
+
+Los adjetivos van **antes** del sustantivo en inglés.
 </Aside>
 
-<Aside type="danger">
-**Orden de adjetivos incorrecto:**
-- ~~A red big car~~ → **A big red car** (Un carro grande rojo)
-- ~~A wooden old table~~ → **An old wooden table** (Una mesa vieja de madera)
+<Aside type="danger" title="Omitir el sujeto">
+- Is beautiful ⛔
+- It is beautiful (Es hermoso) ✅
+- Am hungry ⛔
+- I am hungry (Tengo hambre) ✅
+- Like coffee ⛔
+- I like coffee (Me gusta el café) ✅
+
+En inglés, el sujeto es **obligatorio**. No puedes omitirlo como en español.
+</Aside>
+
+<Aside type="danger" title="Colocar mal los adverbios de frecuencia">
+- I eat **always** breakfast ⛔
+- I **always** eat breakfast (Siempre desayuno) ✅
+- She goes **never** to the gym ⛔
+- She **never** goes to the gym (Nunca va al gimnasio) ✅
+- They come **usually** late ⛔
+- They **usually** come late (Usualmente llegan tarde) ✅
+
+Los adverbios de frecuencia van **antes** del verbo principal.
+</Aside>
+
+<Aside type="danger" title="Traducir el orden del español literalmente">
+- Interesting is the book ⛔
+- The book is interesting (El libro es interesante) ✅
+- Beautiful are the flowers ⛔
+- The flowers are beautiful (Las flores son hermosas) ✅
+- Teacher my is nice ⛔
+- My teacher is nice (Mi profesor es agradable) ✅
+
+No traduzcas palabra por palabra. Usa el orden correcto del inglés: **Sujeto + Verbo + Complemento**.
+</Aside>
+
+---
+
+## Práctica
+
+<Aside type="tip" title="Ejercicio diario">
+- Escribe 5 oraciones sobre tu rutina usando el orden SVOMPT (agrega manera, lugar y tiempo)
+- Describe objetos cercanos usando 2-3 adjetivos siguiendo el orden OSASCOMP
+- Practica con adverbios de frecuencia: escribe oraciones con always, usually, often, sometimes, never
+- Lee textos en inglés e identifica el orden: sujeto, verbo, objeto en cada oración
+- Crea tarjetas con palabras y ordénalas correctamente para formar oraciones
+- Practica usando "enough" y "too" describiendo situaciones diarias
 </Aside>

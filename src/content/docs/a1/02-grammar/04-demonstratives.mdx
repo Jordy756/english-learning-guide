@@ -3,3 +3,172 @@ title: Demostrativos
 description: Usa this, that, these, those correctamente.
 ---
 
+import { Tabs, TabItem, Aside, CardGrid, Card } from '@astrojs/starlight/components';
+
+Los **demostrativos** (demonstratives) son palabras que usas para señalar personas, lugares o cosas. Son como **punteros** en programación: indican la ubicación de algo en relación a ti. En inglés, los demostrativos cambian según la **distancia** (cerca/lejos) y el **número** (singular/plural).
+
+---
+
+## Singular y Plural
+
+Los demostrativos cambian según si hablas de **uno** (singular) o **varios** (plural), y también según la **distancia**.
+
+<Tabs>
+<TabItem label="Singular">
+
+Usa **this** (cerca) y **that** (lejos) para hablar de **una sola** cosa.
+
+```javascript
+const singular = [
+  { word: "this", distance: "cerca de ti" },  // this: este/esta/esto
+  { word: "that", distance: "lejos de ti" }   // that: ese/esa/eso
+];
+```
+
+**Ejemplos:**
+- **This** book is interesting (Este libro es interesante) *[libro en tu mano]*
+- **This** is my phone (Este es mi teléfono) *[señalando tu teléfono]*
+- **This** chair is comfortable (Esta silla es cómoda) *[sentado en ella]*
+- **This** question is easy (Esta pregunta es fácil) *[mirando la pregunta]*
+- **That** car is red (Ese carro es rojo) *[carro en la calle]*
+- **That** is your house (Esa es tu casa) *[apuntando a lo lejos]*
+- **That** building is tall (Ese edificio es alto) *[edificio a distancia]*
+- **That** idea is good (Esa idea es buena) *[idea mencionada antes]*
+
+</TabItem>
+
+<TabItem label="Plural">
+
+Usa **these** (cerca) y **those** (lejos) para hablar de **varias** cosas.
+
+```javascript
+const plural = [
+  { word: "these", distance: "cerca de ti" },  // these: estos/estas
+  { word: "those", distance: "lejos de ti" }   // those: esos/esas
+]
+```
+
+**Ejemplos:**
+- **These** pens are mine (Estos bolígrafos son míos) *[bolígrafos en tu mano]*
+- **These** are my friends (Estos son mis amigos) *[amigos a tu lado]*
+- **These** cookies are delicious (Estas galletas están deliciosas) *[comiendo galletas]*
+- **These** shoes are new (Estos zapatos son nuevos) *[zapatos puestos]*
+- **Those** birds are beautiful (Esos pájaros son hermosos) *[pájaros en un árbol]*
+- **Those** are your books (Esos son tus libros) *[libros en una mesa lejana]*
+- **Those** mountains are high (Esas montañas son altas) *[montañas a distancia]*
+- **Those** people are waiting (Esas personas están esperando) *[personas lejos de ti]*
+
+</TabItem>
+</Tabs>
+
+---
+
+## Uso con Sustantivos vs Solo
+
+Los demostrativos pueden usarse **con un sustantivo** o **solos** (como pronombres).
+
+<Tabs>
+<TabItem label="Con Sustantivo">
+
+Demostrativo + Sustantivo (funcionan como adjetivos):
+
+```javascript
+const withNoun = {
+  pattern: "demonstrative + noun",
+  examples: [
+    "this book",    // este libro
+    "that car",     // ese carro
+    "these keys",   // estas llaves
+    "those stars"   // esas estrellas
+  ]
+};
+```
+
+**Ejemplos:**
+- **This phone** is expensive (Este teléfono es caro)
+- **That dog** is friendly (Ese perro es amigable)
+- **These flowers** are pretty (Estas flores son bonitas)
+- **Those clouds** are dark (Esas nubes están oscuras)
+
+</TabItem>
+
+<TabItem label="Solo (Pronombre)">
+
+Demostrativo solo, sin sustantivo (funcionan como pronombres):
+
+```javascript
+const alone = {
+  pattern: "demonstrative alone",
+  examples: [
+    "This is good",     // Esto es bueno
+    "That is wrong",    // Eso está mal
+    "These are heavy",  // Estos son pesados
+    "Those are cheap"   // Esos son baratos
+  ]
+};
+```
+
+**Ejemplos:**
+- **This** is important (Esto es importante)
+- **That** is correct (Eso es correcto)
+- **These** are mine (Estos son míos)
+- **Those** are yours (Esos son tuyos)
+
+</TabItem>
+</Tabs>
+
+<Aside type="note" title="Cuando usar cada forma">
+Usa **con sustantivo** cuando quieres especificar qué cosa: "this book" (este libro). Usa **solo** cuando el contexto ya es claro: "This is interesting" (esto es interesante) refiriéndote al libro.
+</Aside>
+
+---
+
+## Errores Comunes
+
+<Aside type="danger" title="Confundir singular y plural">
+- **This** books are new ⛔
+- **These** books are new (Estos libros son nuevos) ✅
+- **Those** car is fast ⛔
+- **That** car is fast (Ese carro es rápido) ✅
+
+Usa **this/that** con singular y **these/those** con plural.
+</Aside>
+
+<Aside type="danger" title="Olvidar la distancia">
+- **That** pen is mine *[en tu mano]* ⛔
+- **This** pen is mine (Este bolígrafo es mío) *[en tu mano]* ✅
+- **These** mountains *[señalando lejos]* ⛔
+- **Those** mountains (Esas montañas) *[señalando lejos]* ✅
+
+Usa **this/these** para cerca y **that/those** para lejos.
+</Aside>
+
+<Aside type="danger" title="Traducir literalmente desde el español">
+- This of here / That of there ⛔
+- **This** one / **That** one (Este / Ese) ✅
+- **This** are my keys ⛔
+- **These** are my keys (Estas son mis llaves) ✅
+
+En inglés, el demostrativo debe concordar con singular/plural.
+</Aside>
+
+<Aside type="danger" title="Usar 'it' en lugar de un demostrativo">
+- It is my book *[señalando el libro]* ⛔
+- **This** is my book (Este es mi libro) *[señalando]* ✅
+- It are expensive *[señalando zapatos]* ⛔
+- **These** are expensive (Estos son caros) *[señalando zapatos]* ✅
+
+Cuando señalas algo, usa demostrativos, no "it".
+</Aside>
+
+---
+
+## Práctica
+
+<Aside type="tip" title="Ejercicio diario">
+- Señala 5 objetos cerca de ti y di: "This is a [object]" o "These are [objects]"
+- Señala 5 objetos lejos de ti y di: "That is a [object]" o "Those are [objects]"
+- Camina por tu casa: cuando toques algo, di "this"; cuando lo veas lejos, di "that"
+- Practica con objetos múltiples: agrupa varios objetos y practica "these" (cerca) vs "those" (lejos)
+- Describe tu habitación usando los cuatro demostrativos: "This desk is big. Those posters are colorful. These books are interesting. That window is open"
+</Aside>
