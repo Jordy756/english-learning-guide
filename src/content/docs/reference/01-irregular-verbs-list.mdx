@@ -1,5 +1,164 @@
 ---
 title: Lista de Verbos Irregulares
-description: Tabla completa de verbos irregulares.
+description: Referencia completa de verbos irregulares organizados por patrón de cambio
 ---
 
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+Los verbos irregulares en inglés se pueden agrupar en cuatro patrones según cómo cambian sus formas. Esta organización facilita su memorización al reconocer similitudes entre grupos de verbos.
+
+**Los 4 patrones:**
+
+1. **Todos diferentes** — La forma base, el pasado simple y el participio pasado son completamente distintos (go/went/gone)
+2. **Pasado = Participio** — La forma base es diferente, pero el pasado simple y el participio pasado son iguales (buy/bought/bought)
+3. **Sin cambio** — Las tres formas son idénticas (cut/cut/cut)
+4. **Base = Participio** — La forma base y el participio pasado son iguales, solo el pasado simple cambia (come/came/come)
+
+<Tabs>
+  <TabItem label="Todos diferentes">
+```javascript
+const abcPattern = {
+  be: { past: "was (/wɑz/) / were (/wɜr/)", participle: "been (/bɪn/)", meaning: "ser/estar" },
+  begin: { past: "began (/bɪˈɡæn/)", participle: "begun (/bɪˈɡʌn/)", meaning: "comenzar" },
+  bite: { past: "bit (/bɪt/)", participle: "bitten (/ˈbɪtn/)", meaning: "morder" },
+  blow: { past: "blew (/bluː/)", participle: "blown (/bloʊn/)", meaning: "soplar" },
+  break: { past: "broke (/broʊk/)", participle: "broken (/ˈbroʊkən/)", meaning: "romper" },
+  choose: { past: "chose (/tʃoʊz/)", participle: "chosen (/ˈtʃoʊzən/)", meaning: "elegir" },
+  do: { past: "did (/dɪd/)", participle: "done (/dʌn/)", meaning: "hacer" },
+  draw: { past: "drew (/druː/)", participle: "drawn (/drɔːn/)", meaning: "dibujar" },
+  drink: { past: "drank (/dræŋk/)", participle: "drunk (/drʌŋk/)", meaning: "beber" },
+  drive: { past: "drove (/droʊv/)", participle: "driven (/ˈdrɪvən/)", meaning: "conducir" },
+  eat: { past: "ate (/eɪt/)", participle: "eaten (/ˈiːtn/)", meaning: "comer" },
+  fall: { past: "fell (/fɛl/)", participle: "fallen (/ˈfɔːlən/)", meaning: "caer" },
+  fly: { past: "flew (/fluː/)", participle: "flown (/floʊn/)", meaning: "volar" },
+  forbid: { past: "forbade (/fərˈbæd/)", participle: "forbidden (/fərˈbɪdn/)", meaning: "prohibir" },
+  forget: { past: "forgot (/fərˈɡɑt/)", participle: "forgotten (/fərˈɡɑtn/)", meaning: "olvidar" },
+  forgive: { past: "forgave (/fərˈɡeɪv/)", participle: "forgiven (/fərˈɡɪvən/)", meaning: "perdonar" },
+  freeze: { past: "froze (/froʊz/)", participle: "frozen (/ˈfroʊzən/)", meaning: "congelar" },
+  get: { past: "got (/ɡɑt/)", participle: "gotten (/ˈɡɑtn/) o got (/ɡɑt/)", meaning: "obtener" },
+  give: { past: "gave (/ɡeɪv/)", participle: "given (/ˈɡɪvən/)", meaning: "dar" },
+  go: { past: "went (/wɛnt/)", participle: "gone (/ɡɔn/)", meaning: "ir" },
+  grow: { past: "grew (/ɡruː/)", participle: "grown (/ɡroʊn/)", meaning: "crecer" },
+  hide: { past: "hid (/hɪd/)", participle: "hidden (/ˈhɪdn/)", meaning: "esconder" },
+  know: { past: "knew (/nuː/)", participle: "known (/noʊn/)", meaning: "saber/conocer" },
+  lie: { past: "lay (/leɪ/)", participle: "lain (/leɪn/)", meaning: "yacer/acostarse" },
+  ride: { past: "rode (/roʊd/)", participle: "ridden (/ˈrɪdn/)", meaning: "montar" },
+  ring: { past: "rang (/ræŋ/)", participle: "rung (/rʌŋ/)", meaning: "sonar" },
+  rise: { past: "rose (/roʊz/)", participle: "risen (/ˈrɪzən/)", meaning: "levantarse" },
+  see: { past: "saw (/sɔː/)", participle: "seen (/siːn/)", meaning: "ver" },
+  shake: { past: "shook (/ʃʊk/)", participle: "shaken (/ˈʃeɪkən/)", meaning: "agitar" },
+  show: { past: "showed (/ʃoʊd/)", participle: "shown (/ʃoʊn/)", meaning: "mostrar" },
+  sing: { past: "sang (/sæŋ/)", participle: "sung (/sʌŋ/)", meaning: "cantar" },
+  sink: { past: "sank (/sæŋk/)", participle: "sunk (/sʌŋk/)", meaning: "hundir" },
+  speak: { past: "spoke (/spoʊk/)", participle: "spoken (/ˈspoʊkən/)", meaning: "hablar" },
+  steal: { past: "stole (/stoʊl/)", participle: "stolen (/ˈstoʊlən/)", meaning: "robar" },
+  swear: { past: "swore (/swɔːr/)", participle: "sworn (/swɔːrn/)", meaning: "jurar" },
+  swim: { past: "swam (/swæm/)", participle: "swum (/swʌm/)", meaning: "nadar" },
+  take: { past: "took (/tʊk/)", participle: "taken (/ˈteɪkən/)", meaning: "tomar" },
+  tear: { past: "tore (/tɔːr/)", participle: "torn (/tɔːrn/)", meaning: "rasgar" },
+  throw: { past: "threw (/θruː/)", participle: "thrown (/θroʊn/)", meaning: "lanzar" },
+  wake: { past: "woke (/woʊk/)", participle: "woken (/ˈwoʊkən/)", meaning: "despertar" },
+  wear: { past: "wore (/wɔːr/)", participle: "worn (/wɔːrn/)", meaning: "usar/llevar puesto" },
+  write: { past: "wrote (/roʊt/)", participle: "written (/ˈrɪtn/)", meaning: "escribir" }
+};
+```
+  </TabItem>
+
+  <TabItem label="Pasado = Participio">
+```javascript
+const abbPattern = {
+  bend: { past: "bent (/bɛnt/)", participle: "bent (/bɛnt/)", meaning: "doblar" },
+  bleed: { past: "bled (/blɛd/)", participle: "bled (/blɛd/)", meaning: "sangrar" },
+  breed: { past: "bred (/brɛd/)", participle: "bred (/brɛd/)", meaning: "criar" },
+  bring: { past: "brought (/brɔːt/)", participle: "brought (/brɔːt/)", meaning: "traer" },
+  build: { past: "built (/bɪlt/)", participle: "built (/bɪlt/)", meaning: "construir" },
+  burn: { past: "burnt (/bɜrnt/) o burned (/bɜrnd/)", participle: "burnt (/bɜrnt/) o burned (/bɜrnd/)", meaning: "quemar" },
+  buy: { past: "bought (/bɔːt/)", participle: "bought (/bɔːt/)", meaning: "comprar" },
+  catch: { past: "caught (/kɔːt/)", participle: "caught (/kɔːt/)", meaning: "atrapar" },
+  cling: { past: "clung (/klʌŋ/)", participle: "clung (/klʌŋ/)", meaning: "aferrarse" },
+  dig: { past: "dug (/dʌɡ/)", participle: "dug (/dʌɡ/)", meaning: "cavar" },
+  feed: { past: "fed (/fɛd/)", participle: "fed (/fɛd/)", meaning: "alimentar" },
+  feel: { past: "felt (/fɛlt/)", participle: "felt (/fɛlt/)", meaning: "sentir" },
+  fight: { past: "fought (/fɔːt/)", participle: "fought (/fɔːt/)", meaning: "pelear" },
+  find: { past: "found (/faʊnd/)", participle: "found (/faʊnd/)", meaning: "encontrar" },
+  flee: { past: "fled (/flɛd/)", participle: "fled (/flɛd/)", meaning: "huir" },
+  hang: { past: "hung (/hʌŋ/)", participle: "hung (/hʌŋ/)", meaning: "colgar" },
+  have: { past: "had (/hæd/)", participle: "had (/hæd/)", meaning: "tener" },
+  hear: { past: "heard (/hɜrd/)", participle: "heard (/hɜrd/)", meaning: "oír" },
+  hold: { past: "held (/hɛld/)", participle: "held (/hɛld/)", meaning: "sostener" },
+  keep: { past: "kept (/kɛpt/)", participle: "kept (/kɛpt/)", meaning: "mantener" },
+  lay: { past: "laid (/leɪd/)", participle: "laid (/leɪd/)", meaning: "poner/colocar" },
+  lead: { past: "led (/lɛd/)", participle: "led (/lɛd/)", meaning: "liderar" },
+  learn: { past: "learnt (/lɜrnt/) o learned (/lɜrnd/)", participle: "learnt (/lɜrnt/) o learned (/lɜrnd/)", meaning: "aprender" },
+  leave: { past: "left (/lɛft/)", participle: "left (/lɛft/)", meaning: "dejar/irse" },
+  lend: { past: "lent (/lɛnt/)", participle: "lent (/lɛnt/)", meaning: "prestar" },
+  light: { past: "lit (/lɪt/)", participle: "lit (/lɪt/)", meaning: "encender" },
+  lose: { past: "lost (/lɔːst/)", participle: "lost (/lɔːst/)", meaning: "perder" },
+  make: { past: "made (/meɪd/)", participle: "made (/meɪd/)", meaning: "hacer" },
+  mean: { past: "meant (/mɛnt/)", participle: "meant (/mɛnt/)", meaning: "significar" },
+  meet: { past: "met (/mɛt/)", participle: "met (/mɛt/)", meaning: "conocer/encontrarse" },
+  pay: { past: "paid (/peɪd/)", participle: "paid (/peɪd/)", meaning: "pagar" },
+  say: { past: "said (/sɛd/)", participle: "said (/sɛd/)", meaning: "decir" },
+  seek: { past: "sought (/sɔːt/)", participle: "sought (/sɔːt/)", meaning: "buscar" },
+  sell: { past: "sold (/soʊld/)", participle: "sold (/soʊld/)", meaning: "vender" },
+  send: { past: "sent (/sɛnt/)", participle: "sent (/sɛnt/)", meaning: "enviar" },
+  shine: { past: "shone (/ʃoʊn/)", participle: "shone (/ʃoʊn/)", meaning: "brillar" },
+  shoot: { past: "shot (/ʃɑt/)", participle: "shot (/ʃɑt/)", meaning: "disparar" },
+  sit: { past: "sat (/sæt/)", participle: "sat (/sæt/)", meaning: "sentarse" },
+  sleep: { past: "slept (/slɛpt/)", participle: "slept (/slɛpt/)", meaning: "dormir" },
+  slide: { past: "slid (/slɪd/)", participle: "slid (/slɪd/)", meaning: "deslizar" },
+  smell: { past: "smelt (/smɛlt/) o smelled (/smɛld/)", participle: "smelt (/smɛlt/) o smelled (/smɛld/)", meaning: "oler" },
+  spend: { past: "spent (/spɛnt/)", participle: "spent (/spɛnt/)", meaning: "gastar" },
+  spin: { past: "spun (/spʌn/)", participle: "spun (/spʌn/)", meaning: "girar" },
+  stand: { past: "stood (/stʊd/)", participle: "stood (/stʊd/)", meaning: "estar de pie" },
+  stick: { past: "stuck (/stʌk/)", participle: "stuck (/stʌk/)", meaning: "pegar" },
+  sting: { past: "stung (/stʌŋ/)", participle: "stung (/stʌŋ/)", meaning: "picar" },
+  strike: { past: "struck (/strʌk/)", participle: "struck (/strʌk/)", meaning: "golpear" },
+  sweep: { past: "swept (/swɛpt/)", participle: "swept (/swɛpt/)", meaning: "barrer" },
+  swing: { past: "swung (/swʌŋ/)", participle: "swung (/swʌŋ/)", meaning: "balancear" },
+  teach: { past: "taught (/tɔːt/)", participle: "taught (/tɔːt/)", meaning: "enseñar" },
+  tell: { past: "told (/toʊld/)", participle: "told (/toʊld/)", meaning: "decir/contar" },
+  think: { past: "thought (/θɔːt/)", participle: "thought (/θɔːt/)", meaning: "pensar" },
+  understand: { past: "understood (/ˌʌndərˈstʊd/)", participle: "understood (/ˌʌndərˈstʊd/)", meaning: "entender" },
+  win: { past: "won (/wʌn/)", participle: "won (/wʌn/)", meaning: "ganar" },
+  wind: { past: "wound (/waʊnd/)", participle: "wound (/waʊnd/)", meaning: "enrollar" }
+};
+```
+  </TabItem>
+
+  <TabItem label="Sin cambio">
+```javascript
+const aaaPattern = {
+  bet: { past: "bet (/bɛt/)", participle: "bet (/bɛt/)", meaning: "apostar" },
+  broadcast: { past: "broadcast (/ˈbrɔːdkæst/)", participle: "broadcast (/ˈbrɔːdkæst/)", meaning: "transmitir" },
+  burst: { past: "burst (/bɜrst/)", participle: "burst (/bɜrst/)", meaning: "estallar" },
+  cast: { past: "cast (/kæst/)", participle: "cast (/kæst/)", meaning: "lanzar/echar" },
+  cost: { past: "cost (/kɔːst/)", participle: "cost (/kɔːst/)", meaning: "costar" },
+  cut: { past: "cut (/kʌt/)", participle: "cut (/kʌt/)", meaning: "cortar" },
+  hit: { past: "hit (/hɪt/)", participle: "hit (/hɪt/)", meaning: "golpear" },
+  hurt: { past: "hurt (/hɜrt/)", participle: "hurt (/hɜrt/)", meaning: "herir/doler" },
+  let: { past: "let (/lɛt/)", participle: "let (/lɛt/)", meaning: "permitir/dejar" },
+  put: { past: "put (/pʊt/)", participle: "put (/pʊt/)", meaning: "poner" },
+  quit: { past: "quit (/kwɪt/)", participle: "quit (/kwɪt/)", meaning: "renunciar" },
+  read: { past: "read (/rɛd/)", participle: "read (/rɛd/)", meaning: "leer" },
+  set: { past: "set (/sɛt/)", participle: "set (/sɛt/)", meaning: "establecer" },
+  shed: { past: "shed (/ʃɛd/)", participle: "shed (/ʃɛd/)", meaning: "derramar" },
+  shut: { past: "shut (/ʃʌt/)", participle: "shut (/ʃʌt/)", meaning: "cerrar" },
+  split: { past: "split (/splɪt/)", participle: "split (/splɪt/)", meaning: "dividir" },
+  spread: { past: "spread (/sprɛd/)", participle: "spread (/sprɛd/)", meaning: "extender" },
+  upset: { past: "upset (/ʌpˈsɛt/)", participle: "upset (/ʌpˈsɛt/)", meaning: "molestar" }
+};
+```
+  </TabItem>
+
+  <TabItem label="Base = Participio">
+```javascript
+const abaPattern = {
+  become: { past: "became (/bɪˈkeɪm/)", participle: "become (/bɪˈkʌm/)", meaning: "convertirse" },
+  come: { past: "came (/keɪm/)", participle: "come (/kʌm/)", meaning: "venir" },
+  overcome: { past: "overcame (/ˌoʊvərˈkeɪm/)", participle: "overcome (/ˌoʊvərˈkʌm/)", meaning: "superar" },
+  run: { past: "ran (/ræn/)", participle: "run (/rʌn/)", meaning: "correr" }
+};
+```
+  </TabItem>
+</Tabs>
