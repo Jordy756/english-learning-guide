@@ -1,398 +1,238 @@
 ---
 title: Verbos Irregulares
-description: Aprende los verbos irregulares más comunes.
+description: Domina los verbos irregulares más importantes del pasado simple en inglés
 ---
 
 import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
 
-Los verbos irregulares son como excepciones en un sistema de tipos: no siguen el patrón estándar de añadir -ed, así que debes memorizarlos individualmente. La buena noticia es que los verbos irregulares más usados son relativamente pocos, y muchos siguen patrones internos que facilitan su aprendizaje.
-
-Estos verbos tienen formas únicas para el **pasado simple** y/o el **participio pasado** que no puedes predecir con reglas.
+Los **verbos irregulares** son aquellos que no siguen la regla -ed para formar el pasado simple. Son como excepciones en el código: no se comportan de manera predecible, pero son tan comunes que tienes que memorizarlos. Aunque representan solo un 10% de todos los verbos en inglés, incluyen los más usados en conversaciones diarias como **go → went**, **have → had** y **make → made**.
 
 ---
 
-## Estructura: Base, Pasado, Participio
+## ¿Por Qué Existen Verbos Irregulares?
 
-Cada verbo irregular tiene tres formas que debes conocer:
+Los verbos irregulares provienen del inglés antiguo y han conservado sus formas originales a lo largo de los siglos. Mientras que los verbos regulares adoptaron el patrón -ed más moderno, estos verbos mantuvieron sus transformaciones históricas.
 
 ```javascript
-const verbForms = {
-  base: "go",           // forma base (presente)
-  past: "went",         // pasado simple
-  participle: "gone"    // participio pasado
-};
-
-// Uso:
-// Base: I go to work (Voy al trabajo)
-// Past: I went yesterday (Fui ayer)
-// Participle: I have gone (He ido)
-```
-
-<Aside type="tip">
-**Las tres formas:** Siempre aprende los verbos irregulares en grupos de tres: **go - went - gone**, **eat - ate - eaten**, etc.
-</Aside>
-
----
-
-## Patrones de Verbos Irregulares
-
-Aunque son "irregulares", muchos siguen patrones similares que ayudan a memorizarlos:
-
-<Tabs>
-  <TabItem label="Las 3 Iguales">
-    ```javascript
-    const allSame = {
-      pattern: "AAA (las tres formas iguales)",
-      verbs: [
-        "cut - cut - cut",       // cortar
-        "put - put - put",       // poner
-        "let - let - let",       // dejar
-        "set - set - set",       // establecer
-        "hit - hit - hit",       // golpear
-        "shut - shut - shut"     // cerrar
-      ]
-    };
-    ```
-    
-    Estos verbos **nunca cambian**. Simple de recordar.
-  </TabItem>
-  
-  <TabItem label="Pasado = Participio">
-    ```javascript
-    const pastEqualsParticiple = {
-      pattern: "ABB (pasado y participio iguales)",
-      verbs: [
-        "buy - bought - bought",   // comprar
-        "bring - brought - brought", // traer
-        "think - thought - thought", // pensar
-        "catch - caught - caught",   // atrapar
-        "teach - taught - taught",   // enseñar
-        "feel - felt - felt"         // sentir
-      ]
-    };
-    ```
-    
-    El pasado y participio son iguales, solo la base es diferente.
-  </TabItem>
-  
-  <TabItem label="Todas Diferentes">
-    ```javascript
-    const allDifferent = {
-      pattern: "ABC (las tres diferentes)",
-      verbs: [
-        "go - went - gone",        // ir
-        "do - did - done",         // hacer
-        "see - saw - seen",        // ver
-        "eat - ate - eaten",       // comer
-        "take - took - taken",     // tomar
-        "give - gave - given"      // dar
-      ]
-    };
-    ```
-    
-    Las tres formas son distintas. Requieren más memorización.
-  </TabItem>
-  
-  <TabItem label="Cambio de Vocal">
-    ```javascript
-    const vowelChange = {
-      pattern: "i-a-u (cambio vocálico)",
-      verbs: [
-        "sing - sang - sung",      // cantar
-        "swim - swam - swum",      // nadar
-        "drink - drank - drunk",   // beber
-        "ring - rang - rung",      // sonar
-        "begin - began - begun"    // empezar
-      ]
-    };
-    ```
-    
-    Siguen el patrón **i → a → u** en la vocal central.
-  </TabItem>
-</Tabs>
-
----
-
-## Los 20 Verbos Irregulares Más Usados
-
-Estos verbos aparecen constantemente en inglés. Domínalos primero:
-
-```javascript
-const top20 = [
-  { base: "be",    past: "was/were", pp: "been" },    // ser/estar
-  { base: "have",  past: "had",      pp: "had" },     // tener
-  { base: "do",    past: "did",      pp: "done" },    // hacer
-  { base: "say",   past: "said",     pp: "said" },    // decir
-  { base: "go",    past: "went",     pp: "gone" },    // ir
-  { base: "get",   past: "got",      pp: "got/gotten" }, // obtener
-  { base: "make",  past: "made",     pp: "made" },    // hacer/fabricar
-  { base: "know",  past: "knew",     pp: "known" },   // saber
-  { base: "think", past: "thought",  pp: "thought" }, // pensar
-  { base: "take",  past: "took",     pp: "taken" }    // tomar
-];
-```
-
-**Continuación:**
-
-```javascript
-const top20continued = [
-  { base: "see",   past: "saw",      pp: "seen" },    // ver
-  { base: "come",  past: "came",     pp: "come" },    // venir
-  { base: "find",  past: "found",    pp: "found" },   // encontrar
-  { base: "give",  past: "gave",     pp: "given" },   // dar
-  { base: "tell",  past: "told",     pp: "told" },    // contar
-  { base: "feel",  past: "felt",     pp: "felt" },    // sentir
-  { base: "leave", past: "left",     pp: "left" },    // dejar/irse
-  { base: "put",   past: "put",      pp: "put" },     // poner
-  { base: "bring", past: "brought",  pp: "brought" }, // traer
-  { base: "write", past: "wrote",    pp: "written" }  // escribir
-];
-```
-
----
-
-## Verbos Irregulares por Categoría
-
-<CardGrid>
-  <Card title="Comunicación">
-    - say - said - said (decir)
-    - tell - told - told (contar)
-    - speak - spoke - spoken (hablar)
-    - write - wrote - written (escribir)
-    - read - read - read (leer)
-  </Card>
-  
-  <Card title="Movimiento">
-    - go - went - gone (ir)
-    - come - came - come (venir)
-    - run - ran - run (correr)
-    - fly - flew - flown (volar)
-    - drive - drove - driven (conducir)
-  </Card>
-  
-  <Card title="Acciones Cotidianas">
-    - eat - ate - eaten (comer)
-    - drink - drank - drunk (beber)
-    - sleep - slept - slept (dormir)
-    - wake - woke - woken (despertar)
-    - wear - wore - worn (llevar puesto)
-  </Card>
-  
-  <Card title="Sentidos y Emociones">
-    - see - saw - seen (ver)
-    - hear - heard - heard (oír)
-    - feel - felt - felt (sentir)
-    - know - knew - known (saber)
-    - understand - understood - understood (entender)
-  </Card>
-</CardGrid>
-
----
-
-## Uso en Oraciones
-
-<Tabs>
-  <TabItem label="Pasado Simple">
-    ```javascript
-    const pastSimple = {
-      structure: "Subject + past form",
-      examples: [
-        "I went to the store",     // Fui a la tienda
-        "She ate breakfast",       // Ella desayunó
-        "They saw a movie",        // Vieron una película
-        "He bought a car",         // Él compró un carro
-        "We made dinner"           // Hicimos la cena
-      ]
-    };
-    ```
-    
-    En afirmativo, usa la forma de **pasado** directamente.
-  </TabItem>
-  
-  <TabItem label="Negativo">
-    ```javascript
-    const negativePast = {
-      structure: "Subject + didn't + base form",
-      examples: [
-        "I didn't go",             // No fui
-        "She didn't eat",          // Ella no comió
-        "They didn't see it",      // No lo vieron
-        "He didn't buy anything",  // Él no compró nada
-        "We didn't make it"        // No lo logramos
-      ]
-    };
-    ```
-    
-    Con **didn't**, el verbo vuelve a su forma **base**.
-  </TabItem>
-  
-  <TabItem label="Pregunta">
-    ```javascript
-    const questionPast = {
-      structure: "Did + subject + base form?",
-      examples: [
-        "Did you go?",             // ¿Fuiste?
-        "Did she eat?",            // ¿Ella comió?
-        "Did they see it?",        // ¿Lo vieron?
-        "Did he buy it?",          // ¿Lo compró?
-        "Did we make it?"          // ¿Lo logramos?
-      ]
-    };
-    ```
-    
-    Con **Did**, el verbo también usa la forma **base**.
-  </TabItem>
-  
-  <TabItem label="Present Perfect">
-    ```javascript
-    const presentPerfect = {
-      structure: "have/has + past participle",
-      examples: [
-        "I have gone there",       // He ido allí
-        "She has eaten",           // Ella ha comido
-        "They have seen it",       // Lo han visto
-        "He has bought a house",   // Él ha comprado una casa
-        "We have made progress"    // Hemos progresado
-      ]
-    };
-    ```
-    
-    En tiempos perfectos, usa el **participio pasado**.
-  </TabItem>
-</Tabs>
-
-<Aside type="caution">
-**Importante:** La forma irregular solo aparece en oraciones **afirmativas** en pasado o con **have/has** en tiempos perfectos. Con did/didn't, siempre usa la forma base.
-</Aside>
-
----
-
-## Verbos con Dos Participios
-
-Algunos verbos tienen dos formas válidas de participio (británico vs americano):
-
-```javascript
-const dualForms = {
-  get: {
-    british: "got",      // I have got
-    american: "gotten"   // I have gotten
+const verbEvolution = {
+  modernPattern: {
+    verb: "walk",
+    past: "walked",    // regla moderna (-ed)
+    type: "regular"
   },
-  learn: {
-    british: "learnt",   // I have learnt
-    american: "learned"  // I have learned
-  },
-  dream: {
-    british: "dreamt",   // I have dreamt
-    american: "dreamed"  // I have dreamed
+  
+  ancientPattern: {
+    verb: "go",
+    past: "went",      // forma antigua preservada
+    type: "irregular"
   }
 };
 ```
 
-**Otros verbos con formas duales:**
-- burn: burnt / burned (quemar)
-- spell: spelt / spelled (deletrear)
-- spill: spilt / spilled (derramar)
-- leap: leapt / leaped (saltar)
+**Ejemplos:**
 
-<Aside type="note">
-Ambas formas son correctas. Las terminaciones en **-t** son más comunes en inglés británico, y las terminaciones en **-ed** en inglés americano.
+- I **go** to school every day → I **went** to school yesterday (Voy a la escuela cada día → Fui a la escuela ayer)
+- She **has** a car now → She **had** a car before (Ella tiene un carro ahora → Ella tenía un carro antes)
+- We **make** breakfast today → We **made** breakfast yesterday (Hacemos desayuno hoy → Hicimos desayuno ayer)
+- They **see** the movie → They **saw** the movie last night (Ven la película → Vieron la película anoche)
+
+<Aside type="note" title="Los verbos irregulares más comunes son los más usados">
+Aunque parezca injusto, los verbos irregulares incluyen palabras fundamentales como **be** (was/were), **have** (had), **do** (did), **go** (went), **get** (got) y **make** (made). Esto significa que aprenderlos te ayudará a comunicarte en la mayoría de situaciones cotidianas.
 </Aside>
 
 ---
 
-## Pronunciación Especial
+## Los 40 Verbos Irregulares Esenciales
 
-Algunos verbos irregulares tienen pronunciación que no coincide con su escritura:
+Estos verbos están organizados por patrones de transformación para facilitar su memorización:
 
-```javascript
-const pronunciation = {
-  read: {
-    present: "/riːd/",    // lee (como "reed")
-    past: "/red/",        // leyó (como "red")
-    note: "Se escribe igual, se pronuncia diferente"
-  },
-  said: "/sed/",          // no "seid"
-  bought: "/bɔːt/",       // la "gh" es muda
-  thought: "/θɔːt/",      // la "gh" es muda
-  caught: "/kɔːt/"        // la "gh" es muda
-};
-```
+<Tabs>
+  <TabItem label="Sin cambio">
+    Estos verbos **no cambian** en pasado simple. Son los más fáciles de recordar:
+    
+    ```javascript
+    const noChange = {
+      cut: "cut",      // cortar
+      put: "put",      // poner
+      let: "let",      // permitir/dejar
+      set: "set",      // establecer
+      cost: "cost",    // costar
+      hit: "hit",      // golpear
+      hurt: "hurt"     // herir/doler
+    };
+    ```
 
-<Aside type="tip">
-**Read es especial:** En presente se pronuncia /riːd/ (como "reed"), pero en pasado se pronuncia /red/ (como el color "red"). ¡Mismo spelling, diferente sonido!
+    **Ejemplos:**
+    - I **cut** the paper yesterday (Corté el papel ayer)
+    - She **put** the book on the table (Ella puso el libro en la mesa)
+    - They **let** me go home early (Me dejaron ir a casa temprano)
+    - The phone **cost** $500 (El teléfono costó $500)
+    - He **hurt** his leg last week (Él se lastimó la pierna la semana pasada)
+  </TabItem>
+  
+  <TabItem label="Cambio i → a">
+    Estos verbos cambian la vocal **i** por **a** en el pasado:
+    
+    ```javascript
+    const iToA = {
+      begin: "began",     // comenzar/empezar
+      drink: "drank",     // beber
+      ring: "rang",       // sonar/timbrar
+      sing: "sang",       // cantar
+      swim: "swam",       // nadar
+      sit: "sat"          // sentarse
+    };
+    ```
+
+    **Ejemplos:**
+    - The class **began** at 9 AM (La clase comenzó a las 9 AM)
+    - I **drank** coffee this morning (Tomé café esta mañana)
+    - The phone **rang** five minutes ago (El teléfono sonó hace cinco minutos)
+    - We **sang** happy birthday (Cantamos feliz cumpleaños)
+    - They **swam** in the ocean (Nadaron en el océano)
+  </TabItem>
+  
+  <TabItem label="Patrón -ought/-aught">
+    Estos verbos terminan en **-ought** o **-aught** en el pasado:
+    
+    ```javascript
+    const oughtAught = {
+      bring: "brought",   // traer
+      buy: "bought",      // comprar
+      catch: "caught",    // atrapar/agarrar
+      fight: "fought",    // pelear
+      teach: "taught",    // enseñar
+      think: "thought"    // pensar
+    };
+    ```
+
+    **Ejemplos:**
+    - She **brought** her laptop (Ella trajo su laptop)
+    - I **bought** a new phone (Compré un teléfono nuevo)
+    - He **caught** the ball (Él atrapó la pelota)
+    - We **thought** about the problem (Pensamos en el problema)
+    - They **taught** us English (Nos enseñaron inglés)
+  </TabItem>
+  
+  <TabItem label="Cambio vocal">
+    Estos verbos cambian su vocal principal de maneras diversas:
+    
+    ```javascript
+    const vowelChange = {
+      come: "came",       // venir
+      run: "ran",         // correr
+      become: "became",   // convertirse
+      eat: "ate",         // comer
+      give: "gave",       // dar
+      see: "saw",         // ver
+      take: "took",       // tomar/llevar
+      write: "wrote",     // escribir
+      break: "broke",     // romper
+      speak: "spoke",     // hablar
+      drive: "drove",     // conducir/manejar
+      get: "got",         // obtener/conseguir
+      forget: "forgot"    // olvidar
+    };
+    ```
+
+    **Ejemplos:**
+    - They **came** to the party (Vinieron a la fiesta)
+    - I **ran** 5 kilometers (Corrí 5 kilómetros)
+    - She **ate** pizza for dinner (Ella comió pizza para la cena)
+    - We **saw** a good movie (Vimos una buena película)
+    - He **took** the bus (Él tomó el autobús)
+  </TabItem>
+  
+  <TabItem label="Completamente diferentes">
+    Estos verbos cambian totalmente y no siguen ningún patrón:
+    
+    ```javascript
+    const totalChange = {
+      be: "was/were",     // ser/estar
+      do: "did",          // hacer
+      go: "went",         // ir
+      have: "had",        // tener
+      make: "made",       // hacer
+      say: "said",        // decir
+      tell: "told",       // decir/contar
+      find: "found",      // encontrar
+      hear: "heard",      // oír/escuchar
+      leave: "left",      // dejar/irse
+      meet: "met",        // conocer/encontrarse
+      pay: "paid",        // pagar
+      send: "sent",       // enviar
+      sleep: "slept",     // dormir
+      stand: "stood",     // estar de pie
+      understand: "understood", // entender
+      win: "won"          // ganar
+    };
+    ```
+
+    **Ejemplos:**
+    - I **was** at home yesterday (Estuve en casa ayer)
+    - She **did** her homework (Ella hizo su tarea)
+    - We **went** to the beach (Fuimos a la playa)
+    - They **had** a great time (Se la pasaron genial)
+    - He **made** dinner for us (Él hizo la cena para nosotros)
+  </TabItem>
+</Tabs>
+
+<Aside type="tip" title="Lista completa de verbos irregulares">
+Encontrarás una lista completa organizada de todos los verbos irregulares en la [Lista de Verbos Irregulares](/reference/01-irregular-verbs-list/).
 </Aside>
-
----
-
-## Estrategias de Memorización
-
-Para aprender verbos irregulares efectivamente:
-
-1. **Agrupa por patrón:** Aprende juntos los verbos que siguen el mismo patrón (sing-sang-sung, ring-rang-rung, drink-drank-drunk)
-
-2. **Prioriza por frecuencia:** Empieza con los 20 más usados antes de expandir tu lista
-
-3. **Usa contexto:** Crea oraciones con cada verbo en lugar de memorizar listas aisladas
-
-4. **Practica las tres formas:** Siempre di las tres formas juntas: "go-went-gone, go-went-gone"
-
-5. **Lee y escucha:** La exposición natural refuerza la memoria mejor que la memorización forzada
 
 ---
 
 ## Errores Comunes
 
-<Aside type="danger">
-**Añadir -ed a verbos irregulares**
+<Aside type="danger" title="Añadir -ed a verbos irregulares">
+Los verbos irregulares no siguen la regla -ed. Debes memorizar sus formas específicas.
 
-Los verbos irregulares NO usan -ed:
-
-~~goed~~ / ~~eated~~ / ~~thinked~~ / ~~buyed~~
-
-→ **went** (fui)
-
-→ **ate** (comí)
-
-→ **thought** (pensé)
-
-→ **bought** (compré)
+- I **goed** to the store ⛔
+- I **went** to the store (Fui a la tienda) ✅
+- She **maked** a cake ⛔
+- She **made** a cake (Ella hizo un pastel) ✅
+- They **buyed** tickets ⛔
+- They **bought** tickets (Ellos compraron boletos) ✅
 </Aside>
 
-<Aside type="danger">
-**Usar la forma de pasado con did/didn't**
+<Aside type="danger" title="Confundir verbos irregulares similares">
+Algunos verbos irregulares se parecen pero tienen pasados diferentes. No los mezcles.
 
-Con did y didn't, el verbo va en forma base:
-
-~~Did you went?~~ / ~~I didn't went~~
-
-→ **Did you go?** (¿Fuiste?)
-
-→ **I didn't go** (No fui)
+- I **bring** my book → I **bringed** it ⛔
+- I **bring** my book → I **brought** it (Traje mi libro) ✅
+- He **sing** well → He **sang** yesterday ✅
+- He **sink** the boat → He **sank** the boat (no sang) ✅
 </Aside>
 
-<Aside type="danger">
-**Confundir pasado con participio**
+<Aside type="danger" title="Usar el pasado en negaciones e interrogaciones">
+Cuando usas **did** o **didn't**, el verbo vuelve a su forma base, incluso si es irregular.
 
-Algunos verbos tienen formas diferentes:
-
-~~I have went~~ / ~~I have ate~~ / ~~I have saw~~
-
-→ **I have gone** (He ido)
-
-→ **I have eaten** (He comido)
-
-→ **I have seen** (He visto)
+- Did you **went** there? ⛔
+- Did you **go** there? (¿Fuiste allá?) ✅
+- She didn't **saw** me ⛔
+- She didn't **see** me (Ella no me vio) ✅
+- They didn't **had** time ⛔
+- They didn't **have** time (No tenían tiempo) ✅
 </Aside>
 
-<Aside type="danger">
-**Pronunciar "read" (pasado) como "read" (presente)**
+<Aside type="danger" title="Olvidar que be tiene dos formas en pasado">
+El verbo **be** es especial: usa **was** para I/he/she/it y **were** para you/we/they.
 
-En pasado, "read" se pronuncia /red/:
-
-~~I read /riːd/ a book yesterday~~
-
-→ **I read /red/ a book yesterday** (Leí un libro ayer)
-
-El contexto te dice si es presente o pasado.
+- They **was** at home ⛔
+- They **were** at home (Estaban en casa) ✅
+- I **were** tired ⛔
+- I **was** tired (Estaba cansado) ✅
 </Aside>
 
+---
+
+## Práctica
+
+<Aside type="tip" title="Ejercicio diario">
+- Agrupa estos verbos por patrón de transformación: cut, bring, see, drink, go, put, sing, buy, make, begin, teach, hurt
+- Completa las siguientes oraciones con el pasado del verbo entre paréntesis: I (go) to school, She (see) a movie, We (have) lunch, They (make) a plan, He (take) photos
+- Escribe 5 oraciones sobre lo que hiciste ayer usando solo verbos irregulares diferentes
+- Lee la lista de los 40 verbos irregulares en voz alta 3 veces: primero presente, luego pasado, finalmente ambos juntos
+- Crea tarjetas de memoria con los 10 verbos irregulares más comunes y repásalas durante 5 minutos
+</Aside>
