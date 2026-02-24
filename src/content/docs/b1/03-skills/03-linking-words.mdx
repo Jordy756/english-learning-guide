@@ -5,211 +5,163 @@ description: Aprende a conectar ideas de forma fluida y profesional en inglés.
 
 import { Tabs, TabItem, Aside } from '@astrojs/starlight/components';
 
-Los **linking words** (conectores o palabras de enlace) son el "pegamento" que une tus ideas en inglés. Sin ellos, tus oraciones suenan desconectadas y abruptas. Con ellos, tu discurso fluye naturalmente y suena más profesional y sofisticado. Son especialmente importantes en escritura formal, presentaciones y conversaciones de negocios.
+Los **linking words** son el "pegamento" que une tus ideas en inglés. Sin ellos, tus oraciones suenan desconectadas. Piensa en ellos como **operadores lógicos** que definen la relación entre tus argumentos.
+
+---
 
 ## Categorías de Conectores
 
 <Tabs>
   <TabItem label="Adición">
-
-Estos conectores añaden información que **apoya** o **complementa** tu idea anterior. Son como hacer `push()` a un array de argumentos.
-
 ```javascript
-const additionWords = {
-  purpose: "Añadir información",
-  words: [
-    { word: "moreover", meaning: "además / es más" },
-    { word: "furthermore", meaning: "además / asimismo" },
-    { word: "in addition", meaning: "adicionalmente / además" },
-    { word: "besides", meaning: "además / aparte de" },
-    { word: "also", meaning: "también / además" },
-  ],
-  examples: [
-    {
-      en: "She is not only intelligent but also hardworking.",
-      es: "Ella no solo es inteligente sino también trabajadora.",
-    },
-    {
-      en: "In addition to his job, he volunteers at the local shelter.",
-      es: "Además de su trabajo, él es voluntario en el refugio local.",
-    },
-    {
-      en: "The new software is faster. Moreover, it has better security features.",
-      es: "El nuevo software es más rápido. Además, tiene mejores características de seguridad.",
-    }
-  ],
+const addition = {
+  moreover: "además (formal)",
+  furthermore: "además (muy formal)",
+  "in addition": "adicionalmente",
+  besides: "además (informal)",
+  also: "también"
 };
 ```
 
-<Aside type="tip" title="Nivel de formalidad">
-- **Moreover/Furthermore:** Muy formales, ideales para escritura académica o profesional
-- **In addition:** Neutral, apropiado para cualquier contexto
-- **Besides:** Más casual, común en conversaciones informales
-- **Also:** El más común y versátil, úsalo cuando tengas dudas
-</Aside>
-
+Añaden información que **apoya** tu idea anterior.
   </TabItem>
 
   <TabItem label="Contraste">
-
-Estos conectores introducen ideas **opuestas** o **inesperadas**. Es como un `else` en tu lógica de argumentación.
-
 ```javascript
-const contrastWords = {
-  purpose: "Contrastar ideas",
-  words: [
-    { word: "however", meaning: "sin embargo / no obstante" },
-    { word: "nevertheless", meaning: "no obstante / a pesar de todo" },
-    { word: "on the other hand", meaning: "por otro lado / por otra parte" },
-    { word: "yet", meaning: "pero / sin embargo / aún así" },
-    { word: "although", meaning: "aunque / si bien / a pesar de que" },
-  ],
-  examples: [
-    {
-      en: "The project was challenging; however, we completed it on time.",
-      es: "El proyecto fue desafiante; sin embargo, lo completamos a tiempo.",
-    },
-    {
-      en: "She is very experienced. Nevertheless, she is open to learning new skills.",
-      es: "Ella tiene mucha experiencia. No obstante, está abierta a aprender nuevas habilidades.",
-    },
-    {
-      en: "I wanted to attend the meeting; on the other hand, I had a prior commitment.",
-      es: "Quería asistir a la reunión; por otro lado, tenía un compromiso previo.",
-    }
-  ],
+const contrast = {
+  however: "sin embargo",
+  nevertheless: "no obstante",
+  "on the other hand": "por otro lado",
+  yet: "pero / aún así",
+  although: "aunque"
 };
 ```
 
-<Aside title="Puntuación importante">
-**However** y **Nevertheless** van después de punto (.) o punto y coma (;), seguidos de coma (,):
-- ✓ "He studied hard. However, he failed."
-- ✓ "He studied hard; however, he failed."
-- ✗ "He studied hard, however he failed."
-
-**Although** y **Yet** pueden ir al inicio o en medio de la oración con estructuras diferentes.
-</Aside>
-
+Introducen ideas **opuestas** o inesperadas.
   </TabItem>
 
   <TabItem label="Causa/Efecto">
-
-Estos conectores muestran **relaciones de causa-efecto**. Es como encadenar `.then()` en promesas.
-
 ```javascript
-const causeWords = {
-  purpose: "Indicar causa/efecto",
-  words: [
-    { word: "therefore", meaning: "por lo tanto / por consiguiente" },
-    { word: "thus", meaning: "así / por lo tanto / de este modo" },
-    { word: "consequently", meaning: "en consecuencia / consecuentemente" },
-    { word: "as a result", meaning: "como resultado / por ende" },
-    { word: "because", meaning: "porque / debido a" },
-    { word: "since", meaning: "ya que / dado que" },
-  ],
-  examples: [
-    {
-      en: "The server was down; therefore, the website was inaccessible.",
-      es: "El servidor estaba caído; por lo tanto, el sitio web era inaccesible.",
-    },
-    {
-      en: "She didn't meet the deadline; thus, the project was delayed.",
-      es: "Ella no cumplió con la fecha límite; así, el proyecto se retrasó.",
-    },
-    {
-      en: "He was the top performer; consequently, he received a promotion.",
-      es: "Él fue el mejor desempeño; en consecuencia, recibió una promoción.",
-    }
-  ],
+const causeEffect = {
+  therefore: "por lo tanto",
+  thus: "así / por lo tanto",
+  consequently: "en consecuencia",
+  "as a result": "como resultado",
+  because: "porque",
+  since: "ya que"
 };
 ```
 
-<Aside type="caution" title="Diferencia importante">
-- **Therefore/Thus/Consequently/As a result:** Introducen el **efecto** o **conclusión**. Van después de la causa.
-- **Because/Since:** Introducen la **razón** o **causa**. Explican el porqué.
-
-Ejemplo: 
-- "It rained. Therefore, the game was canceled." (efecto)
-- "The game was canceled because it rained." (razón)
-</Aside>
-
+Muestran **relaciones causales** entre ideas.
   </TabItem>
 
   <TabItem label="Secuencia">
-
-Estos conectores organizan eventos en **orden cronológico**. Son como los pasos de un algoritmo o flujo de trabajo.
-
 ```javascript
-const sequenceWords = {
-  purpose: "Ordenar eventos",
-  words: [
-    { word: "first", meaning: "primero / en primer lugar" },
-    { word: "then", meaning: "luego / entonces / después" },
-    { word: "next", meaning: "siguiente / luego / a continuación" },
-    { word: "finally", meaning: "finalmente / por último" },
-    { word: "meanwhile", meaning: "mientras tanto / entre tanto" },
-  ],
-  examples: [
-    {
-      en: "First, we gather requirements. Then, we design the system.",
-      es: "Primero, recopilamos los requisitos. Luego, diseñamos el sistema.",
-    },
-    {
-      en: "Next, we implement the code. Finally, we test the application.",
-      es: "Luego, implementamos el código. Finalmente, probamos la aplicación.",
-    },
-    {
-      en: "I was working on the report. Meanwhile, my colleague was preparing the presentation.",
-      es: "Yo estaba trabajando en el informe. Mientras tanto, mi colega estaba preparando la presentación.",
-    }
-  ],
+const sequence = {
+  first: "primero",
+  then: "luego",
+  next: "después",
+  finally: "finalmente",
+  meanwhile: "mientras tanto"
 };
 ```
 
-<Aside type="tip" title="Uso de 'Meanwhile'">
-**Meanwhile** (mientras tanto) es especial porque indica una acción **paralela** que ocurre al mismo tiempo que las otras. Es útil para describir procesos donde múltiples cosas suceden simultáneamente.
-
-Ejemplo: "I was cooking dinner. Meanwhile, my partner was setting the table."
-</Aside>
-
+Organizan eventos en **orden cronológico**.
   </TabItem>
 
   <TabItem label="Énfasis">
-
-Estos conectores **refuerzan** tu punto o añaden evidencia contundente. Son como añadir `console.assert()` a tu argumento.
-
 ```javascript
-const emphasisWords = {
-  purpose: "Enfatizar puntos",
-  words: [
-    { word: "indeed", meaning: "de hecho / en efecto / ciertamente" },
-    { word: "in fact", meaning: "de hecho / en realidad" },
-    { word: "certainly", meaning: "ciertamente / sin duda" },
-    { word: "obviously", meaning: "obviamente / claramente / por supuesto" },
-    { word: "clearly", meaning: "claramente / evidentemente" },
-  ],
-  examples: [
-    {
-      en: "The results are impressive. Indeed, they exceeded all expectations.",
-      es: "Los resultados son impresionantes. De hecho, superaron todas las expectativas.",
-    },
-    {
-      en: "He is an expert in his field. In fact, he has published several papers.",
-      es: "Él es un experto en su campo. De hecho, ha publicado varios artículos.",
-    },
-    {
-      en: "Obviously, we need to address this issue immediately.",
-      es: "Obviamente, necesitamos abordar este problema de inmediato.",
-    }
-  ],
+const emphasis = {
+  indeed: "de hecho",
+  "in fact": "en realidad",
+  certainly: "ciertamente",
+  obviously: "obviamente",
+  clearly: "claramente"
 };
 ```
 
-<Aside type="caution" title="Cuidado con el tono">
-**Obviously** y **Clearly** pueden sonar condescendientes o arrogantes si se usan incorrectamente, como si dijeras "es obvio, ¿no lo ves?". 
-
-Úsalos solo cuando la evidencia sea realmente evidente para todos, no para menospreciar a tu audiencia. En caso de duda, usa **Indeed** o **In fact** que son más neutrales.
-</Aside>
-
+**Refuerzan** tu punto o añaden evidencia.
   </TabItem>
 </Tabs>
+
+---
+
+## Ejemplos en Contexto
+
+**Adición:**
+
+- The software is fast. **Moreover**, it's free (El software es rápido. Además, es gratis)
+- **In addition** to coding, she designs interfaces (Además de programar, ella diseña interfaces)
+- He speaks English and **also** French (Habla inglés y también francés)
+
+**Contraste:**
+
+- It was raining. **However**, we went out (Estaba lloviendo. Sin embargo, salimos)
+- **Although** he studied hard, he failed (Aunque estudió mucho, reprobó)
+- The job pays well; **on the other hand**, the hours are long (El trabajo paga bien; por otro lado, las horas son largas)
+
+**Causa/Efecto:**
+
+- The server crashed. **Therefore**, the site went down (El servidor falló. Por lo tanto, el sitio cayó)
+- I stayed home **because** I was sick (Me quedé en casa porque estaba enfermo)
+- **Since** you're here, let's start (Ya que estás aquí, empecemos)
+
+**Secuencia:**
+
+- **First**, read the docs. **Then**, write the code (Primero, lee la documentación. Luego, escribe el código)
+- I was coding. **Meanwhile**, she was testing (Yo programaba. Mientras tanto, ella probaba)
+
+**Énfasis:**
+
+- The results are good. **In fact**, they exceeded expectations (Los resultados son buenos. De hecho, superaron las expectativas)
+- **Indeed**, this is the best solution (De hecho, esta es la mejor solución)
+
+---
+
+## Puntuación con Conectores
+
+<Aside type="note" title="Reglas de puntuación">
+**However, nevertheless, therefore, thus, consequently:**
+- ✅ He tried. **However,** he failed.
+- ✅ He tried**;** **however,** he failed.
+- ⛔ He tried**,** however he failed.
+
+**Although, because, since:** Sin coma después del conector.
+- ✅ **Although** it rained, we went out.
+</Aside>
+
+---
+
+## Errores Comunes
+
+<Aside type="danger" title="Usar however con coma simple">
+- ⛔ He studied hard, however he failed
+- ✅ He studied hard. **However,** he failed (Estudió mucho. Sin embargo, reprobó)
+
+**However** requiere punto o punto y coma antes, y coma después.
+</Aside>
+
+<Aside type="danger" title="Confundir although y however">
+- ⛔ Although, the weather was bad, we went out
+- ✅ **Although** the weather was bad, we went out (Aunque el clima estaba malo, salimos)
+
+**Although** inicia una cláusula subordinada, no lleva coma después.
+</Aside>
+
+<Aside type="danger" title="Fragmentar oraciones con because">
+- ⛔ Because I was tired. I went to bed.
+- ✅ **Because** I was tired, I went to bed (Porque estaba cansado, me acosté)
+
+**Because** introduce una cláusula que debe conectarse a la principal.
+</Aside>
+
+---
+
+## Práctica
+
+<Aside type="tip" title="Ejercicio diario">
+- Escribe párrafos usando al menos 3 conectores de diferentes categorías
+- Lee artículos y subraya los linking words que encuentres
+- Practica reescribiendo oraciones conectándolas con diferentes conectores
+- Crea tarjetas con conectores agrupados por función
+</Aside>
