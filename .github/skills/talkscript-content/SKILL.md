@@ -2,31 +2,26 @@
 name: talkscript-content
 description: Generate educational grammar content for TalkScript using JavaScript metaphors
 metadata:
-  version: "2.1.0"
+  version: "3.0.0"
   author: "Jordy Castro"
 ---
 
 # TalkScript Content Generator
 
-Generate Spanish-language educational content explaining English grammar through JavaScript programming metaphors for Spanish-speaking learners.
+Generate Spanish-language educational content explaining English grammar through JavaScript programming metaphors.
 
-## Context
-
-**Audience**: Spanish speakers learning English (beginner to advanced)
-**Stack**: Astro + Starlight documentation framework
-**Output language**: Spanish (code identifiers in English)
-**Philosophy**: Code visualizes patterns, not executable logic
+> Global rules (language, tone, audience, MDX standards, prohibited elements) are defined in `AGENTS.md`. This skill covers only content-specific rules.
 
 ---
 
 ## Templates — Read Before Writing
 
-Before generating any content, read the following template files and follow them exactly. These define the precise MDX blocks to use. Do not deviate from them.
+Before generating any content, read and follow these template files exactly:
 
-- `templates/frontmatter.md` — Frontmatter structure and rules
-- `templates/common-errors.md` — "Errores comunes" section format
-- `templates/practice.md` — "Práctica" section format
-- `templates/examples.md` — Inline text examples format
+- `templates/frontmatter.md` — Frontmatter structure
+- `templates/common-errors.md` — "Errores comunes" section
+- `templates/practice.md` — "Práctica" section
+- `templates/examples.md` — Inline text examples
 
 ---
 
@@ -34,23 +29,22 @@ Before generating any content, read the following template files and follow them
 
 1. **Clarity over cleverness** — Direct, accessible explanations
 2. **Brevity** — 3 to 5 minute read maximum per page
-3. **Visual patterns** — Show structure through code examples
-4. **Consistency** — Uniform structure across all topics
-5. **Practical examples** — Real-world English usage with Spanish translations
-6. **Strategic organization** — Use tabs to prevent information overload
+3. **Visual patterns** — Code shows structure, never executable logic
+4. **Consistency** — Uniform section order across all pages
+5. **Practical examples** — Real-world usage with Spanish translations
+6. **Strategic tabs** — Use `<Tabs>` to reduce scrolling, not to decorate
 
 ---
 
 ## JavaScript Metaphors
 
-Use programming concepts only when they genuinely clarify grammar:
+Use programming concepts only when they genuinely clarify a grammar concept:
 
 - Objects → conjugation tables
-- Arrays → word order
-- Functions → transformations (affirmative → negative → question)
+- Arrays → word order sequences
+- Functions → form transformations (affirmative → negative → question)
 - Pattern matching → grammar rules
-- Destructuring → sentence analysis
-- Type systems → word categories
+- Type systems → word categories (noun, verb, adjective…)
 
 Never force a metaphor. If it doesn't arise naturally, skip it.
 
@@ -58,166 +52,101 @@ Never force a metaphor. If it doesn't arise naturally, skip it.
 
 ## Component Usage
 
-### Allowed Components
+### `<Aside>`
 
-Starlight built-ins only:
-
-- `<Tabs>` / `<TabItem>` — Variations (tenses, forms, formality levels)
-- `<Aside>` — Contextual information (note, tip, warning, danger)
-- `<Card>` / `<CardGrid>` — Grouping related concepts
-- `<Steps>` — Sequential instructions
-- `<LinkCard>` — Navigation links
-- `<Badge>` — Inline labels
-
-### `<Aside>` Rules
-
-- Always include a descriptive `title` attribute
-- Title must explain the specific content — never generic labels like "Tip" or "Nota" alone
+- Always include a descriptive `title` — never a generic label like "Nota" alone
 - Allowed types: `note`, `tip`, `warning`, `danger`
-- Content inside can be text, lists, or anything that fits the context
 
-### `<Card>` and `<CardGrid>` Rules
+### `<Card>` / `<CardGrid>`
 
-- Never place code blocks inside `<Card>` components
-- Never use icons of any kind inside `<Card>` components
-- Use only for grouping conceptual information
+- Only for grouping conceptual information
+- Never place code blocks inside `<Card>`
 
-### Code Block Rules
+### Code Blocks
 
-- Never place inside `<Card>` components
-- Allowed directly in document flow or inside `<TabItem>`
-- Maximum 10 lines per block
-- Maximum ~50 characters per line — avoid horizontal scroll
-- All identifiers in English, never Spanish
-- JavaScript syntax highlighting (` ```javascript `)
-- Focus on data structures (objects, arrays), not executable logic
-- Add brief inline comments when helpful
+- Language: always `javascript`
+- Maximum 10 lines per block, ~50 characters per line
 - No more than 3 code blocks per major section
+- Identifiers must be in English
+- Allowed directly in document flow or inside `<TabItem>` — never inside `<Card>`
 
-### `<Tabs>` Rules
+### `<Tabs>` / `<TabItem>`
 
-- Use to group related variations: affirmative/negative/interrogative, formality levels, tenses
-- Each `<TabItem>` must be self-contained with its own explanation and examples
-- Include a code block in each tab when applicable
-
-### Prohibited
-
-- Custom interactive components
-- Emojis or decorative symbols anywhere — except ✅ and ⛔ exclusively inside "Errores comunes"
-- Native Markdown tables — use code blocks or components instead
-- Native Markdown alerts — use `<Aside>` instead
-- Strikethrough (~~text~~) anywhere
-- Icons inside `<Card>` components
-- Executable logic in code blocks
+- Use to group related variations: affirmative/negative/interrogative, tenses, formality levels
+- Each `<TabItem>` must be self-contained — its own explanation and examples
+- Include a code block per tab when applicable
 
 ---
 
 ## Document Structure
 
-### 1. Frontmatter
+Every content page must follow this exact section order:
 
-Follow `templates/frontmatter.md` exactly.
+### 1. Frontmatter
+Follow `templates/frontmatter.md`.
 
 ### 2. Import Statement
-
 ```javascript
-import { [only the components actually used] } from '@astrojs/starlight/components';
+import { ComponentA, ComponentB } from '@astrojs/starlight/components';
 ```
-
-Only import what is used in the file.
+Import only components that appear in the file.
 
 ### 3. Introduction
-
-One paragraph maximum. Explain the topic and its relevance for the learner. Include a programming metaphor only if it arises naturally.
+One paragraph maximum. Explain the topic and its relevance. Add a JavaScript metaphor only if it arises naturally.
 
 ### 4. Main Content
+- **Simple topics** — 2 to 3 sections
+- **Intermediate topics** — sections with strategic `<Tabs>`
+- **Complex topics** — as many sections as needed, never pad
 
-Adapt structure to topic complexity:
+Separate major sections with `---`.
 
-- **Simple topics**: 2 to 3 main sections
-- **Intermediate topics**: Main sections with strategic `<Tabs>` usage
-- **Complex topics**: As many sections as needed — never add padding
+### 5. "Errores comunes"
+Follow `templates/common-errors.md`. Heading: `## Errores comunes`.
 
-Use `---` horizontal rules to visually separate major sections.
-
-### 5. "Errores comunes" Section
-
-Follow `templates/common-errors.md` exactly.
-
-Section heading: `## Errores comunes`
-
-### 6. "Práctica" Section
-
-Follow `templates/practice.md` exactly.
-
-Section heading: `## Práctica`
-
-Always the last section in the document, placed after "Errores comunes".
+### 6. "Práctica"
+Follow `templates/practice.md`. Heading: `## Práctica`. Always last.
 
 ---
 
 ## Inline Text Examples
 
-Follow `templates/examples.md` exactly.
+Follow `templates/examples.md`. Place after explanations or code blocks.
 
-Place after explanations or code blocks to show real-world usage. Rules summary:
-
-- Bold only the word(s) illustrating the grammar point
+- **Bold** only the word(s) illustrating the grammar point
 - Spanish translation in parentheses at the end of each item
-- No emojis of any kind
 - 3 to 5 examples per block, varying subjects and contexts
 
 ---
 
-## Content Standards
+## Text Formatting
 
-### Tone
-
-- Professional but approachable
-- Direct and concise
-- Encouraging but realistic
-- Always use "tú" form (informal second person) in Spanish
-
-### Text Formatting
-
-- **Bold** for key grammar terms
-- `inline code` for English grammar terms or short examples within prose
-- ✅ and ⛔ only inside "Errores comunes" section
+- **Bold** for key grammar terms introduced for the first time
+- `inline code` for short English examples embedded in prose
 - Short paragraphs — 2 to 4 sentences maximum
-
----
-
-## MDX Best Practices
-
-- Leave blank lines before and after all component blocks
-- Self-closing tags for `<Card>` and `<LinkCard>`
-- Close `</TabItem>` and `</Tabs>` without extra indentation
-- Validate that every `<Aside>` has a descriptive `title`
 
 ---
 
 ## Validation Checklist
 
-**Structure**:
+Run this before delivering any generated or modified file.
+
+**Structure**
 - [ ] Frontmatter matches `templates/frontmatter.md`
 - [ ] Only used components are imported
 - [ ] Single introduction paragraph
-- [ ] `<Tabs>` used where it reduces scrolling
-- [ ] "Errores comunes" section present and matches template
-- [ ] "Práctica" section present, matches template, and is last
+- [ ] Sections follow the required order
+- [ ] "Errores comunes" matches `templates/common-errors.md`
+- [ ] "Práctica" matches `templates/practice.md` and is last
 
-**Content**:
-- [ ] All inline text examples match `templates/examples.md`
+**Content**
+- [ ] Inline examples match `templates/examples.md`
 - [ ] No code inside `<Card>` components
-- [ ] No icons inside `<Card>` components
 - [ ] All `<Aside>` components have descriptive titles
-- [ ] No emojis anywhere except ✅ and ⛔ in "Errores comunes"
-- [ ] No strikethrough (~~)
+- [ ] Code blocks within line and character limits
 - [ ] All code identifiers in English
-- [ ] Code blocks within line and length limits
 
-**Format**:
-- [ ] Valid MDX syntax
-- [ ] Proper spacing around all components
-- [ ] Self-closing tags where required
-- [ ] All content (outside code) written in Spanish
+**Global compliance** (see `AGENTS.md`)
+- [ ] All prose in Spanish, all code identifiers in English
+- [ ] No prohibited elements (emojis outside "Errores comunes", strikethrough, native tables, native alerts)
+- [ ] Valid MDX — blank lines around components, self-closing tags, correct nesting

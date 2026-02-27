@@ -15,7 +15,7 @@ Used to show real-world usage of the grammar topic being explained. Place after 
 ## Rules
 
 - The heading "Ejemplos:" is always bold, followed by a colon
-- Unordered list, no emojis of any kind
+- Unordered list items, no special symbols
 - Spanish translation always in parentheses at the end of each item
 - Bold only the word(s) that illustrate the grammar point — not the entire sentence
 - Between 3 and 5 examples per block
