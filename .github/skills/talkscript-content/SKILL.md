@@ -10,7 +10,7 @@ metadata:
 
 Generate Spanish-language educational content explaining English grammar through JavaScript programming metaphors.
 
-> Global rules (language, tone, audience, MDX standards, prohibited elements) are defined in `AGENTS.md`. This skill covers only content-specific rules.
+> Global rules (language, tone, audience, MDX standards, prohibited elements) are defined in [`AGENTS.md`](../../../AGENTS.md). This skill covers only content-specific rules.
 
 ---
 
@@ -18,10 +18,10 @@ Generate Spanish-language educational content explaining English grammar through
 
 Before generating any content, read and follow these template files exactly:
 
-- `templates/frontmatter.md` — Frontmatter structure
-- `templates/common-errors.md` — "Errores comunes" section
-- `templates/practice.md` — "Práctica" section
-- `templates/examples.md` — Inline text examples
+- [`templates/frontmatter.md`](templates/frontmatter.md) — Frontmatter structure
+- [`templates/common-errors.md`](templates/common-errors.md) — "Errores comunes" section
+- [`templates/practice.md`](templates/practice.md) — "Práctica" section
+- [`templates/examples.md`](templates/examples.md) — Inline text examples
 
 ---
 
@@ -83,18 +83,23 @@ Never force a metaphor. If it doesn't arise naturally, skip it.
 Every content page must follow this exact section order:
 
 ### 1. Frontmatter
-Follow `templates/frontmatter.md`.
+
+Follow [`templates/frontmatter.md`](templates/frontmatter.md).
 
 ### 2. Import Statement
+
 ```javascript
-import { ComponentA, ComponentB } from '@astrojs/starlight/components';
+import { ComponentA, ComponentB } from "@astrojs/starlight/components";
 ```
+
 Import only components that appear in the file.
 
 ### 3. Introduction
+
 One paragraph maximum. Explain the topic and its relevance. Add a JavaScript metaphor only if it arises naturally.
 
 ### 4. Main Content
+
 - **Simple topics** — 2 to 3 sections
 - **Intermediate topics** — sections with strategic `<Tabs>`
 - **Complex topics** — as many sections as needed, never pad
@@ -102,16 +107,18 @@ One paragraph maximum. Explain the topic and its relevance. Add a JavaScript met
 Separate major sections with `---`.
 
 ### 5. "Errores comunes"
-Follow `templates/common-errors.md`. Heading: `## Errores comunes`.
+
+Follow [`templates/common-errors.md`](templates/common-errors.md). Heading: `## Errores comunes`.
 
 ### 6. "Práctica"
-Follow `templates/practice.md`. Heading: `## Práctica`. Always last.
+
+Follow [`templates/practice.md`](templates/practice.md). Heading: `## Práctica`. Always last.
 
 ---
 
 ## Inline Text Examples
 
-Follow `templates/examples.md`. Place after explanations or code blocks.
+Follow [`templates/examples.md`](templates/examples.md). Place after explanations or code blocks.
 
 - **Bold** only the word(s) illustrating the grammar point
 - Spanish translation in parentheses at the end of each item
@@ -132,21 +139,24 @@ Follow `templates/examples.md`. Place after explanations or code blocks.
 Run this before delivering any generated or modified file.
 
 **Structure**
-- [ ] Frontmatter matches `templates/frontmatter.md`
+
+- [ ] Frontmatter matches [`templates/frontmatter.md`](templates/frontmatter.md)
 - [ ] Only used components are imported
 - [ ] Single introduction paragraph
 - [ ] Sections follow the required order
-- [ ] "Errores comunes" matches `templates/common-errors.md`
-- [ ] "Práctica" matches `templates/practice.md` and is last
+- [ ] "Errores comunes" matches [`templates/common-errors.md`](templates/common-errors.md)
+- [ ] "Práctica" matches [`templates/practice.md`](templates/practice.md) and is last
 
 **Content**
-- [ ] Inline examples match `templates/examples.md`
+
+- [ ] Inline examples match [`templates/examples.md`](templates/examples.md)
 - [ ] No code inside `<Card>` components
 - [ ] All `<Aside>` components have descriptive titles
 - [ ] Code blocks within line and character limits
 - [ ] All code identifiers in English
 
-**Global compliance** (see `AGENTS.md`)
+**Global compliance** (see [`AGENTS.md`](../../../AGENTS.md))
+
 - [ ] All prose in Spanish, all code identifiers in English
 - [ ] No prohibited elements (emojis outside "Errores comunes", strikethrough, native tables, native alerts)
 - [ ] Valid MDX — blank lines around components, self-closing tags, correct nesting

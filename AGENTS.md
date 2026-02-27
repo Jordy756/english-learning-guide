@@ -6,9 +6,9 @@ TalkScript is a Spanish-language educational guide for developers learning Engli
 
 ## Skills
 
-| Skill | File | Purpose |
+| Skill | Purpose | File |
 |---|---|---|
-| `talkscript-content` | `.github/skills/talkscript-content/SKILL.md` | Generate educational grammar content pages |
+| `talkscript-content` | Generate educational grammar content pages | [`SKILL.md`](.github/skills/talkscript-content/SKILL.md) |
 
 **Always read the skill file before generating content.** Skills define structure, templates, and topic-specific rules beyond what is listed here.
 
