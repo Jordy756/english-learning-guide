@@ -15,28 +15,6 @@
 - **Interfaz moderna**: Diseño limpio y responsive con modo claro/oscuro
 - **Ejemplos prácticos**: Cada concepto incluye ejemplos del mundo real con traducciones
 
-## 🚀 Comenzar
-
-### Prerrequisitos
-
-- Node.js 18+
-- pnpm (recomendado) o npm
-
-### Instalación
-
-```bash
-# Clonar el repositorio
-git clone https://github.com/tu-usuario/talkscript.git
-
-# Instalar dependencias
-pnpm install
-
-# Iniciar servidor de desarrollo
-pnpm dev
-```
-
-El sitio estará disponible en `http://localhost:4321`
-
 ## 🛠️ Tecnologías
 
 - **[Astro](https://astro.build)** - Framework web moderno y rápido
@@ -44,16 +22,6 @@ El sitio estará disponible en `http://localhost:4321`
 - **[Tailwind CSS](https://tailwindcss.com)** - Framework de CSS utility-first
 - **[Ion Theme](https://louisescher.github.io/starlight-ion-theme/)** - Tema personalizado para Starlight
 - **MDX** - Markdown con componentes React/Astro
-
-## 📝 Scripts Disponibles
-
-| Comando           | Acción                                              |
-| :---------------- | :-------------------------------------------------- |
-| `pnpm install`    | Instala las dependencias del proyecto               |
-| `pnpm dev`        | Inicia el servidor de desarrollo en `localhost:4321`|
-| `pnpm build`      | Genera el sitio estático en `./dist/`               |
-| `pnpm preview`    | Previsualiza la build de producción localmente      |
-| `pnpm astro ...`  | Ejecuta comandos de Astro CLI                       |
 
 ## 🤝 Colaboradores
 
@@ -65,28 +33,128 @@ Este proyecto es posible gracias a:
 
 ## 💬 Contribuir
 
-¡Las contribuciones son bienvenidas! Si tienes ideas para mejorar el contenido, encontraste un error, o quieres sugerir nuevos temas:
+¡Tu aporte es valioso! TalkScript es un proyecto educativo en constante evolución y apreciamos todo tipo de contribuciones: desde correcciones de errores tipográficos hasta nuevas lecciones completas. A continuación te explicamos cómo puedes participar.
 
-1. **Fork** el repositorio
-2. Crea una **rama** para tu feature (`git checkout -b feature/nueva-funcionalidad`)
-3. **Commit** tus cambios (`git commit -m 'Añade nueva funcionalidad'`)
-4. **Push** a la rama (`git push origin feature/nueva-funcionalidad`)
-5. Abre una **Pull Request** describiendo tus cambios
+### 🐛 Reportar Errores o Problemas
 
-### Sugerencias de contenido
+Si encuentras algo que no funciona correctamente:
 
-Si deseas que agreguemos un tema específico o tienes sugerencias para mejorar las explicaciones:
+- **Errores de contenido**: Errores gramaticales, traducciones incorrectas, o explicaciones confusas
+- **Errores técnicos**: Links rotos, problemas de visualización, bugs en el sitio
+- **Problemas de código**: Ejemplos de JavaScript incorrectos o que no ilustran bien el concepto
 
-- Abre un **Issue** describiendo tu sugerencia
-- Crea una **Pull Request** con el contenido propuesto siguiendo nuestras [guías de estilo](.github/skills/talkscript-content/SKILL.md)
+**Cómo reportar:**
 
-### Reportar errores
+1. Ve a la [sección de Issues](https://github.com/Jordy756/english-learning-guide/issues)
+2. Revisa si el problema ya fue reportado
+3. Si no existe, crea un nuevo Issue con:
+   - Descripción clara del problema
+   - Ubicación exacta (link a la página o sección)
+   - Capturas de pantalla si aplica
+   - Sugerencia de corrección si la tienes
 
-Si encuentras errores gramaticales, de código, o problemas técnicos:
+### 💡 Sugerir Nuevo Contenido
 
-- Abre un **Issue** con una descripción detallada del error
-- Incluye capturas de pantalla si es posible
-- Especifica en qué sección del contenido encontraste el problema
+¿Quieres que agreguemos un tema específico o expandamos una sección?
+
+1. Abre un **Issue** con la etiqueta `contenido` o `sugerencia`
+2. Describe qué tema te gustaría ver y por qué sería útil
+3. Si tienes referencias o ejemplos de cómo abordarlo, compártelos
+
+### ✍️ Contribuir con Contenido
+
+Si deseas escribir o mejorar lecciones, sigue estos pasos:
+
+#### Configuración del Entorno de Desarrollo
+
+```bash
+# 1. Fork el repositorio en GitHub
+
+# 2. Clonar tu fork
+git clone https://github.com/TU_USUARIO/english-learning-guide.git
+cd english-learning-guide
+
+# 3. Instalar dependencias (requiere Node.js 18+)
+pnpm install
+
+# 4. Iniciar servidor de desarrollo
+pnpm dev
+# El sitio estará disponible en http://localhost:4321
+```
+
+#### Guías de Escritura
+
+**Antes de empezar a escribir**, lee atentamente nuestras [guías de estilo y convenciones](.github/skills/talkscript-content/SKILL.md). Estas reglas aseguran consistencia y calidad en todo el contenido.
+
+**Puntos clave:**
+
+- Todo el contenido educativo debe estar en **español**
+- Los ejemplos de código son **visuales**, no funcionales
+- Usa metáforas de JavaScript solo cuando clarifiquen el concepto
+- Mantén las lecciones breves (lectura de 3-5 minutos)
+- Incluye ejemplos prácticos con traducciones
+- Sigue la estructura de componentes MDX establecida
+
+#### Proceso de Contribución
+
+1. **Crea una rama** desde `main`:
+
+   ```bash
+   git checkout -b contenido/nombre-del-tema
+   ```
+
+2. **Escribe tu contenido** siguiendo las guías de estilo
+
+3. **Prueba localmente** que todo se vea bien:
+
+   ```bash
+   pnpm dev
+   ```
+
+4. **Commit** con mensajes descriptivos:
+
+   ```bash
+   git commit -m "Añade lección: [Nombre del Tema]"
+   ```
+
+5. **Push** a tu fork:
+
+   ```bash
+   git push origin contenido/nombre-del-tema
+   ```
+
+6. **Abre una Pull Request** en GitHub:
+   - Describe qué contenido añades o mejoras
+   - Menciona si cierra algún Issue existente
+   - Espera feedback del equipo
+
+### 🔧 Contribuir con Código
+
+Si deseas mejorar la funcionalidad del sitio, componentes, o diseño:
+
+1. Sigue el mismo proceso de fork y configuración
+2. Crea una rama descriptiva: `feature/nombre-funcionalidad` o `fix/nombre-bug`
+3. Asegúrate de que el build funcione: `pnpm build`
+4. Abre una Pull Request con descripción detallada de los cambios
+
+### 📋 Checklist para Pull Requests
+
+Antes de enviar tu PR, verifica:
+
+- [ ] El contenido sigue las [guías de estilo](.github/skills/talkscript-content/SKILL.md)
+- [ ] No hay errores de compilación (`pnpm build` funciona)
+- [ ] Los links internos funcionan correctamente
+- [ ] Las traducciones son precisas
+- [ ] Los ejemplos de código son claros y apropiados
+- [ ] La ortografía y gramática están correctas
+
+### ❓ ¿Necesitas Ayuda?
+
+Si tienes dudas sobre cómo contribuir o necesitas orientación:
+
+- Abre un Issue con la etiqueta `pregunta`
+- Consulta las guías de estilo existentes
+- Revisa Pull Requests anteriores como referencia
 
 ## 📄 Licencia
 
