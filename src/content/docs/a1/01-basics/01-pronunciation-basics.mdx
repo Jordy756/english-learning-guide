@@ -128,10 +128,12 @@ La mayoría de las consonantes en inglés son similares al español, pero hay al
 
 ## Acento y Énfasis
 
-En inglés, cada palabra tiene una **sílaba acentuada** que suena más fuerte y clara. Cambiar el acento puede cambiar el significado:
+En inglés, el acento puede operar a nivel de palabra o de oración. El símbolo `ˈ` en IPA indica la sílaba que suena más fuerte.
 
+<Tabs>
+  <TabItem label="Sustantivo vs Verbo">
 ```javascript
-const stressPatterns = {
+const wordStress = {
   present: {
     sustantivo: "PREsent", // regalo — /ˈprezənt/
     verbo:      "preSENT"  // presentar — /prɪˈzent/
@@ -139,20 +141,64 @@ const stressPatterns = {
   record: {
     sustantivo: "REcord",  // disco — /ˈrekɔːd/
     verbo:      "reCORD"   // grabar — /rɪˈkɔːd/
+  },
+  permit: {
+    sustantivo: "PERmit",  // permiso — /ˈpɜːmɪt/
+    verbo:      "perMIT"   // permitir — /pəˈmɪt/
   }
 };
 ```
 
-<Aside type="note" title="Símbolo de acento principal en IPA">
-En el IPA, el símbolo `ˈ` antes de una sílaba indica que lleva el acento principal.
-</Aside>
+  Algunas palabras en inglés se escriben igual pero se pronuncian diferente según si son sustantivo o verbo. La **sílaba acentuada cambia** su función en la oración.
 
-**Ejemplos:**
+  **Ejemplos:**
 
-- This is a **present** for you (Esto es un regalo para ti) - **/ˈprezənt/**
-- Let me **present** my team (Déjame presentar mi equipo) - **/prɪˈzent/**
-- I bought a new **record** (Compré un disco nuevo) - **/ˈrekɔːd/**
-- Can you **record** this? (¿Puedes grabar esto?) - **/rɪˈkɔːd/**
+  - This is a **present** for you (Esto es un regalo para ti) - /ˈprezənt/
+  - Let me **present** my team (Déjame presentar mi equipo) - /prɪˈzent/
+  - I bought a new **record** (Compré un disco nuevo) - /ˈrekɔːd/
+  - Can you **record** this? (¿Puedes grabar esto?) - /rɪˈkɔːd/
+  </TabItem>
+
+  <TabItem label="Acento en Oraciones">
+```javascript
+const sentenceStress = {
+  // Las palabras de contenido llevan el acento
+  content: ["nouns", "verbs", "adjectives", "adverbs"],
+  // Las palabras función son débiles
+  function: ["a", "the", "is", "and", "to", "of"]
+};
+```
+
+  En una oración, las **palabras de contenido** (sustantivos, verbos, adjetivos) se pronuncian con más fuerza. Las palabras función como artículos y preposiciones se reducen y suenan más breves.
+
+  **Ejemplos:**
+
+  - **SHE** works at a **HOS**pital (Ella trabaja en un hospital)
+  - I **WANT** a **CUP** of **COF**fee (Quiero una taza de café)
+  - The **CAT** is on the **TABLE** (El gato está en la mesa)
+  - He **BOUGHT** a **NEW** car (Él compró un coche nuevo)
+  </TabItem>
+
+  <TabItem label="Énfasis Contrastivo">
+```javascript
+const contrastiveStress = {
+  // El énfasis cambia según qué se quiere destacar
+  normal:     "I bought a RED car",    // información nueva
+  contraste1: "I bought a red CAR",    // no una moto
+  contraste2: "I bought a red car",    // yo lo compré, no tú
+};
+```
+
+  En inglés se puede mover el énfasis dentro de una misma oración para cambiar qué parte de la información se está destacando o corrigiendo.
+
+  **Ejemplos:**
+
+  - **I** didn't say that (Yo no dije eso — alguien más sí)
+  - I **didn't** say that (Yo no lo dije — es falso)
+  - I didn't **say** that (No lo dije — lo escribí)
+  - I didn't say **that** (No dije eso — dije otra cosa)
+  </TabItem>
+</Tabs>
 
 ---
 
