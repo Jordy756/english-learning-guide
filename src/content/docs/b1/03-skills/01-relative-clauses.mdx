@@ -3,3 +3,301 @@ title: Cláusulas Relativas
 description: Usa who, which, that, where para conectar ideas.
 ---
 
+import { Aside, Tabs, TabItem } from '@astrojs/starlight/components';
+
+Las cláusulas relativas permiten **combinar dos oraciones** en una sola, añadiendo información sobre un sustantivo. Piensa en ellas como **propiedades anidadas** dentro de un objeto: el pronombre relativo actúa como una referencia que conecta la información adicional con el elemento principal.
+
+---
+
+## Pronombres Relativos Básicos
+
+Cada pronombre relativo tiene un uso específico según lo que describes:
+
+```javascript
+const relativePronouns = {
+  who: "personas (sujeto)",
+  whom: "personas (objeto, formal)",
+  which: "cosas y animales",
+  that: "personas y cosas (informal)",
+  where: "lugares",
+  when: "tiempo",
+  whose: "posesión"
+};
+```
+
+**Ejemplos básicos:**
+
+- The woman **who** lives next door is a doctor (La mujer que vive al lado es doctora)
+- The book **which** I bought is interesting (El libro que compré es interesante)
+- The restaurant **where** we ate was expensive (El restaurante donde comimos era caro)
+- The day **when** we met was special (El día cuando nos conocimos fue especial)
+
+---
+
+## Who vs. Which vs. That
+
+La elección depende de qué describes y el nivel de formalidad.
+
+<Tabs>
+  <TabItem label="Who (personas)">
+```javascript
+const whoExamples = {
+  subject: "The man who called is my boss",
+  meaning: "persona como sujeto de la cláusula",
+  note: "nunca uses 'which' para personas"
+};
+```
+
+**Who** introduce información sobre **personas** cuando son el sujeto.
+  </TabItem>
+  
+  <TabItem label="Which (cosas)">
+```javascript
+const whichExamples = {
+  things: "The car which I bought is red",
+  animals: "The dog which barked is mine",
+  note: "más formal que 'that'"
+};
+```
+
+**Which** se usa para **cosas y animales**.
+  </TabItem>
+  
+  <TabItem label="That (ambos)">
+```javascript
+const thatExamples = {
+  people: "The man that called is my boss",
+  things: "The car that I bought is red",
+  note: "más común en inglés informal"
+};
+```
+
+**That** puede reemplazar a **who** o **which** en contextos informales.
+  </TabItem>
+</Tabs>
+
+**Ejemplos con who:**
+
+- The teacher **who** teaches math is strict (El profesor que enseña matemáticas es estricto)
+- I met someone **who** knows you (Conocí a alguien que te conoce)
+- People **who** exercise live longer (Las personas que hacen ejercicio viven más)
+
+**Ejemplos con which:**
+
+- The phone **which** you gave me broke (El teléfono que me diste se rompió)
+- The movie **which** won the award was amazing (La película que ganó el premio fue increíble)
+- The cat **which** sleeps on my bed is old (El gato que duerme en mi cama es viejo)
+
+**Ejemplos con that:**
+
+- The woman **that** works here is nice (La mujer que trabaja aquí es amable)
+- The book **that** I read was boring (El libro que leí fue aburrido)
+- Everything **that** happened was unexpected (Todo lo que pasó fue inesperado)
+
+---
+
+## Cláusulas Definitorias vs. No Definitorias
+
+Esta distinción es **crucial** y no existe de la misma forma en español.
+
+```javascript
+const clauseTypes = {
+  defining: {
+    purpose: "identifica qué persona/cosa",
+    commas: false,
+    that_allowed: true,
+    example: "The man who stole my car was caught"
+  },
+  nonDefining: {
+    purpose: "añade información extra",
+    commas: true,
+    that_allowed: false,
+    example: "My brother, who lives in Paris, is visiting"
+  }
+};
+```
+
+<Tabs>
+  <TabItem label="Definitorias">
+```javascript
+// Sin comas - información esencial
+const defining = {
+  sentence: "Students who study hard pass exams",
+  meaning: "solo los que estudian mucho aprueban",
+  note: "sin la cláusula, no sabemos qué estudiantes"
+};
+```
+
+La información es **esencial** para identificar al sustantivo.
+  </TabItem>
+  
+  <TabItem label="No Definitorias">
+```javascript
+// Con comas - información adicional
+const nonDefining = {
+  sentence: "My sister, who lives in London, is a nurse",
+  meaning: "solo tengo una hermana (info extra)",
+  note: "se puede eliminar sin perder sentido básico"
+};
+```
+
+La información es **extra**, no esencial para identificar.
+  </TabItem>
+</Tabs>
+
+**Ejemplos de cláusulas definitorias:**
+
+- The woman **who answered the phone** was rude (La mujer que contestó el teléfono fue grosera)
+- Books **that have pictures** are easier to read (Los libros que tienen imágenes son más fáciles de leer)
+- The house **where I grew up** was demolished (La casa donde crecí fue demolida)
+
+**Ejemplos de cláusulas no definitorias:**
+
+- My car, **which is old**, still works well (Mi coche, que es viejo, todavía funciona bien)
+- John, **who you met yesterday**, called me (John, a quien conociste ayer, me llamó)
+- Paris, **where I was born**, is beautiful (París, donde nací, es hermosa)
+
+<Aside type="caution" title="That en cláusulas no definitorias">
+Nunca uses **that** en cláusulas no definitorias (con comas). Solo usa **who** o **which**.
+</Aside>
+
+---
+
+## Where, When, Whose
+
+Estos pronombres relativos tienen usos específicos.
+
+```javascript
+const specialPronouns = {
+  where: {
+    use: "lugares",
+    replaces: "in which / at which",
+    example: "The city where I live is big"
+  },
+  when: {
+    use: "tiempo",
+    replaces: "in which / at which",
+    example: "The day when we met was sunny"
+  },
+  whose: {
+    use: "posesión",
+    replaces: "of which / of whom",
+    example: "The man whose car was stolen called police"
+  }
+};
+```
+
+**Ejemplos con where:**
+
+- This is the restaurant **where** we had dinner (Este es el restaurante donde cenamos)
+- The town **where** she was born is small (El pueblo donde nació es pequeño)
+
+**Ejemplos con when:**
+
+- I remember the moment **when** I first saw you (Recuerdo el momento cuando te vi por primera vez)
+- The year **when** I graduated was 2020 (El año cuando me gradué fue 2020)
+
+**Ejemplos con whose:**
+
+- The girl **whose** father is a doctor won the prize (La chica cuyo padre es doctor ganó el premio)
+- The company **whose** products I use is closing (La empresa cuyos productos uso está cerrando)
+
+---
+
+## Omitir el Pronombre Relativo
+
+En cláusulas definitorias, puedes **omitir** el pronombre cuando es el **objeto** de la cláusula.
+
+```javascript
+const omission = {
+  rule: "omitir cuando es objeto, no sujeto",
+  withPronoun: "The book which I bought...",
+  withoutPronoun: "The book I bought...",
+  cannotOmit: "The man who called... (sujeto)"
+};
+```
+
+<Aside type="tip" title="¿Sujeto u objeto?">
+Si después del pronombre hay otro sujeto (I, she, they...), el pronombre es **objeto** y se puede omitir.
+</Aside>
+
+**Se puede omitir:**
+
+- The movie (that) **I watched** was good (La película que vi fue buena)
+- The person (who) **you mentioned** called (La persona que mencionaste llamó)
+- The place (where) **we stayed** was nice (El lugar donde nos quedamos fue agradable)
+
+**No se puede omitir:**
+
+- The dog **that bit** me ran away (El perro que me mordió huyó) - "that" es sujeto
+- The woman **who lives** here is kind (La mujer que vive aquí es amable) - "who" es sujeto
+
+---
+
+## Preposiciones en Cláusulas Relativas
+
+Las preposiciones pueden ir al **final** (informal) o **antes del pronombre** (formal).
+
+```javascript
+const prepositions = {
+  informal: "The person who I spoke to...",
+  formal: "The person to whom I spoke...",
+  note: "con 'that' la preposición va siempre al final"
+};
+```
+
+**Informal (más común):**
+
+- The hotel **which** we stayed **at** was cheap (El hotel en el que nos quedamos era barato)
+- The topic **that** we talked **about** was boring (El tema del que hablamos era aburrido)
+- The person **who** I work **with** is nice (La persona con quien trabajo es amable)
+
+**Formal:**
+
+- The hotel **at which** we stayed was cheap
+- The topic **about which** we talked was boring
+- The person **with whom** I work is nice
+
+---
+
+## Errores Comunes
+
+<Aside type="danger" title="Usar which para personas">
+- ⛔ The man **which** called me was angry
+- ✅ The man **who** called me was angry (El hombre que me llamó estaba enojado)
+
+**Which** nunca se usa para personas. Usa **who** o **that**.
+</Aside>
+
+<Aside type="danger" title="Usar that en cláusulas no definitorias">
+- ⛔ My mother, **that** is a teacher, lives in Madrid
+- ✅ My mother, **who** is a teacher, lives in Madrid (Mi madre, que es profesora, vive en Madrid)
+
+Las cláusulas con comas requieren **who** o **which**, nunca **that**.
+</Aside>
+
+<Aside type="danger" title="Omitir pronombre sujeto">
+- ⛔ The man called me was my boss
+- ✅ The man **who** called me was my boss (El hombre que me llamó era mi jefe)
+
+Solo puedes omitir el pronombre cuando es **objeto**, no cuando es sujeto.
+</Aside>
+
+<Aside type="danger" title="Olvidar las comas en cláusulas no definitorias">
+- ⛔ My brother who lives in London is visiting (sugiere que tengo varios hermanos)
+- ✅ My brother**,** who lives in London**,** is visiting (Mi hermano, que vive en Londres, está de visita)
+
+Las comas cambian completamente el significado de la oración.
+</Aside>
+
+---
+
+## Práctica
+
+<Aside type="tip" title="Ejercicio diario">
+- Combina pares de oraciones simples usando pronombres relativos apropiados
+- Practica identificando si una cláusula es definitoria o no definitoria (¿necesita comas?)
+- Reescribe oraciones formales en estilo informal y viceversa (preposiciones al final vs. al inicio)
+- Lee artículos en inglés y subraya todas las cláusulas relativas que encuentres
+- Practica omitiendo el pronombre relativo cuando sea posible para un estilo más natural
+</Aside>

@@ -3,3 +3,272 @@ title: Sonidos Vocálicos
 description: Domina los sonidos de las vocales en inglés.
 ---
 
+import { Aside, Tabs, TabItem } from '@astrojs/starlight/components';
+
+El inglés tiene un sistema vocálico mucho más complejo que el español. Mientras que el español tiene 5 vocales claras, el inglés cuenta con **12 sonidos vocálicos puros** más **8 diptongos**. Piensa en ello como pasar de un objeto simple a un sistema de **claves más específicas** donde pequeñas diferencias cambian el significado completamente.
+
+---
+
+## El Sistema Vocálico del Inglés
+
+En español, cada letra vocal tiene un sonido. En inglés, la misma letra puede representar múltiples sonidos según el contexto:
+
+```javascript
+const letraA = {
+  /æ/: "cat, hat, man",
+  /eɪ/: "name, make, late",
+  /ɑː/: "father, car, calm",
+  /ɔː/: "water, ball, call",
+  /ə/: "about, sofa, ago"
+};
+```
+
+<Aside type="note" title="No memorices reglas de ortografía">
+En lugar de memorizar cuándo la "a" suena de cada forma, enfócate en aprender palabras completas con su pronunciación correcta.
+</Aside>
+
+---
+
+## Vocales Cortas vs. Largas
+
+La **duración** de una vocal puede cambiar completamente el significado de una palabra.
+
+<Tabs>
+  <TabItem label="Vocales Cortas">
+```javascript
+const shortVowels = {
+  /ɪ/: "ship, bit, sit",
+  /e/: "bed, red, men",
+  /æ/: "cat, bag, fan",
+  /ʌ/: "cup, but, luck",
+  /ɒ/: "hot, lot, box",
+  /ʊ/: "book, put, good"
+};
+```
+
+Las vocales cortas son **tensas y breves**. No las alargues como en español.
+  </TabItem>
+  
+  <TabItem label="Vocales Largas">
+```javascript
+const longVowels = {
+  /iː/: "sheep, beat, seat",
+  /ɜː/: "bird, word, nurse",
+  /ɑː/: "car, heart, father",
+  /ɔː/: "door, four, more",
+  /uː/: "food, moon, blue"
+};
+```
+
+Los dos puntos `ː` indican que el sonido se **sostiene** más tiempo.
+  </TabItem>
+</Tabs>
+
+**Ejemplos de vocales cortas:**
+
+- The **ship** is big (El barco es grande) - /ʃɪp/
+- I **sit** on the chair (Me siento en la silla) - /sɪt/
+- The **cat** is sleeping (El gato está durmiendo) - /kæt/
+
+**Ejemplos de vocales largas:**
+
+- The **sheep** is white (La oveja es blanca) - /ʃiːp/
+- I **beat** the record (Batí el récord) - /biːt/
+- The **car** is fast (El coche es rápido) - /kɑː/
+
+---
+
+## Pares Mínimos Críticos
+
+Los **pares mínimos** son palabras que difieren solo en un sonido. Dominarlos es esencial para evitar malentendidos:
+
+```javascript
+const minimalPairs = {
+  shortI_longI: {
+    "/ɪ/ → /iː/": ["ship/sheep", "bit/beat", "sit/seat"]
+  },
+  shortU_longU: {
+    "/ʊ/ → /uː/": ["pull/pool", "full/fool", "look/Luke"]
+  },
+  shortA_shortE: {
+    "/æ/ → /e/": ["bad/bed", "man/men", "pan/pen"]
+  }
+};
+```
+
+**Practica estos pares en contexto:**
+
+- The **ship** sailed away / The **sheep** ran away (El barco zarpó / La oveja huyó)
+- **Pull** the door / Jump in the **pool** (Tira de la puerta / Salta a la piscina)
+- He is a **bad** person / He is in **bed** (Es una mala persona / Está en la cama)
+- One **man** came / Three **men** came (Vino un hombre / Vinieron tres hombres)
+
+<Aside type="caution" title="Errores con consecuencias">
+Confundir /ɪ/ con /iː/ puede crear situaciones incómodas: "I need to sit" (necesito sentarme) vs "I need a seat" (necesito un asiento) son muy diferentes en contexto.
+</Aside>
+
+---
+
+## El Schwa: La Vocal Más Importante
+
+El sonido **schwa** `/ə/` es la vocal más común en inglés. Aparece en sílabas **no acentuadas** y suena como una vocal neutra y relajada.
+
+```javascript
+const schwaExamples = {
+  position: "cualquier vocal no acentuada",
+  sound: "neutral, relajado, breve",
+  examples: {
+    "a → /ə/": "about /əˈbaʊt/",
+    "e → /ə/": "taken /ˈteɪkən/",
+    "i → /ə/": "pencil /ˈpensəl/",
+    "o → /ə/": "common /ˈkɒmən/",
+    "u → /ə/": "supply /səˈplaɪ/"
+  }
+};
+```
+
+**Ejemplos en oraciones:**
+
+- I'm thinking **about** it (Estoy pensando en ello) - /əˈbaʊt/
+- She has **taken** the exam (Ella ha tomado el examen) - /ˈteɪkən/
+- Give me a **pencil** (Dame un lápiz) - /ˈpensəl/
+- This is **common** knowledge (Esto es conocimiento común) - /ˈkɒmən/
+
+<Aside type="tip" title="Cómo producir el schwa">
+Relaja completamente la boca y produce un sonido vocal breve y neutro, como cuando dices "uh" al pensar. Es el sonido más relajado posible.
+</Aside>
+
+---
+
+## Diptongos: Dos Sonidos en Uno
+
+Los diptongos son **combinaciones de dos vocales** que se deslizan de un sonido a otro dentro de la misma sílaba.
+
+<Tabs>
+  <TabItem label="Diptongos Centrales">
+```javascript
+const centralDiphthongs = {
+  /eɪ/: "name, day, make, play",
+  /aɪ/: "my, time, like, buy",
+  /ɔɪ/: "boy, coin, join, voice"
+};
+```
+
+Estos diptongos **terminan hacia el centro** de la boca.
+  </TabItem>
+  
+  <TabItem label="Diptongos Posteriores">
+```javascript
+const backDiphthongs = {
+  /aʊ/: "now, house, out, town",
+  /əʊ/: "go, home, no, show"
+};
+```
+
+Estos diptongos se mueven hacia la **parte posterior** de la boca.
+  </TabItem>
+  
+  <TabItem label="Diptongos con Schwa">
+```javascript
+const schwaDiphthongs = {
+  /ɪə/: "near, here, fear, beer",
+  /eə/: "hair, care, where, fair",
+  /ʊə/: "tour, pure, sure, cure"
+};
+```
+
+Estos terminan con el sonido **schwa** relajado.
+  </TabItem>
+</Tabs>
+
+**Ejemplos de diptongos centrales:**
+
+- What's your **name**? (¿Cuál es tu nombre?) - /neɪm/
+- It's **my** turn (Es mi turno) - /maɪ/
+- Good **boy**! (¡Buen chico!) - /bɔɪ/
+
+**Ejemplos de diptongos posteriores:**
+
+- I'm going **home** now (Me voy a casa ahora) - /həʊm/
+- The **house** is big (La casa es grande) - /haʊs/
+- Let's **go** outside (Vamos afuera) - /ɡəʊ/
+
+**Ejemplos de diptongos con schwa:**
+
+- Come **here** please (Ven aquí por favor) - /hɪə/
+- I **care** about you (Me importas) - /keə/
+- The **tour** was great (El tour fue genial) - /tʊə/
+
+---
+
+## Vocales y Ortografía
+
+La relación entre letras y sonidos en inglés no es directa. Aquí tienes patrones comunes:
+
+```javascript
+const spellingPatterns = {
+  "/iː/ (sonido largo)": {
+    ee: "see, tree, free",
+    ea: "eat, sea, read",
+    ie: "believe, piece"
+  },
+  "/aɪ/ (diptongo)": {
+    i_e: "time, like, bike",
+    igh: "night, light, right",
+    y: "my, fly, why"
+  },
+  "/əʊ/ (diptongo)": {
+    o_e: "home, hope, note",
+    oa: "boat, coat, road",
+    ow: "show, know, grow"
+  }
+};
+```
+
+<Aside type="note" title="Patrones, no reglas absolutas">
+Estos patrones tienen excepciones. Por ejemplo, "read" puede ser /riːd/ (presente) o /red/ (pasado) según el contexto.
+</Aside>
+
+---
+
+## Errores Comunes
+
+<Aside type="danger" title="Pronunciar todas las vocales con igual duración">
+- ⛔ Decir "ship" y "sheep" exactamente igual
+- ✅ **Ship** /ʃɪp/ (corta y tensa) vs **Sheep** /ʃiːp/ (larga y relajada)
+
+La duración vocálica distingue significados en inglés.
+</Aside>
+
+<Aside type="danger" title="Ignorar el schwa en sílabas no acentuadas">
+- ⛔ Pronunciar "about" como /aˈbaut/ con "a" clara
+- ✅ **About** /əˈbaʊt/ con schwa inicial
+
+Las sílabas no acentuadas casi siempre se reducen a schwa.
+</Aside>
+
+<Aside type="danger" title="No deslizar correctamente los diptongos">
+- ⛔ Pronunciar "home" como /hom/ con una sola vocal
+- ✅ **Home** /həʊm/ deslizando de /ə/ a /ʊ/
+
+Los diptongos son dos sonidos conectados, no uno solo.
+</Aside>
+
+<Aside type="danger" title="Confundir /æ/ con /e/">
+- ⛔ Decir "bad" como "bed"
+- ✅ **Bad** /bæd/ (boca más abierta) vs **Bed** /bed/ (boca menos abierta)
+
+La /æ/ requiere abrir más la mandíbula que la /e/.
+</Aside>
+
+---
+
+## Práctica
+
+<Aside type="tip" title="Ejercicio diario">
+- Practica pares mínimos (ship/sheep, bad/bed, pull/pool) grabándote y comparando con hablantes nativos
+- Identifica el schwa en palabras cotidianas: escucha podcasts y marca las vocales reducidas
+- Lee en voz alta enfocándote en la duración correcta de cada vocal
+- Usa aplicaciones como Forvo o YouGlish para escuchar palabras pronunciadas por nativos
+- Practica diptongos exagerando el movimiento de boca para sentir la transición entre sonidos
+</Aside>
