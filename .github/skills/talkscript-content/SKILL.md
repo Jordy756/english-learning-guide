@@ -1,6 +1,6 @@
 ---
 name: talkscript-content
-description: Generate educational grammar content for TalkScript using JavaScript metaphors
+description: Generate educational grammar content for TalkScript
 metadata:
   version: "3.0.0"
   author: "Jordy Castro"
@@ -8,7 +8,7 @@ metadata:
 
 # TalkScript Content Generator
 
-Generate Spanish-language educational content explaining English grammar through JavaScript programming metaphors.
+Generate Spanish-language educational content explaining English grammar in plain, accessible language. JavaScript code blocks (`javascript`) may illustrate structural patterns — but prose must never rely on programming metaphors.
 
 > Global rules (language, tone, audience, MDX standards, prohibited elements) are defined in [`AGENTS.md`](../../../AGENTS.md). This skill covers only content-specific rules.
 
@@ -33,20 +33,6 @@ Before generating any content, read and follow these template files exactly:
 4. **Consistency** — Uniform section order across all pages
 5. **Practical examples** — Real-world usage with Spanish translations
 6. **Strategic tabs** — Use `<Tabs>` to reduce scrolling, not to decorate
-
----
-
-## JavaScript Metaphors
-
-Use programming concepts only when they genuinely clarify a grammar concept:
-
-- Objects → conjugation tables
-- Arrays → word order sequences
-- Functions → form transformations (affirmative → negative → question)
-- Pattern matching → grammar rules
-- Type systems → word categories (noun, verb, adjective…)
-
-Never force a metaphor. If it doesn't arise naturally, skip it.
 
 ---
 
@@ -96,7 +82,7 @@ Import only components that appear in the file.
 
 ### 3. Introduction
 
-One paragraph maximum. Explain the topic and its relevance. Add a JavaScript metaphor only if it arises naturally.
+One paragraph maximum. Explain the topic and its relevance in plain language. No programming references.
 
 ### 4. Main Content
 
@@ -151,6 +137,7 @@ Run this before delivering any generated or modified file.
 
 - [ ] Inline examples match [`templates/examples.md`](templates/examples.md)
 - [ ] No code inside `<Card>` components
+- [ ] No programming metaphors or developer jargon in prose
 - [ ] All `<Aside>` components have descriptive titles
 - [ ] Code blocks within line and character limits
 - [ ] All code identifiers in English

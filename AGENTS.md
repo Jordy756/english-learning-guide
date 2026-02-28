@@ -1,6 +1,6 @@
 # TalkScript — Agent Orchestrator
 
-TalkScript is a Spanish-language educational guide for developers learning English through JavaScript metaphors. Built with **Astro + Starlight**, all content lives as MDX files inside `src/content/docs/`.
+TalkScript is a Spanish-language educational guide for learning English. Built with **Astro + Starlight**, all content lives as MDX files inside `src/content/docs/`. JavaScript code blocks (`javascript`) are used to illustrate grammar patterns visually — but **all prose must be plain language, understandable by anyone**.
 
 ---
 
@@ -26,9 +26,9 @@ These rules apply to every file in this project. Skills must not restate them.
 
 ### Audience
 
-- Spanish-speaking developers learning English (CEFR A1–C2)
-- Assume programming familiarity — leverage that to explain grammar concepts
-- Content must always feel relevant to someone who thinks in code
+- Spanish-speaking learners of English (CEFR A1–C2)
+- Explanations must be accessible to anyone — no assumed programming knowledge in prose
+- JavaScript code blocks are the only place where technical concepts may appear
 
 ### Tone
 
@@ -53,6 +53,7 @@ The following are forbidden across the entire codebase unless a skill explicitly
 - Native Markdown blockquote alerts — use `<Aside>` instead
 - Icons inside `<Card>` components
 - Executable logic in code blocks — code is for visual pattern illustration only
+- Programming metaphors or developer jargon in prose — explanations must use plain language anyone can understand; technical concepts belong only inside `javascript` code blocks
 
 ---
 
