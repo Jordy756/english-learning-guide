@@ -46,15 +46,9 @@ Las decenas siguen un patrón consistente, y para números compuestos (21-99) us
 
 ```javascript
 const tens = {
-  10: "ten",
-  20: "twenty",
-  30: "thirty",
-  40: "forty",
-  50: "fifty",
-  60: "sixty",
-  70: "seventy",
-  80: "eighty",
-  90: "ninety"
+  10: "ten",     20: "twenty", 30: "thirty",
+  40: "forty",   50: "fifty",  60: "sixty",
+  70: "seventy", 80: "eighty", 90: "ninety"
 };
 ```
   </TabItem>
@@ -64,12 +58,11 @@ const tens = {
 Para números entre las decenas, une la decena y la unidad con un guion:
 
 ```javascript
-const compositeNumbers = {
-  21: "twenty-one",   // veintiuno
-  47: "forty-seven",  // cuarenta y siete
-  63: "sixty-three",  // sesenta y tres
-  89: "eighty-nine"   // ochenta y nueve
-};
+const composeNumber = (ten, unit) => {
+  return ten + "-" + unit; // Decena + "-" + Unidad
+}
+// composeNumber("nighty", "nine") → "ninety-nine"
+// composeNumber("fifty", "two") → "fifty-two"
 ```
 
   **Ejemplos:**
@@ -93,15 +86,10 @@ El número 40 se escribe **forty** (sin "u"). Es la única decena que pierde la 
 Para números grandes, se usan "hundred", "thousand", "million" sin plural cuando van precedidos de un número:
 
 ```javascript
-const largeNumbers = {
-  100:      "one hundred",   // cien
-  200:      "two hundred",   // doscientos
-  1000:     "one thousand",  // mil
-  5000:     "five thousand", // cinco mil
-  1000000:  "one million",   // un millón
-  10000000: "ten million"    // diez millones
-};
-// Para compuestos, usa "and" después de hundred: "three hundred and forty-five"
+const hundreds  = `${n} hundred`;             // "two hundred"
+const thousands = `${n} thousand`;            // "five thousand"
+const millions  = `${n} million`;             // "one million"
+const compound  = `${n} hundred and ${rest}`; // "four hundred and fifty-six"
 ```
 
 **Ejemplos:**
@@ -109,7 +97,7 @@ const largeNumbers = {
 - **456:** four hundred and fifty-six (cuatrocientos cincuenta y seis)
 - **1,234:** one thousand, two hundred and thirty-four (mil doscientos treinta y cuatro)
 - **50,000:** fifty thousand (cincuenta mil)
-- **1,000,000:** one million (un millón)
+- **1,542,357:** one million, five hundred and forty-two thousand, three hundred and fifty-seven (un millón quinientos cuarenta y dos mil trescientos cincuenta y siete)
 
 <Aside type="note" title="Diferencia UK vs US">
 En inglés británico, se usa "and" después de "hundred":  
@@ -128,18 +116,10 @@ Los ordinales indican posición u orden. La mayoría añaden "th", pero los tres
 
 
 ```javascript
-const ordinals = {
-  1: "first",     // 1st - Primero
-  2: "second",    // 2nd - Segundo
-  3: "third",     // 3rd - Tercero
-  4: "fourth",    // 4th - Cuarto
-  5: "fifth",     // 5th - Quinto
-  6: "sixth",     // 6th - Sexto
-  7: "seventh",   // 7th - Séptimo
-  8: "eighth",    // 8th - Octavo
-  9: "ninth",     // 9th - Noveno
-  10: "tenth"     // 10th - Décimo
-};
+if (n === 1) ordinal = "first";      // irregular
+if (n === 2) ordinal = "second";     // irregular
+if (n === 3) ordinal = "third";      // irregular
+if (n >= 4)  ordinal = number + "th"; // fourth, fifth, sixth...
 ```
 
 **Ejemplos:**
@@ -185,12 +165,12 @@ const ordinals = {
 ## Operaciones Matemáticas
 
 ```javascript
-const mathOperations = {
-  addition: "5 + 3 = 8",       // five plus three equals eight (cinco más tres es igual a ocho)
-  subtraction: "10 - 4 = 6",   // ten minus four equals six (diez menos cuatro es igual a seis)
-  multiplication: "3 × 2 = 6", // three times two equals six (tres por dos es igual a seis)
-  division: "8 ÷ 2 = 4"        // eight divided by two equals four (ocho dividido por dos es igual a cuatro)
-};
+const operations = [
+  "5 + 3  = 8",  // five plus three equals eight
+  "10 - 4 = 6",  // ten minus four equals six
+  "3 × 2  = 6",  // three times two equals six
+  "8 ÷ 2  = 4"   // eight divided by two equals four
+];
 ```
 
 **Vocabulario matemático:**
@@ -210,14 +190,9 @@ Las fracciones usan ordinales para el denominador:
   <TabItem label="Fracciones Comunes">
 
 ```javascript
-const commonFractions = {
-  "1/2": "one half / a half",         // un medio (excepción)
-  "1/4": "one quarter / a quarter",   // un cuarto (excepción)
-  "3/4": "three quarters",            // tres cuartos
-  "1/3": "one third",                 // un tercio
-  "2/3": "two thirds",                // dos tercios
-  "1/5": "one fifth",                 // un quinto
-  "2/5": "two fifths"                 // dos quintos
+const fractions = {
+  exceptions: ["1/2 → one half", "1/4 → one quarter", "3/4 → three quarters"],
+  regular: ["1/3 → one third", "2/3 → two thirds", "1/5 → one fifth", "2/5 → two fifths"]
 };
 ```
 
@@ -228,16 +203,13 @@ const commonFractions = {
 El denominador usa el **ordinal** de ese número. Si el numerador es mayor que 1, el ordinal lleva **"s"** al final:
 
 ```javascript
-const makeFraction = (numerator, denominator) => {
-  const ordinal = makeOrdinal(denominator);
+function makeFraction(numerator, ordinal) {
   const plural = numerator > 1 ? ordinal + "s" : ordinal;
   return `${numerator} ${plural}`;
-};
-
-// Ejemplos
-console.log(makeFraction(1, "eighth")); // "1 eighth"
-console.log(makeFraction(3, "eighth")); // "3 eighths"
-console.log(makeFraction(5, "sixth"));  // "5 sixths"
+}
+// makeFraction(1, "eighth") → "1 eighth"
+// makeFraction(3, "eighth") → "3 eighths"
+// makeFraction(5, "sixth")  → "5 sixths"
 ```
 
   **Ejemplos:**

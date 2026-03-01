@@ -109,11 +109,12 @@ Usa el alfabeto fonético cuando:
 Deletrear es la acción de decir una palabra letra por letra. Es muy útil cuando hay ruido de fondo, mala conexión o simplemente quieres asegurarte de que la otra persona entendió bien.
 
 ```javascript
-const spelling = {
-  CODE:  "si - ou - di - i",    // código
-  SMITH: "es - em - ai - ti - eich", // apellido
-  EMAIL: "i - em - ei - ai - el"     // correo
-};
+const spell = (word) => {
+  // "CODE"  → "si  - ou - di  - i"
+  // "SMITH" → "es  - em - ai  - ti - eich"
+  // "EMAIL" → "i   - em - ei  - ai - el"
+  return word.split("").map(letter => names[letter]).join(" - ");
+}
 ```
 
 <Aside type="tip" title="Frases para pedir o dar un deletreo">

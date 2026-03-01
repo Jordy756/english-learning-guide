@@ -181,12 +181,10 @@ const sentenceStress = {
 
   <TabItem label="Énfasis Contrastivo">
 ```javascript
-const contrastiveStress = {
-  // El énfasis cambia según qué se quiere destacar
-  normal:     "I bought a RED car",    // información nueva
-  contraste1: "I bought a red CAR",    // no una moto
-  contraste2: "I bought a red car",    // yo lo compré, no tú
-};
+// El énfasis cambia según qué se quiere destacar
+if (focus === "who")    sentence = "I     bought a red car"; // yo, no otro
+if (focus === "action") sentence = "I BOUGHT a red car";     // compré, no robé
+if (focus === "what")   sentence = "I bought a RED car";     // rojo, no azul
 ```
 
   En inglés se puede mover el énfasis dentro de una misma oración para cambiar qué parte de la información se está destacando o corrigiendo.
@@ -221,10 +219,9 @@ Es el sonido de una vocal **sin estrés**, muy suave y breve.
   
   <TabItem label="V /v/">
 ```javascript
-const soundV = {
-  very: "/ˈveri/", // muy
-  give: "/ɡɪv/",  // dar
-  love: "/lʌv/"   // amor
+const bVsV = {
+  "/b/": ["boat", "ban",  "best"],  // labios se juntan
+  "/v/": ["vote", "van",  "vest"]   // dientes sobre labio
 };
 ```
 
@@ -233,11 +230,9 @@ const soundV = {
   
   <TabItem label="Z /z/">
 ```javascript
-const soundZ = {
-  zoo:    "/zuː/",   // zoológico
-  please: "/pliːz/", // por favor
-  eyes:   "/aɪz/"   // ojos
-};
+// La diferencia es la vibración de las cuerdas vocales
+if (voiced === true)  sound = "/z/"; // zoo, please, eyes
+if (voiced === false) sound = "/s/"; // sun, peace,  ice
 ```
 
 Las cuerdas vocales vibran, a diferencia de /s/ que es sorda.
