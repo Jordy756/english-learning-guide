@@ -5,7 +5,7 @@ description: Domina los pronombres de sujeto y objeto.
 
 import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
 
-Los pronombres son como variables en programación: reemplazan nombres para evitar repeticiones y hacen el código más limpio. En inglés existen varios tipos de pronombres, pero los más importantes son los **pronombres de sujeto** (quién hace la acción), **pronombres de objeto** (quién recibe la acción) y **pronombres reflexivos** (cuando la acción recae sobre uno mismo), y dominarlos te permite hablar de manera más fluida y natural.
+Los pronombres reemplazan nombres para evitar repeticiones y hacen la comunicación más limpia. En inglés existen varios tipos de pronombres, pero los más importantes son los **pronombres de sujeto** (quién hace la acción), **pronombres de objeto** (quién recibe la acción) y **pronombres reflexivos** (cuando la acción recae sobre uno mismo), y dominarlos te permite hablar de manera más fluida y natural.
 
 ---
 
@@ -110,28 +110,17 @@ Los pronombres son como variables en programación: reemplazan nombres para evit
 El pronombre **it** tiene usos especiales en inglés:
 
 ```javascript
-const itUses = {
-  things: "The book is new. It is expensive",
-  // El libro es nuevo. Es caro
-  
-  animals: "The cat is hungry. Feed it",
-  // El gato tiene hambre. Aliméntalo
-  
-  weather: "It is raining / It is cold",
-  // Está lloviendo / Está frío
-  
-  time: "It is 3 PM / It is late",
-  // Son las 3 PM / Es tarde
-  
-  distance: "It is 5 km to the city",
-  // Son 5 km a la ciudad
-  
-  situations: "It is difficult / It is important"
-  // Es difícil / Es importante
-};
+const itUses = [
+  "The book is new. It is expensive",   // Cosas
+  "The cat is hungry. Feed it",         // Animales
+  "It is raining / It is cold",         // Clima
+  "It is 3 PM / It is late",            // Hora
+  "It is 5 km to the city",             // Distancia
+  "It is difficult / It is important"   // Situaciones
+];
 ```
 
-**Más ejemplos:**
+**Ejemplos:**
 - Where is my phone? **It** is on the table (¿Dónde está mi teléfono? Está en la mesa)
 - **It** is sunny today (Está soleado hoy)
 - **It** is important to study (Es importante estudiar)
@@ -148,21 +137,19 @@ En inglés, **it** se usa para animales cuando no sabemos el sexo o cuando habla
 **You** es único porque sirve para singular y plural, formal e informal:
 
 ```javascript
-const youContext = {
-  singular: {
-    informal: "You are my friend",    // Tú eres mi amigo
-    formal: "You are the manager"     // Usted es el gerente
-  },
-  plural: {
-    informal: "You are my friends",   // Ustedes/Vosotros son mis amigos
-    formal: "You are our clients"     // Ustedes son nuestros clientes
-  }
-};
+let meaning = "";
+
+// Singular
+if (target === "one person") meaning = "Tú eres mi amigo";
+if (target === "manager")    meaning = "Usted es el gerente";
+
+// Plural
+if (target === "group")      meaning = "Ustedes/Vosotros son mis amigos";
 ```
 
-  **El contexto determina el significado:**
-  - Are **you** ready, John? (¿Estás listo, John?) - singular
-  - Are **you** ready, everyone? (¿Están listos, todos?) - plural
+  **Ejemplos:**
+  - Are **you** ready, John? (¿Estás listo, John?)
+  - Are **you** ready, everyone? (¿Están listos, todos?)
 
   </TabItem>
 </Tabs>
@@ -177,25 +164,16 @@ const youContext = {
 Después de preposiciones, **siempre** usa pronombres de objeto:
 
 ```javascript
-const withPrepositions = {
-  for: "This is for me/you/him/her/us/them",
-  // Esto es para mí/ti/él/ella/nosotros/ellos
-  
-  with: "Come with me/us",
-  // Ven conmigo/con nosotros
-  
-  to: "She gave it to him/her/them",
-  // Ella se lo dio a él/ella/ellos
-  
-  about: "We're talking about you/him/her",
-  // Estamos hablando de ti/él/ella
-  
-  between: "Between you and me",
-  // Entre tú y yo
-};
+const withPrepositions = [
+  "This is for me",        // Esto es para mí
+  "Come with us",          // Ven con nosotros
+  "She gave it to them",   // Ella se lo dio a ellos
+  "We're talking about him", // Estamos hablando de él
+  "Between you and me"     // Entre tú y yo
+];
 ```
 
-**Ejemplos comunes:**
+**Ejemplos:**
 - This gift is for **you** (Este regalo es para ti)
 - She's talking to **me** (Ella está hablando conmigo)
 - Come with **us** (Ven con nosotros)
@@ -224,24 +202,10 @@ Los pronombres reflexivos se usan con "by" para indicar "solo/a":
 Cuando hay dos sujetos u objetos conectados con "and":
 
 ```javascript
-const withAnd = {
-  subjects: [
-    "Sarah and I are friends",       // Sarah y yo somos amigas
-    "He and she work together",      // Él y ella trabajan juntos
-    "You and they are welcome"       // Tú y ellos son bienvenidos
-  ],
-  
-  objects: [
-    "She invited John and me",       // Invitó a John y a mí
-    "Call Mary and him tomorrow",    // Llama a Mary y a él mañana
-    "This is between you and her"    // Esto es entre tú y ella
-  ],
-  
-  reflexives: [
-    "My brother and I did it ourselves",    // Mi hermano y yo lo hicimos nosotros mismos
-    "You and she can do it yourselves",     // Tú y ella pueden hacerlo ustedes mismas
-    "He and I built the house ourselves"    // Él y yo construimos la casa nosotros mismos
-  ]
+const connectWithAnd = {
+  subjects:   "Sarah and I are friends",         // Sarah y yo
+  objects:    "She invited John and me",         // A John y a mí
+  reflexives: "He and I did it ourselves"        // Él y yo mismos
 };
 ```
 
@@ -266,40 +230,38 @@ Cuando te menciones a ti mismo con otros, ponte al **final**: "Sarah and I" (no 
 
 ---
 
-## Errores Comunes
+## Errores comunes
 
 <Aside type="danger" title="Usar pronombre de sujeto después de preposición">
-Las preposiciones requieren pronombres de **objeto**:
+Las preposiciones siempre requieren pronombres de objeto en lugar de los de sujeto.
 
-- This is for I / Come with we / Between she and I ⛔
+- This is for **I** / Come with **we** / Between **she** and **I** ⛔
 - This is for **me** (Esto es para mí) ✅
 - Come with **us** (Ven con nosotros) ✅
 - Between **her** and **me** (Entre ella y yo) ✅
 </Aside>
 
 <Aside type="danger" title="Confundir he/she con him/her">
-**He/She** = sujeto (hacen la acción) | **Him/Her** = objeto (reciben la acción)
+Es importante distinguir cuando son sujetos o cuando reciben la acción (objeto).
 
-- I like she / Him called me ⛔
+- I like **she** / **Him** called me ⛔
 - I like **her** (Me gusta ella) ✅
 - **He** called me (Él me llamó) ✅
 - **She** is my friend (Ella es mi amiga) ✅
 </Aside>
 
 <Aside type="danger" title="Orden incorrecto con and I / and me">
-Sigue la regla de cortesía: tú al final.
+Es una regla de cortesía ponerse a sí mismo al final al mencionarse junto con otros.
 
-- I and John went / Me and Sarah like pizza ⛔
-- **John and I** went (John y yo fuimos) ✅
-- **Sarah and I** like pizza (A Sarah y a mí nos gusta la pizza) ✅
-
-Para objeto está bien: "She invited Sarah and me" ✅
+- **I** and John went / **Me** and Sarah like pizza ⛔
+- John and **I** went (John y yo fuimos) ✅
+- Sarah and **I** like pizza (A Sarah y a mí nos gusta la pizza) ✅
 </Aside>
 
 <Aside type="danger" title="No escribir I en mayúscula">
-El pronombre "I" **siempre** va en mayúscula, sin importar su posición:
+El pronombre yo siempre va en mayúscula obligatoriamente, sin importar su posición u otras reglas.
 
-- i am happy / My friend and i ⛔
+- **i** am happy / My friend and **i** ⛔
 - **I** am happy (Estoy feliz) ✅
 - My friend and **I** (Mi amigo y yo) ✅
 </Aside>
