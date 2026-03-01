@@ -5,84 +5,60 @@ description: Aprende cuándo y cómo usar los artículos en inglés.
 
 import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
 
-Los artículos en inglés son como **type annotations** en TypeScript: determinan si estás hablando de algo específico, algo general, o algo por primera vez. En inglés solo hay tres artículos (**a**, **an**, **the**), y dominar sus reglas de uso te permite comunicarte con precisión natural, ya que afectan directamente el significado de tus oraciones.
+Los artículos en inglés nos ayudan a determinar si estamos hablando de algo específico, algo general o algo por primera vez. En inglés solo hay tres artículos (**a**, **an**, **the**), y dominar sus reglas de uso te permite comunicarte con precisión natural, ya que afectan directamente el significado de tus oraciones.
 
 ---
 
 ## Artículos Indefinidos: A / An
 
-Usamos **a** o **an** para hablar de algo **no específico**, **por primera vez**, o **uno de muchos**. Es como declarar una variable nueva sin valor concreto todavía.
+Usamos **a** o **an** para hablar de algo **no específico**, **por primera vez** o **uno de muchos**.
 
 <Tabs>
   <TabItem label="A vs An">
 
-**Regla:** Usa **a** antes de consonantes y **an** antes de vocales (por sonido, no escritura):
+Usa **a** antes de palabras que empiecen con sonido de consonante y **an** antes de las que empiecen con sonido de vocal.
 
 ```javascript
-const indefiniteArticle = (word) => {
-  const vowelSounds = ['a', 'e', 'i', 'o', 'u'];
-  const firstSound = word[0].toLowerCase();
-  
-  // Se basa en el SONIDO, no la letra
-  return vowelSounds.includes(firstSound) ? "an" : "a";
-};
+let article = "a";
+
+if (sound === "vowel") article = "an";
+if (sound === "consonant") article = "a";
 ```
 
-**Con sonido consonante (a):**
+**Ejemplos:**
 - **a** book (un libro)
-- **a** car (un coche)
 - **a** house (una casa)
-- **a** university (una universidad) - suena "yuniversity"
-- **a** European (un europeo) - suena "yuropean"
-
-**Con sonido vocal (an):**
-- **an** apple (una manzana)
-- **an** elephant (un elefante)
 - **an** idea (una idea)
-- **an** orange (una naranja)
-- **an** hour (una hora) - la "h" es muda
+- **an** hour (una hora)
 
 <Aside type="tip" title="Regla basada en sonido, no en letra">
-La regla es por **sonido**, no por letra. "University" empieza con sonido "yu" (consonante), por eso es **a university**. "Hour" empieza con sonido vocal porque la "h" no se pronuncia, por eso es **an hour**.
+La regla es por **sonido**, no por la letra escrita. "University" empieza prestando atención al sonido "yu" (consonante), por eso es **a university**. "Hour" empieza con sonido vocal porque la "h" es muda, por eso es **an hour**.
 </Aside>
 
   </TabItem>
 
   <TabItem label="Cuándo Usar">
 
-Usa **a/an** en estos contextos:
+Usa **a/an** en estos contextos principalmente:
 
 ```javascript
-const useIndefiniteArticle = {
-  firstMention: "I saw a dog", 
-  // Vi un perro (primera vez que lo mencionas)
-  
-  oneOfMany: "She's a teacher",
-  // Ella es profesora (una de muchas profesoras)
-  
-  singular: "I need a pen",
-  // Necesito un bolígrafo (cualquier bolígrafo)
-  
-  profession: "He's an engineer",
-  // Él es ingeniero
-  
-  perUnit: "50 km an hour / $5 a kilo"
-  // 50 km por hora / $5 por kilo
-};
+const indefiniteUses = [
+  "I saw a dog",           // Primera mención
+  "She is a teacher",      // Profesiones
+  "I need a pen",          // Singular contable
+  "Once a week"            // Frecuencia o unidad
+];
 ```
 
-**Ejemplos prácticos:**
-- I want **a** coffee (Quiero un café - cualquiera)
-- She has **a** cat (Ella tiene un gato - mencionado por primera vez)
-- He's **a** doctor (Él es doctor - profesión)
-- It costs $10 **a** person (Cuesta $10 por persona)
+**Ejemplos:**
+- I want **a** coffee (Quiero un café)
+- She has **a** cat (Ella tiene un gato)
+- He is **a** doctor (Él es doctor)
+- It costs ten dollars **a** person (Cuesta diez dólares por persona)
 - **An** idea came to me (Se me ocurrió una idea)
 
 <Aside type="note" title="A/an solo con singulares contables">
-**NO uses a/an con plurales** o sustantivos incontables:
-
-- a books / an water ⛔
-- **a** book / **an** apple ✅
+**NO uses a/an con plurales** o sustantivos incontables. En lugar de decir "a books" usa solo "books", y en vez de "an water" debes decir "some water" o "water".
 </Aside>
 
   </TabItem>
@@ -92,65 +68,48 @@ const useIndefiniteArticle = {
 
 ## Artículo Definido: The
 
-**The** se usa para algo **específico** que tanto tú como tu interlocutor conocen. Es como referenciar una variable que ya fue definida anteriormente.
+**The** se usa para referirse a algo **específico** que tanto tú como tu interlocutor conocen, o algo que ya se ha mencionado.
 
 <Tabs>
   <TabItem label="Cuándo Usar">
 
-Usa **the** cuando hablas de algo específico:
+Usa **the** cuando hablas de cosas en particular:
 
 ```javascript
-const useDefiniteArticle = {
-  mentioned: "I saw a dog. The dog was black",
-  // Vi un perro. El perro era negro (ya mencionado)
-  
-  unique: "the sun, the moon, the Earth",
-  // el sol, la luna, la Tierra (único en su tipo)
-  
-  specific: "the book on the table",
-  // el libro en la mesa (uno específico)
-  
-  superlatives: "the best, the tallest",
-  // el mejor, el más alto
-  
-  context: "Close the door"
-  // Cierra la puerta (sabemos cuál puerta)
-};
+const definiteUses = [
+  "The dog was black",       // Ya mencionado
+  "The sun is hot",          // Único en su tipo
+  "The book on the table",   // Algo específico
+  "The tallest building"     // Superlativos
+];
 ```
 
-  **Ejemplos prácticos:**
-  - **The** car is red (El coche es rojo - uno específico que conocemos)
-  - I love **the** book you gave me (Amo el libro que me diste - específico)
-  - **The** Eiffel Tower is in Paris (La Torre Eiffel está en París - única)
-  - She's **the** best student (Ella es la mejor estudiante - superlativo)
-  - Open **the** window, please (Abre la ventana, por favor - contexto claro)
+  **Ejemplos:**
+  - **The** car is red (El coche es rojo)
+  - I love **the** book you gave me (Amo el libro que me diste)
+  - **The** Eiffel Tower is in Paris (La Torre Eiffel está en París)
+  - She is **the** best student (Ella es la mejor estudiante)
+  - Open **the** window, please (Abre la ventana, por favor)
 
   </TabItem>
 
   <TabItem label="Pronunciación">
 
-**The** tiene dos pronunciaciones según el sonido siguiente:
+**The** tiene dos maneras de pronunciarse dependiendo de la palabra que le siga.
 
 ```javascript
-const pronounceThe = (nextWord) => {
-  const startsWithVowel = /^[aeiou]/i.test(nextWord);
-  return startsWithVowel ? "/ðiː/" : "/ðə/";
-};
+let pronunciation = "ðə"; // suena como "da"
 
-// Antes de consonante: /ðə/ (como "da")
-console.log("the book");    // /ðə bʊk/
-console.log("the car");     // /ðə kɑːr/
-
-// Antes de vocal: /ðiː/ (como "di")
-console.log("the apple");   // /ðiː æpəl/
-console.log("the ocean");   // /ðiː oʊʃən/
+if (nextWord === "vowelSound") {
+  pronunciation = "ðiː";  // suena como "di"
+}
 ```
 
-  **Escucha la diferencia:**
-  - **the** sun /ðə sʌn/ - (el sol)
-  - **the** Earth /ðiː ɜːrθ/ - (la Tierra)
-  - **the** car /ðə kɑːr/ - (el coche)
-  - **the** hour /ðiː aʊər/ - (la hora)
+  **Ejemplos:**
+  - **the** sun /ðə/ (el sol)
+  - **the** car /ðə/ (el coche)
+  - **the** Earth /ðiː/ (la Tierra)
+  - **the** hour /ðiː/ (la hora)
 
   </TabItem>
 </Tabs>
@@ -159,67 +118,55 @@ console.log("the ocean");   // /ðiː oʊʃən/
 
 ## Cuándo NO Usar Artículo (Zero Article)
 
-En inglés, a veces **no** usas artículo. Esto se llama "zero article":
+En inglés, en ciertas ocasiones **no** usamos artículos cuando nos referimos a cosas en general o con ciertas categorías, esto se conoce como "zero article":
 
 <CardGrid>
   <Card title="Nombres Propios">
-Personas, ciudades, países (mayoría):
+  Para personas, ciudades, o la mayoría de los países:
 
-- **Mary** is from **Spain** (Mary es de España)
-- **London** is beautiful (Londres es hermoso)
-- **Mount Everest** is tall (El Monte Everest es alto)
-
-**Excepción:** the USA, the UK, the Netherlands
+  - **Mary** is from **Spain** (Mary es de España)
+  - **London** is beautiful (Londres es hermoso)
+  - **Mount Everest** is tall (El Monte Everest es alto)
   </Card>
 
   <Card title="Sustantivos Plurales Generales">
-Cuando hablas en general:
+  Cuando hablas en general de un grupo:
 
-- **Cats** are animals (Los gatos son animales - en general)
-- **Books** are expensive (Los libros son caros - en general)
-- **Students** study hard (Los estudiantes estudian duro)
-
-No "the cats" si hablas de todos los gatos en general.
+  - **Cats** are animals (Los gatos son animales)
+  - **Books** are expensive (Los libros son caros)
+  - **Students** study hard (Los estudiantes estudian mucho)
   </Card>
 
-  <Card title="Sustantivos Incontables Generales">
-Agua, dinero, información en general:
+  <Card title="Sustantivos Incontables">
+  Para elementos no contables en general:
 
-- **Water** is essential (El agua es esencial)
-- **Money** can't buy happiness (El dinero no compra felicidad)
-- **Information** is power (La información es poder)
-
-No "the water" si hablas de agua en general.
+  - **Water** is essential (El agua es esencial)
+  - **Money** can not buy happiness (El dinero no compra la felicidad)
+  - **Information** is power (La información es poder)
   </Card>
 
   <Card title="Comidas, Idiomas, Deportes">
-- I have **breakfast** at 8 (Desayuno a las 8)
-- She speaks **English** (Ella habla inglés)
-- They play **soccer** (Ellos juegan fútbol)
-- We eat **lunch** (Comemos almuerzo)
+  Actividades, comidas del día e idiomas:
 
-No "the breakfast", "the English", "the soccer".
+  - I have **breakfast** at eight (Desayuno a las ocho)
+  - She speaks **English** (Ella habla inglés)
+  - They play **soccer** (Ellos juegan fútbol)
   </Card>
 </CardGrid>
 
-**Comparación importante:**
+Podemos entender la diferencia cuando hablamos en general versus cuando somos específicos:
 
 ```javascript
-const articleComparison = {
-  general: {
-    noArticle: "Cats are cute",
-    // Los gatos son lindos (todos los gatos)
-  },
-  specific: {
-    the: "The cats in my house are cute"
-    // Los gatos en mi casa son lindos (específicos)
-  }
-};
+// Categoría general vs específica
+const general = "Cats are cute";               // Los gatos son lindos
+const specific = "The cats here are cute";     // Los gatos aquí son lindos
 ```
 
-**Más ejemplos:**
-- I love **music** (Amo la música - en general) vs. I love **the** music in this film (Amo la música de esta película - específica)
-- **Life** is beautiful (La vida es hermosa - concepto general) vs. **The** life of a student is hard (La vida de un estudiante es dura - específica)
+**Ejemplos:**
+- I love **music** (Amo la música)
+- I love **the** music in this film (Amo la música de esta película)
+- **Life** is beautiful (La vida es hermosa)
+- **The** life of a student is hard (La vida de un estudiante es dura)
 
 ---
 
@@ -228,53 +175,34 @@ const articleComparison = {
 <Tabs>
   <TabItem label="Con Países">
 
-La mayoría de países NO llevan artículo, pero algunos sí:
+La mayoría de los países no llevan artículo, pero existen algunas excepciones donde usar el artículo definido es obligatorio. Usa "the" si el nombre incluye palabras como "United", "Kingdom", "Republic" o si es plural.
 
 ```javascript
-const countries = {
-  noArticle: [
-    "Spain", "France", "Japan", "Mexico",
-    "Brazil", "China", "Italy", "Canada"
-  ],
-  withThe: [
-    "the USA", "the UK", 
-    "the Netherlands",
-    "the Philippines",
-    "the United Arab Emirates"
-  ]
+const countryArticles = {
+  standard: ["Spain", "France", "Japan"],         // Sin artículo
+  composed: ["the UK", "the USA", "the UAE"],     // Con "the"
+  plural: ["the Netherlands", "the Philippines"]  // Con "the"
 };
 ```
 
-**Regla general:** Usa "the" si el nombre incluye "United", "Kingdom", "Republic" o es plural.
-
   **Ejemplos:**
-  - I'm from **Spain** (Soy de España)
-  - She lives in **the** USA (Ella vive en los EE.UU.)
+  - I am from **Spain** (Soy de España)
+  - She lives in **the USA** (Ella vive en los EE.UU.)
   - They visited **Japan** (Visitaron Japón)
-  - He works in **the** UK (Él trabaja en el Reino Unido)
+  - He works in **the UK** (Él trabaja en el Reino Unido)
 
   </TabItem>
 
   <TabItem label="Con Lugares">
 
+Con ubicaciones geográficas o destinos, el artículo varía dependiendo del tipo de lugar.
+
 ```javascript
-const places = {
-  noArticle: {
-    streets: "Main Street, Oxford Road",
-    parks: "Central Park",
-    lakes: "Lake Michigan",
-    mountains: "Mount Everest"
-  },
-  withThe: {
-    oceans: "the Pacific Ocean",
-    seas: "the Mediterranean Sea",
-    rivers: "the Amazon River",
-    deserts: "the Sahara Desert",
-    hotels: "the Hilton Hotel",
-    museums: "the Louvre Museum",
-    theaters: "the Apollo Theater"
-  }
-};
+// Lugares que no utilizan "the"
+const noArticlePlaces = ["Central Park", "Lake Michigan", "Everest"];
+
+// Lugares que siempre utilizan "the"
+const thePlaces = ["the Amazon River", "the Sahara Desert"];
 ```
 
   **Ejemplos:**
@@ -287,115 +215,74 @@ const places = {
 
   <TabItem label="Con Instituciones">
 
+Al referirte a instituciones como hospitales, escuelas y prisiones, su propósito o ubicación pueden marcar la diferencia.
+
 ```javascript
-const institutions = {
-  specific: {
-    building: "I'm at the hospital",
-    // Estoy en el hospital (edificio específico)
-    
-    place: "She's at the school"
-    // Está en la escuela (lugar físico)
-  },
-  
-  purpose: {
-    activity: "I'm in hospital",
-    // Estoy hospitalizado (como paciente - UK)
-    // En US: "I'm in the hospital"
-    
-    studying: "She's at school"
-    // Está en la escuela (estudiando)
-  }
-};
+const locations = [
+  "She is in hospital",      // Paciente ingresado (general)
+  "I am at the hospital"     // Referencia al edificio (específico)
+];
 ```
 
-  **Diferencia importante (principalmente UK English):**
-  - at **school** = estudiando (en general)
-  - at **the** school = en el edificio específico
-  - in **prison** = encarcelado
-  - at **the** prison = visitando el edificio
+  **Ejemplos:**
+  - The children are at **school** (Los niños están estudiando)
+  - The parents went to **the** school (Los padres fueron al edificio de la escuela)
+  - He is in **prison** (Él está encarcelado)
+  - She visited him at **the** prison (Ella lo visitó en el edificio)
 
   </TabItem>
 </Tabs>
 
 ---
 
-## Comparación: A/An vs The vs Ø (sin artículo)
+## Comparación General
 
 ```javascript
-const articleChoice = {
-  indefinite: {
-    article: "a/an",
-    use: "Primera mención, no específico, singular contable",
-    example: "I saw a dog"
-    // Vi un perro (primera vez, cualquier perro)
-  },
-  
-  definite: {
-    article: "the",
-    use: "Específico, ya mencionado, único",
-    example: "The dog was cute"
-    // El perro era lindo (el que mencioné antes)
-  },
-  
-  zero: {
-    article: "Ø (nothing)",
-    use: "General, plural, incontable, nombres propios",
-    example: "Dogs are animals"
-    // Los perros son animales (en general)
-  }
-};
+let currentFocus = "cat";
+
+const choices = [
+  "I saw a cat",           // Primera mención: a/an
+  "The cat was black",     // Ya mencionado: the
+  "Cats are animals"       // Generalización: sin artículo
+];
 ```
 
-**Historia completa usando los tres:**
-
-1. I saw **a** cat in the park (Vi un gato en el parque - primera mención)
-2. **The** cat was black (El gato era negro - ya mencionado, específico)
-3. **Cats** are my favorite animals (Los gatos son mis animales favoritos - en general, plural)
-4. I love **the** cats in my neighborhood (Amo los gatos de mi vecindario - específicos)
+**Ejemplos:**
+- I saw **a** cat in the park (Vi un gato en el parque)
+- **The** cat was black (El gato era negro)
+- **Cats** are my favorite animals (Los gatos son mis animales favoritos)
+- I love **the** cats in my neighborhood (Amo los gatos de mi vecindario)
 
 ---
 
-## Errores Comunes
+## Errores comunes
 
 <Aside type="danger" title="Usar the con sustantivos generales">
-Cuando hablas en general, NO uses "the" con plurales o incontables:
+Cuando hablas de forma general sobre plurales o elementos no contables, no debes utilizar el artículo definido.
 
-- The cats are animals / The water is important / The life is beautiful ⛔
-- **Cats** are animals (Los gatos son animales - en general) ✅
-- **Water** is important (El agua es importante - en general) ✅
-- **Life** is beautiful (La vida es hermosa - concepto general) ✅
-
-Usa "the" solo si es específico: "**The** water in this bottle" (El agua en esta botella) ✅
+- The cats are animals ⛔
+- **Cats** are animals (Los gatos son animales) ✅
 </Aside>
 
 <Aside type="danger" title="Confundir a y an por letra en vez de sonido">
-La regla es por **sonido**, no por letra escrita:
+La regla de uso para los artículos indefinidos se basa siempre en el sonido inicial, independientemente de cómo se escriba la palabra.
 
-- a apple / an book / a hour / an university ⛔
-- **an** apple (sonido vocal) ✅
-- **a** book (sonido consonante) ✅
-- **an** hour (la "h" es muda, sonido vocal) ✅
-- **a** university (suena "yuniversity" - consonante) ✅
+- a apple ⛔
+- **an** apple (una manzana) ✅
 </Aside>
 
 <Aside type="danger" title="Olvidar the con instrumentos musicales">
-Cuando hablas de tocar un instrumento, SIEMPRE usa "the":
+Cuando la oración menciona que alguien toca un instrumento musical, se requiere referenciar el objeto utilizando el artículo definido obligatoriamente.
 
-- I play guitar / She plays piano / He plays violin ⛔
+- I play guitar ⛔
 - I play **the** guitar (Toco la guitarra) ✅
-- She plays **the** piano (Ella toca el piano) ✅
-- He plays **the** violin (Él toca el violín) ✅
 </Aside>
 
 <Aside type="danger" title="Usar artículo con idiomas y comidas">
-Idiomas y comidas generalmente NO llevan artículo:
+Los idiomas de los distintos países y los nombres de las comidas durante el día no llevan ningún artículo.
 
-- I speak the English / I have the breakfast at 8 / She studies the Spanish ⛔
+- I speak the English ⛔
 - I speak **English** (Hablo inglés) ✅
-- I have **breakfast** at 8 (Desayuno a las 8) ✅
-- She studies **Spanish** (Ella estudia español) ✅
-
-Excepción: Si es específico: "I love **the** English you speak" (Amo el inglés que hablas) ✅
 </Aside>
 
 ---
