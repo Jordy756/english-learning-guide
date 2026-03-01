@@ -111,12 +111,12 @@ El pronombre **it** tiene usos especiales en inglés:
 
 ```javascript
 const itUses = [
-  "The book is new. It is expensive",   // Cosas
-  "The cat is hungry. Feed it",         // Animales
-  "It is raining / It is cold",         // Clima
-  "It is 3 PM / It is late",            // Hora
-  "It is 5 km to the city",             // Distancia
-  "It is difficult / It is important"   // Situaciones
+  "The book is new. It is expensive",   // Cosas: El libro es nuevo. Es caro
+  "The cat is hungry. Feed it",         // Animales: El gato tiene hambre. Dale de comer
+  "It is raining / It is cold",         // Clima: Está lloviendo / Hace frío
+  "It is 3 PM / It is late",            // Hora: Son las 3 PM / Es tarde
+  "It is 5 km to the city",             // Distancia: Está a 5 km de la ciudad
+  "It is difficult / It is important"   // Situaciones: Es difícil / Es importante
 ];
 ```
 
@@ -161,34 +161,28 @@ if (target === "group")      meaning = "Ustedes/Vosotros son mis amigos";
 <Tabs>
   <TabItem label="Después de Preposiciones">
 
-Después de preposiciones, **siempre** usa pronombres de objeto:
+Las preposiciones (palabras como for, with, to, about, between) **siempre** van seguidas de pronombres de objeto, nunca de sujeto.
 
 ```javascript
-const withPrepositions = [
-  "This is for me",        // Esto es para mí
-  "Come with us",          // Ven con nosotros
-  "She gave it to them",   // Ella se lo dio a ellos
-  "We're talking about him", // Estamos hablando de él
-  "Between you and me"     // Entre tú y yo
+const commonPrepositions = [
+  "for",     // para/por
+  "with",    // con
+  "to",      // a/hacia
+  "about",   // sobre/acerca de
+  "between"  // entre
 ];
 ```
 
 **Ejemplos:**
 - This gift is for **you** (Este regalo es para ti)
-- She's talking to **me** (Ella está hablando conmigo)
+- She is talking to **me** (Ella está hablando conmigo)
 - Come with **us** (Ven con nosotros)
-- I'm thinking about **him** (Estoy pensando en él)
+- I am thinking about **him** (Estoy pensando en él)
 - Sit next to **her** (Siéntate junto a ella)
-
-<Aside type="caution" title="Error común con between you and I">
-Después de preposiciones siempre va el pronombre de objeto:
-
-- Between you and I ⛔
-- **Between you and me** (Entre tú y yo) ✅
-</Aside>
+- The secret is between **you and me** (El secreto es entre tú y yo)
 
 <Aside type="note" title="Excepción con by para expresar solo/sola">
-Los pronombres reflexivos se usan con "by" para indicar "solo/a":
+Los pronombres reflexivos se usan con "by" para indicar hacer algo sin ayuda o en soledad:
 
 - I did it **by myself** (Lo hice yo solo)
 - She lives **by herself** (Ella vive sola)
@@ -199,31 +193,26 @@ Los pronombres reflexivos se usan con "by" para indicar "solo/a":
 
   <TabItem label="Construcciones con And">
 
-Cuando hay dos sujetos u objetos conectados con "and":
+Cuando unes varios sujetos u objetos usando "and", aplica la misma regla. Usa pronombres de sujeto si realizan la acción o de objeto si la reciben. Para decidir, imagina la oración sin la otra persona ("Sarah and I went" funciona porque "I went" es correcto).
 
 ```javascript
-const connectWithAnd = {
-  subjects:   "Sarah and I are friends",         // Sarah y yo
-  objects:    "She invited John and me",         // A John y a mí
-  reflexives: "He and I did it ourselves"        // Él y yo mismos
+const multiplePeople = {
+  subjects: "Sarah and I",      // Actúan
+  objects: "Sarah and me",      // Reciben
+  reflexives: "ourselves"       // Reflejan a plural
 };
 ```
 
+**Ejemplos:**
+- **Sarah and I** went to the store (Sarah y yo fuimos a la tienda)
+- The teacher called **John and me** (El profesor nos llamó a John y a mí)
+- **He and I** did it **ourselves** (Él y yo lo hicimos nosotros mismos)
+- **You and Sarah** can defend **yourselves** (Tú y Sarah pueden defenderse ustedes mismos)
+- **Mary and Tom** bought it for **themselves** (Mary y Tom lo compraron para ellos mismos)
+
 <Aside type="tip" title="Regla de cortesía al mencionarte con otros">
-Cuando te menciones a ti mismo con otros, ponte al **final**: "Sarah and I" (no "I and Sarah"), "John and me" (no "me and John").
+Como norma de educación, cuando te incluyes con otras personas siempre debes mencionarte al **final**: "Sarah and I" o "John and me".
 </Aside>
-
-  **Truco para saber si es sujeto u objeto:**
-  - Remove la otra persona y ve si suena correcto:
-    - "Sarah and **I** went" → "**I** went" ✓ (correcto)
-    - "She saw Sarah and **me**" → "She saw **me**" ✓ (correcto)
-    - ~~"Sarah and me went"~~ → ~~"Me went"~~ ✗ (incorrecto)
-
-  **Con reflexivos:**
-  - Usa el reflexivo plural cuando hay múltiples personas:
-    - John and I = **ourselves** (nosotros mismos)
-    - You and Sarah = **yourselves** (ustedes mismos/mismas)
-    - Mary and Tom = **themselves** (ellos mismos)
 
   </TabItem>
 </Tabs>
