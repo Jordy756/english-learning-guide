@@ -228,13 +228,16 @@ const commonFractions = {
 El denominador usa el **ordinal** de ese número. Si el numerador es mayor que 1, el ordinal lleva **"s"** al final:
 
 ```javascript
-const fractionPattern = {
-  "1/3":  "one third",       // un tercio — singular
-  "2/3":  "two thirds",      // dos tercios — plural
-  "1/8":  "one eighth",      // un octavo — singular
-  "3/8":  "three eighths",   // tres octavos — plural
-  "5/6":  "five sixths"      // cinco sextos — plural
+const makeFraction = (numerator, denominator) => {
+  const ordinal = makeOrdinal(denominator);
+  const plural = numerator > 1 ? ordinal + "s" : ordinal;
+  return `${numerator} ${plural}`;
 };
+
+// Ejemplos
+console.log(makeFraction(1, "eighth")); // "1 eighth"
+console.log(makeFraction(3, "eighth")); // "3 eighths"
+console.log(makeFraction(5, "sixth"));  // "5 sixths"
 ```
 
   **Ejemplos:**

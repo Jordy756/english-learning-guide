@@ -56,6 +56,22 @@ Before generating any content, read and follow these template files exactly:
 - Identifiers must be in English
 - Allowed directly in document flow or inside `<TabItem>` — never inside `<Card>`
 
+**Choosing the right JS structure:**
+
+Analyze what the grammar concept is showing and pick the JS construct that represents it most clearly. Do not default to objects for everything — use whatever makes the pattern most readable. Vary the structure across blocks within the same page.
+
+| Grammar concept | Suggested JS structure |
+|---|---|
+| Conjugation table / forms | `object` with descriptive keys |
+| Word order / sequences | `array` of strings |
+| Transformation rules | `function` (input → output) |
+| Conditional use / context | `if / else` or ternary |
+| Sentence templates | template literal or string concat |
+| Categories / classification | `object` with grouped arrays |
+| Step-by-step formation | chained expressions or multi-line |
+
+Never use the same structure in every block of a page. If a block would look identical to another, reconsider whether it adds value.
+
 ### `<Tabs>` / `<TabItem>`
 
 - Use to group related variations: affirmative/negative/interrogative, tenses, formality levels
@@ -82,7 +98,7 @@ Import only components that appear in the file.
 
 ### 3. Introduction
 
-One paragraph maximum. Explain the topic and its relevance in plain language. No programming references.
+One paragraph, minimum 3 lines and maximum 4 lines. Explain what the topic is, when it is used, and why it matters for the learner. Plain language only — no programming references.
 
 ### 4. Main Content
 
@@ -128,7 +144,7 @@ Run this before delivering any generated or modified file.
 
 - [ ] Frontmatter matches [`templates/frontmatter.md`](templates/frontmatter.md)
 - [ ] Only used components are imported
-- [ ] Single introduction paragraph
+- [ ] Introduction is one paragraph between 3 and 4 lines
 - [ ] Sections follow the required order
 - [ ] "Errores comunes" matches [`templates/common-errors.md`](templates/common-errors.md)
 - [ ] "Práctica" matches [`templates/practice.md`](templates/practice.md) and is last
