@@ -25,13 +25,13 @@ const weekDays = [
 ];
 ```
 
-**Ejemplos en contexto:**
+**Ejemplos:**
 
-- I work from Monday to Friday (Trabajo de lunes a viernes)
-- The meeting is on Wednesday (La reunión es el miércoles)
-- We don't work on Sundays (No trabajamos los domingos)
-- See you next Tuesday! (¡Nos vemos el próximo martes!)
-- My birthday is on a Saturday this year (Mi cumpleaños cae en sábado este año)
+- I work from **Monday** to **Friday** (Trabajo de lunes a viernes)
+- The meeting is on **Wednesday** (La reunión es el miércoles)
+- We don't work on **Sundays** (No trabajamos los domingos)
+- See you next **Tuesday**! (¡Nos vemos el próximo martes!)
+- My birthday is on a **Saturday** this year (Mi cumpleaños cae en sábado este año)
 
 <Aside type="tip" title="Preposición on para días específicos">
 Usa **on** antes del día: "on Monday", "on Saturday". Para rangos usa **from... to**: "from Monday to Friday".
@@ -44,19 +44,19 @@ Usa **on** antes del día: "on Monday", "on Saturday". Para rangos usa **from...
 Los meses también se escriben **siempre con mayúscula inicial** en inglés.
 
 ```javascript
-const q1 = ["January",  "February", "March"];
-const q2 = ["April",    "May",      "June"];
-const q3 = ["July",     "August",   "September"];
-const q4 = ["October",  "November", "December"];
+const q1 = ["January",  "February", "March"];     // Enero, Febrero, Marzo
+const q2 = ["April",    "May",      "June"];      // Abril, Mayo, Junio
+const q3 = ["July",     "August",   "September"]; // Julio, Agosto, Septiembre
+const q4 = ["October",  "November", "December"];  // Octubre, Noviembre, Diciembre
 ```
 
-**Ejemplos en contexto:**
+**Ejemplos:**
 
-- My birthday is in July (Mi cumpleaños es en julio)
-- We're traveling in December (Viajaremos en diciembre)
-- Spring starts in March (La primavera empieza en marzo)
-- I started working here in January (Empecé a trabajar aquí en enero)
-- The conference is in October (La conferencia es en octubre)
+- My birthday is in **July** (Mi cumpleaños es en julio)
+- We're traveling in **December** (Viajaremos en diciembre)
+- Spring starts in **March** (La primavera empieza en marzo)
+- I started working here in **January** (Empecé a trabajar aquí en enero)
+- The conference is in **October** (La conferencia es en octubre)
 
 <Aside type="tip" title="Preposición in para meses y años">
 Usa **in** antes del mes: "in January", "in December". También se usa **in** para años: "in 2024".
@@ -72,8 +72,8 @@ Las fechas en inglés tienen formatos diferentes según el contexto (británico 
   <TabItem label="Formato Británico">
     ```javascript
     const number = "15/03/2024";
-    const formal = `${day}th ${month} ${year}`; // 15th March 2024
-    const spoken = `the ${day}th of ${month}`;  // the fifteenth of March
+    const formal = `${day}th ${month} ${year}`; // 15th March 2024 (15 de marzo de 2024)
+    const spoken = `the ${day}th of ${month}`;  // the fifteenth of March (el 15 de marzo)
     ```
     
     El formato británico sigue el orden: **día → mes → año**
@@ -82,8 +82,8 @@ Las fechas en inglés tienen formatos diferentes según el contexto (británico 
   <TabItem label="Formato Americano">
     ```javascript
     const number = "03/15/2024";
-    const formal = `${month} ${day}th, ${year}`; // March 15th, 2024
-    const spoken = `${month} ${day}th`;          // March fifteenth
+    const formal = `${month} ${day}th, ${year}`; // March 15th, 2024 (15 de marzo de 2024)
+    const spoken = `${month} ${day}th`;          // March fifteenth (15 de marzo)
     ```
     
     El formato americano sigue el orden: **mes → día → año**
@@ -92,9 +92,9 @@ Las fechas en inglés tienen formatos diferentes según el contexto (británico 
   <TabItem label="Números Ordinales">
     ```javascript
     const ordinals = {
-      irregular: ["1st", "2nd", "3rd"], // first, second, third
-      regular:   ["4th", "5th", "6th"], // fourth, fifth, sixth
-      compound:  ["21st", "32nd"]       // twenty-first, thirty-second
+      irregular: ["1st", "2nd", "3rd"], // primero, segundo, tercero
+      regular:   ["4th", "5th", "6th"], // cuarto, quinto, sexto
+      compound:  ["21st", "32nd"]       // vigésimo primero, trigésimo segundo
     };
     ```
     
@@ -102,66 +102,76 @@ Las fechas en inglés tienen formatos diferentes según el contexto (británico 
   </TabItem>
 </Tabs>
 
-**Ejemplos completos:**
+**Ejemplos:**
 
-- Today is Monday, January 15th (Hoy es lunes 15 de enero)
-- The deadline is March 31st (La fecha límite es el 31 de marzo)
-- I was born on June 5th, 1990 (Nací el 5 de junio de 1990)
-- The event is on Friday, December 20th (El evento es el viernes 20 de diciembre)
-- We're meeting on the 10th of May (Nos reunimos el 10 de mayo)
-
----
-
-## Preguntar y responder fechas
-
-<CardGrid>
-  <Card title="¿Qué día es hoy?">
-    **What day is it today?**
-    
-    → It's Monday (Es lunes)
-    
-    → Today is Wednesday (Hoy es miércoles)
-  </Card>
-  
-  <Card title="¿Qué fecha es?">
-    **What's the date today?**
-    
-    → It's March 15th (Es 15 de marzo)
-    
-    → Today is the 20th (Hoy es el día 20)
-  </Card>
-  
-  <Card title="¿Cuándo es...?">
-    **When is your birthday?**
-    
-    → My birthday is in July (Mi cumpleaños es en julio)
-    
-    → It's on July 25th (Es el 25 de julio)
-  </Card>
-</CardGrid>
-
-**Más ejemplos de conversación:**
-
-- When is the meeting? - It's on Thursday (¿Cuándo es la reunión? - Es el jueves)
-- What month is your anniversary? - It's in June (¿En qué mes es tu aniversario? - Es en junio)
-- When do classes start? - They start in September (¿Cuándo empiezan las clases? - Empiezan en septiembre)
+- Today is Monday, **January 15th** (Hoy es lunes 15 de enero)
+- The deadline is **March 31st** (La fecha límite es el 31 de marzo)
+- I was born on **June 5th**, 1990 (Nací el 5 de junio de 1990)
+- The event is on Friday, **December 20th** (El evento es el viernes 20 de diciembre)
+- We're meeting on the **10th of May** (Nos reunimos el 10 de mayo)
+- It's the **first** of April (Es el primero de abril)
 
 ---
 
 ## Expresiones útiles con tiempo
 
-```javascript
-const relative = ["today", "tomorrow", "yesterday", "next month"];
-const frequency = ["every Monday", "on weekends", "once a month"];
-```
+<Tabs>
+  <TabItem label="Relativas">
+    Expresiones de tiempo relativas al día de hoy.
 
-**Ejemplos prácticos:**
+    ```javascript
+    const relativeTime = [
+      "yesterday", "today", "tomorrow",     // ayer, hoy, mañana
+      "last week", "this week", "next week", // la semana pasada, esta, la próxima
+      "last year", "next month"             // el año pasado, el próximo mes
+    ];
+    ```
 
-- I have a meeting tomorrow morning (Tengo una reunión mañana por la mañana)
-- We visited them last December (Los visitamos el diciembre pasado)
-- I go to the gym every Tuesday and Thursday (Voy al gimnasio cada martes y jueves)
-- The report is due next Friday (El reporte vence el próximo viernes)
-- We travel once a year in August (Viajamos una vez al año en agosto)
+    **Ejemplos:**
+
+    - She was here **yesterday** (Ella estuvo aquí ayer)
+    - I have a meeting **tomorrow** (Tengo una reunión mañana)
+    - We will start the project **next week** (Empezaremos el proyecto la próxima semana)
+  </TabItem>
+
+  <TabItem label="Frecuencia">
+    Para hablar de qué tan seguido ocurre una acción.
+
+    ```javascript
+    const frequencyTime = [
+      "every day", "every Monday",  // todos los días, todos los lunes
+      "on weekends",                // los fines de semana
+      "once a month",               // una vez al mes
+      "twice a year"                // dos veces al año
+    ];
+    ```
+
+    **Ejemplos:**
+
+    - I drink coffee **every day** (Bebo café todos los días)
+    - We play tennis **on weekends** (Jugamos al tenis los fines de semana)
+    - She travels to Europe **twice a year** (Ella viaja a Europa dos veces al año)
+  </TabItem>
+
+  <TabItem label="Partes del día">
+    Para especificar el momento del día. Nota que "night" usa "at" y no "in the".
+
+    ```javascript
+    const partsOfDay = [
+      "in the morning",   // por la mañana
+      "in the afternoon", // por la tarde / de tarde
+      "in the evening",   // por la tarde / al anochecer
+      "at night"          // por la noche
+    ];
+    ```
+
+    **Ejemplos:**
+
+    - He exercises **in the morning** (Él hace ejercicio por la mañana)
+    - They arrived **in the afternoon** (Ellos llegaron por la tarde)
+    - I read a book **at night** (Leo un libro por la noche)
+  </TabItem>
+</Tabs>
 
 ---
 
