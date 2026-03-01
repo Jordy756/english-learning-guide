@@ -5,7 +5,7 @@ description: Aprende a expresar días de la semana, meses del año y fechas en i
 
 import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
 
-Dominar días, meses y fechas es fundamental para la comunicación diaria en inglés: programar reuniones, hacer reservas, hablar sobre eventos o simplemente mencionar tu cumpleaños. A diferencia del español, los días y meses **siempre se escriben con mayúscula inicial**, y existen convenciones diferentes según el contexto británico o americano, similar a cómo en JavaScript podemos tener diferentes formatos para representar la misma información.
+Dominar días, meses y fechas es fundamental para la comunicación diaria en inglés: programar reuniones, hacer reservas, hablar sobre eventos o simplemente mencionar tu cumpleaños. A diferencia del español, los días y meses **siempre se escriben con mayúscula inicial**, y existen convenciones diferentes para expresar fechas según se trate de inglés británico o americano.
 
 ---
 
@@ -44,20 +44,10 @@ Usa **on** antes del día: "on Monday", "on Saturday". Para rangos usa **from...
 Los meses también se escriben **siempre con mayúscula inicial** en inglés.
 
 ```javascript
-const months = [
-  "January",   // Enero
-  "February",  // Febrero
-  "March",     // Marzo
-  "April",     // Abril
-  "May",       // Mayo
-  "June",      // Junio
-  "July",      // Julio
-  "August",    // Agosto
-  "September", // Septiembre
-  "October",   // Octubre
-  "November",  // Noviembre
-  "December"   // Diciembre
-];
+const q1 = ["January",  "February", "March"];
+const q2 = ["April",    "May",      "June"];
+const q3 = ["July",     "August",   "September"];
+const q4 = ["October",  "November", "December"];
 ```
 
 **Ejemplos en contexto:**
@@ -81,12 +71,9 @@ Las fechas en inglés tienen formatos diferentes según el contexto (británico 
 <Tabs>
   <TabItem label="Formato Británico">
     ```javascript
-    // Orden: día + mes + año
-    const britishDate = {
-      written: "15th March 2024",
-      numeric: "15/03/2024",
-      spoken: "the fifteenth of March"
-    };
+    const number = "15/03/2024";
+    const formal = `${day}th ${month} ${year}`; // 15th March 2024
+    const spoken = `the ${day}th of ${month}`;  // the fifteenth of March
     ```
     
     El formato británico sigue el orden: **día → mes → año**
@@ -94,12 +81,9 @@ Las fechas en inglés tienen formatos diferentes según el contexto (británico 
   
   <TabItem label="Formato Americano">
     ```javascript
-    // Orden: mes + día + año
-    const americanDate = {
-      written: "March 15th, 2024",
-      numeric: "03/15/2024",
-      spoken: "March fifteenth"
-    };
+    const number = "03/15/2024";
+    const formal = `${month} ${day}th, ${year}`; // March 15th, 2024
+    const spoken = `${month} ${day}th`;          // March fifteenth
     ```
     
     El formato americano sigue el orden: **mes → día → año**
@@ -108,14 +92,9 @@ Las fechas en inglés tienen formatos diferentes según el contexto (británico 
   <TabItem label="Números Ordinales">
     ```javascript
     const ordinals = {
-      1: "1st (first)",
-      2: "2nd (second)",
-      3: "3rd (third)",
-      4: "4th (fourth)",
-      5: "5th (fifth)",
-      21: "21st (twenty-first)",
-      22: "22nd (twenty-second)",
-      31: "31st (thirty-first)"
+      irregular: ["1st", "2nd", "3rd"], // first, second, third
+      regular:   ["4th", "5th", "6th"], // fourth, fifth, sixth
+      compound:  ["21st", "32nd"]       // twenty-first, thirty-second
     };
     ```
     
@@ -172,23 +151,8 @@ Las fechas en inglés tienen formatos diferentes según el contexto (británico 
 ## Expresiones útiles con tiempo
 
 ```javascript
-const timeExpressions = {
-  relative: [
-    "today",      // hoy
-    "tomorrow",   // mañana
-    "yesterday",  // ayer
-    "this week",  // esta semana
-    "next month", // el próximo mes
-    "last year"   // el año pasado
-  ],
-  
-  frequency: [
-    "every Monday",    // cada lunes
-    "on weekends",     // los fines de semana
-    "once a month",    // una vez al mes
-    "twice a week"     // dos veces por semana
-  ]
-};
+const relative = ["today", "tomorrow", "yesterday", "next month"];
+const frequency = ["every Monday", "on weekends", "once a month"];
 ```
 
 **Ejemplos prácticos:**
@@ -201,37 +165,36 @@ const timeExpressions = {
 
 ---
 
-## Errores Comunes
+## Errores comunes
 
 <Aside type="danger" title="No usar mayúsculas en días y meses">
-- I'll see you on monday in july. ⛔
-- I'll see you on **Monday** in **July**. (Te veré el lunes en julio) ✅
+Los días de la semana y meses siempre se escriben con mayúscula inicial en inglés, a diferencia del español.
 
-Los días de la semana y meses siempre se escriben con mayúscula inicial en inglés.
+- I'll see you on **monday** in **july** ⛔
+- I'll see you on **Monday** in **July** (Te veré el lunes en julio) ✅
 </Aside>
 
 <Aside type="danger" title="Confundir preposiciones de tiempo">
-- My birthday is **at** May. ⛔
-- The meeting is **in** Monday. ⛔
-- My birthday is **in** May. (Mi cumpleaños es en mayo) ✅
-- The meeting is **on** Monday. (La reunión es el lunes) ✅
+Usa `in` para meses y años enteros, pero usa `on` para días específicos (fechas exactas o días de la semana).
 
-Usa **in** para meses y años, **on** para días específicos.
+- My birthday is **at** May ⛔
+- The meeting is **in** Monday ⛔
+- My birthday is **in** May (Mi cumpleaños es en mayo) ✅
+- The meeting is **on** Monday (La reunión es el lunes) ✅
 </Aside>
 
 <Aside type="danger" title="Confusión con formato numérico de fechas">
-- Al leer 03/05/2024: británicos leen "3 de mayo", americanos leen "5 de marzo" ⛔
-- Escribir **March 5, 2024** o **5th March 2024** para evitar ambigüedad ✅
+El formato numérico puede causar confusión entre contextos británico (día/mes) y americano (mes/día).
 
-El formato numérico puede causar confusión entre contextos británico y americano.
+- The event is on **03/05/2024** (ambiguo: ¿3 de mayo o 5 de marzo?) ⛔
+- The event is on **March 5, 2024** (El evento es el 5 de marzo de 2024 - claro) ✅
 </Aside>
 
 <Aside type="danger" title="Olvidar números ordinales al hablar de fechas">
-- Today is October twenty-five. ⛔
-- Today is October **twenty-fifth**. (Hoy es veinticinco de octubre) ✅
-- Today is the **25th** of October. ✅
+Los días del mes siempre se expresan con números ordinales al hablar (first, second, third...), no con cardinales (one, two, three...).
 
-Los días del mes siempre se expresan con números ordinales al hablar.
+- Today is October **twenty-five** ⛔
+- Today is October **twenty-fifth** (Hoy es veinticinco de octubre) ✅
 </Aside>
 
 ---
