@@ -41,7 +41,7 @@ Before generating any content, read and follow these template files exactly:
 ### `<Aside>`
 
 - Always include a descriptive `title` — never a generic label like "Nota" alone
-- Allowed types: `note`, `tip`, `warning`, `danger`
+- Allowed types: `note`, `tip`, `caution`, `danger`
 
 ### `<Card>` / `<CardGrid>`
 
