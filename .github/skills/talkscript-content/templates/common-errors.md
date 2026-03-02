@@ -7,7 +7,7 @@ Inside each Aside: a brief explanation of why the error happens, followed by the
 ## Exact Format
 
 ```mdx
-## Errores comunes
+## Errores Comunes
 
 <Aside type="danger" title="[Specific description of the mistake]">
 [Brief explanation in Spanish of why this error occurs.]
@@ -28,7 +28,7 @@ Inside each Aside: a brief explanation of why the error happens, followed by the
 ## Real Example
 
 ```mdx
-## Errores comunes
+## Errores Comunes
 
 <Aside type="danger" title="Usar 'I not' en lugar de 'I don't'">
 En inglés no se puede negar un verbo simplemente agregando "not" después del sujeto. Se necesita el auxiliar "do".
