@@ -5,7 +5,7 @@ description: Expresa posesión y pertenencia.
 
 import { Tabs, TabItem, Aside, CardGrid, Card } from '@astrojs/starlight/components';
 
-Los **posesivos** (possessives) indican que algo pertenece a alguien. Son como las **propiedades de un objeto** en programación: muestran la relación de pertenencia entre una persona y una cosa. En inglés hay tres formas principales de expresar posesión: **adjetivos posesivos** (my, your, his...), **pronombres posesivos** (mine, yours, his...) y el **posesivo 's** (John's book).
+Los **posesivos** (possessives) indican que algo pertenece a alguien. Muestran la relación de pertenencia entre una persona y una cosa. En inglés hay tres formas principales de expresar esta posesión: usando **adjetivos posesivos** (my, your, his...), mediante **pronombres posesivos** (mine, yours, his...) y usando el **posesivo 's** (John's book).
 
 ---
 
@@ -14,7 +14,7 @@ Los **posesivos** (possessives) indican que algo pertenece a alguien. Son como l
 <Tabs>
 <TabItem label="Adjetivos Posesivos">
 
-Los **adjetivos posesivos** van **antes del sustantivo** y muestran a quién pertenece algo.
+Los **adjetivos posesivos** van **antes del sustantivo** y muestran a quién pertenece ese algo.
 
 ```javascript
 const possessiveAdjectives = {
@@ -29,14 +29,13 @@ const possessiveAdjectives = {
 ```
 
 **Ejemplos:**
-
 - **My** name is Carlos (Mi nombre es Carlos)
 - **Your** car is new (Tu carro es nuevo)
-- **His** book is interesting (Su libro es interesante) *[libro de él]*
-- **Her** phone is expensive (Su teléfono es caro) *[teléfono de ella]*
-- **Its** color is blue (Su color es azul) *[color de algo]*
+- **His** book is interesting (Su libro es interesante) *[Libro de él]*
+- **Her** phone is expensive (Su teléfono es caro) *[Teléfono de ella]*
+- **Its** color is blue (Su color es azul) *[Color de algo]*
 - **Our** house is big (Nuestra casa es grande)
-- **Their** dog is friendly (Su perro es amigable) *[perro de ellos]*
+- **Their** dog is friendly (Su perro es amigable) *[Perro de ellos]*
 
 <Aside type="note" title="Los adjetivos posesivos siempre van con un sustantivo">
 Los adjetivos posesivos **nunca** van solos. Siempre deben estar seguidos de un sustantivo: **my book**, **your pen**, **their house**.
@@ -46,7 +45,7 @@ Los adjetivos posesivos **nunca** van solos. Siempre deben estar seguidos de un 
 
 <TabItem label="Pronombres Posesivos">
 
-Los **pronombres posesivos** reemplazan al sustantivo por completo. Se caracterizan por ir **solos**, sin un sustantivo después, y generalmente se ubican al final de la oración.
+Los **pronombres posesivos** reemplazan al sustantivo por completo. Se caracterizan por ir **solos**, sin nada después de ellos, y por lo general se van al final de la oración.
 
 ```javascript
 const possessivePronouns = {
@@ -61,38 +60,31 @@ const possessivePronouns = {
 ```
 
 **Ejemplos:**
-
 - This book is **mine** (Este libro es mío)
 - That car is **yours** (Ese carro es tuyo)
-- The red pen is **his** (El bolígrafo rojo es suyo) *[de él]*
-- This phone is **hers** (Este teléfono es suyo) *[de ella]*
+- The red pen is **his** (El bolígrafo rojo es suyo) *[De él]*
+- This phone is **hers** (Este teléfono es suyo) *[De ella]*
 - The house is **ours** (La casa es nuestra)
-- Those keys are **theirs** (Esas llaves son suyas) *[de ellos]*
+- Those keys are **theirs** (Esas llaves son suyas) *[De ellos]*
 
 <Aside type="caution" title="'His' es igual como adjetivo y pronombre">
-**His** es especial porque funciona tanto como adjetivo posesivo ("his book") como pronombre posesivo ("the book is his").
+**His** es especial porque funciona tanto como adjetivo posesivo ("his book") como pronombre posesivo ("the book is his"). No existe pronombre para **it**.
 </Aside>
 
 </TabItem>
 
 <TabItem label="Posesivo 's">
 
-Para mostrar que algo pertenece a una **persona específica**, usa **'s** después del nombre.
+Para mostrar que algo material pertenece a una **persona específica**, siempre usa la convención **'s** después del nombre de esa persona en lugar de alguna conjunción.
 
 ```javascript
-const apostropheS = {
-  pattern: "name + 's + thing",           // nombre + 's + cosa
-  examples: [
-    "John's car",      // el carro de John
-    "Maria's book",    // el libro de María
-    "Tom's house",     // la casa de Tom
-    "Sarah's phone"    // el teléfono de Sarah
-  ]
-};
+const showPossession = (name, object) => {
+  // nombre + 's + objeto poseído
+  return `${name}'s ${object}`; // John's car
+}
 ```
 
 **Ejemplos:**
-
 - **John's** car is red (El carro de John es rojo)
 - **Maria's** book is on the table (El libro de María está en la mesa)
 - **Tom's** dog is big (El perro de Tom es grande)
@@ -109,92 +101,76 @@ const apostropheS = {
 <Tabs>
 <TabItem label="Plural terminado en -s">
 
-Si el sustantivo ya termina en **-s**, solo agrega el apóstrofe **'** (sin otra s):
+Si el sustantivo o las personas involucradas ya terminan en **-s**, solo se debe agregar el apóstrofe **'** al final:
 
 ```javascript
-const pluralRule = {
-  singular: "the boy's toy",      // el juguete del niño
-  plural: "the boys' toys"        // los juguetes de los niños
-};
+let noun = "boys"; 
+let apostrophe = "'"; // sin otra "s" debido a que ya existe
+
+const result = noun + apostrophe; // boys'
 ```
 
 **Ejemplos:**
-- The **students' books** (Los libros de los estudiantes)
-- My **parents' house** (La casa de mis padres)
-- The **teachers' room** (La sala de los profesores)
+- The **students'** books (Los libros de los estudiantes)
+- My **parents'** house (La casa de mis padres)
+- The **teachers'** room (La sala de los profesores)
 
 </TabItem>
 
 <TabItem label="Nombres propios en -s">
 
-Si el nombre propio ya termina en **-s**, puedes usar **'s** o solo **'** (ambas formas son correctas):
+Si el nombre propio ya termina en la letra **-s**, usar el estilo de escritura con **'s** o solo el apóstrofe **'** significa lo mismo y ambas formas son correctas:
 
 ```javascript
-const properNamesRule = {
-  option1: "James's book",        // libro de James (con 's)
-  option2: "James' book"          // libro de James (solo ')
-};
+let validOption1 = "James's book";
+let validOption2 = "James' book";
 ```
 
 **Ejemplos:**
-- **James's** book o **James'** book (El libro de James)
-- **Carlos's** car o **Carlos'** car (El carro de Carlos)
-- **Chris's** phone o **Chris'** phone (El teléfono de Chris)
+- **James's** book / **James'** book (El libro de James)
+- **Carlos's** car / **Carlos'** car (El carro de Carlos)
+- **Chris's** phone / **Chris'** phone (El teléfono de Chris)
 
 </TabItem>
 </Tabs>
 
 ---
 
-## Errores Comunes
+## Errores comunes
 
 <Aside type="danger" title="Confundir 'its' (posesivo) con 'it's' (it is)">
+Recuerda que **its** actúa como un posesivo y va escrito estrictamente sin apóstrofe, distinto al uso del de **it's** que equivale a un pronombre y verbo abreviados *it is* o *it has*.
+
 - The dog is in **it's** house ⛔
 - The dog is in **its** house (El perro está en su casa) ✅
-- **Its** raining ⛔
-- **It's** raining (Está lloviendo) ✅
-
-**Its** = posesivo (sin apóstrofe). **It's** = it is (con apóstrofe).
 </Aside>
 
 <Aside type="danger" title="Usar pronombre posesivo con sustantivo">
+Los pronombres posesivos siempre van **solos**, es un error sintáctico ponerles un sustantivo inmediatamente después como si fueran adjetivos. 
+
 - This is **mine** book ⛔
 - This is **my** book (Este es mi libro) ✅
-- This book is **mine** (Este libro es mío) ✅
-- That is **yours** car ⛔
-- That is **your** car (Ese es tu carro) ✅
-- That car is **yours** (Ese carro es tuyo) ✅
-
-Los pronombres posesivos van **solos**, sin sustantivo después.
 </Aside>
 
 <Aside type="danger" title="Olvidar el apóstrofe en 's">
-- This is **Johns** book ⛔
-- This is **John's** book (Este es el libro de John) ✅
-- **Marias** phone is new ⛔
-- **Maria's** phone is new (El teléfono de María es nuevo) ✅
+Si no colocas un apóstrofe antes de la s asumiendo posesión, se entenderá como si el nombre o la palabra de la que estés hablando está originalmente escrita en plural.
 
-Siempre usa el apóstrofe **'** antes de la **s**.
+- This is Johns book ⛔
+- This is **John's** book (Este es el libro de John) ✅
 </Aside>
 
 <Aside type="danger" title="Confundir 'their' (posesivo) con 'they're' (they are) y 'there' (allí)">
-- **Their** going to the park ⛔
-- **They're** going to the park (Ellos van al parque) ✅
-- **There** house is big ⛔
-- **Their** house is big (Su casa es grande) ✅
-- Put it over **their** ⛔
-- Put it over **there** (Ponlo allí) ✅
+A pesar de sonar igual, these actúan diferente. **Their** indica posesivo (de ellos), y **there** indica lugar (allí).
 
-**Their** = posesivo, **they're** = they are, **there** = allí.
+- Their going to the park ⛔
+- **They're** going to the park (Ellos van al parque) ✅
 </Aside>
 
 <Aside type="danger" title="Traducir literalmente el español">
+En inglés se usa únicamente la particularidad apóstrofa **'s** para pertenencias entre personas hacia objetos en vez de usar las combinaciones con la preposición 'Of' para el mismo cometido.
+
 - The book of John ⛔
 - **John's** book (El libro de John) ✅
-- The car of my father ⛔
-- **My father's** car (El carro de mi padre) ✅
-
-En inglés usamos **'s**, no "of".
 </Aside>
 
 ---
