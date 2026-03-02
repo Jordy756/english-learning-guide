@@ -5,7 +5,7 @@ description: Domina las frases esenciales para sobrevivir situaciones cotidianas
 
 import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
 
-Las **frases situacionales** son como funciones específicas en programación: cada una tiene un **propósito claro** y un **contexto de uso** determinado. A diferencia de las expresiones fijas, estas frases siguen patrones gramaticales que puedes adaptar, pero debes memorizarlas tal cual para usarlas con confianza en situaciones reales del día a día.
+Las **frases situacionales** son expresiones con un propósito claro: cada una sirve para una situación específica del día a día. A diferencia de las expresiones fijas, estas frases siguen patrones que puedes adaptar, pero debes memorizarlas tal cual para usarlas con confianza en conversaciones reales.
 
 ---
 
@@ -14,18 +14,12 @@ Las **frases situacionales** son como funciones específicas en programación: c
 Cuando estudias inglés, necesitas frases para **comunicarte con tu profesor** y **aclarar dudas** constantemente. Estas frases te ayudan a seguir la clase incluso cuando no entiendes todo.
 
 ```javascript
-const classroomPhrases = {
-  clarification: [
-    "Can you repeat that?",           // ¿Puedes repetir eso?
-    "Can you speak slowly, please?",  // ¿Puedes hablar despacio?
-    "I don't understand"              // No entiendo
-  ],
-  questions: [
-    "How do you say... in English?",  // ¿Cómo se dice... en inglés?
-    "What does... mean?",             // ¿Qué significa...?
-    "How do you spell that?"          // ¿Cómo se deletrea eso?
-  ]
-};
+const classroomPhrases = [
+  "Can you repeat that?",           // ¿Puedes repetir?
+  "Speak slowly, please",           // Habla despacio
+  "How do you say... in English?",  // ¿Cómo se dice?
+  "What does... mean?"              // ¿Qué significa?
+]
 ```
 
 **Ejemplos:**
@@ -46,20 +40,14 @@ Usa **"How do you say [palabra en español] in English?"** para preguntar vocabu
 Las **preguntas de presentación** son fundamentales en tus primeras conversaciones. Estas frases te permiten conocer información básica sobre una persona nueva.
 
 ```javascript
-const meetingPhrases = {
-  introduction: [
-    "What's your name?",      // ¿Cuál es tu nombre?
-    "Where are you from?",    // ¿De dónde eres?
-    "How old are you?",       // ¿Cuántos años tienes?
-    "What do you do?"         // ¿A qué te dedicas?
-  ],
-  responses: [
-    "My name is...",          // Mi nombre es...
-    "I'm from...",            // Soy de...
-    "I'm... years old",       // Tengo... años
-    "I'm a..."                // Soy un/a...
-  ]
-};
+const introduce = (name, country, age, job) => {
+  return [
+    `My name is ${name}`,    // mi nombre es...
+    `I'm from ${country}`,   // soy de...
+    `I'm ${age} years old`,  // tengo... años
+    `I'm a ${job}`           // soy un/a...
+  ];
+}
 ```
 
 **Ejemplos:**
@@ -82,13 +70,11 @@ Estas frases te ayudan a **resolver necesidades inmediatas** como encontrar el b
   <TabItem label="Ubicación">
 
 ```javascript
-const locationPhrases = {
-  asking: [
-    "Where is the bathroom?",     // ¿Dónde está el baño?
-    "Where is the exit?",         // ¿Dónde está la salida?
-    "Is there a... near here?"    // ¿Hay un... cerca de aquí?
-  ]
-};
+const locationPhrases = [
+  "Where is the bathroom?",   // ¿Dónde está el baño?
+  "Where is the exit?",       // ¿Dónde está la salida?
+  "Is there a... near here?"  // ¿Hay un... cerca de aquí?
+];
 ```
 
 **Ejemplos:**
@@ -101,17 +87,12 @@ const locationPhrases = {
   <TabItem label="Compras">
 
 ```javascript
-const shoppingPhrases = {
-  prices: [
-    "How much is this?",          // ¿Cuánto cuesta esto?
-    "How much are these?",        // ¿Cuánto cuestan estos?
-    "Can I have...?"              // ¿Puedo tener...?
-  ],
-  payment: [
-    "Do you accept credit cards?", // ¿Aceptan tarjetas?
-    "Can I pay with cash?"         // ¿Puedo pagar en efectivo?
-  ]
-};
+const shoppingPhrases = [
+  "How much is this?",    // ¿Cuánto cuesta esto?
+  "Can I have...?",       // ¿Puedo tener...?
+  "Do you accept cards?", // ¿Aceptan tarjetas?
+  "Can I pay with cash?"  // ¿puedo pagar en efectivo?
+]
 ```
 
 **Ejemplos:**
@@ -125,15 +106,12 @@ const shoppingPhrases = {
   <TabItem label="Comida">
 
 ```javascript
-const foodPhrases = {
-  ordering: [
-    "I'll have...",               // Quisiera...
-    "Can I have...?",             // ¿Puedo tener...?
-    "I'd like...",                // Me gustaría...
-    "What do you recommend?",     // ¿Qué recomiendas?
-    "Is this vegetarian?"         // ¿Esto es vegetariano?
-  ]
-};
+const foodPhrases = [
+  "I'll have...",          // quisiera...
+  "I'd like...",           // me gustaría...
+  "Can I have...?",        // ¿puedo tener...?
+  "What do you recommend?" // ¿qué recomiendas?
+];
 ```
 
 **Ejemplos:**
@@ -152,15 +130,13 @@ const foodPhrases = {
 Estas frases son para **pedir ayuda** cuando estás perdido, necesitas un médico o tienes un problema. Apréndelas para estar preparado.
 
 ```javascript
-const emergencyPhrases = {
-  help: [
-    "I'm lost",                   // Estoy perdido
-    "I need help",                // Necesito ayuda
-    "Do you speak Spanish?",      // ¿Hablas español?
-    "Can you help me?",           // ¿Puedes ayudarme?
-    "I need a doctor"             // Necesito un doctor
-  ]
-};
+const emergencyPhrases = [
+  "I'm lost",                   // Estoy perdido
+  "I need help",                // Necesito ayuda
+  "Do you speak Spanish?",      // ¿Hablas español?
+  "Can you help me?",           // ¿Puedes ayudarme?
+  "I need a doctor"             // Necesito un doctor
+]
 ```
 
 **Ejemplos:**
@@ -176,51 +152,41 @@ Usa **"I'm lost"** cuando tú estás perdido/a. Para objetos usa **"I lost my...
 
 ---
 
-## Errores Comunes
+## Errores comunes
 
-<Aside type="danger" title="Olvidar 'do/does' en preguntas con verbos regulares">
-- What you do? ⛔
+<Aside type="danger" title="Olvidar 'do' en preguntas con verbos regulares">
+En inglés, las preguntas con verbos regulares siempre necesitan el auxiliar **do** antes del sujeto.
+
+- What **you** do? ⛔
 - **What do you do?** (¿A qué te dedicas?) ✅
-- Where you are from? ⛔
-- **Where are you from?** (¿De dónde eres?) ✅
-
-Con verbos regulares usa **do/does** en preguntas. Con "to be" usa **are/is**.
 </Aside>
 
 <Aside type="danger" title="Confundir 'How much' con 'How many'">
-- How many is this? (para precios) ⛔
-- **How much is this?** (¿Cuánto cuesta esto?) ✅
-- How much apples? (para contar) ⛔
-- **How many apples?** (¿Cuántas manzanas?) ✅
+**How much** es para precios y cantidades no contables. **How many** es para cantidades de cosas que se pueden contar.
 
-**How much** es para precios o cantidades no contables y **How many** es para cantidades contables
+- **How many** is this? ⛔
+- **How much** is this? (¿Cuánto cuesta esto?) ✅
 </Aside>
 
 <Aside type="danger" title="Traducir 'años' literalmente en edad">
-- I have 25 years ⛔
-- **I'm 25 years old** (Tengo 25 años) ✅
-- She has 30 years ⛔
-- **She's 30 years old** (Ella tiene 30 años) ✅
+En español dices que "tienes" años, pero en inglés la edad se expresa con **to be**: "eres" esa cantidad de años.
 
-En inglés dices "I **am** X years old", no "I have X years".
+- I **have** 25 years ⛔
+- I **am** 25 years old (Tengo 25 años) ✅
 </Aside>
 
-<Aside type="danger" title="Usar 'say' sin 'How do you'">
-- How you say this in English? ⛔
-- **How do you say this in English?** (¿Cómo se dice esto en inglés?) ✅
-- Say me how ⛔
-- **How do you say** it? (¿Cómo se dice?) ✅
+<Aside type="danger" title="Omitir 'do' en 'How do you say'">
+La estructura correcta siempre lleva el auxiliar **do**: "How **do** you say...". Sin él, la pregunta es incorrecta.
 
-La estructura correcta es **"How do you say [palabra] in English?"**
+- **How you say** this in English? ⛔
+- **How do you say** this in English? (¿Cómo se dice esto en inglés?) ✅
 </Aside>
 
-<Aside type="danger" title="Olvidar 'there' en 'Is there'">
-- Is a bathroom here? ⛔
-- **Is there a bathroom** near here? (¿Hay un baño cerca de aquí?) ✅
-- Is a bank? ⛔
-- **Is there a bank?** (¿Hay un banco?) ✅
+<Aside type="danger" title="Olvidar 'there' en preguntas de existencia">
+Para preguntar si algo existe en un lugar, la estructura en inglés es **"Is there..."**, no "Is a...".
 
-Usa **"Is there..."** o **"Are there..."** para preguntar si algo existe en un lugar.
+- **Is** a bathroom here? ⛔
+- **Is there** a bathroom near here? (¿Hay un baño cerca de aquí?) ✅
 </Aside>
 
 ---
