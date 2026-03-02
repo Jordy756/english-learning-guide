@@ -5,7 +5,7 @@ description: Describe personas, lugares y cosas.
 
 import { Tabs, TabItem, Aside } from '@astrojs/starlight/components';
 
-Los **adjetivos** son palabras que describen o modifican sustantivos. Son como propiedades de un objeto en JavaScript: agregan información específica sobre características, cualidades o estados. En inglés, los adjetivos tienen reglas de posición y orden muy claras que debes dominar para describir personas, lugares y cosas correctamente.
+Los **adjetivos** son palabras que describen o modifican sustantivos. En inglés, los adjetivos tienen reglas de posición y orden muy claras que debes dominar para describir personas, lugares y cosas correctamente. Saber usarlos bien te permite construir oraciones más detalladas y naturales desde el nivel A2.
 
 ---
 
@@ -77,14 +77,19 @@ Los adjetivos se agrupan en categorías según qué aspecto describen. Conocer e
 Describen qué tan grande o pequeño es algo.
 
 ```javascript
-const size = {
-  large: ["big", "large", "huge", "enormous"],
-  // grande: [grande, enorme, gigantesco]
-  
-  small: ["small", "little", "tiny", "mini"],
-  // pequeño: [pequeño, diminuto, mini]
-};
+const size = [
+  "big",      // grande (para personas o animales)
+  "large",    // grande (para objetos)
+  "huge",     // enorme
+  "enormous", // gigantesco
+  "small",    // pequeño (para personas o animales)
+  "little",   // pequeño (para objetos)
+  "tiny",     // diminuto
+  "mini"      // mini
+];
 ```
+
+**Ejemplos:**
 
 - The elephant is **big** (El elefante es grande)
 - She has a **tiny** apartment (Ella tiene un apartamento diminuto)
@@ -98,17 +103,21 @@ const size = {
 Describen el color de algo.
 
 ```javascript
-const colors = {
-  basic: ["red", "blue", "green", "yellow"],
-  // básicos: [rojo, azul, verde, amarillo]
-
-  dark: ["black", "brown", "gray", "purple"],
-  // oscuros: [negro, marrón, gris, morado]
-
-  light: ["white", "pink", "orange"]
-  // claros: [blanco, rosa, naranja]
-};
+const colors = [
+  "red",    // rojo
+  "blue",   // azul
+  "green",  // verde
+  "yellow", // amarillo
+  "black",  // negro
+  "brown",  // marrón
+  "gray",   // gris
+  "white",  // blanco
+  "pink",   // rosa
+  "orange"  // naranja
+];
 ```
+
+**Ejemplos:**
 
 - I like your **blue** shirt (Me gusta tu camisa azul)
 - The walls are **white** (Las paredes son blancas)
@@ -122,14 +131,18 @@ const colors = {
 Describen qué tan viejo o nuevo es algo.
 
 ```javascript
-const age = {
-  old: ["old", "ancient", "antique"],
-  // viejo: [viejo, antiguo, antiguo]
-
-  new: ["new", "modern", "recent", "young"]
-  // nuevo: [nuevo, moderno, reciente, joven]
-};
+const age = [
+  "old",     // viejo
+  "ancient", // antiguo
+  "antique", // antíguo (objeto)
+  "new",     // nuevo
+  "modern",  // moderno
+  "recent",  // reciente
+  "young"    // joven
+];
 ```
+
+**Ejemplos:**
 
 - This is an **old** building (Este es un edificio viejo)
 - She bought a **new** phone (Ella compró un teléfono nuevo)
@@ -143,14 +156,19 @@ const age = {
 Describen la forma física de algo.
 
 ```javascript
-const shape = {
-  forms: ["round", "square", "flat", "curved"],
-  // formas: [redondo, cuadrado, plano, curvo]
-
-  thickness: ["thin", "thick", "wide", "narrow"]
-  // grosor: [delgado, grueso, ancho, angosto]
-};
+const shape = [
+  "round",   // redondo
+  "square",  // cuadrado
+  "flat",    // plano
+  "curved",  // curvo
+  "thin",    // delgado
+  "thick",   // grueso
+  "wide",    // ancho
+  "narrow"   // angosto
+];
 ```
+
+**Ejemplos:**
 
 - The Earth is **round** (La Tierra es redonda)
 - I need a **square** box (Necesito una caja cuadrada)
@@ -164,17 +182,21 @@ const shape = {
 Expresan tu juicio personal sobre algo.
 
 ```javascript
-const opinion = {
-  positive: ["beautiful", "nice", "good", "great"],
-  // positivos: [hermoso, agradable, bueno, genial]
-
-  negative: ["ugly", "bad", "terrible", "awful"],
-  // negativos: [feo, malo, terrible, horrible]
-
-  neutral: ["interesting", "strange", "different"]
-  // neutrales: [interesante, extraño, diferente]
-};
+const opinion = [
+  "beautiful",   // hermoso
+  "nice",        // agradable
+  "good",        // bueno
+  "great",       // genial
+  "ugly",        // feo
+  "bad",         // malo
+  "terrible",    // terrible
+  "interesting", // interesante
+  "strange",     // extraño
+  "different"    // diferente
+];
 ```
+
+**Ejemplos:**
 
 - What a **beautiful** sunset (Qué atardecer hermoso)
 - This is a **terrible** idea (Esta es una idea terrible)
@@ -204,6 +226,8 @@ const sizeOpposites = {
 };
 ```
 
+**Ejemplos:**
+
 - The building is **tall**, not **short** (El edificio es alto, no bajo)
 - I need a **long** rope, not a **short** one (Necesito una cuerda larga, no una corta)
 - This street is **wide**, that one is **narrow** (Esta calle es ancha, esa es angosta)
@@ -222,6 +246,8 @@ const temperatureOpposites = {
 };
 ```
 
+**Ejemplos:**
+
 - The coffee is **hot**, the juice is **cold** (El café está caliente, el jugo está frío)
 - This pillow is **soft**, that one is **hard** (Esta almohada es suave, esa es dura)
 - The box is **heavy**, the bag is **light** (La caja es pesada, la bolsa es ligera)
@@ -239,6 +265,8 @@ const conditionOpposites = {
   fresh: "stale"          // fresco / pasado
 };
 ```
+
+**Ejemplos:**
 
 - My phone is **new**, yours is **old** (Mi teléfono es nuevo, el tuyo es viejo)
 - Keep your room **clean**, not **dirty** (Mantén tu habitación limpia, no sucia)
@@ -259,6 +287,8 @@ const qualityOpposites = {
 };
 ```
 
+**Ejemplos:**
+
 - This test is **easy**, that one is **difficult** (Este examen es fácil, ese es difícil)
 - The car is **fast**, the truck is **slow** (El carro es rápido, el camión es lento)
 - The hotel is **cheap**, not **expensive** (El hotel es barato, no caro)
@@ -271,39 +301,31 @@ const qualityOpposites = {
 ## Errores Comunes
 
 <Aside type="danger" title="Poner el adjetivo después del sustantivo">
+En inglés, los adjetivos siempre van **antes** del sustantivo cuando lo describes directamente.
+
 - A house **big** ⛔
 - A **big** house (Una casa grande) ✅
-- The car **red** ⛔
-- The **red** car (El carro rojo) ✅
-
-Los adjetivos siempre van **antes** del sustantivo cuando lo describes directamente.
 </Aside>
 
 <Aside type="danger" title="Cambiar el adjetivo a plural">
+Los adjetivos en inglés **nunca** cambian su forma. Usa la misma forma para singular y plural.
+
 - Two **bigs** houses ⛔
 - Two **big** houses (Dos casas grandes) ✅
-- Three **reds** cars ⛔
-- Three **red** cars (Tres carros rojos) ✅
-
-Los adjetivos **nunca** cambian su forma. Usa la misma forma para singular y plural.
 </Aside>
 
 <Aside type="danger" title="Confundir la posición con el verbo to be">
+Con el verbo to be, el adjetivo va **después** del verbo, no entre el sustantivo y el verbo.
+
 - The house **big is** ⛔
 - The house **is big** (La casa es grande) ✅
-- My car **red is** ⛔
-- My car **is red** (Mi carro es rojo) ✅
-
-Con el verbo to be, el adjetivo va **después** del verbo, no entre el sustantivo y el verbo.
 </Aside>
 
-<Aside type="danger" title="Usar adjetivos de tamaño con personas incorrectamente">
+<Aside type="danger" title="Usar 'big/small' para describir la altura de personas">
+Para hablar de la altura de una persona en inglés, usa **tall** o **short**. Usar big o small en ese contexto suena poco natural.
+
 - She is **big** ⛔
 - She is **tall** (Ella es alta) ✅
-- He is **small** ⛔
-- He is **short** (Él es bajo) ✅
-
-Para personas usa **tall/short** (altura). **Big/small** generalmente suena poco respetuoso al describir personas adultas.
 </Aside>
 
 ---
