@@ -33,7 +33,7 @@ El verbo **to be** (ser/estar) es el cimiento del inglés: casi todo lo demás e
     - They **are** friends (Ellos son amigos)
 
     <Aside type="tip" title="Regla simple para el presente">
-    **Regla:** Usa **am** con "I", **is** con "he/she/it", y **are** con "you/we/they".
+    Usa **am** con "I", **is** con "he/she/it", y **are** con "you/we/they".
     </Aside>
   </TabItem>
 
@@ -58,7 +58,7 @@ El verbo **to be** (ser/estar) es el cimiento del inglés: casi todo lo demás e
     - They **were** happy (Estaban felices)
 
     <Aside type="tip" title="Regla simple para el pasado">
-    **Regla:** Usa **was** con "I/he/she/it" y **were** con "you/we/they".
+    Usa **was** con "I/he/she/it" y **were** con "you/we/they".
     </Aside>
   </TabItem>
 </Tabs>
@@ -89,12 +89,24 @@ En presente, las estructuras con to be son directas y siguen patrones simples. L
       ]
     };
     ```
+
+    **Ejemplos:**
+    - I **am** happy (Estoy feliz)
+    - You **are** tall (Eres alto)
+    - He **is** a teacher (Él es profesor)
+    - She **is** busy (Ella está ocupada)
+    - We **are** ready (Estamos listos)
   </TabItem>
   
   <TabItem label="Negativa">
     ```javascript
     const negative = {
       structure: "Sujeto + verbo to be + not + complemento",
+      contractions: {
+        "am not": "I'm not",
+        "is not": "isn't",
+        "are not": "aren't"
+      },
       examples: [
         "I am not tired",       // No estoy cansado
         "You are not wrong",    // No estás equivocado
@@ -106,8 +118,13 @@ En presente, las estructuras con to be son directas y siguen patrones simples. L
       ]
     };
     ```
-    
-    Para negar, solo añade **not** después del verbo to be.
+
+    **Ejemplos:**
+    - I **am not** tired (No estoy cansado)
+    - You **are not** wrong (No estás equivocado)
+    - He **is not** here (Él no está aquí)
+    - We **are not** late (No estamos tarde)
+    - They **are not** ready (No están listos)
   </TabItem>
   
   <TabItem label="Pregunta">
@@ -125,8 +142,13 @@ En presente, las estructuras con to be son directas y siguen patrones simples. L
       ]
     };
     ```
-    
-    Para preguntar, **invierte** el orden: pon el verbo to be **antes** del sujeto.
+
+    **Ejemplos:**
+    - **Am** I late? (¿Estoy tarde?)
+    - **Are** you okay? (¿Estás bien?)
+    - **Is** he your brother? (¿Es él tu hermano?)
+    - **Is** she at work? (¿Está ella en el trabajo?)
+    - **Are** they coming? (¿Vienen ellos?)
 
     <Aside type="tip" title="Respuestas cortas">
     Para responder con "Sí" o "No", contesta con el verbo directamente:
@@ -159,12 +181,23 @@ Las estructuras en pasado funcionan exactamente igual que en presente, pero usan
       ]
     };
     ```
+
+    **Ejemplos:**
+    - I **was** born in 1990 (Nací en 1990)
+    - The weather **was** beautiful yesterday (El clima estuvo hermoso ayer)
+    - We **were** at the beach last summer (Estuvimos en la playa el verano pasado)
+    - She **was** at home (Ella estaba en casa)
+    - You **were** right (Tenías razón)
   </TabItem>
 
   <TabItem label="Negativa">
     ```javascript
     const pastNegative = {
       structure: "Sujeto + verbo to be + not + complemento",
+      contractions: {
+        "was not": "wasn't",
+        "were not": "weren't"
+      },
       examples: [
         "I was not / wasn't there",       // No estaba ahí
         "You were not / weren't late",    // No llegaste tarde
@@ -177,7 +210,12 @@ Las estructuras en pasado funcionan exactamente igual que en presente, pero usan
     };
     ```
 
-    **Contracciones:** was not = wasn't, were not = weren't
+    **Ejemplos:**
+    - I **was not** / **wasn't** there (No estaba ahí)
+    - You **were not** / **weren't** late (No llegaste tarde)
+    - He **was not** / **wasn't** happy (Él no estaba feliz)
+    - They **were not** / **weren't** happy with the result (No estaban contentos con el resultado)
+    - We **were not** / **weren't** ready (No estábamos listos)
   </TabItem>
 
   <TabItem label="Pregunta">
@@ -185,18 +223,23 @@ Las estructuras en pasado funcionan exactamente igual que en presente, pero usan
     const pastQuestion = {
       structure: "Verbo to be + sujeto + complemento + ?",
       examples: [
-        "Was I wrong?",                // ¿Estaba equivocado?
-        "Were you at work?",           // ¿Estabas en el trabajo?
-        "Was he your teacher?",        // ¿Era él tu profesor?
-        "Was she sick?",               // ¿Estaba ella enferma?
-        "Was it expensive?",           // ¿Era caro?
-        "Were we late?",               // ¿Llegamos tarde?
-        "Were they at the meeting?"    // ¿Estaban en la reunión?
+        "Was I wrong?",             // ¿Estaba equivocado?
+        "Were you at work?",        // ¿Estabas en el trabajo?
+        "Was he your teacher?",     // ¿Era él tu profesor?
+        "Was she sick?",            // ¿Estaba ella enferma?
+        "Was it expensive?",        // ¿Era caro?
+        "Were we late?",            // ¿Llegamos tarde?
+        "Were they at the meeting?" // ¿Estaban en la reunión?
       ]
     };
     ```
 
-    Para preguntar, **invierte** el orden: pon was/were **antes** del sujeto.
+    **Ejemplos:**
+    - **Was** the movie good? (¿Estuvo buena la película?)
+    - **Were** you at work? (¿Estabas en el trabajo?)
+    - **Was** she sick? (¿Estaba ella enferma?)
+    - **Were** we late? (¿Llegamos tarde?)
+    - **Were** they at the meeting? (¿Estaban en la reunión?)
 
     <Aside type="tip" title="Respuestas cortas">
     Para responder con "Sí" o "No", contesta con el verbo directamente:
@@ -206,14 +249,6 @@ Las estructuras en pasado funcionan exactamente igual que en presente, pero usan
     </Aside>
   </TabItem>
 </Tabs>
-
-**Ejemplos:**
-
-- I **was** born in 1990 (Nací en 1990)
-- The weather **was** beautiful yesterday (El clima estuvo hermoso ayer)
-- We **were** at the beach last summer (Estuvimos en la playa el verano pasado)
-- **Was** the movie good? (¿Estuvo buena la película?)
-- They **weren't** happy with the result (No estaban contentos con el resultado)
 
 ---
 
