@@ -5,7 +5,7 @@ description: Modifica verbos, adjetivos y otros adverbios.
 
 import { Tabs, TabItem, Aside } from '@astrojs/starlight/components';
 
-Los **adverbios** son palabras que modifican o describen verbos, adjetivos u otros adverbios. Son como modificadores de funciones en programación: agregan información sobre cómo, cuándo, dónde o con qué frecuencia ocurre algo. A diferencia de los adjetivos que describen sustantivos, los adverbios describen acciones y cualidades, haciendo tus oraciones más precisas y expresivas.
+Los **adverbios** son palabras que modifican o describen verbos, adjetivos u otros adverbios. Te dan información sobre cómo, cuándo, dónde o con qué frecuencia ocurre algo. A diferencia de los adjetivos, que describen sustantivos, los adverbios describen acciones y cualidades para hacer tus oraciones más precisas y expresivas.
 
 ---
 
@@ -19,11 +19,11 @@ Los adverbios pueden modificar tres tipos de palabras distintas, y su posición 
 Los adverbios modifican verbos para describir **cómo** se realiza la acción. Van **después del verbo** o **después del objeto** si hay uno.
 
 ```javascript
-const modifyVerb = {
-  verb: "speaks",
-  adverb: "clearly",
-  result: "She speaks clearly"  // Ella habla claramente
-};
+const modifyVerb = [
+  "He drives carefully",   // maneja cuidadosamente
+  "She sings beautifully", // canta hermosamente
+  "They work hard"         // trabajan duro
+];
 ```
 
 **Ejemplos:**
@@ -41,11 +41,12 @@ const modifyVerb = {
 Los adverbios modifican adjetivos para indicar **el grado o intensidad** de la cualidad. Van **antes del adjetivo**.
 
 ```javascript
-const modifyAdjective = {
-  adverb: "very",
-  adjective: "tall",
-  result: "He is very tall"  // Él es muy alto
-};
+const intensifiers = [
+  "very tall",       // muy alto
+  "extremely hot",   // extremadamente caliente
+  "too difficult",   // demasiado difícil
+  "quite tired"      // bastante cansado
+];
 ```
 
 **Ejemplos:**
@@ -63,11 +64,12 @@ const modifyAdjective = {
 Los adverbios pueden modificar otros adverbios para intensificar o cambiar su significado. Van **antes del adverbio** que modifican.
 
 ```javascript
-const modifyAdverb = {
-  adverb1: "very",
-  adverb2: "quickly",
-  result: "She runs very quickly"  // Ella corre muy rápidamente
-};
+const combinations = [
+  "too fast",         // demasiado rápido
+  "very hard",        // muy duro
+  "quite late",       // bastante tarde
+  "extremely slowly"  // extremadamente lento
+];
 ```
 
 **Ejemplos:**
@@ -85,7 +87,7 @@ const modifyAdverb = {
 
 ## Formación de Adverbios con -ly
 
-La mayoría de los adverbios de manera se forman agregando **-ly** al adjetivo. Es como aplicar una transformación a un valor en programación.
+La mayoría de los adverbios de manera se forman agregando **-ly** al adjetivo.
 
 <Tabs>
   <TabItem label="Regla Básica">
@@ -93,13 +95,11 @@ La mayoría de los adverbios de manera se forman agregando **-ly** al adjetivo. 
 Agrega **-ly** al final del adjetivo.
 
 ```javascript
-const basicRule = {
-  quick: "quickly",      // rápido → rápidamente
-  slow: "slowly",        // lento → lentamente
-  careful: "carefully",  // cuidadoso → cuidadosamente
-  quiet: "quietly",      // silencioso → silenciosamente
-  loud: "loudly"         // ruidoso → ruidosamente
-};
+const toAdverb = (adj) => adj + "ly";
+
+// quick → quickly (rápido → rápidamente)
+// slow → slowly (lento → lentamente)
+// careful → carefully (cuidadoso → cuidadosamente)
 ```
 
 **Ejemplos:**
@@ -116,13 +116,13 @@ const basicRule = {
 Si el adjetivo termina en **consonante + y**, cambia la **y** por **i** y agrega **-ly**.
 
 ```javascript
-const yRule = {
-  happy: "happily",      // feliz → felizmente
-  easy: "easily",        // fácil → fácilmente
-  angry: "angrily",      // enojado → enojadamente
-  lazy: "lazily",        // perezoso → perezosamente
-  lucky: "luckily"       // afortunado → afortunadamente
+const toAdverb = (adj) => {
+  if (adj.endsWith("y")) return adj.slice(0, -1) + "ily";
 };
+
+// happy → happily (feliz → felizmente)
+// easy → easily (fácil → fácilmente)
+// angry → angrily (enojado → enojadamente)
 ```
 
 **Ejemplos:**
@@ -139,13 +139,13 @@ const yRule = {
 Si el adjetivo termina en **-le**, reemplaza la **e** con **y**.
 
 ```javascript
-const leRule = {
-  simple: "simply",      // simple → simplemente
-  terrible: "terribly",  // terrible → terriblemente
-  possible: "possibly",  // posible → posiblemente
-  comfortable: "comfortably",  // cómodo → cómodamente
-  gentle: "gently"       // gentil → gentilmente
+const toAdverb = (adj) => {
+  if (adj.endsWith("le")) return adj.slice(0, -1) + "y";
 };
+
+// simple → simply (simple → simplemente)
+// terrible → terribly (terrible → terriblemente)
+// gentle → gently (gentil → gentilmente)
 ```
 
 **Ejemplos:**
@@ -162,12 +162,13 @@ const leRule = {
 Si el adjetivo termina en **-ic**, agrega **-ally** (no solo -ly).
 
 ```javascript
-const icRule = {
-  basic: "basically",        // básico → básicamente
-  automatic: "automatically",  // automático → automáticamente
-  dramatic: "dramatically",    // dramático → dramáticamente
-  scientific: "scientifically"  // científico → científicamente
+const toAdverb = (adj) => {
+  if (!adj.endsWith("ic")) return adj + "ally";
 };
+
+// basic → basically (básico → básicamente)
+// dramatic → dramatically (dramático → dramáticamente)
+// automatic → automatically (automático → automáticamente)
 ```
 
 **Ejemplos:**
@@ -280,47 +281,38 @@ Con el verbo **to be**, el adverbio va **después**: "She is always happy" (Ella
 ## Errores Comunes
 
 <Aside type="danger" title="Usar 'good' como adverbio">
+**Good** es adjetivo (bueno). Para describir cómo se hace algo, debes usar **well** (bien).
+
 - He plays guitar **good** ⛔
 - He plays guitar **well** (Él toca guitarra bien) ✅
-- She cooks **good** ⛔
-- She cooks **well** (Ella cocina bien) ✅
-
-**Good** es adjetivo (bueno). **Well** es adverbio (bien). No confundas sus funciones.
 </Aside>
 
 <Aside type="danger" title="Olvidar cambiar -y por -i antes de -ly">
+Cuando el adjetivo termina en consonante + y, la **y** cambia a **i** antes de agregar -ly.
+
 - She smiled **happyly** ⛔
 - She smiled **happily** (Ella sonrió felizmente) ✅
-- He finished **easyly** ⛔
-- He finished **easily** (Él terminó fácilmente) ✅
-
-Cuando el adjetivo termina en consonante + y, cambia la y por i antes de agregar -ly.
 </Aside>
 
 <Aside type="danger" title="Poner adverbios de frecuencia en el lugar incorrecto">
+Con el verbo **to be**, el adverbio de frecuencia va después. Con otros verbos, va antes del verbo principal.
+
 - I **am tired always** ⛔
 - I **am always tired** (Siempre estoy cansado) ✅
-- She **drinks always** coffee ⛔
-- She **always drinks** coffee (Ella siempre toma café) ✅
-
-Con to be, el adverbio va después. Con otros verbos, el adverbio va antes del verbo.
 </Aside>
 
 <Aside type="danger" title="Confundir 'hard' con 'hardly'">
-- I **hardly** work (casi no trabajo) vs I work **hard** (trabajo duro)
-- He **hardly** studies ⛔ (si quieres decir que estudia mucho)
-- He studies **hard** (Él estudia duro) ✅
+**Hard** significa duramente o duro. **Hardly** significa apenas o casi no. Son palabras distintas con significados opuestos.
 
-**Hard** significa duramente/duro. **Hardly** significa apenas/casi no. Son opuestos.
+- He **hardly** studies ⛔
+- He studies **hard** (Él estudia duro) ✅
 </Aside>
 
 <Aside type="danger" title="Poner el adverbio entre el verbo y el objeto">
+El adverbio de manera siempre va **después del objeto**, nunca entre el verbo y el objeto.
+
 - She speaks **fluently** English ⛔
 - She speaks English **fluently** (Ella habla inglés fluidamente) ✅
-- He drives **carefully** the car ⛔
-- He drives the car **carefully** (Él maneja el carro cuidadosamente) ✅
-
-El adverbio de manera va después del objeto, no entre el verbo y el objeto.
 </Aside>
 
 ---
