@@ -5,22 +5,22 @@ description: Aprende sobre sustantivos y sus tipos.
 
 import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
 
-Los **sustantivos** (nouns) son palabras que nombran personas, lugares, cosas, animales o ideas. Son como las **variables** en programación: identifican y almacenan información sobre entidades del mundo real. Cuando hablas o escribes en inglés, los sustantivos son los bloques fundamentales de tus oraciones.
+Los **sustantivos** (nouns) son palabras que nombran personas, lugares, cosas, animales o ideas. Son fundamentales en el lenguaje ya que nos permiten identificar y comunicarnos sobre las distintas entidades que nos rodean del mundo real. Cuando hablas o escribes en inglés, los sustantivos son los bloques principales de tus oraciones.
 
 ---
 
 ## ¿Qué es un sustantivo?
 
-Un sustantivo puede ser cualquier cosa que puedas nombrar:
+Un sustantivo puede ser cualquier concepto abstracto o físico que puedas nombrar y distinguir:
 
 ```javascript
-const noun = {
-  people: ["teacher", "Maria", "doctor"],    // personas: profesor, María, doctor
-  places: ["school", "London", "park"],      // lugares: escuela, Londres, parque
-  things: ["book", "computer", "car"],       // cosas: libro, computadora, carro
-  animals: ["dog", "cat", "elephant"],       // animales: perro, gato, elefante
-  ideas: ["love", "freedom", "happiness"]    // ideas: amor, libertad, felicidad
-};
+const nouns = [
+  "teacher",  // persona: profesor
+  "London",   // lugar: Londres
+  "car",      // cosa: carro
+  "cat",      // animal: gato
+  "freedom"   // idea: libertad
+];
 ```
 
 **Ejemplos:**
@@ -38,13 +38,12 @@ Los sustantivos tienen forma **singular** (uno) y **plural** (más de uno). En i
 <Tabs>
 <TabItem label="Plural Regular: -s">
 
-La regla más común es agregar **-s** al final:
+La regla más común es agregar **-s** al final de la palabra:
 
 ```javascript
-const nouns = {
-  singular: ["book", "cat", "car"],       // singular: libro, gato, carro
-  plural: ["books", "cats", "cars"]       // plural: libros, gatos, carros
-};
+// La forma más simple de plural
+let word = "cat";
+let plural = word + "s";  // cats (gatos)
 ```
 
 **Ejemplos:**
@@ -52,38 +51,38 @@ const nouns = {
 - The **dog** is big → The **dogs** are big (El perro es grande → Los perros son grandes)
 - This **chair** is new → These **chairs** are new (Esta silla es nueva → Estas sillas son nuevas)
 - One **student** → Five **students** (Un estudiante → Cinco estudiantes)
-- The **table** is clean → The **tables** are clean (La mesa está limpia → Las mesas están limpias)
 
 </TabItem>
 
 <TabItem label="Plural: -es">
 
-Si el sustantivo termina en **-s, -ss, -sh, -ch, -x, -z**, agrega **-es**:
+Si el sustantivo ya termina en **-s, -ss, -sh, -ch, -x** o **-z**, se debe agregar **-es**:
 
 ```javascript
-const nouns = {
-  singular: ["box", "bus", "glass"],      // singular: caja, autobús, vaso
-  plural: ["boxes", "buses", "glasses"]   // plural: cajas, autobuses, vasos
-};
+let target = "bus";
+
+if (target.endsWith("s")) {
+  target = target + "es"; // buses (autobuses)
+}
 ```
 
 **Ejemplos:**
 - One **dish** → Two **dishes** (Un plato → Dos platos)
 - The **watch** is expensive → The **watches** are expensive (El reloj es caro → Los relojes son caros)
 - A **church** → Many **churches** (Una iglesia → Muchas iglesias)
-- This **brush** → These **brushes** (Este cepillo → Estos cepillos)
 - The **fox** → The **foxes** (El zorro → Los zorros)
 
 </TabItem>
 
 <TabItem label="Plural: consonante + y">
 
-Si termina en **consonante + y**, cambia la **y** por **-ies**:
+Si la palabra termina en consonante seguida en **y**, cambia esa "y" final por **-ies**:
 
 ```javascript
-const nouns = {
-  singular: ["baby", "city", "party"],     // consonante + y: bebé, ciudad, fiesta
-  plural: ["babies", "cities", "parties"]  // plural: bebés, ciudades, fiestas
+const transformToPlural = {
+  baby: "babies",    // consonante + y: bebé
+  city: "cities",    // consonante + y: ciudad
+  party: "parties"   // consonante + y: fiesta
 };
 ```
 
@@ -92,36 +91,33 @@ const nouns = {
 - One **family** → Two **families** (Una familia → Dos familias)
 - A **fly** → Many **flies** (Una mosca → Muchas moscas)
 - The **country** is beautiful → The **countries** are beautiful (El país es hermoso → Los países son hermosos)
-- This **lady** → These **ladies** (Esta señora → Estas señoras)
 
 <Aside type="note" title="Excepción con vocal + y">
-Si termina en **vocal + y**, solo agrega **-s**: boy → boys, key → keys, day → days
+Si termina en vocal seguida de **y**, solo agrega **-s**: boy → **boys**, key → **keys**, day → **days**.
 </Aside>
 
 </TabItem>
 
 <TabItem label="Plurales Irregulares">
 
-Algunos sustantivos tienen plurales **irregulares** que debes memorizar:
+Algunos sustantivos tienen plurales que cambian completamente su forma que debes memorizar:
 
 ```javascript
-const irregular = {
-  "man": "men",         // hombre → hombres
-  "woman": "women",     // mujer → mujeres
-  "child": "children",  // niño → niños
-  "person": "people",   // persona → personas
-  "tooth": "teeth",     // diente → dientes
-  "foot": "feet",       // pie → pies
-  "mouse": "mice"       // ratón → ratones
-};
+const irregularPlurals = [
+  "man -> men",         // hombre → hombres
+  "woman -> women",     // mujer → mujeres
+  "child -> children",  // niño → niños
+  "person -> people",   // persona → personas
+  "tooth -> teeth",     // diente → dientes
+  "foot -> feet"        // pie → pies
+];
 ```
 
-**Ejemplos comunes:**
+**Ejemplos:**
 - The **woman** is tall → The **women** are tall (La mujer es alta → Las mujeres son altas)
 - One **child** plays → Three **children** play (Un niño juega → Tres niños juegan)
 - A **person** waits → Many **people** wait (Una persona espera → Muchas personas esperan)
 - My **foot** hurts → My **feet** hurt (Me duele el pie → Me duelen los pies)
-- The **mouse** is small → The **mice** are small (El ratón es pequeño → Los ratones son pequeños)
 
 </TabItem>
 </Tabs>
@@ -132,17 +128,16 @@ const irregular = {
 
 Los **sustantivos propios** (proper nouns) son nombres específicos de personas, lugares o cosas. En inglés, **siempre** se escriben con mayúscula inicial.
 
-```javascript
-const properNouns = {
-  commonNoun: "city",      // sustantivo común: ciudad (minúscula)
-  properNoun: "London"     // sustantivo propio: Londres (mayúscula)
-};
-```
-
 <Tabs>
 <TabItem label="Nombres de Personas">
 
-Todos los nombres personales llevan mayúscula:
+Todos los nombres orientados a personas llevan siempre mayúsculas iniciales:
+
+```javascript
+// La forma de asignar nombres a las personas
+const brothers = ["David", "Michael"];
+const sisters = ["Jennifer", "Emma"];
+```
 
 **Ejemplos:**
 - **David** is my brother (David es mi hermano)
@@ -154,7 +149,14 @@ Todos los nombres personales llevan mayúscula:
 
 <TabItem label="Nombres de Lugares">
 
-Ciudades, países, continentes, calles, etc.:
+Los nombres sobre lugares y zonas, tales como ciudades, países, continentes y calles:
+
+```javascript
+let location = "";
+
+if (type === "country") location = "Spain";
+if (type === "continent") location = "Africa";
+```
 
 **Ejemplos:**
 - I live in **Spain** (Vivo en España)
@@ -166,7 +168,16 @@ Ciudades, países, continentes, calles, etc.:
 
 <TabItem label="Días, Meses, Fiestas">
 
-A diferencia del español, estos llevan mayúscula:
+A diferencia del español, estos tres conceptos en inglés llevan siempre la respectiva mayúscula:
+
+```javascript
+// Días y meses en inglés siempre van en mayuscula
+const dateInfo = [
+  "Monday",     // Lunes
+  "September",  // Septiembre
+  "Easter"      // Pascua
+];
+```
 
 **Ejemplos:**
 - **Friday** is my birthday (El viernes es mi cumpleaños)
@@ -174,80 +185,86 @@ A diferencia del español, estos llevan mayúscula:
 - We celebrate **Easter** every year (Celebramos Pascua cada año)
 - **Wednesday** is a workday (El miércoles es día laboral)
 
+<Aside type="caution" title="Diferencia con el español en días y meses">
+En inglés, los días de la semana y los meses **siempre** llevan mayúscula: Monday, Tuesday, January, February. En español, estos se escriben con minúscula.
+</Aside>
+
 </TabItem>
 
 <TabItem label="Marcas y Empresas">
 
-Nombres de compañías y productos:
+Para los nombres corporativos sobre compañías y de productos en general también aplicamos mayúsculas:
+
+```javascript
+const companyInfo = {
+  software: "Microsoft",
+  hardware: "Samsung",
+  drink: "Coca-Cola"
+};
+```
 
 **Ejemplos:**
 - She works at **Microsoft** (Ella trabaja en Microsoft)
 - I bought a **Samsung** phone (Compré un teléfono Samsung)
-- He drinks **Coca-Cola** (El bebe Coca-Cola)
-- **Amazon** delivers packages ( Amazon entrega paquetes)
+- He drinks **Coca-Cola** (Él bebe Coca-Cola)
+- **Amazon** delivers packages (Amazon entrega paquetes)
 
 </TabItem>
 </Tabs>
-
-<Aside type="caution" title="Diferencia con el español en días y meses">
-En inglés, los días de la semana y los meses **siempre** llevan mayúscula: Monday, Tuesday, January, February. En español, estos se escriben con minúscula.
-</Aside>
 
 ---
 
 ## Identificación de Sustantivos
 
-Para identificar un sustantivo en una oración, pregúntate:
-- ¿Es el nombre de una persona? → **sustantivo**
-- ¿Es el nombre de un lugar? → **sustantivo**
-- ¿Es el nombre de una cosa? → **sustantivo**
-- ¿Puedo poner "the" o "a" antes? → probablemente **sustantivo**
+Para identificar un sustantivo en una oración, pregúntate internamente:
+- ¿Es el nombre de una persona? → **Sustantivo**
+- ¿Es el nombre de un lugar? → **Sustantivo**
+- ¿Es algo que pertenece a una cosa? → **Sustantivo**
+- ¿Puedo poner las palabras "the" o "a" antes de esa palabra? → Probablemente **sustantivo**
 
-**Ejemplo de análisis:**
+**Ejemplos:**
 
 *The teacher has three books on the table.*
+- El profesor (teacher) tiene tres libros (books) en la mesa (table).
 
 ```javascript
-const sentence = {
-  nouns: ["teacher", "books", "table"],  // sustantivos: profesor, libros, mesa
-  // teacher = persona (singular)
-  // books = cosas (plural)
-  // table = cosa (singular)
+const sentenceAnalyzed = {
+  person: "teacher",     // Sustantivo singular
+  things: "books",       // Sustantivo plural
+  objectPlace: "table"   // Sustantivo singular
 };
 ```
 
 ---
 
-## Errores Comunes
+## Errores comunes
 
 <Aside type="danger" title="Olvidar la -s en plural regular">
-- I have two **book** ⛔
-- I have two **books** (Tengo dos libros) ✅
+Para convertir el singular a la versión de plural de la gran mayoría de sustantivos se debe agregar "-s" al final correctamente.
 
-Recuerda agregar **-s** al plural de la mayoría de sustantivos.
+- I have two book ⛔
+- I have two **books** (Tengo dos libros) ✅
 </Aside>
 
 <Aside type="danger" title="Usar plural irregular como regular">
-- There are many **childs** in the park ⛔
-- There are many **children** in the park (Hay muchos niños en el parque) ✅
+Los plurales irregulares como el paso de child hacia children deben memorizarse sin aplicar la técnica tradicional de solamente agregar una s al final.
 
-Los plurales irregulares como **child → children** deben memorizarse.
+- There are many childs in the park ⛔
+- There are many **children** in the park (Hay muchos niños en el parque) ✅
 </Aside>
 
 <Aside type="danger" title="No usar mayúscula en sustantivos propios">
-- I live in **new york** ⛔
-- I live in **New York** (Vivo en Nueva York) ✅
+Los nombres de lugares referenciados como ciudades, países y demás, siempre llevan la primera inicial en mayúscula de esta manera.
 
-Los nombres de lugares **siempre** llevan mayúscula.
+- I live in new york ⛔
+- I live in **New York** (Vivo en Nueva York) ✅
 </Aside>
 
 <Aside type="danger" title="Confundir reglas de -es y -ies">
-- I see two **foxs** ⛔
-- I see two **foxes** (Veo dos zorros) ✅
-- The **storys** are interesting ⛔
-- The **stories** are interesting (Las historias son interesantes) ✅
+Aplica las reglas correctas requeridas según la respectiva terminación de cada sustantivo sin mezclar ambas.
 
-Aplica las reglas correctas según la **terminación** del sustantivo.
+- I see two foxs ⛔
+- I see two **foxes** (Veo dos zorros) ✅
 </Aside>
 
 ---
