@@ -9,116 +9,62 @@ Los sustantivos en inglés se dividen en dos categorías fundamentales: **contab
 
 ---
 
-## Tipos de Sustantivos
+## ¿Contable o Incontable?
 
-<Tabs>
-  <TabItem label="Contables">
-
-Los sustantivos **contables** son cosas que puedes contar individualmente. Tienen forma singular y plural.
+La prueba más simple es preguntarte si puedes decir "one ___" o "two ___s". Si puedes, el sustantivo es contable. Si no tiene sentido contarlo así, es incontable.
 
 ```javascript
-const countableNouns = [
-  "a book / two books",      // un libro / dos libros
-  "an apple / five apples",  // una manzana / cinco manzanas
-  "a car / three cars",      // un carro / tres carros
-  "a person / many people"   // una persona / muchas personas
-];
+const classify = (noun) => {
+  // ¿Puedes decir "one ___" o "two ___s"?
+  return canCount(noun)
+    ? "countable"     // usa: a/an, many, few
+    : "uncountable";  // usa: some, much, little
+}
 ```
 
 **Ejemplos:**
 
-- I have **three books** (Tengo tres libros)
-- She bought **two apples** (Ella compró dos manzanas)
-- There are **five people** waiting (Hay cinco personas esperando)
-- We visited **many countries** (Visitamos muchos países)
-- He owns **a car** and **a motorcycle** (Él tiene un carro y una motocicleta)
-
-</TabItem>
-
-  <TabItem label="Incontables">
-
-Los sustantivos **incontables** son materiales, líquidos, o conceptos que **no puedes dividir en unidades individuales**.
-
-```javascript
-const uncountableNouns = [
-  "water",        // agua (no "a water")
-  "information",  // información (no "an information")
-  "money",        // dinero (no "a money")
-  "furniture",    // muebles (no "a furniture")
-  "advice"        // consejo (no "an advice")
-];
-```
-
-**Ejemplos:**
-
-- I drink **water** every day (Tomo agua todos los días)
-- She needs **information** (Ella necesita información)
-- They bought **furniture** (Compraron muebles)
-- We don't have **time** (No tenemos tiempo)
-- He gave me good **advice** (Él me dio buen consejo)
+- She has **three books** on the table (Ella tiene tres libros en la mesa)
+- We don't have **time** to wait (No tenemos tiempo para esperar)
+- He bought **a car** last year (Él compró un carro el año pasado)
+- They gave me good **advice** (Me dieron un buen consejo)
+- I need **some money** for the trip (Necesito dinero para el viaje)
 
 <Aside type="caution" title="Incontables que confunden a hispanohablantes">
-Estos son **incontables** en inglés pero contables en español: 
+Estos son **incontables** en inglés pero contables en español:
 - **Information** (información)
 - **Advice** (consejo)
 - **Furniture** (muebles)
 - **Luggage** (equipaje)
 - **Homework** (tarea)
 - **Bread** (pan)
-- **Rice** (arroz).
+- **Rice** (arroz)
 - **Hair** (cabello)
 </Aside>
-
-</TabItem>
-</Tabs>
 
 ---
 
 ## Uso de A/An
 
-Los artículos **a/an** (un/una) solo se usan con sustantivos **contables singulares**. Nunca con incontables.
-
-<Tabs>
-  <TabItem label="Contables">
+Los artículos **a/an** (un/una) solo se usan con sustantivos **contables singulares**. La elección entre los dos depende del **sonido** inicial de la siguiente palabra, no de la letra con la que se escribe. Si el sonido es vocálico usa **an**; si es consontántico usa **a**. Los sustantivos incontables nunca llevan a/an — usan **some** o un contenedor.
 
 ```javascript
-const withA = ["a book", "a car", "a sandwich"];
-// consonante → usa a
-const withAn = ["an apple", "an idea", "an umbrella"];
-// vocal → usa an
+const article = (sound) => sound === "vowel" ? "an" : "a";
+
+// El sonido manda, no la letra:
+// an hour        → 'h' es muda, suena vocal
+// a university   → suena /juː/, como consonante
+// an apple       → suena /æ/, vocal
+// a book         → suena /b/, consonante
 ```
 
 **Ejemplos:**
 
 - I want **a sandwich** (Quiero un sándwich)
 - She needs **an umbrella** (Ella necesita un paraguas)
-- He's reading **a book** (Él está leyendo un libro)
-- We saw **an elephant** (Vimos un elefante)
-
-</TabItem>
-
-  <TabItem label="Incontables">
-
-```javascript
-// Contable → usa a/an
-"a book";             // un libro ✅
-// Incontable → usa some
-"some water";         // algo de agua ✅
-"some information";   // algo de información ✅
-// Incontable con contenedor
-"a glass of water";   // un vaso de agua ✅
-"a piece of advice";  // un consejo ✅
-```
-
-**Ejemplos:**
-
-- I need **water** (not "a water")
-- I need **some water** (Necesito agua)
-- She wants **information** (not "an information")  
-- She wants **some information** (Ella quiere información)
-
-</TabItem>
-</Tabs>
+- We waited **an hour** (Esperamos una hora) — 'h' es muda, suena vocal
+- He is **a university** student (Él es estudiante universitario) — suena /juː/
+- I need **some water** (Necesito agua) — incontable, nunca "a water"
 
 ---
 
@@ -132,10 +78,12 @@ const withAn = ["an apple", "an idea", "an umbrella"];
 Usa **some** en oraciones **afirmativas** para indicar una cantidad indefinida.
 
 ```javascript
-const someUsage = {
-  countable: "I have some books",        // Tengo algunos libros
-  uncountable: "I have some money"       // Tengo algo de dinero
-};
+const sentence = (noun) => `I have some ${noun}.`;
+
+// sentence("books")  → "I have some books."
+// sentence("apples") → "I have some apples."
+// sentence("money")  → "I have some money."
+// sentence("water")  → "I have some water."
 ```
 
 **Ejemplos:**
@@ -152,10 +100,14 @@ const someUsage = {
 Usa **any** en oraciones **negativas** y **preguntas**.
 
 ```javascript
-const anyUsage = {
-  question: "Do you have any books?",       // ¿Tienes algunos libros?
-  negative: "I don't have any money"        // No tengo dinero
+const quantifier = (isQuestion, isNegative) => {
+  if (isQuestion || isNegative) return "any";
+
+  return "some";
 };
+
+// "Do you have any eggs?"   → any (pregunta)
+// "I don't have any money"  → any (negativa)
 ```
 
 **Ejemplos:**
@@ -172,9 +124,9 @@ const anyUsage = {
 Usa **some** en preguntas cuando **ofreces** algo o **pides** algo de manera cortés.
 
 ```javascript
-const someInQuestions = {
-  offering: "Would you like some coffee?",      // ¿Te gustaría café?
-  requesting: "Can I have some water?"          // ¿Puedo tener agua?
+const polite = {
+  offer:   "Would you like some coffee?",  // ¿Te gustaría café?
+  request: "Can I have some water?"        // ¿Puedo tomar agua?
 };
 ```
 
@@ -208,65 +160,131 @@ const drinkContainers = {
 };
 ```
 
-  **Ejemplos:**
+**Ejemplos:**
 
-  - I'd like **a glass of** water (Me gustaría un vaso de agua)
-  - She ordered **a cup of** coffee (Ella pidió una taza de café)
-  - We bought **a loaf of** bread (Compramos una barra de pan)
-  - He ate **a bowl of** soup (Él comió un tazón de sopa)
-  - They shared **a piece of** cake (Ellos compartieron un pedazo de pastel)
+- **A glass of** water (Un vaso de agua)
+- **A cup of** coffee (Una taza de café)
+- **A bottle of** milk (Una botella de leche)
+- **A can of** soda (Una lata de refresco)
+- **A carton of** juice (Un cartón de jugo)
 
-  </TabItem>
+</TabItem>
 
-  <TabItem label="Porciones y Materiales">
-
-Para ingredientes de cocina o materiales físicos, usa unidades de medida.
+  <TabItem label="Comida">
 
 ```javascript
-const portions = {
-  spoonful: "a spoonful of sugar", // una cucharada de azúcar
-  pinch: "a pinch of salt",        // una pizca de sal
-  drop: "a drop of oil",           // una gota de aceite
-  sheet: "a sheet of paper",       // una hoja de papel
-  roll: "a roll of tape",          // un rollo de cinta
-  tube: "a tube of toothpaste"     // un tubo de pasta dental
+const foodContainers = {
+  bowl: "a bowl of",         // un tazón de
+  plate: "a plate of",       // un plato de
+  slice: "a slice of",       // una rebanada de
+  piece: "a piece of",       // un pedazo de
+  loaf: "a loaf of",         // una barra de
+  bar: "a bar of",           // una barra de
+  box: "a box of",           // una caja de
+  bag: "a bag of",           // una bolsa de
+  packet: "a packet of"      // un paquete de
 };
 ```
 
-  **Ejemplos:**
+**Ejemplos:**
 
-  - Add **a pinch of** salt (Añade una pizca de sal)
-  - She used **a spoonful of** honey (Ella usó una cucharada de miel)
-  - Give me **a sheet of** paper (Dame una hoja de papel)
-  - He bought **a tube of** toothpaste (Él compró un tubo de pasta dental)
-  - We need **a roll of** toilet paper (Necesitamos un rollo de papel higiénico)
+- **A bowl of** rice (Un tazón de arroz)
+- **A slice of** bread (Una rebanada de pan)
+- **A piece of** cake (Un pedazo de pastel)
+- **A loaf of** bread (Una barra de pan)
+- **A bag of** sugar (Una bolsa de azúcar)
 
-  </TabItem>
+</TabItem>
 
-  <TabItem label="Conceptos y Grupos">
-
-Para ideas abstractas o colecciones, usa palabras como "piece", "bit" o "bunch".
+  <TabItem label="Porciones">
 
 ```javascript
-const abstract = {
-  piece: "a piece of advice",  // un consejo
-  bit: "a bit of help",        // un poco de ayuda
-  item: "an item of clothing", // una prenda de ropa
-  bunch: "a bunch of grapes",  // un racimo de uvas
-  pile: "a pile of clothes",   // un montón de ropa
-  load: "a load of laundry"    // una carga de ropa
+const portionUnits = {
+  spoonful: "a spoonful of",         // una cucharada de
+  tablespoon: "a tablespoon of",     // una cucharada de
+  teaspoon: "a teaspoon of",         // una cucharadita de
+  pinch: "a pinch of",               // una pizca de
+  drop: "a drop of",                 // una gota de
+  lump: "a lump of"                  // un terrón de
 };
 ```
 
-  **Ejemplos:**
+**Ejemplos:**
 
-  - Can you give me **a piece of** advice? (¿Puedes darme un consejo?)
-  - I need **a bit of** help (Necesito un poco de ayuda)
-  - She bought **an item of** clothing (Ella compró una prenda de ropa)
-  - He picked **a bunch of** flowers (Él recogió un ramo de flores)
-  - There's **a pile of** work to do (Hay un montón de trabajo por hacer)
+- **A spoonful of** sugar (Una cucharada de azúcar)
+- **A tablespoon of** oil (Una cucharada de aceite)
+- **A teaspoon of** salt (Una cucharadita de sal)
+- **A pinch of** salt (Una pizca de sal)
+- **A drop of** water (Una gota de agua)
 
-  </TabItem>
+</TabItem>
+
+  <TabItem label="Conceptos Abstractos">
+
+```javascript
+const abstractUnits = {
+  piece: "a piece of",       // un pedazo de / una pieza de
+  bit: "a bit of",           // un poco de
+  item: "an item of",        // un artículo de
+  sheet: "a sheet of",       // una hoja de
+  article: "an article of"   // un artículo de
+};
+```
+
+**Ejemplos:**
+
+- **A piece of** advice (Un consejo)
+- **A piece of** information (Una información/dato)
+- **A piece of** furniture (Un mueble)
+- **A bit of** help (Un poco de ayuda)
+- **An item of** clothing (Una prenda de ropa)
+
+</TabItem>
+
+  <TabItem label="Materiales">
+
+```javascript
+const materialUnits = {
+  sheet: "a sheet of",       // una hoja de
+  roll: "a roll of",         // un rollo de
+  tube: "a tube of",         // un tubo de
+  jar: "a jar of",           // un frasco de
+  pile: "a pile of",         // un montón de
+  bucket: "a bucket of"      // un balde de
+};
+```
+
+**Ejemplos:**
+
+- **A sheet of** paper (Una hoja de papel)
+- **A roll of** toilet paper (Un rollo de papel higiénico)
+- **A tube of** toothpaste (Un tubo de pasta de dientes)
+- **A jar of** honey (Un frasco de miel)
+- **A bucket of** water (Un balde de agua)
+
+</TabItem>
+
+  <TabItem label="Grupos y Cantidades">
+
+```javascript
+const groupUnits = {
+  bunch: "a bunch of",       // un manojo de / un racimo de
+  pile: "a pile of",         // un montón de
+  heap: "a heap of",         // un montón de
+  load: "a load of",         // una carga de
+  ton: "a ton of"            // una tonelada de
+};
+```
+
+**Ejemplos:**
+
+- **A bunch of** grapes (Un racimo de uvas)
+- **A bunch of** flowers (Un ramo de flores)
+- **A pile of** books (Un montón de libros)
+- **A heap of** clothes (Un montón de ropa)
+- **A load of** laundry (Una carga de ropa)
+
+</TabItem>
 </Tabs>
 
 ---
