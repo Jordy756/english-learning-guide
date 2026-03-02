@@ -14,13 +14,13 @@ Los **sustantivos** (nouns) son palabras que nombran personas, lugares, cosas, a
 Un sustantivo puede ser cualquier concepto abstracto o físico que puedas nombrar y distinguir:
 
 ```javascript
-const nouns = [
-  "teacher",  // persona: profesor
-  "London",   // lugar: Londres
-  "car",      // cosa: carro
-  "cat",      // animal: gato
-  "freedom"   // idea: libertad
-];
+const noun = {
+  people: ["teacher", "Maria", "doctor"],    // personas: profesor, María, doctor
+  places: ["school", "London", "park"],      // lugares: escuela, Londres, parque
+  things: ["book", "computer", "car"],       // cosas: libro, computadora, carro
+  animals: ["dog", "cat", "elephant"],       // animales: perro, gato, elefante
+  ideas: ["love", "freedom", "happiness"]    // ideas: amor, libertad, felicidad
+};
 ```
 
 **Ejemplos:**
@@ -61,7 +61,10 @@ Si el sustantivo ya termina en **-s, -ss, -sh, -ch, -x** o **-z**, se debe agreg
 ```javascript
 let target = "bus";
 
-if (target.endsWith("s")) {
+if (
+  target.endsWith("s") || target.endsWith("ss") || target.endsWith("sh") ||
+  target.endsWith("ch") || target.endsWith("x") || target.endsWith("z")
+) {
   target = target + "es"; // buses (autobuses)
 }
 ```
@@ -221,19 +224,6 @@ Para identificar un sustantivo en una oración, pregúntate internamente:
 - ¿Es el nombre de un lugar? → **Sustantivo**
 - ¿Es algo que pertenece a una cosa? → **Sustantivo**
 - ¿Puedo poner las palabras "the" o "a" antes de esa palabra? → Probablemente **sustantivo**
-
-**Ejemplos:**
-
-*The teacher has three books on the table.*
-- El profesor (teacher) tiene tres libros (books) en la mesa (table).
-
-```javascript
-const sentenceAnalyzed = {
-  person: "teacher",     // Sustantivo singular
-  things: "books",       // Sustantivo plural
-  objectPlace: "table"   // Sustantivo singular
-};
-```
 
 ---
 
