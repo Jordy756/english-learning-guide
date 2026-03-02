@@ -82,10 +82,13 @@ if (
 Si la palabra termina en consonante seguida en **y**, cambia esa "y" final por **-ies**:
 
 ```javascript
-const transformToPlural = {
-  baby: "babies",    // consonante + y: bebé
-  city: "cities",    // consonante + y: ciudad
-  party: "parties"   // consonante + y: fiesta
+const toPlural = (word) => {
+  // Si termina en consonante + y, cambiamos por ies
+  if (word.endsWith("y")) {
+    return word.slice(0, -1) + "ies"; // baby -> babies
+  }
+  
+  return word + "s"; // Caso general
 };
 ```
 
