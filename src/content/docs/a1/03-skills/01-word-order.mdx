@@ -27,11 +27,11 @@ const sentence = {
 
 **Ejemplos:**
 
-- I drink water (Yo tomo agua)
-- She reads books (Ella lee libros)
-- They play soccer (Ellos juegan fútbol)
-- We watch movies (Vemos películas)
-- He speaks English (Él habla inglés)
+- I **drink** water (Yo tomo agua)
+- She **reads** books (Ella lee libros)
+- They **play** soccer (Ellos juegan fútbol)
+- We **watch** movies (Vemos películas)
+- He **speaks** English (Él habla inglés)
 
 <Aside type="note" title="El sujeto es obligatorio en inglés">
 En español puedes omitir el sujeto ("Como pizza"), pero en inglés el sujeto **siempre** debe estar presente: **I** eat pizza.
@@ -58,11 +58,11 @@ const extendedSentence = {
 
 **Ejemplos:**
 
-- She plays tennis well at the park on Sundays (Ella juega tenis bien en el parque los domingos)
-- They eat lunch quickly in the cafeteria at noon (Ellos almuerzan rápido en la cafetería al mediodía)
-- We watch movies together at the cinema on Fridays (Vemos películas juntos en el cine los viernes)
-- He reads books quietly in his room every night (Él lee libros silenciosamente en su habitación todas las noches)
-- I drink coffee slowly at the café in the morning (Tomo café lentamente en el café por la mañana)
+- She plays tennis **well** at **the park** on **Sundays** (Ella juega tenis bien en el parque los domingos)
+- They eat lunch **quickly** in **the cafeteria** at **noon** (Ellos almuerzan rápido en la cafetería al mediodía)
+- We watch movies **together** at **the cinema** on **Fridays** (Vemos películas juntos en el cine los viernes)
+- He reads books **quietly** in **his room** **every night** (Él lee libros silenciosamente en su habitación todas las noches)
+- I drink coffee **slowly** at **the café** in **the morning** (Tomo café lentamente en el café por la mañana)
 
 <Aside type="note" title="No es obligatorio usar todos los elementos">
 No necesitas incluir siempre manera, lugar y tiempo en cada oración. Usa solo los elementos que necesites para comunicar tu mensaje, pero respeta el orden cuando los uses.
@@ -114,23 +114,17 @@ Los **adverbios** cambian de posición según su tipo:
 Los adverbios de frecuencia van **antes del verbo principal**, pero **después del verbo "be"**.
 
 ```javascript
-const frequency = {
-  adverbs: ["always", "usually", "often", "sometimes", "never"],
-  // frecuencia: [siempre, usualmente, a menudo, a veces, nunca]
+const verb = "eat";
 
-  beforeVerb: "I always eat breakfast", // Siempre desayuno
-  afterBe: "She is usually happy"         // Ella usualmente está feliz
-};
+const result = (verb === "be") 
+  ? "She is always happy" 
+  : "She always studies";
 ```
-
-Estos adverbios significan siempre, usualmente, a menudo, a veces y nunca. Van **antes del verbo principal** pero **después del verbo "be"**.
 
 **Ejemplos:**
 
 - I **always** drink water (Siempre tomo agua)
 - They **usually** arrive early (Usualmente llegan temprano)
-- We **often** play tennis (A menudo jugamos tenis)
-- He **sometimes** reads books (A veces lee libros)
 - She **never** eats meat (Nunca come carne)
 - I **am always** tired (Siempre estoy cansado)
 - She **is usually** happy (Usualmente está feliz)
@@ -142,16 +136,12 @@ Estos adverbios significan siempre, usualmente, a menudo, a veces y nunca. Van *
 Los adverbios de manera van **después del verbo u objeto**.
 
 ```javascript
-const manner = {
-  adverbs: ["quickly", "slowly", "carefully"],
-  // manera: [rápidamente, lentamente, cuidadosamente]
-
-  afterVerb: "She spoke quietly", // Ella habló silenciosamente
-  afterObject: "He drives the car slowly" // Él maneja el carro lentamente
-};
+const manner = [
+  "She spoke quietly",         // habló silenciosamente
+  "He drives the car slowly",  // maneja el carro lentamente
+  "They work hard"             // trabajan duro
+];
 ```
-
-Estos adverbios significan rápidamente, lentamente y cuidadosamente. Van **después del verbo u objeto**.
 
 **Ejemplos:**
 
@@ -169,18 +159,10 @@ Los adverbios de tiempo y lugar pueden ir al **principio** o al **final** de la 
 
 ```javascript
 const timePlace = {
-  time: ["today", "yesterday", "tomorrow", "now"],
-  // tiempo: [hoy, ayer, mañana, ahora]
-
-  place: ["here", "there", "everywhere"],
-  // lugar: [aquí, allí, en todas partes]
-
-  atStart: "Today I work", // Hoy trabajo
-  atEnd: "I work today" // Trabajo hoy
+  atStart: "Today I work here",  // hoy trabajo aquí
+  atEnd:   "I work here today"   // trabajo aquí hoy
 };
 ```
-
-Los adverbios de **tiempo** (hoy, ayer, mañana, ahora) y **lugar** (aquí, allí, en todas partes) pueden ir al principio o al final de la oración.
 
 **Ejemplos:**
 
