@@ -5,7 +5,7 @@ description: Aprende a usar el verbo más importante del inglés.
 
 import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
 
-El verbo **to be** (ser/estar) es el cimiento del inglés, como la clase base en programación: casi todo lo demás se construye sobre ella. A diferencia del español, en inglés **un solo verbo** cubre tanto "ser" como "estar", y el contexto determina el significado, por lo que dominarlo es esencial ya que lo usarás en prácticamente cada conversación, desde presentaciones hasta descripciones de estado y ubicación.
+El verbo **to be** (ser/estar) es el cimiento del inglés: casi todo lo demás en el idioma se construye prestando atención a las reglas de este. A diferencia del español, en inglés **un solo verbo** cubre tanto la equivalencia a "ser" como la de "estar", y el contexto de la oración determina el significado correcto, por lo que dominarlo es esencial. Lo usarás en prácticamente cada conversación, desde presentaciones personales hasta descripciones de estado y ubicación.
 
 ---
 
@@ -15,13 +15,13 @@ El verbo **to be** (ser/estar) es el cimiento del inglés, como la clase base en
   <TabItem label="Presente">
     ```javascript
     const toBePresent = {
-      I: "am",           // yo soy/estoy
-      you: "are",        // tú eres/estás
-      he: "is",          // él es/está
-      she: "is",         // ella es/está
-      it: "is",          // eso/ello es/está
-      we: "are",         // nosotros somos/estamos
-      they: "are"        // ellos son/están
+      I: "am",    // yo soy/estoy
+      you: "are", // tú eres/estás
+      he: "is",   // él es/está
+      she: "is",  // ella es/está
+      it: "is",   // eso/ello es/está
+      we: "are",  // nosotros somos/estamos
+      they: "are" // ellos son/están
     };
     ```
 
@@ -40,13 +40,13 @@ El verbo **to be** (ser/estar) es el cimiento del inglés, como la clase base en
   <TabItem label="Pasado">
     ```javascript
     const toBePast = {
-      I: "was",          // yo era/estaba/fui/estuve
-      you: "were",       // tú eras/estabas/fuiste/estuviste
-      he: "was",         // él era/estaba/fue/estuvo
-      she: "was",        // ella era/estaba/fue/estuvo
-      it: "was",         // era/estaba/fue/estuvo
-      we: "were",        // éramos/estábamos/fuimos/estuvimos
-      they: "were"       // eran/estaban/fueron/estuvieron
+      I: "was",     // yo era/estaba/fui/estuve
+      you: "were",  // tú eras/estabas/fuiste/estuviste
+      he: "was",    // él era/estaba/fue/estuvo
+      she: "was",   // ella era/estaba/fue/estuvo
+      it: "was",    // era/estaba/fue/estuvo
+      we: "were",   // éramos/estábamos/fuimos/estuvimos
+      they: "were"  // eran/estaban/fueron/estuvieron
     };
     ```
 
@@ -77,15 +77,15 @@ En presente, las estructuras con to be son directas y siguen patrones simples. L
   <TabItem label="Afirmativa">
     ```javascript
     const affirmative = {
-      structure: "Subject + am/is/are + complement",
+      structure: "Sujeto + verbo to be + complemento",
       examples: [
-        "I am happy",          // Estoy feliz
-        "You are tall",        // Eres alto
-        "He is a teacher",     // Él es profesor
-        "She is busy",         // Ella está ocupada
-        "It is cold",          // Está frío
-        "We are ready",        // Estamos listos
-        "They are students"    // Ellos son estudiantes
+        "I am happy",       // Estoy feliz
+        "You are tall",     // Eres alto
+        "He is a teacher",  // Él es profesor
+        "She is busy",      // Ella está ocupada
+        "It is cold",       // Está frío
+        "We are ready",     // Estamos listos
+        "They are students" // Ellos son estudiantes
       ]
     };
     ```
@@ -94,15 +94,15 @@ En presente, las estructuras con to be son directas y siguen patrones simples. L
   <TabItem label="Negativa">
     ```javascript
     const negative = {
-      structure: "Subject + am/is/are + not + complement",
+      structure: "Sujeto + verbo to be + not + complemento",
       examples: [
-        "I am not tired",         // No estoy cansado
-        "You are not wrong",      // No estás equivocado
-        "He is not here",         // Él no está aquí
-        "She is not a lawyer",    // Ella no es abogada
-        "It is not expensive",    // No es caro
-        "We are not late",        // No estamos tarde
-        "They are not ready"      // No están listos
+        "I am not tired",       // No estoy cansado
+        "You are not wrong",    // No estás equivocado
+        "He is not here",       // Él no está aquí
+        "She is not a lawyer",  // Ella no es abogada
+        "It is not expensive",  // No es caro
+        "We are not late",      // No estamos tarde
+        "They are not ready"    // No están listos
       ]
     };
     ```
@@ -113,25 +113,27 @@ En presente, las estructuras con to be son directas y siguen patrones simples. L
   <TabItem label="Pregunta">
     ```javascript
     const question = {
-      structure: "Am/Is/Are + subject + complement + ?",
+      structure: "Verbo to be + sujeto + complemento + ?",
       examples: [
-        "Am I late?",              // ¿Estoy tarde?
-        "Are you okay?",           // ¿Estás bien?
-        "Is he your brother?",     // ¿Es él tu hermano?
-        "Is she at work?",         // ¿Está ella en el trabajo?
-        "Is it ready?",            // ¿Está listo?
-        "Are we lost?",            // ¿Estamos perdidos?
-        "Are they coming?"         // ¿Vienen ellos?
+        "Am I late?",           // ¿Estoy tarde?
+        "Are you okay?",        // ¿Estás bien?
+        "Is he your brother?",  // ¿Es él tu hermano?
+        "Is she at work?",      // ¿Está ella en el trabajo?
+        "Is it ready?",         // ¿Está listo?
+        "Are we lost?",         // ¿Estamos perdidos?
+        "Are they coming?"      // ¿Vienen ellos?
       ]
     };
     ```
     
     Para preguntar, **invierte** el orden: pon el verbo to be **antes** del sujeto.
 
-    **Respuestas cortas:**
+    <Aside type="tip" title="Respuestas cortas">
+    Para responder con "Sí" o "No", contesta con el verbo directamente:
     - **Are** you ready? → Yes, I **am** / No, I **am** not
     - **Is** she a doctor? → Yes, she **is** / No, she **is** not
     - **Are** they from Canada? → Yes, they **are** / No, they **are** not
+    </Aside>
   </TabItem>
 </Tabs>
 
@@ -145,15 +147,15 @@ Las estructuras en pasado funcionan exactamente igual que en presente, pero usan
   <TabItem label="Afirmativa">
     ```javascript
     const pastAffirmative = {
-      structure: "Subject + was/were + complement",
+      structure: "Sujeto + verbo to be + complemento",
       examples: [
-        "I was tired yesterday",      // Estaba cansado ayer
-        "You were right",             // Tenías razón
-        "He was a student",           // Él era estudiante
-        "She was at home",            // Ella estaba en casa
-        "It was cold",                // Estaba frío
-        "We were friends",            // Éramos amigos
-        "They were at the party"      // Estaban en la fiesta
+        "I was tired yesterday",  // Estaba cansado ayer
+        "You were right",         // Tenías razón
+        "He was a student",       // Él era estudiante
+        "She was at home",        // Ella estaba en casa
+        "It was cold",            // Estaba frío
+        "We were friends",        // Éramos amigos
+        "They were at the party"  // Estaban en la fiesta
       ]
     };
     ```
@@ -162,15 +164,15 @@ Las estructuras en pasado funcionan exactamente igual que en presente, pero usan
   <TabItem label="Negativa">
     ```javascript
     const pastNegative = {
-      structure: "Subject + was/were + not + complement",
+      structure: "Sujeto + verbo to be + not + complemento",
       examples: [
-        "I was not / wasn't there",         // No estaba ahí
-        "You were not / weren't late",      // No llegaste tarde
-        "He was not / wasn't happy",        // Él no estaba feliz
-        "She was not / wasn't a doctor",    // Ella no era doctora
-        "It was not / wasn't easy",         // No era fácil
-        "We were not / weren't ready",      // No estábamos listos
-        "They were not / weren't here"      // No estaban aquí
+        "I was not / wasn't there",       // No estaba ahí
+        "You were not / weren't late",    // No llegaste tarde
+        "He was not / wasn't happy",      // Él no estaba feliz
+        "She was not / wasn't a doctor",  // Ella no era doctora
+        "It was not / wasn't easy",       // No era fácil
+        "We were not / weren't ready",    // No estábamos listos
+        "They were not / weren't here"    // No estaban aquí
       ]
     };
     ```
@@ -181,7 +183,7 @@ Las estructuras en pasado funcionan exactamente igual que en presente, pero usan
   <TabItem label="Pregunta">
     ```javascript
     const pastQuestion = {
-      structure: "Was/Were + subject + complement + ?",
+      structure: "Verbo to be + sujeto + complemento + ?",
       examples: [
         "Was I wrong?",                // ¿Estaba equivocado?
         "Were you at work?",           // ¿Estabas en el trabajo?
@@ -196,14 +198,16 @@ Las estructuras en pasado funcionan exactamente igual que en presente, pero usan
 
     Para preguntar, **invierte** el orden: pon was/were **antes** del sujeto.
 
-    **Respuestas cortas:**
+    <Aside type="tip" title="Respuestas cortas">
+    Para responder con "Sí" o "No", contesta con el verbo directamente:
     - **Were** you there? → Yes, I **was** / No, I **wasn't**
     - **Was** he angry? → Yes, he **was** / No, he **wasn't**
     - **Were** they happy? → Yes, they **were** / No, they **weren't**
+    </Aside>
   </TabItem>
 </Tabs>
 
-**Ejemplos en contexto:**
+**Ejemplos:**
 
 - I **was** born in 1990 (Nací en 1990)
 - The weather **was** beautiful yesterday (El clima estuvo hermoso ayer)
@@ -213,63 +217,41 @@ Las estructuras en pasado funcionan exactamente igual que en presente, pero usan
 
 ---
 
-## Errores Comunes
+## Errores comunes
 
 <Aside type="danger" title="Olvidar el verbo to be">
-En español puedes decir "Yo estudiante", pero en inglés **siempre** necesitas el verbo:
+En español puedes decir "Yo estudiante", pero en inglés **siempre** necesitas un verbo conector para los pronombres o los sujetos en general.
 
-- I student / She doctor / We happy ⛔
+- I student ⛔
 - I **am** a student (Soy estudiante) ✅
-- She **is** a doctor (Ella es doctora) ✅
-- We **are** happy (Estamos felices) ✅
-</Aside>
-
-<Aside type="danger" title="Usar am/is/are con otros verbos incorrectamente">
-El verbo to be NO se combina con otros verbos en presente simple:
-
-- I **am** work / She **is** study ⛔
-- I work (Yo trabajo) ✅
-- She studies (Ella estudia) ✅
-
-Excepción: En presente continuo sí se usa: "I **am working**" (Estoy trabajando).
 </Aside>
 
 <Aside type="danger" title="Confundir it's con its">
-**It's** = It **is** (contracción del verbo) | **Its** = posesivo (su, de ello)
+Es clave recordar que **it's** se refiere a la unión del pronombre **it** con el verbo **is** y **its** en cambio se refiere al uso posesivo o de pertenencia, escrito siempre sin apóstrofe.
 
-- **It's** cold today (Está frío hoy) ✅
-- The dog lost **its** toy (El perro perdió su juguete) ✅
 - The dog lost it's toy ⛔
+- The dog lost **its** toy (El perro perdió su juguete) ✅
 </Aside>
 
 <Aside type="danger" title="Decir I have X years para la edad">
-En español dices "Tengo 25 años", pero en inglés usas **to be**:
+En español dices que "tienes" una edad en específico, pero en inglés en realidad la edad "se es", usas **to be** para expresar que eres esa cantidad en tiempo ("soy [x] años viejo").
 
 - I have 25 years ⛔
 - I **am** 25 years old (Tengo 25 años) ✅
-- She **is** 30 (Ella tiene 30) ✅
-
-**Nota:** En inglés se dice "I'm 25 years old" (literalmente "Soy 25 años viejo"), no "I have 25 years" como en español.
 </Aside>
 
 <Aside type="danger" title="Confundir was/were según el sujeto">
-En pasado, usa **was** con I/he/she/it y **were** con you/we/they:
+En tiempo pasado, usa estrictamente **was** con I/he/she/it y **were** con you/we/they como acompañantes en los pronombres.
 
 - I **were** at home yesterday ⛔
-- They **was** happy ⛔
 - I **was** at home yesterday (Estaba en casa ayer) ✅
-- They **were** happy (Estaban felices) ✅
 </Aside>
 
 <Aside type="danger" title="Usar to be con otros verbos en presente simple">
-No combines **am/is/are** con otros verbos en presente simple:
+No combines **am/is/are** con otros verbos en presente simple nunca, ya que los otros verbos por su cuenta expresan su misma acción y el *To Be* se reserva como puente o único verbo de una oración expresando estado.
 
 - I **am go** to school ⛔
-- She **is study** English ⛔
 - I **go** to school (Voy a la escuela) ✅
-- She **studies** English (Ella estudia inglés) ✅
-
-Solo se combinan en presente continuo: "I **am going**", "She **is studying**".
 </Aside>
 
 ---
