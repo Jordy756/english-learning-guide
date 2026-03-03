@@ -78,6 +78,15 @@ A diferencia del español, el presente simple en inglés tiene una particularida
 Si puedes pronunciar el verbo + "s" fácilmente, usa **-s**. Si suena raro o difícil (como "watchs"), necesitas **-es**.
 </Aside>
 
+<Aside type="note" title="Verbos que nunca cambian">
+Los **verbos modales** (can, could, would, should, may, might, must, will, shall) **nunca** añaden -s, -es o -ies, sin importar el sujeto:
+- I **can** swim / She **can** swim ✅
+- He **must** work / They **must** work ✅
+- She **cans** swim / He **musts** work ⛔
+
+Estos verbos tienen reglas especiales que aprenderás en [Verbos Modales](/a2/02-grammar/11-modal-verbs/).
+</Aside>
+
 ---
 
 ## Estructura del Presente Simple
@@ -86,7 +95,7 @@ Si puedes pronunciar el verbo + "s" fácilmente, usa **-s**. Si suena raro o dif
   <TabItem label="Afirmativa">
     ```javascript
     const affirmative = {
-      structure: "Subject + verb (+ s/es)",
+      structure: "Sujeto + verbo (+ s/es)",
       examples: [
         "I work from home",        // Trabajo desde casa
         "You speak English",       // Hablas inglés
@@ -110,11 +119,11 @@ Si puedes pronunciar el verbo + "s" fácilmente, usa **-s**. Si suena raro o dif
   <TabItem label="Negativa">
     ```javascript
     const negative = {
-      structure: "Subject + don't/doesn't + verb",
-      helpers: {
-        "I/you/we/they": "don't",
-        "he/she/it": "doesn't"
-      },
+      structure: "Sujeto + do not/does not + verbo en forma base",
+      helpers: [
+        "do not (don't)",     // para I, you, we, they
+        "does not (doesn't)"  // para he, she, it
+      ],
       examples: [
         "I don't work on Sundays",     // No trabajo los domingos
         "You don't like pizza",        // No te gusta la pizza
@@ -133,16 +142,22 @@ Si puedes pronunciar el verbo + "s" fácilmente, usa **-s**. Si suena raro o dif
     - John doesn't **drink** alcohol (John no bebe alcohol)
     - I don't **speak** French (No hablo francés)
     - They don't **live** together (Ellos no viven juntos)
+
+    <Aside type="note" title="Contracciones">
+    En el habla cotidiana y escritura informal, es muy común usar las formas contraídas:
+    - **do not** = don't
+    - **does not** = doesn't
+    </Aside>
   </TabItem>
   
   <TabItem label="Pregunta">
     ```javascript
     const question = {
-      structure: "Do/Does + subject + verb + ?",
-      helpers: {
-        "I/you/we/they": "Do",
-        "he/she/it": "Does"
-      },
+      structure: "Do/Does + sujeto + verbo en forma base + ?",
+      helpers: [
+        "Do",   // para I, you, we, they
+        "Does"  // para he, she, it
+      ],
       examples: [
         "Do I know you?",              // ¿Te conozco?
         "Do you like music?",          // ¿Te gusta la música?
@@ -155,23 +170,22 @@ Si puedes pronunciar el verbo + "s" fácilmente, usa **-s**. Si suena raro o dif
     };
     ```
 
-    **Respuestas cortas:**
-    - Do you **work**? → Yes, I do / No, I don't
-    - Does she **study**? → Yes, she does / No, she doesn't
-
     **Ejemplos:**
     - Do you **play** any instrument? (¿Tocas algún instrumento?)
     - Does your sister **work** downtown? (¿Tu hermana trabaja en el centro?)
     - Do they **understand** English? (¿Ellos entienden inglés?)
     - Does the bus **stop** here? (¿El autobús para aquí?)
     - Do you **remember** me? (¿Te acuerdas de mí?)
+
+    **Repuestas cortas:**
+    - Yes, I **do** / No, I **don't**
+    - Yes, she **does** / No, she **doesn't**
+    - Yes, they **do** / No, they **don't**
   </TabItem>
 </Tabs>
 
-<Aside type="caution" title="Con auxiliares, el verbo vuelve a forma base">
-Cuando usas auxiliares (**do, does, don't, doesn't**), el verbo principal **siempre** vuelve a su forma base, sin importar el sujeto:
-- She doesn't work / Does he play? ✅
-- She doesn't works / Does he plays? ⛔
+<Aside type="tip" title="Combinación con adverbios de frecuencia">
+El presente simple se usa frecuentemente con [adverbios de frecuencia](/a2/01-basics/02-adverbs/#adverbios-de-frecuencia) como **always**, **usually**, **sometimes**, **never**, etc. para describir qué tan seguido haces algo.
 </Aside>
 
 ---
@@ -186,7 +200,7 @@ En presente simple, los verbos con he, she o it siempre deben llevar una termina
 </Aside>
 
 <Aside type="danger" title="Añadir -s cuando hay auxiliar">
-Cuando usas los auxiliares do, does, don't o doesn't, el verbo principal siempre vuelve a su forma base, sin importar el sujeto.
+Cuando usas los auxiliares do, does, don't o doesn't, el verbo principal siempre vuelve a su **forma base**, sin importar el sujeto.
 
 - Does he **works** here? ⛔
 - Does he **work** here? (¿Trabaja él aquí?) ✅

@@ -22,7 +22,6 @@ Inside each Aside: a brief explanation of why the error happens, followed by the
 - The emoji goes at the very end of the line, after everything including the translation
 - Incorrect example ⛔: bold the incorrect word(s), no translation
 - Correct example ✅: bold the correct word(s), translation in parentheses right before the emoji
-- Never use ~~strikethrough~~
 - Minimum 1 error block, no maximum — include as many as the topic requires
 - Each error gets its own separate `<Aside type="danger">` block
 
