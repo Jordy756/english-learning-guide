@@ -11,21 +11,17 @@ Los **cuantificadores** son palabras que indican cantidad sin especificar un nú
 
 ## Much vs Many
 
-**Much** y **many** significan "mucho/mucha/muchos/muchas", pero se usan con diferentes tipos de sustantivos.
-
-<Tabs>
-  <TabItem label="Many (Contables)">
-
-Usa **many** con sustantivos **contables en plural**. Se refiere a un número grande de elementos individuales.
+**Much** y **many** significan "mucho/mucha/muchos/muchas". Usa **many** con sustantivos **contables en plural** y **much** con sustantivos **incontables**. En oraciones afirmativas es más natural usar **a lot of** en lugar de **much** — decir "I have much time" suena muy formal.
 
 ```javascript
-const manyExamples = [
-  "many books",      // muchos libros
-  "many people",     // muchas personas
-  "many cities",     // muchas ciudades
-  "many questions"   // muchas preguntas
-];
-// solo con sustantivos contables en plural
+const getQuantifier = (noun, type) => {
+  return type === "countable"
+    ? `many ${noun}` // many books, many people
+    : `much ${noun}`; // much water, much time
+};
+
+// getQuantifier("books", "countable")   → "many books"
+// getQuantifier("money", "uncountable") → "much money"
 ```
 
 **Ejemplos:**
@@ -35,83 +31,39 @@ const manyExamples = [
 - She visited **many cities** (Ella visitó muchas ciudades)
 - I don't have **many friends** in this city (No tengo muchos amigos en esta ciudad)
 - Do you have **many questions**? (¿Tienes muchas preguntas?)
-
-</TabItem>
-
-  <TabItem label="Much (Incontables)">
-
-Usa **much** con sustantivos **incontables**. Se refiere a una gran cantidad de algo que no puedes contar.
-
-```javascript
-const askAmount = (noun) => `How much ${noun}?`;
-// askAmount("water")       → "How much water?"
-// askAmount("time")        → "How much time?"
-// askAmount("money")       → "How much money?"
-// solo con sustantivos incontables
-```
-
-**Ejemplos:**
-
 - How **much water** do you drink? (¿Cuánta agua tomas?)
 - I don't have **much time** (No tengo mucho tiempo)
 - She doesn't earn **much money** (Ella no gana mucho dinero)
 - There isn't **much information** available (No hay mucha información disponible)
 - Do you need **much help**? (¿Necesitas mucha ayuda?)
 
-<Aside type="note" title="Much es menos común en afirmativas">
-En oraciones afirmativas, es más natural usar **a lot of** en lugar de **much**. Decir "I have much time" suena muy formal o anticuado. Mejor: "I have a lot of time".
-</Aside>
-
-</TabItem>
-</Tabs>
-
 ---
 
 ## A Lot Of / Lots Of
 
-**A lot of** (formal) y **lots of** (informal) significan "muchos/muchas" y funcionan con **ambos tipos** de sustantivos. Son más versátiles y comunes en conversación.
-
-<Tabs>
-  <TabItem label="Con Contables">
+**A lot of** y **lots of** significan "muchos/muchas" y funcionan con **ambos tipos** de sustantivos — contables e incontables por igual.
 
 ```javascript
-const withCountable = (noun) => `a lot of ${noun}`;
-// withCountable("books")   → "a lot of books"
-// withCountable("people")  → "a lot of people"
-// withCountable("friends") → "a lot of friends"
+const examples = [
+  "a lot of books",      // contable → muchos libros
+  "a lot of water",      // incontable → mucha agua
+  "lots of people",      // contable → muchas personas
+  "lots of time"         // incontable → mucho tiempo
+];
+// funciona igual con contables e incontables
 ```
-
-**Ejemplos:**
 
 - I have **a lot of books** (Tengo muchos libros)
-- There are **lots of people** here (Hay muchas personas aquí)
-- She knows **a lot of languages** (Ella sabe muchos idiomas)
-- We visited **lots of museums** (Visitamos muchos museos)
-- He has **a lot of friends** (Él tiene muchos amigos)
-
-</TabItem>
-
-  <TabItem label="Con Incontables">
-
-```javascript
-const withUncountable = [
-  "a lot of water",      // mucha agua
-  "lots of time",        // mucho tiempo
-  "a lot of money",      // mucho dinero
-  "lots of information"  // mucha información
-];
-```
-
-**Ejemplos:**
-
 - I drink **a lot of water** (Tomo mucha agua)
+- There are **lots of people** here (Hay muchas personas aquí)
 - We have **lots of time** (Tenemos mucho tiempo)
+- She knows **a lot of languages** (Ella sabe muchos idiomas)
 - She makes **a lot of money** (Ella gana mucho dinero)
-- There's **lots of information** online (Hay mucha información en línea)
 - He needs **a lot of help** (Él necesita mucha ayuda)
 
-</TabItem>
-</Tabs>
+<Aside type="note" title="Lots of vs a lot of">
+**Lots of** es más informal que **a lot of** pero el uso es idéntico.
+</Aside>
 
 ---
 
@@ -171,12 +123,11 @@ const aLittle = (noun) => `a little ${noun}`;
 **Sin el artículo "a"**, el significado cambia a una connotación más **negativa** (casi nada):
 
 ```javascript
-const withoutA = {
-  "a few": "algunos (positivo)",     // algunos, suficiente
-  "few": "pocos (negativo)",         // casi ninguno, insuficiente
-  "a little": "un poco (positivo)",  // algo, suficiente
-  "little": "poco (negativo)"        // casi nada, insuficiente
-};
+const aFew    = "a few friends"; // algunos — suficiente
+const few     = "few friends";   // pocos — insuficiente
+
+const aLittle = "a little time"; // algo — suficiente
+const little  = "little time";   // casi nada — insuficiente
 ```
 
 **Ejemplos:**
@@ -252,10 +203,11 @@ const tooExamples = [
 **Enough** significa "suficiente" y funciona con **ambos tipos** de sustantivos. Con sustantivos siempre va antes; con adjetivos va después.
 
 ```javascript
-const enough = (noun, pos) =>
-  pos === "adj"
+const enough = (noun, pos) => {
+  return pos === "adj"
     ? noun + " enough" // good enough → después del adj
     : "enough " + noun; // enough money → antes del sust
+};
 ```
 
   **Ejemplos:**
