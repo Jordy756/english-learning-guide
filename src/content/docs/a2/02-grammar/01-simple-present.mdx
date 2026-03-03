@@ -5,7 +5,7 @@ description: Aprende el tiempo verbal más usado en inglés.
 
 import { Tabs, TabItem, Aside } from '@astrojs/starlight/components';
 
-El **presente simple** es el tiempo verbal más utilizado en inglés. Lo usas para hablar de rutinas y hábitos, hechos generales y verdades universales, gustos y preferencias, y horarios fijos. Es como una función que se ejecuta regularmente: describe lo que haces todos los días, lo que es verdad ahora, o lo que siempre funciona de cierta manera.
+El **presente simple** es el tiempo verbal más utilizado en inglés. Lo usas para hablar de rutinas y hábitos, hechos generales y verdades universales, gustos y preferencias, y horarios fijos. Describe lo que haces todos los días, lo que es siempre verdad, y lo que ocurre en patrones o horarios repetidos.
 
 ---
 
@@ -14,63 +14,79 @@ El **presente simple** es el tiempo verbal más utilizado en inglés. Lo usas pa
 A diferencia del español, el presente simple en inglés tiene una particularidad importante: con los sujetos **he, she, it** (tercera persona singular), el verbo **cambia** añadiendo -s, -es, o -ies según su terminación.
 
 <Tabs>
-  <TabItem label="-s">
-    La mayoría de verbos simplemente añaden **-s** al final.
-    
+  <TabItem label="La mayoría: añade -s">
+    La regla más común. Si el verbo no tiene ninguna terminación especial, simplemente añade **-s** al final:
+
     ```javascript
-    const verbs = {
-      work: "works",      // trabaja
-      play: "plays",      // juega
-      eat: "eats",        // come
-      sleep: "sleeps",    // duerme
-      run: "runs",        // corre
-      like: "likes",      // gusta
-      speak: "speaks"     // habla
-    };
+    // La forma más simple de conjugar en tercera persona
+    let verb = "work";
+    let thirdPerson = verb + "s"; // works (trabaja)
     ```
-    
-    También aplica cuando el verbo termina en **vocal + y**:
-    
-    ```javascript
-    const verbs = {
-      play: "plays",      // juega
-      say: "says",        // dice
-      buy: "buys",        // compra
-      enjoy: "enjoys",    // disfruta
-      pay: "pays"         // paga
-    };
-    ```
+
+    **Ejemplos:**
+    - She **works** from home (Ella trabaja desde casa)
+    - He **eats** breakfast every day (Él desayuna todos los días)
+    - It **runs** very fast (Corre muy rápido)
+    - She **speaks** three languages (Ella habla tres idiomas)
   </TabItem>
-  
-  <TabItem label="-es">
-    Si el verbo termina en **-ch, -sh, -s, -x, -z, -o**, añade **-es**.
-    
+
+  <TabItem label="Vocal + y: también añade -s">
+    Cuando el verbo termina en **vocal + y**, la "y" no cambia. Se aplica la misma regla general y solo se añade **-s**:
+
     ```javascript
-    const verbs = {
-      watch: "watches",   // mira
-      wash: "washes",     // lava
-      kiss: "kisses",     // besa
-      fix: "fixes",       // arregla
-      buzz: "buzzes",     // zumba
-      go: "goes",         // va
-      do: "does"          // hace
-    };
+    // vocal + y: la y no cambia, solo se añade s
+    let verb = "play";
+    let thirdPerson = verb + "s"; // plays (juega)
     ```
+
+    **Ejemplos:**
+    - He **plays** guitar on weekends (Él toca guitarra los fines de semana)
+    - She **says** hello every morning (Ella dice hola cada mañana)
+    - He **buys** coffee every day (Él compra café todos los días)
+    - She **enjoys** reading (Ella disfruta leer)
   </TabItem>
-  
-  <TabItem label="-ies">
-    Si el verbo termina en **consonante + y**, cambia la **y** por **i** y añade **-es**.
-    
+
+  <TabItem label="Terminación difícil: añade -es">
+    Si el verbo termina en **-ch, -sh, -s, -x, -z** u **-o**, pronunciar solo la "s" sonaría raro, así que se añade **-es**:
+
     ```javascript
-    const verbs = {
-      study: "studies",   // estudia
-      try: "tries",       // intenta
-      cry: "cries",       // llora
-      fly: "flies",       // vuela
-      carry: "carries",   // lleva
-      worry: "worries"    // preocupa
+    const verb = "watch";
+
+    if (
+      verb.endsWith("ch") || verb.endsWith("sh") ||
+      verb.endsWith("s")  || verb.endsWith("x")  ||
+      verb.endsWith("z")  || verb.endsWith("o")
+    ) {
+      thirdPerson = verb + "es"; // watches (mira)
+    }
+    ```
+
+    **Ejemplos:**
+    - She **watches** TV at night (Ella ve televisión por la noche)
+    - He **washes** the dishes (Él lava los platos)
+    - She **fixes** computers (Ella arregla computadoras)
+    - He **goes** to the gym (Él va al gimnasio)
+  </TabItem>
+
+  <TabItem label="Consonante + y: cambia a -ies">
+    Si el verbo termina en **consonante + y**, la "y" cambia por **i** y se añade **-es**:
+
+    ```javascript
+    const toThirdPerson = (verb) => {
+      // consonante + y: cambia y por ies
+      if (verb.endsWith("y")) {
+        return verb.slice(0, -1) + "ies"; // study → studies
+      }
+
+      return verb + "s";
     };
     ```
+
+    **Ejemplos:**
+    - She **studies** every night (Ella estudia todas las noches)
+    - He **tries** new things (Él intenta cosas nuevas)
+    - She **carries** her bag (Ella carga su bolsa)
+    - He **worries** too much (Él se preocupa demasiado)
   </TabItem>
 </Tabs>
 
@@ -79,12 +95,7 @@ Si puedes pronunciar el verbo + "s" fácilmente, usa **-s**. Si suena raro o dif
 </Aside>
 
 <Aside type="note" title="Verbos que nunca cambian">
-Los **verbos modales** (can, could, would, should, may, might, must, will, shall) **nunca** añaden -s, -es o -ies, sin importar el sujeto:
-- I **can** swim / She **can** swim ✅
-- He **must** work / They **must** work ✅
-- She **cans** swim / He **musts** work ⛔
-
-Estos verbos tienen reglas especiales que aprenderás en [Verbos Modales](/a2/02-grammar/11-modal-verbs/).
+Los **verbos modales** (can, could, would, should, may, might, must, will, shall) **nunca** añaden -s, -es o -ies, sin importar el sujeto. Estos verbos tienen reglas especiales que aprenderás en [Verbos Modales](/a2/02-grammar/11-modal-verbs/).
 </Aside>
 
 ---
@@ -95,7 +106,7 @@ Estos verbos tienen reglas especiales que aprenderás en [Verbos Modales](/a2/02
   <TabItem label="Afirmativa">
     ```javascript
     const affirmative = {
-      structure: "Sujeto + verbo (+ s/es)",
+      structure: "Sujeto + verbo (+ s/es/ies) + complemento",
       examples: [
         "I work from home",        // Trabajo desde casa
         "You speak English",       // Hablas inglés
@@ -119,7 +130,7 @@ Estos verbos tienen reglas especiales que aprenderás en [Verbos Modales](/a2/02
   <TabItem label="Negativa">
     ```javascript
     const negative = {
-      structure: "Sujeto + do not/does not + verbo en forma base",
+      structure: "Sujeto + do not/does not + verbo en forma base + complemento",
       helpers: [
         "do not (don't)",     // para I, you, we, they
         "does not (doesn't)"  // para he, she, it
@@ -142,18 +153,12 @@ Estos verbos tienen reglas especiales que aprenderás en [Verbos Modales](/a2/02
     - John doesn't **drink** alcohol (John no bebe alcohol)
     - I don't **speak** French (No hablo francés)
     - They don't **live** together (Ellos no viven juntos)
-
-    <Aside type="note" title="Contracciones">
-    En el habla cotidiana y escritura informal, es muy común usar las formas contraídas:
-    - **do not** = don't
-    - **does not** = doesn't
-    </Aside>
   </TabItem>
   
   <TabItem label="Pregunta">
     ```javascript
     const question = {
-      structure: "Do/Does + sujeto + verbo en forma base + ?",
+      structure: "Do/Does + sujeto + verbo en forma base + complemento?",
       helpers: [
         "Do",   // para I, you, we, they
         "Does"  // para he, she, it
@@ -177,10 +182,11 @@ Estos verbos tienen reglas especiales que aprenderás en [Verbos Modales](/a2/02
     - Does the bus **stop** here? (¿El autobús para aquí?)
     - Do you **remember** me? (¿Te acuerdas de mí?)
 
-    **Repuestas cortas:**
+    <Aside type="tip" title="Respuestas cortas">
     - Yes, I **do** / No, I **don't**
     - Yes, she **does** / No, she **doesn't**
     - Yes, they **do** / No, they **don't**
+    </Aside>
   </TabItem>
 </Tabs>
 
@@ -191,6 +197,15 @@ El presente simple se usa frecuentemente con [adverbios de frecuencia](/a2/01-ba
 ---
 
 ## Errores Comunes
+
+<Aside type="danger" title="Añadir -s a los verbos modales">
+Los verbos modales nunca cambian con ningún sujeto, sin importar si es he, she o it.
+
+- She **cans** swim ⛔
+- She **can** swim (Ella puede nadar) ✅
+- He **musts** work ⛔
+- He **must** work (Él debe trabajar) ✅
+</Aside>
 
 <Aside type="danger" title="Olvidar la -s en tercera persona">
 En presente simple, los verbos con he, she o it siempre deben llevar una terminación especial (-s, -es o -ies).

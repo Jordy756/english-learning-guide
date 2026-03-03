@@ -1,11 +1,11 @@
 ---
 title: Presente Continuo
-description: Expresa acciones que están ocurriendo ahora.
+description: Expresa acciones que están ocurriendo ahora
 ---
 
-import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
+import { Tabs, TabItem, Aside } from '@astrojs/starlight/components';
 
-El presente continuo (present continuous) es como una función que se ejecuta en tiempo real: describe acciones que están ocurriendo en este momento o en un período temporal actual. Se forma con el verbo **to be + verbo-ing**, y es esencial para hablar de lo que está pasando ahora, planes futuros cercanos, o situaciones temporales, siendo uno de los tiempos verbales más usados en conversaciones cotidianas.
+El **presente continuo** (present continuous) describe acciones que están ocurriendo en este momento o en un período temporal actual. Se forma con el verbo **to be + verbo-ing**, y es esencial para hablar de lo que está pasando ahora, planes futuros cercanos y situaciones temporales. Es uno de los tiempos verbales más usados en conversaciones cotidianas.
 
 ---
 
@@ -18,16 +18,14 @@ Reglas para añadir **-ing** al verbo:
     Añade **-ing** directamente al verbo:
     
     ```javascript
-    const regularVerbs = {
-      "work": "working",     // trabajar → trabajando
-      "play": "playing",     // jugar → jugando
-      "read": "reading",     // leer → leyendo
-      "eat": "eating",       // comer → comiendo
-      "study": "studying"    // estudiar → estudiando
-    };
+    const verbs = ["work", "play", "read", "eat", "study"];
+    const ingVerbs = verbs.map((verb) => verb + "ing");
+
+    console.log(ingVerbs);
+    // Salida: ["working", "playing", "reading", "eating", "studying"]
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
     
     - work → **working** (trabajar → trabajando)
     - play → **playing** (jugar → jugando)
@@ -39,37 +37,33 @@ Reglas para añadir **-ing** al verbo:
     Quita la **e** final y añade **-ing**:
     
     ```javascript
-    const eVerbs = {
-      "make": "making",      // hacer → haciendo
-      "write": "writing",    // escribir → escribiendo
-      "come": "coming",      // venir → viniendo
-      "live": "living",      // vivir → viviendo
-      "take": "taking"       // tomar → tomando
-    };
+    const verbs = ["make", "write", "dance", "drive"];
+    const ingVerbs = verbs.map((verb) => verb.slice(0, -1) + "ing");
+
+    console.log(ingVerbs);
+    // Salida: ["making", "writing", "dancing", "driving"]
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
     
-    - make → mak~~e~~ → **making** (hacer → haciendo)
-    - write → writ~~e~~ → **writing** (escribir → escribiendo)
-    - come → com~~e~~ → **coming** (venir → viniendo)
-    - live → liv~~e~~ → **living** (vivir → viviendo)
+    - make → **making** (hacer → haciendo)
+    - write → **writing** (escribir → escribiendo)
+    - come → **coming** (venir → viniendo)
+    - live → **living** (vivir → viviendo)
   </TabItem>
   
   <TabItem label="Doblar consonante">
     Si el verbo termina en **consonante + vocal + consonante** y tiene acento en la última sílaba, dobla la última consonante:
     
     ```javascript
-    const doubleConsonant = {
-      "run": "running",      // correr → corriendo (n→nn)
-      "sit": "sitting",      // sentar → sentando (t→tt)
-      "swim": "swimming",    // nadar → nadando (m→mm)
-      "stop": "stopping",    // parar → parando (p→pp)
-      "plan": "planning"     // planear → planeando (n→nn)
-    };
+    const verbs = ["run", "swim", "sit", "begin"];
+    const ingVerbs = verbs.map((verb) => verb + verb.slice(-1) + "ing");
+
+    console.log(ingVerbs);
+    // Salida: ["running", "swimming", "sitting", "beginning"]
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
     
     - run → ru**n** → ru**nn**ing (correr → corriendo)
     - sit → si**t** → si**tt**ing (sentar → sentando)
@@ -87,18 +81,89 @@ Reglas para añadir **-ing** al verbo:
     Cambia **-ie** por **-ying**:
     
     ```javascript
-    const ieVerbs = {
-      "lie": "lying",        // mentir/yacer → mintiendo
-      "die": "dying",        // morir → muriendo
-      "tie": "tying"         // atar → atando
+    const verbs = ["die", "lie", "tie"];
+    const ingVerbs = verbs.map((verb) => verb.slice(0, -2) + "ying");
+
+    console.log(ingVerbs);
+    // Salida: ["dying", "lying", "tying"]
+    ```
+
+    **Ejemplos:**
+    
+    - lie → **lying** (mentir → mintiendo)
+    - die → **dying** (morir → muriendo)
+    - tie → **tying** (atar → atando)
+  </TabItem>
+</Tabs>
+
+---
+
+## Estructura del Presente Continuo
+
+<Tabs>
+  <TabItem label="Afirmativa">
+    ```javascript
+    const affirmative = {
+      structure: "Sujeto + to be (am/is/are) + verbo-ing + complemento",
+      examples: [
+        "I am working",       // Estoy trabajando
+        "He is sleeping",     // Él está durmiendo
+        "She is cooking",     // Ella está cocinando
+        "We are studying",    // Estamos estudiando
+        "They are playing"    // Están jugando
+      ]
     };
     ```
 
-    **Ejemplos**
-    
-    - lie → l~~ie~~ → l**y**ing (mentir → mintiendo)
-    - die → d~~ie~~ → d**y**ing (morir → muriendo)
-    - tie → t~~ie~~ → t**y**ing (atar → atando)
+    **Ejemplos:**
+    - I **am eating** lunch (Estoy almorzando)
+    - She **is watching** TV (Ella está viendo televisión)
+    - We **are learning** English (Estamos aprendiendo inglés)
+  </TabItem>
+  
+  <TabItem label="Negativa">
+    ```javascript
+    const negative = {
+      structure: "Sujeto + to be + not + verbo-ing + complemento",
+      examples: [
+        "I am not working",     // No estoy trabajando
+        "He is not sleeping",   // Él no está durmiendo
+        "She is not cooking",   // Ella no está cocinando
+        "We are not studying",  // No estamos estudiando
+        "They are not playing"  // No están jugando
+      ]
+    };
+    ```
+
+    **Ejemplos:**
+    - I **am not listening** (No estoy escuchando)
+    - He **is not coming** today (Él no viene hoy)
+    - They **are not working** now (Ellos no están trabajando ahora)
+  </TabItem>
+  
+  <TabItem label="Pregunta">
+    ```javascript
+    const question = {
+      structure: "To be + sujeto + verbo-ing + complemento?",
+      examples: [
+        "Am I working?",      // ¿Estoy trabajando?
+        "Are you reading?",   // ¿Estás leyendo?
+        "Is he sleeping?",    // ¿Está él durmiendo?
+        "Is she cooking?",    // ¿Está ella cocinando?
+        "Are they playing?"   // ¿Están jugando?
+      ]
+    };
+    ```
+
+    **Ejemplos:**
+    - **Are** you studying now? (¿Estás estudiando ahora?)
+    - **Is** she working today? (¿Está ella trabajando hoy?)
+    - **Are** they coming tonight? (¿Vienen ellos esta noche?)
+
+    <Aside type="tip" title="Respuestas cortas">
+    - Are you working? → Yes, I **am** / No, I **am not**
+    - Is she coming? → Yes, she **is** / No, she **isn't**
+    </Aside>
   </TabItem>
 </Tabs>
 
@@ -118,7 +183,7 @@ Reglas para añadir **-ing** al verbo:
     ];
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
 
     - I **am working** **now** (Estoy trabajando ahora)
     - She **is cooking** **right now** (Ella está cocinando ahora mismo)
@@ -140,7 +205,7 @@ Reglas para añadir **-ing** al verbo:
     ];
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
 
     - I **am learning** Spanish **these days** (Estoy aprendiendo español en estos días)
     - She **is working** from home **this week** (Está trabajando desde casa esta semana)
@@ -152,21 +217,18 @@ Reglas para añadir **-ing** al verbo:
   <TabItem label="Planes futuros">
     ```javascript
     const futureExpressions = [
-      "tomorrow",          // mañana
-      "tonight",           // esta noche
-      "this evening",      // esta tarde/noche
-      "this afternoon",    // esta tarde
-      "next week",         // la próxima semana
-      "next month",        // el próximo mes
-      "next year",         // el próximo año
-      "on Monday",         // el lunes
-      "in the morning",    // en la mañana
-      "later"              // más tarde
+      "tomorrow",      // mañana
+      "tonight",       // esta noche
+      "next week",     // la próxima semana
+      "next month",    // el próximo mes
+      "next year",     // el próximo año
+      "on Monday",     // el lunes
+      "later"          // más tarde
     ];
     ```
 
-    **Ejemplos**
-        
+    **Ejemplos:**
+
     - I **am meeting** Sarah **tomorrow** (Me encuentro con Sarah mañana)
     - We **are going** to the cinema **tonight** (Vamos al cine esta noche)
     - She **is coming** over **this evening** (Ella viene esta tarde)
@@ -188,88 +250,13 @@ Reglas para añadir **-ing** al verbo:
     ];
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
 
     - The weather **is getting** colder **gradually** (El clima se está poniendo más frío gradualmente)
     - Prices **are rising** **more and more** (Los precios están subiendo cada vez más)
     - Technology **is improving** **constantly** (La tecnología está mejorando constantemente)
     - My English **is getting** better **slowly** (Mi inglés está mejorando lentamente)
     - The city **is growing** **rapidly** (La ciudad está creciendo rápidamente)
-  </TabItem>
-</Tabs>
-
----
-
-## Estructura del Presente Continuo
-
-<Tabs>
-  <TabItem label="Afirmativa">
-    ```javascript
-    const presentContinuous = {
-      structure: "Subject + to be + verb-ing",
-      examples: [
-        "I am working",           // Estoy trabajando
-        "You are reading",        // Estás leyendo
-        "He is sleeping",         // Él está durmiendo
-        "She is cooking",         // Ella está cocinando
-        "It is raining",          // Está lloviendo
-        "We are studying",        // Estamos estudiando
-        "They are playing"        // Están jugando
-      ]
-    };
-    ```
-    
-    **Patrón:** Usa la forma correcta de **to be** (am/is/are) + verbo con **-ing**.
-    
-    - I **am eating** lunch (Estoy almorzando)
-    - She **is watching** TV (Ella está viendo televisión)
-    - We **are learning** English (Estamos aprendiendo inglés)
-  </TabItem>
-  
-  <TabItem label="Negativa">
-    ```javascript
-    const negative = {
-      structure: "Subject + to be + not + verb-ing",
-      examples: [
-        "I am not working",         // No estoy trabajando
-        "You are not reading",      // No estás leyendo
-        "He is not sleeping",       // Él no está durmiendo
-        "She is not cooking",       // Ella no está cocinando
-        "It is not raining",        // No está lloviendo
-        "We are not studying",      // No estamos estudiando
-        "They are not playing"      // No están jugando
-      ]
-    };
-    ```
-    
-    Para negar, añade **not** después de **to be**.
-    
-    - I **am not listening** (No estoy escuchando)
-    - He **is not coming** today (Él no viene hoy)
-    - They **are not working** now (Ellos no están trabajando ahora)
-  </TabItem>
-  
-  <TabItem label="Pregunta">
-    ```javascript
-    const question = {
-      structure: "To be + subject + verb-ing + ?",
-      examples: [
-        "Am I working?",              // ¿Estoy trabajando?
-        "Are you reading?",           // ¿Estás leyendo?
-        "Is he sleeping?",            // ¿Está él durmiendo?
-        "Is she cooking?",            // ¿Está ella cocinando?
-        "Is it raining?",             // ¿Está lloviendo?
-        "Are we studying?",           // ¿Estamos estudiando?
-        "Are they playing?"           // ¿Están jugando?
-      ]
-    };
-    ```
-    
-    Invierte el orden: **to be** antes del sujeto.
-    
-    **Respuestas cortas:**
-    - **Are** you working? → Yes, I **am** / No, I **am** not
-    - **Is** she coming? → Yes, she **is** / No, she **is** not
   </TabItem>
 </Tabs>
 
@@ -282,58 +269,42 @@ Algunos verbos describen **estados o condiciones** en lugar de acciones, y norma
 <Tabs>
   <TabItem label="Mentales">
     ```javascript
-    const mentalStateVerbs = {
-      knowledge: ["know", "understand", "realize"],
-      // ["saber", "entender", "darse cuenta"]
-
-      belief: ["believe", "think", "doubt", "suppose"],
-      // ["creer", "pensar", "dudar", "suponer"]
-
-      memory: ["remember", "forget", "recall"],
-      // ["recordar", "olvidar", "rememorar"]
-      
-      mental: ["recognize", "mean", "imagine"]
-      // ["reconocer", "significar/tener intención", "imaginar"]
-    };
+    const mental = [
+      "know",        // saber
+      "understand",  // entender
+      "believe",     // creer
+      "remember",    // recordar
+      "recognize"    // reconocer
+    ];
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
     
     - I **know** the answer (Sé la respuesta)
     - She **understands** English (Ella entiende inglés)
     - We **believe** you (Te creemos)
     - He **remembers** your name (Él recuerda tu nombre)
     - They **recognize** this place (Reconocen este lugar)
-    - I **doubt** it (Lo dudo)
-    - She **means** well (Ella tiene buenas intenciones)
   </TabItem>
   
   <TabItem label="Emociones">
     ```javascript
-    const emotionalStateVerbs = {
-      positive: ["love", "like", "adore", "enjoy", "prefer"],
-      // ["amar", "gustar", "adorar", "disfrutar", "preferir"]
-      
-      negative: ["hate", "dislike", "detest"],
-      // ["odiar", "disgustar", "detestar"]
-      
-      desire: ["want", "need", "wish", "desire"],
-      // ["querer", "necesitar", "desear", "desear"]
-      
-      attitude: ["care", "mind", "appreciate"]
-      // ["importar", "importar/molestar", "apreciar"]
-    };
+    const emotional = [
+      "love",    // amar
+      "like",    // gustar
+      "hate",    // odiar
+      "want",    // querer
+      "need"     // necesitar
+    ];
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
     
     - I **love** chocolate (Amo el chocolate)
     - She **likes** coffee (A ella le gusta el café)
     - We **hate** waiting (Odiamos esperar)
     - He **wants** a new phone (Él quiere un teléfono nuevo)
     - They **need** help (Necesitan ayuda)
-    - I **prefer** tea (Prefiero té)
-    - She **appreciates** your effort (Ella aprecia tu esfuerzo)
   </TabItem>
   
   <TabItem label="Sentidos">
@@ -347,15 +318,13 @@ Algunos verbos describen **estados o condiciones** en lugar de acciones, y norma
     };
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
     
     - I **see** the problem (Veo el problema)
     - She **hears** music (Ella escucha música)
     - It **smells** good (Huele bien)
-    - This **tastes** delicious (Esto sabe delicioso)
     - He **looks** tired (Él se ve cansado)
     - That **sounds** interesting (Eso suena interesante)
-    - They **seem** happy (Parecen felices)
   </TabItem>
   
   <TabItem label="Posesión">
@@ -369,14 +338,13 @@ Algunos verbos describen **estados o condiciones** en lugar de acciones, y norma
     };
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
     
     - I **have** a car (Tengo un carro)
     - She **owns** a house (Ella posee una casa)
     - This **belongs** to me (Esto me pertenece)
     - The box **contains** books (La caja contiene libros)
     - It **includes** breakfast (Incluye desayuno)
-    - Success **depends** on effort (El éxito depende del esfuerzo)
   </TabItem>
   
   <TabItem label="Otros">
@@ -393,15 +361,13 @@ Algunos verbos describen **estados o condiciones** en lugar de acciones, y norma
     };
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
     
     - This **is** important (Esto es importante)
-    - Ghosts **exist** (Los fantasmas existen)
     - It **matters** to me (Me importa)
     - I **weigh** 70 kilos (Peso 70 kilos)
     - This **costs** too much (Esto cuesta demasiado)
     - She **resembles** her mother (Ella se parece a su madre)
-    - These shoes **fit** perfectly (Estos zapatos quedan perfectos)
   </TabItem>
 </Tabs>
 
@@ -409,22 +375,61 @@ Algunos verbos describen **estados o condiciones** en lugar de acciones, y norma
 Estos verbos describen **estados permanentes o de larga duración**, no acciones momentáneas. Por ejemplo, "love" es un sentimiento constante, no algo que "estás haciendo" temporalmente. En inglés, se usan en presente simple porque describen **cómo son las cosas**, no **qué está pasando**.
 </Aside>
 
-<Aside type="tip" title="Excepciones importantes">
-Algunos verbos de estado pueden usarse en continuo cuando cambian de significado:
+---
 
-**Have:**
-- I **have** a car (Tengo un carro - posesión) → simple ✅
-- I **am having** lunch (Estoy almorzando - acción) → continuo ✅
-- We **are having** a party (Estamos haciendo una fiesta - evento) → continuo ✅
+## Excepciones Importantes
 
-**Think:**
-- I **think** it's good (Creo que es bueno - opinión) → simple ✅
-- I **am thinking** about it (Estoy pensándolo - proceso activo) → continuo ✅
+Algunos verbos de estado pueden usarse en presente continuo cuando su significado cambia. Ya no describen un estado, sino una acción concreta en progreso.
 
-**See:**
-- I **see** the problem (Veo/entiendo el problema) → simple ✅
-- I **am seeing** a doctor tomorrow (Voy a ver a un doctor - cita) → continuo ✅
-</Aside>
+<Tabs>
+  <TabItem label="Have">
+    **Have** como posesión es un estado — no usa continuo. Pero cuando describe una acción o evento, sí puede usarse en continuo.
+
+    ```javascript
+    const have = {
+      simple:   "I have a car",          // posesión → simple
+      continuo: "I am having lunch",     // acción  → continuo
+      evento:   "We are having a party"  // evento  → continuo
+    };
+    ```
+
+    **Ejemplos:**
+    - I **have** a car (Tengo un carro — posesión)
+    - I **am having** lunch right now (Estoy almorzando ahora — acción)
+    - We **are having** a party tonight (Vamos a hacer una fiesta esta noche — evento)
+  </TabItem>
+
+  <TabItem label="Think">
+    **Think** como opinión es un estado — no usa continuo. Cuando describe un proceso activo de reflexión, sí puede usarse en continuo.
+
+    ```javascript
+    // mismo verbo, significado diferente
+    const think = (mode) =>
+      mode === "opinion"
+        ? "I think it's good"       // simple
+        : "I am thinking about it"; // continuo
+    ```
+
+    **Ejemplos:**
+    - I **think** it's a good idea (Creo que es una buena idea — opinión)
+    - I **am thinking** about it (Lo estoy pensando — reflexión activa)
+  </TabItem>
+
+  <TabItem label="See">
+    **See** como percepción es un estado — no usa continuo. Cuando describe una cita o encuentro planificado, sí puede usarse en continuo.
+
+    ```javascript
+    const see = [
+      "I see the problem",            // percepción → simple
+      "I am seeing a doctor tomorrow" // cita planificada → continuo
+    ];
+    ```
+
+    **Ejemplos:**
+    - I **see** the problem (Veo el problema — comprensión)
+    - I **am seeing** a doctor tomorrow (Voy a ver a un médico mañana — cita)
+  </TabItem>
+</Tabs>
 
 ---
 
