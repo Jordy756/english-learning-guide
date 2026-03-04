@@ -1,23 +1,23 @@
 ---
 title: Pasado Continuo
-description: Describe acciones que estaban en progreso en el pasado.
+description: Describe acciones que estaban en progreso en el pasado
 ---
 
-import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
+import { Tabs, TabItem, Aside } from '@astrojs/starlight/components';
 
-El pasado continuo (past continuous) es como una foto instantánea de un proceso en ejecución: captura acciones que estaban ocurriendo en un momento específico del pasado. Se forma con **was/were + verbo-ing**, y es esencial para describir contextos, acciones interrumpidas, y situaciones temporales que estaban en progreso en el pasado.
+El pasado continuo (past continuous) describe acciones que estaban ocurriendo en un momento específico del pasado. Se forma con **was/were + verbo-ing** y es esencial para narrar contextos, situaciones en progreso y acciones que fueron interrumpidas. Junto al pasado simple, es una herramienta clave para contar historias de forma vívida.
 
 ---
 
 ## Estructura del Pasado Continuo
 
-El pasado continuo se forma con el pasado del verbo to be (was/were) + el verbo en forma -ing. Las reglas para formar el **-ing** son las mismas que en el [presente continuo](./05-present-continuous.mdx#formación-del--ing): añadir -ing, quitar la -e final, doblar consonante, o cambiar -ie por -ying según corresponda.
+El pasado continuo se forma con el pasado del verbo to be (was/were) + el verbo en forma -ing. Las reglas para formar el **-ing** son las mismas que en el [presente continuo](/a2/02-grammar/02-present-continuous/#formación-del--ing): añadir -ing, quitar la -e final, doblar consonante, o cambiar -ie por -ying según corresponda.
 
 <Tabs>
   <TabItem label="Afirmativa">
     ```javascript
     const affirmative = {
-      structure: "Subject + was/were + verb-ing",
+      structure: "Sujeto + was/were + verbo-ing",
       examples: [
         "I was working",               // Yo estaba trabajando
         "You were studying",           // Estabas estudiando
@@ -30,7 +30,7 @@ El pasado continuo se forma con el pasado del verbo to be (was/were) + el verbo 
     };
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
     
     - I **was reading** a book at 8 PM (Estaba leyendo un libro a las 8 PM)
     - She **was working** on the project yesterday (Estaba trabajando en el proyecto ayer)
@@ -42,7 +42,7 @@ El pasado continuo se forma con el pasado del verbo to be (was/were) + el verbo 
   <TabItem label="Negativa">
     ```javascript
     const negative = {
-      structure: "Subject + wasn't/weren't + verb-ing",
+      structure: "Sujeto + wasn't/weren't + verbo-ing",
       contractions: {
         "was not": "wasn't",
         "were not": "weren't"
@@ -59,7 +59,7 @@ El pasado continuo se forma con el pasado del verbo to be (was/were) + el verbo 
     };
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
     
     - I **wasn't paying** attention (No estaba prestando atención)
     - She **wasn't feeling** well yesterday (No se estaba sintiendo bien ayer)
@@ -71,7 +71,7 @@ El pasado continuo se forma con el pasado del verbo to be (was/were) + el verbo 
   <TabItem label="Pregunta">
     ```javascript
     const question = {
-      structure: "Was/Were + subject + verb-ing + ?",
+      structure: "Was/Were + sujeto + verbo-ing + ?",
       examples: [
         "Was I dreaming?",             // ¿Estaba soñando?
         "Were you working?",           // ¿Estabas trabajando?
@@ -84,7 +84,7 @@ El pasado continuo se forma con el pasado del verbo to be (was/were) + el verbo 
     };
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
     
     - **Was** she **studying** at the library? (¿Estaba ella estudiando en la biblioteca?)
     - **Were** you **watching** TV at 9 PM? (¿Estabas viendo TV a las 9 PM?)
@@ -116,7 +116,7 @@ El pasado continuo se forma con el pasado del verbo to be (was/were) + el verbo 
     ];
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
     
     - I **was studying** **at 8 PM** (Estaba estudiando a las 8 PM)
     - She **was sleeping** **at that moment** (Estaba durmiendo en ese momento)
@@ -131,7 +131,7 @@ El pasado continuo se forma con el pasado del verbo to be (was/were) + el verbo 
     };
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
     
     - I was reading **while** she was cooking (Leía mientras ella cocinaba)
     - They were playing **when** it started raining (Jugaban cuando empezó a llover)
@@ -150,7 +150,7 @@ El pasado continuo se forma con el pasado del verbo to be (was/were) + el verbo 
     ];
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
     
     - It **was raining** **all morning** (Estuvo lloviendo toda la mañana)
     - I **was working** **all day yesterday** (Estuve trabajando todo el día ayer)
@@ -182,7 +182,7 @@ El pasado continuo se combina frecuentemente con el pasado simple para crear nar
     };
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
 
     - I **was watching** TV **when** the phone **rang** (Estaba viendo TV cuando sonó el teléfono)
     - **When** they **arrived**, we **were having** dinner (Cuando llegaron, estábamos cenando)
@@ -198,19 +198,14 @@ El pasado continuo se combina frecuentemente con el pasado simple para crear nar
     Dos o más acciones ocurriendo al mismo tiempo en el pasado. Ambas van en pasado continuo.
 
     ```javascript
-    const simultaneous = {
-      // Opción 1: While conectando dos continuos
-      pattern1: "was/were + verb-ing + while + was/were + verb-ing",
-      
-      // Opción 2: And para describir escena
-      pattern2: "was/were + verb-ing + and + was/were + verb-ing",
-      
-      // Opción 3: As (mientras/conforme)
-      pattern3: "was/were + verb-ing + as + was/were + verb-ing"
-    };
+    const simultaneous = [
+      ["while", "S was/were V-ing while S was/were V-ing"],
+      ["and",   "S was/were V-ing and S was/were V-ing"],
+      ["as",    "S was/were V-ing as S was/were V-ing"],
+    ];
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
 
     - I **was studying** **while** he **was playing** (Yo estudiaba mientras él jugaba)
     - The sun **was shining** **and** birds **were singing** (El sol brillaba y los pájaros cantaban)
@@ -226,16 +221,13 @@ El pasado continuo se combina frecuentemente con el pasado simple para crear nar
     Acciones que ocurrieron una después de otra. El tiempo verbal depende del tipo de secuencia.
 
     ```javascript
-    const sequential = {
-      // Eventos completados: Pasado simple
-      completed: "past simple + and + past simple",
-      
-      // Descripción de escena: Pasado continuo
-      contextual: "was/were + verb-ing + and + was/were + verb-ing"
-    };
+    // ¿La acción se completó del todo?
+    const tense = finished
+      ? "past simple + and + past simple"    // arrived, left
+      : "past continuous + and + continuous"; // was shining, were singing
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
 
     - I **finished** work **and** **went** home (Terminé el trabajo y me fui a casa - eventos completados)
     - She **woke** up, **took** a shower, **and** **had** breakfast (Se despertó, se duchó y desayunó - secuencia completada)
@@ -262,7 +254,7 @@ El pasado continuo se combina frecuentemente con el pasado simple para crear nar
     };
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
 
     - The sun **was shining**. I **opened** the window (El sol brillaba. Abrí la ventana)
     - I **decided** to stay home because it **was raining** heavily (Decidí quedarme porque estaba lloviendo fuerte)
@@ -277,44 +269,44 @@ El pasado continuo se combina frecuentemente con el pasado simple para crear nar
 
 ---
 
-## Errores comunes
+## Errores Comunes
 
 <Aside type="danger" title="Olvidar was/were">
-- I working at 8 PM ⛔
-- I **was working** at 8 PM ✅
-- They playing soccer ⛔
-- They **were playing** soccer ✅
+El pasado continuo siempre necesita **was** o **were** como auxiliar. No se puede usar solo el verbo con -ing.
 
-El pasado continuo SIEMPRE necesita **was** o **were**.
+- I **working** at 8 PM ⛔
+- I **was working** at 8 PM (Estaba trabajando a las 8 PM) ✅
+- They **playing** soccer ⛔
+- They **were playing** soccer (Estaban jugando fútbol) ✅
 </Aside>
 
 <Aside type="danger" title="Confundir was/were con el sujeto">
-- I **were** studying ⛔
-- I **was** studying ✅
-- She **were** cooking ⛔
-- She **was** cooking ✅
-- We **was** working ⛔
-- We **were** working ✅
+Usa **was** con I, he, she, it y **were** con you, we, they.
 
-Usa **was** con I/he/she/it y **were** con you/we/they.
+- I **were** studying ⛔
+- I **was** studying (Yo estaba estudiando) ✅
+- She **were** cooking ⛔
+- She **was** cooking (Ella estaba cocinando) ✅
+- We **was** working ⛔
+- We **were** working (Estábamos trabajando) ✅
 </Aside>
 
 <Aside type="danger" title="Usar pasado continuo para acciones completas">
-- I **was watching** three movies yesterday ⛔
-- I **watched** three movies yesterday ✅
-- She **was finishing** her homework last night ⛔
-- She **finished** her homework last night ✅
+El continuo describe acciones en progreso, no acciones terminadas. Si la acción se completó, usa el pasado simple.
 
-El continuo es para acciones **en progreso**, no completas. Si terminaste algo, usa pasado simple.
+- I **was watching** three movies yesterday ⛔
+- I **watched** three movies yesterday (Vi tres películas ayer) ✅
+- She **was finishing** her homework last night ⛔
+- She **finished** her homework last night (Ella terminó su tarea anoche) ✅
 </Aside>
 
 <Aside type="danger" title="Usar verbos de estado en continuo">
-- I **was knowing** the answer ⛔
-- I **knew** the answer ✅
-- She **was having** a car ⛔
-- She **had** a car ✅
+Los verbos de estado (know, have para posesión, want, need, etc.) no se usan en forma continua en inglés.
 
-Los verbos de estado (know, have-posesión, want, need, etc.) normalmente no van en continuo.
+- I **was knowing** the answer ⛔
+- I **knew** the answer (Yo sabía la respuesta) ✅
+- She **was having** a car ⛔
+- She **had** a car (Ella tenía un auto) ✅
 </Aside>
 
 ---

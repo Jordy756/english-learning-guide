@@ -1,11 +1,11 @@
 ---
 title: Pasado Simple
-description: Habla sobre acciones completadas en el pasado.
+description: Habla sobre acciones completadas en el pasado
 ---
 
-import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
+import { Tabs, TabItem, Aside } from '@astrojs/starlight/components';
 
-El pasado simple (simple past) es como un registro de eventos completados: describe acciones que comenzaron y terminaron en un momento específico del pasado. Es el tiempo verbal que usas para contar historias, narrar experiencias, y hablar de hechos históricos. Se forma añadiendo **-ed** a verbos regulares o usando formas especiales para verbos irregulares.
+El pasado simple (simple past) describe acciones que comenzaron y terminaron en un momento específico del pasado. Es el tiempo verbal que usas para contar historias, narrar experiencias y hablar de hechos históricos. Para los verbos regulares se forma añadiendo **-ed** al verbo, y los verbos irregulares tienen formas propias que debes memorizar.
 
 ---
 
@@ -27,7 +27,7 @@ Los verbos regulares forman el pasado simple añadiendo **-ed** al infinitivo:
     };
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
     
     - work → **worked** (trabajar → trabajó/trabajé)
     - play → **played** (jugar → jugó/jugué)
@@ -39,16 +39,16 @@ Los verbos regulares forman el pasado simple añadiendo **-ed** al infinitivo:
     Si el verbo ya termina en **-e**, solo añade **-d**:
     
     ```javascript
-    const eVerbs = {
-      "live": "lived",       // vivir → vivió
-      "love": "loved",       // amar → amó
-      "like": "liked",       // gustar → gustó
-      "use": "used",         // usar → usó
-      "arrive": "arrived"    // llegar → llegó
-    };
+    const eVerbs = ["live", "love", "like", "use", "arrive"];
+    const toPast = v => v + "d";
+    // live → lived (vivir → vivió)
+    // love → loved (amar → amó)
+    // like → liked (gustar → gustó)
+    // use  → used  (usar → usó)
+    // arrive → arrived (llegar → llegó)
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
     
     - live → liv**ed** (vivir → vivió/viví)
     - love → lov**ed** (amar → amó/amé)
@@ -60,16 +60,16 @@ Los verbos regulares forman el pasado simple añadiendo **-ed** al infinitivo:
     Si termina en **consonante + y**, cambia la **y** por **i** y añade **-ed**:
     
     ```javascript
-    const yVerbs = {
-      "study": "studied",    // estudiar → estudió
-      "try": "tried",        // intentar → intentó
-      "carry": "carried",    // llevar → llevó
-      "worry": "worried",    // preocupar → preocupó
-      "cry": "cried"         // llorar → lloró
-    };
+    const yVerbs = ["study", "try", "carry", "worry", "cry"];
+    const toPast = v => v.slice(0, -1) + "ied";
+    // study → studied (estudiar → estudió)
+    // try   → tried   (intentar → intentó)
+    // carry → carried (llevar → llevó)
+    // worry → worried (preocupar → preocupó)
+    // cry   → cried   (llorar → lloró)
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
     
     - study → stud**ied** (estudiar → estudió/estudié)
     - try → tr**ied** (intentar → intentó/intenté)
@@ -86,15 +86,15 @@ Los verbos regulares forman el pasado simple añadiendo **-ed** al infinitivo:
     Si el verbo de una sílaba termina en **consonante + vocal + consonante**, dobla la última consonante:
     
     ```javascript
-    const doubleConsonant = {
-      "stop": "stopped",     // parar → paró
-      "plan": "planned",     // planear → planeó
-      "drop": "dropped",     // dejar caer → dejó caer
-      "shop": "shopped"      // comprar → compró
-    };
+    const cvcVerbs = ["stop", "plan", "drop", "shop"];
+    const toPast = v => v + v.at(-1) + "ed";
+    // stop → stopped (parar → paró)
+    // plan → planned (planear → planeó)
+    // drop → dropped (dejar caer → dejó caer)
+    // shop → shopped (comprar → compró)
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
     
     - stop → sto**pp**ed (parar → paró/paré)
     - plan → pla**nn**ed (planear → planeó/planeé)
@@ -119,20 +119,13 @@ const irregularVerbs = {
   "see": "saw",          // ver → vio/vi
   "have": "had",         // tener → tuvo/tuve
   "do": "did",           // hacer → hizo/hice
-  "make": "made",        // hacer → hizo/hice
   "take": "took",        // tomar → tomó/tomé
-  "get": "got",          // obtener → obtuvo/obtuve
   "give": "gave",        // dar → dio/di
-  "say": "said",         // decir → dijo/dije
-  "eat": "ate",          // comer → comió/comí
-  "drink": "drank",      // beber → bebió/bebí
-  "write": "wrote",      // escribir → escribió/escribí
   "buy": "bought",       // comprar → compró/compré
-  "think": "thought"     // pensar → pensó/pensé
 };
 ```
 
-**Ejemplos**
+**Ejemplos:**
 
 - I **went** to Paris last year (Fui a París el año pasado)
 - She **saw** a movie yesterday (Ella vio una película ayer)
@@ -165,7 +158,7 @@ Hay aproximadamente 200 verbos irregulares en inglés. Consulta la [lista comple
     };
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
     
     - My sister **traveled** to Italy (Mi hermana viajó a Italia)
     - I **finished** my homework (Terminé mi tarea)
@@ -191,7 +184,7 @@ Hay aproximadamente 200 verbos irregulares en inglés. Consulta la [lista comple
     };
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
     
     - I **didn't finish** the report (No terminé el reporte)
     - She **didn't call** me back (Ella no me devolvió la llamada)
@@ -223,7 +216,7 @@ Hay aproximadamente 200 verbos irregulares en inglés. Consulta la [lista comple
     };
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
     
     - **Did** you **finish** your work? (¿Terminaste tu trabajo?)
     - **Did** she **call** you? (¿Te llamó ella?)
@@ -259,7 +252,7 @@ El pasado simple frecuentemente se usa con estas expresiones de tiempo:
     ];
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
     
     - I **saw** him **yesterday** (Lo vi ayer)
     - She **called** me **last night** (Me llamó anoche)
@@ -269,17 +262,17 @@ El pasado simple frecuentemente se usa con estas expresiones de tiempo:
   
   <TabItem label="Ago">
     ```javascript
-    const ago = [
-      "a minute ago",        // hace un minuto
-      "an hour ago",         // hace una hora
-      "two days ago",        // hace dos días
-      "a week ago",          // hace una semana
-      "three years ago",     // hace tres años
-      "a long time ago"      // hace mucho tiempo
-    ];
+    const ago = {
+      "a minute ago":    "hace un minuto",
+      "an hour ago":     "hace una hora",
+      "two days ago":    "hace dos días",
+      "a week ago":      "hace una semana",
+      "three years ago": "hace tres años",
+      "a long time ago": "hace mucho tiempo",
+    };
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
     
     - We **met** five years **ago** (Nos conocimos hace cinco años)
     - She **left** an hour **ago** (Ella se fue hace una hora)
@@ -289,17 +282,15 @@ El pasado simple frecuentemente se usa con estas expresiones de tiempo:
   
   <TabItem label="Fechas específicas">
     ```javascript
-    const specificDates = [
-      "in 2020",             // en 2020
-      "in May",              // en mayo
-      "in 1990",             // en 1990
-      "on Monday",           // el lunes
-      "on January 15th",     // el 15 de enero
-      "at 3 PM"              // a las 3 PM
-    ];
+    const specificDates = {
+      year:  ["in 2020",       "in 1990"],
+      month: ["in May",        "in October"],
+      day:   ["on Monday",     "on January 15th"],
+      time:  ["at 3 PM",       "at noon"],
+    };
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
     
     - They **moved** here **in 2018** (Se mudaron aquí en 2018)
     - I **graduated** **in May** (Me gradué en mayo)
@@ -310,16 +301,15 @@ El pasado simple frecuentemente se usa con estas expresiones de tiempo:
   <TabItem label="When / Other">
     ```javascript
     const contextual = [
-      "when I was young",    // cuando era joven
-      "when she arrived",    // cuando ella llegó
-      "this morning",        // esta mañana
-      "that day",            // ese día
-      "in the past",         // en el pasado
-      "then"                 // entonces
+      ["when I was young",  "cuando era joven"],
+      ["when she arrived",  "cuando ella llegó"],
+      ["this morning",      "esta mañana"],
+      ["that day",          "ese día"],
+      ["then",              "entonces"],
     ];
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
     
     - He **started** working **when** he was 18 (Empezó a trabajar cuando tenía 18)
     - I **saw** her **when** she arrived (La vi cuando llegó)
@@ -330,41 +320,42 @@ El pasado simple frecuentemente se usa con estas expresiones de tiempo:
 
 ---
 
-## Errores comunes
+## Errores Comunes
 
 <Aside type="danger" title="Usar -ed con verbos irregulares">
-- I **goed** to the store ⛔
-- I **went** to the store ✅
-- She **maked** a cake ⛔
-- She **made** a cake ✅
+Los verbos irregulares no siguen la regla de -ed. Cada uno tiene su propia forma en pasado que debes memorizar.
 
-Los verbos irregulares no siguen la regla de -ed. Debes memorizar sus formas especiales.
+- I **goed** to the store ⛔
+- I **went** to the store (Fui a la tienda) ✅
+- She **maked** a cake ⛔
+- She **made** a cake (Ella hizo un pastel) ✅
 </Aside>
 
 <Aside type="danger" title="Olvidar usar el verbo base después de didn't">
-- I **didn't went** to work ⛔
-- I **didn't go** to work ✅
-- She **didn't called** me ⛔
-- She **didn't call** me ✅
-
 Después de **didn't**, el verbo siempre vuelve a su forma base (infinitivo sin "to").
+
+- I **didn't went** to work ⛔
+- I **didn't go** to work (No fui a trabajar) ✅
+- She **didn't called** me ⛔
+- She **didn't call** me (Ella no me llamó) ✅
 </Aside>
 
 <Aside type="danger" title="Usar didn't en forma afirmativa">
-- I **didn't went** shopping ⛔
-- I **went** shopping ✅
-- I **didn't go** shopping ✅
+**Didn't** solo se usa en oraciones negativas. En oraciones afirmativas, usa directamente el verbo en pasado simple.
 
-**Didn't** solo se usa en oraciones negativas, no en afirmativas.
+- I **didn't traveled** to Mexico ⛔
+- I **traveled** to Mexico (Viajé a México) ✅
+- She **didn't studied** for two hours ⛔
+- She **studied** for two hours (Ella estudió por dos horas) ✅
 </Aside>
 
 <Aside type="danger" title="Confundir was/were con verbos de acción">
-- I **was work** yesterday ⛔
-- I **worked** yesterday ✅
-- They **were study** all night ⛔
-- They **studied** all night ✅
+**Was/were** son solo para el verbo "to be". Para expresar acciones en pasado, usa el verbo en su forma correcta de pasado simple.
 
-**Was/were** son solo para el verbo "to be", no para verbos de acción.
+- I **was work** yesterday ⛔
+- I **worked** yesterday (Trabajé ayer) ✅
+- They **were study** all night ⛔
+- They **studied** all night (Estudiaron toda la noche) ✅
 </Aside>
 
 ---

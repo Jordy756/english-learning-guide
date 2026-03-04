@@ -5,7 +5,7 @@ description: Domina los verbos irregulares más importantes del pasado simple en
 
 import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
 
-Los **verbos irregulares** son aquellos que no siguen la regla -ed para formar el pasado simple. Son como excepciones en el código: no se comportan de manera predecible, pero son tan comunes que tienes que memorizarlos. Aunque representan solo un 10% de todos los verbos en inglés, incluyen los más usados en conversaciones diarias como **go → went**, **have → had** y **make → made**.
+Los **verbos irregulares** son aquellos que no siguen la regla -ed para formar el pasado simple. Son tan comunes que es imposible evitarlos: palabras como **go**, **have**, **make** y **see** aparecen en casi cualquier conversación. Aunque representan solo un 10% de todos los verbos en inglés, incluyen los más usados del idioma, por lo que aprenderlos te dará un gran avance.
 
 ---
 
@@ -14,19 +14,10 @@ Los **verbos irregulares** son aquellos que no siguen la regla -ed para formar e
 Los verbos irregulares provienen del inglés antiguo y han conservado sus formas originales a lo largo de los siglos. Mientras que los verbos regulares adoptaron el patrón -ed más moderno, estos verbos mantuvieron sus transformaciones históricas.
 
 ```javascript
-const verbEvolution = {
-  modernPattern: {
-    verb: "walk",
-    past: "walked",    // regla moderna (-ed)
-    type: "regular"
-  },
-  
-  ancientPattern: {
-    verb: "go",
-    past: "went",      // forma antigua preservada
-    type: "irregular"
-  }
-};
+const regular   = { verb: "walk", past: "walked" }; // +ed
+const irregular = { verb: "go",   past: "went"   }; // sin patrón
+// La raíz histórica del verbo preserva
+// su forma original en lugar de adoptar -ed
 ```
 
 **Ejemplos:**
@@ -63,6 +54,7 @@ Estos verbos están organizados por patrones de transformación para facilitar s
     ```
 
     **Ejemplos:**
+
     - I **cut** the paper yesterday (Corté el papel ayer)
     - She **put** the book on the table (Ella puso el libro en la mesa)
     - They **let** me go home early (Me dejaron ir a casa temprano)
@@ -85,6 +77,7 @@ Estos verbos están organizados por patrones de transformación para facilitar s
     ```
 
     **Ejemplos:**
+
     - The class **began** at 9 AM (La clase comenzó a las 9 AM)
     - I **drank** coffee this morning (Tomé café esta mañana)
     - The phone **rang** five minutes ago (El teléfono sonó hace cinco minutos)
@@ -107,6 +100,7 @@ Estos verbos están organizados por patrones de transformación para facilitar s
     ```
 
     **Ejemplos:**
+
     - She **brought** her laptop (Ella trajo su laptop)
     - I **bought** a new phone (Compré un teléfono nuevo)
     - He **caught** the ball (Él atrapó la pelota)
@@ -119,23 +113,19 @@ Estos verbos están organizados por patrones de transformación para facilitar s
     
     ```javascript
     const vowelChange = {
-      come: { past: "came", participle: "come", meaning: "venir" },
-      run: { past: "ran", participle: "run", meaning: "correr" },
-      become: { past: "became", participle: "become", meaning: "convertirse" },
-      eat: { past: "ate", participle: "eaten", meaning: "comer" },
-      give: { past: "gave", participle: "given", meaning: "dar" },
-      see: { past: "saw", participle: "seen", meaning: "ver" },
-      take: { past: "took", participle: "taken", meaning: "tomar/llevar" },
-      write: { past: "wrote", participle: "written", meaning: "escribir" },
-      break: { past: "broke", participle: "broken", meaning: "romper" },
-      speak: { past: "spoke", participle: "spoken", meaning: "hablar" },
-      drive: { past: "drove", participle: "driven", meaning: "conducir/manejar" },
-      get: { past: "got", participle: "gotten/got", meaning: "obtener/conseguir" },
-      forget: { past: "forgot", participle: "forgotten", meaning: "olvidar" }
+      come:  { past: "came",  meaning: "venir"    },
+      eat:   { past: "ate",   meaning: "comer"    },
+      give:  { past: "gave",  meaning: "dar"      },
+      see:   { past: "saw",   meaning: "ver"      },
+      take:  { past: "took",  meaning: "tomar"    },
+      write: { past: "wrote", meaning: "escribir" },
+      get:   { past: "got",   meaning: "obtener"  },
+      run:   { past: "ran",   meaning: "correr"   }
     };
     ```
 
     **Ejemplos:**
+
     - They **came** to the party (Vinieron a la fiesta)
     - I **ran** 5 kilometers (Corrí 5 kilómetros)
     - She **ate** pizza for dinner (Ella comió pizza para la cena)
@@ -148,27 +138,19 @@ Estos verbos están organizados por patrones de transformación para facilitar s
     
     ```javascript
     const totalChange = {
-      be: { past: "was/were", participle: "been", meaning: "ser/estar" },
-      do: { past: "did", participle: "done", meaning: "hacer" },
-      go: { past: "went", participle: "gone", meaning: "ir" },
-      have: { past: "had", participle: "had", meaning: "tener" },
-      make: { past: "made", participle: "made", meaning: "hacer" },
-      say: { past: "said", participle: "said", meaning: "decir" },
-      tell: { past: "told", participle: "told", meaning: "decir/contar" },
-      find: { past: "found", participle: "found", meaning: "encontrar" },
-      hear: { past: "heard", participle: "heard", meaning: "oír/escuchar" },
-      leave: { past: "left", participle: "left", meaning: "dejar/irse" },
-      meet: { past: "met", participle: "met", meaning: "conocer/encontrarse" },
-      pay: { past: "paid", participle: "paid", meaning: "pagar" },
-      send: { past: "sent", participle: "sent", meaning: "enviar" },
-      sleep: { past: "slept", participle: "slept", meaning: "dormir" },
-      stand: { past: "stood", participle: "stood", meaning: "estar de pie" },
-      understand: { past: "understood", participle: "understood", meaning: "entender" },
-      win: { past: "won", participle: "won", meaning: "ganar" }
+      be:   { past: "was/were", meaning: "ser/estar" },
+      do:   { past: "did",      meaning: "hacer"     },
+      go:   { past: "went",     meaning: "ir"         },
+      have: { past: "had",      meaning: "tener"      },
+      make: { past: "made",     meaning: "hacer"      },
+      say:  { past: "said",     meaning: "decir"      },
+      find: { past: "found",    meaning: "encontrar"  },
+      hear: { past: "heard",    meaning: "oír"         }
     };
     ```
 
     **Ejemplos:**
+
     - I **was** at home yesterday (Estuve en casa ayer)
     - She **did** her homework (Ella hizo su tarea)
     - We **went** to the beach (Fuimos a la playa)
@@ -236,12 +218,12 @@ Los verbos irregulares no siguen la regla -ed. Debes memorizar sus formas espec�
 </Aside>
 
 <Aside type="danger" title="Confundir verbos irregulares similares">
-Algunos verbos irregulares se parecen pero tienen pasados diferentes. No los mezcles.
+Algunos verbos irregulares suenan parecido en presente pero tienen pasados completamente distintos.
 
-- I **bring** my book → I **bringed** it ⛔
-- I **bring** my book → I **brought** it (Traje mi libro) ✅
-- He **sing** well → He **sang** yesterday ✅
-- He **sink** the boat → He **sank** the boat (no sang) ✅
+- I **bringed** my laptop ⛔
+- I **brought** my laptop (Traje mi laptop) ✅
+- She **singed** a song ⛔
+- She **sang** a song (Ella cantó una canción) ✅
 </Aside>
 
 <Aside type="danger" title="Usar el pasado en negaciones e interrogaciones">

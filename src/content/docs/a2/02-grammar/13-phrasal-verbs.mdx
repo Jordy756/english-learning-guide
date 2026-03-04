@@ -1,62 +1,28 @@
 ---
 title: Phrasal Verbs
-description: Domina los verbos compuestos más comunes en inglés.
+description: Domina los verbos compuestos más comunes en inglés
 ---
 
-import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
+import { Tabs, TabItem, Aside } from '@astrojs/starlight/components';
 
-Los **phrasal verbs** (verbos compuestos) son como métodos encadenados en programación: combinan un verbo base con una o más partículas (preposiciones o adverbios) para crear un significado completamente nuevo. Son extremadamente comunes en inglés hablado y escrito, especialmente en conversaciones cotidianas.
-
-La clave para dominarlos es entender que el significado del phrasal verb rara vez es la suma literal de sus partes. Por ejemplo, "turn on" (encender) no significa literalmente "girar en" sino que tiene su propio significado.
+Los **phrasal verbs** (verbos compuestos) combinan un verbo base con una o más partículas (preposiciones o adverbios) para crear un significado completamente nuevo. Su significado no se puede deducir de las partes por separado: "turn on" no significa "girar en", sino "encender". Son extremadamente comunes en inglés hablado y escrito, y aparecen constantemente en conversaciones cotidianas.
 
 ---
 
 ## Estructura de los Phrasal Verbs
 
-Un phrasal verb típicamente consta de dos o tres elementos. Piénsalo como métodos encadenados en programación, donde el verbo es una función que devuelve un objeto con métodos particle:
+Un phrasal verb consta de dos o tres elementos: un verbo base y una o más partículas. El resultado tiene un significado propio que no se puede deducir de cada palabra por separado.
 
 ```javascript
-// Métodos encadenados: verb().particle()
-const turn = () => ({
-  on: () => ({ 
-    meaning: "encender", 
-    example: "Turn on the TV",
-  }),
-  off: () => ({ 
-    meaning: "apagar", 
-    example: "Turn off the light",
-  }),
-  into: () => ({ 
-    meaning: "convertirse en", 
-    example: "The caterpillar turned into a butterfly"
-  })
-});
-
-// Uso del método encadenado:
-const phrasalVerb1 = turn().on();
-// { meaning: "encender", example: "Turn on the TV" }
-
-const phrasalVerb2 = turn().off();
-// { meaning: "apagar", example: "Turn off the light" }
-
-const phrasalVerb3 = turn().into();
-// { meaning: "convertirse en", example: "The caterpillar..." }
-
-// Esto representa exactamente cómo 
-// funciona en inglés: verb + particle = phrasal verb
+const turn = {
+  "turn on":   "encender",       // Turn on the light
+  "turn off":  "apagar",         // Turn off the TV
+  "turn into": "convertirse en", // Water turned into ice
+};
+// verbo + partícula → nuevo significado
+// distinto del significado literal de cada parte
 ```
 
-<Aside type="tip" title="Consejos para aprender phrasal verbs">
-1. **Agrupa por verbo base**: Aprender todos los phrasal verbs con "turn" o "get" es más eficiente que aprenderlos al azar.
-
-2. **Memoriza si es separable o no**: Esta característica determina cómo usarlos correctamente.
-
-3. **Usa en contexto**: No memorices el significado aislado. Crea oraciones con situaciones reales.
-
-4. **Lee y escucha**: Los phrasal verbs son muy comunes en películas, series y conversaciones. Exponerte a ellos es clave.
-
-5. **Practica con pronombres**: Especialmente para los separables, practica con "it", "them", "me", etc.
-</Aside>
 ---
 
 ## Phrasal Verbs Separables e Inseparables
@@ -81,15 +47,12 @@ La característica más importante es saber si puedes separar el verbo de la par
     };
     ```
 
-    **Phrasal verbs separables comunes:**
-    - turn on/off
-    - put on/off
-    - take off
-    - pick up
-    - turn down
-    - switch on/off
-    - call off
-    - give up
+    **Ejemplos:**
+
+    - **Turn on** the lights before you leave (Enciende las luces antes de irte)
+    - She **put off** the meeting until Friday (Ella aplazó la reunión hasta el viernes)
+    - He **picked it up** from the floor (Él lo recogió del suelo)
+    - I need to **call off** the event (Necesito cancelar el evento)
   </TabItem>
 
   <TabItem label="Inseparables">
@@ -101,7 +64,7 @@ La característica más importante es saber si puedes separar el verbo de la par
       examples: [
         { phrase: "look for the keys", meaning: "busca las llaves" },
         { phrase: "look for them", meaning: "búscalas" },
-        { phrase: "look the keys for", meaning: "❌ INCORRECTO" },
+        { phrase: "look the keys for", meaning: "incorrecto" },
         { phrase: "get over the problem", meaning: "superé el problema" },
         { phrase: "run into an old friend", meaning: "me encontré con un viejo amigo" },
         { phrase: "go through the document", meaning: "revisa el documento" }
@@ -109,14 +72,12 @@ La característica más importante es saber si puedes separar el verbo de la par
     };
     ```
 
-    **Phrasal verbs inseparables comunes:**
-    - look for
-    - get over
-    - run into
-    - go through
-    - run away from
-    - look after
-    - look at
+    **Ejemplos:**
+
+    - I **looked for** my keys everywhere (Busqué mis llaves por todas partes)
+    - She needs to **get over** the breakup (Ella necesita superar la ruptura)
+    - I **ran into** an old friend at the store (Me encontré con un viejo amigo en la tienda)
+    - Can you **look after** the kids tonight? (¿Puedes cuidar a los niños esta noche?)
   </TabItem>
 </Tabs>
 
@@ -129,209 +90,132 @@ Algunos phrasal verbs están formados por **tres elementos**: verbo + dos partí
 La estructura es: **verb + adverb/preposition + preposition**
 
 ```javascript
-// Phrasal verbs de 3 partes (verb + 2 particles)
 const threePartPhrasalVerbs = [
-  { 
-    phrasal: "put up with", 
-    parts: "put + up + with",
-    meaning: "tolerar, aguantar", 
-    example: "How do you put up with that noise?",
-    type: "Inseparable"
-  },
-  { 
-    phrasal: "get along with", 
-    parts: "get + along + with",
-    meaning: "llevarse bien con", 
-    example: "She gets along with everyone",
-    type: "Inseparable"
-  },
-  { 
-    phrasal: "run away with", 
-    parts: "run + away + with",
-    meaning: "escaparse con, dejarse llevar por", 
-    example: "Don't let your imagination run away with you",
-    type: "Inseparable"
-  },
-  { 
-    phrasal: "keep up with", 
-    parts: "keep + up + with",
-    meaning: "mantenerse al día con", 
-    example: "It's hard to keep up with technology",
-    type: "Inseparable"
-  }
+  { phrasal: "put up with",    meaning: "tolerar, aguantar" },
+  { phrasal: "get along with", meaning: "llevarse bien con" },
+  { phrasal: "keep up with",   meaning: "mantenerse al día" },
+  { phrasal: "look forward to", meaning: "esperar con entusiasmo" },
+  { phrasal: "run away with",  meaning: "escaparse con" },
 ];
 ```
 
 <Aside type="caution" title="Los phrasal verbs de 3 partes nunca se separan">
 Los phrasal verbs de 3 partes **SIEMPRE son inseparables**. El patrón es: verb + particle 1 + particle 2 + object. La estructura nunca se divide.
-
-- Look forward your visit to ⛔
-- Look forward to your visit ✅
 </Aside>
 
 ---
 
-## Phrasal Verbs por Verbo Base
+## Phrasal Verbs más comunes
 
-Los verbos base más comunes para formar phrasal verbs son: **turn, get, look, put, take, go, come, run**, etc.
+Aquí están algunos de los phrasal verbs más usados, agrupados por verbo base:
 
 <Tabs>
   <TabItem label="Turn">
-      ```javascript
-      const turnPhrasalVerbs = [
-        { phrasal: "turn on", meaning: "encender" },
-        { phrasal: "turn off", meaning: "apagar" },
-        { phrasal: "turn up", meaning: "subir el volumen" },
-        { phrasal: "turn down", meaning: "bajar el volumen" },
-        { phrasal: "turn back", meaning: "darse la vuelta, regresar" },
-        { phrasal: "turn into", meaning: "convertirse en" }
-      ];
-      ```
+    ```javascript
+    const turnPhrasalVerbs = [
+      { phrasal: "turn on",   meaning: "encender" },
+      { phrasal: "turn off",  meaning: "apagar" },
+      { phrasal: "turn up",   meaning: "subir el volumen" },
+      { phrasal: "turn down", meaning: "bajar/rechazar" },
+      { phrasal: "turn into", meaning: "convertirse en" },
+    ];
+    ```
+
+    **Ejemplos:**
+
+    - **Turn on** the TV, please (Enciende la televisión, por favor)
+    - She **turned down** the job offer (Ella rechazó la oferta de trabajo)
+    - The caterpillar **turned into** a butterfly (La oruga se convirtió en mariposa)
   </TabItem>
 
   <TabItem label="Get">
     ```javascript
     const getPhrasalVerbs = [
-      { phrasal: "get up", meaning: "levantarse" },
-      { phrasal: "get on", meaning: "subirse a, llevarse bien" },
-      { phrasal: "get off", meaning: "bajarse de" },
+      { phrasal: "get up",   meaning: "levantarse" },
+      { phrasal: "get off",  meaning: "bajarse de" },
       { phrasal: "get over", meaning: "recuperarse, superar" },
       { phrasal: "get back", meaning: "regresar, devolver" },
-      { phrasal: "get into", meaning: "meterse en" },
-      { phrasal: "get along", meaning: "llevarse bien" }
+      { phrasal: "get along", meaning: "llevarse bien" },
     ];
     ```
+
+    **Ejemplos:**
+
+    - I **get up** at 7 every morning (Me levanto a las 7 todas las mañanas)
+    - She finally **got over** the flu (Ella finalmente se recuperó de la gripe)
+    - We need to **get back** before 9 PM (Necesitamos regresar antes de las 9 PM)
   </TabItem>
 
   <TabItem label="Look">
     ```javascript
     const lookPhrasalVerbs = [
-      { phrasal: "look for", meaning: "buscar" },
-      { phrasal: "look at", meaning: "mirar" },
-      { phrasal: "look after", meaning: "cuidar de" },
+      { phrasal: "look for",      meaning: "buscar" },
+      { phrasal: "look at",       meaning: "mirar" },
+      { phrasal: "look after",    meaning: "cuidar de" },
       { phrasal: "look forward to", meaning: "esperar con entusiasmo" },
-      { phrasal: "look down on", meaning: "despreciar" }
     ];
     ```
-  </TabItem>
 
-  <TabItem label="Put">
-    ```javascript
-    const putPhrasalVerbs = [
-      { phrasal: "put on", meaning: "ponerse, encender" },
-      { phrasal: "put off", meaning: "aplazar, posponer" },
-      { phrasal: "put away", meaning: "guardar" },
-      { phrasal: "put up with", meaning: "tolerar, aguantar" }
-    ];
-    ```
-  </TabItem>
+    **Ejemplos:**
 
-  <TabItem label="Otros Verbos">
-    ```javascript
-    const otherPhrasalVerbs = [
-      { phrasal: "take off", meaning: "despegar, quitarse" },
-      { phrasal: "come up with", meaning: "ocurrírsele" },
-      { phrasal: "go over", meaning: "revisar" },
-      { phrasal: "run into", meaning: "encontrarse con" },
-      { phrasal: "pick up", meaning: "recoger" },
-      { phrasal: "carry out", meaning: "llevar a cabo" },
-      { phrasal: "break up", meaning: "terminar" },
-      { phrasal: "cheer up", meaning: "animarse" }
-    ];
-    ```
+    - I'm **looking for** my passport (Estoy buscando mi pasaporte)
+    - Can you **look after** the dog this weekend? (¿Puedes cuidar al perro este fin de semana?)
+    - I'm **looking forward to** the holidays (Espero las vacaciones con entusiasmo)
   </TabItem>
 </Tabs>
 
----
-
-## Phrasal Verbs en Contextos Comunes
-
-<CardGrid>
-  <Card title="En el Hogar">
-    - turn on the lights (enciende las luces)
-    - turn off the TV (apaga la televisión)
-    - put away the dishes (guarda los platos)
-    - pick up your room (ordena tu habitación)
-    - tidy up (arregla/limpia)
-  </Card>
-
-  <Card title="En el Trabajo">
-    - take on a new project (asumir un nuevo proyecto)
-    - put off a meeting (aplazar una reunión)
-    - go over the details (revisar los detalles)
-    - carry out a task (llevar a cabo una tarea)
-    - come up with ideas (ocurrírsele ideas)
-  </Card>
-
-  <Card title="Emociones y Relaciones">
-    - get over someone (olvidar a alguien)
-    - get along with (llevarse bien con)
-    - break up with (terminar con)
-    - open up (abrirse emocionalmente)
-    - cheer up (animarse)
-  </Card>
-
-  <Card title="Aprendizaje y Desarrollo">
-    - keep up with (mantenerse al día con)
-    - look forward to (esperar con entusiasmo)
-    - catch up on (ponerse al día con)
-    - build up (incrementar, fortalecer)
-    - brush up on (refrescar conocimientos)
-  </Card>
-</CardGrid>
+<Aside type="tip" title="Lista completa de phrasal verbs">
+Hay cientos de phrasal verbs en inglés. Consulta la [lista completa de phrasal verbs](../../reference/03-phrasal-verbs-list.mdx) en la sección de referencia.
+</Aside>
 
 ---
-
 
 ## Errores Comunes
 
 <Aside type="danger" title="Separar phrasal verbs inseparables">
-Los inseparables NUNCA permiten que el objeto vaya en el medio:
+Los phrasal verbs inseparables nunca pueden dividirse: el objeto siempre va después de la partícula, nunca en el medio.
 
-~~Look for it the key~~ ⛔ 
-
-**Look for the key** (Busca la llave) ✅
-
-~~Run into him that problem~~ ⛔ 
-
-**Run into him** (Me lo encontré) ✅ 
+- I **looked** the keys **for** ⛔
+- I **looked for** the keys (Busqué las llaves) ✅
+- She **ran** him **into** ⛔
+- She **ran into** him (Se lo encontró) ✅
 </Aside>
 
 <Aside type="danger" title="No separar phrasal verbs separables con pronombres">
-Cuando el objeto es un pronombre, el verbo DEBE separarse:
+Cuando el objeto es un pronombre, los phrasal verbs separables siempre deben dividirse. El pronombre va en el medio, nunca al final.
 
-~~I turn on the light it~~ ⛔
-
-**I turn it on** (Lo enciendo) ✅ 
-
-~~Pick up them your room~~ ⛔ 
-
-**Pick it up** (Recógelo) ✅ 
+- I **turned on it** ⛔
+- I **turned it on** (Lo encendí) ✅
+- She **picked up them** ⛔
+- She **picked them up** (Los recogió) ✅
 </Aside>
 
 <Aside type="danger" title="Diferenciar phrasal verbs similares">
-Algunos phrasal verbs similares pueden tener diferente uso:
+Algunos phrasal verbs parecidos tienen un comportamiento distinto. Por ejemplo, "take off" es separable y "get off" es inseparable.
 
-- **take off** (separable): "Put on your shirt" → "Put it on"
-- **get off** (inseparable): "Get off the bus" ("Get the bus off")
- 
-~~Take off your shoes off~~ ⛔
-
-**Take off your shoes** ✅
-
-~~Get off it the bus~~ ⛔
-
-**Get off the bus** (siempre junto) ✅ 
+- Take off your shoes **off** ⛔
+- **Take off** your shoes (Quítate los zapatos) ✅
+- Get **the bus** off ⛔
+- **Get off** the bus (Bájate del autobús) ✅
 </Aside>
 
 <Aside type="danger" title="Uso incorrecto del pasado">
-No todos los phrasal verbs cambian de forma en pasado de manera irregular:
+Los phrasal verbs regulares forman el pasado con **-ed**, igual que cualquier verbo regular. El objeto tampoco puede omitirse si la oración lo requiere.
 
-~~I looked for yesterday~~ ⛔  
+- I **looked for** yesterday ⛔
+- I **looked for** it yesterday (Lo busqué ayer) ✅
+- She **turned on** already ⛔
+- She **turned it on** already (Ella ya lo encendió) ✅
+</Aside>
 
-**I looked for it yesterday** ("look for" sigue siendo regular) ✅ 
+---
 
-~~She turned on already~~ ⛔ 
+## Práctica
 
-**She turned it on already** ("turn on" también es regular) ✅ 
+<Aside type="tip" title="Ejercicio diario">
+- Escribe 5 oraciones usando phrasal verbs separables con pronombres: practica "turn it on", "pick it up", "put it away"
+- Elige 3 phrasal verbs nuevos cada día y escribe una oración con cada uno en una situación real
+- Mira un episodio de una serie en inglés e identifica al menos 5 phrasal verbs que escuches
+- Practica la diferencia entre separables e inseparables reemplazando el objeto por un pronombre
+- Consulta la lista completa de phrasal verbs en la sección de referencia y marca los que ya conoces
 </Aside>
