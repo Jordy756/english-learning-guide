@@ -1,11 +1,11 @@
 ---
 title: "Palabras Interrogativas"
-description: "Domina las question words: what, where, when, why, how."
+description: "Domina las question words: what, where, when, why, how"
 ---
 
-import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
+import { Tabs, TabItem, Aside } from '@astrojs/starlight/components';
 
-Las **question words** (palabras interrogativas) son como parámetros específicos en una función: te permiten obtener exactamente el tipo de información que necesitas. En lugar de obtener solo "sí" o "no", estas palabras extraen detalles precisos sobre personas, lugares, tiempos, razones y métodos.
+Las **question words** (palabras interrogativas) son palabras que van al inicio de una pregunta y te permiten pedir un tipo específico de información. En lugar de recibir solo "sí" o "no", con estas palabras puedes preguntar sobre personas, lugares, tiempos, razones y maneras. Son fundamentales para mantener conversaciones reales en inglés y están presentes en casi cualquier situación cotidiana.
 
 ---
 
@@ -26,7 +26,7 @@ Las **question words** (palabras interrogativas) son como parámetros específic
     };
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
 
     - **What** is your name? (¿Cuál es tu nombre?)
     - **What** do you do? (¿A qué te dedicas?)
@@ -52,7 +52,7 @@ Las **question words** (palabras interrogativas) son como parámetros específic
     };
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
 
     - **Where** do you live? (¿Dónde vives?)
     - **Where** is the bank? (¿Dónde está el banco?)
@@ -74,7 +74,7 @@ Las **question words** (palabras interrogativas) son como parámetros específic
     };
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
 
     - **When** is your birthday? (¿Cuándo es tu cumpleaños?)
     - **When** do you start work? (¿Cuándo empiezas a trabajar?)
@@ -96,7 +96,7 @@ Las **question words** (palabras interrogativas) son como parámetros específic
     };
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
 
     - **Who** are you? (¿Quién eres?)
     - **Who** is your teacher? (¿Quién es tu profesor?)
@@ -118,7 +118,7 @@ Las **question words** (palabras interrogativas) son como parámetros específic
     };
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
 
     - **Why** do you study English? (¿Por qué estudias inglés?)
     - **Why** is she sad? (¿Por qué está triste?)
@@ -144,7 +144,7 @@ Las **question words** (palabras interrogativas) son como parámetros específic
     };
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
 
     - **How** are you? (¿Cómo estás?)
     - **How** do you make coffee? (¿Cómo haces café?)
@@ -166,7 +166,7 @@ Las **question words** (palabras interrogativas) son como parámetros específic
     };
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
 
     - **Which** color do you prefer? (¿Cuál color prefieres?)
     - **Which** is your car? (¿Cuál es tu carro?)
@@ -192,7 +192,7 @@ Las **question words** (palabras interrogativas) son como parámetros específic
     };
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
 
     - **Whose** phone is this? (¿De quién es este teléfono?)
     - **Whose** car is that? (¿De quién es ese carro?)
@@ -221,7 +221,7 @@ La palabra **how** es muy versátil y se combina con adjetivos y adverbios para 
     };
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
 
     - **How much** is this? (¿Cuánto cuesta esto?)
     - **How much** water do you need? (¿Cuánta agua necesitas?)
@@ -241,7 +241,7 @@ La palabra **how** es muy versátil y se combina con adjetivos y adverbios para 
     };
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
 
     - **How many** students are there? (¿Cuántos estudiantes hay?)
     - **How many** books do you have? (¿Cuántos libros tienes?)
@@ -261,7 +261,7 @@ La palabra **how** es muy versátil y se combina con adjetivos y adverbios para 
     };
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
 
     - **How old** are you? (¿Cuántos años tienes?)
     - **How old** is your brother? (¿Qué edad tiene tu hermano?)
@@ -281,7 +281,7 @@ La palabra **how** es muy versátil y se combina con adjetivos y adverbios para 
     };
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
 
     - **How tall** are you? (¿Cuánto mides?)
     - **How tall** is that building? (¿Qué tan alto es ese edificio?)
@@ -301,7 +301,7 @@ La palabra **how** es muy versátil y se combina con adjetivos y adverbios para 
     };
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
 
     - **How often** do you exercise? (¿Con qué frecuencia haces ejercicio?)
     - **How often** does she call? (¿Cada cuánto llama?)
@@ -321,7 +321,7 @@ La palabra **how** es muy versátil y se combina con adjetivos y adverbios para 
     };
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
 
     - **How long** is the movie? (¿Cuánto dura la película?)
     - **How long** do you study? (¿Cuánto tiempo estudias?)
@@ -334,28 +334,23 @@ La palabra **how** es muy versátil y se combina con adjetivos y adverbios para 
 ## Estructura de Preguntas
 
 ```javascript
-const questionStructure = {
-  // Estructura general
-  pattern: "Question Word + Auxiliary + Subject + Main Verb + ?",
-  
-  // Con verbo to be (sin auxiliar)
-  toBe: "Question Word + am/is/are/was/were + Subject + ?",
-  
-  // Pregunta sobre el sujeto (sin auxiliar)
-  subject: "Question Word + Main Verb + ?"
-};
+const patterns = [
+  "QW + do/does/did + subject + verb + ?",
+  "QW + to be       + subject        + ?",
+  "QW (subject)     + verb           + ?"
+];
+// patterns[0] → "Where do you work?"
+// patterns[1] → "Where are you?"
+// patterns[2] → "Who called you?"
 ```
 
-**Ejemplos**
+**Ejemplos:**
 
 - **Where** do you work? (¿Dónde trabajas?)
 - **What** does she eat? (¿Qué come ella?)
-- **Who** is your teacher? (¿Quién es tu profesor?) - sin auxiliar con "to be"
-- **Who** teaches you? (¿Quién te enseña?) - pregunta sobre el sujeto
+- **Who** is your teacher? (¿Quién es tu profesor?)
 - **Where** did you go? (¿A dónde fuiste?)
-- **What** did she say? (¿Qué dijo ella?)
-- **When** was the party? (¿Cuándo fue la fiesta?) - sin auxiliar con "to be"
-- **Who** called you? (¿Quién te llamó?) - pregunta sobre el sujeto
+- **Who** called you? (¿Quién te llamó?)
 
 <Aside type="caution" title="Verbo to be no usa auxiliares">
 Con **am/is/are/was/were**, no uses do/does/did. La estructura es: Question Word + to be + Subject.
@@ -370,44 +365,44 @@ En Simple Present usa **do** (I/you/we/they) o **does** (he/she/it) excepto con 
 ## Errores comunes
 
 <Aside type="danger" title="Poner la question word al final">
-- You live where? ⛔ (muy informal)
-- **Where** do you live? ✅
+La question word siempre va al inicio de la pregunta en inglés formal y escrito.
 
-La question word DEBE ir al inicio de la pregunta en contextos formales y escritos.
+- You live **where**? ⛔
+- **Where** do you live? (¿Dónde vives?) ✅
 </Aside>
 
 <Aside type="danger" title="Usar auxiliar con verbo to be">
-- Where do you **are**? ⛔
-- Where **are** you? ✅
-- When does **is** the party? ⛔
-- When **is** the party? ✅
+El verbo to be no necesita auxiliares. Usar do/does/did junto con am/is/are es un error.
 
-El verbo to be no necesita auxiliares (do/does/did).
+- Where do you **are**? ⛔
+- Where **are** you? (¿Dónde estás?) ✅
+- When does **is** the party? ⛔
+- When **is** the party? (¿Cuándo es la fiesta?) ✅
 </Aside>
 
 <Aside type="danger" title="Confundir Whose con Who's">
-- **Who's** book is this? ⛔ (Who is book = ¿Quién es libro?)
-- **Whose** book is this? ✅ (¿De quién es este libro?)
+Whose indica posesión. Who's es la contracción de "who is" y no puede preceder a un sustantivo.
 
-**Whose** = posesión. **Who's** = contracción de "who is".
+- **Who's** book is this? ⛔
+- **Whose** book is this? (¿De quién es este libro?) ✅
 </Aside>
 
 <Aside type="danger" title="Confundir How much y How many">
-- How **many** water? ⛔ (no se puede contar)
-- How **much** water? ✅
-- How **much** apples? ⛔ (se pueden contar)
-- How **many** apples? ✅
+Much acompaña sustantivos no contables. Many acompaña sustantivos contables.
 
-**Much** = no contable. **Many** = contable.
+- How **many** water? ⛔
+- How **much** water? (¿Cuánta agua?) ✅
+- How **much** apples? ⛔
+- How **many** apples? (¿Cuántas manzanas?) ✅
 </Aside>
 
 <Aside type="danger" title="Olvidar el auxiliar en preguntas">
-- Where you work? ⛔
-- Where **do** you work? ✅
-- What she wants? ⛔
-- What **does** she want? ✅
+Las preguntas con do/does/did necesitan el auxiliar. Olvidarlo es uno de los errores más frecuentes.
 
-Las preguntas necesitan auxiliar (do/does/did), excepto con to be o cuando la question word es el sujeto.
+- Where you work? ⛔
+- Where **do** you work? (¿Dónde trabajas?) ✅
+- What she wants? ⛔
+- What **does** she want? (¿Qué quiere ella?) ✅
 </Aside>
 
 ---

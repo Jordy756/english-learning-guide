@@ -1,11 +1,11 @@
 ---
 title: There Is / There Are
-description: Aprende a expresar la existencia de cosas.
+description: Aprende a expresar la existencia de cosas
 ---
 
 import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/components';
 
-**There is** y **there are** son como operadores de existencia en programación: verifican y declaran la presencia de elementos en un contexto. Se usan para indicar que algo existe o está presente en un lugar, sin especificar quién es el dueño o cuál es la identidad exacta del objeto.
+**There is** y **there are** se usan para indicar que algo existe o está presente en un lugar. Equivalen a la palabra española “hay” y son estructuras esenciales para describir espacios, hablar de lo que existe en un sitio y presentar información nueva. La elección entre **is** y **are** depende únicamente del sustantivo que les sigue.
 
 ---
 
@@ -14,16 +14,13 @@ import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/compone
 La diferencia fundamental: **there is** para singular, **there are** para plural.
 
 ```javascript
-const existence = {
-  singular: "there is + singular noun",
-  plural: "there are + plural noun",
-  
-  // El sustantivo determina is/are
-  rule: "Mira lo que viene DESPUÉS de there is/are"
-};
+const thereVerb = (isPlural) =>
+  isPlural ? "there are" : "there is";
+// thereVerb(false) → "there is"  → singular
+// thereVerb(true)  → "there are" → plural
 ```
 
-**Ejemplos**
+**Ejemplos:**
 
 - **There is** a book on the table (Hay un libro en la mesa - singular)
 - **There are** three books on the table (Hay tres libros en la mesa - plural)
@@ -41,15 +38,15 @@ Siempre mira el sustantivo que viene después de "there is/are" para decidir si 
 <Tabs>
   <TabItem label="Afirmativa">
     ```javascript
-    const affirmative = {
-      singular: "There is + singular noun",
-      plural: "There are + plural noun",
-      
-      pattern: "There + is/are + (a/an/some) + noun + place"
+    // Patrón: there + is/are + artículo + sustantivo
+    const structure = {
+      singular:   "There is  + a/an   + noun",
+      indefinite: "There are + some   + noun",
+      exact:      "There are + number + noun"
     };
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
 
     - There **is** a cat in the garden (Hay un gato en el jardín)
     - There **are** two cinemas downtown (Hay dos cines en el centro)
@@ -59,15 +56,15 @@ Siempre mira el sustantivo que viene después de "there is/are" para decidir si 
   
   <TabItem label="Negativa">
     ```javascript
-    const negative = {
-      singular: "There is not / isn't + singular noun",
-      plural: "There are not / aren't + plural noun",
-      
-      common: "isn't/aren't + any (ningún/ninguna)"
+    const negation = {
+      singular: { full: "is not",  short: "isn't"  },
+      plural:   { full: "are not", short: "aren't" }
     };
+    // There isn't  any milk   → no hay leche
+    // There aren't any chairs → no hay sillas
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
 
     - There **isn't** a pharmacy near here (No hay una farmacia cerca de aquí)
     - There **aren't** any chairs available (No hay sillas disponibles)
@@ -77,18 +74,17 @@ Siempre mira el sustantivo que viene después de "there is/are" para decidir si 
   
   <TabItem label="Pregunta">
     ```javascript
-    const question = {
-      singular: "Is there + singular noun + ?",
-      plural: "Are there + plural noun + ?",
-      
-      answers: {
-        yes: "Yes, there is/are",
-        no: "No, there isn't/aren't"
-      }
-    };
+    // Invertir el orden: is/are va al inicio
+    const questions = [
+      ["There is a store",  "Is there a store?"],
+      ["There are chairs",  "Are there chairs?"]
+    ];
+    // Respuestas cortas
+    // "Is there...?"  → "Yes, there is"  / "No, there isn't"
+    // "Are there...?" → "Yes, there are" / "No, there aren't"
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
 
     - **Is there** a restaurant nearby? (¿Hay un restaurante cerca?)
     - **Are there** any questions? (¿Hay alguna pregunta?)
@@ -110,16 +106,15 @@ Esta es una distinción crucial que confunde a muchos hispanohablantes.
 <Tabs>
   <TabItem label="There Is/Are">
     ```javascript
-    const thereIsAre = {
-      purpose: "Introducir nueva información",
-      meaning: "Existe algo / Hay algo",
-      focus: "La existencia misma",
-      
-      usage: "Primera mención de algo"
+    // Introduce algo nuevo al oyente
+    const introducing = {
+      person:  "There is a new student",
+      options: "There are three options",
+      issue:   "There is a problem"
     };
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
 
     - **There is** a book on the desk (Hay un libro en el escritorio - introduciendo el libro)
     - **There are** three problems (Hay tres problemas - presentando los problemas)
@@ -128,16 +123,15 @@ Esta es una distinción crucial que confunde a muchos hispanohablantes.
 
   <TabItem label="It Is">
     ```javascript
-    const itIs = {
-      purpose: "Describir o dar información sobre algo conocido",
-      meaning: "Es / Está",
-      focus: "Características o ubicación de algo ya mencionado",
-      
-      usage: "Ya sabes de qué estamos hablando"
+    // Cuando ya sabemos de qué hablamos
+    const known = {
+      location: "It is on the desk",      // dónde está
+      quality:  "It is expensive",        // cómo es
+      identity: "It is a good restaurant" // cuál es
     };
     ```
 
-    **Ejemplos**
+    **Ejemplos:**
 
     - **It is** on the desk (Está en el escritorio - ya sabemos qué cosa)
     - **It is** expensive (Es caro - describiendo algo conocido)
@@ -188,48 +182,48 @@ Usa **there is/are** para introducir algo nuevo. Usa **it is** para hablar de al
 ## Errores comunes
 
 <Aside type="danger" title="Confundir singular y plural">
-- There **is** three books ⛔
-- There **are** three books ✅
-- There **are** a book ⛔
-- There **is** a book ✅
+Siempre verifica si el sustantivo que sigue es singular o plural para elegir is o are.
 
-Siempre verifica si el sustantivo es singular (is) o plural (are).
+- There **is** three books ⛔
+- There **are** three books (Hay tres libros) ✅
+- There **are** a book ⛔
+- There **is** a book (Hay un libro) ✅
 </Aside>
 
 <Aside type="danger" title="Usar 'have' en lugar de 'there is/are'">
-- In my city **have** many parks ⛔
-- In my city **there are** many parks ✅
-- **Have** a problem ⛔
-- **There is** a problem ✅
+Los hispanohablantes a menudo traducen literalmente “hay” como “have”, pero en inglés se usa “there is/are” para expresar existencia.
 
-Los hispanohablantes a menudo traducen literal mente "hay" como "have", pero en inglés se usa "there is/are" para expresar existencia.
+- In my city **have** many parks ⛔
+- In my city **there are** many parks (En mi ciudad hay muchos parques) ✅
+- **Have** a problem ⛔
+- **There is** a problem (Hay un problema) ✅
 </Aside>
 
 <Aside type="danger" title="Omitir 'there' en respuestas">
-- Is there a bank? - Yes, **is** ⛔
-- Is there a bank? - Yes, **there is** ✅
-- Are there chairs? - No, **aren't** ⛔
-- Are there chairs? - No, **there aren't** ✅
+Las respuestas cortas siempre deben incluir “there”, no solo el auxiliar solo.
 
-Las respuestas cortas deben incluir "there".
+- Is there a bank? - Yes, **is** ⛔
+- Is there a bank? - Yes, **there is** (Sí, hay) ✅
+- Are there chairs? - No, **aren't** ⛔
+- Are there chairs? - No, **there aren't** (No, no hay) ✅
 </Aside>
 
 <Aside type="danger" title="Usar there is/are para posesión">
-- I **there is** a car ⛔
-- I **have** a car ✅
-- She **there is** a dog ⛔
-- She **has** a dog ✅
+“There is/are” expresa existencia o presencia, no posesión. Para indicar que alguien tiene algo, usa “have/has”.
 
-"There is/are" es para existencia/presencia, no para posesión. Para posesión usa "have/has".
+- I **there is** a car ⛔
+- I **have** a car (Tengo un carro) ✅
+- She **there is** a dog ⛔
+- She **has** a dog (Ella tiene un perro) ✅
 </Aside>
 
 <Aside type="danger" title="Confundir con 'it is'">
-- Where's your book? - **There is** on the table ⛔
-- Where's your book? - **It is** on the table ✅
-- **It is** a new store downtown ⛔
-- **There is** a new store downtown ✅
+“There is/are” introduce información nueva. “It is” describe o ubica algo que ya conoces o mencionaste.
 
-"There is/are" introduce información nueva. "It is" describe algo ya conocido.
+- Where's your book? - **There is** on the table ⛔
+- Where's your book? - **It is** on the table (Está en la mesa) ✅
+- **It is** a new store downtown ⛔
+- **There is** a new store downtown (Hay una tienda nueva en el centro) ✅
 </Aside>
 
 ---
