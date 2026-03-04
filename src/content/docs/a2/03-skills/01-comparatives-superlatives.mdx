@@ -1,5 +1,180 @@
 ---
 title: Comparativos y Superlativos
-description: Compara y expresa el grado máximo.
+description: Compara personas, cosas y lugares usando adjetivos comparativos y superlativos
 ---
+
+import { Tabs, TabItem, Aside } from '@astrojs/starlight/components';
+
+Los **comparativos** y **superlativos** son formas del adjetivo que usas para comparar personas, cosas y lugares. El comparativo establece una diferencia entre dos elementos ("más alto que"), mientras que el superlativo expresa el grado máximo dentro de un grupo ("el más alto de todos"). La forma que usas depende de cuántas sílabas tiene el adjetivo.
+
+---
+
+## Formación de Comparativos y Superlativos
+
+Los adjetivos cortos añaden una terminación directamente al adjetivo, mientras que los largos usan las palabras **more** y **the most**.
+
+<Tabs>
+  <TabItem label="Adjetivos cortos">
+    Los adjetivos de una o dos sílabas añaden **-er** para el comparativo y **-est** para el superlativo.
+
+    ```javascript
+    const short = ["tall", "fast", "cheap", "young"];
+    const toComparative = adj => adj + "er";
+    const toSuperlative = adj => "the " + adj + "est";
+    // tall → taller → the tallest
+    // fast → faster → the fastest
+    ```
+
+    **Ejemplos:**
+
+    - She is **taller** than her brother (Ella es más alta que su hermano)
+    - This route is **faster** than the other (Esta ruta es más rápida que la otra)
+    - He is **the youngest** in the class (Él es el más joven de la clase)
+    - This hotel is **the cheapest** in the city (Este hotel es el más barato de la ciudad)
+  </TabItem>
+
+  <TabItem label="Adjetivos largos">
+    Los adjetivos de tres o más sílabas usan **more** para el comparativo y **the most** para el superlativo.
+
+    ```javascript
+    const long = {
+      comparative: "more + adjective",
+      superlative: "the most + adjective",
+    };
+    // beautiful  → more beautiful  → the most beautiful
+    // important  → more important  → the most important
+    // expensive  → more expensive  → the most expensive
+    ```
+
+    **Ejemplos:**
+
+    - This book is **more interesting** than the movie (Este libro es más interesante que la película)
+    - Health is **more important** than money (La salud es más importante que el dinero)
+    - Paris is **the most beautiful** city I've visited (París es la ciudad más bella que he visitado)
+    - That was **the most expensive** restaurant in town (Ese fue el restaurante más caro de la ciudad)
+  </TabItem>
+
+  <TabItem label="Irregulares">
+    Algunos adjetivos tienen formas irregulares que debes memorizar.
+
+    ```javascript
+    const irregular = {
+      "good": { comp: "better",  sup: "the best" },
+      "bad":  { comp: "worse",   sup: "the worst" },
+      "far":  { comp: "farther", sup: "the farthest" },
+    };
+    ```
+
+    **Ejemplos:**
+
+    - My Spanish is **better** than my French (Mi español es mejor que mi francés)
+    - Today was **worse** than yesterday (Hoy fue peor que ayer)
+    - She is **the best** student in class (Ella es la mejor estudiante de la clase)
+    - That was **the worst** movie I've ever seen (Esa fue la peor película que he visto)
+
+    <Aside type="tip" title="Un solo grupo de irregulares">
+    Los mismos adjetivos que son irregulares en el comparativo también lo son en el superlativo. No hay excepciones dentro del grupo.
+    </Aside>
+  </TabItem>
+</Tabs>
+
+---
+
+## Reglas de Ortografía
+
+Al añadir **-er** y **-est** a adjetivos cortos, la ortografía cambia según cómo termina el adjetivo:
+
+```javascript
+const spellingRules = {
+  endsWith_e:   v => v + "r",                // nice  → nicer
+  endsWith_CVC: v => v + v.at(-1) + "er",    // big   → bigger
+  endsWith_y:   v => v.slice(0, -1) + "ier", // happy → happier
+  regular:      v => v + "er",               // tall  → taller
+};
+```
+
+**Ejemplos:**
+
+- nice → **nicer** → the **nicest** (agradable)
+- big → **bigger** → the **biggest** (grande)
+- happy → **happier** → the **happiest** (feliz)
+- hot → **hotter** → the **hottest** (caliente)
+
+---
+
+## Comparaciones con As...As
+
+Usa **as + adjetivo + as** para expresar igualdad entre dos elementos. La forma negativa indica que no son iguales.
+
+```javascript
+const equality = {
+  positive: "as + adjective + as",      // tan ... como
+  negative: "not as + adjective + as",  // no tan ... como
+};
+// She is as tall as her sister.
+// He is not as fast as his brother.
+```
+
+**Ejemplos:**
+
+- She is **as tall as** her sister (Ella es tan alta como su hermana)
+- This exam is **as difficult as** the last one (Este examen es tan difícil como el anterior)
+- My phone is **not as expensive as** yours (Mi teléfono no es tan caro como el tuyo)
+- He doesn't work **as hard as** she does (Él no trabaja tan duro como ella)
+
+<Aside type="note" title="Than y as...as no son intercambiables">
+Los comparativos van con **than**: "taller than". Las comparaciones de igualdad van con **as...as**: "as tall as". No puedes mezclar las dos estructuras.
+</Aside>
+
+---
+
+## Errores Comunes
+
+<Aside type="danger" title="Usar -er y more al mismo tiempo">
+Solo puedes usar una forma: o añades -er al adjetivo, o usas more. Nunca los dos juntos.
+
+- She is **more taller** than me ⛔
+- She is **taller** than me (Ella es más alta que yo) ✅
+- He is **more smarter** than his friends ⛔
+- He is **smarter** than his friends (Él es más inteligente que sus amigos) ✅
+</Aside>
+
+<Aside type="danger" title="Olvidar 'than' en el comparativo">
+Cuando comparas dos cosas directamente, siempre necesitas **than** después del comparativo.
+
+- She is taller **her brother** ⛔
+- She is taller **than** her brother (Ella es más alta que su hermano) ✅
+- This bag is more expensive **that one** ⛔
+- This bag is more expensive **than** that one (Esta bolsa es más cara que esa) ✅
+</Aside>
+
+<Aside type="danger" title="Olvidar 'the' en el superlativo">
+El superlativo siempre va precedido del artículo **the**. Sin "the", la estructura es incorrecta.
+
+- She is **best** player on the team ⛔
+- She is **the best** player on the team (Ella es la mejor jugadora del equipo) ✅
+- This is **most beautiful** city I know ⛔
+- This is **the most beautiful** city I know (Esta es la ciudad más bella que conozco) ✅
+</Aside>
+
+<Aside type="danger" title="Usar comparativo donde corresponde superlativo">
+Usa el comparativo cuando comparas dos elementos. Cuando comparas uno dentro de un grupo de tres o más, usa el superlativo.
+
+- She is **taller** of the three sisters ⛔
+- She is **the tallest** of the three sisters (Ella es la más alta de las tres hermanas) ✅
+- This is **more expensive** option on the menu ⛔
+- This is **the most expensive** option on the menu (Esta es la opción más cara del menú) ✅
+</Aside>
+
+---
+
+## Práctica
+
+<Aside type="tip" title="Ejercicio diario">
+- Compara dos personas que conoces usando 5 adjetivos diferentes en comparativo
+- Describe el lugar más grande, más pequeño y más interesante que hayas visitado usando superlativos
+- Escribe 3 oraciones con as...as comparando objetos que tienes a la mano
+- Toma 10 adjetivos y escribe su forma comparativa y superlativa correctamente
+- Busca reseñas de productos en inglés e identifica todos los comparativos y superlativos que encuentres
+</Aside>
 

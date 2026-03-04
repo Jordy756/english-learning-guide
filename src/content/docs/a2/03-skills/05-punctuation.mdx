@@ -1,5 +1,172 @@
 ---
 title: Puntuación
-description: Aprende las reglas de puntuación en inglés.
+description: Aprende las reglas de puntuación del inglés escrito para comunicarte con claridad
 ---
+
+import { Tabs, TabItem, Aside } from '@astrojs/starlight/components';
+
+La **puntuación** en inglés cumple la misma función que en español: organizar las ideas, indicar pausas e indicar el tipo de oración. Sin embargo, hay varias diferencias importantes entre los dos sistemas. Algunos signos se usan de forma distinta, otros se omiten donde el español los exige, y algunos errores son tan frecuentes que vale la pena aprenderlos desde el principio.
+
+---
+
+## Los signos principales
+
+Cada signo de puntuación en inglés tiene un uso específico. Conocer cuándo va cada uno es esencial para escribir con claridad.
+
+<Tabs>
+  <TabItem label="Punto y coma">
+    El **punto** (`.`) cierra oraciones. La **coma** (`,`) separa elementos en una lista o une partes de una oración compuesta. El **punto y coma** (`;`) conecta dos oraciones independientes relacionadas.
+
+    ```javascript
+    const marks = {
+      period:    "Ends a sentence.",
+      comma:     "She bought apples, oranges, and bananas.",
+      semicolon: "I was tired; I went to bed early.",
+    };
+    ```
+
+    **Ejemplos:**
+
+    - She lives in London**.** (Ella vive en Londres.)
+    - I need eggs**,** milk**,** and bread (Necesito huevos, leche y pan)
+    - He studied all night**;** he passed the exam (Estudió toda la noche; aprobó el examen)
+    - We arrived late**,** but the show hadn't started (Llegamos tarde, pero el show no había comenzado)
+  </TabItem>
+
+  <TabItem label="Signo de interrogación y exclamación">
+    En inglés, las preguntas y exclamaciones solo llevan el signo al **final** de la oración. No existe el signo de apertura (¿ ¡) que se usa en español.
+
+    ```javascript
+    const endMarks = [
+      "Where are you going?",
+      "What time does it start?",
+      "That's incredible!",
+      "Watch out!",
+    ];
+    ```
+
+    **Ejemplos:**
+
+    - **Where** are you going**?** (¿A dónde vas?)
+    - **What** time is it**?** (¿Qué hora es?)
+    - **That's amazing!** I can't believe it (¡Eso es increíble! No puedo creerlo)
+    - **Be careful!** The floor is wet (¡Ten cuidado! El piso está mojado)
+  </TabItem>
+
+  <TabItem label="Apóstrofe">
+    El **apóstrofe** (`'`) se usa en inglés para dos funciones: indicar una **contracción** (I'm, don't, it's) o mostrar **posesión** con sustantivos (Maria's book, the cat's tail).
+
+    ```javascript
+    const apostrophe = {
+      contraction: "I am → I'm, do not → don't",
+      possession:  "Maria's bag, the dog's bowl",
+    };
+    // It's raining. (= It is)
+    // That's John's car. (posesión)
+    ```
+
+    **Ejemplos:**
+
+    - **It's** cold outside (= It is) (Hace frío afuera)
+    - **Don't** forget your keys (= Do not) (No olvides tus llaves)
+    - That is **Maria's** jacket (Esa es la chaqueta de María)
+    - The **dog's** bowl is empty (El tazón del perro está vacío)
+  </TabItem>
+
+  <TabItem label="Dos puntos y guion">
+    Los **dos puntos** (`:`) introducen una lista, una cita o una explicación. El **guion** (`-`) une palabras compuestas o separa información adicional dentro de una oración.
+
+    ```javascript
+    const uses = {
+      colon: "She has three pets: a dog, a cat, and a fish.",
+      dash:  "My brother — the one in Paris — called yesterday.",
+    };
+    ```
+
+    **Ejemplos:**
+
+    - You need three things**:** a pen, paper, and patience (Necesitas tres cosas: un bolígrafo, papel y paciencia)
+    - The meeting is at**:** 3:00 PM (La reunión es a las 3:00 PM)
+    - My sister — **she's a doctor** — lives in New York (Mi hermana — que es médica — vive en Nueva York)
+    - It was a **well-known** restaurant in the area (Era un restaurante bien conocido en la zona)
+  </TabItem>
+</Tabs>
+
+---
+
+## Diferencias clave con el español
+
+Algunos usos de la puntuación en inglés son distintos a los del español y pueden causar confusión.
+
+```javascript
+const differences = {
+  noOpeningMarks:  "No ¿...? or ¡...! — only closing marks",
+  oxfordComma:     "apples, oranges, and bananas (comma before 'and')",
+  quoteMarks:      'He said, "I\'ll be there."',
+  periodInElipsis: "Wait for it... (three dots, no space before)",
+};
+```
+
+**Ejemplos:**
+
+- Are you ready**?** — no ¿ al inicio (¿Estás listo?)
+- I need flour**,** sugar**,** and eggs — la coma antes de "and" es opcional pero común en inglés americano
+- She said**,** "Let's go" — las comillas van después de la coma o el punto
+- He paused**...** then continued — los puntos suspensivos van pegados a la palabra anterior
+
+<Aside type="note" title="Oxford comma — la coma antes de 'and'">
+En inglés americano es común colocar una coma antes del último elemento de una lista: "red, white, and blue". En inglés británico suele omitirse. Ambas formas son aceptadas; lo importante es ser consistente dentro de un mismo texto.
+</Aside>
+
+---
+
+## Errores comunes
+
+<Aside type="danger" title="Usar signos de apertura como en español">
+En inglés no existen los signos de apertura. Las preguntas y exclamaciones solo llevan el signo al final.
+
+- **¿**Are you coming? ⛔
+- Are you coming**?** (¿Vienes?) ✅
+- **¡**That's great! ⛔
+- That's great**!** (¡Eso es genial!) ✅
+</Aside>
+
+<Aside type="danger" title="Confundir 'its' con 'it's'">
+"It's" con apóstrofe es siempre una contracción de "it is" o "it has". "Its" sin apóstrofe es el pronombre posesivo. Son dos palabras completamente distintas.
+
+- The cat lost **it's** collar ⛔
+- The cat lost **its** collar (El gato perdió su collar) ✅
+- **Its** a beautiful day ⛔
+- **It's** a beautiful day (Es un día hermoso) ✅
+</Aside>
+
+<Aside type="danger" title="Poner coma entre sujeto y verbo">
+En inglés, no se pone coma entre el sujeto y su verbo. Esta es una influencia del español escrito que debes evitar.
+
+- My brother**,** works in a hospital ⛔
+- My brother works in a hospital (Mi hermano trabaja en un hospital) ✅
+- The weather today**,** is very hot ⛔
+- The weather today is very hot (El clima hoy está muy caliente) ✅
+</Aside>
+
+<Aside type="danger" title="Usar apóstrofe para plurales">
+El apóstrofe nunca se usa para formar plurales en inglés. Solo se usa para contracciones y posesión. Agregar apóstrofe a un plural es un error muy frecuente.
+
+- I have two **cat's** ⛔
+- I have two **cats** (Tengo dos gatos) ✅
+- She bought three **book's** ⛔
+- She bought three **books** (Ella compró tres libros) ✅
+</Aside>
+
+---
+
+## Práctica
+
+<Aside type="tip" title="Ejercicio diario">
+- Escribe 5 oraciones en inglés usando correctamente el punto, la coma y el signo de interrogación
+- Crea 3 listas usando dos puntos y coma de Oxford para introducirlas
+- Escribe 4 contracciones comunes y una oración de ejemplo con cada una
+- Busca un párrafo en inglés y subraya todos los signos de puntuación que encuentres, luego identifica su función
+- Reescribe estas oraciones añadiendo la puntuación correcta: "its raining do you want to stay inside" y "she has two options stay or leave"
+</Aside>
 

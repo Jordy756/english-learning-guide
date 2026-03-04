@@ -1,5 +1,179 @@
 ---
 title: Uso de Mayúsculas
-description: Domina cuándo usar mayúsculas.
+description: Aprende cuándo usar mayúsculas en inglés y cómo difiere del español
 ---
+
+import { Tabs, TabItem, Aside } from '@astrojs/starlight/components';
+
+El uso de **mayúsculas** en inglés sigue reglas propias que en varios puntos se separan del español. Mientras que en español los días, meses e idiomas se escriben con minúscula, en inglés van siempre con mayúscula. Conocer estas diferencias desde el principio te evita errores constantes en la escritura y te ayuda a presentar un texto más cuidado y profesional.
+
+---
+
+## Cuándo usar mayúscula
+
+En inglés, la mayúscula no es opcional en los siguientes casos: cada uno tiene una regla clara.
+
+<Tabs>
+  <TabItem label="Inicio de oración y pronombre I">
+    Toda oración comienza con mayúscula. El pronombre de primera persona **I** siempre se escribe con mayúscula, sin importar su posición en la oración.
+
+    ```javascript
+    const always = [
+      "She is my friend.",       // inicio de oración
+      "I like coffee.",          // pronombre I
+      "Yesterday I was tired.",  // I en el medio
+      "Can I help you?",         // I en pregunta
+    ];
+    ```
+
+    **Ejemplos:**
+
+    - **She** called me yesterday (Ella me llamó ayer)
+    - **I** don't know the answer (No sé la respuesta)
+    - My sister and **I** went to the store (Mi hermana y yo fuimos a la tienda)
+    - Can **I** ask you something? (¿Puedo preguntarte algo?)
+  </TabItem>
+
+  <TabItem label="Nombres propios">
+    Los nombres de personas, ciudades, países, continentes, ríos, montañas y edificios llevan mayúscula inicial. En inglés esto incluye los gentilicios y los nombres de instituciones.
+
+    ```javascript
+    const proper = {
+      people:    "Maria, James, Dr. Smith",
+      places:    "Paris, Canada, the Amazon",
+      brands:    "Apple, NASA, the White House",
+      languages: "English, Spanish, French",
+    };
+    ```
+
+    **Ejemplos:**
+
+    - She studies at **Harvard University** (Ella estudia en la Universidad Harvard)
+    - We traveled through **South America** (Viajamos por América del Sur)
+    - **Dr. Johnson** will see you now (El Dr. Johnson lo atenderá ahora)
+    - He works at **Google** in **New York** (Él trabaja en Google en Nueva York)
+  </TabItem>
+
+  <TabItem label="Días, meses e idiomas">
+    En inglés, los días de la semana, los meses del año, los idiomas y las nacionalidades se escriben siempre con mayúscula. Esta regla es diferente al español, donde todos van en minúscula.
+
+    ```javascript
+    const capitalized = {
+      days:        ["Monday", "Friday", "Sunday"],
+      months:      ["January", "August", "December"],
+      languages:   ["English", "Spanish", "Mandarin"],
+      nationalities: ["American", "Mexican", "French"],
+    };
+    ```
+
+    **Ejemplos:**
+
+    - The meeting is on **Monday** (La reunión es el lunes)
+    - Her birthday is in **July** (Su cumpleaños es en julio)
+    - She speaks **Portuguese** and **Italian** (Ella habla portugués e italiano)
+    - He is **Brazilian** but lives in **Canada** (Él es brasileño pero vive en Canadá)
+  </TabItem>
+
+  <TabItem label="Títulos y títulos de obras">
+    Los títulos de personas que preceden a un nombre llevan mayúscula. En los títulos de libros, películas y canciones, la primera palabra y las palabras principales van en mayúscula.
+
+    ```javascript
+    const titles = {
+      person: "President Biden, Queen Elizabeth, Professor Lee",
+      works:  "The Lord of the Rings, The New York Times",
+    };
+    // Articles, prepositions, conjunctions
+    // usually stay lowercase in titles.
+    ```
+
+    **Ejemplos:**
+
+    - I spoke with **President** García (Hablé con el presidente García)
+    - She read **The Old Man and the Sea** (Leyó El viejo y el mar)
+    - **Professor** Williams teaches history (El profesor Williams enseña historia)
+    - My favorite song is **Bohemian Rhapsody** (Mi canción favorita es Bohemian Rhapsody)
+
+    <Aside type="tip" title="Título antes del nombre, minúscula en otro contexto">
+    "President García" lleva mayúscula porque el título precede al nombre. Pero si dices "the president of Mexico", va en minúscula porque el título está separado del nombre.
+    </Aside>
+  </TabItem>
+</Tabs>
+
+---
+
+## Lo que NO lleva mayúscula en inglés
+
+Hay casos donde el español sí usa mayúscula pero el inglés no, y viceversa. Esta tabla inversa ayuda a evitar los errores más comunes.
+
+```javascript
+const noCapital = [
+  "seasons:  winter, spring, summer, fall",
+  "subjects: history, math, biology",
+  "general:  the president, a doctor",
+  "compass:  go north, turn south",
+];
+```
+
+**Ejemplos:**
+
+- I love **winter** (no "Winter") (Me encanta el invierno)
+- She studies **biology** at university (Ella estudia biología en la universidad)
+- Turn **north** at the intersection (Gira hacia el norte en la intersección)
+- He wants to be a **doctor** (Él quiere ser médico)
+
+<Aside type="note" title="Puntos cardinales: mayúscula solo como nombre propio">
+"The North Pole" lleva mayúscula porque es un nombre propio de lugar. Pero "go north on this road" va en minúscula porque es una dirección, no un nombre. La misma lógica aplica a East, West y South.
+</Aside>
+
+---
+
+## Errores Comunes
+
+<Aside type="danger" title="Escribir los días y meses en minúscula">
+En español los días y meses van en minúscula, pero en inglés siempre llevan mayúscula. Es uno de los errores más frecuentes al escribir en inglés.
+
+- The meeting is on **monday** ⛔
+- The meeting is on **Monday** (La reunión es el lunes) ✅
+- She was born in **march** ⛔
+- She was born in **March** (Ella nació en marzo) ✅
+</Aside>
+
+<Aside type="danger" title="Escribir 'i' en minúscula">
+El pronombre "I" siempre va en mayúscula en inglés, en cualquier posición de la oración. Escribirlo en minúscula es un error visible en todo tipo de texto.
+
+- My friend and **i** went to the park ⛔
+- My friend and **I** went to the park (Mi amigo y yo fuimos al parque) ✅
+- **i** think that's a great idea ⛔
+- **I** think that's a great idea (Creo que es una gran idea) ✅
+</Aside>
+
+<Aside type="danger" title="Escribir idiomas y nacionalidades en minúscula">
+Los idiomas y nacionalidades son siempre mayúscula en inglés. No seguir esta regla hace que el texto parezca descuidado.
+
+- She speaks **spanish** and **french** ⛔
+- She speaks **Spanish** and **French** (Ella habla español y francés) ✅
+- He is **mexican** ⛔
+- He is **Mexican** (Él es mexicano) ✅
+</Aside>
+
+<Aside type="danger" title="Poner mayúscula a las estaciones del año">
+Las estaciones del año van en minúscula en inglés: winter, spring, summer, fall/autumn. Este es el caso opuesto al de los días — el inglés usa minúscula donde el español también la usa.
+
+- I love **Summer** ⛔
+- I love **summer** (Me encanta el verano) ✅
+- It snows a lot in **Winter** ⛔
+- It snows a lot in **winter** (Nieva mucho en invierno) ✅
+</Aside>
+
+---
+
+## Práctica
+
+<Aside type="tip" title="Ejercicio diario">
+- Escribe tu nombre completo, ciudad, país, idioma e institución donde estudias o trabajas, todos con la mayúscula correcta en inglés
+- Reescribe estas oraciones corrigiéndolas: "last monday i spoke with professor smith about my english class in september"
+- Elige 5 películas o canciones que conozcas y escribe sus títulos correctamente en inglés
+- Escribe el calendario de tu semana en inglés usando los días y los meses correctamente
+- Busca un párrafo en inglés y subraya todas las palabras con mayúscula, luego explica en español por qué cada una la lleva
+</Aside>
 
