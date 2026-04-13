@@ -3,3 +3,334 @@ title: Errores Comunes
 description: Evita los errores más frecuentes en inglés.
 ---
 
+import { Aside, Tabs, TabItem } from '@astrojs/starlight/components';
+
+Algunos errores se repiten constantemente entre hispanohablantes que aprenden inglés. Piensa en estos errores como **bugs frecuentes** en tu código: una vez que los identificas y entiendes por qué ocurren, puedes evitarlos sistemáticamente. Este documento recopila los errores más comunes en nivel B1.
+
+---
+
+## Errores con Artículos
+
+El sistema de artículos en inglés es muy diferente al español.
+
+```javascript
+const articleErrors = {
+  problema: "transferencia del español",
+  errorComun: "usar artículo cuando no se necesita",
+  regla: "conceptos generales no llevan artículo"
+};
+```
+
+<Aside type="danger" title="Artículo con conceptos generales">
+- ⛔ **The** life is beautiful (calco del español "La vida es bella")
+- ✅ **Life** is beautiful (La vida es bella)
+
+En inglés, los sustantivos en sentido general no llevan artículo.
+</Aside>
+
+<Aside type="danger" title="Artículo con idiomas, países, comidas">
+- ⛔ I speak **the** Spanish / I love **the** Italy / I had **the** breakfast
+- ✅ I speak **Spanish** / I love **Italy** / I had **breakfast**
+
+Idiomas, la mayoría de países y comidas del día no llevan artículo.
+</Aside>
+
+**Más ejemplos:**
+
+- ⛔ **The** money doesn't buy happiness → ✅ **Money** doesn't buy happiness (El dinero no compra la felicidad)
+- ⛔ I like **the** music → ✅ I like **music** (Me gusta la música - en general)
+- ⛔ She went to **the** work → ✅ She went to **work** (Ella fue al trabajo)
+
+---
+
+## Errores con Preposiciones
+
+Las preposiciones rara vez se traducen directamente entre idiomas.
+
+<Tabs>
+  <TabItem label="In / On / At">
+```javascript
+const prepositionTime = {
+  in: ["in January", "in 2024", "in the morning"],
+  on: ["on Monday", "on my birthday", "on July 4th"],
+  at: ["at 5 o'clock", "at night", "at the weekend"]
+};
+```
+
+El español usa "en" para casi todo; inglés distingue.
+  </TabItem>
+  
+  <TabItem label="To / At / In (lugar)">
+```javascript
+const prepositionPlace = {
+  to: "movimiento hacia (go to)",
+  at: "ubicación puntual (at the door)",
+  in: "dentro de (in the room)"
+};
+```
+
+Distinguir destino de ubicación.
+  </TabItem>
+</Tabs>
+
+**Errores con In / On / At:**
+
+- ⛔ I wake up **in** 7 AM → ✅ I wake up **at** 7 AM
+- ⛔ I was born **in** March 15 → ✅ I was born **on** March 15
+- ⛔ I study **in** the night → ✅ I study **at** night
+
+**Errores con To / At / In:**
+
+- ⛔ I'm going **at** home → ✅ I'm going **to** home / I'm going **home**
+- ⛔ I arrived **to** the airport → ✅ I arrived **at** the airport
+- ⛔ She is **on** the kitchen → ✅ She is **in** the kitchen
+
+<Aside type="danger" title="Depend on, not depend of">
+- ⛔ It depends **of** the weather (calco de "depende de")
+- ✅ It **depends on** the weather (Depende del clima)
+
+Muchos verbos usan preposiciones diferentes al español: listen **to**, look **at**, think **about**.
+</Aside>
+
+---
+
+## Errores con Tiempos Verbales
+
+El sistema de tiempos verbales tiene diferencias sutiles pero importantes.
+
+```javascript
+const tenseErrors = {
+  presentPerfect: {
+    spanish: "usa pretérito simple a veces",
+    english: "experiencias, acciones recientes"
+  },
+  presentContinuous: {
+    spanish: "menos usado para futuro",
+    english: "planes confirmados"
+  }
+};
+```
+
+<Aside type="danger" title="Present Perfect vs. Simple Past">
+- ⛔ I **saw** that movie yesterday already
+- ✅ I **have seen** that movie already / I **saw** that movie **yesterday**
+
+Con "already", "yet", "just" usa present perfect. Con tiempo específico (yesterday), usa simple past.
+</Aside>
+
+<Aside type="danger" title="For + período de tiempo">
+- ⛔ I am here **since** two hours
+- ✅ I have been here **for** two hours (Llevo aquí dos horas)
+
+**For** = duración (for two hours). **Since** = punto de inicio (since Monday).
+</Aside>
+
+<Aside type="danger" title="Presente continuo para el futuro">
+- ⛔ Tomorrow I **go** to the doctor
+- ✅ Tomorrow I **am going** to the doctor (Mañana voy al doctor)
+
+Para planes ya organizados, usa presente continuo o "going to".
+</Aside>
+
+---
+
+## Errores de Orden de Palabras
+
+El orden de palabras en inglés es más rígido que en español.
+
+```javascript
+const wordOrder = {
+  spanish: "flexible (El libro rojo / El rojo libro)",
+  english: "estricto: opinion-size-age-color-origin-material",
+  rule: "adjetivos SIEMPRE antes del sustantivo"
+};
+```
+
+<Aside type="danger" title="Adjetivo después del sustantivo">
+- ⛔ A house **big** / A car **red**
+- ✅ A **big** house / A **red** car (Una casa grande / Un coche rojo)
+
+Los adjetivos van **siempre antes** del sustantivo en inglés.
+</Aside>
+
+<Aside type="danger" title="Orden en preguntas">
+- ⛔ Where you are going? / What you want?
+- ✅ Where **are you** going? / What **do you** want?
+
+Las preguntas requieren inversión: auxiliar + sujeto + verbo.
+</Aside>
+
+<Aside type="danger" title="Adverbios de frecuencia">
+- ⛔ I go always to the gym / Always I go to the gym
+- ✅ I **always** go to the gym (Siempre voy al gimnasio)
+
+Los adverbios de frecuencia van **antes del verbo principal** (pero después de "be").
+</Aside>
+
+---
+
+## Errores con Verbos Modales
+
+Los modales tienen reglas específicas que difieren del español.
+
+```javascript
+const modalErrors = {
+  rule1: "no 'to' después de modales",
+  rule2: "no conjugación (no 'cans', 'musts')",
+  rule3: "can/could para habilidad, may/might para posibilidad"
+};
+```
+
+<Aside type="danger" title="To después de modales">
+- ⛔ I can **to** swim / She must **to** go
+- ✅ I can swim / She must go (Puedo nadar / Ella debe ir)
+
+Los modales (can, could, must, should, may, might, will, would) **nunca** van seguidos de "to".
+</Aside>
+
+<Aside type="danger" title="Conjugar modales">
+- ⛔ He **cans** speak French / She **musts** study
+- ✅ He **can** speak French / She **must** study
+
+Los modales **no se conjugan**. Son iguales para todas las personas.
+</Aside>
+
+---
+
+## Errores de Falsos Amigos
+
+Palabras que parecen similares pero significan cosas diferentes.
+
+```javascript
+const falseFirends = {
+  actually: {
+    parece: "actualmente",
+    significa: "en realidad",
+    correcto: "currently (actualmente)"
+  },
+  library: {
+    parece: "librería",
+    significa: "biblioteca",
+    correcto: "bookstore (librería)"
+  },
+  sensible: {
+    parece: "sensible",
+    significa: "sensato/prudente",
+    correcto: "sensitive (sensible)"
+  }
+};
+```
+
+<Aside type="danger" title="Actually no significa actualmente">
+- ⛔ I'm **actually** working in a bank (suena a "en realidad trabajo en un banco")
+- ✅ I'm **currently** working in a bank (Actualmente trabajo en un banco)
+
+**Actually** = en realidad. **Currently** = actualmente.
+</Aside>
+
+<Aside type="danger" title="Sensible no significa sensible">
+- ⛔ She's very **sensible**, she cries easily
+- ✅ She's very **sensitive**, she cries easily (Es muy sensible, llora fácilmente)
+
+**Sensible** = sensato/prudente. **Sensitive** = sensible/delicado.
+</Aside>
+
+**Más falsos amigos:**
+
+- ⛔ I went to the **library** to buy a book → ✅ I went to the **bookstore** (Fui a la librería)
+- ⛔ She's very **sympathetic** → ✅ She's very **nice/friendly** (Es muy simpática)
+- ⛔ I'm **embarrassed** because I'm pregnant → ✅ I'm **pregnant** (Estoy embarazada)
+
+---
+
+## Errores de Concordancia
+
+Problemas con singular/plural y sujeto-verbo.
+
+```javascript
+const agreementErrors = {
+  uncountable: "information, advice, furniture = singular",
+  collective: "people = plural, everyone = singular",
+  thereIs: "there is + singular, there are + plural"
+};
+```
+
+<Aside type="danger" title="Information es incontable">
+- ⛔ I need **some informations** / The **informations are** useful
+- ✅ I need **some information** / The **information is** useful
+
+**Information**, **advice**, **furniture**, **news** son incontables y siempre singulares.
+</Aside>
+
+<Aside type="danger" title="People es plural">
+- ⛔ **People is** friendly here / Many **persons** came
+- ✅ **People are** friendly here / Many **people** came (La gente es amable aquí)
+
+**People** siempre va con verbo plural. "Persons" es muy formal/legal.
+</Aside>
+
+<Aside type="danger" title="There is / There are">
+- ⛔ **There is** many options / **There is** a lot of people
+- ✅ **There are** many options / **There are** a lot of people
+
+Usa **there is** + singular, **there are** + plural.
+</Aside>
+
+---
+
+## Errores con Make / Do
+
+Estos verbos se confunden constantemente.
+
+```javascript
+const makeDoErrors = {
+  make: ["make a decision", "make a mistake", "make money", "make food"],
+  do: ["do homework", "do exercise", "do business", "do a favor"],
+  rule: "make = crear algo, do = realizar actividad"
+};
+```
+
+<Aside type="danger" title="Do homework, not make homework">
+- ⛔ I need to **make** my homework
+- ✅ I need to **do** my homework (Necesito hacer mi tarea)
+
+Usa **do** para tareas y actividades. Usa **make** para crear o producir algo.
+</Aside>
+
+**Lista de referencia:**
+
+- **Make**: a mistake, a decision, money, noise, progress, an effort, a promise
+- **Do**: homework, exercise, business, your best, a favor, damage, research
+
+---
+
+## Errores de Pronunciación que Afectan Significado
+
+Errores de pronunciación que pueden causar malentendidos.
+
+```javascript
+const pronunciationErrors = {
+  sheet_shit: "pronunciar /i:/ largo",
+  beach_bitch: "pronunciar /i:/ largo",
+  focus_fuck: "vocal diferente"
+};
+```
+
+<Aside type="danger" title="Vocales cortas vs largas">
+- ⛔ "I need a **shit** of paper" (palabra ofensiva)
+- ✅ "I need a **sheet** /ʃiːt/ of paper" (Necesito una hoja de papel)
+
+Practica las vocales largas /iː/ en palabras como sheet, beach, peace.
+</Aside>
+
+---
+
+## Práctica
+
+<Aside type="tip" title="Ejercicio diario">
+- Crea una lista personal de errores que cometes frecuentemente y revísala antes de escribir
+- Practica oralmente frases con preposiciones problemáticas (depend on, listen to, look at)
+- Lee textos en inglés y marca los artículos: analiza cuándo se usan y cuándo no
+- Aprende colocaciones completas (make a decision, do homework) en lugar de palabras sueltas
+- Grábate hablando y escucha los errores de concordancia y orden de palabras
+</Aside>
