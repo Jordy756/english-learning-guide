@@ -24,7 +24,7 @@ export default defineConfig({
       },
       sidebar: [
         {
-          label: "A1 - Principiante",
+          label: "Primeros pasos (A1)",
           items: [
             {
               label: "Fundamentos",
@@ -41,7 +41,7 @@ export default defineConfig({
           ],
         },
         {
-          label: "A2 - Elemental",
+          label: "Base comunicativa (A2)",
           collapsed: true,
           items: [
             {
@@ -59,7 +59,7 @@ export default defineConfig({
           ],
         },
         {
-          label: "B1 - Intermedio",
+          label: "Autonomía (B1)",
           collapsed: true,
           items: [
             {
@@ -77,7 +77,7 @@ export default defineConfig({
           ],
         },
         {
-          label: "B2 - Intermedio Alto",
+          label: "Fluidez precisa (B2)",
           collapsed: true,
           items: [
             {
@@ -95,7 +95,7 @@ export default defineConfig({
           ],
         },
         {
-          label: "C1 - Avanzado",
+          label: "Dominio avanzado (C1)",
           collapsed: true,
           items: [
             {
@@ -113,7 +113,7 @@ export default defineConfig({
           ],
         },
         {
-          label: "C2 - Maestría",
+          label: "Maestría expresiva (C2)",
           collapsed: true,
           items: [
             {
@@ -127,7 +127,7 @@ export default defineConfig({
           ],
         },
         {
-          label: "Referencia",
+          label: "Biblioteca de consulta",
           autogenerate: { directory: "reference" },
         },
       ],
