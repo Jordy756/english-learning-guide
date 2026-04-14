@@ -84,7 +84,7 @@ pnpm dev
 
 #### Guías de Escritura
 
-**Antes de empezar a escribir**, lee atentamente nuestras [guías de estilo y convenciones](.github/skills/talkscript-content/SKILL.md). Estas reglas aseguran consistencia y calidad en todo el contenido.
+**Antes de empezar a escribir**, lee la skill correcta para la parte que vas a tocar: [contenido escrito](.github/skills/talkscript-content/SKILL.md) o [bloques de JavaScript](.github/skills/talkscript-js-content/SKILL.md). Así mantienes consistencia sin repetir reglas en varios lugares.
 
 **Puntos clave:**
 
@@ -141,7 +141,8 @@ Si deseas mejorar la funcionalidad del sitio, componentes, o diseño:
 
 Antes de enviar tu PR, verifica:
 
-- [ ] El contenido sigue las [guías de estilo](.github/skills/talkscript-content/SKILL.md)
+- [ ] El contenido escrito sigue [talkscript-content](.github/skills/talkscript-content/SKILL.md)
+- [ ] Los bloques de JavaScript siguen [talkscript-js-content](.github/skills/talkscript-js-content/SKILL.md)
 - [ ] No hay errores de compilación (`pnpm build` funciona)
 - [ ] Los links internos funcionan correctamente
 - [ ] Las traducciones son precisas

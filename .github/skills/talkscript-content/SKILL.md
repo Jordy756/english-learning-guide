@@ -1,16 +1,18 @@
 ---
 name: talkscript-content
-description: Generate educational grammar content for TalkScript
+description: >
+  Generate the written part of TalkScript lessons.
+  Trigger: Use when writing explanations, introductions, examples, notes, cards, common errors, practice, or any non-code lesson text.
 metadata:
   version: "3.0.0"
   author: "Jordy Castro"
 ---
 
-# TalkScript Content Generator
+# TalkScript Written Content Generator
 
-Generate Spanish-language educational content explaining English grammar in plain, accessible language. JavaScript code blocks (`javascript`) may illustrate structural patterns — but prose must never rely on programming metaphors.
+Generate Spanish-language educational content explaining English grammar in plain, accessible language. This skill handles prose and lesson structure only; any JavaScript visual example belongs to [talkscript-js-content](../talkscript-js-content/SKILL.md).
 
-> Global rules (language, tone, audience, MDX standards, prohibited elements) are defined in [`AGENTS.md`](../../../AGENTS.md). This skill covers only content-specific rules.
+> Written-content rules live here, and the JavaScript visual rules live in talkscript-js-content.
 
 ---
 
@@ -29,10 +31,10 @@ Before generating any content, read and follow these template files exactly:
 
 1. **Clarity over cleverness** — Direct, accessible explanations
 2. **Brevity** — 3 to 5 minute read maximum per page
-3. **Visual patterns** — Code shows structure, never executable logic
-4. **Consistency** — Uniform section order across all pages
-5. **Practical examples** — Real-world usage with Spanish translations
-6. **Strategic tabs** — Use `<Tabs>` to reduce scrolling, not to decorate
+3. **Consistency** — Uniform section order across all pages
+4. **Practical examples** — Real-world usage with Spanish translations
+5. **Strategic tabs** — Use `<Tabs>` to reduce scrolling, not to decorate
+6. **Separation of concerns** — Do not invent JavaScript blocks here; hand them off to talkscript-js-content
 
 ---
 
@@ -46,37 +48,18 @@ Before generating any content, read and follow these template files exactly:
 ### `<Card>` / `<CardGrid>`
 
 - Only for grouping conceptual information
-- Never place code blocks inside `<Card>`
 
-### Code Blocks
+### Code Boundary
 
-- Language: always `javascript`
-- Maximum 10 lines per block, ~50 characters per line
-- No more than 3 code blocks per major section
-- Identifiers must be in English
-- Allowed directly in document flow or inside `<TabItem>` — never inside `<Card>`
-
-**Choosing the right JS structure:**
-
-Analyze what the grammar concept is showing and pick the JS construct that represents it most clearly. Do not default to objects for everything — use whatever makes the pattern most readable. Vary the structure across blocks within the same page.
-
-| Grammar concept | Suggested JS structure |
-|---|---|
-| Conjugation table / forms | `object` with descriptive keys |
-| Word order / sequences | `array` of strings |
-| Transformation rules | `function` (input → output) |
-| Conditional use / context | `if / else` or ternary |
-| Sentence templates | template literal or string concat |
-| Categories / classification | `object` with grouped arrays |
-| Step-by-step formation | chained expressions or multi-line |
-
-Never use the same structure in every block of a page. If a block would look identical to another, reconsider whether it adds value.
+- If a page needs a JavaScript block, stop here and use talkscript-js-content for that snippet
+- Do not write `javascript` fences in this skill
+- Do not place any code inside `<Card>` components
 
 ### `<Tabs>` / `<TabItem>`
 
 - Use to group related variations: affirmative/negative/interrogative, tenses, formality levels
-- Each `<TabItem>` must be self-contained — its own explanation and examples
-- Include a code block per tab when applicable
+- Each `<TabItem>` must be self-contained with its own explanation and examples
+- If a tab needs code, generate that code with talkscript-js-content and keep the written explanation here
 
 ---
 
@@ -90,11 +73,7 @@ Follow [`templates/frontmatter.md`](templates/frontmatter.md).
 
 ### 2. Import Statement
 
-```javascript
-import { ComponentA, ComponentB } from "@astrojs/starlight/components";
-```
-
-Import only components that appear in the file.
+Import only the components that appear in the file.
 
 ### 3. Introduction
 
@@ -155,11 +134,9 @@ Run this before delivering any generated or modified file.
 - [ ] No code inside `<Card>` components
 - [ ] No programming metaphors or developer jargon in prose
 - [ ] All `<Aside>` components have descriptive titles
-- [ ] Code blocks within line and character limits
-- [ ] All code identifiers in English
 
 **Global compliance** (see [`AGENTS.md`](../../../AGENTS.md))
 
-- [ ] All prose in Spanish, all code identifiers in English
+- [ ] All prose is in Spanish
 - [ ] No prohibited elements (emojis outside "Errores comunes", strikethrough, native tables, native alerts)
 - [ ] Valid MDX — blank lines around components, self-closing tags, correct nesting
