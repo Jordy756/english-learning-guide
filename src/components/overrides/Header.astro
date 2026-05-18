@@ -1,15 +1,15 @@
 ---
-import logo from "./public/logo.webp";
-import config from "virtual:starlight/user-config";
+import logo from './public/logo.webp';
+import config from 'virtual:starlight/user-config';
 
-import LanguageSelect from "@astrojs/starlight/components/LanguageSelect.astro";
-import Search from "@astrojs/starlight/components/Search.astro";
-import SiteTitle from "@astrojs/starlight/components/SiteTitle.astro";
-import SocialIcons from "@astrojs/starlight/components/SocialIcons.astro";
-import ThemeSelect from "@astrojs/starlight/components/ThemeSelect.astro";
-import { Image } from "astro:assets";
+import LanguageSelect from '@astrojs/starlight/components/LanguageSelect.astro';
+import Search from '@astrojs/starlight/components/Search.astro';
+import SiteTitle from '@astrojs/starlight/components/SiteTitle.astro';
+import SocialIcons from '@astrojs/starlight/components/SocialIcons.astro';
+import ThemeSelect from '@astrojs/starlight/components/ThemeSelect.astro';
+import { Image } from 'astro:assets';
 
-const shouldRenderSearch = config.pagefind || config.components.Search !== "@astrojs/starlight/components/Search.astro";
+const shouldRenderSearch = config.pagefind || config.components.Search !== '@astrojs/starlight/components/Search.astro';
 ---
 
 <div class="title-wrapper sl-flex">
@@ -19,7 +19,7 @@ const shouldRenderSearch = config.pagefind || config.components.Search !== "@ast
 <div class="sl-flex print:hidden">
   <!-- {shouldRenderSearch && <Search />} -->
 </div>
-<div class="sl-hidden md:sl-flex print:hidden right-group">
+<div class="sl-hidden md:sl-flex right-group print:hidden">
   <div class="sl-flex social-icons">
     <!-- <SocialIcons /> -->
   </div>

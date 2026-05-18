@@ -1,19 +1,19 @@
 ---
-import MobileMenuToggle from "@astrojs/starlight/components/MobileMenuToggle.astro";
+import MobileMenuToggle from '@astrojs/starlight/components/MobileMenuToggle.astro';
 
 const { hasSidebar } = Astro.locals.starlightRoute;
 ---
 
 <div class="root relative">
-  <header class="flex justify-between py-3 px-6 border-b sticky top-0 left-0 z-50">
+  <header class="sticky top-0 left-0 z-50 flex justify-between border-b px-6 py-3">
     <slot name="header" />
   </header>
   {
     hasSidebar && (
-      <aside class="border-r relative">
+      <aside class="relative border-r">
         <nav
-          class="sidebar print:hidden sticky top-16.25 left-0"
-          aria-label={Astro.locals.t("sidebarNav.accessibleLabel")}
+          class="sidebar sticky top-16.25 left-0 print:hidden"
+          aria-label={Astro.locals.t('sidebarNav.accessibleLabel')}
         >
           <MobileMenuToggle />
           <div id="starlight__sidebar" class="sidebar-pane">
@@ -37,9 +37,9 @@ const { hasSidebar } = Astro.locals.starlightRoute;
     /* background-color: red; */
     display: grid;
     grid-template-areas:
-      "header header"
-      "aside main"
-      "aside footer";
+      'header header'
+      'aside main'
+      'aside footer';
     grid-template-columns: 250px 1fr;
     grid-template-rows: auto 1fr;
     min-height: 100dvh;

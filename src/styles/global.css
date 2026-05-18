@@ -1,7 +1,7 @@
 @layer base, starlight, theme, components, utilities;
 
-@import "tailwindcss/theme.css" layer(theme);
-@import "tailwindcss/utilities.css" layer(utilities);
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities);
 
 @theme {
   /* Primary Colors */
@@ -34,10 +34,8 @@
     interpolate-size: allow-keywords;
   }
 
-  *,
-  *::before,
-  *::after {
-    scrollbar-width: none;
+  :is(*, *::before, *::after) {
+    @apply scrollbar-thin;
   }
 
   html {
