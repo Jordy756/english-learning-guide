@@ -4,133 +4,131 @@ import ChevronIcon from '@components/icons/ChevronRight.astro';
 const { entry } = Astro.locals.starlightRoute;
 const { title = 'TalkScript', description, hero } = entry.data;
 const actions = hero?.actions || [];
+
+const features = [
+  {
+    icon: '🎯',
+    title: 'Aprende a tu ritmo',
+    description: 'Lecciones estructuradas que podés tomar cuando quieras, sin presiones.',
+  },
+  {
+    icon: '📚',
+    title: 'Gramática Clara',
+    description: 'Explicaciones simples y ejemplos reales que realmente funcionan.',
+  },
+  {
+    icon: '💬',
+    title: 'Vocabulario Práctico',
+    description: 'Palabras y expresiones que usarás en conversaciones reales.',
+  },
+];
+
+const stats = [
+  { value: '50+', label: 'Lecciones' },
+  { value: '1000+', label: 'Vocabulario' },
+  { value: '∞', label: 'Acceso' },
+];
 ---
 
-<div class="hero-container">
-  <div class="hero-content">
-    <h1 class="hero-title">
-      {hero?.title || title}
-    </h1>
+<div class="w-full">
+  <section class="relative flex min-h-[70vh] flex-col items-center justify-center px-4 py-16 sm:px-6 lg:px-8">
+    <div class="absolute inset-0 -z-10 overflow-hidden">
+      <div
+        class="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(120,53,15,0.3),transparent),radial-gradient(ellipse_60%_40%_at_80%_60%,rgba(245,158,11,0.15),transparent),linear-gradient(180deg,transparent_0%,rgba(0,0,0,0.3)_100%)]"
+      >
+      </div>
+      <div
+        class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg_width=%2260%22_height=%2260%22_viewBox=%220_0_60_60%22_xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg_fill=%22none%22_fill-rule=%22evenodd%22%3E%3Cg_fill=%22%23ffffff%22_fill-opacity=%221%22%3E%3Cpath_d=%22M36_34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6_34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6_4V0H4v4H0v2h4v4h2V6h4V4H6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-[0.03]"
+      >
+      </div>
+    </div>
 
-    {hero?.tagline && <p class="hero-tagline">{hero.tagline}</p>}
+    <div class="relative z-10 mx-auto flex max-w-4xl flex-col items-center gap-6 text-center sm:gap-8">
+      <span
+        class="inline-flex items-center rounded-full border border-amber-500/30 bg-amber-500/15 px-4 py-1.5 text-sm font-medium text-amber-400"
+      >
+        Para hispanohablantes
+      </span>
 
-    {
-      actions.length > 0 && (
-        <div class="hero-actions">
-          {actions.map((action: any) => (
-            <a
-              href={action.link}
-              class={`hero-button ${action.variant === 'minimal' ? 'hero-button-minimal' : 'hero-button-primary'}`}
-            >
-              {action.text}
-              <ChevronIcon class="hero-button-icon" />
-            </a>
-          ))}
-        </div>
-      )
-    }
-  </div>
+      <h1
+        class="max-w-[20ch] text-4xl leading-[1.1] font-bold tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl"
+      >
+        {hero?.title || title}
+      </h1>
+
+      {
+        hero?.tagline && (
+          <p class="max-w-2xl text-lg leading-relaxed text-neutral-300 sm:text-xl lg:text-2xl">{hero.tagline}</p>
+        )
+      }
+
+      {
+        actions.length > 0 && (
+          <div class="mt-4 flex w-full flex-col flex-wrap justify-center gap-4 sm:w-auto sm:flex-row">
+            {actions.map((action: any) => (
+              <a
+                href={action.link}
+                class={`group inline-flex w-full items-center justify-center gap-2 rounded-xl px-6 py-3.5 text-base font-semibold transition-all duration-200 sm:w-auto ${
+                  action.variant === 'minimal'
+                    ? 'border-2 border-neutral-600 bg-transparent text-white hover:border-neutral-400 hover:bg-neutral-800/50'
+                    : 'border-2 border-transparent bg-amber-500 text-neutral-950 hover:-translate-y-0.5 hover:bg-amber-400 hover:shadow-lg hover:shadow-amber-500/25'
+                }`}
+              >
+                {action.text}
+                {action.variant !== 'minimal' && (
+                  <ChevronIcon class="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+                )}
+              </a>
+            ))}
+          </div>
+        )
+      }
+    </div>
+  </section>
+
+  <section class="bg-gradient-to-b from-transparent via-black/20 to-transparent px-4 py-12">
+    <div class="mx-auto flex max-w-4xl flex-wrap justify-center gap-8 sm:gap-16">
+      {
+        stats.map((stat) => (
+          <div class="flex flex-col items-center text-center">
+            <span class="text-3xl font-bold text-amber-400 sm:text-4xl">{stat.value}</span>
+            <span class="mt-1 text-sm text-neutral-400 sm:text-base">{stat.label}</span>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="px-4 py-16 sm:py-24">
+    <div class="mx-auto max-w-6xl">
+      <h2 class="mb-3 text-center text-2xl font-bold text-white sm:text-3xl lg:text-4xl">¿Por qué TalkScript?</h2>
+      <p class="mb-12 text-center text-base text-neutral-400 sm:text-lg">Una forma diferente de aprender inglés</p>
+
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3">
+        {
+          features.map((feature) => (
+            <div class="relative rounded-2xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-amber-500/20 hover:bg-white/10 sm:p-8">
+              <span class="mb-4 block text-3xl sm:text-4xl">{feature.icon}</span>
+              <h3 class="mb-2 text-lg font-semibold text-white sm:text-xl">{feature.title}</h3>
+              <p class="text-sm leading-relaxed text-neutral-400 sm:text-base">{feature.description}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gradient-to-b from-transparent via-amber-500/5 to-transparent px-4 py-16 sm:py-24">
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="mb-3 text-2xl font-bold text-white sm:text-3xl lg:text-4xl">¿Listo para empezar?</h2>
+      <p class="mb-8 text-base text-neutral-400 sm:text-lg">Tu primer lección está a un click de distancia</p>
+      <a
+        href="/a1/01-basics/01-pronunciation-basics/"
+        class="group inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 px-8 py-4 text-lg font-semibold text-neutral-950 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_20px_40px_-10px_rgba(245,158,11,0.4)]"
+      >
+        Comenzar Ahora
+        <ChevronIcon class="h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" />
+      </a>
+    </div>
+  </section>
 </div>
-
-<style>
-  .hero-container {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: clamp(400px, 50vh, 600px);
-    padding: clamp(2rem, 5vw, 4rem) 1.5rem;
-  }
-
-  .hero-content {
-    max-width: 1544px;
-    width: 100%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: clamp(1.5rem, 3vw, 2.5rem);
-  }
-
-  .hero-title {
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
-    font-weight: 700;
-    line-height: 1.1;
-    letter-spacing: -0.02em;
-    color: var(--sl-color-white);
-    margin: 0;
-    max-width: 20ch;
-  }
-
-  .hero-tagline {
-    font-size: clamp(1.125rem, 2vw, 1.5rem);
-    line-height: 1.6;
-    color: var(--sl-color-gray-2);
-    margin: 0;
-    max-width: 54ch;
-  }
-
-  .hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    margin-top: 0.5rem;
-  }
-
-  .hero-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.875rem 1.75rem;
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 1;
-    text-decoration: none;
-    border-radius: 0.5rem;
-    transition: all 0.2s ease;
-    white-space: nowrap;
-  }
-
-  .hero-button-primary {
-    background: var(--sl-color-text-accent);
-    color: var(--sl-color-black);
-    border: 2px solid transparent;
-  }
-
-  .hero-button-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  }
-
-  .hero-button-minimal {
-    background: transparent;
-    color: var(--sl-color-white);
-    border: 2px solid var(--sl-color-gray-5);
-  }
-
-  .hero-button-minimal:hover {
-    border-color: var(--sl-color-gray-4);
-    background: var(--sl-color-gray-6);
-  }
-
-  .hero-button-icon {
-    transition: transform 0.2s ease;
-  }
-
-  .hero-button:hover .hero-button-icon {
-    transform: translateX(2px);
-  }
-
-  @media (max-width: 768px) {
-    .hero-actions {
-      flex-direction: column;
-      width: 100%;
-    }
-
-    .hero-button {
-      width: 100%;
-      justify-content: center;
-    }
-  }
-</style>

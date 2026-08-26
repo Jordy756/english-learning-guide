@@ -1,4 +1,3 @@
-// @ts-check
 import { defineConfig, fontProviders } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import tailwindcss from '@tailwindcss/vite';
@@ -18,7 +17,7 @@ export default defineConfig({
       components: {
         Head: './src/components/overrides/Head.astro',
         Sidebar: './src/components/overrides/Sidebar.astro',
-        Hero: './src/components/overrides/Hero.astro',
+        // Hero: './src/components/overrides/Hero.astro',
         // PageFrame: "./src/components/overrides/PageFrame.astro",
         // Header: "./src/components/overrides/Header.astro",
       },
