@@ -16,19 +16,19 @@ Los saludos establecen el tono de la conversación y demuestran respeto por el c
 
 ```javascript
 const informalGreetings = [
-  "Hi",               // Hola
-  "Hey",              // Hola (casual)
-  "What's up?",       // ¿Qué hay?
-  "How's it going?"   // ¿Cómo va?
+  'Hi', // Hola
+  'Hey', // Hola (casual)
+  "What's up?", // ¿Qué hay?
+  "How's it going?", // ¿Cómo va?
 ];
 ```
 
 **Ejemplos:**
 
-  - **Hey! How's it going?** (¡Hola! ¿Cómo va?)
-  - **Good! How about you?** (¡Bien! ¿Y tú?)
-  - **What's up?** (¿Qué hay?)
-  - **Not much**, just chilling (Nada, aquí relajado)
+- **Hey! How's it going?** (¡Hola! ¿Cómo va?)
+- **Good! How about you?** (¡Bien! ¿Y tú?)
+- **What's up?** (¿Qué hay?)
+- **Not much**, just chilling (Nada, aquí relajado)
 
   </TabItem>
 
@@ -36,15 +36,15 @@ const informalGreetings = [
 
 ```javascript
 const neutralGreetings = {
-  greetings: ["Hello", "Hi there", "Good morning"],   // Hola, Hola, Buenos días
-  questions: ["How are you?", "How are you doing?"]   // ¿Cómo estás?, ¿Cómo te va?
+  greetings: ['Hello', 'Hi there', 'Good morning'], // Hola, Hola, Buenos días
+  questions: ['How are you?', 'How are you doing?'], // ¿Cómo estás?, ¿Cómo te va?
 };
 ```
 
 **Ejemplos:**
 
-  - **Good morning! How are you?** (¡Buenos días! ¿Cómo estás?)
-  - **I'm fine, thank you.** How are you? (Estoy bien, gracias. ¿Y tú?)
+- **Good morning! How are you?** (¡Buenos días! ¿Cómo estás?)
+- **I'm fine, thank you.** How are you? (Estoy bien, gracias. ¿Y tú?)
 
   </TabItem>
 
@@ -52,25 +52,23 @@ const neutralGreetings = {
 
 ```javascript
 const formalGreetings = [
-  "Good morning",       // Buenos días
-  "Good afternoon",     // Buenas tardes
-  "How do you do?",     // ¿Cómo está usted? (fórmula formal)
-  "It's a pleasure"     // Es un placer
+  'Good morning', // Buenos días
+  'Good afternoon', // Buenas tardes
+  'How do you do?', // ¿Cómo está usted? (fórmula formal)
+  "It's a pleasure", // Es un placer
 ];
 ```
 
 <Aside type="note" title="Fórmula de cortesía: How do you do">
-"How do you do?" es muy formal y se responde con la misma frase. No es realmente una pregunta sobre tu estado.
+  "How do you do?" es muy formal y se responde con la misma frase. No es realmente una pregunta sobre tu estado.
 </Aside>
 
   </TabItem>
 </Tabs>
 
 <Aside type="tip" title="Regla de contexto">
-Usa el nivel de formalidad según:
-- **Informal:** Amigos, familia, personas de tu edad
-- **Neutral:** Situaciones cotidianas, tiendas, conocidos
-- **Formal:** Trabajo, entrevistas, personas mayores, primera vez
+  Usa el nivel de formalidad según: - **Informal:** Amigos, familia, personas de tu edad - **Neutral:** Situaciones
+  cotidianas, tiendas, conocidos - **Formal:** Trabajo, entrevistas, personas mayores, primera vez
 </Aside>
 
 ---
@@ -81,16 +79,16 @@ El saludo cambia según la hora, pero estos son específicos y más formales que
 
 ```javascript
 /* Buenos días (5:00 AM - 12:00 PM) */
-const morning = "Good morning";
+const morning = 'Good morning';
 
 /* Buenas tardes (12:00 PM - 6:00 PM) */
-const afternoon = "Good afternoon";
+const afternoon = 'Good afternoon';
 
 /* Buenas noches - al llegar (6:00 PM - en adelante) */
-const evening = "Good evening";
+const evening = 'Good evening';
 
 /* Buenas noches - al despedirse */
-const night = "Good night";
+const night = 'Good night';
 ```
 
 <Aside type="caution" title='"Good night" NO es un saludo'>
@@ -98,7 +96,7 @@ const night = "Good night";
 
 - "Good night" (al llegar a las 8 PM) ⛔
 - **"Good evening"** (al llegar), **"Good night"** (al irte) ✅
-</Aside>
+  </Aside>
 
 ---
 
@@ -133,6 +131,7 @@ Esta pregunta es cortesía social, no siempre espera una respuesta detallada:
     - **"And you?"** (¿Y tú?)
     - **"How about you?"** (¿Qué tal tú?)
     - **"What about you?"** (¿Y tú?)
+
   </Card>
 </CardGrid>
 
@@ -147,17 +146,17 @@ Cuando conoces a alguien por primera vez:
 
 ```javascript
 const informalIntro = {
-  self: "I'm John",                 // Soy John
-  nice: "Nice to meet you",         // Encantado de conocerte
-  response: "Nice to meet you too"  // Encantado de conocerte también
+  self: "I'm John", // Soy John
+  nice: 'Nice to meet you', // Encantado de conocerte
+  response: 'Nice to meet you too', // Encantado de conocerte también
 };
 ```
 
 **Ejemplos:**
 
-  - **Hi! I'm Sarah** (¡Hola! Soy Sarah)
-  - **Hey! I'm Mike. Nice to meet you** (¡Hola! Soy Mike. Encantado de conocerte)
-  - **Nice to meet you too!** (¡Encantada de conocerte también!)
+- **Hi! I'm Sarah** (¡Hola! Soy Sarah)
+- **Hey! I'm Mike. Nice to meet you** (¡Hola! Soy Mike. Encantado de conocerte)
+- **Nice to meet you too!** (¡Encantada de conocerte también!)
 
   </TabItem>
 
@@ -165,17 +164,18 @@ const informalIntro = {
 
 ```javascript
 const formalIntro = {
-  self: "My name is John Smith",            // Mi nombre es John Smith
-  title: "I'm Dr. Johnson",                 // Soy Dr. Johnson
-  pleasure: "It's a pleasure to meet you",  // Es un placer conocerle
-  response: "The pleasure is mine"          // El placer es mío
+  self: 'My name is John Smith', // Mi nombre es John Smith
+  title: "I'm Dr. Johnson", // Soy Dr. Johnson
+  pleasure: "It's a pleasure to meet you", // Es un placer conocerle
+  response: 'The pleasure is mine', // El placer es mío
 };
 ```
 
 **Ejemplos:**
-  - **Good morning. My name is Robert Chen** (Buenos días. Mi nombre es Robert Chen)
-  - Good morning, Mr. Chen. **I'm Dr. Williams. It's a pleasure to meet you** (Buenos días, Sr. Chen. Soy el Dr. Williams. Es un placer conocerle)
-  - **The pleasure is mine** (El placer es mío)
+
+- **Good morning. My name is Robert Chen** (Buenos días. Mi nombre es Robert Chen)
+- Good morning, Mr. Chen. **I'm Dr. Williams. It's a pleasure to meet you** (Buenos días, Sr. Chen. Soy el Dr. Williams. Es un placer conocerle)
+- **The pleasure is mine** (El placer es mío)
 
   </TabItem>
 
@@ -185,16 +185,17 @@ Añade información sobre ti de forma modular:
 
 ```javascript
 const introWithContext = {
-  name:  "Hi, I'm Carlos.",   // Hola, soy Carlos.
-  role:  "I'm a student",     // Soy estudiante
-  place: "at MIT"             // en MIT
+  name: "Hi, I'm Carlos.", // Hola, soy Carlos.
+  role: "I'm a student", // Soy estudiante
+  place: 'at MIT', // en MIT
 };
 ```
 
 **Ejemplos:**
-  - "**I'm Carlos. I'm a student at MIT**" (Soy Carlos. Soy estudiante en MIT)
-  - "**My name is Lisa. I work in marketing**" (Mi nombre es Lisa. Trabajo en marketing)
-  - "**I'm Tom from the IT department**" (Soy Tom del departamento de IT)
+
+- "**I'm Carlos. I'm a student at MIT**" (Soy Carlos. Soy estudiante en MIT)
+- "**My name is Lisa. I work in marketing**" (Mi nombre es Lisa. Trabajo en marketing)
+- "**I'm Tom from the IT department**" (Soy Tom del departamento de IT)
 
   </TabItem>
 </Tabs>
@@ -210,10 +211,10 @@ Las despedidas también varían según el nivel de formalidad:
 
 ```javascript
 const informalGoodbyes = [
-  "Bye",           // Adiós
-  "See you",       // Nos vemos
-  "Take care",     // Cuídate
-  "Catch you later"// Te veo luego
+  'Bye', // Adiós
+  'See you', // Nos vemos
+  'Take care', // Cuídate
+  'Catch you later', // Te veo luego
 ];
 ```
 
@@ -223,10 +224,10 @@ const informalGoodbyes = [
 
 ```javascript
 const neutralGoodbyes = [
-  "Goodbye",             // Adiós
-  "Have a good day",     // Que tengas un buen día
-  "See you soon",        // Nos vemos pronto
-  "Talk to you later"    // Hablamos luego
+  'Goodbye', // Adiós
+  'Have a good day', // Que tengas un buen día
+  'See you soon', // Nos vemos pronto
+  'Talk to you later', // Hablamos luego
 ];
 ```
 
@@ -236,10 +237,10 @@ const neutralGoodbyes = [
 
 ```javascript
 const formalGoodbyes = [
-  "Goodbye",                 // Adiós
-  "Have a pleasant day",     // Que tenga un día agradable
-  "It was nice meeting you", // Fue un placer conocerle
-  "Best regards"             // Saludos cordiales
+  'Goodbye', // Adiós
+  'Have a pleasant day', // Que tenga un día agradable
+  'It was nice meeting you', // Fue un placer conocerle
+  'Best regards', // Saludos cordiales
 ];
 ```
 
@@ -252,24 +253,20 @@ const formalGoodbyes = [
 
 <CardGrid>
   <Card title="Teléfono (contestar)">
-    - **Informal:** "Hello?" (¿Hola?)
-    - **Neutral:** "Hello, this is Sarah" (Hola, habla Sarah)
-    - **Formal:** "Good morning, John speaking" (Buenos días, habla John)
+    - **Informal:** "Hello?" (¿Hola?) - **Neutral:** "Hello, this is Sarah" (Hola, habla Sarah) - **Formal:** "Good
+    morning, John speaking" (Buenos días, habla John)
   </Card>
   <Card title="Email/Mensaje">
-    - **Inicio:** "Hi/Hello [Name]," (Hola [Nombre],)
-    - **Formal:** "Dear [Name]," (Estimado/a [Nombre],)
-    - **Cierre:** "Best regards," (Saludos cordiales,) / "Cheers," (Saludos,)
+    - **Inicio:** "Hi/Hello [Name]," (Hola [Nombre],) - **Formal:** "Dear [Name]," (Estimado/a [Nombre],) - **Cierre:**
+    "Best regards," (Saludos cordiales,) / "Cheers," (Saludos,)
   </Card>
   <Card title="Al volver a ver">
-    - **Mismo día:** "Hi again!" (¡Hola de nuevo!)
-    - **Después de tiempo:** "Long time no see!" (¡Cuánto tiempo sin verte!)
-    - **Sorpresa:** "Fancy seeing you here!" (¡Qué sorpresa verte aquí!)
+    - **Mismo día:** "Hi again!" (¡Hola de nuevo!) - **Después de tiempo:** "Long time no see!" (¡Cuánto tiempo sin
+    verte!) - **Sorpresa:** "Fancy seeing you here!" (¡Qué sorpresa verte aquí!)
   </Card>
   <Card title="Despedida nocturna">
-    - **Al irse a dormir:** "Good night" (Buenas noches)
-    - **Deseo:** "Sleep well" (Duerme bien)
-    - **Informal:** "Nighty night" (Buenas noches - muy casual)
+    - **Al irse a dormir:** "Good night" (Buenas noches) - **Deseo:** "Sleep well" (Duerme bien) - **Informal:** "Nighty
+    night" (Buenas noches - muy casual)
   </Card>
 </CardGrid>
 
@@ -283,31 +280,30 @@ const formalGoodbyes = [
 - "Good night! How are you?" (al llegar a las 9 PM) ⛔
 - **"Good evening! How are you?"** (al llegar) ✅
 - **"Good night!"** (al irte o ir a dormir) ✅
-</Aside>
+  </Aside>
 
 <Aside type="danger" title="Responder literalmente a How do you do">
 "How do you do?" es una fórmula muy formal que funciona como saludo recíproco, no como pregunta real sobre tu estado de salud.
 
 - "I'm doing fine, thanks" ⛔
 - **"How do you do?"** (misma respuesta) ✅
-</Aside>
+  </Aside>
 
 <Aside type="danger" title="No devolver la pregunta How are you">
 En inglés es descortés no preguntar por la otra persona después de responder a su saludo inicial.
 
 - A: "How are you?" / B: "Fine" (y silencio) ⛔
 - A: "How are you?" / B: **"Good, thanks. And you?"** ✅
-</Aside>
+  </Aside>
 
 ---
 
 ## Práctica
 
 <Aside type="tip" title="Ejercicio diario">
-- Saluda a 3 personas diferentes en el día usando distintos niveles de formalidad (informal/neutral/formal)
-- Practica frente al espejo cambiando el saludo según la hora: "Good morning" (mañana), "Good afternoon" (tarde), "Good evening" (noche)
-- Escribe dos diálogos breves: uno para una situación formal (entrevista) y otro informal (amigos)
-- Grábate pronunciando despedidas y asegúrate de no confundir "Good evening" con "Good night"
-- Responde a "How are you?" de 3 formas diferentes y siempre devuelve la pregunta
+  - Saluda a 3 personas diferentes en el día usando distintos niveles de formalidad (informal/neutral/formal) - Practica
+  frente al espejo cambiando el saludo según la hora: "Good morning" (mañana), "Good afternoon" (tarde), "Good evening"
+  (noche) - Escribe dos diálogos breves: uno para una situación formal (entrevista) y otro informal (amigos) - Grábate
+  pronunciando despedidas y asegúrate de no confundir "Good evening" con "Good night" - Responde a "How are you?" de 3
+  formas diferentes y siempre devuelve la pregunta
 </Aside>
-

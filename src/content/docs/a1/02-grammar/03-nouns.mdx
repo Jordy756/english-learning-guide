@@ -15,15 +15,16 @@ Un sustantivo puede ser cualquier concepto abstracto o físico que puedas nombra
 
 ```javascript
 const noun = {
-  people: ["teacher", "Maria", "doctor"],    // personas: profesor, María, doctor
-  places: ["school", "London", "park"],      // lugares: escuela, Londres, parque
-  things: ["book", "computer", "car"],       // cosas: libro, computadora, carro
-  animals: ["dog", "cat", "elephant"],       // animales: perro, gato, elefante
-  ideas: ["love", "freedom", "happiness"]    // ideas: amor, libertad, felicidad
+  people: ['teacher', 'Maria', 'doctor'], // personas: profesor, María, doctor
+  places: ['school', 'London', 'park'], // lugares: escuela, Londres, parque
+  things: ['book', 'computer', 'car'], // cosas: libro, computadora, carro
+  animals: ['dog', 'cat', 'elephant'], // animales: perro, gato, elefante
+  ideas: ['love', 'freedom', 'happiness'], // ideas: amor, libertad, felicidad
 };
 ```
 
 **Ejemplos:**
+
 - I have a **phone** (Tengo un teléfono)
 - The **student** is smart (El estudiante es inteligente)
 - **Paris** is romantic (París es romántica)
@@ -42,11 +43,12 @@ La regla más común es agregar **-s** al final de la palabra:
 
 ```javascript
 // La forma más simple de plural
-let word = "cat";
-let plural = word + "s";  // cats (gatos)
+let word = 'cat';
+let plural = word + 's'; // cats (gatos)
 ```
 
 **Ejemplos:**
+
 - I need a **pen** → I need two **pens** (Necesito un bolígrafo → Necesito dos bolígrafos)
 - The **dog** is big → The **dogs** are big (El perro es grande → Los perros son grandes)
 - This **chair** is new → These **chairs** are new (Esta silla es nueva → Estas sillas son nuevas)
@@ -59,17 +61,22 @@ let plural = word + "s";  // cats (gatos)
 Si el sustantivo ya termina en **-s, -ss, -sh, -ch, -x** o **-z**, se debe agregar **-es**:
 
 ```javascript
-let target = "bus";
+let target = 'bus';
 
 if (
-  target.endsWith("s") || target.endsWith("ss") || target.endsWith("sh") ||
-  target.endsWith("ch") || target.endsWith("x") || target.endsWith("z")
+  target.endsWith('s') ||
+  target.endsWith('ss') ||
+  target.endsWith('sh') ||
+  target.endsWith('ch') ||
+  target.endsWith('x') ||
+  target.endsWith('z')
 ) {
-  target = target + "es"; // buses (autobuses)
+  target = target + 'es'; // buses (autobuses)
 }
 ```
 
 **Ejemplos:**
+
 - One **dish** → Two **dishes** (Un plato → Dos platos)
 - The **watch** is expensive → The **watches** are expensive (El reloj es caro → Los relojes son caros)
 - A **church** → Many **churches** (Una iglesia → Muchas iglesias)
@@ -84,22 +91,23 @@ Si la palabra termina en consonante seguida en **y**, cambia esa "y" final por *
 ```javascript
 const toPlural = (word) => {
   // Si termina en consonante + y, cambiamos por ies
-  if (word.endsWith("y")) {
-    return word.slice(0, -1) + "ies"; // baby -> babies
+  if (word.endsWith('y')) {
+    return word.slice(0, -1) + 'ies'; // baby -> babies
   }
 
-  return word + "s"; // Caso general
+  return word + 's'; // Caso general
 };
 ```
 
 **Ejemplos:**
+
 - The **story** is good → The **stories** are good (La historia es buena → Las historias son buenas)
 - One **family** → Two **families** (Una familia → Dos familias)
 - A **fly** → Many **flies** (Una mosca → Muchas moscas)
 - The **country** is beautiful → The **countries** are beautiful (El país es hermoso → Los países son hermosos)
 
 <Aside type="note" title="Excepción con vocal + y">
-Si termina en vocal seguida de **y**, solo agrega **-s**: boy → **boys**, key → **keys**, day → **days**.
+  Si termina en vocal seguida de **y**, solo agrega **-s**: boy → **boys**, key → **keys**, day → **days**.
 </Aside>
 
 </TabItem>
@@ -110,16 +118,17 @@ Algunos sustantivos tienen plurales que cambian completamente su forma que debes
 
 ```javascript
 const irregularPlurals = [
-  "man -> men",         // hombre → hombres
-  "woman -> women",     // mujer → mujeres
-  "child -> children",  // niño → niños
-  "person -> people",   // persona → personas
-  "tooth -> teeth",     // diente → dientes
-  "foot -> feet"        // pie → pies
+  'man -> men', // hombre → hombres
+  'woman -> women', // mujer → mujeres
+  'child -> children', // niño → niños
+  'person -> people', // persona → personas
+  'tooth -> teeth', // diente → dientes
+  'foot -> feet', // pie → pies
 ];
 ```
 
 **Ejemplos:**
+
 - The **woman** is tall → The **women** are tall (La mujer es alta → Las mujeres son altas)
 - One **child** plays → Three **children** play (Un niño juega → Tres niños juegan)
 - A **person** waits → Many **people** wait (Una persona espera → Muchas personas esperan)
@@ -141,11 +150,12 @@ Todos los nombres orientados a personas llevan siempre mayúsculas iniciales:
 
 ```javascript
 // La forma de asignar nombres a las personas
-const brothers = ["David", "Michael"];
-const sisters = ["Jennifer", "Emma"];
+const brothers = ['David', 'Michael'];
+const sisters = ['Jennifer', 'Emma'];
 ```
 
 **Ejemplos:**
+
 - **David** is my brother (David es mi hermano)
 - I met **Jennifer** yesterday (Conocí a Jennifer ayer)
 - **Carlos** speaks English (Carlos habla inglés)
@@ -158,13 +168,14 @@ const sisters = ["Jennifer", "Emma"];
 Los nombres sobre lugares y zonas, tales como ciudades, países, continentes y calles:
 
 ```javascript
-let location = "";
+let location = '';
 
-if (type === "country") location = "Spain";
-if (type === "continent") location = "Africa";
+if (type === 'country') location = 'Spain';
+if (type === 'continent') location = 'Africa';
 ```
 
 **Ejemplos:**
+
 - I live in **Spain** (Vivo en España)
 - **Tokyo** is in Japan (Tokio está en Japón)
 - We visited **Africa** (Visitamos África)
@@ -179,20 +190,22 @@ A diferencia del español, estos tres conceptos en inglés llevan siempre la res
 ```javascript
 // Días y meses en inglés siempre van en mayuscula
 const dateInfo = [
-  "Monday",     // Lunes
-  "September",  // Septiembre
-  "Easter"      // Pascua
+  'Monday', // Lunes
+  'September', // Septiembre
+  'Easter', // Pascua
 ];
 ```
 
 **Ejemplos:**
+
 - **Friday** is my birthday (El viernes es mi cumpleaños)
 - School starts in **September** (La escuela empieza en septiembre)
 - We celebrate **Easter** every year (Celebramos Pascua cada año)
 - **Wednesday** is a workday (El miércoles es día laboral)
 
 <Aside type="caution" title="Diferencia con el español en días y meses">
-En inglés, los días de la semana y los meses **siempre** llevan mayúscula: Monday, Tuesday, January, February. En español, estos se escriben con minúscula.
+  En inglés, los días de la semana y los meses **siempre** llevan mayúscula: Monday, Tuesday, January, February. En
+  español, estos se escriben con minúscula.
 </Aside>
 
 </TabItem>
@@ -203,13 +216,14 @@ Para los nombres corporativos sobre compañías y de productos en general tambi�
 
 ```javascript
 const companyInfo = {
-  software: "Microsoft",
-  hardware: "Samsung",
-  drink: "Coca-Cola"
+  software: 'Microsoft',
+  hardware: 'Samsung',
+  drink: 'Coca-Cola',
 };
 ```
 
 **Ejemplos:**
+
 - She works at **Microsoft** (Ella trabaja en Microsoft)
 - I bought a **Samsung** phone (Compré un teléfono Samsung)
 - He drinks **Coca-Cola** (Él bebe Coca-Cola)
@@ -223,6 +237,7 @@ const companyInfo = {
 ## Identificación de Sustantivos
 
 Para identificar un sustantivo en una oración, pregúntate internamente:
+
 - ¿Es el nombre de una persona? → **Sustantivo**
 - ¿Es el nombre de un lugar? → **Sustantivo**
 - ¿Es algo que pertenece a una cosa? → **Sustantivo**
@@ -237,38 +252,36 @@ Para convertir el singular a la versión de plural de la gran mayoría de sustan
 
 - I have two book ⛔
 - I have two **books** (Tengo dos libros) ✅
-</Aside>
+  </Aside>
 
 <Aside type="danger" title="Usar plural irregular como regular">
 Los plurales irregulares como el paso de child hacia children deben memorizarse sin aplicar la técnica tradicional de solamente agregar una s al final.
 
 - There are many childs in the park ⛔
 - There are many **children** in the park (Hay muchos niños en el parque) ✅
-</Aside>
+  </Aside>
 
 <Aside type="danger" title="No usar mayúscula en sustantivos propios">
 Los nombres de lugares referenciados como ciudades, países y demás, siempre llevan la primera inicial en mayúscula de esta manera.
 
 - I live in new york ⛔
 - I live in **New York** (Vivo en Nueva York) ✅
-</Aside>
+  </Aside>
 
 <Aside type="danger" title="Confundir reglas de -es y -ies">
 Aplica las reglas correctas requeridas según la respectiva terminación de cada sustantivo sin mezclar ambas.
 
 - I see two foxs ⛔
 - I see two **foxes** (Veo dos zorros) ✅
-</Aside>
+  </Aside>
 
 ---
 
 ## Práctica
 
 <Aside type="tip" title="Ejercicio diario">
-- Lee una página de un libro en inglés y subraya todos los sustantivos que encuentres
-- Escribe 10 sustantivos en singular y conviértelos a plural (incluye al menos 2 irregulares)
-- Escribe 5 oraciones sobre ti usando sustantivos propios (tu nombre, ciudad, país, día favorito)
-- Crea listas de 5 sustantivos para cada categoría: personas, lugares, cosas, animales
-- Convierte oraciones de singular a plural: "The child has a toy" → "The children have toys"
+  - Lee una página de un libro en inglés y subraya todos los sustantivos que encuentres - Escribe 10 sustantivos en
+  singular y conviértelos a plural (incluye al menos 2 irregulares) - Escribe 5 oraciones sobre ti usando sustantivos
+  propios (tu nombre, ciudad, país, día favorito) - Crea listas de 5 sustantivos para cada categoría: personas, lugares,
+  cosas, animales - Convierte oraciones de singular a plural: "The child has a toy" → "The children have toys"
 </Aside>
-

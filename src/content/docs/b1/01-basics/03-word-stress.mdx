@@ -16,18 +16,18 @@ El acento en inglés no es opcional. Una sílaba mal acentuada puede hacer que n
 ```javascript
 const stressImportance = {
   spanish: {
-    rules: "predecibles con tildes",
-    impact: "menor en comprensión"
+    rules: 'predecibles con tildes',
+    impact: 'menor en comprensión',
   },
   english: {
-    rules: "variables, se aprenden por palabra",
-    impact: "crítico para comprensión"
-  }
+    rules: 'variables, se aprenden por palabra',
+    impact: 'crítico para comprensión',
+  },
 };
 ```
 
 <Aside type="caution" title="El acento cambia el significado">
-"REcord" (disco/registro) y "reCORD" (grabar) son palabras diferentes. Acentuar mal puede causar confusión total.
+  "REcord" (disco/registro) y "reCORD" (grabar) son palabras diferentes. Acentuar mal puede causar confusión total.
 </Aside>
 
 ---
@@ -39,17 +39,17 @@ La sílaba acentuada es **más fuerte, más larga y más clara**. Las sílabas n
 ```javascript
 const stressCharacteristics = {
   accentuada: {
-    volumen: "más alto",
-    duración: "más larga",
-    tono: "más alto",
-    vocal: "clara y completa"
+    volumen: 'más alto',
+    duración: 'más larga',
+    tono: 'más alto',
+    vocal: 'clara y completa',
   },
   noAcentuada: {
-    volumen: "más bajo",
-    duración: "más corta",
-    tono: "más bajo",
-    vocal: "reducida (schwa)"
-  }
+    volumen: 'más bajo',
+    duración: 'más corta',
+    tono: 'más bajo',
+    vocal: 'reducida (schwa)',
+  },
 };
 ```
 
@@ -79,6 +79,7 @@ const nouns = {
 ```
 
 Los sustantivos generalmente acentúan la **primera sílaba**.
+
   </TabItem>
   
   <TabItem label="Verbos (2da sílaba)">
@@ -93,6 +94,7 @@ const verbs = {
 ```
 
 Los verbos generalmente acentúan la **segunda sílaba**.
+
   </TabItem>
 </Tabs>
 
@@ -123,6 +125,7 @@ const stressOnSuffix = {
 ```
 
 Estos sufijos **atraen el acento** hacia ellos.
+
   </TabItem>
   
   <TabItem label="Acento antes del sufijo">
@@ -136,6 +139,7 @@ const stressBeforeSuffix = {
 ```
 
 El acento cae en la sílaba **inmediatamente anterior**.
+
   </TabItem>
   
   <TabItem label="Sin cambio de acento">
@@ -149,6 +153,7 @@ const noStressChange = {
 ```
 
 Estos sufijos **no cambian** la posición del acento.
+
   </TabItem>
 </Tabs>
 
@@ -168,19 +173,20 @@ Las palabras compuestas siguen patrones específicos.
 ```javascript
 const compoundStress = {
   sustantivo_sustantivo: {
-    pattern: "acento en primera palabra",
-    examples: ["BLACKboard", "TOOTHpaste", "AIRport"]
+    pattern: 'acento en primera palabra',
+    examples: ['BLACKboard', 'TOOTHpaste', 'AIRport'],
   },
   adjetivo_sustantivo: {
-    pattern: "acento en ambas (más en segunda)",
-    examples: ["hot DOG", "white HOUSE", "green HOUSE"]
+    pattern: 'acento en ambas (más en segunda)',
+    examples: ['hot DOG', 'white HOUSE', 'green HOUSE'],
   },
-  nota: "greenhouse (invernadero) vs green house (casa verde)"
+  nota: 'greenhouse (invernadero) vs green house (casa verde)',
 };
 ```
 
 <Aside type="note" title="Compuesto vs. frase">
-**BLACKbird** (mirlo - un tipo de pájaro) tiene acento en BLACK. **Black BIRD** (pájaro negro - cualquier pájaro negro) tiene acento en BIRD.
+  **BLACKbird** (mirlo - un tipo de pájaro) tiene acento en BLACK. **Black BIRD** (pájaro negro - cualquier pájaro
+  negro) tiene acento en BIRD.
 </Aside>
 
 **Ejemplos:**
@@ -197,13 +203,13 @@ Las palabras largas pueden tener un **acento secundario** además del principal.
 
 ```javascript
 const secondaryStress = {
-  symbol: "ˌ (coma baja antes de sílaba)",
-  description: "menos fuerte que el principal",
+  symbol: 'ˌ (coma baja antes de sílaba)',
+  description: 'menos fuerte que el principal',
   examples: {
-    "ˌunder'stand": "acento secundario + principal",
-    "ˌcongratulation": "acento secundario + principal",
-    "ˌindependent": "acento secundario + principal"
-  }
+    "ˌunder'stand": 'acento secundario + principal',
+    ˌcongratulation: 'acento secundario + principal',
+    ˌindependent: 'acento secundario + principal',
+  },
 };
 ```
 
@@ -222,13 +228,13 @@ La mayoría de las palabras de dos sílabas siguen estos patrones:
 ```javascript
 const twoSyllablePatterns = {
   primeraSlaba: {
-    sustantivos: ["TAble", "WInter", "PEOple", "MOney"],
-    adjetivos: ["HAppy", "PREtty", "LITtle", "SImple"]
+    sustantivos: ['TAble', 'WInter', 'PEOple', 'MOney'],
+    adjetivos: ['HAppy', 'PREtty', 'LITtle', 'SImple'],
   },
   segundaSilaba: {
-    verbos: ["beLIEVE", "deCIDE", "beGIN", "forGET"],
-    preposiciones: ["beTWEEN", "beHIND", "aBOVE", "aROUND"]
-  }
+    verbos: ['beLIEVE', 'deCIDE', 'beGIN', 'forGET'],
+    preposiciones: ['beTWEEN', 'beHIND', 'aBOVE', 'aROUND'],
+  },
 };
 ```
 
@@ -248,6 +254,7 @@ const twoSyllablePatterns = {
 - ✅ **bəˈNAːnə** - segunda sílaba clara, las otras reducidas
 
 En inglés, las sílabas no acentuadas se reducen significativamente.
+
 </Aside>
 
 <Aside type="danger" title="Usar acento español en cognados">
@@ -255,6 +262,7 @@ En inglés, las sílabas no acentuadas se reducen significativamente.
 - ✅ **hoTEL** /həʊˈtel/ (correcto, pero primera sílaba reducida a schwa)
 
 Los cognados a menudo tienen acento diferente en inglés.
+
 </Aside>
 
 <Aside type="danger" title="No distinguir sustantivo de verbo">
@@ -262,6 +270,7 @@ Los cognados a menudo tienen acento diferente en inglés.
 - ✅ "Can you **reCORD** this?" /rɪˈkɔːd/ (acento en segunda sílaba)
 
 Recuerda: sustantivos en primera sílaba, verbos en segunda.
+
 </Aside>
 
 <Aside type="danger" title="Ignorar el acento en palabras largas">
@@ -269,6 +278,7 @@ Recuerda: sustantivos en primera sílaba, verbos en segunda.
 - ✅ **ˌinforMAtion** /ˌɪnfəˈmeɪʃən/ - tercera sílaba es la principal
 
 Las palabras con -tion/-sion siempre acentúan la sílaba anterior al sufijo.
+
 </Aside>
 
 ---
@@ -276,9 +286,8 @@ Las palabras con -tion/-sion siempre acentúan la sílaba anterior al sufijo.
 ## Práctica
 
 <Aside type="tip" title="Ejercicio diario">
-- Marca el acento en palabras nuevas que aprendas y repítelas en voz alta exagerando la sílaba fuerte
-- Practica pares sustantivo/verbo (record, present, project) en oraciones completas
-- Escucha podcasts y trata de identificar qué sílabas llevan acento
-- Usa diccionarios con transcripción fonética para verificar el acento de palabras dudosas
-- Lee en voz alta reduciendo conscientemente las sílabas no acentuadas a schwa
+  - Marca el acento en palabras nuevas que aprendas y repítelas en voz alta exagerando la sílaba fuerte - Practica pares
+  sustantivo/verbo (record, present, project) en oraciones completas - Escucha podcasts y trata de identificar qué
+  sílabas llevan acento - Usa diccionarios con transcripción fonética para verificar el acento de palabras dudosas - Lee
+  en voz alta reduciendo conscientemente las sílabas no acentuadas a schwa
 </Aside>

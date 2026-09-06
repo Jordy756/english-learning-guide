@@ -31,6 +31,7 @@ Los adjetivos cortos añaden una terminación directamente al adjetivo, mientras
     - This route is **faster** than the other (Esta ruta es más rápida que la otra)
     - He is **the youngest** in the class (Él es el más joven de la clase)
     - This hotel is **the cheapest** in the city (Este hotel es el más barato de la ciudad)
+
   </TabItem>
 
   <TabItem label="Adjetivos largos">
@@ -52,6 +53,7 @@ Los adjetivos cortos añaden una terminación directamente al adjetivo, mientras
     - Health is **more important** than money (La salud es más importante que el dinero)
     - Paris is **the most beautiful** city I've visited (París es la ciudad más bella que he visitado)
     - That was **the most expensive** restaurant in town (Ese fue el restaurante más caro de la ciudad)
+
   </TabItem>
 
   <TabItem label="Irregulares">
@@ -75,6 +77,7 @@ Los adjetivos cortos añaden una terminación directamente al adjetivo, mientras
     <Aside type="tip" title="Un solo grupo de irregulares">
     Los mismos adjetivos que son irregulares en el comparativo también lo son en el superlativo. No hay excepciones dentro del grupo.
     </Aside>
+
   </TabItem>
 </Tabs>
 
@@ -86,10 +89,10 @@ Al añadir **-er** y **-est** a adjetivos cortos, la ortografía cambia según c
 
 ```javascript
 const spellingRules = {
-  endsWith_e:   v => v + "r",                // nice  → nicer
-  endsWith_CVC: v => v + v.at(-1) + "er",    // big   → bigger
-  endsWith_y:   v => v.slice(0, -1) + "ier", // happy → happier
-  regular:      v => v + "er",               // tall  → taller
+  endsWith_e: (v) => v + 'r', // nice  → nicer
+  endsWith_CVC: (v) => v + v.at(-1) + 'er', // big   → bigger
+  endsWith_y: (v) => v.slice(0, -1) + 'ier', // happy → happier
+  regular: (v) => v + 'er', // tall  → taller
 };
 ```
 
@@ -108,8 +111,8 @@ Usa **as + adjetivo + as** para expresar igualdad entre dos elementos. La forma 
 
 ```javascript
 const equality = {
-  positive: "as + adjective + as",      // tan ... como
-  negative: "not as + adjective + as",  // no tan ... como
+  positive: 'as + adjective + as', // tan ... como
+  negative: 'not as + adjective + as', // no tan ... como
 };
 // She is as tall as her sister.
 // He is not as fast as his brother.
@@ -123,7 +126,8 @@ const equality = {
 - He doesn't work **as hard as** she does (Él no trabaja tan duro como ella)
 
 <Aside type="note" title="Than y as...as no son intercambiables">
-Los comparativos van con **than**: "taller than". Las comparaciones de igualdad van con **as...as**: "as tall as". No puedes mezclar las dos estructuras.
+  Los comparativos van con **than**: "taller than". Las comparaciones de igualdad van con **as...as**: "as tall as". No
+  puedes mezclar las dos estructuras.
 </Aside>
 
 ---
@@ -137,7 +141,7 @@ Solo puedes usar una forma: o añades -er al adjetivo, o usas more. Nunca los do
 - She is **taller** than me (Ella es más alta que yo) ✅
 - He is **more smarter** than his friends ⛔
 - He is **smarter** than his friends (Él es más inteligente que sus amigos) ✅
-</Aside>
+  </Aside>
 
 <Aside type="danger" title="Olvidar 'than' en el comparativo">
 Cuando comparas dos cosas directamente, siempre necesitas **than** después del comparativo.
@@ -146,7 +150,7 @@ Cuando comparas dos cosas directamente, siempre necesitas **than** después del 
 - She is taller **than** her brother (Ella es más alta que su hermano) ✅
 - This bag is more expensive **that one** ⛔
 - This bag is more expensive **than** that one (Esta bolsa es más cara que esa) ✅
-</Aside>
+  </Aside>
 
 <Aside type="danger" title="Olvidar 'the' en el superlativo">
 El superlativo siempre va precedido del artículo **the**. Sin "the", la estructura es incorrecta.
@@ -155,7 +159,7 @@ El superlativo siempre va precedido del artículo **the**. Sin "the", la estruct
 - She is **the best** player on the team (Ella es la mejor jugadora del equipo) ✅
 - This is **most beautiful** city I know ⛔
 - This is **the most beautiful** city I know (Esta es la ciudad más bella que conozco) ✅
-</Aside>
+  </Aside>
 
 <Aside type="danger" title="Usar comparativo donde corresponde superlativo">
 Usa el comparativo cuando comparas dos elementos. Cuando comparas uno dentro de un grupo de tres o más, usa el superlativo.
@@ -164,17 +168,15 @@ Usa el comparativo cuando comparas dos elementos. Cuando comparas uno dentro de 
 - She is **the tallest** of the three sisters (Ella es la más alta de las tres hermanas) ✅
 - This is **more expensive** option on the menu ⛔
 - This is **the most expensive** option on the menu (Esta es la opción más cara del menú) ✅
-</Aside>
+  </Aside>
 
 ---
 
 ## Práctica
 
 <Aside type="tip" title="Ejercicio diario">
-- Compara dos personas que conoces usando 5 adjetivos diferentes en comparativo
-- Describe el lugar más grande, más pequeño y más interesante que hayas visitado usando superlativos
-- Escribe 3 oraciones con as...as comparando objetos que tienes a la mano
-- Toma 10 adjetivos y escribe su forma comparativa y superlativa correctamente
-- Busca reseñas de productos en inglés e identifica todos los comparativos y superlativos que encuentres
+  - Compara dos personas que conoces usando 5 adjetivos diferentes en comparativo - Describe el lugar más grande, más
+  pequeño y más interesante que hayas visitado usando superlativos - Escribe 3 oraciones con as...as comparando objetos
+  que tienes a la mano - Toma 10 adjetivos y escribe su forma comparativa y superlativa correctamente - Busca reseñas de
+  productos en inglés e identifica todos los comparativos y superlativos que encuentres
 </Aside>
-

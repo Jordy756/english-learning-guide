@@ -20,9 +20,9 @@ Los adverbios modifican verbos para describir **cómo** se realiza la acción. V
 
 ```javascript
 const modifyVerb = [
-  "He drives carefully",   // maneja cuidadosamente
-  "She sings beautifully", // canta hermosamente
-  "They work hard"         // trabajan duro
+  'He drives carefully', // maneja cuidadosamente
+  'She sings beautifully', // canta hermosamente
+  'They work hard', // trabajan duro
 ];
 ```
 
@@ -42,10 +42,10 @@ Los adverbios modifican adjetivos para indicar **el grado o intensidad** de la c
 
 ```javascript
 const intensifiers = [
-  "very tall",       // muy alto
-  "extremely hot",   // extremadamente caliente
-  "too difficult",   // demasiado difícil
-  "quite tired"      // bastante cansado
+  'very tall', // muy alto
+  'extremely hot', // extremadamente caliente
+  'too difficult', // demasiado difícil
+  'quite tired', // bastante cansado
 ];
 ```
 
@@ -65,10 +65,10 @@ Los adverbios pueden modificar otros adverbios para intensificar o cambiar su si
 
 ```javascript
 const combinations = [
-  "too fast",         // demasiado rápido
-  "very hard",        // muy duro
-  "quite late",       // bastante tarde
-  "extremely slowly"  // extremadamente lento
+  'too fast', // demasiado rápido
+  'very hard', // muy duro
+  'quite late', // bastante tarde
+  'extremely slowly', // extremadamente lento
 ];
 ```
 
@@ -95,7 +95,7 @@ La mayoría de los adverbios de manera se forman agregando **-ly** al adjetivo.
 Agrega **-ly** al final del adjetivo.
 
 ```javascript
-const toAdverb = (adj) => adj + "ly";
+const toAdverb = (adj) => adj + 'ly';
 
 // quick → quickly (rápido → rápidamente)
 // slow → slowly (lento → lentamente)
@@ -117,7 +117,7 @@ Si el adjetivo termina en **consonante + y**, cambia la **y** por **i** y agrega
 
 ```javascript
 const toAdverb = (adj) => {
-  if (adj.endsWith("y")) return adj.slice(0, -1) + "ily";
+  if (adj.endsWith('y')) return adj.slice(0, -1) + 'ily';
 };
 
 // happy → happily (feliz → felizmente)
@@ -140,7 +140,7 @@ Si el adjetivo termina en **-le**, reemplaza la **e** con **y**.
 
 ```javascript
 const toAdverb = (adj) => {
-  if (adj.endsWith("le")) return adj.slice(0, -1) + "y";
+  if (adj.endsWith('le')) return adj.slice(0, -1) + 'y';
 };
 
 // simple → simply (simple → simplemente)
@@ -163,7 +163,7 @@ Si el adjetivo termina en **-ic**, agrega **-ally** (no solo -ly).
 
 ```javascript
 const toAdverb = (adj) => {
-  if (!adj.endsWith("ic")) return adj + "ally";
+  if (!adj.endsWith('ic')) return adj + 'ally';
 };
 
 // basic → basically (básico → básicamente)
@@ -188,16 +188,17 @@ Algunos adverbios no siguen la regla de **-ly**. Estos son irregulares y debes m
 
 ```javascript
 const irregularAdverbs = {
-  good: "well",          // bueno → bien
-  fast: "fast",          // rápido → rápido
-  hard: "hard",          // duro → duro
-  late: "late",          // tarde → tarde
-  early: "early"         // temprano → temprano
+  good: 'well', // bueno → bien
+  fast: 'fast', // rápido → rápido
+  hard: 'hard', // duro → duro
+  late: 'late', // tarde → tarde
+  early: 'early', // temprano → temprano
 };
 ```
 
 <Aside type="caution" title="'Good' nunca es un adverbio">
-El adjetivo **good** (bueno) se convierte en el adverbio **well** (bien). Nunca uses "good" como adverbio. "He plays **well**" es correcto; "He plays **good**" está mal.
+  El adjetivo **good** (bueno) se convierte en el adverbio **well** (bien). Nunca uses "good" como adverbio. "He plays
+  **well**" es correcto; "He plays **good**" está mal.
 </Aside>
 
 **Ejemplos:**
@@ -209,7 +210,8 @@ El adjetivo **good** (bueno) se convierte en el adverbio **well** (bien). Nunca 
 - I wake up **early** on weekdays (Me despierto temprano entre semana)
 
 <Aside type="note" title="'Hard' vs 'Hardly'">
-**Hard** significa "duro/duramente". **Hardly** significa "apenas/casi no". Son palabras diferentes: "I work **hard**" (Trabajo duro) vs "I **hardly** work" (Apenas trabajo).
+  **Hard** significa "duro/duramente". **Hardly** significa "apenas/casi no". Son palabras diferentes: "I work **hard**"
+  (Trabajo duro) vs "I **hardly** work" (Apenas trabajo).
 </Aside>
 
 ---
@@ -273,7 +275,7 @@ El presente simple va de la mano con adverbios que indican qué tan seguido ocur
 </Tabs>
 
 <Aside type="note" title="Posición especial con 'to be'">
-Con el verbo **to be**, el adverbio va **después**: "She is always happy" (Ella siempre está feliz).
+  Con el verbo **to be**, el adverbio va **después**: "She is always happy" (Ella siempre está feliz).
 </Aside>
 
 ---
@@ -285,45 +287,44 @@ Con el verbo **to be**, el adverbio va **después**: "She is always happy" (Ella
 
 - He plays guitar **good** ⛔
 - He plays guitar **well** (Él toca guitarra bien) ✅
-</Aside>
+  </Aside>
 
 <Aside type="danger" title="Olvidar cambiar -y por -i antes de -ly">
 Cuando el adjetivo termina en consonante + y, la **y** cambia a **i** antes de agregar -ly.
 
 - She smiled **happyly** ⛔
 - She smiled **happily** (Ella sonrió felizmente) ✅
-</Aside>
+  </Aside>
 
 <Aside type="danger" title="Poner adverbios de frecuencia en el lugar incorrecto">
 Con el verbo **to be**, el adverbio de frecuencia va después. Con otros verbos, va antes del verbo principal.
 
 - I **am tired always** ⛔
 - I **am always tired** (Siempre estoy cansado) ✅
-</Aside>
+  </Aside>
 
 <Aside type="danger" title="Confundir 'hard' con 'hardly'">
 **Hard** significa duramente o duro. **Hardly** significa apenas o casi no. Son palabras distintas con significados opuestos.
 
 - He **hardly** studies ⛔
 - He studies **hard** (Él estudia duro) ✅
-</Aside>
+  </Aside>
 
 <Aside type="danger" title="Poner el adverbio entre el verbo y el objeto">
 El adverbio de manera siempre va **después del objeto**, nunca entre el verbo y el objeto.
 
 - She speaks **fluently** English ⛔
 - She speaks English **fluently** (Ella habla inglés fluidamente) ✅
-</Aside>
+  </Aside>
 
 ---
 
 ## Práctica
 
 <Aside type="tip" title="Ejercicio diario">
-- Transforma 10 adjetivos en adverbios usando la regla -ly y crea oraciones con cada uno
-- Escribe 5 oraciones usando adverbios de frecuencia (varía entre to be y otros verbos)
-- Practica la diferencia: escribe 5 oraciones con adjetivos y transfórmalas usando adverbios
-- Lee un texto en inglés e identifica todos los adverbios, clasifícalos por tipo (frecuencia, manera, etc.)
-- Describe tu rutina diaria usando al menos 6 adverbios de frecuencia diferentes
-- Memoriza los 5 adverbios irregulares principales (well, fast, hard, late, early) y úsalos en contexto
+  - Transforma 10 adjetivos en adverbios usando la regla -ly y crea oraciones con cada uno - Escribe 5 oraciones usando
+  adverbios de frecuencia (varía entre to be y otros verbos) - Practica la diferencia: escribe 5 oraciones con adjetivos
+  y transfórmalas usando adverbios - Lee un texto en inglés e identifica todos los adverbios, clasifícalos por tipo
+  (frecuencia, manera, etc.) - Describe tu rutina diaria usando al menos 6 adverbios de frecuencia diferentes - Memoriza
+  los 5 adverbios irregulares principales (well, fast, hard, late, early) y úsalos en contexto
 </Aside>

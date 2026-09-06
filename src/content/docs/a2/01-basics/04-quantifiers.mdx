@@ -15,7 +15,7 @@ Los **cuantificadores** son palabras que indican cantidad sin especificar un nú
 
 ```javascript
 const getQuantifier = (noun, type) => {
-  return type === "countable"
+  return type === 'countable'
     ? `many ${noun}` // many books, many people
     : `much ${noun}`; // much water, much time
 };
@@ -45,10 +45,10 @@ const getQuantifier = (noun, type) => {
 
 ```javascript
 const examples = [
-  "a lot of books",      // contable → muchos libros
-  "a lot of water",      // incontable → mucha agua
-  "lots of people",      // contable → muchas personas
-  "lots of time"         // incontable → mucho tiempo
+  'a lot of books', // contable → muchos libros
+  'a lot of water', // incontable → mucha agua
+  'lots of people', // contable → muchas personas
+  'lots of time', // incontable → mucho tiempo
 ];
 // funciona igual con contables e incontables
 ```
@@ -62,7 +62,7 @@ const examples = [
 - He needs **a lot of help** (Él necesita mucha ayuda)
 
 <Aside type="note" title="Lots of vs a lot of">
-**Lots of** es más informal que **a lot of** pero el uso es idéntico.
+  **Lots of** es más informal que **a lot of** pero el uso es idéntico.
 </Aside>
 
 ---
@@ -78,10 +78,10 @@ Usa **a few** con sustantivos **contables en plural** para indicar una **cantida
 
 ```javascript
 const aFewExamples = [
-  "a few books",     // unos pocos libros
-  "a few friends",   // unos pocos amigos
-  "a few days",      // unos días
-  "a few questions"  // unas preguntas
+  'a few books', // unos pocos libros
+  'a few friends', // unos pocos amigos
+  'a few days', // unos días
+  'a few questions', // unas preguntas
 ];
 // contables en plural: cantidad pequeña pero suficiente
 ```
@@ -123,11 +123,11 @@ const aLittle = (noun) => `a little ${noun}`;
 **Sin el artículo "a"**, el significado cambia a una connotación más **negativa** (casi nada):
 
 ```javascript
-const aFew    = "a few friends"; // algunos — suficiente
-const few     = "few friends";   // pocos — insuficiente
+const aFew = 'a few friends'; // algunos — suficiente
+const few = 'few friends'; // pocos — insuficiente
 
-const aLittle = "a little time"; // algo — suficiente
-const little  = "little time";   // casi nada — insuficiente
+const aLittle = 'a little time'; // algo — suficiente
+const little = 'little time'; // casi nada — insuficiente
 ```
 
 **Ejemplos:**
@@ -138,7 +138,8 @@ const little  = "little time";   // casi nada — insuficiente
 - We have **little time** (Tenemos muy poco tiempo, es insuficiente)
 
 <Aside type="caution" title="La diferencia sutil entre 'a few/little' y 'few/little'">
-El artículo **"a"** hace una gran diferencia. **A few/a little** indica que hay **algo suficiente** (tono positivo). Sin "a", **few/little** indica una cantidad **insuficiente** o **escasa** (tono negativo).
+  El artículo **"a"** hace una gran diferencia. **A few/a little** indica que hay **algo suficiente** (tono positivo).
+  Sin "a", **few/little** indica una cantidad **insuficiente** o **escasa** (tono negativo).
 </Aside>
 
 </TabItem>
@@ -157,7 +158,7 @@ Estos cuantificadores expresan **exceso** (too much/many) o **suficiencia** (eno
 
 ```javascript
 const tooQuantifier = (noun, type) => {
-  return type === "countable"
+  return type === 'countable'
     ? `too many ${noun}` // demasiados/as
     : `too much ${noun}`; // demasiado/a
 };
@@ -165,13 +166,13 @@ const tooQuantifier = (noun, type) => {
 // tooQuantifier("water", "uncountable") → "too much water"
 ```
 
-  **Ejemplos:**
+**Ejemplos:**
 
-  - There are **too many people** here (Hay demasiadas personas aquí)
-  - You ask **too many questions** (Haces demasiadas preguntas)
-  - There's **too much noise** (Hay demasiado ruido)
-  - You drink **too much coffee** (Tomas demasiado café)
-  - She has **too much work** (Ella tiene demasiado trabajo)
+- There are **too many people** here (Hay demasiadas personas aquí)
+- You ask **too many questions** (Haces demasiadas preguntas)
+- There's **too much noise** (Hay demasiado ruido)
+- You drink **too much coffee** (Tomas demasiado café)
+- She has **too much work** (Ella tiene demasiado trabajo)
 
   </TabItem>
 
@@ -181,20 +182,20 @@ const tooQuantifier = (noun, type) => {
 
 ```javascript
 const tooExamples = [
-  "too hot",       // demasiado caliente
-  "too difficult", // demasiado difícil
-  "too fast",      // demasiado rápido
-  "too long"       // demasiado largo
+  'too hot', // demasiado caliente
+  'too difficult', // demasiado difícil
+  'too fast', // demasiado rápido
+  'too long', // demasiado largo
 ];
 // posición: too + adjetivo/adverbio
 ```
 
-  **Ejemplos:**
+**Ejemplos:**
 
-  - The coffee is **too hot** (El café está demasiado caliente)
-  - This exercise is **too difficult** (Este ejercicio es demasiado difícil)
-  - She speaks **too fast** (Ella habla demasiado rápido)
-  - The movie was **too long** (La película fue demasiado larga)
+- The coffee is **too hot** (El café está demasiado caliente)
+- This exercise is **too difficult** (Este ejercicio es demasiado difícil)
+- She speaks **too fast** (Ella habla demasiado rápido)
+- The movie was **too long** (La película fue demasiado larga)
 
   </TabItem>
 
@@ -204,19 +205,19 @@ const tooExamples = [
 
 ```javascript
 const enough = (noun, pos) => {
-  return pos === "adj"
-    ? noun + " enough" // good enough → después del adj
-    : "enough " + noun; // enough money → antes del sust
+  return pos === 'adj'
+    ? noun + ' enough' // good enough → después del adj
+    : 'enough ' + noun; // enough money → antes del sust
 };
 ```
 
-  **Ejemplos:**
+**Ejemplos:**
 
-  - Do we have **enough chairs**? (¿Tenemos suficientes sillas?)
-  - Is there **enough water**? (¿Hay suficiente agua?)
-  - We don't have **enough time** (No tenemos suficiente tiempo)
-  - Is the room **big enough**? (¿Es el cuarto suficientemente grande?)
-  - She doesn't study **hard enough** (Ella no estudia suficientemente duro)
+- Do we have **enough chairs**? (¿Tenemos suficientes sillas?)
+- Is there **enough water**? (¿Hay suficiente agua?)
+- We don't have **enough time** (No tenemos suficiente tiempo)
+- Is the room **big enough**? (¿Es el cuarto suficientemente grande?)
+- She doesn't study **hard enough** (Ella no estudia suficientemente duro)
 
   </TabItem>
 </Tabs>
@@ -232,7 +233,7 @@ Many va con contables en plural y much con incontables. Intercambiarlos produce 
 - How **many books** do you have? (¿Cuántos libros tienes?) ✅
 - I don't have **much** friends ⛔
 - I don't have **many friends** (No tengo muchos amigos) ✅
-</Aside>
+  </Aside>
 
 <Aside type="danger" title="Usar much en afirmativas suena poco natural">
 En oraciones afirmativas, much suena muy formal o anticuado. La forma natural es a lot of.
@@ -241,7 +242,7 @@ En oraciones afirmativas, much suena muy formal o anticuado. La forma natural es
 - I have **a lot of money** (Tengo mucho dinero) ✅
 - We have **much** time ⛔
 - We have **a lot of time** (Tenemos mucho tiempo) ✅
-</Aside>
+  </Aside>
 
 <Aside type="danger" title="Confundir a few con a little">
 A few es para contables en plural y a little para incontables. No son intercambiables.
@@ -250,7 +251,7 @@ A few es para contables en plural y a little para incontables. No son intercambi
 - I have **a few friends** (Tengo unos pocos amigos) ✅
 - She needs **a few** water ⛔
 - She needs **a little water** (Ella necesita un poco de agua) ✅
-</Aside>
+  </Aside>
 
 <Aside type="danger" title="Poner enough después del sustantivo">
 Con sustantivos, enough siempre va antes. Solo va después cuando modifica adjetivos o verbos.
@@ -259,7 +260,7 @@ Con sustantivos, enough siempre va antes. Solo va después cuando modifica adjet
 - We don't have **enough money** (No tenemos suficiente dinero) ✅
 - There isn't time **enough** ⛔
 - There isn't **enough time** (No hay suficiente tiempo) ✅
-</Aside>
+  </Aside>
 
 <Aside type="danger" title="Omitir too cuando quieres expresar exceso">
 Many y much solos indican cantidad. Para expresar exceso necesitas añadir too delante.
@@ -268,16 +269,16 @@ Many y much solos indican cantidad. Para expresar exceso necesitas añadir too d
 - I have **too many problems** (Tengo demasiados problemas) ✅
 - There is **much** noise ⛔ (queriendo decir demasiado)
 - There is **too much noise** (Hay demasiado ruido) ✅
-</Aside>
+  </Aside>
 
 ---
 
 ## Práctica
 
 <Aside type="tip" title="Ejercicio diario">
-- Haz una lista de compras usando los cuantificadores correctos (a lot of, a few, a little, enough, too many/much)
-- Describe tu rutina mencionando cantidades: "I drink a lot of coffee", "I have a few hours free", "I don't have much time"
-- Pregunta cantidades a alguien: "How many books do you read?", "How much water do you drink?"
-- Escribe una receta simple usando cuantificadores: "Add a little salt", "Use many tomatoes", "Don't add too much oil"
-- Identifica errores en textos donde veas much/many, a few/a little, too/enough y corrige mentalmente
+  - Haz una lista de compras usando los cuantificadores correctos (a lot of, a few, a little, enough, too many/much) -
+  Describe tu rutina mencionando cantidades: "I drink a lot of coffee", "I have a few hours free", "I don't have much
+  time" - Pregunta cantidades a alguien: "How many books do you read?", "How much water do you drink?" - Escribe una
+  receta simple usando cuantificadores: "Add a little salt", "Use many tomatoes", "Don't add too much oil" - Identifica
+  errores en textos donde veas much/many, a few/a little, too/enough y corrige mentalmente
 </Aside>

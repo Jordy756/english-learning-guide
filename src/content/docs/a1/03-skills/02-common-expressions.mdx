@@ -18,14 +18,15 @@ Estas son expresiones que necesitarás usar constantemente en conversaciones bá
 
 ```javascript
 const confirmationExpressions = {
-  affirmative: ["Of course", "Sure", "Got it"],
+  affirmative: ['Of course', 'Sure', 'Got it'],
   // [por supuesto, claro, entendido]
-  understanding: ["I see", "I understand", "That makes sense"]
+  understanding: ['I see', 'I understand', 'That makes sense'],
   // [ya veo, entiendo, tiene sentido]
 };
 ```
 
 **Ejemplos:**
+
 - "**Of course** I can help you" (¡Por supuesto que puedo ayudarte!)
 - "**I see** what you mean" (Ya veo lo que quieres decir)
 - "**Got it**, I understand" (Entendido, comprendo)
@@ -38,14 +39,15 @@ const confirmationExpressions = {
 
 ```javascript
 const softNegatives = {
-  polite: ["Not really", "Not quite", "I don't think so"],
+  polite: ['Not really', 'Not quite', "I don't think so"],
   // [la verdad no, no del todo, no creo]
-  uncertain: ["I don't know", "I'm not sure", "Maybe"]
+  uncertain: ["I don't know", "I'm not sure", 'Maybe'],
   // [no sé, no estoy seguro/a, quizás]
 };
 ```
 
 **Ejemplos:**
+
 - "**Not really**, I prefer tea" (La verdad no, prefiero té)
 - "**Not quite**, it's almost correct" (No del todo, está casi correcto)
 - "**I don't know** the answer" (No sé la respuesta)
@@ -58,14 +60,15 @@ const softNegatives = {
 
 ```javascript
 const minimizingExpressions = {
-  noProblem: ["No problem", "Never mind", "Don't worry"],
+  noProblem: ['No problem', 'Never mind', "Don't worry"],
   // [no hay problema, no importa, no te preocupes]
-  casual: ["It's okay", "No big deal", "Forget it"]
+  casual: ["It's okay", 'No big deal', 'Forget it'],
   // [está bien, no es gran cosa, olvídalo]
 };
 ```
 
 **Ejemplos:**
+
 - "**No problem**, I can wait" (No hay problema, puedo esperar)
 - "**Never mind**, it's not important" (No importa, no es importante)
 - "**Don't worry** about it" (No te preocupes por eso)
@@ -83,16 +86,17 @@ Las fórmulas de cortesía son expresiones básicas que **debes usar diariamente
 
 ```javascript
 const politeExpressions = {
-  request: ["Please", "Could you"],
+  request: ['Please', 'Could you'],
   // [por favor, ¿podrías?]
-  gratitude: ["Thank you", "You're welcome"],
+  gratitude: ['Thank you', "You're welcome"],
   // [gracias, de nada]
-  apology: ["Sorry", "I'm sorry", "Excuse me"]
+  apology: ['Sorry', "I'm sorry", 'Excuse me'],
   // [perdón, lo siento, disculpe]
 };
 ```
 
 **Ejemplos:**
+
 - "**Please** help me" (Por favor ayúdame)
 - "**Thank you** for your help" (Gracias por tu ayuda)
 - "**You're welcome**, anytime" (De nada, cuando quieras)
@@ -100,7 +104,7 @@ const politeExpressions = {
 - "**Excuse me**, where is the exit?" (Disculpe, ¿dónde está la salida?)
 
 <Aside type="note" title="Sorry vs Excuse me">
-**Sorry** es para disculparse mientras que **Excuse me** es para llamar atención o pedir permiso
+  **Sorry** es para disculparse mientras que **Excuse me** es para llamar atención o pedir permiso
 </Aside>
 
 ---
@@ -114,14 +118,15 @@ Estas expresiones te permiten mostrar que estás de acuerdo o en desacuerdo con 
 
 ```javascript
 const agreementExpressions = {
-  withAffirmative: ["Me too", "That's right", "I agree"],
+  withAffirmative: ['Me too', "That's right", 'I agree'],
   // [yo también, es cierto, estoy de acuerdo]
-  withNegative: ["Me neither", "Neither do I"]
+  withNegative: ['Me neither', 'Neither do I'],
   // [yo tampoco (informal), yo tampoco (formal)]
 };
 ```
 
 **Ejemplos:**
+
 - "I love music" → "**Me too**" (A mí también)
 - "I don't like coffee" → "**Me neither**" (A mí tampoco)
 - "**That's right**, the answer is correct" (Es correcto, la respuesta es correcta)
@@ -129,7 +134,7 @@ const agreementExpressions = {
 - "**I think so**, but I'm not certain" (Creo que sí, pero no estoy seguro)
 
 <Aside type="caution" title="Me too con afirmativas, Me neither con negativas">
-Usa **Me too** solo con afirmativas y **Me neither** solo con negativas, no al revés.
+  Usa **Me too** solo con afirmativas y **Me neither** solo con negativas, no al revés.
 </Aside>
 
 </TabItem>
@@ -138,14 +143,15 @@ Usa **Me too** solo con afirmativas y **Me neither** solo con negativas, no al r
 
 ```javascript
 const disagreementExpressions = {
-  polite: ["I don't think so", "Not really"],
+  polite: ["I don't think so", 'Not really'],
   // [no lo creo, no exactamente]
-  direct: ["I disagree", "That's not right", "I don't agree"]
+  direct: ['I disagree', "That's not right", "I don't agree"],
   // [no estoy de acuerdo, eso no es correcto]
 };
 ```
 
 **Ejemplos:**
+
 - "**I don't think so**, it's unlikely" (No lo creo, es poco probable)
 - "**I'm not sure about that** idea" (No estoy seguro de esa idea)
 - "**Not really**, I prefer the other one" (No exactamente, prefiero el otro)
@@ -164,37 +170,38 @@ Con frases que contienen "not" o "don't", la respuesta de acuerdo es **me neithe
 
 - I don't like coffee → **Me too** ⛔
 - I don't like coffee → **Me neither** (A mí tampoco) ✅
-</Aside>
+  </Aside>
 
 <Aside type="danger" title="Construir 'I don't know' palabra por palabra">
 En inglés esta expresión se forma con el auxiliar "don't", no colocando "not" directamente después del sujeto.
 
 - I **not know** ⛔
 - **I don't know** (No sé) ✅
-</Aside>
+  </Aside>
 
 <Aside type="danger" title="Traducir 'no pasa nada' literalmente">
 No existe una traducción literal al inglés para esta expresión. Debes usar una expresión fija equivalente.
 
 - **No passes nothing** ⛔
 - **No problem** (No hay problema) ✅
-</Aside>
+  </Aside>
 
 <Aside type="danger" title="Usar 'Sorry' cuando corresponde 'Excuse me'">
 **Sorry** es para disculparse por algo que ya hiciste. **Excuse me** es para pedir atención o permiso antes de actuar.
 
 - **Sorry**, where is the bathroom? ⛔
 - **Excuse me**, where is the bathroom? (Disculpe, ¿dónde está el baño?) ✅
-</Aside>
+  </Aside>
 
 ---
 
 ## Práctica
 
 <Aside type="tip" title="Ejercicio diario">
-- Grábate diciendo cada expresión en voz alta al menos 5 veces durante una semana, escucha tus grabaciones para verificar pronunciación
-- Antes de dormir, imagina 3 situaciones donde usarías estas expresiones y repite en voz alta la expresión correcta
-- Crea tarjetas en tu teléfono con la situación en un lado y la expresión en el otro, repasa 10 tarjetas cada mañana
-- Practica frente a un espejo respondiendo a preguntas imaginarias usando estas expresiones para automatizar las respuestas
-- Cuando pienses en español "no sé", oblígate mentalmente a decir "I don't know" inmediatamente, haz esto con todas las expresiones hasta que sean automáticas
+  - Grábate diciendo cada expresión en voz alta al menos 5 veces durante una semana, escucha tus grabaciones para
+  verificar pronunciación - Antes de dormir, imagina 3 situaciones donde usarías estas expresiones y repite en voz alta
+  la expresión correcta - Crea tarjetas en tu teléfono con la situación en un lado y la expresión en el otro, repasa 10
+  tarjetas cada mañana - Practica frente a un espejo respondiendo a preguntas imaginarias usando estas expresiones para
+  automatizar las respuestas - Cuando pienses en español "no sé", oblígate mentalmente a decir "I don't know"
+  inmediatamente, haz esto con todas las expresiones hasta que sean automáticas
 </Aside>

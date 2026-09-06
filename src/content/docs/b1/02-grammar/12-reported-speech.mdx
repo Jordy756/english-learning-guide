@@ -19,27 +19,19 @@ La diferencia fundamental entre citar directamente y reportar:
 const comparison = {
   direct: 'She said, "I am tired"',
   // Palabras exactas entre comillas
-  reported: "She said (that) she was tired",
+  reported: 'She said (that) she was tired',
   // Transformado: pronombre + tiempo verbal
 };
 ```
 
 <CardGrid>
-  <Card title="Estilo Directo">
-    Palabras exactas con comillas
-    
-    *"I love pizza," he said*
-  </Card>
-  
-  <Card title="Estilo Indirecto">
-    Palabras transformadas sin comillas
-    
-    *He said (that) he loved pizza*
-  </Card>
+  <Card title="Estilo Directo">Palabras exactas con comillas *"I love pizza," he said*</Card>
+
+  <Card title="Estilo Indirecto">Palabras transformadas sin comillas *He said (that) he loved pizza*</Card>
 </CardGrid>
 
 <Aside type="tip" title="That es opcional">
-La palabra **that** es opcional en reported speech: "He said he was tired" = "He said **that** he was tired"
+  La palabra **that** es opcional en reported speech: "He said he was tired" = "He said **that** he was tired"
 </Aside>
 
 ---
@@ -50,13 +42,13 @@ Cuando el verbo de reporte está en pasado (said, told), los tiempos verbales "r
 
 ```javascript
 const tenseBackshift = {
-  present_simple: "past_simple",
-  present_continuous: "past_continuous",
-  present_perfect: "past_perfect",
-  past_simple: "past_perfect",
-  will: "would",
-  can: "could",
-  may: "might"
+  present_simple: 'past_simple',
+  present_continuous: 'past_continuous',
+  present_perfect: 'past_perfect',
+  past_simple: 'past_perfect',
+  will: 'would',
+  can: 'could',
+  may: 'might',
 };
 ```
 
@@ -115,7 +107,7 @@ const tenseBackshift = {
 </Tabs>
 
 <Aside type="caution" title="Modales que no cambian">
-**Would, could, should, might** ya están "retrocedidos" — no cambian en reported speech.
+  **Would, could, should, might** ya están "retrocedidos" — no cambian en reported speech.
 </Aside>
 
 ---
@@ -126,12 +118,12 @@ Los pronombres cambian según quién reporta:
 
 ```javascript
 const pronounChanges = {
-  I: "he/she",
-  me: "him/her",
-  my: "his/her",
-  we: "they",
-  us: "them",
-  our: "their"
+  I: 'he/she',
+  me: 'him/her',
+  my: 'his/her',
+  we: 'they',
+  us: 'them',
+  our: 'their',
 };
 // Depende de quién habló originalmente
 ```
@@ -170,6 +162,7 @@ const pronounChanges = {
 </Tabs>
 
 **Ejemplos:**
+
 - "I need help" (Mary) → Mary said she needed help (Mary dijo que necesitaba ayuda)
 - "We're coming" (friends) → They said they were coming (Dijeron que venían)
 
@@ -181,13 +174,13 @@ Las referencias de tiempo y lugar también cambian:
 
 ```javascript
 const timeChanges = {
-  today: "that day",
-  yesterday: "the day before",
-  tomorrow: "the next day",
-  now: "then",
-  here: "there",
-  this: "that",
-  these: "those"
+  today: 'that day',
+  yesterday: 'the day before',
+  tomorrow: 'the next day',
+  now: 'then',
+  here: 'there',
+  this: 'that',
+  these: 'those',
 };
 ```
 
@@ -266,7 +259,8 @@ Las preguntas en reported speech cambian su estructura:
 </Tabs>
 
 <Aside type="caution" title="Orden en reported questions">
-En reported questions, el orden es de **oración** (sujeto + verbo), **no** de pregunta. Y **no** llevan signo de interrogación.
+  En reported questions, el orden es de **oración** (sujeto + verbo), **no** de pregunta. Y **no** llevan signo de
+  interrogación.
 </Aside>
 
 ---
@@ -277,9 +271,9 @@ Usa **told/asked + object + to + infinitive**:
 
 ```javascript
 const orders = {
-  tell: "para órdenes",
-  ask: "para peticiones",
-  structure: "told/asked + person + (not) to + verb"
+  tell: 'para órdenes',
+  ask: 'para peticiones',
+  structure: 'told/asked + person + (not) to + verb',
 };
 ```
 
@@ -326,52 +320,34 @@ La diferencia importante entre estos verbos de reporte:
 ```javascript
 const sayVsTell = {
   say: {
-    structure: "say (that) + clause",
+    structure: 'say (that) + clause',
     noObject: true,
-    example: "She said (that) she was tired"
+    example: 'She said (that) she was tired',
   },
   tell: {
-    structure: "tell + person + (that) + clause",
+    structure: 'tell + person + (that) + clause',
     needsObject: true,
-    example: "She told me (that) she was tired"
-  }
+    example: 'She told me (that) she was tired',
+  },
 };
 ```
 
 <Tabs>
   <TabItem label="Say">
-    ```javascript
-    const sayExamples = [
-      "He said he was busy",      // correcto
-      "He said that he was busy", // correcto
-      // "He said me..." ← INCORRECTO
-    ];
-    // Say NO lleva objeto directo (persona)
-    ```
-    
-    **Ejemplos:**
-    - She said she would come (Dijo que vendría)
-    - They said it was expensive (Dijeron que era caro)
+    ```javascript const sayExamples = [ "He said he was busy", // correcto "He said that he was busy", // correcto //
+    "He said me..." ← INCORRECTO ]; // Say NO lleva objeto directo (persona) ``` **Ejemplos:** - She said she would come
+    (Dijo que vendría) - They said it was expensive (Dijeron que era caro)
   </TabItem>
-  
+
   <TabItem label="Tell">
-    ```javascript
-    const tellExamples = [
-      "He told me he was busy",    // correcto
-      "He told us the truth",      // correcto
-      // "He told that..." ← INCORRECTO
-    ];
-    // Tell SIEMPRE necesita objeto (a quién le dijeron)
-    ```
-    
-    **Ejemplos:**
-    - She told me she would come (Me dijo que vendría)
-    - They told us it was expensive (Nos dijeron que era caro)
+    ```javascript const tellExamples = [ "He told me he was busy", // correcto "He told us the truth", // correcto //
+    "He told that..." ← INCORRECTO ]; // Tell SIEMPRE necesita objeto (a quién le dijeron) ``` **Ejemplos:** - She told
+    me she would come (Me dijo que vendría) - They told us it was expensive (Nos dijeron que era caro)
   </TabItem>
 </Tabs>
 
 <Aside type="tip" title="Regla simple para say vs tell">
-Recuerda: **Say** algo, **Tell** a alguien algo. "She said to me" también es correcto pero menos común.
+  Recuerda: **Say** algo, **Tell** a alguien algo. "She said to me" también es correcto pero menos común.
 </Aside>
 
 ---
@@ -388,7 +364,7 @@ const noBackshift = {
     // Verdad universal
     '"The earth is round"',
     'He said the earth is/was round',
-    
+
     // Dicho hace poco
     '"I'm hungry" (hace 5 min)',
     'She said she is hungry'  // aún válido
@@ -397,6 +373,7 @@ const noBackshift = {
 ```
 
 **Ejemplos donde puedes mantener el tiempo:**
+
 - "Paris is beautiful" → She said Paris is beautiful (Es verdad universal)
 - "I have a headache" (dicho hace 1 minuto) → He said he has a headache (Aún tiene)
 
@@ -409,6 +386,7 @@ const noBackshift = {
 - ✅ She asked where I was going (Preguntó adónde iba)
 
 En reported questions el orden es sujeto + verbo, no el orden de pregunta.
+
 </Aside>
 
 <Aside type="danger" title="Confundir say y tell">
@@ -416,6 +394,7 @@ En reported questions el orden es sujeto + verbo, no el orden de pregunta.
 - ✅ He told me that he was tired (Me dijo que estaba cansado)
 
 **Say** no lleva objeto directo. **Tell** siempre necesita a quién se le dijo.
+
 </Aside>
 
 <Aside type="danger" title="Olvidar cambiar los pronombres">
@@ -423,6 +402,7 @@ En reported questions el orden es sujeto + verbo, no el orden de pregunta.
 - ✅ She said she was tired (Dijo que estaba cansada)
 
 Los pronombres deben cambiar según quién reporta y sobre quién se habla.
+
 </Aside>
 
 <Aside type="danger" title="Usar say para reportar órdenes">
@@ -430,6 +410,7 @@ Los pronombres deben cambiar según quién reporta y sobre quién se habla.
 - ✅ He told me to go (Me dijo que fuera)
 
 Para órdenes usa **tell + person + to + infinitive**, nunca **say**.
+
 </Aside>
 
 ---
@@ -437,9 +418,8 @@ Para órdenes usa **tell + person + to + infinitive**, nunca **say**.
 ## Práctica
 
 <Aside type="tip" title="Ejercicio diario">
-- Escucha conversaciones o podcasts y practica reportar lo que escuchaste en estilo indirecto
-- Escribe un diario donde reportes conversaciones del día usando reported speech
-- Practica transformando preguntas directas a reported questions (recuerda el orden sujeto + verbo)
-- Crea tarjetas con verbos de reporte (say, tell, ask, order) y practica sus estructuras
-- Lee noticias y observa cómo los periodistas usan el estilo indirecto para citar fuentes
+  - Escucha conversaciones o podcasts y practica reportar lo que escuchaste en estilo indirecto - Escribe un diario
+  donde reportes conversaciones del día usando reported speech - Practica transformando preguntas directas a reported
+  questions (recuerda el orden sujeto + verbo) - Crea tarjetas con verbos de reporte (say, tell, ask, order) y practica
+  sus estructuras - Lee noticias y observa cómo los periodistas usan el estilo indirecto para citar fuentes
 </Aside>

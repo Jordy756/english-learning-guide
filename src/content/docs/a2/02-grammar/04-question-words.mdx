@@ -1,6 +1,6 @@
 ---
 title: Palabras Interrogativas
-description: "Domina las question words: what, where, when, why, how"
+description: 'Domina las question words: what, where, when, why, how'
 ---
 
 import { Tabs, TabItem, Aside } from '@astrojs/starlight/components';
@@ -36,6 +36,7 @@ Las **question words** (palabras interrogativas) son palabras que van al inicio 
     <Aside type="tip" title="What vs Which">
     Usa **What** para opciones abiertas o infinitas. Usa **Which** cuando hay opciones limitadas para elegir.
     </Aside>
+
   </TabItem>
 
   <TabItem label="Where">
@@ -58,6 +59,7 @@ Las **question words** (palabras interrogativas) son palabras que van al inicio 
     - **Where** is the bank? (¿Dónde está el banco?)
     - **Where** are you from? (¿De dónde eres?)
     - **Where** did you go? (¿A dónde fuiste?)
+
   </TabItem>
 
   <TabItem label="When">
@@ -80,6 +82,7 @@ Las **question words** (palabras interrogativas) son palabras que van al inicio 
     - **When** do you start work? (¿Cuándo empiezas a trabajar?)
     - **When** did you arrive? (¿Cuándo llegaste?)
     - **When** is the meeting? (¿Cuándo es la reunión?)
+
   </TabItem>
 
   <TabItem label="Who">
@@ -102,6 +105,7 @@ Las **question words** (palabras interrogativas) son palabras que van al inicio 
     - **Who** is your teacher? (¿Quién es tu profesor?)
     - **Who** called you? (¿Quién te llamó?)
     - **Who** do you live with? (¿Con quién vives?)
+
   </TabItem>
 
   <TabItem label="Why">
@@ -128,6 +132,7 @@ Las **question words** (palabras interrogativas) son palabras que van al inicio 
     <Aside type="note" title="Responder con Because">
     Las preguntas con "Why" normalmente se responden con **because** (porque) seguido de la razón.
     </Aside>
+
   </TabItem>
 
   <TabItem label="How">
@@ -150,6 +155,7 @@ Las **question words** (palabras interrogativas) son palabras que van al inicio 
     - **How** do you make coffee? (¿Cómo haces café?)
     - **How** did you learn English? (¿Cómo aprendiste inglés?)
     - **How** was your day? (¿Cómo estuvo tu día?)
+
   </TabItem>
 
   <TabItem label="Which">
@@ -176,6 +182,7 @@ Las **question words** (palabras interrogativas) son palabras que van al inicio 
     <Aside type="tip" title="Which requiere opciones">
     Usa **Which** cuando hay un grupo limitado de opciones para elegir, como "Which color: red or blue?"
     </Aside>
+
   </TabItem>
 
   <TabItem label="Whose">
@@ -198,6 +205,7 @@ Las **question words** (palabras interrogativas) son palabras que van al inicio 
     - **Whose** car is that? (¿De quién es ese carro?)
     - **Whose** book are you reading? (¿El libro de quién estás leyendo?)
     - **Whose** turn is it? (¿De quién es el turno?)
+
   </TabItem>
 </Tabs>
 
@@ -226,6 +234,7 @@ La palabra **how** es muy versátil y se combina con adjetivos y adverbios para 
     - **How much** is this? (¿Cuánto cuesta esto?)
     - **How much** water do you need? (¿Cuánta agua necesitas?)
     - **How much** time do we have? (¿Cuánto tiempo tenemos?)
+
   </TabItem>
 
   <TabItem label="How many">
@@ -246,6 +255,7 @@ La palabra **how** es muy versátil y se combina con adjetivos y adverbios para 
     - **How many** students are there? (¿Cuántos estudiantes hay?)
     - **How many** books do you have? (¿Cuántos libros tienes?)
     - **How many** days did you stay? (¿Cuántos días te quedaste?)
+
   </TabItem>
 
   <TabItem label="How old">
@@ -266,6 +276,7 @@ La palabra **how** es muy versátil y se combina con adjetivos y adverbios para 
     - **How old** are you? (¿Cuántos años tienes?)
     - **How old** is your brother? (¿Qué edad tiene tu hermano?)
     - **How old** is this building? (¿Qué edad tiene este edificio?)
+
   </TabItem>
 
   <TabItem label="How tall">
@@ -286,6 +297,7 @@ La palabra **how** es muy versátil y se combina con adjetivos y adverbios para 
     - **How tall** are you? (¿Cuánto mides?)
     - **How tall** is that building? (¿Qué tan alto es ese edificio?)
     - **How tall** is he? (¿Cuánto mide él?)
+
   </TabItem>
 
   <TabItem label="How often">
@@ -306,6 +318,7 @@ La palabra **how** es muy versátil y se combina con adjetivos y adverbios para 
     - **How often** do you exercise? (¿Con qué frecuencia haces ejercicio?)
     - **How often** does she call? (¿Cada cuánto llama?)
     - **How often** do you travel? (¿Qué tan seguido viajas?)
+
   </TabItem>
 
   <TabItem label="How long">
@@ -326,6 +339,7 @@ La palabra **how** es muy versátil y se combina con adjetivos y adverbios para 
     - **How long** is the movie? (¿Cuánto dura la película?)
     - **How long** do you study? (¿Cuánto tiempo estudias?)
     - **How long** did you wait? (¿Cuánto tiempo esperaste?)
+
   </TabItem>
 </Tabs>
 
@@ -335,9 +349,9 @@ La palabra **how** es muy versátil y se combina con adjetivos y adverbios para 
 
 ```javascript
 const patterns = [
-  "QW + do/does/did + subject + verb + ?",
-  "QW + to be       + subject        + ?",
-  "QW (subject)     + verb           + ?"
+  'QW + do/does/did + subject + verb + ?',
+  'QW + to be       + subject        + ?',
+  'QW (subject)     + verb           + ?',
 ];
 // patterns[0] → "Where do you work?"
 // patterns[1] → "Where are you?"
@@ -353,11 +367,12 @@ const patterns = [
 - **Who** called you? (¿Quién te llamó?)
 
 <Aside type="caution" title="Verbo to be no usa auxiliares">
-Con **am/is/are/was/were**, no uses do/does/did. La estructura es: Question Word + to be + Subject.
+  Con **am/is/are/was/were**, no uses do/does/did. La estructura es: Question Word + to be + Subject.
 </Aside>
 
 <Aside type="note" title="Cuándo usar auxiliares">
-En Simple Present usa **do** (I/you/we/they) o **does** (he/she/it) excepto con el verbo to be. En Simple Past usa **did** para todos los sujetos, excepto con el verbo to be (was/were).
+  En Simple Present usa **do** (I/you/we/they) o **does** (he/she/it) excepto con el verbo to be. En Simple Past usa
+  **did** para todos los sujetos, excepto con el verbo to be (was/were).
 </Aside>
 
 ---
@@ -369,7 +384,7 @@ La question word siempre va al inicio de la pregunta en inglés formal y escrito
 
 - You live **where**? ⛔
 - **Where** do you live? (¿Dónde vives?) ✅
-</Aside>
+  </Aside>
 
 <Aside type="danger" title="Usar auxiliar con verbo to be">
 El verbo to be no necesita auxiliares. Usar do/does/did junto con am/is/are es un error.
@@ -378,14 +393,14 @@ El verbo to be no necesita auxiliares. Usar do/does/did junto con am/is/are es u
 - Where **are** you? (¿Dónde estás?) ✅
 - When does **is** the party? ⛔
 - When **is** the party? (¿Cuándo es la fiesta?) ✅
-</Aside>
+  </Aside>
 
 <Aside type="danger" title="Confundir Whose con Who's">
 Whose indica posesión. Who's es la contracción de "who is" y no puede preceder a un sustantivo.
 
 - **Who's** book is this? ⛔
 - **Whose** book is this? (¿De quién es este libro?) ✅
-</Aside>
+  </Aside>
 
 <Aside type="danger" title="Confundir How much y How many">
 Much acompaña sustantivos no contables. Many acompaña sustantivos contables.
@@ -394,7 +409,7 @@ Much acompaña sustantivos no contables. Many acompaña sustantivos contables.
 - How **much** water? (¿Cuánta agua?) ✅
 - How **much** apples? ⛔
 - How **many** apples? (¿Cuántas manzanas?) ✅
-</Aside>
+  </Aside>
 
 <Aside type="danger" title="Olvidar el auxiliar en preguntas">
 Las preguntas con do/does/did necesitan el auxiliar. Olvidarlo es uno de los errores más frecuentes.
@@ -403,16 +418,15 @@ Las preguntas con do/does/did necesitan el auxiliar. Olvidarlo es uno de los err
 - Where **do** you work? (¿Dónde trabajas?) ✅
 - What she wants? ⛔
 - What **does** she want? (¿Qué quiere ella?) ✅
-</Aside>
+  </Aside>
 
 ---
 
 ## Práctica
 
 <Aside type="tip" title="Ejercicio diario">
-- Escribe 5 preguntas sobre tu rutina diaria usando diferentes question words
-- Practica mini-diálogos: pregunta y responde sobre planes del fin de semana
-- Transforma afirmaciones en preguntas: "She lives in Paris" → "Where does she live?"
-- Crea preguntas con How much/many sobre objetos en tu casa
-- Practica preguntas en pasado sobre lo que hiciste ayer
+  - Escribe 5 preguntas sobre tu rutina diaria usando diferentes question words - Practica mini-diálogos: pregunta y
+  responde sobre planes del fin de semana - Transforma afirmaciones en preguntas: "She lives in Paris" → "Where does she
+  live?" - Crea preguntas con How much/many sobre objetos en tu casa - Practica preguntas en pasado sobre lo que hiciste
+  ayer
 </Aside>

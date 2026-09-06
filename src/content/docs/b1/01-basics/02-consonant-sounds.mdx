@@ -25,6 +25,7 @@ const thVoiceless = {
 ```
 
 La lengua se coloca **entre los dientes** y el aire pasa sin vibración.
+
   </TabItem>
   
   <TabItem label="TH Sonora /ð/">
@@ -38,6 +39,7 @@ const thVoiced = {
 ```
 
 Igual posición que /θ/, pero las **cuerdas vocales vibran**.
+
   </TabItem>
   
   <TabItem label="V /v/">
@@ -51,6 +53,7 @@ const soundV = {
 ```
 
 **No es igual a /b/**. Los dientes tocan el labio inferior.
+
   </TabItem>
 </Tabs>
 
@@ -81,18 +84,18 @@ La **r inglesa** /r/ es completamente diferente a la española. La lengua **nunc
 ```javascript
 const englishR = {
   spanish: {
-    position: "lengua toca el paladar",
-    type: "vibrante (trill/tap)"
+    position: 'lengua toca el paladar',
+    type: 'vibrante (trill/tap)',
   },
   english: {
-    position: "lengua curvada hacia atrás",
-    type: "aproximante (no toca nada)"
-  }
+    position: 'lengua curvada hacia atrás',
+    type: 'aproximante (no toca nada)',
+  },
 };
 ```
 
 <Aside type="tip" title="Cómo producir la R inglesa">
-Curva la lengua ligeramente hacia atrás sin tocar nada. Es como prepararte para decir "r" pero sin llegar a vibrar.
+  Curva la lengua ligeramente hacia atrás sin tocar nada. Es como prepararte para decir "r" pero sin llegar a vibrar.
 </Aside>
 
 **Ejemplos en contexto:**
@@ -119,6 +122,7 @@ const soundS = {
 ```
 
 Sin vibración de cuerdas vocales. Como la "s" española.
+
   </TabItem>
   
   <TabItem label="Z Sonora /z/">
@@ -131,6 +135,7 @@ const soundZ = {
 ```
 
 Las cuerdas vocales **vibran**. Pon la mano en tu garganta para sentirlo.
+
   </TabItem>
 </Tabs>
 
@@ -147,7 +152,8 @@ Las cuerdas vocales **vibran**. Pon la mano en tu garganta para sentirlo.
 - He **is** my friend (Él es mi amigo) - /ɪz/
 
 <Aside type="note" title="Regla del plural">
-Después de sonidos sonoros, la "s" del plural se pronuncia /z/: dogs /dɒɡz/, boys /bɔɪz/. Después de sonidos sordos, se pronuncia /s/: cats /kæts/, books /bʊks/.
+  Después de sonidos sonoros, la "s" del plural se pronuncia /z/: dogs /dɒɡz/, boys /bɔɪz/. Después de sonidos sordos,
+  se pronuncia /s/: cats /kæts/, books /bʊks/.
 </Aside>
 
 ---
@@ -158,13 +164,13 @@ En español, la "h" es muda. En inglés, la **h siempre se pronuncia** (excepto 
 
 ```javascript
 const aspiratedH = {
-  spanish: "h muda (hora = /ora/)",
-  english: "h aspirada (hour = /aʊə/ - excepción)",
-  production: "exhalar suavemente",
+  spanish: 'h muda (hora = /ora/)',
+  english: 'h aspirada (hour = /aʊə/ - excepción)',
+  production: 'exhalar suavemente',
   examples: {
-    pronounced: ["hello", "house", "happy", "help"],
-    silent: ["hour", "honest", "heir", "honor"]
-  }
+    pronounced: ['hello', 'house', 'happy', 'help'],
+    silent: ['hour', 'honest', 'heir', 'honor'],
+  },
 };
 ```
 
@@ -188,18 +194,18 @@ En español, las palabras rara vez terminan en consonantes fuertes. En inglés, 
 
 ```javascript
 const finalConsonants = {
-  common: ["p", "t", "k", "b", "d", "g", "m", "n"],
-  importance: "distinguen significado",
+  common: ['p', 't', 'k', 'b', 'd', 'g', 'm', 'n'],
+  importance: 'distinguen significado',
   examples: {
-    "cup vs cu": "la p final es esencial",
-    "sit vs si": "la t final cambia todo",
-    "dog vs do": "la g final importa"
-  }
+    'cup vs cu': 'la p final es esencial',
+    'sit vs si': 'la t final cambia todo',
+    'dog vs do': 'la g final importa',
+  },
 };
 ```
 
 <Aside type="caution" title="No añadas vocales al final">
-No digas "stoppe" por "stop" o "booke" por "book". Las consonantes finales se pronuncian secas, sin vocal adicional.
+  No digas "stoppe" por "stop" o "booke" por "book". Las consonantes finales se pronuncian secas, sin vocal adicional.
 </Aside>
 
 **Practica estas terminaciones:**
@@ -218,15 +224,15 @@ El inglés permite combinaciones de consonantes que no existen en español.
 ```javascript
 const consonantClusters = {
   initial: {
-    str: ["street", "strong", "strange"],
-    spr: ["spring", "spray", "spread"],
-    scr: ["screen", "scream", "scratch"]
+    str: ['street', 'strong', 'strange'],
+    spr: ['spring', 'spray', 'spread'],
+    scr: ['screen', 'scream', 'scratch'],
   },
   final: {
-    nts: ["students", "events", "parents"],
-    sts: ["tests", "lists", "costs"],
-    sks: ["asks", "tasks", "desks"]
-  }
+    nts: ['students', 'events', 'parents'],
+    sts: ['tests', 'lists', 'costs'],
+    sks: ['asks', 'tasks', 'desks'],
+  },
 };
 ```
 
@@ -250,10 +256,10 @@ Practica estos pares para distinguir sonidos similares:
 
 ```javascript
 const consonantPairs = {
-  "b_v": ["bet/vet", "berry/very", "base/vase"],
-  "s_z": ["sip/zip", "bus/buzz", "price/prize"],
-  "th_t": ["three/tree", "thin/tin", "thought/taught"],
-  "th_d": ["they/day", "those/doze", "breathe/breed"]
+  b_v: ['bet/vet', 'berry/very', 'base/vase'],
+  s_z: ['sip/zip', 'bus/buzz', 'price/prize'],
+  th_t: ['three/tree', 'thin/tin', 'thought/taught'],
+  th_d: ['they/day', 'those/doze', 'breathe/breed'],
 };
 ```
 
@@ -272,6 +278,7 @@ const consonantPairs = {
 - ✅ "I **have** a **very** good idea" (dientes sobre labio inferior)
 
 La /v/ requiere que los dientes superiores toquen el labio inferior.
+
 </Aside>
 
 <Aside type="danger" title="Usar la R vibrante española">
@@ -279,6 +286,7 @@ La /v/ requiere que los dientes superiores toquen el labio inferior.
 - ✅ **Red** /red/ (lengua curvada, sin tocar el paladar)
 
 La R inglesa es suave y aproximante, nunca vibrante.
+
 </Aside>
 
 <Aside type="danger" title="Omitir la H aspirada">
@@ -286,6 +294,7 @@ La R inglesa es suave y aproximante, nunca vibrante.
 - ✅ "I'm **happy**" /ˈhæpi/ (con exhalación suave)
 
 La H en inglés siempre se pronuncia (excepto en palabras específicas como "hour").
+
 </Aside>
 
 <Aside type="danger" title="Añadir vocales a consonantes finales">
@@ -293,6 +302,7 @@ La H en inglés siempre se pronuncia (excepto en palabras específicas como "hou
 - ✅ **stop** /stɒp/, **book** /bʊk/, **work** /wɜːk/
 
 Las consonantes finales se pronuncian secas, sin añadir vocales.
+
 </Aside>
 
 ---
@@ -300,9 +310,8 @@ Las consonantes finales se pronuncian secas, sin añadir vocales.
 ## Práctica
 
 <Aside type="tip" title="Ejercicio diario">
-- Practica los sonidos TH frente a un espejo, verificando que tu lengua esté entre los dientes
-- Grábate diciendo pares mínimos (very/berry, think/sink) y compara con hablantes nativos
-- Lee trabalenguas en inglés enfocándote en consonantes específicas
-- Practica clusters consonánticos comenzando lento y aumentando velocidad gradualmente
-- Usa la técnica del lápiz: sostén un lápiz horizontalmente entre los dientes y practica la R inglesa sin tocarlo
+  - Practica los sonidos TH frente a un espejo, verificando que tu lengua esté entre los dientes - Grábate diciendo
+  pares mínimos (very/berry, think/sink) y compara con hablantes nativos - Lee trabalenguas en inglés enfocándote en
+  consonantes específicas - Practica clusters consonánticos comenzando lento y aumentando velocidad gradualmente - Usa
+  la técnica del lápiz: sostén un lápiz horizontalmente entre los dientes y practica la R inglesa sin tocarlo
 </Aside>

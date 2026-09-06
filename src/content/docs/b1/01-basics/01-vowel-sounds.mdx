@@ -24,7 +24,8 @@ const letraA = {
 ```
 
 <Aside type="note" title="No memorices reglas de ortografía">
-En lugar de memorizar cuándo la "a" suena de cada forma, enfócate en aprender palabras completas con su pronunciación correcta.
+  En lugar de memorizar cuándo la "a" suena de cada forma, enfócate en aprender palabras completas con su pronunciación
+  correcta.
 </Aside>
 
 ---
@@ -47,6 +48,7 @@ const shortVowels = {
 ```
 
 Las vocales cortas son **tensas y breves**. No las alargues como en español.
+
   </TabItem>
   
   <TabItem label="Vocales Largas">
@@ -61,6 +63,7 @@ const longVowels = {
 ```
 
 Los dos puntos `ː` indican que el sonido se **sostiene** más tiempo.
+
   </TabItem>
 </Tabs>
 
@@ -85,14 +88,14 @@ Los **pares mínimos** son palabras que difieren solo en un sonido. Dominarlos e
 ```javascript
 const minimalPairs = {
   shortI_longI: {
-    "/ɪ/ → /iː/": ["ship/sheep", "bit/beat", "sit/seat"]
+    '/ɪ/ → /iː/': ['ship/sheep', 'bit/beat', 'sit/seat'],
   },
   shortU_longU: {
-    "/ʊ/ → /uː/": ["pull/pool", "full/fool", "look/Luke"]
+    '/ʊ/ → /uː/': ['pull/pool', 'full/fool', 'look/Luke'],
   },
   shortA_shortE: {
-    "/æ/ → /e/": ["bad/bed", "man/men", "pan/pen"]
-  }
+    '/æ/ → /e/': ['bad/bed', 'man/men', 'pan/pen'],
+  },
 };
 ```
 
@@ -104,7 +107,8 @@ const minimalPairs = {
 - One **man** came / Three **men** came (Vino un hombre / Vinieron tres hombres)
 
 <Aside type="caution" title="Errores con consecuencias">
-Confundir /ɪ/ con /iː/ puede crear situaciones incómodas: "I need to sit" (necesito sentarme) vs "I need a seat" (necesito un asiento) son muy diferentes en contexto.
+  Confundir /ɪ/ con /iː/ puede crear situaciones incómodas: "I need to sit" (necesito sentarme) vs "I need a seat"
+  (necesito un asiento) son muy diferentes en contexto.
 </Aside>
 
 ---
@@ -115,15 +119,15 @@ El sonido **schwa** `/ə/` es la vocal más común en inglés. Aparece en sílab
 
 ```javascript
 const schwaExamples = {
-  position: "cualquier vocal no acentuada",
-  sound: "neutral, relajado, breve",
+  position: 'cualquier vocal no acentuada',
+  sound: 'neutral, relajado, breve',
   examples: {
-    "a → /ə/": "about /əˈbaʊt/",
-    "e → /ə/": "taken /ˈteɪkən/",
-    "i → /ə/": "pencil /ˈpensəl/",
-    "o → /ə/": "common /ˈkɒmən/",
-    "u → /ə/": "supply /səˈplaɪ/"
-  }
+    'a → /ə/': 'about /əˈbaʊt/',
+    'e → /ə/': 'taken /ˈteɪkən/',
+    'i → /ə/': 'pencil /ˈpensəl/',
+    'o → /ə/': 'common /ˈkɒmən/',
+    'u → /ə/': 'supply /səˈplaɪ/',
+  },
 };
 ```
 
@@ -135,7 +139,8 @@ const schwaExamples = {
 - This is **common** knowledge (Esto es conocimiento común) - /ˈkɒmən/
 
 <Aside type="tip" title="Cómo producir el schwa">
-Relaja completamente la boca y produce un sonido vocal breve y neutro, como cuando dices "uh" al pensar. Es el sonido más relajado posible.
+  Relaja completamente la boca y produce un sonido vocal breve y neutro, como cuando dices "uh" al pensar. Es el sonido
+  más relajado posible.
 </Aside>
 
 ---
@@ -155,6 +160,7 @@ const centralDiphthongs = {
 ```
 
 Estos diptongos **terminan hacia el centro** de la boca.
+
   </TabItem>
   
   <TabItem label="Diptongos Posteriores">
@@ -166,6 +172,7 @@ const backDiphthongs = {
 ```
 
 Estos diptongos se mueven hacia la **parte posterior** de la boca.
+
   </TabItem>
   
   <TabItem label="Diptongos con Schwa">
@@ -178,6 +185,7 @@ const schwaDiphthongs = {
 ```
 
 Estos terminan con el sonido **schwa** relajado.
+
   </TabItem>
 </Tabs>
 
@@ -207,26 +215,26 @@ La relación entre letras y sonidos en inglés no es directa. Aquí tienes patro
 
 ```javascript
 const spellingPatterns = {
-  "/iː/ (sonido largo)": {
-    ee: "see, tree, free",
-    ea: "eat, sea, read",
-    ie: "believe, piece"
+  '/iː/ (sonido largo)': {
+    ee: 'see, tree, free',
+    ea: 'eat, sea, read',
+    ie: 'believe, piece',
   },
-  "/aɪ/ (diptongo)": {
-    i_e: "time, like, bike",
-    igh: "night, light, right",
-    y: "my, fly, why"
+  '/aɪ/ (diptongo)': {
+    i_e: 'time, like, bike',
+    igh: 'night, light, right',
+    y: 'my, fly, why',
   },
-  "/əʊ/ (diptongo)": {
-    o_e: "home, hope, note",
-    oa: "boat, coat, road",
-    ow: "show, know, grow"
-  }
+  '/əʊ/ (diptongo)': {
+    o_e: 'home, hope, note',
+    oa: 'boat, coat, road',
+    ow: 'show, know, grow',
+  },
 };
 ```
 
 <Aside type="note" title="Patrones, no reglas absolutas">
-Estos patrones tienen excepciones. Por ejemplo, "read" puede ser /riːd/ (presente) o /red/ (pasado) según el contexto.
+  Estos patrones tienen excepciones. Por ejemplo, "read" puede ser /riːd/ (presente) o /red/ (pasado) según el contexto.
 </Aside>
 
 ---
@@ -238,6 +246,7 @@ Estos patrones tienen excepciones. Por ejemplo, "read" puede ser /riːd/ (presen
 - ✅ **Ship** /ʃɪp/ (corta y tensa) vs **Sheep** /ʃiːp/ (larga y relajada)
 
 La duración vocálica distingue significados en inglés.
+
 </Aside>
 
 <Aside type="danger" title="Ignorar el schwa en sílabas no acentuadas">
@@ -245,6 +254,7 @@ La duración vocálica distingue significados en inglés.
 - ✅ **About** /əˈbaʊt/ con schwa inicial
 
 Las sílabas no acentuadas casi siempre se reducen a schwa.
+
 </Aside>
 
 <Aside type="danger" title="No deslizar correctamente los diptongos">
@@ -252,6 +262,7 @@ Las sílabas no acentuadas casi siempre se reducen a schwa.
 - ✅ **Home** /həʊm/ deslizando de /ə/ a /ʊ/
 
 Los diptongos son dos sonidos conectados, no uno solo.
+
 </Aside>
 
 <Aside type="danger" title="Confundir /æ/ con /e/">
@@ -259,6 +270,7 @@ Los diptongos son dos sonidos conectados, no uno solo.
 - ✅ **Bad** /bæd/ (boca más abierta) vs **Bed** /bed/ (boca menos abierta)
 
 La /æ/ requiere abrir más la mandíbula que la /e/.
+
 </Aside>
 
 ---
@@ -266,9 +278,8 @@ La /æ/ requiere abrir más la mandíbula que la /e/.
 ## Práctica
 
 <Aside type="tip" title="Ejercicio diario">
-- Practica pares mínimos (ship/sheep, bad/bed, pull/pool) grabándote y comparando con hablantes nativos
-- Identifica el schwa en palabras cotidianas: escucha podcasts y marca las vocales reducidas
-- Lee en voz alta enfocándote en la duración correcta de cada vocal
-- Usa aplicaciones como Forvo o YouGlish para escuchar palabras pronunciadas por nativos
-- Practica diptongos exagerando el movimiento de boca para sentir la transición entre sonidos
+  - Practica pares mínimos (ship/sheep, bad/bed, pull/pool) grabándote y comparando con hablantes nativos - Identifica
+  el schwa en palabras cotidianas: escucha podcasts y marca las vocales reducidas - Lee en voz alta enfocándote en la
+  duración correcta de cada vocal - Usa aplicaciones como Forvo o YouGlish para escuchar palabras pronunciadas por
+  nativos - Practica diptongos exagerando el movimiento de boca para sentir la transición entre sonidos
 </Aside>

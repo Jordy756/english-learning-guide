@@ -15,13 +15,27 @@ Estos son los números base que debes memorizar completamente, ya que forman la 
 
 ```javascript
 const basicNumbers = {
-  0: "zero",      1: "one",       2: "two",
-  3: "three",     4: "four",      5: "five",
-  6: "six",       7: "seven",     8: "eight",
-  9: "nine",      10: "ten",      11: "eleven",
-  12: "twelve",   13: "thirteen", 14: "fourteen",
-  15: "fifteen",  16: "sixteen",  17: "seventeen",
-  18: "eighteen", 19: "nineteen", 20: "twenty"
+  0: 'zero',
+  1: 'one',
+  2: 'two',
+  3: 'three',
+  4: 'four',
+  5: 'five',
+  6: 'six',
+  7: 'seven',
+  8: 'eight',
+  9: 'nine',
+  10: 'ten',
+  11: 'eleven',
+  12: 'twelve',
+  13: 'thirteen',
+  14: 'fourteen',
+  15: 'fifteen',
+  16: 'sixteen',
+  17: 'seventeen',
+  18: 'eighteen',
+  19: 'nineteen',
+  20: 'twenty',
 };
 ```
 
@@ -33,6 +47,7 @@ Del 13 al 19, el patrón general es: **número base + "teen"**
 - Six → Sixteen
 
 Excepciones: eleven, twelve (no siguen ningún patrón)
+
 </Aside>
 
 ---
@@ -46,11 +61,18 @@ Las decenas siguen un patrón consistente, y para números compuestos (21-99) us
 
 ```javascript
 const tens = {
-  10: "ten",     20: "twenty", 30: "thirty",
-  40: "forty",   50: "fifty",  60: "sixty",
-  70: "seventy", 80: "eighty", 90: "ninety"
+  10: 'ten',
+  20: 'twenty',
+  30: 'thirty',
+  40: 'forty',
+  50: 'fifty',
+  60: 'sixty',
+  70: 'seventy',
+  80: 'eighty',
+  90: 'ninety',
 };
 ```
+
   </TabItem>
 
   <TabItem label="Compuestos (21-99)">
@@ -59,24 +81,24 @@ Para números entre las decenas, une la decena y la unidad con un guion:
 
 ```javascript
 const composeNumber = (ten, unit) => {
-  return ten + "-" + unit; // Decena + "-" + Unidad
-}
+  return ten + '-' + unit; // Decena + "-" + Unidad
+};
 // composeNumber("nighty", "nine") → "ninety-nine"
 // composeNumber("fifty", "two") → "fifty-two"
 ```
 
-  **Ejemplos:**
+**Ejemplos:**
 
-  - 21: twenty-one (veintiuno)
-  - 47: forty-seven (cuarenta y siete)
-  - 63: sixty-three (sesenta y tres)
-  - 89: eighty-nine (ochenta y nueve)
+- 21: twenty-one (veintiuno)
+- 47: forty-seven (cuarenta y siete)
+- 63: sixty-three (sesenta y tres)
+- 89: eighty-nine (ochenta y nueve)
 
   </TabItem>
 </Tabs>
 
 <Aside type="caution" title="El número 40 se escribe sin u">
-El número 40 se escribe **forty** (sin "u"). Es la única decena que pierde la "u" del número base "four".
+  El número 40 se escribe **forty** (sin "u"). Es la única decena que pierde la "u" del número base "four".
 </Aside>
 
 ---
@@ -86,10 +108,10 @@ El número 40 se escribe **forty** (sin "u"). Es la única decena que pierde la 
 Para números grandes, se usan "hundred", "thousand", "million" sin plural cuando van precedidos de un número:
 
 ```javascript
-const hundreds  = `${n} hundred`;             // "two hundred"
-const thousands = `${n} thousand`;            // "five thousand"
-const millions  = `${n} million`;             // "one million"
-const compound  = `${n} hundred and ${rest}`; // "four hundred and fifty-six"
+const hundreds = `${n} hundred`; // "two hundred"
+const thousands = `${n} thousand`; // "five thousand"
+const millions = `${n} million`; // "one million"
+const compound = `${n} hundred and ${rest}`; // "four hundred and fifty-six"
 ```
 
 **Ejemplos:**
@@ -105,6 +127,7 @@ En inglés británico, se usa "and" después de "hundred":
 - US: "two hundred fifty" (sin "and")
 
 Ambas formas son correctas, pero la versión británica es más común globalmente.
+
 </Aside>
 
 ---
@@ -113,13 +136,11 @@ Ambas formas son correctas, pero la versión británica es más común globalmen
 
 Los ordinales indican posición u orden. La mayoría añaden "th", pero los tres primeros son irregulares:
 
-
-
 ```javascript
-if (n === 1) ordinal = "first";      // irregular
-if (n === 2) ordinal = "second";     // irregular
-if (n === 3) ordinal = "third";      // irregular
-if (n >= 4)  ordinal = number + "th"; // fourth, fifth, sixth...
+if (n === 1) ordinal = 'first'; // irregular
+if (n === 2) ordinal = 'second'; // irregular
+if (n === 3) ordinal = 'third'; // irregular
+if (n >= 4) ordinal = number + 'th'; // fourth, fifth, sixth...
 ```
 
 **Ejemplos:**
@@ -166,14 +187,15 @@ if (n >= 4)  ordinal = number + "th"; // fourth, fifth, sixth...
 
 ```javascript
 const operations = [
-  "5 + 3  = 8",  // five plus three equals eight
-  "10 - 4 = 6",  // ten minus four equals six
-  "3 × 2  = 6",  // three times two equals six
-  "8 ÷ 2  = 4"   // eight divided by two equals four
+  '5 + 3  = 8', // five plus three equals eight
+  '10 - 4 = 6', // ten minus four equals six
+  '3 × 2  = 6', // three times two equals six
+  '8 ÷ 2  = 4', // eight divided by two equals four
 ];
 ```
 
 **Vocabulario matemático:**
+
 - **+** : plus (más)
 - **-** : minus (menos)
 - **×** : times / multiplied by (por / multiplicado por)
@@ -191,8 +213,8 @@ Las fracciones usan ordinales para el denominador:
 
 ```javascript
 const fractions = {
-  exceptions: ["1/2 → one half", "1/4 → one quarter", "3/4 → three quarters"],
-  regular: ["1/3 → one third", "2/3 → two thirds", "1/5 → one fifth", "2/5 → two fifths"]
+  exceptions: ['1/2 → one half', '1/4 → one quarter', '3/4 → three quarters'],
+  regular: ['1/3 → one third', '2/3 → two thirds', '1/5 → one fifth', '2/5 → two fifths'],
 };
 ```
 
@@ -204,7 +226,7 @@ El denominador usa el **ordinal** de ese número. Si el numerador es mayor que 1
 
 ```javascript
 function makeFraction(numerator, ordinal) {
-  const plural = numerator > 1 ? ordinal + "s" : ordinal;
+  const plural = numerator > 1 ? ordinal + 's' : ordinal;
   return `${numerator} ${plural}`;
 }
 // makeFraction(1, "eighth") → "1 eighth"
@@ -212,12 +234,12 @@ function makeFraction(numerator, ordinal) {
 // makeFraction(5, "sixth")  → "5 sixths"
 ```
 
-  **Ejemplos:**
+**Ejemplos:**
 
-  - 1/3: one third (un tercio)
-  - 2/3: two thirds (dos tercios)
-  - 3/8: three eighths (tres octavos)
-  - 5/6: five sixths (cinco sextos)
+- 1/3: one third (un tercio)
+- 2/3: two thirds (dos tercios)
+- 3/8: three eighths (tres octavos)
+- 5/6: five sixths (cinco sextos)
 
   </TabItem>
 </Tabs>
@@ -231,30 +253,28 @@ El número 40 es la única decena que pierde la "u" del número base "four". No 
 
 - I have **fourty** dollars ⛔
 - I have **forty** dollars (tengo cuarenta dólares) ✅
-</Aside>
+  </Aside>
 
 <Aside type="danger" title="Pluralizar hundred, thousand o million">
 Cuando van precedidos de un número específico, estas palabras no se pluralizan. Solo llevan "s" en expresiones indefinidas como "hundreds of people".
 
 - Two **hundreds** and five **thousands** ⛔
 - Two **hundred** and five **thousand** (doscientos cinco mil) ✅
-</Aside>
+  </Aside>
 
 <Aside type="danger" title="Confundir los números con -teen y los de -ty">
 La diferencia entre "-teen" y "-ty" está en el acento: "-teen" se acentúa al final y "-ty" al principio. Pronunciarlos igual puede causar malentendidos graves.
 
 - She is **fifty** years old (queriendo decir quince) ⛔
 - She is **fifteen** years old (ella tiene quince años) ✅
-</Aside>
+  </Aside>
 
 ---
 
 ## Práctica
 
 <Aside type="tip" title="Ejercicio diario">
-- Practica diciendo tu edad en voz alta: "I'm __ years old"
-- Di tu número de teléfono completo dígito por dígito
-- Lee precios en tiendas o páginas web en voz alta (en dólares)
-- Practica diciendo el año actual, tu año de nacimiento y años históricos importantes
-- Di la hora actual cada vez que la veas durante el día
+  - Practica diciendo tu edad en voz alta: "I'm __ years old" - Di tu número de teléfono completo dígito por dígito -
+  Lee precios en tiendas o páginas web en voz alta (en dólares) - Practica diciendo el año actual, tu año de nacimiento
+  y años históricos importantes - Di la hora actual cada vez que la veas durante el día
 </Aside>

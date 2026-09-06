@@ -15,13 +15,13 @@ Cada pronombre relativo tiene un uso específico según lo que describes:
 
 ```javascript
 const relativePronouns = {
-  who: "personas (sujeto)",
-  whom: "personas (objeto, formal)",
-  which: "cosas y animales",
-  that: "personas y cosas (informal)",
-  where: "lugares",
-  when: "tiempo",
-  whose: "posesión"
+  who: 'personas (sujeto)',
+  whom: 'personas (objeto, formal)',
+  which: 'cosas y animales',
+  that: 'personas y cosas (informal)',
+  where: 'lugares',
+  when: 'tiempo',
+  whose: 'posesión',
 };
 ```
 
@@ -49,6 +49,7 @@ const whoExamples = {
 ```
 
 **Who** introduce información sobre **personas** cuando son el sujeto.
+
   </TabItem>
   
   <TabItem label="Which (cosas)">
@@ -61,6 +62,7 @@ const whichExamples = {
 ```
 
 **Which** se usa para **cosas y animales**.
+
   </TabItem>
   
   <TabItem label="That (ambos)">
@@ -73,6 +75,7 @@ const thatExamples = {
 ```
 
 **That** puede reemplazar a **who** o **which** en contextos informales.
+
   </TabItem>
 </Tabs>
 
@@ -103,17 +106,17 @@ Esta distinción es **crucial** y no existe de la misma forma en español.
 ```javascript
 const clauseTypes = {
   defining: {
-    purpose: "identifica qué persona/cosa",
+    purpose: 'identifica qué persona/cosa',
     commas: false,
     that_allowed: true,
-    example: "The man who stole my car was caught"
+    example: 'The man who stole my car was caught',
   },
   nonDefining: {
-    purpose: "añade información extra",
+    purpose: 'añade información extra',
     commas: true,
     that_allowed: false,
-    example: "My brother, who lives in Paris, is visiting"
-  }
+    example: 'My brother, who lives in Paris, is visiting',
+  },
 };
 ```
 
@@ -129,6 +132,7 @@ const defining = {
 ```
 
 La información es **esencial** para identificar al sustantivo.
+
   </TabItem>
   
   <TabItem label="No Definitorias">
@@ -142,6 +146,7 @@ const nonDefining = {
 ```
 
 La información es **extra**, no esencial para identificar.
+
   </TabItem>
 </Tabs>
 
@@ -158,7 +163,7 @@ La información es **extra**, no esencial para identificar.
 - Paris, **where I was born**, is beautiful (París, donde nací, es hermosa)
 
 <Aside type="caution" title="That en cláusulas no definitorias">
-Nunca uses **that** en cláusulas no definitorias (con comas). Solo usa **who** o **which**.
+  Nunca uses **that** en cláusulas no definitorias (con comas). Solo usa **who** o **which**.
 </Aside>
 
 ---
@@ -170,20 +175,20 @@ Estos pronombres relativos tienen usos específicos.
 ```javascript
 const specialPronouns = {
   where: {
-    use: "lugares",
-    replaces: "in which / at which",
-    example: "The city where I live is big"
+    use: 'lugares',
+    replaces: 'in which / at which',
+    example: 'The city where I live is big',
   },
   when: {
-    use: "tiempo",
-    replaces: "in which / at which",
-    example: "The day when we met was sunny"
+    use: 'tiempo',
+    replaces: 'in which / at which',
+    example: 'The day when we met was sunny',
   },
   whose: {
-    use: "posesión",
-    replaces: "of which / of whom",
-    example: "The man whose car was stolen called police"
-  }
+    use: 'posesión',
+    replaces: 'of which / of whom',
+    example: 'The man whose car was stolen called police',
+  },
 };
 ```
 
@@ -210,15 +215,15 @@ En cláusulas definitorias, puedes **omitir** el pronombre cuando es el **objeto
 
 ```javascript
 const omission = {
-  rule: "omitir cuando es objeto, no sujeto",
-  withPronoun: "The book which I bought...",
-  withoutPronoun: "The book I bought...",
-  cannotOmit: "The man who called... (sujeto)"
+  rule: 'omitir cuando es objeto, no sujeto',
+  withPronoun: 'The book which I bought...',
+  withoutPronoun: 'The book I bought...',
+  cannotOmit: 'The man who called... (sujeto)',
 };
 ```
 
 <Aside type="tip" title="¿Sujeto u objeto?">
-Si después del pronombre hay otro sujeto (I, she, they...), el pronombre es **objeto** y se puede omitir.
+  Si después del pronombre hay otro sujeto (I, she, they...), el pronombre es **objeto** y se puede omitir.
 </Aside>
 
 **Se puede omitir:**
@@ -240,9 +245,9 @@ Las preposiciones pueden ir al **final** (informal) o **antes del pronombre** (f
 
 ```javascript
 const prepositions = {
-  informal: "The person who I spoke to...",
-  formal: "The person to whom I spoke...",
-  note: "con 'that' la preposición va siempre al final"
+  informal: 'The person who I spoke to...',
+  formal: 'The person to whom I spoke...',
+  note: "con 'that' la preposición va siempre al final",
 };
 ```
 
@@ -267,6 +272,7 @@ const prepositions = {
 - ✅ The man **who** called me was angry (El hombre que me llamó estaba enojado)
 
 **Which** nunca se usa para personas. Usa **who** o **that**.
+
 </Aside>
 
 <Aside type="danger" title="Usar that en cláusulas no definitorias">
@@ -274,6 +280,7 @@ const prepositions = {
 - ✅ My mother, **who** is a teacher, lives in Madrid (Mi madre, que es profesora, vive en Madrid)
 
 Las cláusulas con comas requieren **who** o **which**, nunca **that**.
+
 </Aside>
 
 <Aside type="danger" title="Omitir pronombre sujeto">
@@ -281,6 +288,7 @@ Las cláusulas con comas requieren **who** o **which**, nunca **that**.
 - ✅ The man **who** called me was my boss (El hombre que me llamó era mi jefe)
 
 Solo puedes omitir el pronombre cuando es **objeto**, no cuando es sujeto.
+
 </Aside>
 
 <Aside type="danger" title="Olvidar las comas en cláusulas no definitorias">
@@ -288,6 +296,7 @@ Solo puedes omitir el pronombre cuando es **objeto**, no cuando es sujeto.
 - ✅ My brother**,** who lives in London**,** is visiting (Mi hermano, que vive en Londres, está de visita)
 
 Las comas cambian completamente el significado de la oración.
+
 </Aside>
 
 ---
@@ -295,9 +304,8 @@ Las comas cambian completamente el significado de la oración.
 ## Práctica
 
 <Aside type="tip" title="Ejercicio diario">
-- Combina pares de oraciones simples usando pronombres relativos apropiados
-- Practica identificando si una cláusula es definitoria o no definitoria (¿necesita comas?)
-- Reescribe oraciones formales en estilo informal y viceversa (preposiciones al final vs. al inicio)
-- Lee artículos en inglés y subraya todas las cláusulas relativas que encuentres
-- Practica omitiendo el pronombre relativo cuando sea posible para un estilo más natural
+  - Combina pares de oraciones simples usando pronombres relativos apropiados - Practica identificando si una cláusula
+  es definitoria o no definitoria (¿necesita comas?) - Reescribe oraciones formales en estilo informal y viceversa
+  (preposiciones al final vs. al inicio) - Lee artículos en inglés y subraya todas las cláusulas relativas que
+  encuentres - Practica omitiendo el pronombre relativo cuando sea posible para un estilo más natural
 </Aside>

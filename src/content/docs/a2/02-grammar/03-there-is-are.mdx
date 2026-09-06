@@ -14,8 +14,7 @@ import { Tabs, TabItem, Aside, Card, CardGrid } from '@astrojs/starlight/compone
 La diferencia fundamental: **there is** para singular, **there are** para plural.
 
 ```javascript
-const thereVerb = (isPlural) =>
-  isPlural ? "there are" : "there is";
+const thereVerb = (isPlural) => (isPlural ? 'there are' : 'there is');
 // thereVerb(false) → "there is"  → singular
 // thereVerb(true)  → "there are" → plural
 ```
@@ -28,7 +27,8 @@ const thereVerb = (isPlural) =>
 - **There are** many people here (Hay mucha gente aquí)
 
 <Aside type="tip" title="El sustantivo manda">
-Siempre mira el sustantivo que viene después de "there is/are" para decidir si usas **is** (singular) o **are** (plural).
+  Siempre mira el sustantivo que viene después de "there is/are" para decidir si usas **is** (singular) o **are**
+  (plural).
 </Aside>
 
 ---
@@ -52,6 +52,7 @@ Siempre mira el sustantivo que viene después de "there is/are" para decidir si 
     - There **are** two cinemas downtown (Hay dos cines en el centro)
     - There **is** a problem with the computer (Hay un problema con la computadora)
     - There **are** some cookies in the jar (Hay algunas galletas en el frasco)
+
   </TabItem>
   
   <TabItem label="Negativa">
@@ -70,6 +71,7 @@ Siempre mira el sustantivo que viene después de "there is/are" para decidir si 
     - There **aren't** any chairs available (No hay sillas disponibles)
     - There **isn't** time for that (No hay tiempo para eso)
     - There **aren't** many options (No hay muchas opciones)
+
   </TabItem>
   
   <TabItem label="Pregunta">
@@ -92,8 +94,9 @@ Siempre mira el sustantivo que viene después de "there is/are" para decidir si 
     - **Are there** bathrooms on this floor? (¿Hay baños en este piso?)
 
     <Aside type="note" title="Respuestas cortas con there">
-    En las respuestas cortas, siempre incluye "there": "Yes, there is/are" o "No, there isn't/aren't" (no solo "Yes, is/are" o "No, isn't/aren't"). 
+    En las respuestas cortas, siempre incluye "there": "Yes, there is/are" o "No, there isn't/aren't" (no solo "Yes, is/are" o "No, isn't/aren't").
     </Aside>
+
   </TabItem>
 </Tabs>
 
@@ -119,6 +122,7 @@ Esta es una distinción crucial que confunde a muchos hispanohablantes.
     - **There is** a book on the desk (Hay un libro en el escritorio - introduciendo el libro)
     - **There are** three problems (Hay tres problemas - presentando los problemas)
     - **There is** a good restaurant downtown (Hay un buen restaurante en el centro)
+
   </TabItem>
 
   <TabItem label="It Is">
@@ -136,11 +140,12 @@ Esta es una distinción crucial que confunde a muchos hispanohablantes.
     - **It is** on the desk (Está en el escritorio - ya sabemos qué cosa)
     - **It is** expensive (Es caro - describiendo algo conocido)
     - **It is** a good restaurant (Es un buen restaurante - ya sabemos cuál)
+
   </TabItem>
 </Tabs>
 
 <Aside type="tip" title="Regla práctica">
-Usa **there is/are** para introducir algo nuevo. Usa **it is** para hablar de algo que ya conoces o mencionaste.
+  Usa **there is/are** para introducir algo nuevo. Usa **it is** para hablar de algo que ya conoces o mencionaste.
 </Aside>
 
 ---
@@ -155,19 +160,15 @@ Usa **there is/are** para introducir algo nuevo. Usa **it is** para hablar de al
     - There **are** no parking spaces (No hay espacios de estacionamiento)
   </Card>
 
-  <Card title="Problemas y situaciones">
-    - There **is** a problem (Hay un problema)
-    - There **are** some issues to discuss (Hay algunos asuntos que discutir)
-    - There **isn't** time (No hay tiempo)
-    - Are there any questions? (¿Hay alguna pregunta?)
-  </Card>
+<Card title="Problemas y situaciones">
+  - There **is** a problem (Hay un problema) - There **are** some issues to discuss (Hay algunos asuntos que discutir) -
+  There **isn't** time (No hay tiempo) - Are there any questions? (¿Hay alguna pregunta?)
+</Card>
 
-  <Card title="Cantidad y disponibilidad">
-    - There **are** many options (Hay muchas opciones)
-    - There **isn't** enough space (No hay suficiente espacio)
-    - There **are** three reasons (Hay tres razones)
-    - Is there any food left? (¿Queda comida?)
-  </Card>
+<Card title="Cantidad y disponibilidad">
+  - There **are** many options (Hay muchas opciones) - There **isn't** enough space (No hay suficiente espacio) - There
+  **are** three reasons (Hay tres razones) - Is there any food left? (¿Queda comida?)
+</Card>
 
   <Card title="Eventos">
     - There **is** a meeting today (Hay una reunión hoy)
@@ -188,7 +189,7 @@ Siempre verifica si el sustantivo que sigue es singular o plural para elegir is 
 - There **are** three books (Hay tres libros) ✅
 - There **are** a book ⛔
 - There **is** a book (Hay un libro) ✅
-</Aside>
+  </Aside>
 
 <Aside type="danger" title="Usar 'have' en lugar de 'there is/are'">
 Los hispanohablantes a menudo traducen literalmente “hay” como “have”, pero en inglés se usa “there is/are” para expresar existencia.
@@ -197,7 +198,7 @@ Los hispanohablantes a menudo traducen literalmente “hay” como “have”, p
 - In my city **there are** many parks (En mi ciudad hay muchos parques) ✅
 - **Have** a problem ⛔
 - **There is** a problem (Hay un problema) ✅
-</Aside>
+  </Aside>
 
 <Aside type="danger" title="Omitir 'there' en respuestas">
 Las respuestas cortas siempre deben incluir “there”, no solo el auxiliar solo.
@@ -206,7 +207,7 @@ Las respuestas cortas siempre deben incluir “there”, no solo el auxiliar sol
 - Is there a bank? - Yes, **there is** (Sí, hay) ✅
 - Are there chairs? - No, **aren't** ⛔
 - Are there chairs? - No, **there aren't** (No, no hay) ✅
-</Aside>
+  </Aside>
 
 <Aside type="danger" title="Usar there is/are para posesión">
 “There is/are” expresa existencia o presencia, no posesión. Para indicar que alguien tiene algo, usa “have/has”.
@@ -215,7 +216,7 @@ Las respuestas cortas siempre deben incluir “there”, no solo el auxiliar sol
 - I **have** a car (Tengo un carro) ✅
 - She **there is** a dog ⛔
 - She **has** a dog (Ella tiene un perro) ✅
-</Aside>
+  </Aside>
 
 <Aside type="danger" title="Confundir con 'it is'">
 “There is/are” introduce información nueva. “It is” describe o ubica algo que ya conoces o mencionaste.
@@ -224,16 +225,15 @@ Las respuestas cortas siempre deben incluir “there”, no solo el auxiliar sol
 - Where's your book? - **It is** on the table (Está en la mesa) ✅
 - **It is** a new store downtown ⛔
 - **There is** a new store downtown (Hay una tienda nueva en el centro) ✅
-</Aside>
+  </Aside>
 
 ---
 
 ## Práctica
 
 <Aside type="tip" title="Ejercicio diario">
-- Describe tu habitación usando "there is/are": qué muebles hay, cuántos objetos, etc.
-- Practica hacer preguntas: "Is there...?" "Are there...?" sobre lugares en tu ciudad
-- Cuando veas algo nuevo, presenta lo con "there is/are", luego descríbelo con "it is"
-- Escribe 5 oraciones sobre lo que hay y no hay en tu escuela o trabajo
-- Pregunta y responde: "Are there any questions/problems/doubts?"
+  - Describe tu habitación usando "there is/are": qué muebles hay, cuántos objetos, etc. - Practica hacer preguntas: "Is
+  there...?" "Are there...?" sobre lugares en tu ciudad - Cuando veas algo nuevo, presenta lo con "there is/are", luego
+  descríbelo con "it is" - Escribe 5 oraciones sobre lo que hay y no hay en tu escuela o trabajo - Pregunta y responde:
+  "Are there any questions/problems/doubts?"
 </Aside>

@@ -15,9 +15,9 @@ Un verbo es **regular** cuando forma su pasado simple y participio pasado añadi
 
 ```javascript
 const regularVerb = {
-  base: "work",           // forma base
-  pastSimple: "worked",   // pasado simple (+ed)
-  pastParticiple: "worked" // participio pasado (+ed)
+  base: 'work', // forma base
+  pastSimple: 'worked', // pasado simple (+ed)
+  pastParticiple: 'worked', // participio pasado (+ed)
 };
 ```
 
@@ -29,7 +29,8 @@ const regularVerb = {
 - They **listen** to music → they **listened** to the radio (Escuchan música → escucharon la radio)
 
 <Aside type="note" title="Más del 90% de los verbos en inglés son regulares">
-La mayoría de los verbos en inglés siguen este patrón regular. Cuando aprendes un nuevo verbo, lo más probable es que sea regular y puedas formar su pasado añadiendo -ed.
+  La mayoría de los verbos en inglés siguen este patrón regular. Cuando aprendes un nuevo verbo, lo más probable es que
+  sea regular y puedas formar su pasado añadiendo -ed.
 </Aside>
 
 ---
@@ -55,6 +56,7 @@ Aunque todos los verbos regulares añaden una terminación con **-ed**, la forma
     - She **helped** me with homework (Ella me ayudó con la tarea)
     - We **watched** a movie last night (Vimos una película anoche)
     - They **talked** for hours (Ellos hablaron por horas)
+
   </TabItem>
   
   <TabItem label="Añadir -d">
@@ -75,6 +77,7 @@ Aunque todos los verbos regulares añaden una terminación con **-ed**, la forma
     - She **used** my phone (Ella usó mi teléfono)
     - We **arrived** late (Llegamos tarde)
     - He **smiled** at me (Él me sonrió)
+
   </TabItem>
   
   <TabItem label="Consonante + y">
@@ -100,6 +103,7 @@ Aunque todos los verbos regulares añaden una terminación con **-ed**, la forma
     - enjoy → enjoy**ed** (disfrutar → disfrutó)
     - stay → stay**ed** (quedarse → se quedó)
     </Aside>
+
   </TabItem>
   
   <TabItem label="Doblar consonante">
@@ -125,6 +129,7 @@ Aunque todos los verbos regulares añaden una terminación con **-ed**, la forma
     - fix → fix**ed** (no fixxed)
     - play → play**ed** (no playyed)
     </Aside>
+
   </TabItem>
 </Tabs>
 
@@ -153,6 +158,7 @@ Aunque todos los verbos regulares se escriben con **-ed**, esta terminación tie
     - watch**ed** /wɑtʃt/ (vio)
     - wash**ed** /wɑʃt/ (lavó)
     - ask**ed** /æskt/ (preguntó)
+
   </TabItem>
 
   <TabItem label="/d/ (D)">
@@ -173,6 +179,7 @@ Aunque todos los verbos regulares se escriben con **-ed**, esta terminación tie
     - call**ed** /kɔld/ (llamó)
     - clean**ed** /klɪnd/ (limpió)
     - listen**ed** /ˈlɪsənd/ (escuchó)
+
   </TabItem>
 
   <TabItem label="/ɪd/ (ID)">
@@ -193,11 +200,13 @@ Aunque todos los verbos regulares se escriben con **-ed**, esta terminación tie
     - start**ed** /ˈstɑrtɪd/ (comenzó)
     - end**ed** /ˈendɪd/ (terminó)
     - visit**ed** /ˈvɪzɪtɪd/ (visitó)
+
   </TabItem>
 </Tabs>
 
 <Aside type="tip" title="Truco de pronunciación">
-La pronunciación /ɪd/ es la única que añade una **sílaba extra** al verbo. Si el verbo base termina en sonido T o D, escucharás y dirás una sílaba adicional: want-**ed** (dos sílabas), need-**ed** (dos sílabas).
+  La pronunciación /ɪd/ es la única que añade una **sílaba extra** al verbo. Si el verbo base termina en sonido T o D,
+  escucharás y dirás una sílaba adicional: want-**ed** (dos sílabas), need-**ed** (dos sílabas).
 </Aside>
 
 ---
@@ -208,36 +217,36 @@ Estos son los verbos regulares que encontrarás con más frecuencia en inglés c
 
 ```javascript
 const top30RegularVerbs = [
-  { base: "work /wɜrk/",      past: "worked /wɜrkt/",      translate: "trabajar"  },
-  { base: "play /pleɪ/",      past: "played /pleɪd/",      translate: "jugar"     },
-  { base: "like /laɪk/",      past: "liked /laɪkt/",       translate: "gustar"    },
-  { base: "live /lɪv/",       past: "lived /lɪvd/",        translate: "vivir"     },
-  { base: "love /lʌv/",       past: "loved /lʌvd/",        translate: "amar"      },
-  { base: "want /wɑnt/",      past: "wanted /ˈwɑntɪd/",    translate: "querer"    },
-  { base: "need /nid/",       past: "needed /ˈnidɪd/",     translate: "necesitar" },
-  { base: "use /juz/",        past: "used /juzd/",         translate: "usar"      },
-  { base: "help /help/",      past: "helped /helpt/",      translate: "ayudar"    },
-  { base: "start /stɑrt/",    past: "started /ˈstɑrtɪd/",  translate: "comenzar"  },
-  { base: "call /kɔl/",       past: "called /kɔld/",       translate: "llamar"    },
-  { base: "try /traɪ/",       past: "tried /traɪd/",       translate: "intentar"  },
-  { base: "ask /æsk/",        past: "asked /æskt/",        translate: "preguntar" },
-  { base: "walk /wɔk/",       past: "walked /wɔkt/",       translate: "caminar"   },
-  { base: "watch /wɑtʃ/",     past: "watched /wɑtʃt/",     translate: "ver/mirar" },
-  { base: "talk /tɔk/",       past: "talked /tɔkt/",       translate: "hablar"    },
-  { base: "listen /ˈlɪsən/",  past: "listened /ˈlɪsənd/",  translate: "escuchar"  },
-  { base: "study /ˈstʌdi/",   past: "studied /ˈstʌdid/",   translate: "estudiar"  },
-  { base: "learn /lɜrn/",     past: "learned /lɜrnd/",     translate: "aprender"  },
-  { base: "open /ˈoʊpən/",    past: "opened /ˈoʊpənd/",    translate: "abrir"     },
-  { base: "close /kloʊz/",    past: "closed /kloʊzd/",     translate: "cerrar"    },
-  { base: "clean /klin/",     past: "cleaned /klɪnd/",     translate: "limpiar"   },
-  { base: "cook /kʊk/",       past: "cooked /kʊkt/",       translate: "cocinar"   },
-  { base: "wait /weɪt/",      past: "waited /ˈweɪtɪd/",    translate: "esperar"   },
-  { base: "arrive /əˈraɪv/",  past: "arrived /əˈraɪvd/",   translate: "llegar"    },
-  { base: "stay /steɪ/",      past: "stayed /steɪd/",      translate: "quedarse"  },
-  { base: "move /muv/",       past: "moved /muvd/",        translate: "mover(se)" },
-  { base: "stop /stɑp/",      past: "stopped /stɑpt/",     translate: "parar"     },
-  { base: "change /tʃeɪndʒ/", past: "changed /tʃeɪndʒd/",  translate: "cambiar"   },
-  { base: "finish /ˈfɪnɪʃ/",  past: "finished /ˈfɪnɪʃt/",  translate: "terminar"  }
+  { base: 'work /wɜrk/', past: 'worked /wɜrkt/', translate: 'trabajar' },
+  { base: 'play /pleɪ/', past: 'played /pleɪd/', translate: 'jugar' },
+  { base: 'like /laɪk/', past: 'liked /laɪkt/', translate: 'gustar' },
+  { base: 'live /lɪv/', past: 'lived /lɪvd/', translate: 'vivir' },
+  { base: 'love /lʌv/', past: 'loved /lʌvd/', translate: 'amar' },
+  { base: 'want /wɑnt/', past: 'wanted /ˈwɑntɪd/', translate: 'querer' },
+  { base: 'need /nid/', past: 'needed /ˈnidɪd/', translate: 'necesitar' },
+  { base: 'use /juz/', past: 'used /juzd/', translate: 'usar' },
+  { base: 'help /help/', past: 'helped /helpt/', translate: 'ayudar' },
+  { base: 'start /stɑrt/', past: 'started /ˈstɑrtɪd/', translate: 'comenzar' },
+  { base: 'call /kɔl/', past: 'called /kɔld/', translate: 'llamar' },
+  { base: 'try /traɪ/', past: 'tried /traɪd/', translate: 'intentar' },
+  { base: 'ask /æsk/', past: 'asked /æskt/', translate: 'preguntar' },
+  { base: 'walk /wɔk/', past: 'walked /wɔkt/', translate: 'caminar' },
+  { base: 'watch /wɑtʃ/', past: 'watched /wɑtʃt/', translate: 'ver/mirar' },
+  { base: 'talk /tɔk/', past: 'talked /tɔkt/', translate: 'hablar' },
+  { base: 'listen /ˈlɪsən/', past: 'listened /ˈlɪsənd/', translate: 'escuchar' },
+  { base: 'study /ˈstʌdi/', past: 'studied /ˈstʌdid/', translate: 'estudiar' },
+  { base: 'learn /lɜrn/', past: 'learned /lɜrnd/', translate: 'aprender' },
+  { base: 'open /ˈoʊpən/', past: 'opened /ˈoʊpənd/', translate: 'abrir' },
+  { base: 'close /kloʊz/', past: 'closed /kloʊzd/', translate: 'cerrar' },
+  { base: 'clean /klin/', past: 'cleaned /klɪnd/', translate: 'limpiar' },
+  { base: 'cook /kʊk/', past: 'cooked /kʊkt/', translate: 'cocinar' },
+  { base: 'wait /weɪt/', past: 'waited /ˈweɪtɪd/', translate: 'esperar' },
+  { base: 'arrive /əˈraɪv/', past: 'arrived /əˈraɪvd/', translate: 'llegar' },
+  { base: 'stay /steɪ/', past: 'stayed /steɪd/', translate: 'quedarse' },
+  { base: 'move /muv/', past: 'moved /muvd/', translate: 'mover(se)' },
+  { base: 'stop /stɑp/', past: 'stopped /stɑpt/', translate: 'parar' },
+  { base: 'change /tʃeɪndʒ/', past: 'changed /tʃeɪndʒd/', translate: 'cambiar' },
+  { base: 'finish /ˈfɪnɪʃ/', past: 'finished /ˈfɪnɪʃt/', translate: 'terminar' },
 ];
 ```
 
@@ -250,7 +259,8 @@ const top30RegularVerbs = [
 - He **studied** English for two years (Él estudió inglés durante dos años)
 
 <Aside type="tip" title="Lista completa de verbos regulares">
-Encontrarás una lista más completa de verbos regulares en la [Lista de Verbos Regulares](/reference/02-regular-verbs-list/).
+  Encontrarás una lista más completa de verbos regulares en la [Lista de Verbos
+  Regulares](/reference/02-regular-verbs-list/).
 </Aside>
 
 ---
@@ -264,7 +274,7 @@ No todos los verbos en inglés son regulares. Los verbos irregulares no siguen e
 - I **went** to the store yesterday (Fui a la tienda ayer) ✅
 - She **eated** pizza ⛔
 - She **ate** pizza (Ella comió pizza) ✅
-</Aside>
+  </Aside>
 
 <Aside type="danger" title="Olvidar cambiar y por i antes de -ed">
 Cuando un verbo termina en consonante + y, debes cambiar la y por i antes de añadir -ed.
@@ -273,7 +283,7 @@ Cuando un verbo termina en consonante + y, debes cambiar la y por i antes de añ
 - I **studied** English (Estudié inglés) ✅
 - She **tryed** to help ⛔
 - She **tried** to help (Ella intentó ayudar) ✅
-</Aside>
+  </Aside>
 
 <Aside type="danger" title="No doblar la consonante cuando es necesario">
 Con verbos de una sílaba que terminan en consonante + vocal + consonante, debes doblar la última consonante antes de añadir -ed.
@@ -282,7 +292,7 @@ Con verbos de una sílaba que terminan en consonante + vocal + consonante, debes
 - They **stopped** the car (Ellos pararon el carro) ✅
 - I **planed** my trip ⛔
 - I **planned** my trip (Planeé mi viaje) ✅
-</Aside>
+  </Aside>
 
 <Aside type="danger" title="Añadir -ed cuando el verbo ya termina en -e">
 Si el verbo ya termina en -e, solo añades -d, no -ed completo.
@@ -291,16 +301,16 @@ Si el verbo ya termina en -e, solo añades -d, no -ed completo.
 - She **lived** in France (Ella vivió en Francia) ✅
 - We **arriveed** late ⛔
 - We **arrived** late (Llegamos tarde) ✅
-</Aside>
+  </Aside>
 
 ---
 
 ## Práctica
 
 <Aside type="tip" title="Ejercicio diario">
-- Escribe la forma pasada de 10 verbos regulares diferentes aplicando las reglas de ortografía correctas
-- Agrupa 15 verbos regulares según la pronunciación de su terminación -ed en tres categorías: /t/, /d/ o /ɪd/
-- Lee en voz alta los 30 verbos regulares más comunes en su forma base y pasado prestando atención a la pronunciación de -ed
-- Escribe 5 oraciones en presente simple y luego transfórmalas a pasado simple usando verbos regulares
-- Identifica si los siguientes verbos necesitan doblar consonante, cambiar y por i, o solo añadir -ed: shop, enjoy, dance, study, fix
+  - Escribe la forma pasada de 10 verbos regulares diferentes aplicando las reglas de ortografía correctas - Agrupa 15
+  verbos regulares según la pronunciación de su terminación -ed en tres categorías: /t/, /d/ o /ɪd/ - Lee en voz alta
+  los 30 verbos regulares más comunes en su forma base y pasado prestando atención a la pronunciación de -ed - Escribe 5
+  oraciones en presente simple y luego transfórmalas a pasado simple usando verbos regulares - Identifica si los
+  siguientes verbos necesitan doblar consonante, cambiar y por i, o solo añadir -ed: shop, enjoy, dance, study, fix
 </Aside>
