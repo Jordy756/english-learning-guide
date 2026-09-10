@@ -8,23 +8,21 @@ const { hasSidebar } = Astro.locals.starlightRoute;
   <header class="sticky top-0 left-0 z-50 flex justify-between border-b px-6 py-3">
     <slot name="header" />
   </header>
-  {
-    hasSidebar && (
-      <aside class="relative border-r">
-        <nav
-          class="sidebar sticky top-16.25 left-0 print:hidden"
-          aria-label={Astro.locals.t('sidebarNav.accessibleLabel')}
-        >
-          <MobileMenuToggle />
-          <div id="starlight__sidebar" class="sidebar-pane">
-            <div class="sidebar-content sl-flex">
-              <slot name="sidebar" />
-            </div>
+  {hasSidebar && (
+    <aside class="relative border-r">
+      <nav
+        class="sidebar sticky top-16.25 left-0 print:hidden"
+        aria-label={Astro.locals.t('sidebarNav.accessibleLabel')}
+      >
+        <MobileMenuToggle />
+        <div id="starlight__sidebar" class="sidebar-pane">
+          <div class="sidebar-content sl-flex">
+            <slot name="sidebar" />
           </div>
-        </nav>
-      </aside>
-    )
-  }
+        </div>
+      </nav>
+    </aside>
+  )}
   <main>
     <slot />
   </main>

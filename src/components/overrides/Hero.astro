@@ -33,69 +33,53 @@ const stats = [
 <div class="w-full">
   <section class="relative flex min-h-[70vh] flex-col items-center justify-center px-4 py-16 sm:px-6 lg:px-8">
     <div class="absolute inset-0 -z-10 overflow-hidden">
-      <div
-        class="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(120,53,15,0.3),transparent),radial-gradient(ellipse_60%_40%_at_80%_60%,rgba(245,158,11,0.15),transparent),linear-gradient(180deg,transparent_0%,rgba(0,0,0,0.3)_100%)]"
-      >
-      </div>
-      <div
-        class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg_width=%2260%22_height=%2260%22_viewBox=%220_0_60_60%22_xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg_fill=%22none%22_fill-rule=%22evenodd%22%3E%3Cg_fill=%22%23ffffff%22_fill-opacity=%221%22%3E%3Cpath_d=%22M36_34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6_34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6_4V0H4v4H0v2h4v4h2V6h4V4H6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-[0.03]"
-      >
-      </div>
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(120,53,15,0.3),transparent),radial-gradient(ellipse_60%_40%_at_80%_60%,rgba(245,158,11,0.15),transparent),linear-gradient(180deg,transparent_0%,rgba(0,0,0,0.3)_100%)]"></div>
+      <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg_width=%2260%22_height=%2260%22_viewBox=%220_0_60_60%22_xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg_fill=%22none%22_fill-rule=%22evenodd%22%3E%3Cg_fill=%22%23ffffff%22_fill-opacity=%221%22%3E%3Cpath_d=%22M36_34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6_34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6_4V0H4v4H0v2h4v4h2V6h4V4H6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-[0.03]"></div>
     </div>
 
     <div class="relative z-10 mx-auto flex max-w-4xl flex-col items-center gap-6 text-center sm:gap-8">
-      <span
-        class="inline-flex items-center rounded-full border border-amber-500/30 bg-amber-500/15 px-4 py-1.5 text-sm font-medium text-amber-400"
-      >
+      <span class="inline-flex items-center rounded-full border border-amber-500/30 bg-amber-500/15 px-4 py-1.5 text-sm font-medium text-amber-400">
         Para hispanohablantes
       </span>
 
-      <h1
-        class="max-w-[20ch] text-4xl leading-[1.1] font-bold tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl"
-      >
+      <h1 class="max-w-[20ch] text-4xl leading-[1.1] font-bold tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl">
         {hero?.title || title}
       </h1>
 
-      {
-        hero?.tagline && (
-          <p class="max-w-2xl text-lg leading-relaxed text-neutral-300 sm:text-xl lg:text-2xl">{hero.tagline}</p>
-        )
-      }
+      {hero?.tagline && (
+        <p class="max-w-2xl text-lg leading-relaxed text-neutral-300 sm:text-xl lg:text-2xl">{hero.tagline}</p>
+      )}
 
-      {
-        actions.length > 0 && (
-          <div class="mt-4 flex w-full flex-col flex-wrap justify-center gap-4 sm:w-auto sm:flex-row">
-            {actions.map((action: any) => (
-              <a
-                href={action.link}
-                class={`group inline-flex w-full items-center justify-center gap-2 rounded-xl px-6 py-3.5 text-base font-semibold transition-all duration-200 sm:w-auto ${
-                  action.variant === 'minimal'
-                    ? 'border-2 border-neutral-600 bg-transparent text-white hover:border-neutral-400 hover:bg-neutral-800/50'
-                    : 'border-2 border-transparent bg-amber-500 text-neutral-950 hover:-translate-y-0.5 hover:bg-amber-400 hover:shadow-lg hover:shadow-amber-500/25'
-                }`}
-              >
-                {action.text}
-                {action.variant !== 'minimal' && (
-                  <ChevronIcon class="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
-                )}
-              </a>
-            ))}
-          </div>
-        )
-      }
+      {actions.length > 0 && (
+        <div class="mt-4 flex w-full flex-col flex-wrap justify-center gap-4 sm:w-auto sm:flex-row">
+          {actions.map((action: any) => (
+            <a
+              href={action.link}
+              class={`group inline-flex w-full items-center justify-center gap-2 rounded-xl px-6 py-3.5 text-base font-semibold transition-all duration-200 sm:w-auto ${
+                action.variant === 'minimal'
+                  ? 'border-2 border-neutral-600 bg-transparent text-white hover:border-neutral-400 hover:bg-neutral-800/50'
+                  : 'border-2 border-transparent bg-amber-500 text-neutral-950 hover:-translate-y-0.5 hover:bg-amber-400 hover:shadow-lg hover:shadow-amber-500/25'
+              }`}
+            >
+              {action.text}
+              {action.variant !== 'minimal' && (
+                <ChevronIcon class="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+              )}
+            </a>
+          ))}
+        </div>
+      )}
     </div>
   </section>
 
   <section class="bg-gradient-to-b from-transparent via-black/20 to-transparent px-4 py-12">
     <div class="mx-auto flex max-w-4xl flex-wrap justify-center gap-8 sm:gap-16">
-      {
-        stats.map((stat) => (
-          <div class="flex flex-col items-center text-center">
-            <span class="text-3xl font-bold text-amber-400 sm:text-4xl">{stat.value}</span>
-            <span class="mt-1 text-sm text-neutral-400 sm:text-base">{stat.label}</span>
-          </div>
-        ))
-      }
+      {stats.map((stat) => (
+        <div class="flex flex-col items-center text-center">
+          <span class="text-3xl font-bold text-amber-400 sm:text-4xl">{stat.value}</span>
+          <span class="mt-1 text-sm text-neutral-400 sm:text-base">{stat.label}</span>
+        </div>
+      ))}
     </div>
   </section>
 
@@ -105,15 +89,13 @@ const stats = [
       <p class="mb-12 text-center text-base text-neutral-400 sm:text-lg">Una forma diferente de aprender inglés</p>
 
       <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3">
-        {
-          features.map((feature) => (
-            <div class="relative rounded-2xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-amber-500/20 hover:bg-white/10 sm:p-8">
-              <span class="mb-4 block text-3xl sm:text-4xl">{feature.icon}</span>
-              <h3 class="mb-2 text-lg font-semibold text-white sm:text-xl">{feature.title}</h3>
-              <p class="text-sm leading-relaxed text-neutral-400 sm:text-base">{feature.description}</p>
-            </div>
-          ))
-        }
+        {features.map((feature) => (
+          <div class="relative rounded-2xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-amber-500/20 hover:bg-white/10 sm:p-8">
+            <span class="mb-4 block text-3xl sm:text-4xl">{feature.icon}</span>
+            <h3 class="mb-2 text-lg font-semibold text-white sm:text-xl">{feature.title}</h3>
+            <p class="text-sm leading-relaxed text-neutral-400 sm:text-base">{feature.description}</p>
+          </div>
+        ))}
       </div>
     </div>
   </section>
